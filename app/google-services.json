@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480043982739",
+    "project_id": "akar-aa5bd",
+    "storage_bucket": "akar-aa5bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480043982739:android:3622f98a6c142d3fcad266",
+        "android_client_info": {
+          "package_name": "grand.app.akar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480043982739-o9tnn0sphdb13ei5e21ap3mpgs14l56s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB68srAQ7D_8UBIHhPx85mdq4SH1i-GSbk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480043982739-o9tnn0sphdb13ei5e21ap3mpgs14l56s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

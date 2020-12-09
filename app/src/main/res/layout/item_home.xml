@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemHomeViewModel"
+            type="grand.app.akar.pages.home.viewModels.ItemHomeViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp7w"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp8h"
+            android:onClick="@{() -> itemHomeViewModel.itemAction()}">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_home_item"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp13h"
+                app:imageUrl="@{itemHomeViewModel.image}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.name}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@+id/distance"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toTopOf="@+id/img_home_item" />
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{itemHomeViewModel.homeData.distance}"
+                android:textAlignment="viewStart"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintBottom_toBottomOf="@id/distance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/distance" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/distance"
+                android:layout_width="@dimen/dp12w"
+                android:layout_height="@dimen/dp12h"
+                android:src="@drawable/ic_distance"
+                app:layout_constraintEnd_toStartOf="@+id/tv_home_distance"
+                app:layout_constraintBottom_toBottomOf="@id/tv_home_item"
+                app:layout_constraintTop_toTopOf="@+id/img_home_item" />
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:text="@{itemHomeViewModel.homeData.description}"
+                android:textAlignment="viewStart"
+                android:lines="2"
+                android:ellipsize="end"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

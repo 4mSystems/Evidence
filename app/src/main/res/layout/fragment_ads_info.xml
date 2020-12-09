@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.ads.viewModels.AdsViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/confirmBtn"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgRegister"
+                    android:layout_width="@dimen/dp180w"
+                    android:layout_height="@dimen/dp200h"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/term"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info1"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgRegister" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info2"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info1" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info3"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info2" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info4"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info3" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info5"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info4" />
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:id="@+id/info6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp13w"
+                    android:layout_marginTop="@dimen/dp11h"
+                    android:layout_marginEnd="@dimen/dp13w"
+                    android:text="@string/add_info6"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colordark"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/info5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp32h"
+            android:background="@drawable/corner_view_primary_dark"
+            android:text="@string/police_acceptance"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

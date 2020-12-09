@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.settings.viewModels.SettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRegister"
+                android:layout_width="@dimen/dp150w"
+                android:layout_height="@dimen/dp100h"
+                android:layout_marginTop="@dimen/dp12h"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <grand.app.akar.customViews.views.CustomEditText
+                android:id="@+id/input_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:hint="@string/name_hint"
+                android:inputType="text"
+                android:textAlignment="viewStart"
+                android:textColorHint="@color/overlayBackground"
+                app:endIconDrawable="@drawable/ic_man"
+                app:endIconMode="custom"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgRegister"
+                app:text="@={viewmodel.contactUsRequest.name}" />
+
+
+            <grand.app.akar.customViews.views.CustomEditText
+                android:id="@+id/input_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textColorHint="@color/overlayBackground"
+                app:endIconDrawable="@drawable/ic_call_white"
+                app:endIconMode="custom"
+                app:endIconTint="@color/medium_color"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_name"
+                app:text="@={viewmodel.contactUsRequest.phone}" />
+
+
+            <grand.app.akar.customViews.views.CustomEditText
+                android:id="@+id/input_register_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/overlayBackground"
+                app:endIconDrawable="@drawable/ic_email"
+                app:endIconMode="custom"
+                app:endIconTint="@color/medium_color"
+                app:helperTextTextColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_phone"
+                app:text="@={viewmodel.contactUsRequest.email}" />
+
+            <grand.app.akar.customViews.views.CustomEditText
+                android:id="@+id/input_contact_message"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:hint="@string/message_hint"
+                android:inputType="text"
+                android:textColorHint="@color/overlayBackground"
+                app:gravity="TOP"
+                app:helperTextTextColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_register_email"
+                app:text="@={viewmodel.contactUsRequest.message}" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:layout_marginBottom="@dimen/dp14h"
+                android:background="@drawable/corner_view_primary_dark"
+                android:onClick="@{()-> viewmodel.sendContact()}"
+                android:text="@string/send"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_contact_message" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

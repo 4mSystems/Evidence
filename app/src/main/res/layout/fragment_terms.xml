@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.settings.viewModels.SettingsViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgRegister"
+                android:layout_width="@dimen/dp210w"
+                android:layout_height="@dimen/dp100h"
+                android:layout_marginTop="@dimen/dp18h"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:layout_marginBottom="@dimen/dp4h"
+                app:cardCornerRadius="@dimen/dp4h"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgRegister">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_take_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp13w"
+                        android:layout_marginTop="@dimen/dp10h"
+                        android:text="@string/terms"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewRegular
+                        android:id="@+id/terms_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp13w"
+                        android:layout_marginTop="@dimen/dp2h"
+                        android:layout_marginEnd="@dimen/dp13w"
+                        android:layout_marginBottom="@dimen/dp6h"
+                        android:text="@{viewmodel.aboutData.name}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/medium_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tv_take_me" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

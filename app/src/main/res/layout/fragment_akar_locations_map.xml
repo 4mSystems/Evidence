@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.ads.viewModels.AdsViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <grand.app.akar.customViews.views.CustomTextViewMedium
+            android:id="@+id/btn_diff_locations"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/dp4w"
+            android:background="@drawable/corner_view_primary_dark"
+            android:gravity="center"
+            android:paddingStart="@dimen/dp8w"
+            android:paddingEnd="@dimen/dp8w"
+            android:text="@string/diff_locations"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/input_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_search" />
+
+        <grand.app.akar.customViews.views.CustomTextViewMedium
+            android:id="@+id/input_search"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4w"
+            android:layout_marginTop="@dimen/dp5h"
+            android:layout_marginEnd="@dimen/dp14w"
+            android:background="@drawable/corner_view_gray_background"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="@dimen/dp8w"
+            android:hint="@string/search_locations"
+            android:padding="@dimen/dp8h"
+            android:textAlignment="viewStart"
+            android:textColorHint="@color/black"
+            app:helperTextTextColor="@color/black"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_diff_locations"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp8h"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/input_search" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp32h"
+            android:background="@drawable/corner_view_primary_dark"
+            android:text="@string/continu"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

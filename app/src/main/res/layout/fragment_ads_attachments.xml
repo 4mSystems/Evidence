@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/attach_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:text="@string/attachment_images"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginStart="@dimen/dp7w"
+                android:layout_marginTop="@dimen/dp16h"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toStartOf="@+id/image2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/attach_title"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close1"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image1"
+                app:layout_constraintTop_toTopOf="@id/image1" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginStart="@dimen/dp7w"
+                android:layout_marginTop="@dimen/dp16h"
+                android:layout_marginEnd="@dimen/dp7w"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toStartOf="@+id/image3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image1"
+                app:layout_constraintTop_toBottomOf="@+id/attach_title"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close2"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image2"
+                app:layout_constraintTop_toTopOf="@id/image2" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginTop="@dimen/dp16h"
+                android:layout_marginEnd="@dimen/dp7w"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image2"
+                app:layout_constraintTop_toBottomOf="@+id/attach_title"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close3"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image3"
+                app:layout_constraintTop_toTopOf="@id/image3" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="image1,image2,image3" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginStart="@dimen/dp7w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toStartOf="@+id/image5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/br5"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close4"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image4"
+                app:layout_constraintTop_toTopOf="@id/image4" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginStart="@dimen/dp7w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp7w"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toStartOf="@+id/image6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image4"
+                app:layout_constraintTop_toBottomOf="@+id/br5"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close5"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image5"
+                app:layout_constraintTop_toTopOf="@id/image5" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp7w"
+                android:src="@drawable/holo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/image5"
+                app:layout_constraintTop_toBottomOf="@+id/br5"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close6"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image6"
+                app:layout_constraintTop_toTopOf="@id/image6" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="image4,image5,image6" />
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/video_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp14w"
+                android:layout_marginTop="@dimen/dp15h"
+                android:text="@string/attachment_video"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/br6" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp110h"
+                android:layout_margin="@dimen/dp13w"
+                android:scaleType="centerCrop"
+                android:src="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/video_title"
+                app:riv_corner_radius="@dimen/dp6h" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/close7"
+                android:layout_width="@dimen/dp20w"
+                android:layout_height="@dimen/dp20h"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@mipmap/ic_close"
+                app:layout_constraintStart_toStartOf="@id/image7"
+                app:layout_constraintTop_toTopOf="@id/image7" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8h"
+                android:src="@drawable/ic_play"
+                app:layout_constraintBottom_toBottomOf="@id/image7"
+                app:layout_constraintEnd_toEndOf="@id/image7"
+                app:layout_constraintStart_toStartOf="@id/image7"
+                app:layout_constraintTop_toTopOf="@id/image7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/confirmBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp32h"
+                android:background="@drawable/corner_view_primary_dark"
+                android:text="@string/continu"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
