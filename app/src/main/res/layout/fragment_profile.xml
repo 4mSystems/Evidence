@@ -19,139 +19,227 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/user_img"
-                android:layout_width="@dimen/dp90w"
-                android:layout_height="@dimen/dp90h"
-                android:layout_marginTop="@dimen/dp18h"
-                android:onClick="@{(rootView)-> viewmodel.showImage(viewmodel.userData.image,rootView)}"
-                android:src="@drawable/splash"
-                app:civ_border_color="@color/background_gray"
-                app:civ_border_overlay="true"
-                app:civ_border_width="6dp"
-                app:imageUrl="@{viewmodel.userData.image}"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp150w"
+                android:background="@drawable/auth_header"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dp4w"
-                android:layout_marginBottom="@dimen/dp4h"
-                android:onClick="@{()->viewmodel.imageSubmit()}"
-                android:src="@drawable/ic_profile_camera"
-                app:layout_constraintBottom_toBottomOf="@id/user_img"
-                app:layout_constraintEnd_toEndOf="@id/user_img" />
-
             <grand.app.akar.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_account_username"
+                android:id="@+id/tv_account_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp8h"
-                android:text="@{viewmodel.userData.name}"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colordark"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/user_img" />
-
-            <grand.app.akar.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_account_warning1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp40w"
-                android:layout_marginTop="@dimen/dp30h"
-                android:layout_marginEnd="@dimen/dp40w"
-                android:text="@string/tv_account_warning1"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/medium_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_account_username" />
-
-            <grand.app.akar.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_account_warning2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp8h"
-                android:text="@string/tv_account_warning2"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/medium_color"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_account_warning1" />
-
-            <grand.app.akar.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_account_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp40h"
-                android:text="@string/password"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colordark"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_account_warning2" />
-
-            <grand.app.akar.customViews.views.CustomEditText
-                android:id="@+id/input_register_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp8h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:hint="@string/password_hint"
-                android:inputType="textPassword"
-                android:textColorHint="@color/overlayBackground"
-                app:endIconDrawable="@drawable/ic_lock"
-                app:endIconMode="custom"
-                app:helperTextTextColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_account_password"
-                app:text="@={viewmodel.request.password}" />
-
-            <grand.app.akar.customViews.views.CustomEditText
-                android:id="@+id/input_register_password_confirm"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp8h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:hint="@string/password_hint_confirm"
-                android:inputType="textPassword"
-                android:textColorHint="@color/overlayBackground"
-                app:endIconDrawable="@drawable/ic_lock"
-                app:endIconMode="custom"
-                app:helperTextTextColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_register_password"
-                app:text="@={viewmodel.request.confirmPassword}" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/appCompatButtonNext"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp20h"
-                android:background="@color/colorPrimary"
-                android:onClick="@{()->viewmodel.updateProfile()}"
-                android:text="@string/edit"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="@dimen/dp12h"
+                android:text="@string/profile_edit"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/white"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_register_password_confirm" />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
+            <RelativeLayout
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp40h"
+                android:background="@color/zxing_transparent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_account_title">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp40h"
+                    android:background="@color/zxing_transparent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/account_card_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="-15dp"
+                        android:layout_marginEnd="@dimen/dp15w"
+                        app:cardCornerRadius="@dimen/dp8h"
+                        app:cardUseCompatPadding="true">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/dp80h">
+
+                            <!--gifts-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_my_ads"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp10w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_my_ads"
+                                android:drawablePadding="@dimen/dp8w"
+                                android:gravity="center_vertical"
+                                android:onClick="@{()-> viewmodel.toSettings()}"
+                                android:text="@string/account_my_ads"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <!--edit Profile-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_fund_ads"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp10w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_fund_ads"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center_vertical"
+                                android:onClick="@{()->viewmodel.toMyPoints()}"
+                                android:text="@string/my_fund_ads"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_my_ads" />
+
+                            <!--Contact-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_contact"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_contact"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center_vertical"
+                                android:onClick="@{()-> viewmodel.toMyOrders()}"
+                                android:text="@string/tv_account_contact"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_fund_ads" />
+                            <!--About App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_about"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_about"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:text="@string/about"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_contact" />
+                            <!--Terms App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_terms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_terms"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:text="@string/terms"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_about" />
+
+
+                            <!--Support App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_support_contact"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_contact_support"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:text="@string/tv_account_contact_support"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_terms" />
+
+                            <!--Rate App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_rate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_rate"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:text="@string/rate"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_support_contact" />
+
+                            <!--Share App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_share"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:drawableStart="@drawable/ic_account_share"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:onClick="@{()-> viewmodel.toReviews()}"
+                                android:text="@string/share"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_rate" />
+
+                            <!--Share App-->
+                            <grand.app.akar.customViews.views.CustomTextViewMedium
+                                android:id="@+id/tv_account_logout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp8w"
+                                android:layout_marginTop="@dimen/dp15h"
+                                android:layout_marginBottom="@dimen/dp8w"
+                                android:drawableStart="@drawable/ic_account_logout"
+                                android:drawablePadding="@dimen/dp15w"
+                                android:gravity="center"
+                                android:onClick="@{()-> viewmodel.toReviews()}"
+                                android:text="@string/logout"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                                android:textColor="@color/colordark"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/tv_account_share" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_login_logo"
+                    android:layout_width="@dimen/dp100w"
+                    android:layout_height="@dimen/dp100h"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:src="@drawable/splash"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
+
+
+            </RelativeLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

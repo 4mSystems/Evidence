@@ -27,8 +27,12 @@ import grand.app.akar.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.akar.pages.auth.login.LoginFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.chat.view.ChatFragment;
+import grand.app.akar.pages.conversations.ConversationsFragment;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
+import grand.app.akar.pages.myAds.CurrentAdsFragment;
+import grand.app.akar.pages.myAds.MyAdsMainFragment;
+import grand.app.akar.pages.myAds.PreviousAdsFragment;
 import grand.app.akar.pages.notifications.NotificationsFragment;
 import grand.app.akar.pages.onBoard.OnBoardFragment;
 import grand.app.akar.pages.profile.ProfileFragment;
@@ -105,6 +109,14 @@ public interface IApplicationComponent {
     void inject(AdsAttachmentsFragment adsAttachmentsFragment);
 
     void inject(AdUploadingSuccessFragment adUploadingSuccessFragment);
+
+    void inject(ConversationsFragment conversationsFragment);
+
+    void inject(CurrentAdsFragment currentAdsFragment);
+
+    void inject(PreviousAdsFragment previousAdsFragment);
+
+    void inject(MyAdsMainFragment myAdsMainFragment);
 
     @Component.Builder
     interface Builder {
