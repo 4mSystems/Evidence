@@ -6,179 +6,87 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatRatingBar;
-import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.card.MaterialCardView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
+import grand.app.akar.customViews.views.CustomTextViewRegular;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentMyAccountBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatButton appCompatButtonNext;
+  public final MaterialCardView accountCardContainer;
 
   @NonNull
-  public final Barrier br4;
+  public final CircleImageView imgLoginLogo;
 
   @NonNull
-  public final Barrier brAccountBalance;
+  public final CustomTextViewMedium tvAccountAbout;
 
   @NonNull
-  public final Barrier brAccountOrders;
+  public final CustomTextViewMedium tvAccountContact;
 
   @NonNull
-  public final Barrier brAccountPoints;
+  public final CustomTextViewMedium tvAccountFundAds;
 
   @NonNull
-  public final Barrier brAccountSettings;
+  public final CustomTextViewMedium tvAccountLogout;
 
   @NonNull
-  public final Barrier brAccountShare;
+  public final CustomTextViewMedium tvAccountMyAds;
 
   @NonNull
-  public final Barrier brAccountSupport;
+  public final CustomTextViewMedium tvAccountName;
 
   @NonNull
-  public final Barrier brTvAccountOrderNum;
+  public final CustomTextViewMedium tvAccountRate;
 
   @NonNull
-  public final Barrier brTvDeliveryVatTotal;
+  public final CustomTextViewMedium tvAccountShare;
 
   @NonNull
-  public final AppCompatRatingBar rating;
+  public final CustomTextViewMedium tvAccountSupportContact;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountBalance;
+  public final CustomTextViewMedium tvAccountTerms;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountBalanceText;
+  public final CustomTextViewMedium tvAccountTitle;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountBillingTotalText;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountBillingTotalVal;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountMyOrders;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountNumCommentsText;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountNumCommentsVal;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountOrderNumText;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountOrderNumVal;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountPoints;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountSettings;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountUserId;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountUsername;
-
-  @NonNull
-  public final CustomTextViewMedium tvAccountVerified;
-
-  @NonNull
-  public final CustomTextViewMedium tvDeliveryVatTotalText;
-
-  @NonNull
-  public final CustomTextViewMedium tvDeliveryVatTotalVal;
-
-  @NonNull
-  public final CircleImageView userImg;
-
-  @NonNull
-  public final View viewAbout;
-
-  @NonNull
-  public final View viewGift;
-
-  @NonNull
-  public final View viewOrders;
-
-  @NonNull
-  public final View viewProfile;
-
-  @NonNull
-  public final View viewRate;
-
-  @NonNull
-  public final View viewSupport;
-
-  @NonNull
-  public final View viewTerms;
+  public final CustomTextViewRegular tvAccountType;
 
   @Bindable
   protected MyAccountViewModel mViewmodel;
 
   protected FragmentMyAccountBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, Barrier br4, Barrier brAccountBalance,
-      Barrier brAccountOrders, Barrier brAccountPoints, Barrier brAccountSettings,
-      Barrier brAccountShare, Barrier brAccountSupport, Barrier brTvAccountOrderNum,
-      Barrier brTvDeliveryVatTotal, AppCompatRatingBar rating,
-      CustomTextViewMedium tvAccountBalance, CustomTextViewMedium tvAccountBalanceText,
-      CustomTextViewMedium tvAccountBillingTotalText, CustomTextViewMedium tvAccountBillingTotalVal,
-      CustomTextViewMedium tvAccountMyOrders, CustomTextViewMedium tvAccountNumCommentsText,
-      CustomTextViewMedium tvAccountNumCommentsVal, CustomTextViewMedium tvAccountOrderNumText,
-      CustomTextViewMedium tvAccountOrderNumVal, CustomTextViewMedium tvAccountPoints,
-      CustomTextViewMedium tvAccountSettings, CustomTextViewMedium tvAccountUserId,
-      CustomTextViewMedium tvAccountUsername, CustomTextViewMedium tvAccountVerified,
-      CustomTextViewMedium tvDeliveryVatTotalText, CustomTextViewMedium tvDeliveryVatTotalVal,
-      CircleImageView userImg, View viewAbout, View viewGift, View viewOrders, View viewProfile,
-      View viewRate, View viewSupport, View viewTerms) {
+      MaterialCardView accountCardContainer, CircleImageView imgLoginLogo,
+      CustomTextViewMedium tvAccountAbout, CustomTextViewMedium tvAccountContact,
+      CustomTextViewMedium tvAccountFundAds, CustomTextViewMedium tvAccountLogout,
+      CustomTextViewMedium tvAccountMyAds, CustomTextViewMedium tvAccountName,
+      CustomTextViewMedium tvAccountRate, CustomTextViewMedium tvAccountShare,
+      CustomTextViewMedium tvAccountSupportContact, CustomTextViewMedium tvAccountTerms,
+      CustomTextViewMedium tvAccountTitle, CustomTextViewRegular tvAccountType) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.appCompatButtonNext = appCompatButtonNext;
-    this.br4 = br4;
-    this.brAccountBalance = brAccountBalance;
-    this.brAccountOrders = brAccountOrders;
-    this.brAccountPoints = brAccountPoints;
-    this.brAccountSettings = brAccountSettings;
-    this.brAccountShare = brAccountShare;
-    this.brAccountSupport = brAccountSupport;
-    this.brTvAccountOrderNum = brTvAccountOrderNum;
-    this.brTvDeliveryVatTotal = brTvDeliveryVatTotal;
-    this.rating = rating;
-    this.tvAccountBalance = tvAccountBalance;
-    this.tvAccountBalanceText = tvAccountBalanceText;
-    this.tvAccountBillingTotalText = tvAccountBillingTotalText;
-    this.tvAccountBillingTotalVal = tvAccountBillingTotalVal;
-    this.tvAccountMyOrders = tvAccountMyOrders;
-    this.tvAccountNumCommentsText = tvAccountNumCommentsText;
-    this.tvAccountNumCommentsVal = tvAccountNumCommentsVal;
-    this.tvAccountOrderNumText = tvAccountOrderNumText;
-    this.tvAccountOrderNumVal = tvAccountOrderNumVal;
-    this.tvAccountPoints = tvAccountPoints;
-    this.tvAccountSettings = tvAccountSettings;
-    this.tvAccountUserId = tvAccountUserId;
-    this.tvAccountUsername = tvAccountUsername;
-    this.tvAccountVerified = tvAccountVerified;
-    this.tvDeliveryVatTotalText = tvDeliveryVatTotalText;
-    this.tvDeliveryVatTotalVal = tvDeliveryVatTotalVal;
-    this.userImg = userImg;
-    this.viewAbout = viewAbout;
-    this.viewGift = viewGift;
-    this.viewOrders = viewOrders;
-    this.viewProfile = viewProfile;
-    this.viewRate = viewRate;
-    this.viewSupport = viewSupport;
-    this.viewTerms = viewTerms;
+    this.accountCardContainer = accountCardContainer;
+    this.imgLoginLogo = imgLoginLogo;
+    this.tvAccountAbout = tvAccountAbout;
+    this.tvAccountContact = tvAccountContact;
+    this.tvAccountFundAds = tvAccountFundAds;
+    this.tvAccountLogout = tvAccountLogout;
+    this.tvAccountMyAds = tvAccountMyAds;
+    this.tvAccountName = tvAccountName;
+    this.tvAccountRate = tvAccountRate;
+    this.tvAccountShare = tvAccountShare;
+    this.tvAccountSupportContact = tvAccountSupportContact;
+    this.tvAccountTerms = tvAccountTerms;
+    this.tvAccountTitle = tvAccountTitle;
+    this.tvAccountType = tvAccountType;
   }
 
   public abstract void setViewmodel(@Nullable MyAccountViewModel viewmodel);

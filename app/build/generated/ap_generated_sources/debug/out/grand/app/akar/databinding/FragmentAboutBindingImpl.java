@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentAboutBindingImpl extends FragmentAboutBinding  {
+public class FragmentAboutBindingImpl extends FragmentAboutBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,29 +14,38 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.imgRegister, 1);
-        sViewsWithIds.put(R.id.tv_take_me, 2);
+        sViewsWithIds.put(R.id.img_login_logo, 2);
+        sViewsWithIds.put(R.id.tv_login_title, 3);
+        sViewsWithIds.put(R.id.tv_take_me, 4);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final android.widget.ImageView mboundView1;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback19;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentAboutBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentAboutBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
+            , (android.widget.ImageView) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView1 = (android.widget.ImageView) bindings[1];
+        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback19 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -71,7 +80,13 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding  {
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.settings.viewModels.SettingsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -99,10 +114,33 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.mboundView1.setOnClickListener(mCallback19);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+
+            viewmodel.goBack(getRoot().getContext());
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

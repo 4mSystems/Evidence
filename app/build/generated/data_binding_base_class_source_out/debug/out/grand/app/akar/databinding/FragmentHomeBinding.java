@@ -4,12 +4,12 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.textfield.TextInputEditText;
 import grand.app.akar.R;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import java.lang.Deprecated;
@@ -17,19 +17,19 @@ import java.lang.Object;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
   @NonNull
-  public final View homeView1;
+  public final FrameLayout cardList;
 
   @NonNull
-  public final TextInputEditText inputHomeSearch;
+  public final FrameLayout cardMap;
 
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      View homeView1, TextInputEditText inputHomeSearch) {
+      FrameLayout cardList, FrameLayout cardMap) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.homeView1 = homeView1;
-    this.inputHomeSearch = inputHomeSearch;
+    this.cardList = cardList;
+    this.cardMap = cardMap;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

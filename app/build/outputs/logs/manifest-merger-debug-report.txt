@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
 MERGED from [androidx.databinding:databinding-adapters:4.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b383157711ab3bd93c6ccba6e0948974\databinding-adapters-4.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\96cceddf4e7c27123b91e7c2af254f05\databinding-runtime-4.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7dcce1a69a0f2bc5adc9162de64dae80\jetified-Oops-No-Internet-v1.1.2\AndroidManifest.xml:2:1-14:12
@@ -106,22 +106,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\MAymanM
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\228c270d40bb2cad06525ce80173006b\jetified-volley-1.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3a1f709a1ad92859398ffe75dc8eb6ff\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5e3deef95811c6e2016c22d003a8fa1f\jetified-libphonenumber-android-8.10.14\AndroidManifest.xml:2:1-11:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
 	package
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:4:5-29
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-60:12
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:11-69
@@ -208,7 +208,7 @@ MERGED from [com.google.android.libraries.places:places:2.4.0] C:\Users\MAymanM\
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:14:22-76
 application
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:16:5-58:19
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:16:5-60:19
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7035162d2eb6d02b9fec1bf3ed6d2f18\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7035162d2eb6d02b9fec1bf3ed6d2f18\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d0414079c42dd671ddb1f179494eb066\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -350,35 +350,35 @@ ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:39:9-41:50
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:40:13-58
 activity#grand.app.akar.activity.MainActivity
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:43:9-46:69
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:43:9-53:20
 	android:windowSoftInputMode
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:46:13-67
 	android:configChanges
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:45:13-74
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:44:13-64
-activity#grand.app.akar.activity.BaseActivity
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:47:9-57:20
-	android:windowSoftInputMode
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:50:13-67
-	android:configChanges
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:13-74
-	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:13-64
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:13-56:29
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:47:13-52:29
 action#android.intent.action.MAIN
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:52:17-69
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:17-69
 	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:52:25-66
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:25-66
 action#android.intent.action.VIEW
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:53:17-69
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:17-69
 	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:53:25-66
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:25-66
 category#android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:55:17-77
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:17-77
 	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:55:27-74
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:27-74
+activity#grand.app.akar.activity.BaseActivity
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:54:9-59:20
+	android:windowSoftInputMode
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:57:13-67
+	android:configChanges
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:56:13-74
+	android:name
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:55:13-64
 uses-sdk
 INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml

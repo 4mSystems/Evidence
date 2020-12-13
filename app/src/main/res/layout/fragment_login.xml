@@ -22,7 +22,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/auth_header">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_login_logo"
                 android:layout_width="@dimen/dp100w"
                 android:layout_height="@dimen/dp100h"

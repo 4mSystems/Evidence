@@ -15,6 +15,8 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.ParentActivity;
 import grand.app.akar.customViews.actionbar.BackActionBarView;
 import grand.app.akar.databinding.ActivityBaseBinding;
+import grand.app.akar.pages.myAccount.MyAccountFragment;
+import grand.app.akar.pages.profile.ProfileFragment;
 import grand.app.akar.pages.splash.SplashFragment;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
@@ -45,7 +47,7 @@ public class BaseActivity extends ParentActivity {
                     }
                 }
             } else
-                MovementHelper.replaceFragment(this, new SplashFragment(), "");
+                MovementHelper.replaceFragment(this, new MyAccountFragment(), "");
         }
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

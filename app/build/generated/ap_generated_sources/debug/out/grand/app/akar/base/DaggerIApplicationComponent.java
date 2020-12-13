@@ -22,6 +22,8 @@ import grand.app.akar.pages.ads.AkarLocationsMapFragment;
 import grand.app.akar.pages.ads.AkarLocationsMapFragment_MembersInjector;
 import grand.app.akar.pages.ads.CategoriesFragment;
 import grand.app.akar.pages.ads.CategoriesFragment_MembersInjector;
+import grand.app.akar.pages.ads.forms.AdUploadingSuccessFragment;
+import grand.app.akar.pages.ads.forms.AdUploadingSuccessFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddFactoryFormFragment;
 import grand.app.akar.pages.ads.forms.AddFactoryFormFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddFlatFormFragment;
@@ -38,6 +40,8 @@ import grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment;
 import grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddWareHosueFormFragment;
 import grand.app.akar.pages.ads.forms.AddWareHosueFormFragment_MembersInjector;
+import grand.app.akar.pages.ads.forms.AdsAttachmentsFragment;
+import grand.app.akar.pages.ads.forms.AdsAttachmentsFragment_MembersInjector;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel_MembersInjector;
@@ -67,12 +71,22 @@ import grand.app.akar.pages.auth.login.LoginFragment_MembersInjector;
 import grand.app.akar.pages.auth.login.LoginViewModel;
 import grand.app.akar.pages.auth.login.LoginViewModel_Factory;
 import grand.app.akar.pages.auth.login.LoginViewModel_MembersInjector;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
+import grand.app.akar.pages.auth.payment.PaymentFragment_MembersInjector;
+import grand.app.akar.pages.auth.payment.PaymentViewModel;
+import grand.app.akar.pages.auth.payment.PaymentViewModel_Factory;
+import grand.app.akar.pages.auth.payment.PaymentViewModel_MembersInjector;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment_MembersInjector;
 import grand.app.akar.pages.auth.register.RegisterViewModel;
 import grand.app.akar.pages.auth.register.RegisterViewModel_Factory;
 import grand.app.akar.pages.auth.register.RegisterViewModel_MembersInjector;
 import grand.app.akar.pages.chat.view.ChatFragment;
+import grand.app.akar.pages.conversations.ConversationsFragment;
+import grand.app.akar.pages.conversations.ConversationsFragment_MembersInjector;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_Factory;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_MembersInjector;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.home.HomeFragment_MembersInjector;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
@@ -83,6 +97,15 @@ import grand.app.akar.pages.myAccount.MyAccountFragment_MembersInjector;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel_Factory;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel_MembersInjector;
+import grand.app.akar.pages.myAds.CurrentAdsFragment;
+import grand.app.akar.pages.myAds.CurrentAdsFragment_MembersInjector;
+import grand.app.akar.pages.myAds.MyAdsMainFragment;
+import grand.app.akar.pages.myAds.MyAdsMainFragment_MembersInjector;
+import grand.app.akar.pages.myAds.PreviousAdsFragment;
+import grand.app.akar.pages.myAds.PreviousAdsFragment_MembersInjector;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel_Factory;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel_MembersInjector;
 import grand.app.akar.pages.notifications.NotificationsFragment;
 import grand.app.akar.pages.onBoard.OnBoardFragment;
 import grand.app.akar.pages.onBoard.OnBoardFragment_MembersInjector;
@@ -105,8 +128,12 @@ import grand.app.akar.pages.splash.SplashFragment_MembersInjector;
 import grand.app.akar.pages.splash.SplashViewModel;
 import grand.app.akar.pages.splash.SplashViewModel_Factory;
 import grand.app.akar.pages.splash.SplashViewModel_MembersInjector;
+import grand.app.akar.repository.AdsRepository;
+import grand.app.akar.repository.AdsRepository_Factory;
 import grand.app.akar.repository.AuthRepository;
 import grand.app.akar.repository.AuthRepository_Factory;
+import grand.app.akar.repository.ChatRepository;
+import grand.app.akar.repository.ChatRepository_Factory;
 import grand.app.akar.repository.HomeRepository;
 import grand.app.akar.repository.HomeRepository_Factory;
 import grand.app.akar.repository.SettingsRepository;
@@ -129,6 +156,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<HomeRepository> homeRepositoryProvider;
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private Provider<ChatRepository> chatRepositoryProvider;
+
+  private Provider<AdsRepository> adsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -183,6 +214,15 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private AddVillaHouseViewModel getAddVillaHouseViewModel() {
     return injectAddVillaHouseViewModel(AddVillaHouseViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
+  private ConversationsViewModel getConversationsViewModel() {
+    return injectConversationsViewModel(ConversationsViewModel_Factory.newInstance(chatRepositoryProvider.get()));}
+
+  private MyAdsViewModel getMyAdsViewModel() {
+    return injectMyAdsViewModel(MyAdsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private PaymentViewModel getPaymentViewModel() {
+    return injectPaymentViewModel(PaymentViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -192,6 +232,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -313,6 +355,34 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(AddOfficeFormFragment addOfficeFormFragment) {
     injectAddOfficeFormFragment(addOfficeFormFragment);}
+
+  @Override
+  public void inject(AdsAttachmentsFragment adsAttachmentsFragment) {
+    injectAdsAttachmentsFragment(adsAttachmentsFragment);}
+
+  @Override
+  public void inject(AdUploadingSuccessFragment adUploadingSuccessFragment) {
+    injectAdUploadingSuccessFragment(adUploadingSuccessFragment);}
+
+  @Override
+  public void inject(ConversationsFragment conversationsFragment) {
+    injectConversationsFragment(conversationsFragment);}
+
+  @Override
+  public void inject(CurrentAdsFragment currentAdsFragment) {
+    injectCurrentAdsFragment(currentAdsFragment);}
+
+  @Override
+  public void inject(PreviousAdsFragment previousAdsFragment) {
+    injectPreviousAdsFragment(previousAdsFragment);}
+
+  @Override
+  public void inject(MyAdsMainFragment myAdsMainFragment) {
+    injectMyAdsMainFragment(myAdsMainFragment);}
+
+  @Override
+  public void inject(PaymentFragment paymentFragment) {
+    injectPaymentFragment(paymentFragment);}
 
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
@@ -516,6 +586,57 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AddOfficeFormFragment injectAddOfficeFormFragment(AddOfficeFormFragment instance) {
     AddOfficeFormFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    return instance;
+  }
+
+  private AdsAttachmentsFragment injectAdsAttachmentsFragment(AdsAttachmentsFragment instance) {
+    AdsAttachmentsFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    return instance;
+  }
+
+  private AdUploadingSuccessFragment injectAdUploadingSuccessFragment(
+      AdUploadingSuccessFragment instance) {
+    AdUploadingSuccessFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    return instance;
+  }
+
+  private ConversationsViewModel injectConversationsViewModel(ConversationsViewModel instance) {
+    ConversationsViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ConversationsFragment injectConversationsFragment(ConversationsFragment instance) {
+    ConversationsFragment_MembersInjector.injectViewModel(instance, getConversationsViewModel());
+    return instance;
+  }
+
+  private MyAdsViewModel injectMyAdsViewModel(MyAdsViewModel instance) {
+    MyAdsViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private CurrentAdsFragment injectCurrentAdsFragment(CurrentAdsFragment instance) {
+    CurrentAdsFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private PreviousAdsFragment injectPreviousAdsFragment(PreviousAdsFragment instance) {
+    PreviousAdsFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private MyAdsMainFragment injectMyAdsMainFragment(MyAdsMainFragment instance) {
+    MyAdsMainFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private PaymentViewModel injectPaymentViewModel(PaymentViewModel instance) {
+    PaymentViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private PaymentFragment injectPaymentFragment(PaymentFragment instance) {
+    PaymentFragment_MembersInjector.injectViewModel(instance, getPaymentViewModel());
     return instance;
   }
 

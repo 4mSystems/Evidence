@@ -14,15 +14,10 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.toolBar, 1);
-        sViewsWithIds.put(R.id.back, 2);
-        sViewsWithIds.put(R.id.map, 3);
-        sViewsWithIds.put(R.id.call, 4);
-        sViewsWithIds.put(R.id.v14, 5);
-        sViewsWithIds.put(R.id.chat_actions, 6);
-        sViewsWithIds.put(R.id.attach, 7);
-        sViewsWithIds.put(R.id.send_chat, 8);
-        sViewsWithIds.put(R.id.more, 9);
+        sViewsWithIds.put(R.id.v14, 1);
+        sViewsWithIds.put(R.id.chat_actions, 2);
+        sViewsWithIds.put(R.id.attach, 3);
+        sViewsWithIds.put(R.id.more, 4);
     }
     // views
     @NonNull
@@ -33,19 +28,14 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentChatBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentChatBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[6]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[9]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[8]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
-            , (android.view.View) bindings[5]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+            , (android.view.View) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

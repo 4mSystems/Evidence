@@ -144,8 +144,9 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="color" value="ffffff" />
-                                                <entry key="imagePath" value="C:\Users\MAymanM\AppData\Local\Temp\baseline_close_24.xml" />
+                                                <entry key="color" value="296bb5" />
+                                                <entry key="imagePath" value="C:\Users\MAymanM\AppData\Local\Temp\baseline_add_a_photo_24.xml" />
+                                                <entry key="paddingPercent" value="10" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -156,7 +157,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/close/baseline_close_24.xml" />
+                                                <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/add_a_photo/baseline_add_a_photo_24.xml" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -168,7 +169,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="F:\mostafa elnagar\app_design\takeme\mandob\upload documents\drawable-xxxhdpi\upload.png" />
+                                                <entry key="imagePath" value="C:\Users\MAymanM\Desktop\add-photo (1).png" />
+                                                <entry key="paddingPercent" value="15" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -200,10 +202,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundColor" value="94221e" />
+                                      <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="F:\mostafa elnagar\app_design\takeme\mandob\upload documents\drawable-xxxhdpi\upload.png" />
-                                      <entry key="outputName" value="ic_close" />
+                                      <entry key="imageAsset" value="C:\Users\MAymanM\Desktop\add-photo (1).png" />
+                                      <entry key="outputName" value="ic_edit_profile" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -358,7 +360,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/play_arrow/baseline_play_arrow_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/warning/baseline_warning_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -368,10 +370,11 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="autoMirrored" value="true" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_play" />
-                            <entry key="sourceFile" value="F:\mostafa elnagar\app_design\akar\cutting android\arrange\toggle-1.svg" />
+                            <entry key="outputName" value="ic_warning" />
+                            <entry key="sourceFile" value="F:\mostafa elnagar\app_design\akar\cutting android\alert\warning (1).svg" />
                           </map>
                         </option>
                       </PersistentState>

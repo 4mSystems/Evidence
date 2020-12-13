@@ -20,18 +20,18 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   public final FloatingActionButton fab;
 
   @NonNull
-  public final CustomBottomNavigationView homeNavigationMenu;
+  public final LinearLayout flHomeContainer;
 
   @NonNull
-  public final LinearLayout llBaseContainer;
+  public final CustomBottomNavigationView homeNavigationMenu;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FloatingActionButton fab, CustomBottomNavigationView homeNavigationMenu,
-      LinearLayout llBaseContainer) {
+      FloatingActionButton fab, LinearLayout flHomeContainer,
+      CustomBottomNavigationView homeNavigationMenu) {
     super(_bindingComponent, _root, _localFieldCount);
     this.fab = fab;
+    this.flHomeContainer = flHomeContainer;
     this.homeNavigationMenu = homeNavigationMenu;
-    this.llBaseContainer = llBaseContainer;
   }
 
   @NonNull

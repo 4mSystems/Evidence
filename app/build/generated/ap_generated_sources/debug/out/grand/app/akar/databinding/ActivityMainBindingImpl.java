@@ -14,7 +14,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ll_base_container, 1);
+        sViewsWithIds.put(R.id.fl_home_container, 1);
         sViewsWithIds.put(R.id.home_navigation_menu, 2);
         sViewsWithIds.put(R.id.fab, 3);
     }
@@ -32,8 +32,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3]
-            , (grand.app.akar.customViews.views.CustomBottomNavigationView) bindings[2]
             , (android.widget.LinearLayout) bindings[1]
+            , (grand.app.akar.customViews.views.CustomBottomNavigationView) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

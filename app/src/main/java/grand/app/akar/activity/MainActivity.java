@@ -1,12 +1,9 @@
 package grand.app.akar.activity;
 
-import android.app.ActivityManager;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
-
-import java.util.List;
 
 import javax.inject.Inject;
 
@@ -18,6 +15,8 @@ import grand.app.akar.connection.Api;
 import grand.app.akar.customViews.actionbar.HomeActionBarView;
 import grand.app.akar.databinding.ActivityMainBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.home.HomeFragment;
+import grand.app.akar.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
     public HomeActionBarView homeActionBarView = null;
@@ -42,6 +41,7 @@ public class MainActivity extends ParentActivity {
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
         homeActionBarView = new HomeActionBarView(this);
+        MovementHelper.replaceFragment(this, new HomeFragment(), "");
         //        if(getIntent().hasExtra(Constants.PAGE) && getIntent().getStringExtra(Constants.PAGE).equals(Constants.LOGIN))
 ////            navigationDrawerView.loginPage();
 //        else  if(getIntent().hasExtra(Constants.PAGE) && getIntent().getStringExtra(Constants.PAGE).equals(Constants.MYREQUESTS))
@@ -67,45 +67,4 @@ public class MainActivity extends ParentActivity {
 //            }
 //        });
     }
-
-
-    @Override
-    public void onBackPressed() {
-
-        ActivityManager mngr = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningTaskInfo> taskList = mngr.getRunningTasks(10);
-
-        if (taskList.get(0).numActivities == 1 &&
-                taskList.get(0).topActivity.getClassName().equals(this.getClass().getName())) {
-            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-                super.onBackPressed();
-                return;
-            }
-//            BaseFragment baseFragment = (BaseFragment) getSupportFragmentManager().findFragmentByTag(Constants.HOME);
-//            if (baseFragment != null) {
-//                int[] ids = {R.id.tv_dialog_close_app_yes, R.id.tv_dialog_close_app_no};
-//                DialogHelper.showDialogHelper(MainActivity.this, R.layout.dialog_logout_app, ids, (dialog, view) -> {
-//                    switch (view.getId()) {
-//                        case R.id.tv_dialog_close_app_yes:
-//                            dialog.dismiss();
-//                            finish();
-//                            break;
-//                        case R.id.tv_dialog_close_app_no:
-//                            dialog.dismiss();
-//                            break;
-//
-//                    }
-//                });
-//            } else {
-//                navigationDrawerView.homePage();
-//
-//            }
-            return;
-
-        } else
-            finish();
-
-    }
-
 }

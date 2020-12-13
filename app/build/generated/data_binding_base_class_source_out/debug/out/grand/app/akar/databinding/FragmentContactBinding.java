@@ -6,50 +6,66 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.akar.R;
-import grand.app.akar.customViews.views.CustomEditText;
+import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.pages.settings.viewModels.SettingsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentContactBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatButton appCompatButtonNext;
+  public final AppCompatImageView map;
 
   @NonNull
-  public final AppCompatImageView imgRegister;
+  public final CustomTextViewMedium tvContactEmail;
 
   @NonNull
-  public final CustomEditText inputContactMessage;
+  public final CustomTextViewMedium tvContactEmailText;
 
   @NonNull
-  public final CustomEditText inputName;
+  public final CustomTextViewMedium tvContactPhone;
 
   @NonNull
-  public final CustomEditText inputPhone;
+  public final CustomTextViewMedium tvContactPhoneText;
 
   @NonNull
-  public final CustomEditText inputRegisterEmail;
+  public final CustomTextViewMedium tvContactPhoneWhats;
+
+  @NonNull
+  public final CustomTextViewMedium tvContactPhoneWhatsText;
+
+  @NonNull
+  public final View v3;
+
+  @NonNull
+  public final View v4;
+
+  @NonNull
+  public final View v5;
 
   @Bindable
   protected SettingsViewModel mViewmodel;
 
   protected FragmentContactBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, AppCompatImageView imgRegister,
-      CustomEditText inputContactMessage, CustomEditText inputName, CustomEditText inputPhone,
-      CustomEditText inputRegisterEmail) {
+      AppCompatImageView map, CustomTextViewMedium tvContactEmail,
+      CustomTextViewMedium tvContactEmailText, CustomTextViewMedium tvContactPhone,
+      CustomTextViewMedium tvContactPhoneText, CustomTextViewMedium tvContactPhoneWhats,
+      CustomTextViewMedium tvContactPhoneWhatsText, View v3, View v4, View v5) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.appCompatButtonNext = appCompatButtonNext;
-    this.imgRegister = imgRegister;
-    this.inputContactMessage = inputContactMessage;
-    this.inputName = inputName;
-    this.inputPhone = inputPhone;
-    this.inputRegisterEmail = inputRegisterEmail;
+    this.map = map;
+    this.tvContactEmail = tvContactEmail;
+    this.tvContactEmailText = tvContactEmailText;
+    this.tvContactPhone = tvContactPhone;
+    this.tvContactPhoneText = tvContactPhoneText;
+    this.tvContactPhoneWhats = tvContactPhoneWhats;
+    this.tvContactPhoneWhatsText = tvContactPhoneWhatsText;
+    this.v3 = v3;
+    this.v4 = v4;
+    this.v5 = v5;
   }
 
   public abstract void setViewmodel(@Nullable SettingsViewModel viewmodel);
