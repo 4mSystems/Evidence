@@ -11,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
@@ -40,6 +42,11 @@ public class ForgetPasswordFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -50,7 +57,8 @@ public class ForgetPasswordFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.FORGET_PASSWORD)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_FORGET, viewModel.getRequest().getPhone()), null, ConfirmCodeFragment.class.getName(),null);
+                MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_FORGET, viewModel.getRequest().getPhone()), null, ConfirmCodeFragment.class.getName(), null);
+                viewModel.goBack(context);
             }
         });
     }

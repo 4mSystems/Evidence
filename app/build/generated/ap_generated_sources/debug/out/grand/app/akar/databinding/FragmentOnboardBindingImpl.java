@@ -137,7 +137,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
                 if (onBoardViewModelsJavaLangObjectNull) {
 
 
-                    onBoardViewModels.toNext();
+                    onBoardViewModels.toLogin();
                 }
                 break;
             }

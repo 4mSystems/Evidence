@@ -47,11 +47,11 @@
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginEnd="@dimen/dp8w"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="@id/img_login_logo"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/img_login_logo"
                 app:layout_constraintTop_toTopOf="@id/img_login_logo">
 
@@ -59,25 +59,24 @@
                     android:id="@+id/tv_account_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Emma Ahmed"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@{viewmodel.userData.name}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/white"
-                     />
+                    android:textColor="@color/white" />
 
                 <grand.app.akar.customViews.views.CustomTextViewRegular
                     android:id="@+id/tv_account_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp2w"
-                    android:text="( مسـوق )"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:textSize="@dimen/sp10"
+                    android:layout_marginStart="@dimen/dp2w"
+                    android:gravity="center"
+                    android:text="@{viewmodel.userData.type==0?` ( `+@string/seeker+` )`:viewmodel.userData.type==1?` ( `+@string/owner+` )`:` ( `+@string/realtor+` )`}"
                     android:textColor="@color/white"
-                    />
+                    android:textSize="@dimen/sp10" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -148,7 +147,7 @@
                         android:drawableStart="@drawable/ic_account_contact"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center_vertical"
-                        android:onClick="@{()-> viewmodel.toMyOrders()}"
+                        android:onClick="@{()-> viewmodel.toSettings()}"
                         android:text="@string/tv_account_contact"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
@@ -164,6 +163,7 @@
                         android:drawableStart="@drawable/ic_account_about"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center"
+                        android:onClick="@{()-> viewmodel.toAbout()}"
                         android:text="@string/about"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
@@ -179,6 +179,7 @@
                         android:drawableStart="@drawable/ic_account_terms"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center"
+                        android:onClick="@{()-> viewmodel.toTerms()}"
                         android:text="@string/terms"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"

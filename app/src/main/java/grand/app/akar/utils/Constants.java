@@ -3,16 +3,16 @@ package grand.app.akar.utils;
 public class Constants {
 
     public static final String CHANNEL_ID = "Amar";
-    public static final String CHANNEL_NAME = "Amar Application";
-    public static final String CHANNEL_DESCRIPTION = "Amar Application Desc";
+    public static final String SHOW_CITIES = "SHOW_CITIES";
+    public static final String USER_TYPES = "USER_TYPES";
 
     public final static String ADD_FORM = "ADD_FORM";
-    public final static String SELECT_COUNTRY = "SELECT_COUNTRY";
+    public final static String START_APP = "START_APP";
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String CITIES = "CITIES";
 
-    public final static String PHONE_VERIFIED = "PHONE_VERIFIED";
+    public final static String UPDATE_PAYMENT = "UPDATE_PAYMENT";
     public final static String EMAIL = "email";
     public final static String PHONE = "phone";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
@@ -22,10 +22,10 @@ public class Constants {
 
     public final static String IMAGE = "image";
     public final static String HOME = "HOME";
-    public final static String BACKGROUND_API = "BACKGROUND_API";
+    public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String LOGOUT = "logout";
-    public final static String CARS_NATIONALS = "CARS_NATIONALS";
+    public final static String FLIP_CARD = "FLIP_CARD";
 
     public final static String WAITING_ORDERS = "WAITING_ORDERS";
     public final static String STORE_ORDERS = "STORE_ORDERS";
@@ -52,7 +52,7 @@ public class Constants {
     public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
     public static final String MY_ORDERS = "MY_ORDERS";
     public static final String ORDER_FILTER = "ORDER_FILTER";
-    public static final String SEND_OFFER = "SEND_OFFER";
+    public static final String PAYMENT_REQUIRED = "PAYMENT_REQUIRED";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
     public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
     public static final String SHARE_BAR = "SHARE_BAR";
@@ -68,7 +68,7 @@ public class Constants {
     public static final int RESPONSE_SUCCESS = 200;
     public final static int RESPONSE_ERROR = 203;
     public static final int RESPONSE_TRIP_FAILED = 401;
-    public static final int RESPONSE_FAILED = 402;
+    public static final int PAYMENT_REQUIRED_CODE = 402;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
     public static final int RESPONSE_401 = 401;
@@ -152,7 +152,9 @@ public class Constants {
     public static final String TRUE = "true";
     public static final String PDF = "pdf";
     public static final String MENU_HOME = "menu_home";
-    public static final String MENU_CATEGORIES = "menu_categories";
+    public static final String MENU_FAVORITE = "menu_favorite";
+    public static final String MENU_ADD_AD = "menu_ad";
+    public static final String MENU_CONVERSATIONS = "menu_conversations";
     public static final String NEXT = "next";
     public static final String BOARD = "board";
     public static final String MENu = "menu";

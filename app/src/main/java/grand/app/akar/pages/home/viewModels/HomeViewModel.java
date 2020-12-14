@@ -67,22 +67,24 @@ public class HomeViewModel extends BaseViewModel {
 
     }
 
-    private static final String TAG = "HomeViewModel";
-
     public boolean onNavigationClick(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.menuHome:
-                liveData.setValue(new Mutable(Constants.MENU_HOME));
-                return true;
-            case R.id.menuFavorites:
-                liveData.setValue(new Mutable(Constants.MENU_CATEGORIES));
-                return true;
-            case R.id.menuAccount:
-                liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
-                return true;
-            default:
-                return true;
-        }
+        if (item.getItemId() == R.id.menuHome) {
+            liveData.setValue(new Mutable(Constants.MENU_HOME));
+            return true;
+        } else if (item.getItemId() == R.id.menuFavorites) {
+            liveData.setValue(new Mutable(Constants.MENU_FAVORITE));
+            return true;
+        } else if (item.getItemId() == R.id.menuAccount) {
+            liveData.setValue(new Mutable(Constants.MENU_ACCOUNT));
+            return true;
+        } else if (item.getItemId() == R.id.menuConversations) {
+            liveData.setValue(new Mutable(Constants.MENU_CONVERSATIONS));
+            return true;
+        } else if (item.getItemId() == R.id.menuAdd) {
+            liveData.setValue(new Mutable(Constants.MENU_ADD_AD));
+            return true;
+        } else
+            return false;
     }
 
     public HomeRepository getHomeRepository() {
@@ -91,5 +93,9 @@ public class HomeViewModel extends BaseViewModel {
 
     public HomeAdapter getHomeAdapter() {
         return homeAdapter;
+    }
+
+    public void filpCard() {
+        liveData.setValue(new Mutable(Constants.FLIP_CARD));
     }
 }

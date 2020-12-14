@@ -12,7 +12,6 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class ForgetPasswordViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
-    String cpp;
     @Inject
     AuthRepository repository;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
@@ -28,9 +27,6 @@ public class ForgetPasswordViewModel extends BaseViewModel {
 
     public void sendCode() {
         if (getRequest().isValid()) {
-            if (!getRequest().getPhone().contains(cpp)) {
-                getRequest().setPhone(cpp + request.getPhone());
-            }
             compositeDisposable.add(repository.forgetPassword(request));
         }
     }

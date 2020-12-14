@@ -151,9 +151,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
-  private Provider<AuthRepository> authRepositoryProvider;
-
   private Provider<HomeRepository> homeRepositoryProvider;
+
+  private Provider<AuthRepository> authRepositoryProvider;
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
 
@@ -175,6 +175,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return new Builder().build();
   }
 
+  private HomeViewModel getHomeViewModel() {
+    return injectHomeViewModel(HomeViewModel_Factory.newInstance(homeRepositoryProvider.get()));}
+
   private SplashViewModel getSplashViewModel() {
     return injectSplashViewModel(SplashViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
@@ -192,9 +195,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private RegisterViewModel getRegisterViewModel() {
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));}
-
-  private HomeViewModel getHomeViewModel() {
-    return injectHomeViewModel(HomeViewModel_Factory.newInstance(homeRepositoryProvider.get()));}
 
   private MyAccountViewModel getMyAccountViewModel() {
     return injectMyAccountViewModel(MyAccountViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
@@ -229,8 +229,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.getMutableLiveDataProvider = DoubleCheck.provider(LiveData_GetMutableLiveDataFactory.create(liveDataParam));
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
-    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
@@ -384,9 +384,14 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public void inject(PaymentFragment paymentFragment) {
     injectPaymentFragment(paymentFragment);}
 
+  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
+    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
-    MainActivity_MembersInjector.injectApi(instance, webServiceProvider.get());
+    MainActivity_MembersInjector.injectViewModel(instance, getHomeViewModel());
     return instance;
   }
 
@@ -452,11 +457,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private RegisterFragment injectRegisterFragment(RegisterFragment instance) {
     RegisterFragment_MembersInjector.injectViewModel(instance, getRegisterViewModel());
-    return instance;
-  }
-
-  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
-    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
     return instance;
   }
 

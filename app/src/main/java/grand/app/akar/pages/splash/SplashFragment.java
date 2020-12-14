@@ -25,8 +25,11 @@ import grand.app.akar.pages.ads.CategoriesFragment;
 import grand.app.akar.pages.ads.forms.AddFactoryFormFragment;
 import grand.app.akar.pages.ads.forms.AddOfficeFormFragment;
 import grand.app.akar.pages.ads.forms.AddResetFormFragment;
+import grand.app.akar.pages.auth.login.LoginFragment;
+import grand.app.akar.pages.onBoard.OnBoardFragment;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
+import grand.app.akar.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
     private Context context;
@@ -50,18 +53,18 @@ public class SplashFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.HOME)) {
-                MovementHelper.startActivityBase(context, CategoriesFragment.class.getName(), null, null);
+                MovementHelper.startActivityMain(context);
             }
 //            else if (((Mutable) o).message.equals(Constants.BACKGROUND_API)) {
 //                viewModel.getCountryCodes();
-//            } else if (mutable.message.equals(Constants.GET_COUNTRIES_CODE)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                    MovementHelper.startActivityBase(context, CountriesFragment.class.getName(), null, null);
-//                } else {
-//                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
-//                }
-//                UserHelper.getInstance(context).addCountryCodes(((CountriesCodesResponse) (mutable).object).getData().toString().replace("[", "").replace("]", "").replace(" ", ""));
 //            }
+            else if (mutable.message.equals(Constants.BOARD)) {
+                if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
+                    MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                } else {
+                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
+                }
+            }
         });
     }
 

@@ -7,9 +7,9 @@ public class BR {
 
   public static final int baseViewModel = 2;
 
-  public static final int carsNationals = 3;
+  public static final int categoriesData = 3;
 
-  public static final int categoriesData = 4;
+  public static final int citiesList = 4;
 
   public static final int homeData = 5;
 
@@ -39,7 +39,7 @@ public class BR {
 
   public static final int profileData = 18;
 
-  public static final int userData = 19;
+  public static final int settingsData = 19;
 
   public static final int userDocuments = 20;
 

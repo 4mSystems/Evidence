@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentPaymentBindingImpl extends FragmentPaymentBinding  {
+public class FragmentPaymentBindingImpl extends FragmentPaymentBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,23 +14,24 @@ public class FragmentPaymentBindingImpl extends FragmentPaymentBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_payment_title, 1);
-        sViewsWithIds.put(R.id.pay_img, 2);
-        sViewsWithIds.put(R.id.tv_payment_person_type, 3);
-        sViewsWithIds.put(R.id.tv_payment_desc, 4);
-        sViewsWithIds.put(R.id.v20, 5);
-        sViewsWithIds.put(R.id.tv_payment_title_2, 6);
-        sViewsWithIds.put(R.id.tv_payment_price_text, 7);
-        sViewsWithIds.put(R.id.tv_payment_price, 8);
-        sViewsWithIds.put(R.id.v21, 9);
-        sViewsWithIds.put(R.id.tv_payment_total_text, 10);
-        sViewsWithIds.put(R.id.tv_payment_total, 11);
-        sViewsWithIds.put(R.id.appCompatButtonNext, 12);
+        sViewsWithIds.put(R.id.tv_payment_title, 2);
+        sViewsWithIds.put(R.id.pay_img, 3);
+        sViewsWithIds.put(R.id.tv_payment_person_type, 4);
+        sViewsWithIds.put(R.id.tv_payment_desc, 5);
+        sViewsWithIds.put(R.id.v20, 6);
+        sViewsWithIds.put(R.id.tv_payment_title_2, 7);
+        sViewsWithIds.put(R.id.tv_payment_price_text, 8);
+        sViewsWithIds.put(R.id.tv_payment_price, 9);
+        sViewsWithIds.put(R.id.v21, 10);
+        sViewsWithIds.put(R.id.tv_payment_total_text, 11);
+        sViewsWithIds.put(R.id.tv_payment_total, 12);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback36;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -40,23 +41,25 @@ public class FragmentPaymentBindingImpl extends FragmentPaymentBinding  {
     }
     private FragmentPaymentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[5]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[9]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[7]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[12]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[11]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[10]
-            , (android.view.View) bindings[5]
-            , (android.view.View) bindings[9]
+            , (android.view.View) bindings[6]
+            , (android.view.View) bindings[10]
             );
+        this.appCompatButtonNext.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback36 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -91,7 +94,13 @@ public class FragmentPaymentBindingImpl extends FragmentPaymentBinding  {
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.auth.payment.PaymentViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -119,10 +128,32 @@ public class FragmentPaymentBindingImpl extends FragmentPaymentBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.auth.payment.PaymentViewModel viewmodel = mViewmodel;
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.appCompatButtonNext.setOnClickListener(mCallback36);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.auth.payment.PaymentViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.updatePayment();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

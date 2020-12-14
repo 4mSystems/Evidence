@@ -90,6 +90,7 @@
                     android:drawablePadding="@dimen/dp8w"
                     android:hint="@string/phone"
                     android:inputType="phone"
+                    android:text="@={viewmodel.loginRequest.loginkey}"
                     android:textAlignment="viewStart"
                     android:textColorHint="@color/medium_color"
                     android:textDirection="ltr"
@@ -97,8 +98,7 @@
                     app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_login_header_number"
-                    app:text="@={viewmodel.loginRequest.phone}" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_login_header_number" />
 
 
                 <grand.app.akar.customViews.views.CustomTextViewMedium
@@ -126,13 +126,13 @@
                     android:drawablePadding="@dimen/dp8w"
                     android:hint="@string/password_hint"
                     android:inputType="textPassword"
+                    android:text="@={viewmodel.loginRequest.password}"
                     android:textAlignment="viewStart"
                     android:textColorHint="@color/medium_color"
                     app:helperTextTextColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_change_new_password"
-                    app:text="@={viewmodel.loginRequest.password}" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_change_new_password" />
 
                 <grand.app.akar.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_login_forget"
@@ -228,8 +228,8 @@
                         android:id="@+id/tv_forget_timer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/donot_have_account"
                         android:layout_marginStart="@dimen/dp4w"
+                        android:text="@string/donot_have_account"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/black" />
 
@@ -237,10 +237,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginStart="@dimen/dp4w"
                         android:text="@string/register"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimary" />
-
 
                 </LinearLayout>
 

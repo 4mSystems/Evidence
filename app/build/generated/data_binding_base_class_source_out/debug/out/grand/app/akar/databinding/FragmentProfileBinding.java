@@ -55,13 +55,10 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
   public final CustomEditText inputPhone;
 
   @NonNull
-  public final CustomEditText inputRegisterIdentityNumber;
+  public final CustomEditText inputRegisterConfirmPassword;
 
   @NonNull
   public final CustomTextViewMedium tvAccountTitle;
-
-  @NonNull
-  public final CustomTextViewMedium tvCountry;
 
   @NonNull
   public final CustomTextViewMedium tvIdentityNumber;
@@ -78,6 +75,9 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium tvRegisterPhone;
 
+  @NonNull
+  public final CustomTextViewMedium tvType;
+
   @Bindable
   protected ProfileViewModel mViewmodel;
 
@@ -86,10 +86,10 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
       CustomTextViewMedium btOwner, CustomTextViewMedium btRealtor, CustomTextViewMedium btnSeeker,
       CircleImageView imgLoginLogo, CustomEditText inputEmail, CustomEditText inputName,
       CustomEditText inputNewPassword, CustomEditText inputPhone,
-      CustomEditText inputRegisterIdentityNumber, CustomTextViewMedium tvAccountTitle,
-      CustomTextViewMedium tvCountry, CustomTextViewMedium tvIdentityNumber,
-      CustomTextViewMedium tvRegisterEmail, CustomTextViewMedium tvRegisterName,
-      CustomTextViewMedium tvRegisterPassword, CustomTextViewMedium tvRegisterPhone) {
+      CustomEditText inputRegisterConfirmPassword, CustomTextViewMedium tvAccountTitle,
+      CustomTextViewMedium tvIdentityNumber, CustomTextViewMedium tvRegisterEmail,
+      CustomTextViewMedium tvRegisterName, CustomTextViewMedium tvRegisterPassword,
+      CustomTextViewMedium tvRegisterPhone, CustomTextViewMedium tvType) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accountCardContainer = accountCardContainer;
     this.appCompatButtonNext = appCompatButtonNext;
@@ -102,14 +102,14 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
     this.inputName = inputName;
     this.inputNewPassword = inputNewPassword;
     this.inputPhone = inputPhone;
-    this.inputRegisterIdentityNumber = inputRegisterIdentityNumber;
+    this.inputRegisterConfirmPassword = inputRegisterConfirmPassword;
     this.tvAccountTitle = tvAccountTitle;
-    this.tvCountry = tvCountry;
     this.tvIdentityNumber = tvIdentityNumber;
     this.tvRegisterEmail = tvRegisterEmail;
     this.tvRegisterName = tvRegisterName;
     this.tvRegisterPassword = tvRegisterPassword;
     this.tvRegisterPhone = tvRegisterPhone;
+    this.tvType = tvType;
   }
 
   public abstract void setViewmodel(@Nullable ProfileViewModel viewmodel);

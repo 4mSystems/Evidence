@@ -40,11 +40,11 @@ public class SplashViewModel extends BaseViewModel {
 
     public void runSplash() {
         new Handler().postDelayed(() -> {
-//            if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
+            if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
                 liveData.setValue(new Mutable(Constants.HOME));
-//            } else {
-//                liveData.setValue(new Mutable(Constants.BACKGROUND_API));
-//            }
+            } else {
+                liveData.setValue(new Mutable(Constants.BOARD));
+            }
         }, 3000);
     }
 
@@ -78,5 +78,7 @@ public class SplashViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.NEXT));
     }
 
-
+    public void toLogin() {
+        liveData.setValue(new Mutable(Constants.START_APP));
+    }
 }

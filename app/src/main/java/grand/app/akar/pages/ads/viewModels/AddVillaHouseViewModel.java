@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.settings.models.AboutData;
-import grand.app.akar.pages.settings.models.ContactUsRequest;
 import grand.app.akar.repository.SettingsRepository;
 import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
@@ -17,7 +16,6 @@ import io.reactivex.disposables.CompositeDisposable;
 public class AddVillaHouseViewModel extends BaseViewModel {
 
     private AboutData aboutData;
-    private ContactUsRequest contactUsRequest;
     public MutableLiveData<Mutable> liveData;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
@@ -26,7 +24,6 @@ public class AddVillaHouseViewModel extends BaseViewModel {
     @Inject
     public AddVillaHouseViewModel(SettingsRepository repository) {
         aboutData = new AboutData();
-        contactUsRequest = new ContactUsRequest();
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
@@ -40,13 +37,7 @@ public class AddVillaHouseViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getTerms());
     }
 
-    public void sendContact() {
-        getContactUsRequest().setType(1);
-        if (getContactUsRequest().isValid())
-            compositeDisposable.add(repository.sendContact(getContactUsRequest()));
-        else
-            liveData.setValue(new Mutable(Constants.ERROR_TOAST));
-    }
+
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -69,9 +60,6 @@ public class AddVillaHouseViewModel extends BaseViewModel {
         return aboutData;
     }
 
-    public ContactUsRequest getContactUsRequest() {
-        return contactUsRequest;
-    }
 
     @Bindable
     public void setAboutData(AboutData aboutData) {

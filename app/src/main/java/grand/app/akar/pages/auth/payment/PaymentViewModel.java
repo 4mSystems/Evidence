@@ -20,16 +20,12 @@ public class PaymentViewModel extends BaseViewModel {
     @Inject
     AuthRepository repository;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private LoginRequest loginRequest;
-    private int loginStatus = View.VISIBLE;
-    String cpp;
 
     @Inject
     public PaymentViewModel(AuthRepository repository) {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
-        loginRequest = new LoginRequest();
     }
 
     public void register() {
@@ -40,17 +36,8 @@ public class PaymentViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
     }
 
-    public void loginPhone() {
-        if (getLoginRequest().isValid()) {
-            if (!getLoginRequest().getPhone().contains(cpp)) {
-                getLoginRequest().setPhone(cpp + getLoginRequest().getPhone());
-            }
-            repository.loginPhone(loginRequest);
-        }
-    }
-
-    public void toRegister() {
-        liveData.setValue(new Mutable(Constants.REGISTER));
+    public void updatePayment() {
+        repository.updatePayment();
     }
 
     private void unSubscribeFromObservable() {
@@ -63,20 +50,5 @@ public class PaymentViewModel extends BaseViewModel {
     protected void onCleared() {
         super.onCleared();
         unSubscribeFromObservable();
-    }
-
-    public LoginRequest getLoginRequest() {
-        return loginRequest;
-    }
-
-    @Bindable
-    public int getLoginStatus() {
-        return loginStatus;
-    }
-
-    @Bindable
-    public void setLoginStatus(int loginStatus) {
-        notifyChange(BR.loginStatus);
-        this.loginStatus = loginStatus;
     }
 }

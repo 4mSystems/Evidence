@@ -1,8 +1,8 @@
-package grand.app.akar.pages.auth.models.carNational;
+package grand.app.akar.pages.auth.models.cities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class CarTypesItem{
+public class Cities {
 
 	@SerializedName("name")
 	private String name;

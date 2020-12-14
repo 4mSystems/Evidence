@@ -123,6 +123,7 @@
                 android:layout_marginTop="@dimen/dp14h"
                 android:background="@color/line_color"
                 app:layout_constraintTop_toBottomOf="@id/tv_payment_price_text" />
+
             <grand.app.akar.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_payment_total_text"
                 android:layout_width="0dp"
@@ -150,6 +151,7 @@
                 android:textColor="@color/colordark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v21" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButtonNext"
                 android:layout_width="0dp"
@@ -159,6 +161,7 @@
                 android:layout_marginEnd="@dimen/dp30w"
                 android:layout_marginBottom="@dimen/dp20h"
                 android:background="@drawable/corner_view_primary_dark"
+                android:onClick="@{()->viewmodel.updatePayment()}"
                 android:text="@string/payment_title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"

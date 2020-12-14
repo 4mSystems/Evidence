@@ -7,11 +7,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomBottomNavigationView;
+import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -25,6 +27,9 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final CustomBottomNavigationView homeNavigationMenu;
 
+  @Bindable
+  protected HomeViewModel mViewModel;
+
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton fab, LinearLayout flHomeContainer,
       CustomBottomNavigationView homeNavigationMenu) {
@@ -32,6 +37,13 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
     this.fab = fab;
     this.flHomeContainer = flHomeContainer;
     this.homeNavigationMenu = homeNavigationMenu;
+  }
+
+  public abstract void setViewModel(@Nullable HomeViewModel viewModel);
+
+  @Nullable
+  public HomeViewModel getViewModel() {
+    return mViewModel;
   }
 
   @NonNull

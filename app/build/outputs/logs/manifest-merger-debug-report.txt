@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
 MERGED from [androidx.databinding:databinding-adapters:4.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b383157711ab3bd93c6ccba6e0948974\databinding-adapters-4.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.0.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\96cceddf4e7c27123b91e7c2af254f05\databinding-runtime-4.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7dcce1a69a0f2bc5adc9162de64dae80\jetified-Oops-No-Internet-v1.1.2\AndroidManifest.xml:2:1-14:12
@@ -62,7 +62,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\MAymanM\.gra
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\01272a8d33c6943dd1d04bc0fe9a5705\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b6ab4a313d417e48782f9ea999e77b72\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:2:1-17:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:2:1-17:12
 MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\37fac360111f294416732b98dcd7bd2e\jetified-roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
@@ -106,22 +106,22 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\MAymanM
 MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\228c270d40bb2cad06525ce80173006b\jetified-volley-1.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.datatransport:transport-api:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\3a1f709a1ad92859398ffe75dc8eb6ff\jetified-transport-api-2.2.0\AndroidManifest.xml:15:1-22:12
 MERGED from [io.michaelrocks:libphonenumber-android:8.10.14] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5e3deef95811c6e2016c22d003a8fa1f\jetified-libphonenumber-android-8.10.14\AndroidManifest.xml:2:1-11:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
+INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
 	package
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:4:5-29
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:1-61:12
 		INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:2:11-69
@@ -208,7 +208,7 @@ MERGED from [com.google.android.libraries.places:places:2.4.0] C:\Users\MAymanM\
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:14:22-76
 application
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:16:5-60:19
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:16:5-59:19
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7035162d2eb6d02b9fec1bf3ed6d2f18\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.3.0-alpha04] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\7035162d2eb6d02b9fec1bf3ed6d2f18\material-1.3.0-alpha04\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\d0414079c42dd671ddb1f179494eb066\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
@@ -271,8 +271,8 @@ MERGED from [com.google.android.gms:play-services-basement:17.3.0] C:\Users\MAym
 MERGED from [com.google.android.gms:play-services-basement:17.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f8e1c9231e4c2edbae11e61f1b801af1\jetified-play-services-basement-17.3.0\AndroidManifest.xml:22:5-26:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:11:5-15:38
@@ -305,7 +305,7 @@ MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\tr
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:25:9-35
 	android:label
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:21:9-41
-		REJECTED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:13:9-41
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:13:9-41
 		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:14:9-41
 	android:hardwareAccelerated
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:19:9-43
@@ -313,7 +313,7 @@ MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\tr
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:29:9-28
 	android:allowBackup
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:18:9-35
-		REJECTED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:12:9-35
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:12:9-35
 		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:26:9-40
@@ -350,35 +350,35 @@ ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:39:9-41:50
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:40:13-58
 activity#grand.app.akar.activity.MainActivity
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:43:9-53:20
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:43:9-46:69
 	android:windowSoftInputMode
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:46:13-67
 	android:configChanges
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:45:13-74
 	android:name
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:44:13-64
-intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:47:13-52:29
-action#android.intent.action.MAIN
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:17-69
-	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:25-66
-action#android.intent.action.VIEW
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:17-69
-	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:25-66
-category#android.intent.category.LAUNCHER
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:17-77
-	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:27-74
 activity#grand.app.akar.activity.BaseActivity
-ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:54:9-59:20
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:48:9-58:20
 	android:windowSoftInputMode
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:57:13-67
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:51:13-67
 	android:configChanges
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:56:13-74
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:50:13-74
 	android:name
-		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:55:13-64
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:49:13-64
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:52:13-57:29
+action#android.intent.action.MAIN
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:53:17-69
+	android:name
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:53:25-66
+action#android.intent.action.VIEW
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:54:17-69
+	android:name
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:54:25-66
+category#android.intent.category.LAUNCHER
+ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:56:17-77
+	android:name
+		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:56:27-74
 uses-sdk
 INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml
@@ -499,8 +499,8 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\t
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b6ab4a313d417e48782f9ea999e77b72\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.smarteist:autoimageslider:1.3.2-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a3c6073c1f858a759d72473588123fe5\jetified-autoimageslider-1.3.2-appcompat\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:7:5-9:41

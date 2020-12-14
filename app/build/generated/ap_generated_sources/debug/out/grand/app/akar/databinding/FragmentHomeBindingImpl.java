@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
+public class FragmentHomeBindingImpl extends FragmentHomeBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -19,6 +19,8 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback21;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,6 +39,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -71,7 +74,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.home.viewModels.HomeViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -99,10 +108,32 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.mboundView0.setOnClickListener(mCallback21);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.filpCard();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

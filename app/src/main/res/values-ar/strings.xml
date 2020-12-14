@@ -177,13 +177,13 @@
     <string name="donot_have_account">ليس لديك حساب؟</string>
     <string name="choose_membrship">نوع العضوية <font fgcolor='#E80101'>*</font></string>
     <string name="choose_membrship_input">اختر نوع العضوية</string>
-    <string name="forget_body">من فضلك إدخل رقم الهاتف أو البريد الالكتروني لإرسال كود التحقق</string>
-    <string name="forget_password">ادخل رقم الهاتف او البريد الالكتروني</string>
+    <string name="forget_body">من فضلك إدخل رقم الهاتف  لإرسال كود التحقق</string>
+    <string name="forget_password">ادخل رقم الهاتف</string>
     <string name="change_confirm_password_no_star">تأكيد كلمة المرور</string>
     <string name="forget_social_header">تسجيل الدخول بالسوشيال ميديا</string>
     <string name="forget_social_body">رقم الجوال أو البريد الاكتروني ضروري لتأكيد حسابك</string>
     <string name="menuConversations">محادثة</string>
-    <string name="add_info1" >
+    <string name="add_info1">
         ١-سيتم إيقاف العضوية فى حال مخالفة الشروط دون سابق إنذار
     </string>
     <string name="police_acceptance">أتعهد و أوافق على الشروط و الأحكام</string>
@@ -275,4 +275,5 @@
     <string name="wrong_building">العقار غير متوفر</string>
     <string name="other_reason">سبب أخر</string>
     <string name="report_desc">من فضلك قم بكتابة السبب</string>
+    <string name="choose_city">المدينه<font fgcolor='#E80101'>*</font></string>
 </resources>

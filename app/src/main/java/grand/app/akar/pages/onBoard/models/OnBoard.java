@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class OnBoard {
 
-    @SerializedName("image")
+    @SerializedName("img")
     @Expose
     private String image;
 
@@ -13,9 +13,16 @@ public class OnBoard {
     @Expose
     private String title;
 
-    @SerializedName("body")
+    @SerializedName("desc")
     @Expose
-    private String body;
+    private String desc;
+
+    @SerializedName("type")
+    @Expose
+    private int type;
+    @SerializedName("id")
+    @Expose
+    private int id;
 
     public String getImage() {
         return image;
@@ -25,7 +32,15 @@ public class OnBoard {
         return title;
     }
 
-    public String getBody() {
-        return body;
+    public String getDesc() {
+        return desc;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public int getId() {
+        return id;
     }
 }

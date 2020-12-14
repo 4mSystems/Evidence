@@ -28,9 +28,9 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback19;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -121,7 +121,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
-            , (grand.app.akar.customViews.views.CustomTextViewBold) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
             );
         this.appCompatButtonNext.setTag(null);
@@ -133,8 +133,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback18 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback19 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -229,10 +229,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback18);
+            this.appCompatButtonNext.setOnClickListener(mCallback20);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback17);
+            this.mboundView1.setOnClickListener(mCallback19);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

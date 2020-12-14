@@ -7,11 +7,10 @@ import javax.inject.Singleton;
 
 import grand.app.akar.connection.ConnectionHelper;
 import grand.app.akar.model.base.Mutable;
-import grand.app.akar.model.base.StatusMessage;
 import grand.app.akar.pages.myAccount.models.ProfileDataResponse;
 import grand.app.akar.pages.notifications.models.NotificationsResponse;
 import grand.app.akar.pages.settings.models.AboutResponse;
-import grand.app.akar.pages.settings.models.ContactUsRequest;
+import grand.app.akar.pages.settings.models.settings.SettingsResponse;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -49,8 +48,8 @@ public class SettingsRepository extends BaseRepository {
                 Constants.NOTIFICATIONS, true);
     }
 
-    public Disposable sendContact(ContactUsRequest contactUsRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONTACT_US, contactUsRequest, StatusMessage.class,
+    public Disposable getContact() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONTACT_US, new Object(), SettingsResponse.class,
                 Constants.CONTACT, true);
     }
 

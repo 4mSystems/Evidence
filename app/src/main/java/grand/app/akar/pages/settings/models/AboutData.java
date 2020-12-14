@@ -5,18 +5,18 @@ import com.google.gson.annotations.SerializedName;
 
 public class AboutData {
 
-    @SerializedName("body")
+    @SerializedName("title")
     @Expose
-    private String body;
-    @SerializedName("name")
+    private String title;
+    @SerializedName("desc")
     @Expose
-    private String name;
+    private String desc;
 
-    public String getBody() {
-        return body;
+    public String getTitle() {
+        return title;
     }
 
-    public String getName() {
-        return name;
+    public String getDesc() {
+        return desc;
     }
 }

@@ -33,16 +33,17 @@
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_contact_phone_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp25w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:drawableStart="@drawable/ic_auth_phone"
                 android:drawablePadding="@dimen/dp8w"
-                android:gravity="center"
-                android:text="+96656451223231"
+                android:text="@{viewmodel.settingsData.phone}"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_contact_phone" />
 
@@ -68,16 +69,17 @@
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_contact_email_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp25w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="@dimen/dp8w"
-                android:gravity="center"
-                android:text="2Grand@gmail.com"
+                android:text="@{viewmodel.settingsData.email}"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_contact_email" />
 
@@ -103,16 +105,17 @@
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_contact_phone_whats_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp25w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:drawableStart="@drawable/ic_whatsapp"
                 android:drawablePadding="@dimen/dp8w"
-                android:gravity="center"
-                android:text="+96656451223231"
+                android:text="@{viewmodel.settingsData.secondPhone}"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_contact_phone_whats" />
 
@@ -130,6 +133,7 @@
                 android:layout_height="@dimen/dp200h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/map_img"
+                android:onClick="@{()->viewmodel.toMap()}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v5" />
@@ -137,6 +141,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="@{()->viewmodel.toMap()}"
                 android:src="@drawable/ic_contact_location"
                 app:layout_constraintBottom_toBottomOf="@id/map"
                 app:layout_constraintEnd_toEndOf="@id/map"

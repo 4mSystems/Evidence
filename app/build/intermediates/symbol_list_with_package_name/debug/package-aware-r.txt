@@ -924,10 +924,14 @@ attr sizePercent
 attr sliderAnimationDuration
 attr sliderAutoCycleDirection
 attr sliderAutoCycleEnabled
-attr sliderCircularHandlerEnabled
 attr sliderIndicatorAnimationDuration
+attr sliderIndicatorEnabled
 attr sliderIndicatorGravity
 attr sliderIndicatorMargin
+attr sliderIndicatorMarginBottom
+attr sliderIndicatorMarginLeft
+attr sliderIndicatorMarginRight
+attr sliderIndicatorMarginTop
 attr sliderIndicatorOrientation
 attr sliderIndicatorPadding
 attr sliderIndicatorRadius
@@ -4270,9 +4274,10 @@ id input_name
 id input_new_password
 id input_phone
 id input_price
-id input_register_country
-id input_register_identity_number
+id input_register_city
+id input_register_confirm_password
 id input_register_password
+id input_register_user_type
 id input_search
 id input_street_size
 id input_warehouse_high
@@ -4397,7 +4402,6 @@ id outline
 id outward
 id packed
 id pager
-id pager_indicator
 id parallax
 id parent
 id parentPanel
@@ -4618,13 +4622,13 @@ id tv_change_confirm_password
 id tv_change_header_text
 id tv_change_new_password
 id tv_change_title
+id tv_city
 id tv_contact_email
 id tv_contact_email_text
 id tv_contact_phone
 id tv_contact_phone_text
 id tv_contact_phone_whats
 id tv_contact_phone_whats_text
-id tv_country
 id tv_deal_type
 id tv_doc_type
 id tv_elevator
@@ -4677,11 +4681,11 @@ id tv_register_phone
 id tv_remove
 id tv_rooms_count
 id tv_services
-id tv_social_header_number
 id tv_social_title
 id tv_street_size
 id tv_take_me
 id tv_title
+id tv_type
 id tv_warehouse_high
 id tv_warehouse_size
 id unchecked
@@ -4715,7 +4719,6 @@ id video_title
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
-id vp_slider_layout
 id wide
 id withText
 id withinBounds
@@ -4940,7 +4943,6 @@ layout report_warning_dialog
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
-layout slider_view
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -5084,6 +5086,7 @@ string character_counter_pattern
 string chat_hint
 string chip_text
 string choose_building_year
+string choose_city
 string choose_country
 string choose_membrship
 string choose_membrship_input
@@ -6321,7 +6324,7 @@ styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottom
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
-styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderCircularHandlerEnabled sliderIndicatorAnimationDuration sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
+styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme

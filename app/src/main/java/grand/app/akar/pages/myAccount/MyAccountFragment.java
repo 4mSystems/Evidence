@@ -25,6 +25,9 @@ import grand.app.akar.databinding.FragmentMyAccountBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.myAccount.models.ProfileDataResponse;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
+import grand.app.akar.pages.settings.AboutAppFragment;
+import grand.app.akar.pages.settings.ContactUsFragment;
+import grand.app.akar.pages.settings.TermsFragment;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
 
@@ -40,7 +43,6 @@ public class MyAccountFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.profileStatistics();
         setEvent();
         return binding.getRoot();
     }
@@ -50,14 +52,14 @@ public class MyAccountFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (((Mutable) o).message) {
-//                case Constants.SETTINGS:
-//                    MovementHelper.startActivity(context, MyAccountSettingsFragment.class.getName(), getResources().getString(R.string.settings), null);
-//                    break;
-//                case Constants.MY_ORDERS:
-//                    MovementHelper.startActivity(context, MyOrdersMainFragment.class.getName(), getResources().getString(R.string.my_orders), null);
-//                    break;
-                case Constants.PROFILE_DATA:
-                    viewModel.setProfileData(((ProfileDataResponse) ((Mutable) o).object).getData());
+                case Constants.ABOUT:
+                    MovementHelper.startActivity(context, AboutAppFragment.class.getName(), null, null);
+                    break;
+                case Constants.TERMS:
+                    MovementHelper.startActivity(context, TermsFragment.class.getName(), null, null);
+                    break;
+                case Constants.CONTACT:
+                    MovementHelper.startActivity(context, ContactUsFragment.class.getName(), getResources().getString(R.string.tv_account_contact), null);
                     break;
             }
         });
@@ -66,7 +68,6 @@ public class MyAccountFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) context).enableRefresh(false);
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 

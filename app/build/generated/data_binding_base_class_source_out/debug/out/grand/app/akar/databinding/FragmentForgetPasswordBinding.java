@@ -43,9 +43,6 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvLoginTitle;
 
   @NonNull
-  public final CustomTextViewRegular tvSocialHeaderNumber;
-
-  @NonNull
   public final CustomTextViewMedium tvSocialTitle;
 
   @Bindable
@@ -55,7 +52,7 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
       int _localFieldCount, AppCompatButton appCompatButtonNext, Barrier br1,
       ImageView imgLoginLogo, CustomEditText inputPhone, CustomTextViewMedium tvForgetTitle,
       CustomTextViewRegular tvLoginHeaderNumber, CustomTextViewMedium tvLoginTitle,
-      CustomTextViewRegular tvSocialHeaderNumber, CustomTextViewMedium tvSocialTitle) {
+      CustomTextViewMedium tvSocialTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.br1 = br1;
@@ -64,7 +61,6 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
     this.tvForgetTitle = tvForgetTitle;
     this.tvLoginHeaderNumber = tvLoginHeaderNumber;
     this.tvLoginTitle = tvLoginTitle;
-    this.tvSocialHeaderNumber = tvSocialHeaderNumber;
     this.tvSocialTitle = tvSocialTitle;
   }
 

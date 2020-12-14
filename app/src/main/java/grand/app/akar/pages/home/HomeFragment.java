@@ -33,6 +33,7 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentHomeBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
+import grand.app.akar.utils.Constants;
 
 
 public class HomeFragment extends BaseFragment {
@@ -60,12 +61,13 @@ public class HomeFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.HOME)) {
+            if (((Mutable) o).message.equals(Constants.FLIP_CARD)) {
 //                if (((HomeResponse) (mutable).object).getData().getFiles_completed() == 0)
 //                    showDocsWarningDialog();
 //                else
 //                    viewModel.getHomeAdapter().update(((HomeResponse) (mutable).object).getData().getHomeDataList());
-//            }
+                flipCard();
+            }
         });
 //        ((MainActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> initLastLocation());
         loadAnimations();
@@ -84,7 +86,7 @@ public class HomeFragment extends BaseFragment {
         mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(context, R.animator.in_animation);
     }
 
-    public void flipCard(View view) {
+    public void flipCard() {
         if (!mIsBackVisible) {
             mSetRightOut.setTarget(binding.cardList);
             mSetLeftIn.setTarget(binding.cardMap);

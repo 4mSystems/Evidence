@@ -562,8 +562,8 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "carsNationals");
-      sKeys.put(4, "categoriesData");
+      sKeys.put(3, "categoriesData");
+      sKeys.put(4, "citiesList");
       sKeys.put(5, "homeData");
       sKeys.put(6, "itemChatViewModel");
       sKeys.put(7, "itemHomeViewModel");
@@ -578,7 +578,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(16, "onBoardViewModels");
       sKeys.put(17, "passingObject");
       sKeys.put(18, "profileData");
-      sKeys.put(19, "userData");
+      sKeys.put(19, "settingsData");
       sKeys.put(20, "userDocuments");
       sKeys.put(21, "viewModel");
       sKeys.put(22, "viewmodel");
