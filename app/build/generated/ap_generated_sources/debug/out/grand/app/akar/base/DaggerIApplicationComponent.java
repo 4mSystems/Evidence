@@ -206,7 +206,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
   private AdsViewModel getAdsViewModel() {
-    return injectAdsViewModel(AdsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
+    return injectAdsViewModel(AdsViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
   private CategoriesViewModel getCategoriesViewModel() {
     return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
@@ -506,7 +506,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AdsViewModel injectAdsViewModel(AdsViewModel instance) {
-    AdsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    AdsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
     return instance;
   }
 

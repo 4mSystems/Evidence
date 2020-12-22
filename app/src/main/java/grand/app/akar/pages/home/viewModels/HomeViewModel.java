@@ -87,6 +87,10 @@ public class HomeViewModel extends BaseViewModel {
             return false;
     }
 
+    public void toNewAd() {
+        liveData.setValue(new Mutable(Constants.MENU_ADD_AD));
+    }
+
     public HomeRepository getHomeRepository() {
         return homeRepository;
     }

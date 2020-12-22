@@ -23,7 +23,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         this.tvHomeItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -166,7 +166,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback13);
+            this.mboundView1.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

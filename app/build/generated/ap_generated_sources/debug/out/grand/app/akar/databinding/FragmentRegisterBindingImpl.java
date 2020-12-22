@@ -35,15 +35,15 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback27;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
     private final android.view.View.OnClickListener mCallback28;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -274,12 +274,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback25 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback23 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback28 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback26 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback24 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback27 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback29 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback30 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback28 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback32 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback31 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
         invalidateAll();
     }
 
@@ -383,17 +383,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback27);
-            this.imgRegisterLogo.setOnClickListener(mCallback23);
+            this.appCompatButtonNext.setOnClickListener(mCallback31);
+            this.imgRegisterLogo.setOnClickListener(mCallback27);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputName, inputNametextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.inputRegisterCity.setOnClickListener(mCallback26);
+            this.inputRegisterCity.setOnClickListener(mCallback30);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterConfirmPassword, inputRegisterConfirmPasswordtextAttrChanged);
-            this.inputRegisterUserType.setOnClickListener(mCallback25);
-            this.mboundView11.setOnClickListener(mCallback28);
-            this.mboundView2.setOnClickListener(mCallback24);
+            this.inputRegisterUserType.setOnClickListener(mCallback29);
+            this.mboundView11.setOnClickListener(mCallback32);
+            this.mboundView2.setOnClickListener(mCallback28);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -409,40 +409,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.register();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.userType();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -460,7 +426,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 }
                 break;
             }
-            case 6: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -473,8 +439,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-                    viewmodel.goBack(getRoot().getContext());
+                    viewmodel.userType();
                 }
                 break;
             }
@@ -510,6 +475,41 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
                 }
                 break;
             }

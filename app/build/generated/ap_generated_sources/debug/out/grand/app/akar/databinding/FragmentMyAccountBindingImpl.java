@@ -25,19 +25,19 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback17;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback19;
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback20;
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -75,13 +75,13 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         this.tvAccountType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback11 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback8 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback6 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback10 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback9 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback7 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback19 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback16 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback18 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -217,13 +217,13 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.tvAccountAbout.setOnClickListener(mCallback9);
-            this.tvAccountContact.setOnClickListener(mCallback8);
-            this.tvAccountFundAds.setOnClickListener(mCallback7);
-            this.tvAccountLogout.setOnClickListener(mCallback12);
-            this.tvAccountMyAds.setOnClickListener(mCallback6);
-            this.tvAccountShare.setOnClickListener(mCallback11);
-            this.tvAccountTerms.setOnClickListener(mCallback10);
+            this.tvAccountAbout.setOnClickListener(mCallback18);
+            this.tvAccountContact.setOnClickListener(mCallback17);
+            this.tvAccountFundAds.setOnClickListener(mCallback16);
+            this.tvAccountLogout.setOnClickListener(mCallback21);
+            this.tvAccountMyAds.setOnClickListener(mCallback15);
+            this.tvAccountShare.setOnClickListener(mCallback20);
+            this.tvAccountTerms.setOnClickListener(mCallback19);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -236,23 +236,6 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toReviews();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -321,7 +304,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 }
                 break;
             }
-            case 4: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -334,7 +317,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toAbout();
+                    viewmodel.toReviews();
                 }
                 break;
             }
@@ -352,6 +335,23 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
 
 
                     viewmodel.toMyPoints();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAbout();
                 }
                 break;
             }

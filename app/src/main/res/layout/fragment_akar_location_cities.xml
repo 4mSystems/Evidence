@@ -20,9 +20,13 @@
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:adapter="@{viewmodel.citiesAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
             app:layout_constraintBottom_toTopOf="@id/confirmBtn"
             app:layout_constraintTop_toTopOf="parent"
-            tools:listitem="@layout/item_category" />
+            tools:listitem="@layout/item_city" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/confirmBtn"

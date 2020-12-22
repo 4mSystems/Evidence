@@ -276,4 +276,5 @@
     <string name="other_reason">سبب أخر</string>
     <string name="report_desc">من فضلك قم بكتابة السبب</string>
     <string name="choose_city">المدينه<font fgcolor='#E80101'>*</font></string>
+    <string name="choose_akar_locations">اختر موقع العقار</string>
 </resources>

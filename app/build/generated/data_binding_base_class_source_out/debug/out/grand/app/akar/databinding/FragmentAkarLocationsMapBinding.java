@@ -28,19 +28,19 @@ public abstract class FragmentAkarLocationsMapBinding extends ViewDataBinding {
   public final CustomTextViewMedium inputSearch;
 
   @NonNull
-  public final MapView map;
+  public final MapView mapview;
 
   @Bindable
   protected AdsViewModel mViewmodel;
 
   protected FragmentAkarLocationsMapBinding(Object _bindingComponent, View _root,
       int _localFieldCount, CustomTextViewMedium btnDiffLocations, AppCompatButton confirmBtn,
-      CustomTextViewMedium inputSearch, MapView map) {
+      CustomTextViewMedium inputSearch, MapView mapview) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnDiffLocations = btnDiffLocations;
     this.confirmBtn = confirmBtn;
     this.inputSearch = inputSearch;
-    this.map = map;
+    this.mapview = mapview;
   }
 
   public abstract void setViewmodel(@Nullable AdsViewModel viewmodel);

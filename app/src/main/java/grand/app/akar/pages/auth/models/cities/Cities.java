@@ -3,18 +3,29 @@ package grand.app.akar.pages.auth.models.cities;
 import com.google.gson.annotations.SerializedName;
 
 public class Cities {
+    @SerializedName("name")
+    private String name;
+    @SerializedName("lat")
+    private String lat;
+    @SerializedName("lng")
+    private String lng;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("id")
-	private int id;
+    public String getName() {
+        return name;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getLat() {
+        return lat;
+    }
+
+    public String getLng() {
+        return lng;
+    }
 }

@@ -1,47 +1,68 @@
 package grand.app.akar.pages.ads.viewModels;
 
+import android.util.Log;
+
 import androidx.databinding.Bindable;
-import androidx.databinding.library.baseAdapters.BR;
 import androidx.lifecycle.MutableLiveData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
+import grand.app.akar.BR;
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
-import grand.app.akar.pages.settings.models.AboutData;
-import grand.app.akar.repository.SettingsRepository;
+import grand.app.akar.pages.ads.adapter.CitiesAdapter;
+import grand.app.akar.pages.auth.models.cities.Cities;
+import grand.app.akar.repository.AuthRepository;
 import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class AdsViewModel extends BaseViewModel {
-
-    private AboutData aboutData;
     public MutableLiveData<Mutable> liveData;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    SettingsRepository repository;
+    AuthRepository repository;
+    private List<Cities> citiesList;
+    private CitiesAdapter citiesAdapter;
 
     @Inject
-    public AdsViewModel(SettingsRepository repository) {
-        aboutData = new AboutData();
+    public AdsViewModel(AuthRepository repository) {
+        citiesAdapter= new CitiesAdapter();
+        citiesList = new ArrayList<>();
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
     }
 
-    public void getAbout() {
-        compositeDisposable.add(repository.getAbout());
+    public CitiesAdapter getCitiesAdapter() {
+        return citiesAdapter;
     }
 
-    public void getTerms() {
-        compositeDisposable.add(repository.getTerms());
+    public List<Cities> getCitiesList() {
+        return citiesList;
     }
 
+    @Bindable
+    public void setCitiesList(List<Cities> citiesList) {
+        Log.e("setCitiesList", "setCitiesList: " + citiesList.size());
+        notifyChange(BR.citiesList);
+        this.citiesList = citiesList;
+    }
+
+    public void cities() {
+        compositeDisposable.add(repository.getCities());
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();
         }
+    }
+
+    public void toCities() {
+        liveData.setValue(new Mutable(Constants.CHOOSE_CITY));
     }
 
     @Override
@@ -50,19 +71,8 @@ public class AdsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    public SettingsRepository getRepository() {
+    public AuthRepository getRepository() {
         return repository;
     }
 
-    @Bindable
-    public AboutData getAboutData() {
-        return aboutData;
-    }
-
-
-    @Bindable
-    public void setAboutData(AboutData aboutData) {
-        notifyChange(BR.aboutData);
-        this.aboutData = aboutData;
-    }
 }

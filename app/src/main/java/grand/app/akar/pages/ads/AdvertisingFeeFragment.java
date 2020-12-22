@@ -38,7 +38,7 @@ public class AdvertisingFeeFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.getAbout();
+//        viewModel.getAbout();
         setEvent();
         return binding.getRoot();
     }
@@ -48,12 +48,12 @@ public class AdvertisingFeeFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+//                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
             }
         });
         getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
+//            if (isConnected)
+//                viewModel.getAbout();
         });
     }
 

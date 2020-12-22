@@ -84,12 +84,16 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_locations_map.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_akar_location_cities.xml",
-        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_location_cities.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_city.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_city.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_password.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_akar_location_cities.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_location_cities.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads_info.xml",

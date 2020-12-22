@@ -45,6 +45,7 @@ import grand.app.akar.databinding.FragmentTermsBindingImpl;
 import grand.app.akar.databinding.FragmentUploadSuccessBindingImpl;
 import grand.app.akar.databinding.ItemCategoryBindingImpl;
 import grand.app.akar.databinding.ItemChatBindingImpl;
+import grand.app.akar.databinding.ItemCityBindingImpl;
 import grand.app.akar.databinding.ItemConversationBindingImpl;
 import grand.app.akar.databinding.ItemHomeBindingImpl;
 import grand.app.akar.databinding.ItemMyAdsBindingImpl;
@@ -143,25 +144,27 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMCHAT = 39;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 40;
+  private static final int LAYOUT_ITEMCITY = 40;
 
-  private static final int LAYOUT_ITEMHOME = 41;
+  private static final int LAYOUT_ITEMCONVERSATION = 41;
 
-  private static final int LAYOUT_ITEMMYADS = 42;
+  private static final int LAYOUT_ITEMHOME = 42;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 43;
+  private static final int LAYOUT_ITEMMYADS = 43;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 44;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 44;
 
-  private static final int LAYOUT_LAYOUTGRAND = 45;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 45;
 
-  private static final int LAYOUT_NOTIFYITEM = 46;
+  private static final int LAYOUT_LAYOUTGRAND = 46;
 
-  private static final int LAYOUT_REPORTDIALOG = 47;
+  private static final int LAYOUT_NOTIFYITEM = 47;
 
-  private static final int LAYOUT_REPORTWARNINGDIALOG = 48;
+  private static final int LAYOUT_REPORTDIALOG = 48;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(48);
+  private static final int LAYOUT_REPORTWARNINGDIALOG = 49;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(49);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -203,6 +206,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_upload_success, LAYOUT_FRAGMENTUPLOADSUCCESS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_category, LAYOUT_ITEMCATEGORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_chat, LAYOUT_ITEMCHAT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_city, LAYOUT_ITEMCITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_conversation, LAYOUT_ITEMCONVERSATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_home, LAYOUT_ITEMHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_my_ads, LAYOUT_ITEMMYADS);
@@ -457,6 +461,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for item_chat is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMCITY: {
+          if ("layout/item_city_0".equals(tag)) {
+            return new ItemCityBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_city is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMCONVERSATION: {
           if ("layout/item_conversation_0".equals(tag)) {
             return new ItemConversationBindingImpl(component, view);
@@ -556,37 +566,38 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(23);
+    static final SparseArray<String> sKeys = new SparseArray<String>(24);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
       sKeys.put(3, "categoriesData");
-      sKeys.put(4, "citiesList");
-      sKeys.put(5, "homeData");
-      sKeys.put(6, "itemChatViewModel");
-      sKeys.put(7, "itemHomeViewModel");
-      sKeys.put(8, "itemViewModel");
-      sKeys.put(9, "loginStatus");
-      sKeys.put(10, "manager");
-      sKeys.put(11, "myAdsAdapter");
-      sKeys.put(12, "notificationsData");
-      sKeys.put(13, "notifyItemViewModels");
-      sKeys.put(14, "notifyViewModel");
-      sKeys.put(15, "onBoardAdapter");
-      sKeys.put(16, "onBoardViewModels");
-      sKeys.put(17, "passingObject");
-      sKeys.put(18, "profileData");
-      sKeys.put(19, "settingsData");
-      sKeys.put(20, "userDocuments");
-      sKeys.put(21, "viewModel");
-      sKeys.put(22, "viewmodel");
+      sKeys.put(4, "cities");
+      sKeys.put(5, "citiesList");
+      sKeys.put(6, "homeData");
+      sKeys.put(7, "itemChatViewModel");
+      sKeys.put(8, "itemHomeViewModel");
+      sKeys.put(9, "itemViewModel");
+      sKeys.put(10, "loginStatus");
+      sKeys.put(11, "manager");
+      sKeys.put(12, "myAdsAdapter");
+      sKeys.put(13, "notificationsData");
+      sKeys.put(14, "notifyItemViewModels");
+      sKeys.put(15, "notifyViewModel");
+      sKeys.put(16, "onBoardAdapter");
+      sKeys.put(17, "onBoardViewModels");
+      sKeys.put(18, "passingObject");
+      sKeys.put(19, "profileData");
+      sKeys.put(20, "settingsData");
+      sKeys.put(21, "userDocuments");
+      sKeys.put(22, "viewModel");
+      sKeys.put(23, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(48);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(49);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.akar.R.layout.activity_base);
@@ -628,6 +639,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_upload_success_0", grand.app.akar.R.layout.fragment_upload_success);
       sKeys.put("layout/item_category_0", grand.app.akar.R.layout.item_category);
       sKeys.put("layout/item_chat_0", grand.app.akar.R.layout.item_chat);
+      sKeys.put("layout/item_city_0", grand.app.akar.R.layout.item_city);
       sKeys.put("layout/item_conversation_0", grand.app.akar.R.layout.item_conversation);
       sKeys.put("layout/item_home_0", grand.app.akar.R.layout.item_home);
       sKeys.put("layout/item_my_ads_0", grand.app.akar.R.layout.item_my_ads);

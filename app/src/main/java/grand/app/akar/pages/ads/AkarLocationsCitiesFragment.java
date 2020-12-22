@@ -11,10 +11,16 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.android.gms.maps.model.LatLng;
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
+
+import java.lang.reflect.Type;
 
 import javax.inject.Inject;
 
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
@@ -24,6 +30,8 @@ import grand.app.akar.databinding.FragmentAkarLocationCitiesBinding;
 import grand.app.akar.databinding.FragmentCategoriesBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
+import grand.app.akar.pages.auth.models.cities.Cities;
+import grand.app.akar.pages.auth.models.cities.CitiesResponse;
 import grand.app.akar.pages.settings.models.AboutResponse;
 import grand.app.akar.utils.Constants;
 
@@ -38,7 +46,7 @@ public class AkarLocationsCitiesFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.getAbout();
+        viewModel.cities();
         setEvent();
         return binding.getRoot();
     }
@@ -47,14 +55,11 @@ public class AkarLocationsCitiesFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (((Mutable) o).message.equals(Constants.CITIES)) {
+                viewModel.getCitiesAdapter().update(((CitiesResponse) mutable.object).getCitiesList());
             }
         });
-        getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
-        });
+
     }
 
     @Override

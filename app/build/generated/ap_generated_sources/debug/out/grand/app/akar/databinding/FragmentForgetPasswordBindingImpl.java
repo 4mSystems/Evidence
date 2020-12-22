@@ -26,9 +26,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,8 +94,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.tvSocialTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback18 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback23 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback24 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -233,9 +233,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback18);
+            this.appCompatButtonNext.setOnClickListener(mCallback24);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback17);
+            this.mboundView1.setOnClickListener(mCallback23);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

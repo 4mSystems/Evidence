@@ -7,7 +7,7 @@ public class URLS {
 
     public final static String SERVICES = "services";
     public final static String LOGIN_PHONE = "user/login";
-    public final static String LOGIN_PASSWORD = "delegate/login";
+    public final static String SETTINGS = "settings/settings";
     public final static String REGISTER = "user/register";
     public final static String BOARD = "settings/sliders";
     public final static String CONFIRM_CODE = "user/verify-code";
@@ -29,7 +29,7 @@ public class URLS {
     public final static String TERMS = "settings/terms";
 
 
-    public static final String CONTACT_US = "settings";
+    public static final String CONTACT_US = "settings/contact-us";
     public static final String NOTIFICATIONS = "notifications";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String GET_CLIENT_REVIEWS = "delegate/rates-of-orders";

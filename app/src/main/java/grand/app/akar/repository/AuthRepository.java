@@ -22,6 +22,7 @@ import grand.app.akar.pages.auth.models.UsersResponse;
 import grand.app.akar.pages.auth.models.cities.CitiesResponse;
 import grand.app.akar.pages.onBoard.models.BoardResponse;
 import grand.app.akar.pages.settings.models.UserDocumentsResponse;
+import grand.app.akar.pages.settings.models.settings.SettingsResponse;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -53,6 +54,11 @@ public class AuthRepository extends BaseRepository {
     public Disposable getBoard() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BOARD, new Object(), BoardResponse.class,
                 Constants.BOARD, true);
+    }
+
+    public Disposable getSettings() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SETTINGS, new Object(), SettingsResponse.class,
+                Constants.SETTINGS, false);
     }
 
     public Disposable login(LoginRequest request) {

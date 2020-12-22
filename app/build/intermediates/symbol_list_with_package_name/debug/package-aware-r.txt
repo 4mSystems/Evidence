@@ -4312,6 +4312,7 @@ id ll_base_container
 id loading
 id lottie_layer_name
 id map
+id mapview
 id masked
 id material_clock_display
 id material_clock_face
@@ -4856,6 +4857,7 @@ layout home_map_layout
 layout incremental_view
 layout item_category
 layout item_chat
+layout item_city
 layout item_conversation
 layout item_home
 layout item_my_ads
@@ -5085,6 +5087,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chat_hint
 string chip_text
+string choose_akar_locations
 string choose_building_year
 string choose_city
 string choose_country

@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -19,6 +21,7 @@ import com.google.gson.Gson;
 import grand.app.akar.PassingObject;
 import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.activity.MainActivity;
+import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.ParentActivity;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.R;
@@ -190,5 +193,12 @@ public class MovementHelper {
             context = ((ContextWrapper) context).getBaseContext();
         }
         return (Activity) context;
+    }
+    public static Bitmap resizeIcon(int drawable) {
+        int height = 50;
+        int width = 50;
+        BitmapDrawable bitmapDrawable = (BitmapDrawable) MyApplication.getInstance().getResources().getDrawable(drawable, null);
+        Bitmap b = bitmapDrawable.getBitmap();
+        return Bitmap.createScaledBitmap(b, width, height, false);
     }
 }

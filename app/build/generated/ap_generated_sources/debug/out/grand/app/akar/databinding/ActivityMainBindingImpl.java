@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ActivityMainBindingImpl extends ActivityMainBinding  {
+public class ActivityMainBindingImpl extends ActivityMainBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,13 +14,14 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.fl_home_container, 2);
-        sViewsWithIds.put(R.id.fab, 3);
+        sViewsWithIds.put(R.id.fl_home_container, 3);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback10;
     // values
     // listeners
     private OnNavigationItemSelectedListenerImpl mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener;
@@ -31,15 +32,17 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3]
-            , (android.widget.LinearLayout) bindings[2]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
+            , (android.widget.LinearLayout) bindings[3]
             , (grand.app.akar.customViews.views.CustomBottomNavigationView) bindings[1]
             );
+        this.fab.setTag(null);
         this.homeNavigationMenu.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback10 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -121,6 +124,11 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.fab.setOnClickListener(mCallback10);
+        }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
@@ -140,6 +148,22 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
         }
     }
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewModel
+        grand.app.akar.pages.home.viewModels.HomeViewModel viewModel = mViewModel;
+        // viewModel != null
+        boolean viewModelJavaLangObjectNull = false;
+
+
+
+        viewModelJavaLangObjectNull = (viewModel) != (null);
+        if (viewModelJavaLangObjectNull) {
+
+
+            viewModel.toNewAd();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

@@ -14,25 +14,29 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.confirmBtn, 1);
+        sViewsWithIds.put(R.id.confirmBtn, 2);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentAkarLocationCitiesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentAkarLocationCitiesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[1]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
+        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -69,7 +73,13 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.ads.viewModels.AdsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -97,7 +107,24 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.ads.adapter.CitiesAdapter viewmodelCitiesAdapter = null;
+        grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.citiesAdapter
+                    viewmodelCitiesAdapter = viewmodel.getCitiesAdapter();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelCitiesAdapter, "1", "1");
+        }
     }
     // Listener Stub Implementations
     // callback impls

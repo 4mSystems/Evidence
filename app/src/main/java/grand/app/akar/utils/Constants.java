@@ -27,7 +27,7 @@ public class Constants {
     public final static String LOGOUT = "logout";
     public final static String FLIP_CARD = "FLIP_CARD";
 
-    public final static String WAITING_ORDERS = "WAITING_ORDERS";
+    public final static String CHOOSE_CITY = "CHOOSE_CITY";
     public final static String STORE_ORDERS = "STORE_ORDERS";
     public final static String SUBSCRIBE_AS_DELEGATE = "SUBSCRIBE_AS_DELEGATE";
     public final static String ERROR_TOAST = "error_toast";
