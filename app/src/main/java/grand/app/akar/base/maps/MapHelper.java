@@ -42,6 +42,18 @@ public class MapHelper {
         this.context = context;
     }
 
+    public MapHelper(Context context) {
+        this.context=context;
+    }
+    public void getAddress(double lat, double lng, MapAddressInterface mapAddressInterface) {
+        MapAddress mapAddress = new MapAddress((Activity) context, lat, lng);
+        mapAddress.getAddressFromUrl(address -> {
+            if (mapAddressInterface != null)
+                mapAddressInterface.fetchFullAddress(address);
+        });
+
+    }
+
     private final String TAG = "MapHelper";
 
     public void addMarker(LatLng position, boolean draggable) {
@@ -81,6 +93,7 @@ public class MapHelper {
                 });
 
     }
+
     public void enableLocationDialog() {
         LocationRequest locationRequest = getLocationRequest();
         LocationSettingsRequest settingsRequest = new LocationSettingsRequest.Builder()

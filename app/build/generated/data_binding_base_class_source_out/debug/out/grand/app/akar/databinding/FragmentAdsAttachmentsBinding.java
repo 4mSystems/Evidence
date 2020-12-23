@@ -8,68 +8,29 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.makeramen.roundedimageview.RoundedImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
-import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentAdsAttachmentsBinding extends ViewDataBinding {
   @NonNull
+  public final RecyclerView adImagesRc;
+
+  @NonNull
   public final CustomTextViewMedium attachTitle;
-
-  @NonNull
-  public final Barrier br5;
-
-  @NonNull
-  public final Barrier br6;
-
-  @NonNull
-  public final AppCompatImageView close1;
-
-  @NonNull
-  public final AppCompatImageView close2;
-
-  @NonNull
-  public final AppCompatImageView close3;
-
-  @NonNull
-  public final AppCompatImageView close4;
-
-  @NonNull
-  public final AppCompatImageView close5;
-
-  @NonNull
-  public final AppCompatImageView close6;
 
   @NonNull
   public final AppCompatImageView close7;
 
   @NonNull
   public final AppCompatButton confirmBtn;
-
-  @NonNull
-  public final RoundedImageView image1;
-
-  @NonNull
-  public final RoundedImageView image2;
-
-  @NonNull
-  public final RoundedImageView image3;
-
-  @NonNull
-  public final RoundedImageView image4;
-
-  @NonNull
-  public final RoundedImageView image5;
-
-  @NonNull
-  public final RoundedImageView image6;
 
   @NonNull
   public final RoundedImageView image7;
@@ -81,43 +42,26 @@ public abstract class FragmentAdsAttachmentsBinding extends ViewDataBinding {
   public final CustomTextViewMedium videoTitle;
 
   @Bindable
-  protected AddVillaHouseViewModel mViewmodel;
+  protected AttachmentsViewModel mViewmodel;
 
   protected FragmentAdsAttachmentsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, CustomTextViewMedium attachTitle, Barrier br5, Barrier br6,
-      AppCompatImageView close1, AppCompatImageView close2, AppCompatImageView close3,
-      AppCompatImageView close4, AppCompatImageView close5, AppCompatImageView close6,
-      AppCompatImageView close7, AppCompatButton confirmBtn, RoundedImageView image1,
-      RoundedImageView image2, RoundedImageView image3, RoundedImageView image4,
-      RoundedImageView image5, RoundedImageView image6, RoundedImageView image7,
+      int _localFieldCount, RecyclerView adImagesRc, CustomTextViewMedium attachTitle,
+      AppCompatImageView close7, AppCompatButton confirmBtn, RoundedImageView image7,
       AppCompatImageView play, CustomTextViewMedium videoTitle) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.adImagesRc = adImagesRc;
     this.attachTitle = attachTitle;
-    this.br5 = br5;
-    this.br6 = br6;
-    this.close1 = close1;
-    this.close2 = close2;
-    this.close3 = close3;
-    this.close4 = close4;
-    this.close5 = close5;
-    this.close6 = close6;
     this.close7 = close7;
     this.confirmBtn = confirmBtn;
-    this.image1 = image1;
-    this.image2 = image2;
-    this.image3 = image3;
-    this.image4 = image4;
-    this.image5 = image5;
-    this.image6 = image6;
     this.image7 = image7;
     this.play = play;
     this.videoTitle = videoTitle;
   }
 
-  public abstract void setViewmodel(@Nullable AddVillaHouseViewModel viewmodel);
+  public abstract void setViewmodel(@Nullable AttachmentsViewModel viewmodel);
 
   @Nullable
-  public AddVillaHouseViewModel getViewmodel() {
+  public AttachmentsViewModel getViewmodel() {
     return mViewmodel;
   }
 

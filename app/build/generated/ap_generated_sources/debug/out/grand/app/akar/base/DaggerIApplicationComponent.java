@@ -48,6 +48,9 @@ import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel_MembersInjecto
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel_MembersInjector;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel_Factory;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel_MembersInjector;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel_MembersInjector;
@@ -157,9 +160,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
 
-  private Provider<ChatRepository> chatRepositoryProvider;
-
   private Provider<AdsRepository> adsRepositoryProvider;
+
+  private Provider<ChatRepository> chatRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -212,7 +215,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
   private AddVillaHouseViewModel getAddVillaHouseViewModel() {
-    return injectAddVillaHouseViewModel(AddVillaHouseViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
+    return injectAddVillaHouseViewModel(AddVillaHouseViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private AttachmentsViewModel getAttachmentsViewModel() {
+    return injectAttachmentsViewModel(AttachmentsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
 
   private ConversationsViewModel getConversationsViewModel() {
     return injectConversationsViewModel(ConversationsViewModel_Factory.newInstance(chatRepositoryProvider.get()));}
@@ -232,8 +238,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
-    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -543,7 +549,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddVillaHouseViewModel injectAddVillaHouseViewModel(AddVillaHouseViewModel instance) {
-    AddVillaHouseViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    AddVillaHouseViewModel_MembersInjector.injectRepository(instance, adsRepositoryProvider.get());
     return instance;
   }
 
@@ -589,8 +595,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private AttachmentsViewModel injectAttachmentsViewModel(AttachmentsViewModel instance) {
+    AttachmentsViewModel_MembersInjector.injectRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
   private AdsAttachmentsFragment injectAdsAttachmentsFragment(AdsAttachmentsFragment instance) {
-    AdsAttachmentsFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    AdsAttachmentsFragment_MembersInjector.injectViewModel(instance, getAttachmentsViewModel());
     return instance;
   }
 

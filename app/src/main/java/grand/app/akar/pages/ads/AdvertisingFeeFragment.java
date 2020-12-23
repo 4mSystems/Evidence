@@ -26,6 +26,7 @@ import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import grand.app.akar.pages.settings.models.AboutResponse;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 
 public class AdvertisingFeeFragment extends BaseFragment {
     private Context context;
@@ -47,8 +48,8 @@ public class AdvertisingFeeFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-//                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (((Mutable) o).message.equals(Constants.MAP_LOCATION)) {
+                MovementHelper.startActivity(context, AkarLocationsMapFragment.class.getName(), getResources().getString(R.string.choose_akar_locations), null);
             }
         });
         getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
@@ -60,7 +61,6 @@ public class AdvertisingFeeFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) context).enableRefresh(false);
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 

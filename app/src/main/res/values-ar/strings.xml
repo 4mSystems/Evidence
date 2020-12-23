@@ -204,9 +204,24 @@
     <string name="sell">بـيـع</string>
     <string name="deal_price">السعر<font fgcolor='#E80101'>*</font></string>
     <string name="price_hint">ادخل السعر</string>
+    <string name="deal_address">العنوان<font fgcolor='#E80101'>*</font></string>
+    <string name="office_size">مساحة المكتب<font fgcolor='#E80101'>*</font></string>
     <string name="address_hint">ادخل العنوان بشكل صحيح</string>
+    <string name="land_size">مساحة الأرض<font fgcolor='#E80101'>*</font></string>
+    <string name="warehouse_size">مساحة المخزن<font fgcolor='#E80101'>*</font></string>
+    <string name="warehouse_high">إرتفاع المخزن<font fgcolor='#E80101'>*</font></string>
+    <string name="building_size">مساحة المبني الكلية<font fgcolor='#E80101'>*</font></string>
+    <string name="floor_size">مساحة الطابق<font fgcolor='#E80101'>*</font></string>
+    <string name="factory_size">مساحة المسقوف<font fgcolor='#E80101'>*</font></string>
+    <string name="factory_year">عمر المصنع<font fgcolor='#E80101'>*</font></string>
+    <string name="rooms_count">عدد الحجرات<font fgcolor='#E80101'>*</font></string>
+    <string name="path_count">عدد الحمامات<font fgcolor='#E80101'>*</font></string>
+    <string name="kitchen_count">عدد المطابخ<font fgcolor='#E80101'>*</font></string>
+    <string name="building_year">سنة البناء<font fgcolor='#E80101'>*</font></string>
+    <string name="payment_type">طريقة الدفع<font fgcolor='#E80101'>*</font></string>
+    <string name="store_size">مساحة المحل<font fgcolor='#E80101'>*</font></string>
     <string name="land_size_hint">ادخل المساحة بالمتر المربع (م2)</string>
-    <string name="floor_count">عدد الطوابق</string>
+    <string name="floor_count">عدد الطوابق<font fgcolor='#E80101'>*</font></string>
     <string name="choose_building_year">إختيار سنه البناء</string>
     <string name="cash">كاش</string>
     <string name="sac">صك</string>
@@ -277,4 +292,13 @@
     <string name="report_desc">من فضلك قم بكتابة السبب</string>
     <string name="choose_city">المدينه<font fgcolor='#E80101'>*</font></string>
     <string name="choose_akar_locations">اختر موقع العقار</string>
+    <string name="ad_fee_title">رسوم الإعلان</string>
+    <string name="add_info_title">شروط إضافة إعلان</string>
+    <string name="save">Save</string>
+    <string name="API_KEY">AIzaSyBnui_-Aq3WohKtd4VUahlpWv_2xEocpRg</string>
+    <string name="choose_akar_category">اختر القسم</string>
+    <string name="ad_attachment_imgs">إرفاق صور</string>
+    <string name="price_required">يرجى إدخال السعر</string>
+    <string name="videoBig">حجم الفيديو كبير يرجى اختيار فيديو اخر</string>
+    <string name="image_required">يجب إختيار صورة ع الاقل</string>
 </resources>

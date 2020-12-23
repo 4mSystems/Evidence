@@ -23,10 +23,10 @@
             android:layout_marginStart="@dimen/dp4w"
             android:background="@drawable/corner_view_primary_dark"
             android:gravity="center"
+            android:onClick="@{()-> viewmodel.toCities()}"
             android:paddingStart="@dimen/dp8w"
             android:paddingEnd="@dimen/dp8w"
             android:text="@string/diff_locations"
-            android:onClick="@{()-> viewmodel.toCities()}"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="@id/input_search"
@@ -62,12 +62,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/input_search" />
 
+        <ProgressBar
+            android:id="@+id/address_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/confirmBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp32h"
             android:background="@drawable/corner_view_primary_dark"
+            android:onClick="@{()->viewmodel.toCategories()}"
             android:text="@string/continu"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"

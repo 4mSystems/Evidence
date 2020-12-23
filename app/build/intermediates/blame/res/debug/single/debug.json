@@ -28,12 +28,12 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\drawable\\ic_toggel_category.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_whatsapp.png.flat",
-        "source": "F:\\mostafa elnagar\\Akar\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_whatsapp.png"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_account_points.png.flat",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\drawable-xxhdpi\\ic_account_points.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_whatsapp.png.flat",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_whatsapp.png"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_user_holder.png.flat",
@@ -86,6 +86,10 @@
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_google.png.flat",
         "source": "F:\\mostafa elnagar\\Akar\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_google.png"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_ad_images.xml.flat",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_ad_images.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_term.png.flat",

@@ -62,9 +62,9 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\MAymanM\.gra
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\01272a8d33c6943dd1d04bc0fe9a5705\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b6ab4a313d417e48782f9ea999e77b72\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:2:1-17:12
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:2:1-14:12
-MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:2:1-17:12
 MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\37fac360111f294416732b98dcd7bd2e\jetified-roundedimageview-2.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\53d69b76fd8b9548f9e74814b407b528\swiperefreshlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.zagori:bottomnavbar:1.0.2] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\5e40ed95e899ffcd4146204dbae56dee\jetified-bottomnavbar-1.0.2\AndroidManifest.xml:2:1-11:12
@@ -271,12 +271,12 @@ MERGED from [com.google.android.gms:play-services-basement:17.3.0] C:\Users\MAym
 MERGED from [com.google.android.gms:play-services-basement:17.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f8e1c9231e4c2edbae11e61f1b801af1\jetified-play-services-basement-17.3.0\AndroidManifest.xml:22:5-26:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:11:5-15:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:7:5-12:19
-MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:11:5-15:38
-MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:11:5-15:38
+MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:11:5-15:38
+MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:11:5-15:38
 MERGED from [androidx.core:core:1.3.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\33718701d713ca3e83325f7dda0e045d\core-1.3.1\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.1] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\33718701d713ca3e83325f7dda0e045d\core-1.3.1\AndroidManifest.xml:24:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\c118b0b186137ddeb22602e3fa0a71a3\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
@@ -305,16 +305,16 @@ MERGED from [com.android.volley:volley:1.1.1] C:\Users\MAymanM\.gradle\caches\tr
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:25:9-35
 	android:label
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:21:9-41
-		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:13:9-41
-		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:14:9-41
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:13:9-41
+		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:14:9-41
 	android:hardwareAccelerated
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:19:9-43
 	tools:targetApi
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:29:9-28
 	android:allowBackup
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:18:9-35
-		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:12:9-35
-		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:12:9-35
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:12:9-35
+		REJECTED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from F:\mostafa elnagar\Akar\app\src\main\AndroidManifest.xml:26:9-40
 	tools:replace
@@ -499,12 +499,12 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\t
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\b6ab4a313d417e48782f9ea999e77b72\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4c07ff474643d740411e74e84e6ea236\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\bd3efd1d4a30d51b0b44b17730196787\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\731f51c61fb5c3fcbdda39a698e2cd90\jetified-autoimageslider-1.4.0-appcompat\AndroidManifest.xml:7:5-9:41
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
 MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\f5ed9657c32372d7e34d8452e4a72d1d\jetified-picasso-2.71828\AndroidManifest.xml:5:5-44
-MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\a2a103f1013d92d91bed85c6017e5687\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\4be36074c74e8408d954ba6311fb478f\jetified-monthandyearpicker-1.3.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\37fac360111f294416732b98dcd7bd2e\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
 MERGED from [com.makeramen:roundedimageview:2.3.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\37fac360111f294416732b98dcd7bd2e\jetified-roundedimageview-2.3.0\AndroidManifest.xml:7:5-43
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] C:\Users\MAymanM\.gradle\caches\transforms-2\files-2.1\53d69b76fd8b9548f9e74814b407b528\swiperefreshlayout-1.1.0\AndroidManifest.xml:20:5-22:41

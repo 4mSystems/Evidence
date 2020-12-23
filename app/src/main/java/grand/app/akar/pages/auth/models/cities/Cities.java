@@ -2,7 +2,9 @@ package grand.app.akar.pages.auth.models.cities;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Cities {
+import java.io.Serializable;
+
+public class Cities implements Serializable {
     @SerializedName("name")
     private String name;
     @SerializedName("lat")

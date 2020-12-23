@@ -26,7 +26,7 @@ public class NotifyItemBindingImpl extends NotifyItemBinding implements grand.ap
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback32;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class NotifyItemBindingImpl extends NotifyItemBinding implements grand.ap
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -121,7 +121,7 @@ public class NotifyItemBindingImpl extends NotifyItemBinding implements grand.ap
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback12);
+            this.mboundView1.setOnClickListener(mCallback32);
         }
     }
     // Listener Stub Implementations

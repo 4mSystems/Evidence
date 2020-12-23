@@ -161,6 +161,7 @@ public class ConnectionHelper {
                     @Override
                     public void onError(Throwable t) {
                         hideProgress(showProgress);
+                        t.printStackTrace();
                         liveData.setValue(new Mutable(Constants.SERVER_ERROR));
                     }
 

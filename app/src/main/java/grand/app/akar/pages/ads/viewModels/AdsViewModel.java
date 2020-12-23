@@ -12,8 +12,11 @@ import javax.inject.Inject;
 
 import grand.app.akar.BR;
 import grand.app.akar.base.BaseViewModel;
+import grand.app.akar.base.MyApplication;
+import grand.app.akar.base.maps.MapHelper;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.adapter.CitiesAdapter;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.auth.models.cities.Cities;
 import grand.app.akar.repository.AuthRepository;
 import grand.app.akar.utils.Constants;
@@ -26,28 +29,24 @@ public class AdsViewModel extends BaseViewModel {
     AuthRepository repository;
     private List<Cities> citiesList;
     private CitiesAdapter citiesAdapter;
+    private CreateAdRequest createAdRequest;
 
     @Inject
     public AdsViewModel(AuthRepository repository) {
-        citiesAdapter= new CitiesAdapter();
+        createAdRequest = new CreateAdRequest();
+        citiesAdapter = new CitiesAdapter();
         citiesList = new ArrayList<>();
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
     }
 
-    public CitiesAdapter getCitiesAdapter() {
-        return citiesAdapter;
-    }
-
-    public List<Cities> getCitiesList() {
-        return citiesList;
-    }
-
     @Bindable
     public void setCitiesList(List<Cities> citiesList) {
-        Log.e("setCitiesList", "setCitiesList: " + citiesList.size());
         notifyChange(BR.citiesList);
+        getCreateAdRequest().setCityName(citiesList.get(0).getName());
+        getCreateAdRequest().setLat(citiesList.get(0).getLat());
+        getCreateAdRequest().setLng(citiesList.get(0).getLng());
         this.citiesList = citiesList;
     }
 
@@ -71,8 +70,35 @@ public class AdsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
+    public CreateAdRequest getCreateAdRequest() {
+        return createAdRequest;
+    }
+
+    public CitiesAdapter getCitiesAdapter() {
+        return citiesAdapter;
+    }
+
+    public List<Cities> getCitiesList() {
+        return citiesList;
+    }
+
     public AuthRepository getRepository() {
         return repository;
     }
 
+    public void toAdFee() {
+        liveData.setValue(new Mutable(Constants.AD_INFO_1));
+    }
+
+    public void toAdLocations() {
+        liveData.setValue(new Mutable(Constants.MAP_LOCATION));
+    }
+
+    public void toCategories() {
+        liveData.setValue(new Mutable(Constants.CATEGORIES));
+    }
+
+    public void selectCity() {
+        liveData.setValue(new Mutable(Constants.SELECT));
+    }
 }

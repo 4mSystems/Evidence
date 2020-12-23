@@ -51,9 +51,9 @@ public class SplashFragment extends BaseFragment {
             if (((Mutable) o).message.equals(Constants.SETTINGS)) {
                 if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
                     if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
-                    } else
                         MovementHelper.startActivityMain(context);
+                    } else
+                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
                 } else {
                     MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
                 }

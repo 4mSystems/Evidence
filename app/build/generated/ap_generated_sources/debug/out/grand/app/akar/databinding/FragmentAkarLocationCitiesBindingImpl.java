@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationCitiesBinding  {
+public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationCitiesBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,7 +14,7 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.confirmBtn, 2);
+        sViewsWithIds.put(R.id.input_search, 3);
     }
     // views
     @NonNull
@@ -22,23 +22,28 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback28;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentAkarLocationCitiesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentAkarLocationCitiesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.appcompat.widget.AppCompatButton) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
             );
+        this.confirmBtn.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback28 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -120,6 +125,11 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.confirmBtn.setOnClickListener(mCallback28);
+        }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
@@ -128,6 +138,22 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.selectCity();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

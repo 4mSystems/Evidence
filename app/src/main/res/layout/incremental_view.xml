@@ -31,13 +31,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/black" />
 
-        <grand.app.akar.customViews.views.CustomTextViewMedium
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/incrementalViewText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp9w"
             android:layout_marginEnd="@dimen/dp9w"
-            android:text="1"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"

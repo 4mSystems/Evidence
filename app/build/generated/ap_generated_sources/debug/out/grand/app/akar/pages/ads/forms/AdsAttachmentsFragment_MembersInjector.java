@@ -3,7 +3,7 @@ package grand.app.akar.pages.ads.forms;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,15 +11,14 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class AdsAttachmentsFragment_MembersInjector implements MembersInjector<AdsAttachmentsFragment> {
-  private final Provider<AddVillaHouseViewModel> viewModelProvider;
+  private final Provider<AttachmentsViewModel> viewModelProvider;
 
-  public AdsAttachmentsFragment_MembersInjector(
-      Provider<AddVillaHouseViewModel> viewModelProvider) {
+  public AdsAttachmentsFragment_MembersInjector(Provider<AttachmentsViewModel> viewModelProvider) {
     this.viewModelProvider = viewModelProvider;
   }
 
   public static MembersInjector<AdsAttachmentsFragment> create(
-      Provider<AddVillaHouseViewModel> viewModelProvider) {
+      Provider<AttachmentsViewModel> viewModelProvider) {
     return new AdsAttachmentsFragment_MembersInjector(viewModelProvider);}
 
   @Override
@@ -29,7 +28,7 @@ public final class AdsAttachmentsFragment_MembersInjector implements MembersInje
 
   @InjectedFieldSignature("grand.app.akar.pages.ads.forms.AdsAttachmentsFragment.viewModel")
   public static void injectViewModel(AdsAttachmentsFragment instance,
-      AddVillaHouseViewModel viewModel) {
+      AttachmentsViewModel viewModel) {
     instance.viewModel = viewModel;
   }
 }

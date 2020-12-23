@@ -36,6 +36,9 @@ public class FileObject implements Serializable {
         compressImage();
     }
 
+    public FileObject() {
+    }
+
     public Bitmap getResizedBitmap(File file) {
         int maxSize = 400;
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();

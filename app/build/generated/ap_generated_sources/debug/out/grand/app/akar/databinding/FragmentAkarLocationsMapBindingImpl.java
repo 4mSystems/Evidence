@@ -14,14 +14,16 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 2);
-        sViewsWithIds.put(R.id.mapview, 3);
-        sViewsWithIds.put(R.id.confirmBtn, 4);
+        sViewsWithIds.put(R.id.input_search, 3);
+        sViewsWithIds.put(R.id.mapview, 4);
+        sViewsWithIds.put(R.id.address_progress, 5);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
     @Nullable
     private final android.view.View.OnClickListener mCallback6;
     // values
@@ -29,20 +31,23 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
     // Inverse Binding Event Handlers
 
     public FragmentAkarLocationsMapBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentAkarLocationsMapBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (android.widget.ProgressBar) bindings[5]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
-            , (com.google.android.gms.maps.MapView) bindings[3]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (com.google.android.gms.maps.MapView) bindings[4]
             );
         this.btnDiffLocations.setTag(null);
+        this.confirmBtn.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback7 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         mCallback6 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
@@ -118,24 +123,47 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
             // api target 1
 
             this.btnDiffLocations.setOnClickListener(mCallback6);
+            this.confirmBtn.setOnClickListener(mCallback7);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.toCities();
+                    viewmodel.toCategories();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toCities();
+                }
+                break;
+            }
         }
     }
     // dirty flag

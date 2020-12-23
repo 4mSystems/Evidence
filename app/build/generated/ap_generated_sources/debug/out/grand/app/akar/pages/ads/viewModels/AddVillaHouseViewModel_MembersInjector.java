@@ -3,7 +3,7 @@ package grand.app.akar.pages.ads.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.akar.repository.SettingsRepository;
+import grand.app.akar.repository.AdsRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -11,14 +11,14 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class AddVillaHouseViewModel_MembersInjector implements MembersInjector<AddVillaHouseViewModel> {
-  private final Provider<SettingsRepository> repositoryProvider;
+  private final Provider<AdsRepository> repositoryProvider;
 
-  public AddVillaHouseViewModel_MembersInjector(Provider<SettingsRepository> repositoryProvider) {
+  public AddVillaHouseViewModel_MembersInjector(Provider<AdsRepository> repositoryProvider) {
     this.repositoryProvider = repositoryProvider;
   }
 
   public static MembersInjector<AddVillaHouseViewModel> create(
-      Provider<SettingsRepository> repositoryProvider) {
+      Provider<AdsRepository> repositoryProvider) {
     return new AddVillaHouseViewModel_MembersInjector(repositoryProvider);}
 
   @Override
@@ -27,8 +27,7 @@ public final class AddVillaHouseViewModel_MembersInjector implements MembersInje
   }
 
   @InjectedFieldSignature("grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel.repository")
-  public static void injectRepository(AddVillaHouseViewModel instance,
-      SettingsRepository repository) {
+  public static void injectRepository(AddVillaHouseViewModel instance, AdsRepository repository) {
     instance.repository = repository;
   }
 }

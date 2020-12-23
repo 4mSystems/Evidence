@@ -323,36 +323,15 @@ public class FileOperations {
     }
 
 
-    public static void pickDocument(final Context context, Fragment fragment, int requestCode) {
+    public static void pickVideo(final Context context, Fragment fragment, int requestCode) {
         if (ActivityCompat.checkSelfPermission(fragment.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
 //            Intent intent;
 //            intent = new Intent(Intent.ACTION_GET_CONTENT);
 //            intent.setType("*/*");
 //            ((AppCompatActivity) context).startActivityForResult(Intent.createChooser(intent, "Select File"), requestCode);
-
-
-            String[] mimeTypes =
-                    {"application/msword",
-                            "text/plain",
-                            "application/pdf"};
-
             Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("application/pdf");
-
-
-//            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//                intent.setType(mimeTypes.length == 1 ? mimeTypes[0] : "*/*");
-//                if (mimeTypes.length > 0) {
-//                    intent.putExtra(Intent.EXTRA_MIME_TYPES, mimeTypes);
-//                }
-//            } else {
-//                String mimeTypesStr = "";
-//                for (String mimeType : mimeTypes) {
-//                    mimeTypesStr += mimeType + "|";
-//                }
-//                intent.setType(mimeTypesStr.substring(0,mimeTypesStr.length() - 1));
-//            }
+            intent.setType("video/*");
             ((AppCompatActivity) context).startActivityForResult(Intent.createChooser(intent, ResourceManager.getString(R.string.select_file)), requestCode);
 
         } else {

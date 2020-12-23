@@ -17,6 +17,7 @@ import grand.app.akar.connection.Api;
 import grand.app.akar.customViews.actionbar.HomeActionBarView;
 import grand.app.akar.databinding.ActivityMainBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.ads.AdsInfoFragment;
 import grand.app.akar.pages.ads.AkarLocationsMapFragment;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
@@ -61,7 +62,7 @@ public class MainActivity extends ParentActivity {
                     MovementHelper.replaceFragment(this, new MyAccountFragment(), "");
                     break;
                 case Constants.MENU_ADD_AD:
-                    MovementHelper.startActivity(this, AkarLocationsMapFragment.class.getName(), getResources().getString(R.string.choose_akar_locations), null);
+                    MovementHelper.startActivity(this, AdsInfoFragment.class.getName(), getResources().getString(R.string.add_info_title), null);
                     break;
             }
         });

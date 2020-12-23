@@ -2,7 +2,7 @@ package grand.app.akar.utils;
 
 public class URLS {
     public final static String BASE_URL = "https://aqari.my-staff.net/api/";
-    public final static String COUNTRIES = "app/countries";
+    public final static String CREATE_AD = "listings/create";
     public final static String CITIES = "settings/cities";
 
     public final static String SERVICES = "services";

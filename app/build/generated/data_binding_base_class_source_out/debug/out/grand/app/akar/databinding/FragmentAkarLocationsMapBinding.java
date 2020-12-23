@@ -4,6 +4,7 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -18,6 +19,9 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentAkarLocationsMapBinding extends ViewDataBinding {
+  @NonNull
+  public final ProgressBar addressProgress;
+
   @NonNull
   public final CustomTextViewMedium btnDiffLocations;
 
@@ -34,9 +38,10 @@ public abstract class FragmentAkarLocationsMapBinding extends ViewDataBinding {
   protected AdsViewModel mViewmodel;
 
   protected FragmentAkarLocationsMapBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, CustomTextViewMedium btnDiffLocations, AppCompatButton confirmBtn,
-      CustomTextViewMedium inputSearch, MapView mapview) {
+      int _localFieldCount, ProgressBar addressProgress, CustomTextViewMedium btnDiffLocations,
+      AppCompatButton confirmBtn, CustomTextViewMedium inputSearch, MapView mapview) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.addressProgress = addressProgress;
     this.btnDiffLocations = btnDiffLocations;
     this.confirmBtn = confirmBtn;
     this.inputSearch = inputSearch;

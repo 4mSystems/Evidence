@@ -43,6 +43,7 @@ import grand.app.akar.databinding.FragmentRegisterBindingImpl;
 import grand.app.akar.databinding.FragmentSplashBindingImpl;
 import grand.app.akar.databinding.FragmentTermsBindingImpl;
 import grand.app.akar.databinding.FragmentUploadSuccessBindingImpl;
+import grand.app.akar.databinding.ItemAdImagesBindingImpl;
 import grand.app.akar.databinding.ItemCategoryBindingImpl;
 import grand.app.akar.databinding.ItemChatBindingImpl;
 import grand.app.akar.databinding.ItemCityBindingImpl;
@@ -140,31 +141,33 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTUPLOADSUCCESS = 37;
 
-  private static final int LAYOUT_ITEMCATEGORY = 38;
+  private static final int LAYOUT_ITEMADIMAGES = 38;
 
-  private static final int LAYOUT_ITEMCHAT = 39;
+  private static final int LAYOUT_ITEMCATEGORY = 39;
 
-  private static final int LAYOUT_ITEMCITY = 40;
+  private static final int LAYOUT_ITEMCHAT = 40;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 41;
+  private static final int LAYOUT_ITEMCITY = 41;
 
-  private static final int LAYOUT_ITEMHOME = 42;
+  private static final int LAYOUT_ITEMCONVERSATION = 42;
 
-  private static final int LAYOUT_ITEMMYADS = 43;
+  private static final int LAYOUT_ITEMHOME = 43;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 44;
+  private static final int LAYOUT_ITEMMYADS = 44;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 45;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 45;
 
-  private static final int LAYOUT_LAYOUTGRAND = 46;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 46;
 
-  private static final int LAYOUT_NOTIFYITEM = 47;
+  private static final int LAYOUT_LAYOUTGRAND = 47;
 
-  private static final int LAYOUT_REPORTDIALOG = 48;
+  private static final int LAYOUT_NOTIFYITEM = 48;
 
-  private static final int LAYOUT_REPORTWARNINGDIALOG = 49;
+  private static final int LAYOUT_REPORTDIALOG = 49;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(49);
+  private static final int LAYOUT_REPORTWARNINGDIALOG = 50;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(50);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -204,6 +207,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_terms, LAYOUT_FRAGMENTTERMS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_upload_success, LAYOUT_FRAGMENTUPLOADSUCCESS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_ad_images, LAYOUT_ITEMADIMAGES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_category, LAYOUT_ITEMCATEGORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_chat, LAYOUT_ITEMCHAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_city, LAYOUT_ITEMCITY);
@@ -449,6 +453,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_upload_success is invalid. Received: " + tag);
         }
+        case  LAYOUT_ITEMADIMAGES: {
+          if ("layout/item_ad_images_0".equals(tag)) {
+            return new ItemAdImagesBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_ad_images is invalid. Received: " + tag);
+        }
         case  LAYOUT_ITEMCATEGORY: {
           if ("layout/item_category_0".equals(tag)) {
             return new ItemCategoryBindingImpl(component, view);
@@ -566,7 +576,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(24);
+    static final SparseArray<String> sKeys = new SparseArray<String>(31);
 
     static {
       sKeys.put(0, "_all");
@@ -575,29 +585,36 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(3, "categoriesData");
       sKeys.put(4, "cities");
       sKeys.put(5, "citiesList");
-      sKeys.put(6, "homeData");
-      sKeys.put(7, "itemChatViewModel");
-      sKeys.put(8, "itemHomeViewModel");
-      sKeys.put(9, "itemViewModel");
-      sKeys.put(10, "loginStatus");
-      sKeys.put(11, "manager");
-      sKeys.put(12, "myAdsAdapter");
-      sKeys.put(13, "notificationsData");
-      sKeys.put(14, "notifyItemViewModels");
-      sKeys.put(15, "notifyViewModel");
-      sKeys.put(16, "onBoardAdapter");
-      sKeys.put(17, "onBoardViewModels");
-      sKeys.put(18, "passingObject");
-      sKeys.put(19, "profileData");
-      sKeys.put(20, "settingsData");
-      sKeys.put(21, "userDocuments");
-      sKeys.put(22, "viewModel");
-      sKeys.put(23, "viewmodel");
+      sKeys.put(6, "createRequest");
+      sKeys.put(7, "dealingType");
+      sKeys.put(8, "docType");
+      sKeys.put(9, "fileObjectVideo");
+      sKeys.put(10, "homeData");
+      sKeys.put(11, "itemChatViewModel");
+      sKeys.put(12, "itemHomeViewModel");
+      sKeys.put(13, "itemViewModel");
+      sKeys.put(14, "loginStatus");
+      sKeys.put(15, "manager");
+      sKeys.put(16, "myAdsAdapter");
+      sKeys.put(17, "notificationsData");
+      sKeys.put(18, "notifyItemViewModels");
+      sKeys.put(19, "notifyViewModel");
+      sKeys.put(20, "onBoardAdapter");
+      sKeys.put(21, "onBoardViewModels");
+      sKeys.put(22, "orderImages");
+      sKeys.put(23, "passingObject");
+      sKeys.put(24, "paymentMethod");
+      sKeys.put(25, "profileData");
+      sKeys.put(26, "selected");
+      sKeys.put(27, "settingsData");
+      sKeys.put(28, "userDocuments");
+      sKeys.put(29, "viewModel");
+      sKeys.put(30, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(49);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(50);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.akar.R.layout.activity_base);
@@ -637,6 +654,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_splash_0", grand.app.akar.R.layout.fragment_splash);
       sKeys.put("layout/fragment_terms_0", grand.app.akar.R.layout.fragment_terms);
       sKeys.put("layout/fragment_upload_success_0", grand.app.akar.R.layout.fragment_upload_success);
+      sKeys.put("layout/item_ad_images_0", grand.app.akar.R.layout.item_ad_images);
       sKeys.put("layout/item_category_0", grand.app.akar.R.layout.item_category);
       sKeys.put("layout/item_chat_0", grand.app.akar.R.layout.item_chat);
       sKeys.put("layout/item_city_0", grand.app.akar.R.layout.item_city);

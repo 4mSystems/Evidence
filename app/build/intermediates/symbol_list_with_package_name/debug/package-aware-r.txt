@@ -1072,6 +1072,7 @@ attr titleMarginEnd
 attr titleMarginStart
 attr titleMarginTop
 attr titleMargins
+attr titleText
 attr titleTextAppearance
 attr titleTextColor
 attr titleTextStyle
@@ -4015,7 +4016,9 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id ad_images_rc
 id add
+id address_progress
 id adjust_height
 id adjust_width
 id alertTitle
@@ -4048,8 +4051,6 @@ id br10
 id br11
 id br2
 id br3
-id br5
-id br6
 id br9
 id bt_customize
 id bt_holy_king
@@ -4099,11 +4100,6 @@ id clip_horizontal
 id clip_vertical
 id clockwise
 id close1
-id close2
-id close3
-id close4
-id close5
-id close6
 id close7
 id collapseActionView
 id color
@@ -4226,11 +4222,6 @@ id ignore
 id ignoreRequest
 id image
 id image1
-id image2
-id image3
-id image4
-id image5
-id image6
 id image7
 id imageSlider
 id imageView_arrow
@@ -4855,6 +4846,7 @@ layout fragment_upload_success
 layout home_list_layout
 layout home_map_layout
 layout incremental_view
+layout item_ad_images
 layout item_category
 layout item_chat
 layout item_city
@@ -5008,6 +5000,7 @@ raw ccp_uzbek
 raw ccp_vietnamese
 raw keep_ccp
 raw places_keep
+string API_KEY
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -5040,12 +5033,15 @@ string about_title
 string account_balance
 string account_my_ads
 string account_verified
+string ad_attachment_imgs
+string ad_fee_title
 string add_info1
 string add_info2
 string add_info3
 string add_info4
 string add_info5
 string add_info6
+string add_info_title
 string address_hint
 string airplane_mode
 string annual_register
@@ -5087,6 +5083,7 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chat_hint
 string chip_text
+string choose_akar_category
 string choose_akar_locations
 string choose_building_year
 string choose_city
@@ -5209,6 +5206,7 @@ string identity_number
 string identity_number_hint
 string identity_type
 string identity_type_hint
+string image_required
 string insurance_car_add
 string insurance_image
 string insurance_image_hint
@@ -5370,6 +5368,7 @@ string pormote_ad
 string post_ad
 string previous_ads
 string price_hint
+string price_required
 string privacy
 string profile_edit
 string project_id
@@ -5391,6 +5390,7 @@ string requested_dialog_title
 string rest
 string rooms_count
 string sac
+string save
 string school
 string search_hint
 string search_locations
@@ -5450,6 +5450,7 @@ string tv_points_header
 string tv_settings_nearest_orders
 string tv_settings_registered_stores
 string upload_doc_btn
+string videoBig
 string villa
 string waiting_orders
 string ware_house
@@ -6264,7 +6265,7 @@ styleable FragmentContainerView android_name android_tag
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth
-styleable IncrementalView android_text
+styleable IncrementalView titleText
 styleable Insets paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets
 styleable KeyAttribute android_alpha android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transitionEasing transitionPathRotate
 styleable KeyCycle android_alpha android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation curveFit framePosition motionProgress motionTarget transitionEasing transitionPathRotate waveOffset wavePeriod waveShape waveVariesBy

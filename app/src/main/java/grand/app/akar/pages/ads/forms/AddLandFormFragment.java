@@ -47,8 +47,8 @@ public class AddLandFormFragment extends BaseFragment {
 
         });
         getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
+//            if (isConnected)
+//                viewModel.getAbout();
         });
     }
 
