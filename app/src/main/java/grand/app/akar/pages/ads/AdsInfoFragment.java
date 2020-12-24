@@ -27,6 +27,7 @@ import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import grand.app.akar.pages.settings.models.AboutResponse;
 import grand.app.akar.pages.settings.viewModels.SettingsViewModel;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 
 public class AdsInfoFragment extends BaseFragment {
     private Context context;
@@ -39,7 +40,6 @@ public class AdsInfoFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.getAbout();
         setEvent();
         return binding.getRoot();
     }
@@ -48,20 +48,16 @@ public class AdsInfoFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (((Mutable) o).message.equals(Constants.AD_INFO_1)) {
+                viewModel.goBack(context);
+                MovementHelper.startActivity(context, AdvertisingFeeFragment.class.getName(), getResources().getString(R.string.ad_fee_title), null);
             }
-        });
-        getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
         });
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) context).enableRefresh(false);
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 

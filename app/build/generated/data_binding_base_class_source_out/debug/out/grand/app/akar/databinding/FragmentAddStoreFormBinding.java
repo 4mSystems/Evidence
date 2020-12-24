@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -69,10 +70,10 @@ public abstract class FragmentAddStoreFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final AppCompatImageView furnitureToggle;
+  public final SwitchCompat furnitureToggle;
 
   @NonNull
-  public final AppCompatImageView garageToggle;
+  public final SwitchCompat garageToggle;
 
   @NonNull
   public final AppCompatImageView headerIndicator;
@@ -203,8 +204,8 @@ public abstract class FragmentAddStoreFormBinding extends ViewDataBinding {
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
       MaterialCardView buildingYear, AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
-      AppCompatImageView garageToggle, AppCompatImageView headerIndicator,
+      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
+      SwitchCompat garageToggle, AppCompatImageView headerIndicator,
       CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
       IncrementalView incrementalViewFrontCount, IncrementalView incrementalViewPathsNumber,
       CustomEditText inputAddress, CustomEditText inputDesc, CustomEditText inputLandSize,

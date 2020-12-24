@@ -1,6 +1,7 @@
 package grand.app.akar.pages.ads.forms;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +12,13 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
@@ -23,9 +27,13 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentAddFactoryFormBinding;
 import grand.app.akar.databinding.FragmentAddRestFormBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
 import grand.app.akar.pages.settings.models.AboutResponse;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
+
+import static android.app.Activity.RESULT_OK;
 
 public class AddResetFormFragment extends BaseFragment {
     private Context context;
@@ -38,6 +46,12 @@ public class AddResetFormFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.setCreateAdRequest(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CreateAdRequest.class));
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -46,20 +60,18 @@ public class AddResetFormFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (mutable.message.equals(Constants.AD_UPLOAD_ATTACH)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCreateAdRequest()), getString(R.string.ad_attachment_imgs), AdsAttachmentsFragment.class.getName(), null);
+            } else if (mutable.message.equals(Constants.EMPTY_WARNING)) {
+                showError(getString(R.string.empty_warning));
             }
         });
-        getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
-        });
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) context).enableRefresh(false);
         viewModel.getRepository().setLiveData(viewModel.liveData);
     }
 
@@ -67,6 +79,16 @@ public class AddResetFormFragment extends BaseFragment {
     public void onAttach(@NotNull Context context) {
         super.onAttach(context);
         this.context = context;
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data != null) {
+            if (resultCode == RESULT_OK) {
+                viewModel.goBack(context);
+            }
+        }
     }
 
 }

@@ -10,6 +10,7 @@
             name="viewmodel"
             type="grand.app.akar.pages.settings.viewModels.SettingsViewModel" />
     </data>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -28,12 +29,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp8w"
-                android:src="@drawable/ic_back"
                 android:onClick="@{()-> viewmodel.goBack(context)}"
+                android:src="@drawable/ic_back"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/img_login_logo" />
 
@@ -53,8 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/dp18h"
-                app:layout_constraintTop_toBottomOf="@+id/tv_login_title"
-                android:background="@drawable/corner_view_auth">
+                android:background="@drawable/corner_view_auth"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login_title">
 
                 <grand.app.akar.customViews.views.CustomTextViewMedium
                     android:id="@+id/tv_take_me"
@@ -75,7 +77,7 @@
                     android:layout_marginStart="@dimen/dp13w"
                     android:layout_marginTop="@dimen/dp11h"
                     android:layout_marginEnd="@dimen/dp13w"
-                    android:text="لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنتلوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنتلوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت"
+                    android:text="@{viewmodel.aboutData.desc}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/medium_color"

@@ -2,7 +2,7 @@
 package grand.app.akar.pages.ads.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.akar.repository.SettingsRepository;
+import grand.app.akar.repository.AuthRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class AdsViewModel_Factory implements Factory<AdsViewModel> {
-  private final Provider<SettingsRepository> repositoryProvider;
+  private final Provider<AuthRepository> repositoryProvider;
 
-  private final Provider<SettingsRepository> repositoryProvider2;
+  private final Provider<AuthRepository> repositoryProvider2;
 
-  public AdsViewModel_Factory(Provider<SettingsRepository> repositoryProvider,
-      Provider<SettingsRepository> repositoryProvider2) {
+  public AdsViewModel_Factory(Provider<AuthRepository> repositoryProvider,
+      Provider<AuthRepository> repositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
   }
@@ -27,12 +27,12 @@ public final class AdsViewModel_Factory implements Factory<AdsViewModel> {
     return instance;
   }
 
-  public static AdsViewModel_Factory create(Provider<SettingsRepository> repositoryProvider,
-      Provider<SettingsRepository> repositoryProvider2) {
+  public static AdsViewModel_Factory create(Provider<AuthRepository> repositoryProvider,
+      Provider<AuthRepository> repositoryProvider2) {
     return new AdsViewModel_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static AdsViewModel newInstance(SettingsRepository repository) {
+  public static AdsViewModel newInstance(AuthRepository repository) {
     return new AdsViewModel(repository);
   }
 }

@@ -2,7 +2,7 @@
 package grand.app.akar.pages.ads.viewModels;
 
 import dagger.internal.Factory;
-import grand.app.akar.repository.SettingsRepository;
+import grand.app.akar.repository.AdsRepository;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -10,12 +10,12 @@ import javax.inject.Provider;
     "rawtypes"
 })
 public final class AddVillaHouseViewModel_Factory implements Factory<AddVillaHouseViewModel> {
-  private final Provider<SettingsRepository> repositoryProvider;
+  private final Provider<AdsRepository> repositoryProvider;
 
-  private final Provider<SettingsRepository> repositoryProvider2;
+  private final Provider<AdsRepository> repositoryProvider2;
 
-  public AddVillaHouseViewModel_Factory(Provider<SettingsRepository> repositoryProvider,
-      Provider<SettingsRepository> repositoryProvider2) {
+  public AddVillaHouseViewModel_Factory(Provider<AdsRepository> repositoryProvider,
+      Provider<AdsRepository> repositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
   }
@@ -27,13 +27,12 @@ public final class AddVillaHouseViewModel_Factory implements Factory<AddVillaHou
     return instance;
   }
 
-  public static AddVillaHouseViewModel_Factory create(
-      Provider<SettingsRepository> repositoryProvider,
-      Provider<SettingsRepository> repositoryProvider2) {
+  public static AddVillaHouseViewModel_Factory create(Provider<AdsRepository> repositoryProvider,
+      Provider<AdsRepository> repositoryProvider2) {
     return new AddVillaHouseViewModel_Factory(repositoryProvider, repositoryProvider2);
   }
 
-  public static AddVillaHouseViewModel newInstance(SettingsRepository repository) {
+  public static AddVillaHouseViewModel newInstance(AdsRepository repository) {
     return new AddVillaHouseViewModel(repository);
   }
 }

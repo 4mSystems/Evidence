@@ -24,6 +24,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import org.imaginativeworld.oopsnointernet.NoInternetDialog;
 
@@ -66,11 +67,16 @@ public class ParentActivity extends AppCompatActivity implements
     }
 
     protected void initializeToken() {
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(this,
-                instanceIdResult -> {
-                    String newToken = instanceIdResult.getToken();
-                    UserHelper.getInstance(MyApplication.getInstance()).addToken(newToken);
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        Log.e("FirebaseMessaging", "Fetching FCM registration token failed", task.getException());
+                        return;
+                    }
+                    String token = task.getResult();
+                    UserHelper.getInstance(MyApplication.getInstance()).addToken(token);
                 });
+
     }
 
     @Override
@@ -147,7 +153,7 @@ public class ParentActivity extends AppCompatActivity implements
         } else if (mutable.message.equals(Constants.ERROR) && mutable.object instanceof String) {
             hideProgress();
             showError((String) mutable.object);
-        } else if (mutable.message.equals(Constants.NOT_VERIFIED) && mutable.object instanceof String) {
+        } else if (mutable.message.equals(Constants.NOT_VERIFIED) || mutable.message.equals(Constants.ERROR_NOT_FOUND) && mutable.object instanceof String) {
             hideProgress();
             showError((String) mutable.object);
         } else if (mutable.message.equals(Constants.ERROR_TOAST) && mutable.object instanceof String) {

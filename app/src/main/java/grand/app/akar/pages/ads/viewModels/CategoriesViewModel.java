@@ -1,5 +1,7 @@
 package grand.app.akar.pages.ads.viewModels;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ import grand.app.akar.pages.ads.forms.AddStoreFormFragment;
 import grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment;
 import grand.app.akar.pages.ads.forms.AddWareHosueFormFragment;
 import grand.app.akar.pages.ads.models.CategoriesData;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.repository.SettingsRepository;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.resources.ResourceManager;
@@ -31,9 +34,11 @@ public class CategoriesViewModel extends BaseViewModel {
     private CategoriesAdapter categoriesAdapter;
     @Inject
     SettingsRepository repository;
+    private CreateAdRequest createAdRequest;
 
     @Inject
     public CategoriesViewModel(SettingsRepository repository) {
+        createAdRequest = new CreateAdRequest();
         categoriesAdapter = new CategoriesAdapter();
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
@@ -75,6 +80,15 @@ public class CategoriesViewModel extends BaseViewModel {
 
     public void toSelectForm() {
         liveData.setValue(new Mutable(Constants.ADD_FORM));
+    }
+
+    public CreateAdRequest getCreateAdRequest() {
+        return createAdRequest;
+    }
+
+    public void setCreateAdRequest(CreateAdRequest createAdRequest) {
+        Log.e("setCreateAdRequest", "setCreateAdRequest: "+createAdRequest );
+        this.createAdRequest = createAdRequest;
     }
 
     public SettingsRepository getRepository() {

@@ -11,6 +11,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.akar.R;
+import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -19,13 +20,17 @@ public abstract class FragmentAkarLocationCitiesBinding extends ViewDataBinding 
   @NonNull
   public final AppCompatButton confirmBtn;
 
+  @NonNull
+  public final CustomTextViewMedium inputSearch;
+
   @Bindable
   protected AdsViewModel mViewmodel;
 
   protected FragmentAkarLocationCitiesBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, AppCompatButton confirmBtn) {
+      int _localFieldCount, AppCompatButton confirmBtn, CustomTextViewMedium inputSearch) {
     super(_bindingComponent, _root, _localFieldCount);
     this.confirmBtn = confirmBtn;
+    this.inputSearch = inputSearch;
   }
 
   public abstract void setViewmodel(@Nullable AdsViewModel viewmodel);

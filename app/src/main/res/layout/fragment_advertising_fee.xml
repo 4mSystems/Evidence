@@ -171,6 +171,7 @@
             android:layout_margin="@dimen/dp32h"
             android:background="@drawable/corner_view_primary_dark"
             android:text="@string/policy_pay_fees"
+            android:onClick="@{()-> viewmodel.toAdLocations()}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -4,13 +4,13 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -22,6 +22,7 @@ import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.IncrementalView;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -64,7 +65,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
-  public final AppCompatImageView elevatorToggle;
+  public final SwitchCompat elevatorToggle;
 
   @NonNull
   public final ExpansionLayout expansionLayout;
@@ -73,13 +74,13 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final AppCompatImageView furnitureToggle;
+  public final SwitchCompat furnitureToggle;
 
   @NonNull
-  public final AppCompatImageView garageToggle;
+  public final SwitchCompat garageToggle;
 
   @NonNull
-  public final ImageView headerIndicator;
+  public final AppCompatImageView headerIndicator;
 
   @NonNull
   public final CustomTextViewMedium headerMenuName;
@@ -133,7 +134,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final AppCompatCheckBox policeStation;
 
   @NonNull
-  public final AppCompatImageView poolToggle;
+  public final SwitchCompat poolToggle;
 
   @NonNull
   public final AppCompatCheckBox school;
@@ -255,15 +256,18 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   @Bindable
   protected AddVillaHouseViewModel mViewmodel;
 
+  @Bindable
+  protected CreateAdRequest mCreateRequest;
+
   protected FragmentAddVillaHouseFormBinding(Object _bindingComponent, View _root,
       int _localFieldCount, Barrier br3, CustomTextViewMedium btCustomize,
       CustomTextViewMedium btHolyKing, CustomTextViewMedium btMnahda, CustomTextViewMedium btSac,
       CustomTextViewMedium btTitleDeed, CustomTextViewMedium btTransform,
       CustomTextViewMedium btnCash, CustomTextViewMedium btnRealEstateCertificate,
       CustomTextViewMedium btnSell, MaterialCardView buildingYear, AppCompatButton confirmBtn,
-      AppCompatImageView elevatorToggle, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
-      AppCompatImageView garageToggle, ImageView headerIndicator,
+      SwitchCompat elevatorToggle, ExpansionLayout expansionLayout,
+      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
+      SwitchCompat garageToggle, AppCompatImageView headerIndicator,
       CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
       IncrementalView incrementalViewFloorNumber, IncrementalView incrementalViewFrontCount,
       IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
@@ -271,7 +275,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
       CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputFloorSize,
       CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
       AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
-      AppCompatImageView poolToggle, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
+      SwitchCompat poolToggle, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
       CustomTextViewMedium tvBuildingDesc, CustomTextViewMedium tvBuildingSize,
       CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
       CustomTextViewMedium tvDocType, CustomTextViewMedium tvElevator,
@@ -367,6 +371,13 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   @Nullable
   public AddVillaHouseViewModel getViewmodel() {
     return mViewmodel;
+  }
+
+  public abstract void setCreateRequest(@Nullable CreateAdRequest createRequest);
+
+  @Nullable
+  public CreateAdRequest getCreateRequest() {
+    return mCreateRequest;
   }
 
   @NonNull

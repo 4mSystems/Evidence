@@ -3,154 +3,74 @@ package grand.app.akar.pages.auth.models;
 import com.google.gson.annotations.SerializedName;
 
 public class UserData {
-    @SerializedName("suspend")
-    private int suspend;
 
-    @SerializedName("wallet_flag")
-    private int walletFlag;
+	@SerializedName("img")
+	private String img;
 
-    @SerializedName("image")
-    private String image;
+	@SerializedName("verified_status")
+	private int verifiedStatus;
 
-    @SerializedName("wallet")
-    private double wallet;
+	@SerializedName("phone")
+	private String phone;
 
-    @SerializedName("lng")
-    private String lng;
+	@SerializedName("jwt")
+	private String jwt;
 
-    @SerializedName("jwt")
-    private String jwt;
+	@SerializedName("payment_status")
+	private int paymentStatus;
 
-    @SerializedName("verified")
-    private int verified;
+	@SerializedName("name")
+	private String name;
 
-    @SerializedName("active")
-    private int active;
+	@SerializedName("id")
+	private int id;
 
-    @SerializedName("promo_code")
-    private String promoCode;
+	@SerializedName("type")
+	private int type;
 
-    @SerializedName("token")
-    private String token;
+	@SerializedName("email")
+	private String email;
 
-    @SerializedName("points")
-    private int points;
-    @SerializedName("near_orders")
-    private boolean near_orders;
+	@SerializedName("city_id")
+	private int cityId;
 
-    @SerializedName("user_code")
-    private String userCode;
+	public String getImg(){
+		return img;
+	}
 
-    @SerializedName("phone")
-    private String phone;
+	public int getVerifiedStatus(){
+		return verifiedStatus;
+	}
 
-    @SerializedName("f_name")
-    private String name;
-    @SerializedName("name")
-    private String orderUserName;
+	public String getPhone(){
+		return phone;
+	}
 
-    @SerializedName("l_name")
-    private String last_name;
+	public String getJwt(){
+		return jwt;
+	}
 
-    @SerializedName("id")
-    private int id;
+	public int getPaymentStatus(){
+		return paymentStatus;
+	}
 
-    @SerializedName("email")
-    private String email;
+	public String getName(){
+		return name;
+	}
 
-    @SerializedName("country_id")
-    private int countryId;
+	public int getId(){
+		return id;
+	}
 
-    @SerializedName("lat")
-    private String lat;
-    @SerializedName("rate")
-    private String rate;
+	public int getType(){
+		return type;
+	}
 
-    public int getSuspend() {
-        return suspend;
-    }
+	public String getEmail(){
+		return email;
+	}
 
-    public int getWalletFlag() {
-        return walletFlag;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public double getWallet() {
-        return wallet;
-    }
-
-    public String getLng() {
-        return lng;
-    }
-
-    public String getJwt() {
-        return jwt;
-    }
-
-    public int getVerified() {
-        return verified;
-    }
-
-    public int getActive() {
-        return active;
-    }
-
-    public String getPromoCode() {
-        return promoCode;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public String getUserCode() {
-        return userCode;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public int getCountryId() {
-        return countryId;
-    }
-
-    public Object getLat() {
-        return lat;
-    }
-
-    public String getRate() {
-        return rate;
-    }
-
-    public String getLast_name() {
-        return last_name;
-    }
-
-    public String getOrderUserName() {
-        return orderUserName;
-    }
-
-    public boolean getNear_orders() {
-        return near_orders;
-    }
+	public int getCityId(){
+		return cityId;
+	}
 }

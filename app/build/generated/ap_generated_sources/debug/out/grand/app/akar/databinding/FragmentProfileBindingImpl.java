@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentProfileBindingImpl extends FragmentProfileBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
+public class FragmentProfileBindingImpl extends FragmentProfileBinding  {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,31 +14,109 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_account_warning1, 7);
-        sViewsWithIds.put(R.id.tv_account_warning2, 8);
-        sViewsWithIds.put(R.id.tv_account_password, 9);
+        sViewsWithIds.put(R.id.tv_account_title, 5);
+        sViewsWithIds.put(R.id.account_card_container, 6);
+        sViewsWithIds.put(R.id.tv_register_name, 7);
+        sViewsWithIds.put(R.id.tv_register_email, 8);
+        sViewsWithIds.put(R.id.tv_register_phone, 9);
+        sViewsWithIds.put(R.id.tv_register_password, 10);
+        sViewsWithIds.put(R.id.tv_identity_number, 11);
+        sViewsWithIds.put(R.id.input_register_confirm_password, 12);
+        sViewsWithIds.put(R.id.tv_type, 13);
+        sViewsWithIds.put(R.id.btn_seeker, 14);
+        sViewsWithIds.put(R.id.bt_owner, 15);
+        sViewsWithIds.put(R.id.bt_realtor, 16);
+        sViewsWithIds.put(R.id.br11, 17);
+        sViewsWithIds.put(R.id.appCompatButtonNext, 18);
+        sViewsWithIds.put(R.id.img_login_logo, 19);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
-    @NonNull
-    private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
-    @Nullable
-    private final android.view.View.OnClickListener mCallback14;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback12;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener inputRegisterPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener inputEmailtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.request.email
+            //         is viewmodel.request.setEmail((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputEmail);
+            // localize variables for thread safety
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.request.email
+            java.lang.String viewmodelRequestEmail = null;
+            // viewmodel.request
+            grand.app.akar.pages.auth.models.RegisterRequest viewmodelRequest = null;
+            // viewmodel
+            grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+            // viewmodel.request != null
+            boolean viewmodelRequestJavaLangObjectNull = false;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelRequest = viewmodel.getRequest();
+
+                viewmodelRequestJavaLangObjectNull = (viewmodelRequest) != (null);
+                if (viewmodelRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelRequest.setEmail(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener inputNametextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.request.name
+            //         is viewmodel.request.setName((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputName);
+            // localize variables for thread safety
+            // viewmodel.request.name
+            java.lang.String viewmodelRequestName = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.request
+            grand.app.akar.pages.auth.models.RegisterRequest viewmodelRequest = null;
+            // viewmodel
+            grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+            // viewmodel.request != null
+            boolean viewmodelRequestJavaLangObjectNull = false;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelRequest = viewmodel.getRequest();
+
+                viewmodelRequestJavaLangObjectNull = (viewmodelRequest) != (null);
+                if (viewmodelRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelRequest.setName(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener inputNewPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.password
             //         is viewmodel.request.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputRegisterPassword);
+            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputNewPassword);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -70,19 +148,19 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
             }
         }
     };
-    private androidx.databinding.InverseBindingListener inputRegisterPasswordConfirmtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener inputPhonetextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.confirmPassword
-            //         is viewmodel.request.setConfirmPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputRegisterPasswordConfirm);
+            // Inverse of viewmodel.request.phone
+            //         is viewmodel.request.setPhone((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputPhone);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.request
             grand.app.akar.pages.auth.models.RegisterRequest viewmodelRequest = null;
-            // viewmodel.request.confirmPassword
-            java.lang.String viewmodelRequestConfirmPassword = null;
+            // viewmodel.request.phone
+            java.lang.String viewmodelRequestPhone = null;
             // viewmodel
             grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
@@ -102,40 +180,45 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
 
 
 
-                    viewmodelRequest.setConfirmPassword(((java.lang.String) (callbackArg_0)));
+                    viewmodelRequest.setPhone(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
     };
 
     public FragmentProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private FragmentProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[6]
+            , (com.google.android.material.card.MaterialCardView) bindings[6]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[18]
+            , (androidx.constraintlayout.widget.Barrier) bindings[17]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[15]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[16]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[14]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[19]
+            , (grand.app.akar.customViews.views.CustomEditText) bindings[2]
+            , (grand.app.akar.customViews.views.CustomEditText) bindings[1]
             , (grand.app.akar.customViews.views.CustomEditText) bindings[4]
-            , (grand.app.akar.customViews.views.CustomEditText) bindings[5]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomEditText) bindings[3]
+            , (grand.app.akar.customViews.views.CustomEditText) bindings[12]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[11]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[8]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[13]
             );
-        this.appCompatButtonNext.setTag(null);
-        this.inputRegisterPassword.setTag(null);
-        this.inputRegisterPasswordConfirm.setTag(null);
+        this.inputEmail.setTag(null);
+        this.inputName.setTag(null);
+        this.inputNewPassword.setTag(null);
+        this.inputPhone.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (androidx.appcompat.widget.AppCompatImageView) bindings[2];
-        this.mboundView2.setTag(null);
-        this.tvAccountUsername.setTag(null);
-        this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback13 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -204,12 +287,11 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewmodelUserDataName = null;
-        grand.app.akar.pages.auth.models.UserData viewmodelUserData = null;
         grand.app.akar.pages.auth.models.RegisterRequest viewmodelRequest = null;
         java.lang.String viewmodelRequestPassword = null;
-        java.lang.String viewmodelRequestConfirmPassword = null;
-        java.lang.String viewmodelUserDataImage = null;
+        java.lang.String viewmodelRequestPhone = null;
+        java.lang.String viewmodelRequestName = null;
+        java.lang.String viewmodelRequestEmail = null;
         grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x3L) != 0) {
@@ -217,120 +299,42 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.userData
-                    viewmodelUserData = viewmodel.userData;
                     // read viewmodel.request
                     viewmodelRequest = viewmodel.getRequest();
                 }
 
 
-                if (viewmodelUserData != null) {
-                    // read viewmodel.userData.name
-                    viewmodelUserDataName = viewmodelUserData.getName();
-                    // read viewmodel.userData.image
-                    viewmodelUserDataImage = viewmodelUserData.getImage();
-                }
                 if (viewmodelRequest != null) {
                     // read viewmodel.request.password
                     viewmodelRequestPassword = viewmodelRequest.getPassword();
-                    // read viewmodel.request.confirmPassword
-                    viewmodelRequestConfirmPassword = viewmodelRequest.getConfirmPassword();
+                    // read viewmodel.request.phone
+                    viewmodelRequestPhone = viewmodelRequest.getPhone();
+                    // read viewmodel.request.name
+                    viewmodelRequestName = viewmodelRequest.getName();
+                    // read viewmodel.request.email
+                    viewmodelRequestEmail = viewmodelRequest.getEmail();
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
-            // api target 1
-
-            this.appCompatButtonNext.setOnClickListener(mCallback14);
-            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterPassword, inputRegisterPasswordtextAttrChanged);
-            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterPasswordConfirm, inputRegisterPasswordConfirmtextAttrChanged);
-            this.mboundView2.setOnClickListener(mCallback13);
-            this.userImg.setOnClickListener(mCallback12);
-        }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            grand.app.akar.customViews.views.CustomEditText.getText(this.inputRegisterPassword, viewmodelRequestPassword);
-            grand.app.akar.customViews.views.CustomEditText.getText(this.inputRegisterPasswordConfirm, viewmodelRequestConfirmPassword);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountUsername, viewmodelUserDataName);
-            grand.app.akar.base.ApplicationBinding.loadImage(this.userImg, viewmodelUserDataImage);
+            grand.app.akar.customViews.views.CustomEditText.getText(this.inputEmail, viewmodelRequestEmail);
+            grand.app.akar.customViews.views.CustomEditText.getText(this.inputName, viewmodelRequestName);
+            grand.app.akar.customViews.views.CustomEditText.getText(this.inputNewPassword, viewmodelRequestPassword);
+            grand.app.akar.customViews.views.CustomEditText.getText(this.inputPhone, viewmodelRequestPhone);
+        }
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
+            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputName, inputNametextAttrChanged);
+            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
+            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
         }
     }
     // Listener Stub Implementations
     // callback impls
-    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.updateProfile();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel.userData.image
-                java.lang.String viewmodelUserDataImage = null;
-                // viewmodel.userData
-                grand.app.akar.pages.auth.models.UserData viewmodelUserData = null;
-                // viewmodel
-                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-                // viewmodel.userData != null
-                boolean viewmodelUserDataJavaLangObjectNull = false;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodelUserData = viewmodel.userData;
-
-                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
-                    if (viewmodelUserDataJavaLangObjectNull) {
-
-
-                        viewmodelUserDataImage = viewmodelUserData.getImage();
-
-
-                        viewmodel.showImage(viewmodelUserDataImage, callbackArg_0);
-                    }
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.imageSubmit();
-                }
-                break;
-            }
-        }
-    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

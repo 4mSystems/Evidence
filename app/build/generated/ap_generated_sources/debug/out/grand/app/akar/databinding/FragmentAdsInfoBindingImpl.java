@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding  {
+public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,19 +14,20 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.imgRegister, 1);
-        sViewsWithIds.put(R.id.info1, 2);
-        sViewsWithIds.put(R.id.info2, 3);
-        sViewsWithIds.put(R.id.info3, 4);
-        sViewsWithIds.put(R.id.info4, 5);
-        sViewsWithIds.put(R.id.info5, 6);
-        sViewsWithIds.put(R.id.info6, 7);
-        sViewsWithIds.put(R.id.confirmBtn, 8);
+        sViewsWithIds.put(R.id.imgRegister, 2);
+        sViewsWithIds.put(R.id.info1, 3);
+        sViewsWithIds.put(R.id.info2, 4);
+        sViewsWithIds.put(R.id.info3, 5);
+        sViewsWithIds.put(R.id.info4, 6);
+        sViewsWithIds.put(R.id.info5, 7);
+        sViewsWithIds.put(R.id.info6, 8);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -36,19 +37,21 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding  {
     }
     private FragmentAdsInfoBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[8]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[2]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[3]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[4]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[5]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
             );
+        this.confirmBtn.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback51 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -83,7 +86,13 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding  {
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.ads.viewModels.AdsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -111,10 +120,32 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.confirmBtn.setOnClickListener(mCallback51);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.toAdFee();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

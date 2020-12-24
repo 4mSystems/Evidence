@@ -20,8 +20,8 @@ public class ApplicationBinding {
 
     @BindingAdapter("imageUrl")
     public static void loadImage(ImageView imageView, Object image) {
-        if (image instanceof String) {
-
+        Log.e(TAG, "loadImage: " + image);
+        if (image instanceof String && !TextUtils.isEmpty((String) image)) {
             Glide
                     .with(imageView.getContext())
                     .load((String) image)
@@ -32,6 +32,8 @@ public class ApplicationBinding {
         } else if (image instanceof Integer) {
             Log.e(TAG, "loadImage: " + image);
             imageView.setImageResource((Integer) image);
+        } else if (TextUtils.isEmpty((String) image)) {
+            imageView.setImageResource(R.drawable.holo);
         }
     }
 

@@ -38,13 +38,16 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   public final CustomEditText inputPhone;
 
   @NonNull
-  public final CustomEditText inputRegisterCountry;
+  public final CustomEditText inputRegisterCity;
 
   @NonNull
-  public final CustomEditText inputRegisterIdentityNumber;
+  public final CustomEditText inputRegisterConfirmPassword;
 
   @NonNull
-  public final CustomTextViewMedium tvCountry;
+  public final CustomEditText inputRegisterUserType;
+
+  @NonNull
+  public final CustomTextViewMedium tvCity;
 
   @NonNull
   public final CustomTextViewMedium tvForgetTimer;
@@ -67,17 +70,21 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium tvRegisterPhone;
 
+  @NonNull
+  public final CustomTextViewMedium tvType;
+
   @Bindable
   protected RegisterViewModel mViewmodel;
 
   protected FragmentRegisterBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatButton appCompatButtonNext, ImageView imgRegisterLogo, CustomEditText inputEmail,
       CustomEditText inputName, CustomEditText inputNewPassword, CustomEditText inputPhone,
-      CustomEditText inputRegisterCountry, CustomEditText inputRegisterIdentityNumber,
-      CustomTextViewMedium tvCountry, CustomTextViewMedium tvForgetTimer,
-      CustomTextViewMedium tvIdentityNumber, CustomTextViewMedium tvLoginForget,
-      CustomTextViewMedium tvRegisterEmail, CustomTextViewMedium tvRegisterName,
-      CustomTextViewMedium tvRegisterPassword, CustomTextViewMedium tvRegisterPhone) {
+      CustomEditText inputRegisterCity, CustomEditText inputRegisterConfirmPassword,
+      CustomEditText inputRegisterUserType, CustomTextViewMedium tvCity,
+      CustomTextViewMedium tvForgetTimer, CustomTextViewMedium tvIdentityNumber,
+      CustomTextViewMedium tvLoginForget, CustomTextViewMedium tvRegisterEmail,
+      CustomTextViewMedium tvRegisterName, CustomTextViewMedium tvRegisterPassword,
+      CustomTextViewMedium tvRegisterPhone, CustomTextViewMedium tvType) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.imgRegisterLogo = imgRegisterLogo;
@@ -85,9 +92,10 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
     this.inputName = inputName;
     this.inputNewPassword = inputNewPassword;
     this.inputPhone = inputPhone;
-    this.inputRegisterCountry = inputRegisterCountry;
-    this.inputRegisterIdentityNumber = inputRegisterIdentityNumber;
-    this.tvCountry = tvCountry;
+    this.inputRegisterCity = inputRegisterCity;
+    this.inputRegisterConfirmPassword = inputRegisterConfirmPassword;
+    this.inputRegisterUserType = inputRegisterUserType;
+    this.tvCity = tvCity;
     this.tvForgetTimer = tvForgetTimer;
     this.tvIdentityNumber = tvIdentityNumber;
     this.tvLoginForget = tvLoginForget;
@@ -95,6 +103,7 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
     this.tvRegisterName = tvRegisterName;
     this.tvRegisterPassword = tvRegisterPassword;
     this.tvRegisterPhone = tvRegisterPhone;
+    this.tvType = tvType;
   }
 
   public abstract void setViewmodel(@Nullable RegisterViewModel viewmodel);

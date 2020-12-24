@@ -44,6 +44,7 @@
             android:name="grand.app.akar.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize"/>
+
         <activity
             android:name="grand.app.akar.activity.BaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

@@ -13,7 +13,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
-import grand.app.akar.customViews.views.CustomTextViewBold;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.CustomTextViewRegular;
 import grand.app.akar.pages.auth.changePassword.ChangePasswordViewModel;
@@ -43,7 +42,7 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvChangeNewPassword;
 
   @NonNull
-  public final CustomTextViewBold tvChangeTitle;
+  public final CustomTextViewMedium tvChangeTitle;
 
   @NonNull
   public final CustomTextViewMedium tvLoginTitle;
@@ -55,7 +54,7 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
       int _localFieldCount, AppCompatButton appCompatButtonNext, ImageView imgLoginLogo,
       CustomEditText inputConfirmPassword, CustomEditText inputNewPassword,
       CustomTextViewMedium tvChangeConfirmPassword, CustomTextViewRegular tvChangeHeaderText,
-      CustomTextViewMedium tvChangeNewPassword, CustomTextViewBold tvChangeTitle,
+      CustomTextViewMedium tvChangeNewPassword, CustomTextViewMedium tvChangeTitle,
       CustomTextViewMedium tvLoginTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;

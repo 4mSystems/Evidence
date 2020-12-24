@@ -23,6 +23,8 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentContactBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.model.base.StatusMessage;
+import grand.app.akar.pages.settings.models.AboutResponse;
+import grand.app.akar.pages.settings.models.settings.SettingsResponse;
 import grand.app.akar.pages.settings.viewModels.SettingsViewModel;
 import grand.app.akar.utils.Constants;
 
@@ -39,6 +41,7 @@ public class ContactUsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.getContact();
         setEvent();
         return binding.getRoot();
     }
@@ -48,12 +51,9 @@ public class ContactUsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.CONTACT)) {
-                toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
-                viewModel.goBack(context);
+                viewModel.setSettingsData(((SettingsResponse) ((Mutable) o).object).getData());
             }
-            if (((Mutable) o).message.equals(Constants.ERROR_TOAST)) {
-                showError(getResources().getString(R.string.empty_warning));
-            }
+
         });
     }
 

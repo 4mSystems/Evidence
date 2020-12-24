@@ -25,6 +25,7 @@ import grand.app.akar.pages.auth.changePassword.ChangePasswordFragment;
 import grand.app.akar.pages.auth.confirmCode.ConfirmCodeFragment;
 import grand.app.akar.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.akar.pages.auth.login.LoginFragment;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.chat.view.ChatFragment;
 import grand.app.akar.pages.conversations.ConversationsFragment;
@@ -117,6 +118,8 @@ public interface IApplicationComponent {
     void inject(PreviousAdsFragment previousAdsFragment);
 
     void inject(MyAdsMainFragment myAdsMainFragment);
+
+    void inject(PaymentFragment paymentFragment);
 
     @Component.Builder
     interface Builder {

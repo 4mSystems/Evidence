@@ -27,6 +27,7 @@ import grand.app.akar.databinding.FragmentConfirmCodeBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.auth.changePassword.ChangePasswordFragment;
 import grand.app.akar.pages.auth.models.UsersResponse;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
 import grand.app.akar.utils.session.UserHelper;
@@ -72,11 +73,16 @@ public class ConfirmCodeFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.CONFIRM_CODE)) {
                 if (viewModel.getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER) {
-                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-//                    MovementHelper.startActivityBase(context, HomeMainFragment.class.getName(), null,null);
+                    if (((UsersResponse) ((Mutable) o).object).getData().getPaymentStatus() == 0 && ((UsersResponse) ((Mutable) o).object).getData().getType() != 0) {
+                        UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
+                        MovementHelper.startActivity(context, PaymentFragment.class.getName(), null, null);
+                    } else {
+                        UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+                        MovementHelper.startActivityMain(context);
+                    }
                 } else {
                     UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
-                    MovementHelper.startActivityWithBundle(context, new PassingObject(((UsersResponse) ((Mutable) o).object).getData()), null, ChangePasswordFragment.class.getName(),null);
+                    MovementHelper.startActivity(context, ChangePasswordFragment.class.getName(), null, null);
                 }
                 viewModel.goBack(context);
             } else if (((Mutable) o).message.equals(Constants.FORGET_PASSWORD)) {

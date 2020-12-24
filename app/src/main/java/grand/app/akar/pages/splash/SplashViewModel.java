@@ -1,6 +1,5 @@
 package grand.app.akar.pages.splash;
 
-import android.os.Handler;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
@@ -11,12 +10,10 @@ import javax.inject.Inject;
 
 import grand.app.akar.BR;
 import grand.app.akar.base.BaseViewModel;
-import grand.app.akar.base.MyApplication;
 import grand.app.akar.pages.onBoard.OnBoardAdapter;
 import grand.app.akar.repository.AuthRepository;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.utils.Constants;
-import grand.app.akar.utils.session.UserHelper;
 import io.reactivex.disposables.CompositeDisposable;
 
 
@@ -36,16 +33,6 @@ public class SplashViewModel extends BaseViewModel {
 
     public AuthRepository getRepository() {
         return repository;
-    }
-
-    public void runSplash() {
-        new Handler().postDelayed(() -> {
-//            if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
-                liveData.setValue(new Mutable(Constants.HOME));
-//            } else {
-//                liveData.setValue(new Mutable(Constants.BACKGROUND_API));
-//            }
-        }, 3000);
     }
 
     @Bindable
@@ -70,6 +57,10 @@ public class SplashViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getBoard());
     }
 
+    public void getSettings() {
+        compositeDisposable.add(repository.getSettings());
+    }
+
     public void setupSlider(SliderView sliderView) {
         sliderView.setSliderAdapter(onBoardAdapter);
     }
@@ -78,5 +69,7 @@ public class SplashViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.NEXT));
     }
 
-
+    public void toLogin() {
+        liveData.setValue(new Mutable(Constants.START_APP));
+    }
 }

@@ -10,13 +10,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.github.florent37.expansionpanel.ExpansionHeader;
 import com.github.florent37.expansionpanel.ExpansionLayout;
+import com.google.android.material.card.MaterialCardView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
@@ -63,7 +64,7 @@ public abstract class FragmentAddFactoryFormBinding extends ViewDataBinding {
   public final CustomTextViewMedium btnSell;
 
   @NonNull
-  public final CustomEditText buildingYear;
+  public final MaterialCardView buildingYear;
 
   @NonNull
   public final AppCompatButton confirmBtn;
@@ -75,10 +76,10 @@ public abstract class FragmentAddFactoryFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final AppCompatImageView furnitureToggle;
+  public final SwitchCompat furnitureToggle;
 
   @NonNull
-  public final AppCompatImageView garageToggle;
+  public final SwitchCompat garageToggle;
 
   @NonNull
   public final ImageView headerIndicator;
@@ -215,15 +216,14 @@ public abstract class FragmentAddFactoryFormBinding extends ViewDataBinding {
       CustomTextViewMedium btTitleDeed, CustomTextViewMedium btTransform,
       CustomTextViewMedium btUsed, CustomTextViewMedium btnCash, CustomTextViewMedium btnNew,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
-      CustomEditText buildingYear, AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
-      AppCompatImageView garageToggle, ImageView headerIndicator,
-      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
-      IncrementalView incrementalViewFrontCount, CustomEditText inputAddress,
-      CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputLandSize,
-      CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
-      LinearLayout optionalLayout, AppCompatCheckBox policeStation, AppCompatCheckBox school,
-      CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
+      MaterialCardView buildingYear, AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
+      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
+      SwitchCompat garageToggle, ImageView headerIndicator, CustomTextViewMedium headerMenuName,
+      AppCompatCheckBox hospital, IncrementalView incrementalViewFrontCount,
+      CustomEditText inputAddress, CustomEditText inputBuildingSize, CustomEditText inputDesc,
+      CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
+      AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
+      AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
       CustomTextViewMedium tvBuildingSize, CustomTextViewMedium tvBuildingYear,
       CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,
       CustomTextViewMedium tvFactoryStatus, CustomTextViewMedium tvFrontCount,

@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data></data>
+    <data>
+        <variable
+            name="viewModel"
+            type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -12,15 +16,14 @@
 
 
         <LinearLayout
-            android:id="@+id/ll_base_container"
+            android:id="@+id/fl_home_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:background="@color/white"
             android:orientation="vertical"
-            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@id/home_navigation_menu"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,6 +38,7 @@
             app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
             app:itemTextColor="@color/navigation_selection"
             app:labelVisibilityMode="labeled"
+            app:onNavigationItemSelected="@{viewModel::onNavigationClick}"
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -47,6 +51,7 @@
             android:focusable="true"
             android:src="@drawable/ic_add"
             app:tint="@color/white"
+            android:onClick="@{()-> viewModel.toNewAd()}"
             android:layout_marginBottom="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

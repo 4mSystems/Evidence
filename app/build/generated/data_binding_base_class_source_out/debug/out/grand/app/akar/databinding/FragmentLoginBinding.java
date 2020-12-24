@@ -4,7 +4,6 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -31,7 +30,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final AppCompatImageView imgLoginGoogle;
 
   @NonNull
-  public final ImageView imgLoginLogo;
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
   public final CustomEditText inputPhone;
@@ -68,7 +67,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatButton btnPhone, AppCompatImageView imgLoginFacebook,
-      AppCompatImageView imgLoginGoogle, ImageView imgLoginLogo, CustomEditText inputPhone,
+      AppCompatImageView imgLoginGoogle, AppCompatImageView imgLoginLogo, CustomEditText inputPhone,
       CustomEditText inputRegisterPassword, CustomTextViewMedium tvChangeNewPassword,
       CustomTextViewRegular tvForgetTimer, CustomTextViewMedium tvLoginForget,
       CustomTextViewMedium tvLoginHeader, CustomTextViewMedium tvLoginHeaderNumber,

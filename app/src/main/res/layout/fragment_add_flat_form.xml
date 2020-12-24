@@ -44,11 +44,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp4w"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_primary_dark"
+                android:background="@{viewmodel.dealingType==1?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()->viewmodel.dealingTypeAction(0)}"
                 android:text="@string/sell"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
+                android:textColor="@{viewmodel.dealingType==1?@color/colordark:@color/white}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_deal_type" />
 
@@ -58,11 +59,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp4w"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.dealingType==0?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()->viewmodel.dealingTypeAction(1)}"
                 android:text="@string/rent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.dealingType==0?@color/colordark:@color/white}"
                 app:layout_constraintStart_toEndOf="@+id/btn_sell"
                 app:layout_constraintTop_toBottomOf="@id/tv_deal_type" />
 
@@ -98,12 +100,13 @@
                 android:inputType="number"
                 android:textAlignment="viewStart"
                 android:textColorHint="@color/medium_color"
-                android:textDirection="ltr"
+                app:error="@{viewmodel.createAdRequest.priceError}"
                 app:helperTextTextColor="@color/black"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_price"
+                app:text="@={viewmodel.createAdRequest.price}" />
 
             <View
                 android:id="@+id/v3"
@@ -134,15 +137,17 @@
                 android:layout_marginEnd="@dimen/dp14w"
                 android:background="@drawable/corner_view_gray_background"
                 android:hint="@string/address_hint"
-                android:inputType="number"
+                android:inputType="text"
                 android:textAlignment="viewStart"
                 android:textColorHint="@color/medium_color"
                 android:textDirection="ltr"
+                app:error="@{viewmodel.createAdRequest.addressError}"
                 app:helperTextTextColor="@color/black"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_address"
+                app:text="@={viewmodel.createAdRequest.address}" />
 
             <View
                 android:id="@+id/v4"
@@ -176,12 +181,13 @@
                 android:inputType="number"
                 android:textAlignment="viewStart"
                 android:textColorHint="@color/medium_color"
-                android:textDirection="ltr"
+                app:error="@{viewmodel.createAdRequest.areaError}"
                 app:helperTextTextColor="@color/black"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_land_size" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_land_size"
+                app:text="@={viewmodel.createAdRequest.area}" />
 
             <View
                 android:id="@+id/v5"
@@ -214,7 +220,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp14h"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v5" />
+                app:layout_constraintTop_toBottomOf="@id/v5"
+                app:value="@={viewmodel.createAdRequest.floor_no}" />
 
             <View
                 android:id="@+id/v8"
@@ -238,12 +245,14 @@
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewRoomsNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewRoomsNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v8" />
+                app:layout_constraintTop_toBottomOf="@id/v8"
+                 />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewRoomsNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:value="@={viewmodel.createAdRequest.room_no}"
                 android:layout_margin="@dimen/dp14h"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v8" />
@@ -270,13 +279,15 @@
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewPathsNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewPathsNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v9" />
+                app:layout_constraintTop_toBottomOf="@id/v9"
+                />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewPathsNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp14h"
+                app:value="@={viewmodel.createAdRequest.bathroom_no}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v9" />
 
@@ -297,18 +308,21 @@
                 android:layout_marginEnd="@dimen/dp14h"
                 android:text="@string/kitchen_count"
                 android:textAlignment="viewStart"
+
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewKitchenNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewKitchenNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v10" />
+                app:layout_constraintTop_toBottomOf="@id/v10"
+                 />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewKitchenNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp14h"
+                app:value="@={viewmodel.createAdRequest.kitchen_no}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v10" />
 
@@ -351,8 +365,10 @@
                     android:layout_gravity="center"
                     android:focusable="false"
                     android:gravity="center"
+                    android:text="@={viewmodel.createAdRequest.building_year}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    app:error="@{viewmodel.createAdRequest.buildingYearError}" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -384,11 +400,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp16h"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_primary_dark"
+                android:background="@{viewmodel.paymentMethod!=0?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.paymentMethodAction(@string/cash,0)}"
                 android:text="@string/cash"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
+                android:textColor="@{viewmodel.paymentMethod!=0?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toStartOf="@+id/bt_sac"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -399,11 +416,12 @@
                 android:layout_width="@dimen/dp80w"
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.paymentMethod!=1?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.paymentMethodAction(@string/sac,1)}"
                 android:text="@string/sac"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.paymentMethod!=1?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toStartOf="@+id/bt_transform"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_cash"
@@ -414,11 +432,12 @@
                 android:layout_width="@dimen/dp80w"
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.paymentMethod!=2?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.paymentMethodAction(@string/transform,2)}"
                 android:text="@string/transform"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.paymentMethod!=2?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/bt_sac"
@@ -452,11 +471,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp16h"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_primary_dark"
+                android:background="@{viewmodel.docType!=0?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.docTypeAction(@string/real_estate_certificate,0)}"
                 android:text="@string/real_estate_certificate"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/white"
+                android:textColor="@{viewmodel.docType!=0?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toStartOf="@+id/bt_customize"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -468,11 +488,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp2w"
                 android:layout_marginTop="@dimen/dp8h"
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.docType!=1?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.docTypeAction(@string/customize,1)}"
                 android:text="@string/customize"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.docType!=1?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toStartOf="@+id/bt_holy_king"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/btn_real_estate_certificate"
@@ -484,12 +505,12 @@
                 android:layout_height="@dimen/dp30h"
                 android:layout_marginStart="@dimen/dp2w"
                 android:layout_marginTop="@dimen/dp8h"
-
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.docType!=2?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.docTypeAction(@string/holy_king,2)}"
                 android:text="@string/holy_king"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.docType!=2?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toStartOf="@+id/bt_title_deed"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/bt_customize"
@@ -502,11 +523,12 @@
                 android:layout_marginStart="@dimen/dp2w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:layout_marginEnd="@dimen/dp2w"
-                android:background="@drawable/corner_view_light"
+                android:background="@{viewmodel.docType!=3?@drawable/corner_view_light:@drawable/corner_view_primary_dark}"
                 android:gravity="center"
+                android:onClick="@{()-> viewmodel.docTypeAction(@string/title_deed,3)}"
                 android:text="@string/title_deed"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/colordark"
+                android:textColor="@{viewmodel.docType!=3?@color/colordark:@color/white}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/bt_holy_king"
@@ -609,7 +631,8 @@
                             app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tv_street_size" />
+                            app:layout_constraintTop_toBottomOf="@+id/tv_street_size"
+                            app:text="@={viewmodel.createAdRequest.street_width}" />
 
                         <View
                             android:id="@+id/v14"
@@ -643,12 +666,12 @@
                             android:inputType="number"
                             android:textAlignment="viewStart"
                             android:textColorHint="@color/medium_color"
-                            android:textDirection="ltr"
                             app:helperTextTextColor="@color/black"
                             app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tv_floor_number" />
+                            app:layout_constraintTop_toBottomOf="@+id/tv_floor_number"
+                            app:text="@={viewmodel.createAdRequest.floor_no}" />
 
                         <View
                             android:id="@+id/v18"
@@ -680,7 +703,8 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/v18" />
+                            app:layout_constraintTop_toBottomOf="@id/v18"
+                            app:value="@={viewmodel.createAdRequest.front_no}" />
 
                         <View
                             android:id="@+id/v15"
@@ -706,11 +730,12 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
+                        <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/elevator_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
+                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
                             android:src="@drawable/ic_toggle_fill"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
@@ -731,11 +756,12 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
+                        <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/garage_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
+                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
                             android:src="@drawable/ic_toggle_fill"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
@@ -756,11 +782,12 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
 
-                        <androidx.appcompat.widget.AppCompatImageView
+                        <androidx.appcompat.widget.SwitchCompat
                             android:id="@+id/furniture_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
+                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
                             android:src="@drawable/ic_toggle_fill"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
@@ -792,8 +819,9 @@
                             android:id="@+id/mosque"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/mosque"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:text="@string/mosque"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_services" />
 
@@ -801,8 +829,9 @@
                             android:id="@+id/school"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/school"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:text="@string/school"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/mosque" />
 
@@ -810,8 +839,9 @@
                             android:id="@+id/hospital"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/hospital"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:text="@string/hospital"
+                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/school" />
 
@@ -819,8 +849,9 @@
                             android:id="@+id/police_station"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/police_station"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:text="@string/police_station"
+                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/hospital" />
 
@@ -856,7 +887,7 @@
                             android:inputType="textMultiLine"
                             android:textAlignment="viewStart"
                             android:textColorHint="@color/medium_color"
-                            android:textDirection="ltr"
+                            app:text="@={viewmodel.createAdRequest.desc}"
                             app:helperTextTextColor="@color/black"
                             app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -879,6 +910,7 @@
                 android:layout_marginBottom="@dimen/dp18h"
                 android:background="@drawable/corner_view_primary_dark"
                 android:text="@string/post_ad"
+                android:onClick="@{()-> viewmodel.createFlatStoreOfficeAd()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"

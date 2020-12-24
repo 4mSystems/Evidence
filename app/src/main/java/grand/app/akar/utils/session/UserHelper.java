@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 
 import grand.app.akar.pages.auth.models.UserData;
+import grand.app.akar.pages.settings.models.settings.SettingsData;
 
 public class UserHelper {
     private static UserHelper mInstance;
@@ -23,7 +24,6 @@ public class UserHelper {
         }
         return mInstance;
     }
-
 
     public void userLogin(UserData userData) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -47,6 +47,31 @@ public class UserHelper {
         Gson gson = new Gson();
         String json = addUserData();
         UserData obj = gson.fromJson(json, UserData.class);
+        return obj;
+    }
+
+    public void userSettings(SettingsData settingsData) {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(settingsData);
+        editor.putString("settingsData", json);
+        editor.apply();
+        editor.commit();
+
+    }
+
+
+    public String addSettingsData() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("settingsData", null);
+
+    }
+
+    public SettingsData getSettingsData() {
+        Gson gson = new Gson();
+        String json = addSettingsData();
+        SettingsData obj = gson.fromJson(json, SettingsData.class);
         return obj;
     }
 
@@ -96,6 +121,7 @@ public class UserHelper {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getInt("CountryId", 0);
     }
+
     public void addJwt(String jwt) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -103,6 +129,7 @@ public class UserHelper {
         editor.apply();
 
     }
+
     public void addCountryCodes(String countryCodes) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -115,10 +142,12 @@ public class UserHelper {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("countryCodes", "");
     }
+
     public String getJwt() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString("jwt", null);
     }
+
     public void addCountryCurrency(String countryCurrency) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();

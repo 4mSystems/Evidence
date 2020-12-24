@@ -46,7 +46,6 @@ public class ChangePasswordFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.setUserData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), UserData.class));
         }
         setEvent();
         return binding.getRoot();
@@ -58,8 +57,7 @@ public class ChangePasswordFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.UPDATE_PROFILE)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-//                MovementHelper.startActivityBase(context, HomeMainFragment.class.getName(), null,null);
+                viewModel.goBack(context);
             } else if (((Mutable) o).message.equals(Constants.NOT_MATCH_PASSWORD)) {
                 showError(getResources().getString(R.string.password_not_match));
             }

@@ -1,12 +1,11 @@
 package grand.app.akar.activity;
 
-import android.app.ActivityManager;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
-
-import java.util.List;
+import androidx.lifecycle.Observer;
 
 import javax.inject.Inject;
 
@@ -18,94 +17,54 @@ import grand.app.akar.connection.Api;
 import grand.app.akar.customViews.actionbar.HomeActionBarView;
 import grand.app.akar.databinding.ActivityMainBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.ads.AdsInfoFragment;
+import grand.app.akar.pages.ads.AkarLocationsMapFragment;
+import grand.app.akar.pages.home.HomeFragment;
+import grand.app.akar.pages.home.viewModels.HomeViewModel;
+import grand.app.akar.pages.myAccount.MyAccountFragment;
+import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 
 public class MainActivity extends ParentActivity {
     public HomeActionBarView homeActionBarView = null;
     ActivityMainBinding activityMainBinding;
-
     @Inject
     MutableLiveData<Mutable> liveData;
-
-
     @Inject
-    public Api api;
-
+    HomeViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        initializeLanguage();
-//        initializeToken();
-        setContentView(R.layout.activity_main);
+        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         IApplicationComponent component = ((MyApplication) getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        activityMainBinding.setViewModel(viewModel);
         activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
         homeActionBarView = new HomeActionBarView(this);
-        //        if(getIntent().hasExtra(Constants.PAGE) && getIntent().getStringExtra(Constants.PAGE).equals(Constants.LOGIN))
-////            navigationDrawerView.loginPage();
-//        else  if(getIntent().hasExtra(Constants.PAGE) && getIntent().getStringExtra(Constants.PAGE).equals(Constants.MYREQUESTS))
-//            navigationDrawerView.goToBasePage(OrdersFragment.class.getName(),getString(R.string.my_requests),new Bundle());
-//        else
-//            navigationDrawerView.homePage();
+        MovementHelper.replaceFragment(this, new HomeFragment(), "");
         setEvents();
 
     }
 
     private void setEvents() {
-//        navigationDrawerView.liveData.observe( this, new Observer<Object>() {
-//            @SuppressLint("WrongConstant")
-//            public void onChanged(@Nullable Object object) {
-//                liveData.setValue(new Mutable());
-//                Mutable mutable = (Mutable) object;
-//                if(!mutable.message.equals(Constants.LOGIN_FIRST)) {
-//                    homeActionBarView.setTitle(mutable.message);
-//                    navigationDrawerView.layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(Gravity.START);
-//                }else {
-//                    toastMessage(ResourceManager.getString(R.string.please_login_first), R.drawable.ic_info_white, R.color.colorPrimary);
-//                }
-//            }
-//        });
-    }
-
-
-    @Override
-    public void onBackPressed() {
-
-        ActivityManager mngr = (ActivityManager) getSystemService(ACTIVITY_SERVICE);
-
-        List<ActivityManager.RunningTaskInfo> taskList = mngr.getRunningTasks(10);
-
-        if (taskList.get(0).numActivities == 1 &&
-                taskList.get(0).topActivity.getClassName().equals(this.getClass().getName())) {
-            if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
-                super.onBackPressed();
-                return;
+        viewModel.liveData.observe((LifecycleOwner) this, (Observer<Object>) o -> {
+            Mutable mutable = (Mutable) o;
+            handleActions(mutable);
+            switch (((Mutable) o).message) {
+                case Constants.MENU_HOME:
+                    MovementHelper.replaceFragment(this, new HomeFragment(), "");
+                    break;
+                case Constants.MENU_FAVORITE:
+//                    MovementHelper.replaceHomeFragment(context, new Favor());
+                    break;
+                case Constants.MENU_ACCOUNT:
+                    MovementHelper.replaceFragment(this, new MyAccountFragment(), "");
+                    break;
+                case Constants.MENU_ADD_AD:
+                    MovementHelper.startActivity(this, AdsInfoFragment.class.getName(), getResources().getString(R.string.add_info_title), null);
+                    break;
             }
-//            BaseFragment baseFragment = (BaseFragment) getSupportFragmentManager().findFragmentByTag(Constants.HOME);
-//            if (baseFragment != null) {
-//                int[] ids = {R.id.tv_dialog_close_app_yes, R.id.tv_dialog_close_app_no};
-//                DialogHelper.showDialogHelper(MainActivity.this, R.layout.dialog_logout_app, ids, (dialog, view) -> {
-//                    switch (view.getId()) {
-//                        case R.id.tv_dialog_close_app_yes:
-//                            dialog.dismiss();
-//                            finish();
-//                            break;
-//                        case R.id.tv_dialog_close_app_no:
-//                            dialog.dismiss();
-//                            break;
-//
-//                    }
-//                });
-//            } else {
-//                navigationDrawerView.homePage();
-//
-//            }
-            return;
-
-        } else
-            finish();
-
+        });
     }
-
 }

@@ -37,7 +37,7 @@ public class MyAccountSettingsViewModel extends BaseViewModel {
     }
 
     public void switchNearOrders() {
-        compositeDisposable.add(repository.updateProfile(new RegisterRequest(userData.getNear_orders() ? 0 : 1), null));
+//        compositeDisposable.add(repository.updateProfile(new RegisterRequest(userData.getNear_orders() ? 0 : 1), null));
     }
 
     public void toTerms() {

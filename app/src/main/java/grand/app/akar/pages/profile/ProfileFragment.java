@@ -93,7 +93,7 @@ public class ProfileFragment extends BaseFragment {
         if (requestCode == Constants.FILE_TYPE_IMAGE) {
             FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
             viewModel.getFileObject().add(fileObject);
-            binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
+//            binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

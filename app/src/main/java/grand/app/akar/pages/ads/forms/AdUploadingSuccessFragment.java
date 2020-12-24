@@ -20,12 +20,12 @@ import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
-import grand.app.akar.databinding.FragmentAdsAttachmentsBinding;
 import grand.app.akar.databinding.FragmentUploadSuccessBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
-import grand.app.akar.pages.settings.models.AboutResponse;
+import grand.app.akar.pages.myAds.MyAdsMainFragment;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 
 public class AdUploadingSuccessFragment extends BaseFragment {
     private Context context;
@@ -46,13 +46,10 @@ public class AdUploadingSuccessFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ABOUT)) {
-                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (((Mutable) o).message.equals(Constants.MY_ADS)) {
+                viewModel.goBack(context);
+                MovementHelper.startActivity(context, MyAdsMainFragment.class.getName(), getString(R.string.my_ads), null);
             }
-        });
-        getActivityBase().connectionMutableLiveData.observe(((LifecycleOwner) context), isConnected -> {
-            if (isConnected)
-                viewModel.getAbout();
         });
     }
 

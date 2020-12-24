@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.card.MaterialCardView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
@@ -20,46 +22,94 @@ import java.lang.Object;
 
 public abstract class FragmentProfileBinding extends ViewDataBinding {
   @NonNull
+  public final MaterialCardView accountCardContainer;
+
+  @NonNull
   public final AppCompatButton appCompatButtonNext;
 
   @NonNull
-  public final CustomEditText inputRegisterPassword;
+  public final Barrier br11;
 
   @NonNull
-  public final CustomEditText inputRegisterPasswordConfirm;
+  public final CustomTextViewMedium btOwner;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountPassword;
+  public final CustomTextViewMedium btRealtor;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountUsername;
+  public final CustomTextViewMedium btnSeeker;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountWarning1;
+  public final CircleImageView imgLoginLogo;
 
   @NonNull
-  public final CustomTextViewMedium tvAccountWarning2;
+  public final CustomEditText inputEmail;
 
   @NonNull
-  public final CircleImageView userImg;
+  public final CustomEditText inputName;
+
+  @NonNull
+  public final CustomEditText inputNewPassword;
+
+  @NonNull
+  public final CustomEditText inputPhone;
+
+  @NonNull
+  public final CustomEditText inputRegisterConfirmPassword;
+
+  @NonNull
+  public final CustomTextViewMedium tvAccountTitle;
+
+  @NonNull
+  public final CustomTextViewMedium tvIdentityNumber;
+
+  @NonNull
+  public final CustomTextViewMedium tvRegisterEmail;
+
+  @NonNull
+  public final CustomTextViewMedium tvRegisterName;
+
+  @NonNull
+  public final CustomTextViewMedium tvRegisterPassword;
+
+  @NonNull
+  public final CustomTextViewMedium tvRegisterPhone;
+
+  @NonNull
+  public final CustomTextViewMedium tvType;
 
   @Bindable
   protected ProfileViewModel mViewmodel;
 
   protected FragmentProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, CustomEditText inputRegisterPassword,
-      CustomEditText inputRegisterPasswordConfirm, CustomTextViewMedium tvAccountPassword,
-      CustomTextViewMedium tvAccountUsername, CustomTextViewMedium tvAccountWarning1,
-      CustomTextViewMedium tvAccountWarning2, CircleImageView userImg) {
+      MaterialCardView accountCardContainer, AppCompatButton appCompatButtonNext, Barrier br11,
+      CustomTextViewMedium btOwner, CustomTextViewMedium btRealtor, CustomTextViewMedium btnSeeker,
+      CircleImageView imgLoginLogo, CustomEditText inputEmail, CustomEditText inputName,
+      CustomEditText inputNewPassword, CustomEditText inputPhone,
+      CustomEditText inputRegisterConfirmPassword, CustomTextViewMedium tvAccountTitle,
+      CustomTextViewMedium tvIdentityNumber, CustomTextViewMedium tvRegisterEmail,
+      CustomTextViewMedium tvRegisterName, CustomTextViewMedium tvRegisterPassword,
+      CustomTextViewMedium tvRegisterPhone, CustomTextViewMedium tvType) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.accountCardContainer = accountCardContainer;
     this.appCompatButtonNext = appCompatButtonNext;
-    this.inputRegisterPassword = inputRegisterPassword;
-    this.inputRegisterPasswordConfirm = inputRegisterPasswordConfirm;
-    this.tvAccountPassword = tvAccountPassword;
-    this.tvAccountUsername = tvAccountUsername;
-    this.tvAccountWarning1 = tvAccountWarning1;
-    this.tvAccountWarning2 = tvAccountWarning2;
-    this.userImg = userImg;
+    this.br11 = br11;
+    this.btOwner = btOwner;
+    this.btRealtor = btRealtor;
+    this.btnSeeker = btnSeeker;
+    this.imgLoginLogo = imgLoginLogo;
+    this.inputEmail = inputEmail;
+    this.inputName = inputName;
+    this.inputNewPassword = inputNewPassword;
+    this.inputPhone = inputPhone;
+    this.inputRegisterConfirmPassword = inputRegisterConfirmPassword;
+    this.tvAccountTitle = tvAccountTitle;
+    this.tvIdentityNumber = tvIdentityNumber;
+    this.tvRegisterEmail = tvRegisterEmail;
+    this.tvRegisterName = tvRegisterName;
+    this.tvRegisterPassword = tvRegisterPassword;
+    this.tvRegisterPhone = tvRegisterPhone;
+    this.tvType = tvType;
   }
 
   public abstract void setViewmodel(@Nullable ProfileViewModel viewmodel);

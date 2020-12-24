@@ -32,29 +32,29 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     private final android.widget.LinearLayout mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
-    @Nullable
     private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback16;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener inputPhonetextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener inputPhoneandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.loginRequest.phone
-            //         is viewmodel.loginRequest.setPhone((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputPhone);
+            // Inverse of viewmodel.loginRequest.loginkey
+            //         is viewmodel.loginRequest.setLoginkey((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(inputPhone);
             // localize variables for thread safety
-            // viewmodel.loginRequest.phone
-            java.lang.String viewmodelLoginRequestPhone = null;
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.loginRequest != null
             boolean viewmodelLoginRequestJavaLangObjectNull = false;
             // viewmodel.loginRequest
             grand.app.akar.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
+            // viewmodel.loginRequest.loginkey
+            java.lang.String viewmodelLoginRequestLoginkey = null;
             // viewmodel
             grand.app.akar.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
 
@@ -72,17 +72,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
 
 
 
-                    viewmodelLoginRequest.setPhone(((java.lang.String) (callbackArg_0)));
+                    viewmodelLoginRequest.setLoginkey(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
     };
-    private androidx.databinding.InverseBindingListener inputRegisterPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener inputRegisterPasswordandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.loginRequest.password
             //         is viewmodel.loginRequest.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = grand.app.akar.customViews.views.CustomEditText.setText(inputRegisterPassword);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(inputRegisterPassword);
             // localize variables for thread safety
             // viewmodel.loginRequest.password
             java.lang.String viewmodelLoginRequestPassword = null;
@@ -123,7 +123,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
             , (androidx.appcompat.widget.AppCompatButton) bindings[4]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[11]
-            , (android.widget.ImageView) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
             , (grand.app.akar.customViews.views.CustomEditText) bindings[1]
             , (grand.app.akar.customViews.views.CustomEditText) bindings[2]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
@@ -145,9 +145,9 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback15 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback16 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback16 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback14 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -218,7 +218,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         }
         java.lang.String viewmodelLoginRequestPassword = null;
         grand.app.akar.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
-        java.lang.String viewmodelLoginRequestPhone = null;
+        java.lang.String viewmodelLoginRequestLoginkey = null;
         grand.app.akar.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x3L) != 0) {
@@ -234,31 +234,48 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
                 if (viewmodelLoginRequest != null) {
                     // read viewmodel.loginRequest.password
                     viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
-                    // read viewmodel.loginRequest.phone
-                    viewmodelLoginRequestPhone = viewmodelLoginRequest.getPhone();
+                    // read viewmodel.loginRequest.loginkey
+                    viewmodelLoginRequestLoginkey = viewmodelLoginRequest.getLoginkey();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback16);
-            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterPassword, inputRegisterPasswordtextAttrChanged);
-            this.mboundView5.setOnClickListener(mCallback17);
-            this.tvLoginForget.setOnClickListener(mCallback15);
+            this.btnPhone.setOnClickListener(mCallback15);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputPhone, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputPhoneandroidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputRegisterPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputRegisterPasswordandroidTextAttrChanged);
+            this.mboundView5.setOnClickListener(mCallback16);
+            this.tvLoginForget.setOnClickListener(mCallback14);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            grand.app.akar.customViews.views.CustomEditText.getText(this.inputPhone, viewmodelLoginRequestPhone);
-            grand.app.akar.customViews.views.CustomEditText.getText(this.inputRegisterPassword, viewmodelLoginRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputPhone, viewmodelLoginRequestLoginkey);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputRegisterPassword, viewmodelLoginRequestPassword);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.loginPhone();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -290,23 +307,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
 
 
                     viewmodel.forgetPassword();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.loginPhone();
                 }
                 break;
             }

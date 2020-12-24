@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentTermsBindingImpl extends FragmentTermsBinding  {
+public class FragmentTermsBindingImpl extends FragmentTermsBinding implements grand.app.akar.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,31 +14,42 @@ public class FragmentTermsBindingImpl extends FragmentTermsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.imgRegister, 2);
-        sViewsWithIds.put(R.id.tv_take_me, 3);
+        sViewsWithIds.put(R.id.img_login_logo, 3);
+        sViewsWithIds.put(R.id.tv_login_title, 4);
+        sViewsWithIds.put(R.id.tv_take_me, 5);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final android.widget.ImageView mboundView1;
+    @NonNull
+    private final grand.app.akar.customViews.views.CustomTextViewRegular mboundView2;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback128;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentTermsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentTermsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (android.widget.ImageView) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.termsText.setTag(null);
+        this.mboundView1 = (android.widget.ImageView) bindings[1];
+        this.mboundView1.setTag(null);
+        this.mboundView2 = (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[2];
+        this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback128 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -113,8 +124,8 @@ public class FragmentTermsBindingImpl extends FragmentTermsBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewmodelAboutDataDesc = null;
         grand.app.akar.pages.settings.models.AboutData viewmodelAboutData = null;
-        java.lang.String viewmodelAboutDataName = null;
         grand.app.akar.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -128,19 +139,41 @@ public class FragmentTermsBindingImpl extends FragmentTermsBinding  {
 
 
                 if (viewmodelAboutData != null) {
-                    // read viewmodel.aboutData.name
-                    viewmodelAboutDataName = viewmodelAboutData.getName();
+                    // read viewmodel.aboutData.desc
+                    viewmodelAboutDataDesc = viewmodelAboutData.getDesc();
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView1.setOnClickListener(mCallback128);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.termsText, viewmodelAboutDataName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAboutDataDesc);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        grand.app.akar.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+
+            viewmodel.goBack(getRoot().getContext());
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

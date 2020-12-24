@@ -209,7 +209,7 @@ public class AppHelper {
 
     public static void startAndroidGoogleMap(Context context, LatLng source, LatLng destinations) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                Uri.parse("http://maps.google.com/maps?saddr=" + source.latitude + "," + source.longitude + "&daddr=" + destinations.latitude + "," + destinations.longitude));
+                Uri.parse("http://maps.google.com/maps?daddr=" + destinations.latitude + "," + destinations.longitude));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
 

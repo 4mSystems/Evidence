@@ -28,9 +28,9 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback49;
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback50;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -121,7 +121,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
-            , (grand.app.akar.customViews.views.CustomTextViewBold) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
             );
         this.appCompatButtonNext.setTag(null);
@@ -133,8 +133,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback49 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -229,10 +229,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback21);
+            this.appCompatButtonNext.setOnClickListener(mCallback50);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback20);
+            this.mboundView1.setOnClickListener(mCallback49);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -245,23 +245,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.submit();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -277,6 +260,23 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.submit();
                 }
                 break;
             }

@@ -19,9 +19,10 @@ import grand.app.akar.pages.auth.models.ForgetPasswordRequest;
 import grand.app.akar.pages.auth.models.LoginRequest;
 import grand.app.akar.pages.auth.models.RegisterRequest;
 import grand.app.akar.pages.auth.models.UsersResponse;
-import grand.app.akar.pages.auth.models.carNational.CarsNationalResponse;
+import grand.app.akar.pages.auth.models.cities.CitiesResponse;
 import grand.app.akar.pages.onBoard.models.BoardResponse;
 import grand.app.akar.pages.settings.models.UserDocumentsResponse;
+import grand.app.akar.pages.settings.models.settings.SettingsResponse;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -44,44 +45,44 @@ public class AuthRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-//    public Disposable getCountries() {
-//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.COUNTRIES, new Object(), CountriesResponse.class,
-//                Constants.COUNTRIES, true);
-//    }
-//
-//    public Disposable getCities(int countryId) {
-//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES + countryId, new Object(), CountriesResponse.class,
-//                Constants.CITIES, true);
-//    }
-
-    public Disposable getCarsNationals() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CARS_NATIONALS, new Object(), CarsNationalResponse.class,
-                Constants.CARS_NATIONALS, true);
+    public Disposable getCities() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES, new Object(), CitiesResponse.class,
+                Constants.CITIES, true);
     }
+
 
     public Disposable getBoard() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BOARD, new Object(), BoardResponse.class,
                 Constants.BOARD, true);
     }
 
-    public Disposable loginPhone(LoginRequest request) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN_PHONE, request, StatusMessage.class,
-                Constants.PHONE_VERIFIED, true);
+    public Disposable getSettings() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SETTINGS, new Object(), SettingsResponse.class,
+                Constants.SETTINGS, false);
     }
 
-    public Disposable loginPassword(LoginRequest request) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN_PASSWORD, request, UsersResponse.class,
+    public Disposable login(LoginRequest request) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN_PHONE, request, UsersResponse.class,
                 Constants.LOGIN, true);
     }
 
     public Disposable register(RegisterRequest request, List<FileObject> fileObjects) {
-        return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
-                Constants.REGISTER, true);
+        if (fileObjects != null && fileObjects.size() > 0)
+            return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
+                    Constants.REGISTER, true);
+        else
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
+                    Constants.REGISTER, true);
     }
 
     public Disposable confirmCode(ConfirmCodeRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONFIRM_CODE, request, UsersResponse.class,
                 Constants.CONFIRM_CODE, true);
+    }
+
+    public Disposable updatePayment() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UPDATE_PAYMENT, new Object(), UsersResponse.class,
+                Constants.UPDATE_PAYMENT, true);
     }
 
 
@@ -96,10 +97,10 @@ public class AuthRepository extends BaseRepository {
 
     }
 
-    //    public Disposable updateToken(String token) {
+//    public Disposable updateToken(String token) {
 //        return connectionHelper.requestApiBackground(Constants.POST_REQUEST, URLS.UPDATE_TOKEN, new TokenRequest(token));
 //    }
-//
+
     public Disposable forgetPassword(ForgetPasswordRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.FORGET_PASSWORD, request, StatusMessage.class,
                 Constants.FORGET_PASSWORD, true);
@@ -109,11 +110,6 @@ public class AuthRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, StatusMessage.class,
                 Constants.CHANGE_PASSWORD, true);
     }
-
-//    public Disposable getCountriesCodes() {
-//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_COUNTRIES_CODE, new Object(), CountriesCodesResponse.class,
-//                Constants.GET_COUNTRIES_CODE, false);
-//    }
 
     public Disposable getUserDocuments() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_USER_DOCUMENTS, new Object(), UserDocumentsResponse.class,

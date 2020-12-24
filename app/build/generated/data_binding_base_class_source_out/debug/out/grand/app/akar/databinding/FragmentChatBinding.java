@@ -11,7 +11,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.akar.R;
 import grand.app.akar.pages.chat.viewmodel.ChatViewModel;
 import java.lang.Deprecated;
@@ -22,25 +21,10 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
   public final AppCompatImageView attach;
 
   @NonNull
-  public final AppCompatImageView back;
-
-  @NonNull
-  public final AppCompatImageView call;
-
-  @NonNull
   public final ConstraintLayout chatActions;
 
   @NonNull
-  public final AppCompatImageView map;
-
-  @NonNull
   public final AppCompatImageView more;
-
-  @NonNull
-  public final CircleImageView sendChat;
-
-  @NonNull
-  public final ConstraintLayout toolBar;
 
   @NonNull
   public final View v14;
@@ -49,18 +33,11 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
   protected ChatViewModel mViewmodel;
 
   protected FragmentChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView attach, AppCompatImageView back, AppCompatImageView call,
-      ConstraintLayout chatActions, AppCompatImageView map, AppCompatImageView more,
-      CircleImageView sendChat, ConstraintLayout toolBar, View v14) {
+      AppCompatImageView attach, ConstraintLayout chatActions, AppCompatImageView more, View v14) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attach = attach;
-    this.back = back;
-    this.call = call;
     this.chatActions = chatActions;
-    this.map = map;
     this.more = more;
-    this.sendChat = sendChat;
-    this.toolBar = toolBar;
     this.v14 = v14;
   }
 

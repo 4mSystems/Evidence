@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -64,7 +64,7 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
-  public final AppCompatImageView elevatorToggle;
+  public final SwitchCompat elevatorToggle;
 
   @NonNull
   public final ExpansionLayout expansionLayout;
@@ -73,10 +73,10 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final AppCompatImageView furnitureToggle;
+  public final SwitchCompat furnitureToggle;
 
   @NonNull
-  public final AppCompatImageView garageToggle;
+  public final SwitchCompat garageToggle;
 
   @NonNull
   public final ImageView headerIndicator;
@@ -130,7 +130,7 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final AppCompatCheckBox policeStation;
 
   @NonNull
-  public final AppCompatImageView poolToggle;
+  public final SwitchCompat poolToggle;
 
   @NonNull
   public final AppCompatCheckBox school;
@@ -251,16 +251,16 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
       CustomTextViewMedium btMnahda, CustomTextViewMedium btSac, CustomTextViewMedium btTitleDeed,
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
-      MaterialCardView buildingYear, AppCompatButton confirmBtn, AppCompatImageView elevatorToggle,
+      MaterialCardView buildingYear, AppCompatButton confirmBtn, SwitchCompat elevatorToggle,
       ExpansionLayout expansionLayout, ExpansionHeader expansionLayoutHeader,
-      AppCompatImageView furnitureToggle, AppCompatImageView garageToggle,
-      ImageView headerIndicator, CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
+      SwitchCompat furnitureToggle, SwitchCompat garageToggle, ImageView headerIndicator,
+      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
       IncrementalView incrementalViewFloorNumber, IncrementalView incrementalViewFrontCount,
       IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
       IncrementalView incrementalViewRoomsNumber, CustomEditText inputAddress,
       CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputLandSize,
       CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
-      LinearLayout optionalLayout, AppCompatCheckBox policeStation, AppCompatImageView poolToggle,
+      LinearLayout optionalLayout, AppCompatCheckBox policeStation, SwitchCompat poolToggle,
       AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
       CustomTextViewMedium tvBuildingSize, CustomTextViewMedium tvBuildingYear,
       CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                 
+                            
+                                                                        
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="layout/fragment_home_0"            xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+        <FrameLayout
+            android:id="@+id/card_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:tag="binding_1">
+
+            <include layout="@layout/home_map_layout" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/card_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" android:tag="binding_2">
+
+            <include layout="@layout/home_list_layout" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         

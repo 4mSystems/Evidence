@@ -3,12 +3,16 @@ package grand.app.akar;
 import com.google.gson.Gson;
 
 import java.io.Serializable;
+import java.util.List;
+
+import grand.app.akar.pages.auth.models.cities.Cities;
 
 public class PassingObject implements Serializable {
     private int id;
     private Object objectClass;
     private String object;
     private String object2;
+    private List<Cities> objectList;
 
     public PassingObject() {
     }
@@ -27,6 +31,10 @@ public class PassingObject implements Serializable {
     public PassingObject(String object, Object objectClass) {
         this.objectClass = objectClass;
         this.object = object;
+    }
+
+    public PassingObject(List<Cities> objectList) {
+        this.objectList = objectList;
     }
 
     public PassingObject(String object) {
@@ -75,5 +83,13 @@ public class PassingObject implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public List<Cities> getObjectList() {
+        return objectList;
+    }
+
+    public void setObjectList(List<Cities> objectList) {
+        this.objectList = objectList;
     }
 }

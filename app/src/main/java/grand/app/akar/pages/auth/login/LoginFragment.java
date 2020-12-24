@@ -15,7 +15,9 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
+import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
@@ -25,6 +27,7 @@ import grand.app.akar.model.base.StatusMessage;
 import grand.app.akar.pages.auth.confirmCode.ConfirmCodeFragment;
 import grand.app.akar.pages.auth.forgetPassword.ForgetPasswordFragment;
 import grand.app.akar.pages.auth.models.UsersResponse;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
@@ -55,21 +58,24 @@ public class LoginFragment extends BaseFragment {
                     MovementHelper.startActivity(context, RegisterFragment.class.getName(), null, null);
                     break;
                 case Constants.LOGIN:
-                    toastMessage(((StatusMessage) mutable.object).mMessage);
-                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-//                    MovementHelper.startActivityBase(context, HomeMainFragment.class.getName(), null, null);
+                    if (((UsersResponse) mutable.object).getData().getPaymentStatus() == 0) {
+                        showError(((UsersResponse) mutable.object).mMessage);
+                        UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
+                        MovementHelper.startActivity(context, PaymentFragment.class.getName(), null, null);
+                    } else {
+                        toastMessage(((UsersResponse) mutable.object).mMessage);
+                        UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+                        MovementHelper.startActivityMain(context);
+                    }
                     break;
                 case Constants.FORGET_PASSWORD:
-                    MovementHelper.startActivity(context, ForgetPasswordFragment.class.getName(), null, null);
-                    break;
-                case Constants.ERROR_NOT_FOUND:
-                    if (viewModel.getLoginStatus() == View.VISIBLE)
-                        MovementHelper.startActivity(context, RegisterFragment.class.getName(), null, null);
-                    else
-                        showError(String.valueOf(mutable.object));
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);
                     break;
                 case Constants.NOT_VERIFIED:
                     MovementHelper.startActivity(context, ConfirmCodeFragment.class.getName(), null, null);
+                    break;
+                case Constants.EMPTY_WARNING:
+                    showError(getResources().getString(R.string.empty_warning));
                     break;
             }
         });

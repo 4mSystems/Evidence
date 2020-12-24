@@ -4,9 +4,9 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -18,7 +18,10 @@ import java.lang.Object;
 
 public abstract class FragmentAboutBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView imgRegister;
+  public final ImageView imgLoginLogo;
+
+  @NonNull
+  public final CustomTextViewMedium tvLoginTitle;
 
   @NonNull
   public final CustomTextViewMedium tvTakeMe;
@@ -27,9 +30,10 @@ public abstract class FragmentAboutBinding extends ViewDataBinding {
   protected SettingsViewModel mViewmodel;
 
   protected FragmentAboutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView imgRegister, CustomTextViewMedium tvTakeMe) {
+      ImageView imgLoginLogo, CustomTextViewMedium tvLoginTitle, CustomTextViewMedium tvTakeMe) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.imgRegister = imgRegister;
+    this.imgLoginLogo = imgLoginLogo;
+    this.tvLoginTitle = tvLoginTitle;
     this.tvTakeMe = tvTakeMe;
   }
 

@@ -136,6 +136,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp32h"
+            android:onClick="@{()-> viewmodel.toAdFee()}"
             android:background="@drawable/corner_view_primary_dark"
             android:text="@string/police_acceptance"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

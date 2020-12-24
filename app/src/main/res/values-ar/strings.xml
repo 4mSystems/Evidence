@@ -21,7 +21,7 @@
     <string name="please_select_another_file">Please select another file</string>
     <string name="google_map">AIzaSyCjsvKLJRP5P00s2xMRbJKWIQ2bCifh9bs</string>
     <string name="email_hint">من فضلك ادخل البريد الالكترونى</string>
-    <string name="email"> البريد الالكترونى</string>
+    <string name="email"> البريد الالكترونى<font fgcolor='#E80101'>*</font></string>
     <string name="password">كلمة المرور<font fgcolor='#E80101'>*</font></string>
     <string name="login">تسجيل الدخول</string>
     <string name="phone">من فضلك قم بإدخال رقم الجوال</string>
@@ -114,7 +114,7 @@
     <string name="tv_account_warning1">لا يمكن تعديل البيانات الشخصية الا من قبل الأدمن الرئيسي</string>
     <string name="tv_account_warning2">يمكن تعديل كلمة المرور فقط</string>
     <string name="password_hint_confirm">تأكيد كلمة المرور الجديدة</string>
-    <string name="edit">تعديل حسابي</string>
+    <string name="edit">تعديل</string>
     <string name="privacy">الخصوصية</string>
     <string name="message_hint">اترك رسالتك هنا</string>
     <string name="about_title">تطبيق خدني</string>
@@ -124,7 +124,7 @@
     <string name="point_warning1">يمكنمك استبدال نقاطك بمبالغ مالية</string>
     <string name="point_warning2">رصيد حسابك الحالي يمكن استبداله ب</string>
     <string name="points_btn">استبدال نقاطي</string>
-    <string name="total_points">اجمالى النقاطالمجمعة</string>
+    <string name="total">الإجمالي</string>
     <string name="my_account_balance">رصيد حسابي</string>
     <string name="current_ads">الحالية</string>
     <string name="previous_ads">المنتهية</string>
@@ -177,13 +177,13 @@
     <string name="donot_have_account">ليس لديك حساب؟</string>
     <string name="choose_membrship">نوع العضوية <font fgcolor='#E80101'>*</font></string>
     <string name="choose_membrship_input">اختر نوع العضوية</string>
-    <string name="forget_body">من فضلك إدخل رقم الهاتف أو البريد الالكتروني لإرسال كود التحقق</string>
-    <string name="forget_password">ادخل رقم الهاتف او البريد الالكتروني</string>
+    <string name="forget_body">من فضلك إدخل رقم الهاتف  لإرسال كود التحقق</string>
+    <string name="forget_password">ادخل رقم الهاتف</string>
     <string name="change_confirm_password_no_star">تأكيد كلمة المرور</string>
     <string name="forget_social_header">تسجيل الدخول بالسوشيال ميديا</string>
     <string name="forget_social_body">رقم الجوال أو البريد الاكتروني ضروري لتأكيد حسابك</string>
     <string name="menuConversations">محادثة</string>
-    <string name="add_info1" >
+    <string name="add_info1">
         ١-سيتم إيقاف العضوية فى حال مخالفة الشروط دون سابق إنذار
     </string>
     <string name="police_acceptance">أتعهد و أوافق على الشروط و الأحكام</string>
@@ -204,9 +204,25 @@
     <string name="sell">بـيـع</string>
     <string name="deal_price">السعر<font fgcolor='#E80101'>*</font></string>
     <string name="price_hint">ادخل السعر</string>
+    <string name="deal_address">العنوان<font fgcolor='#E80101'>*</font></string>
+    <string name="office_size">مساحة المكتب<font fgcolor='#E80101'>*</font></string>
     <string name="address_hint">ادخل العنوان بشكل صحيح</string>
+    <string name="land_size">مساحة الأرض<font fgcolor='#E80101'>*</font></string>
+    <string name="warehouse_size">مساحة المخزن<font fgcolor='#E80101'>*</font></string>
+    <string name="warehouse_high">إرتفاع المخزن<font fgcolor='#E80101'>*</font></string>
+    <string name="building_size">مساحة المبني الكلية<font fgcolor='#E80101'>*</font></string>
+    <string name="floor_size">مساحة الطابق<font fgcolor='#E80101'>*</font></string>
+    <string name="factory_size">مساحة المسقوف<font fgcolor='#E80101'>*</font></string>
+    <string name="factory_year">عمر المصنع<font fgcolor='#E80101'>*</font></string>
+    <string name="rooms_count">عدد الحجرات<font fgcolor='#E80101'>*</font></string>
+    <string name="path_count">عدد الحمامات<font fgcolor='#E80101'>*</font></string>
+    <string name="kitchen_count">عدد المطابخ<font fgcolor='#E80101'>*</font></string>
+    <string name="building_year">سنة البناء<font fgcolor='#E80101'>*</font></string>
+    <string name="payment_type">طريقة الدفع<font fgcolor='#E80101'>*</font></string>
+    <string name="store_size">مساحة المحل<font fgcolor='#E80101'>*</font></string>
     <string name="land_size_hint">ادخل المساحة بالمتر المربع (م2)</string>
-    <string name="floor_count">عدد الطوابق</string>
+    <string name="floor_count">عدد الطوابق<font fgcolor='#E80101'>*</font></string>
+    <string name="floor_count_warehouse">عدد الطوابق</string>
     <string name="choose_building_year">إختيار سنه البناء</string>
     <string name="cash">كاش</string>
     <string name="sac">صك</string>
@@ -260,4 +276,31 @@
     <string name="delete_ad">حذف الإعلان</string>
     <string name="contact_phone">رقم الجوال</string>
     <string name="contact_email">البريد الالكتروني</string>
+    <string name="realtor">سمسار</string>
+    <string name="owner">مالك</string>
+    <string name="seeker">باحث عن عقار</string>
+    <string name="payment_title">الدفع</string>
+    <string name="annual_register">قيمة الإشتراك السنوي</string>
+    <string name="option_dialog_delete">هل أنت متأكد ان الإعلان مخالف ؟</string>
+    <string name="option_dialog_title">تحذير</string>
+    <string name="no">لا</string>
+    <string name="report">إبلاغ</string>
+    <string name="wrong_price">السعر خطا</string>
+    <string name="wrong_location">الموقع خطأ</string>
+    <string name="wrong_behave">تعامل غير لائق</string>
+    <string name="wrong_building">العقار غير متوفر</string>
+    <string name="other_reason">سبب أخر</string>
+    <string name="report_desc">من فضلك قم بكتابة السبب</string>
+    <string name="choose_city">المدينه<font fgcolor='#E80101'>*</font></string>
+    <string name="choose_akar_locations">اختر موقع العقار</string>
+    <string name="ad_fee_title">رسوم الإعلان</string>
+    <string name="add_info_title">شروط إضافة إعلان</string>
+    <string name="save">Save</string>
+    <string name="API_KEY">AIzaSyBnui_-Aq3WohKtd4VUahlpWv_2xEocpRg</string>
+    <string name="choose_akar_category">اختر القسم</string>
+    <string name="ad_attachment_imgs">إرفاق صور</string>
+    <string name="price_required">يرجى إدخال السعر</string>
+    <string name="videoBig">حجم الفيديو كبير يرجى اختيار فيديو اخر</string>
+    <string name="image_required">يجب إختيار صورة ع الاقل</string>
+    <string name="add_success_added">تم إضافة الإعلان</string>
 </resources>

@@ -28,6 +28,7 @@ import javax.inject.Singleton;
 
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.model.base.StatusMessage;
+import grand.app.akar.pages.auth.models.UsersResponse;
 import grand.app.akar.utils.Constants;
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -149,9 +150,9 @@ public class ConnectionHelper {
                         String jsonString = gson.toJson(response);
                         StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                         Log.e(TAG, "onNext: " + statusMessage.mMessage);
-                        if (statusMessage.mStatus == Constants.RESPONSE_SUCCESS)
+                        if (statusMessage.code == Constants.RESPONSE_SUCCESS)
                             liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        else if (statusMessage.mStatus == Constants.RESPONSE_JWT_EXPIRE)
+                        else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
                             liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
                         else
                             liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
@@ -160,6 +161,7 @@ public class ConnectionHelper {
                     @Override
                     public void onError(Throwable t) {
                         hideProgress(showProgress);
+                        t.printStackTrace();
                         liveData.setValue(new Mutable(Constants.SERVER_ERROR));
                     }
 
@@ -183,7 +185,6 @@ public class ConnectionHelper {
 
 
     public Disposable requestApi(int method, String url, Object requestData, Class<?> responseType, String constantSuccessResponse, boolean showProgress) {
-        Log.e(TAG, "requestApi: start" + responseType.getName());
         Flowable<JsonObject> call = null;
         Map<String, String> map = getParameters(requestData);
         if (method == Constants.POST_REQUEST) {
@@ -206,14 +207,16 @@ public class ConnectionHelper {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
                         StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
-                        Log.e(TAG, "onNext: " + statusMessage.mMessage);
-                        if (statusMessage.mStatus == Constants.RESPONSE_SUCCESS)
+                        if (statusMessage.code == Constants.RESPONSE_SUCCESS)
                             liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        else if (statusMessage.mStatus == Constants.RESPONSE_JWT_EXPIRE)
+                        else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
                             liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
-                        else if (statusMessage.mStatus == Constants.RESPONSE_404)
+                        else if (statusMessage.code == Constants.RESPONSE_404)
                             liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
-                        else
+                        else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
+                            Log.e(TAG, "onNext: " + response.toString());
+                            liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
+                        } else
                             liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
                     }
 

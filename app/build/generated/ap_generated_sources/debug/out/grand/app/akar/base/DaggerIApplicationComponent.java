@@ -22,6 +22,8 @@ import grand.app.akar.pages.ads.AkarLocationsMapFragment;
 import grand.app.akar.pages.ads.AkarLocationsMapFragment_MembersInjector;
 import grand.app.akar.pages.ads.CategoriesFragment;
 import grand.app.akar.pages.ads.CategoriesFragment_MembersInjector;
+import grand.app.akar.pages.ads.forms.AdUploadingSuccessFragment;
+import grand.app.akar.pages.ads.forms.AdUploadingSuccessFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddFactoryFormFragment;
 import grand.app.akar.pages.ads.forms.AddFactoryFormFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddFlatFormFragment;
@@ -38,12 +40,17 @@ import grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment;
 import grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment_MembersInjector;
 import grand.app.akar.pages.ads.forms.AddWareHosueFormFragment;
 import grand.app.akar.pages.ads.forms.AddWareHosueFormFragment_MembersInjector;
+import grand.app.akar.pages.ads.forms.AdsAttachmentsFragment;
+import grand.app.akar.pages.ads.forms.AdsAttachmentsFragment_MembersInjector;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel_MembersInjector;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel_MembersInjector;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel_Factory;
+import grand.app.akar.pages.ads.viewModels.AttachmentsViewModel_MembersInjector;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel_Factory;
 import grand.app.akar.pages.ads.viewModels.CategoriesViewModel_MembersInjector;
@@ -67,12 +74,22 @@ import grand.app.akar.pages.auth.login.LoginFragment_MembersInjector;
 import grand.app.akar.pages.auth.login.LoginViewModel;
 import grand.app.akar.pages.auth.login.LoginViewModel_Factory;
 import grand.app.akar.pages.auth.login.LoginViewModel_MembersInjector;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
+import grand.app.akar.pages.auth.payment.PaymentFragment_MembersInjector;
+import grand.app.akar.pages.auth.payment.PaymentViewModel;
+import grand.app.akar.pages.auth.payment.PaymentViewModel_Factory;
+import grand.app.akar.pages.auth.payment.PaymentViewModel_MembersInjector;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment_MembersInjector;
 import grand.app.akar.pages.auth.register.RegisterViewModel;
 import grand.app.akar.pages.auth.register.RegisterViewModel_Factory;
 import grand.app.akar.pages.auth.register.RegisterViewModel_MembersInjector;
 import grand.app.akar.pages.chat.view.ChatFragment;
+import grand.app.akar.pages.conversations.ConversationsFragment;
+import grand.app.akar.pages.conversations.ConversationsFragment_MembersInjector;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_Factory;
+import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_MembersInjector;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.home.HomeFragment_MembersInjector;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
@@ -83,6 +100,15 @@ import grand.app.akar.pages.myAccount.MyAccountFragment_MembersInjector;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel_Factory;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel_MembersInjector;
+import grand.app.akar.pages.myAds.CurrentAdsFragment;
+import grand.app.akar.pages.myAds.CurrentAdsFragment_MembersInjector;
+import grand.app.akar.pages.myAds.MyAdsMainFragment;
+import grand.app.akar.pages.myAds.MyAdsMainFragment_MembersInjector;
+import grand.app.akar.pages.myAds.PreviousAdsFragment;
+import grand.app.akar.pages.myAds.PreviousAdsFragment_MembersInjector;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel_Factory;
+import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel_MembersInjector;
 import grand.app.akar.pages.notifications.NotificationsFragment;
 import grand.app.akar.pages.onBoard.OnBoardFragment;
 import grand.app.akar.pages.onBoard.OnBoardFragment_MembersInjector;
@@ -105,8 +131,12 @@ import grand.app.akar.pages.splash.SplashFragment_MembersInjector;
 import grand.app.akar.pages.splash.SplashViewModel;
 import grand.app.akar.pages.splash.SplashViewModel_Factory;
 import grand.app.akar.pages.splash.SplashViewModel_MembersInjector;
+import grand.app.akar.repository.AdsRepository;
+import grand.app.akar.repository.AdsRepository_Factory;
 import grand.app.akar.repository.AuthRepository;
 import grand.app.akar.repository.AuthRepository_Factory;
+import grand.app.akar.repository.ChatRepository;
+import grand.app.akar.repository.ChatRepository_Factory;
 import grand.app.akar.repository.HomeRepository;
 import grand.app.akar.repository.HomeRepository_Factory;
 import grand.app.akar.repository.SettingsRepository;
@@ -124,11 +154,15 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
-  private Provider<AuthRepository> authRepositoryProvider;
-
   private Provider<HomeRepository> homeRepositoryProvider;
 
+  private Provider<AuthRepository> authRepositoryProvider;
+
   private Provider<SettingsRepository> settingsRepositoryProvider;
+
+  private Provider<AdsRepository> adsRepositoryProvider;
+
+  private Provider<ChatRepository> chatRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -143,6 +177,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public static IApplicationComponent create() {
     return new Builder().build();
   }
+
+  private HomeViewModel getHomeViewModel() {
+    return injectHomeViewModel(HomeViewModel_Factory.newInstance(homeRepositoryProvider.get()));}
 
   private SplashViewModel getSplashViewModel() {
     return injectSplashViewModel(SplashViewModel_Factory.newInstance(authRepositoryProvider.get()));}
@@ -162,9 +199,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private RegisterViewModel getRegisterViewModel() {
     return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
-  private HomeViewModel getHomeViewModel() {
-    return injectHomeViewModel(HomeViewModel_Factory.newInstance(homeRepositoryProvider.get()));}
-
   private MyAccountViewModel getMyAccountViewModel() {
     return injectMyAccountViewModel(MyAccountViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
@@ -175,13 +209,25 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
   private AdsViewModel getAdsViewModel() {
-    return injectAdsViewModel(AdsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
+    return injectAdsViewModel(AdsViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
   private CategoriesViewModel getCategoriesViewModel() {
     return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
   private AddVillaHouseViewModel getAddVillaHouseViewModel() {
-    return injectAddVillaHouseViewModel(AddVillaHouseViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
+    return injectAddVillaHouseViewModel(AddVillaHouseViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private AttachmentsViewModel getAttachmentsViewModel() {
+    return injectAttachmentsViewModel(AttachmentsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private ConversationsViewModel getConversationsViewModel() {
+    return injectConversationsViewModel(ConversationsViewModel_Factory.newInstance(chatRepositoryProvider.get()));}
+
+  private MyAdsViewModel getMyAdsViewModel() {
+    return injectMyAdsViewModel(MyAdsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private PaymentViewModel getPaymentViewModel() {
+    return injectPaymentViewModel(PaymentViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
@@ -189,9 +235,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.getMutableLiveDataProvider = DoubleCheck.provider(LiveData_GetMutableLiveDataFactory.create(liveDataParam));
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
-    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -314,9 +362,42 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public void inject(AddOfficeFormFragment addOfficeFormFragment) {
     injectAddOfficeFormFragment(addOfficeFormFragment);}
 
+  @Override
+  public void inject(AdsAttachmentsFragment adsAttachmentsFragment) {
+    injectAdsAttachmentsFragment(adsAttachmentsFragment);}
+
+  @Override
+  public void inject(AdUploadingSuccessFragment adUploadingSuccessFragment) {
+    injectAdUploadingSuccessFragment(adUploadingSuccessFragment);}
+
+  @Override
+  public void inject(ConversationsFragment conversationsFragment) {
+    injectConversationsFragment(conversationsFragment);}
+
+  @Override
+  public void inject(CurrentAdsFragment currentAdsFragment) {
+    injectCurrentAdsFragment(currentAdsFragment);}
+
+  @Override
+  public void inject(PreviousAdsFragment previousAdsFragment) {
+    injectPreviousAdsFragment(previousAdsFragment);}
+
+  @Override
+  public void inject(MyAdsMainFragment myAdsMainFragment) {
+    injectMyAdsMainFragment(myAdsMainFragment);}
+
+  @Override
+  public void inject(PaymentFragment paymentFragment) {
+    injectPaymentFragment(paymentFragment);}
+
+  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
+    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
-    MainActivity_MembersInjector.injectApi(instance, webServiceProvider.get());
+    MainActivity_MembersInjector.injectViewModel(instance, getHomeViewModel());
     return instance;
   }
 
@@ -385,11 +466,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
-  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
-    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
-    return instance;
-  }
-
   private HomeFragment injectHomeFragment(HomeFragment instance) {
     HomeFragment_MembersInjector.injectViewModel(instance, getHomeViewModel());
     return instance;
@@ -436,7 +512,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AdsViewModel injectAdsViewModel(AdsViewModel instance) {
-    AdsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    AdsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
     return instance;
   }
 
@@ -473,7 +549,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddVillaHouseViewModel injectAddVillaHouseViewModel(AddVillaHouseViewModel instance) {
-    AddVillaHouseViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    AddVillaHouseViewModel_MembersInjector.injectRepository(instance, adsRepositoryProvider.get());
     return instance;
   }
 
@@ -516,6 +592,62 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AddOfficeFormFragment injectAddOfficeFormFragment(AddOfficeFormFragment instance) {
     AddOfficeFormFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    return instance;
+  }
+
+  private AttachmentsViewModel injectAttachmentsViewModel(AttachmentsViewModel instance) {
+    AttachmentsViewModel_MembersInjector.injectRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private AdsAttachmentsFragment injectAdsAttachmentsFragment(AdsAttachmentsFragment instance) {
+    AdsAttachmentsFragment_MembersInjector.injectViewModel(instance, getAttachmentsViewModel());
+    return instance;
+  }
+
+  private AdUploadingSuccessFragment injectAdUploadingSuccessFragment(
+      AdUploadingSuccessFragment instance) {
+    AdUploadingSuccessFragment_MembersInjector.injectViewModel(instance, getAddVillaHouseViewModel());
+    return instance;
+  }
+
+  private ConversationsViewModel injectConversationsViewModel(ConversationsViewModel instance) {
+    ConversationsViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ConversationsFragment injectConversationsFragment(ConversationsFragment instance) {
+    ConversationsFragment_MembersInjector.injectViewModel(instance, getConversationsViewModel());
+    return instance;
+  }
+
+  private MyAdsViewModel injectMyAdsViewModel(MyAdsViewModel instance) {
+    MyAdsViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private CurrentAdsFragment injectCurrentAdsFragment(CurrentAdsFragment instance) {
+    CurrentAdsFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private PreviousAdsFragment injectPreviousAdsFragment(PreviousAdsFragment instance) {
+    PreviousAdsFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private MyAdsMainFragment injectMyAdsMainFragment(MyAdsMainFragment instance) {
+    MyAdsMainFragment_MembersInjector.injectViewModel(instance, getMyAdsViewModel());
+    return instance;
+  }
+
+  private PaymentViewModel injectPaymentViewModel(PaymentViewModel instance) {
+    PaymentViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private PaymentFragment injectPaymentFragment(PaymentFragment instance) {
+    PaymentFragment_MembersInjector.injectViewModel(instance, getPaymentViewModel());
     return instance;
   }
 

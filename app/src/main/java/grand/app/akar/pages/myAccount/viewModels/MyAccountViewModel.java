@@ -29,12 +29,12 @@ public class MyAccountViewModel extends BaseViewModel {
         marketRepository.setLiveData(liveData);
     }
 
-    public void profileStatistics() {
-        compositeDisposable.add(repository.getProfileData());
+    public void toTerms() {
+        liveData.setValue(new Mutable(Constants.TERMS));
     }
 
     public void toSettings() {
-        liveData.setValue(new Mutable(Constants.SETTINGS));
+        liveData.setValue(new Mutable(Constants.CONTACT));
     }
 
     public void toMyPoints() {
@@ -46,7 +46,11 @@ public class MyAccountViewModel extends BaseViewModel {
     }
 
     public void toMyOrders() {
-        liveData.setValue(new Mutable(Constants.MY_ORDERS));
+        liveData.setValue(new Mutable(Constants.MY_ADS));
+    }
+
+    public void toAbout() {
+        liveData.setValue(new Mutable(Constants.ABOUT));
     }
 
     public void toReviews() {

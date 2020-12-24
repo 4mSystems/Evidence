@@ -22,16 +22,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b327862b-9254-4518-a0a5-c693501deea6" name="Default Changelist" comment="">
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/akar/databinding/FragmentMyAccountBindingImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/ap_generated_sources/debug/out/grand/app/akar/databinding/FragmentMyAccountBindingImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/grand/app/akar/base/IApplicationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/grand/app/akar/base/IApplicationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/board_header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_account_settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/board_header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/ic_account_settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/board_header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/ic_account_settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/board_header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_account_settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/about.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/board_header.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/ic_account_settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/corner_view_primary_accept.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/corner_view_primary_accept.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_contact.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_my_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_terms.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_terms.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_chat.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-ar/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+>>>>>>> 5bbf408990c22c0cc94dd1e4510dad59f590deaf
+>>>>>>> 84a372ae4a4947384278366a0b0e73c98f7aff24
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9d53e4937d04]" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+>>>>>>> 84a372ae4a4947384278366a0b0e73c98f7aff24
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -186,12 +227,22 @@
       <option name="presentableId" value="Default" />
       <updated>1603093257088</updated>
     </task>
+    <task id="LOCAL-00001" summary="m">
+      <created>1607527085832</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607527085832</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="m" />
+    <option name="LAST_COMMIT_MESSAGE" value="m" />
   </component>
   <component name="WindowStateProjectService">
     <state x="605" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1607521065979">
@@ -227,8 +278,17 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="598" y="181" key="AndroidProcessChooserDialog/0.0.1600.870@0.0.1600.870" timestamp="1606744645882" />
+<<<<<<< HEAD
+    <state x="427" y="11" key="CommitChangelistDialog2" timestamp="1607527063506">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="427" y="11" key="CommitChangelistDialog2/0.0.1600.870@0.0.1600.870" timestamp="1607527063506" />
+    <state x="580" y="190" key="FileChooserDialogImpl" timestamp="1607525693993">
+      <screen x="0" y="0" width="1600" height="870" />
+=======
     <state x="495" y="189" width="424" height="491" key="FileChooserDialogImpl" timestamp="1607604424885">
       <screen x="0" y="27" width="1366" height="741" />
+>>>>>>> 5bbf408990c22c0cc94dd1e4510dad59f590deaf
     </state>
     <state x="580" y="190" key="FileChooserDialogImpl/0.0.1600.870@0.0.1600.870" timestamp="1607525693993" />
     <state x="495" y="189" width="424" height="491" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1607604424885" />
@@ -252,8 +312,17 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="301" y="80" key="SettingsEditor/0.0.1600.870@0.0.1600.870" timestamp="1607526765637" />
+<<<<<<< HEAD
+    <state x="392" y="168" key="Vcs.Push.Dialog.v2" timestamp="1607527124785">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="392" y="168" key="Vcs.Push.Dialog.v2/0.0.1600.870@0.0.1600.870" timestamp="1607527124785" />
+    <state x="616" y="213" key="chooseDestDirectoryDialog" timestamp="1603109803552">
+      <screen x="0" y="0" width="1600" height="870" />
+=======
     <state x="526" y="208" width="446" height="447" key="chooseDestDirectoryDialog" timestamp="1607602853942">
       <screen x="0" y="27" width="1366" height="741" />
+>>>>>>> 5bbf408990c22c0cc94dd1e4510dad59f590deaf
     </state>
     <state x="616" y="213" key="chooseDestDirectoryDialog/0.0.1600.870@0.0.1600.870" timestamp="1603109803552" />
     <state x="526" y="208" width="446" height="447" key="chooseDestDirectoryDialog/0.27.1366.741@0.27.1366.741" timestamp="1607602853942" />
@@ -261,10 +330,10 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="431" y="132" width="737" height="606" key="find.popup/0.0.1600.870@0.0.1600.870" timestamp="1603094140848" />
-    <state x="508" y="336" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607440822058">
+    <state x="508" y="336" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607526828183">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state x="508" y="336" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1600.870@0.0.1600.870" timestamp="1607440822058" />
+    <state x="508" y="336" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1600.870@0.0.1600.870" timestamp="1607526828183" />
     <state x="456" y="198" key="run.anything.popup" timestamp="1607502818667">
       <screen x="0" y="0" width="1600" height="870" />
     </state>

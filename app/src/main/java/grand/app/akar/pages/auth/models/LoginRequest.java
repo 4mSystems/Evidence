@@ -1,27 +1,29 @@
 package grand.app.akar.pages.auth.models;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginRequest {
-    @SerializedName("phone")
+    @SerializedName("loginkey")
     @Expose
-    private String phone;
+    private String loginkey;
     @SerializedName("password")
     @Expose
     private String password;
-    @SerializedName("token")
+    @SerializedName("firebase_token")
     @Expose
     private String token;
+    private int validator = 0;
 
-    public String getPhone() {
-        return phone;
+    public String getLoginkey() {
+        return loginkey;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setLoginkey(String loginkey) {
+        this.loginkey = loginkey;
     }
 
     public String getPassword() {
@@ -40,13 +42,24 @@ public class LoginRequest {
         this.token = token;
     }
 
-    private static final String TAG = "LoginRequest";
 
     public boolean isValid() {
-        return (!TextUtils.isEmpty(phone));
+        return (!TextUtils.isEmpty(loginkey) && !TextUtils.isEmpty(password));
     }
 
-    public boolean isPasswordValid() {
-        return (!TextUtils.isEmpty(password) && !TextUtils.isEmpty(token));
+
+    public void setValidator(int validator) {
+        this.validator = validator;
+    }
+
+
+    public int getValidator() {
+        return validator;
+    }
+
+
+    public boolean validate() {
+        Log.e("validator", " Validatorz " + validator);
+        return validator == 2;
     }
 }

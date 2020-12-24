@@ -18,7 +18,9 @@
     <attr name="gravity" format="enum">
         <enum name="TOP" value="48" />
     </attr>
+
     <declare-styleable name="IncrementalView">
-        <attr name="android:text" />
+        <attr name="titleText" format="string" />
     </declare-styleable>
+
 </resources>

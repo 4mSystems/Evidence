@@ -11,23 +11,24 @@ import android.webkit.URLUtil;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import grand.app.akar.R;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.resources.ResourceManager;
 
 /**
  * Created by osama on 12/31/2017.
  */
 
 public class Validate {
+    public static String error;
+
     public static boolean isValid(String data, String type) {
         if (isValid(data)) {
-            Log.e("valid", data);
             if (type.equals(Constants.EMAIL) && !Validate.isMail(data)) {
-                Log.e("valid", "EMAIL");
-//                error = ResourceManager.getString(R.string.email_not_valid);
+                error = ResourceManager.getString(R.string.invalidEmail);
                 return false;
             } else if (type.equals(Constants.PHONE) && !isPhoneValid(data)) {
-                Log.e("valid", "PHONE");
-//                error = ResourceManager.getString(R.string.phone_not_valid);
+                error = ResourceManager.getString(R.string.invalidPhone);
                 return false;
             }
             return true;
@@ -38,7 +39,7 @@ public class Validate {
     public static boolean isMatchPassword(String password, String passwordConfirm) {
         if (isValid(password) && isValid(passwordConfirm)) {
             if (!password.equals(passwordConfirm)) {
-//                error = ResourceManager.getString(R.string.both_password_are_not_same);
+                error = ResourceManager.getString(R.string.password_not_match);
                 return false;
             }
             return true;
@@ -57,7 +58,7 @@ public class Validate {
     public static boolean isValid(String data) {
         if (data != null && data.trim().equals("")) {
             Log.e("valid", "dataFalse");
-//            error = ResourceManager.getString(R.string.this_field_is_requried);
+            error = ResourceManager.getString(R.string.fieldRequired);
             return false;
         }
         return true;
@@ -126,7 +127,7 @@ public class Validate {
 //                    Pattern.compile("(201)[0-9]{9}");
 //            return str == null ? false : phone_pattern.matcher(str).matches();
 //        } else
-            return str == null ? false : Patterns.PHONE.matcher(str).matches();
+        return str == null ? false : Patterns.PHONE.matcher(str).matches();
     }
 
     public static int batteryLevel(Context context) {

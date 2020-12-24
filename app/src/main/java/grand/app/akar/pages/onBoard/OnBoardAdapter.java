@@ -37,9 +37,9 @@ public class OnBoardAdapter extends SliderViewAdapter<OnBoardAdapter.SliderAdapt
     @Override
     public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
         OnBoard introItem = pagerList.get(position);
-        Glide.with(context).load(introItem.getImage()).placeholder(R.color.overlayBackground).into(viewHolder.imageViewBackground);
+        Glide.with(context).load(introItem.getImage()).placeholder(R.drawable.splash).into(viewHolder.imageViewBackground);
         viewHolder.title.setText(introItem.getTitle());
-        viewHolder.desc.setText(introItem.getBody());
+        viewHolder.desc.setText(introItem.getDesc());
     }
 
     @Override

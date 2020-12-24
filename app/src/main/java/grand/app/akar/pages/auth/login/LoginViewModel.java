@@ -1,5 +1,6 @@
 package grand.app.akar.pages.auth.login;
 
+import android.util.Log;
 import android.view.View;
 
 import androidx.databinding.Bindable;
@@ -38,17 +39,18 @@ public class LoginViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.REGISTER));
     }
 
+    private static final String TAG = "LoginViewModel";
+
     public void forgetPassword() {
         liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
     }
 
     public void loginPhone() {
+        getLoginRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
         if (getLoginRequest().isValid()) {
-            if (!getLoginRequest().getPhone().contains(cpp)) {
-                getLoginRequest().setPhone(cpp + getLoginRequest().getPhone());
-            }
-            repository.loginPhone(loginRequest);
-        }
+            repository.login(loginRequest);
+        } else
+            liveData.setValue(new Mutable(Constants.EMPTY_WARNING));
     }
 
     public void toRegister() {

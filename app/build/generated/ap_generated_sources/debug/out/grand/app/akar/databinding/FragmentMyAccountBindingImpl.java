@@ -14,120 +14,81 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_account_verified, 15);
-        sViewsWithIds.put(R.id.br4, 16);
-        sViewsWithIds.put(R.id.br_account_my_ads, 17);
-        sViewsWithIds.put(R.id.view_gift, 18);
-        sViewsWithIds.put(R.id.br_account_fund_ads, 19);
-        sViewsWithIds.put(R.id.view_profile, 20);
-        sViewsWithIds.put(R.id.br_account_orders, 21);
-        sViewsWithIds.put(R.id.view_orders, 22);
-        sViewsWithIds.put(R.id.tv_account_about, 23);
-        sViewsWithIds.put(R.id.br_account_about, 24);
-        sViewsWithIds.put(R.id.view_about, 25);
-        sViewsWithIds.put(R.id.tv_delivery_vat_total_text, 26);
-        sViewsWithIds.put(R.id.br_tv_delivery_vat_total, 27);
-        sViewsWithIds.put(R.id.view_terms, 28);
-        sViewsWithIds.put(R.id.tv_account_support_contact, 29);
-        sViewsWithIds.put(R.id.br_account_support, 30);
-        sViewsWithIds.put(R.id.view_support, 31);
-        sViewsWithIds.put(R.id.tv_account_rate, 32);
-        sViewsWithIds.put(R.id.br_tv_account_order_num, 33);
-        sViewsWithIds.put(R.id.view_rate, 34);
-        sViewsWithIds.put(R.id.br_account_share, 35);
+        sViewsWithIds.put(R.id.tv_account_title, 10);
+        sViewsWithIds.put(R.id.img_login_logo, 11);
+        sViewsWithIds.put(R.id.account_card_container, 12);
+        sViewsWithIds.put(R.id.tv_account_support_contact, 13);
+        sViewsWithIds.put(R.id.tv_account_rate, 14);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback87;
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback86;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback92;
     @Nullable
-    private final android.view.View.OnClickListener mCallback10;
+    private final android.view.View.OnClickListener mCallback90;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback88;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback91;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentMyAccountBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 36, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentMyAccountBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[14]
-            , (androidx.constraintlayout.widget.Barrier) bindings[16]
-            , (androidx.constraintlayout.widget.Barrier) bindings[24]
-            , (androidx.constraintlayout.widget.Barrier) bindings[21]
-            , (androidx.constraintlayout.widget.Barrier) bindings[19]
-            , (androidx.constraintlayout.widget.Barrier) bindings[17]
-            , (androidx.constraintlayout.widget.Barrier) bindings[35]
-            , (androidx.constraintlayout.widget.Barrier) bindings[30]
-            , (androidx.constraintlayout.widget.Barrier) bindings[33]
-            , (androidx.constraintlayout.widget.Barrier) bindings[27]
-            , (androidx.appcompat.widget.AppCompatRatingBar) bindings[3]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[8]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[23]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[29]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[12]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[13]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[32]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[11]
+            , (com.google.android.material.card.MaterialCardView) bindings[12]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[11]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[15]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[26]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (android.view.View) bindings[25]
-            , (android.view.View) bindings[18]
-            , (android.view.View) bindings[22]
-            , (android.view.View) bindings[20]
-            , (android.view.View) bindings[34]
-            , (android.view.View) bindings[31]
-            , (android.view.View) bindings[28]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[14]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[8]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[13]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[2]
             );
-        this.appCompatButtonNext.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.rating.setTag(null);
-        this.tvAccountBalance.setTag(null);
-        this.tvAccountBillingTotalVal.setTag(null);
-        this.tvAccountMyOrders.setTag(null);
-        this.tvAccountNumCommentsText.setTag(null);
-        this.tvAccountNumCommentsVal.setTag(null);
-        this.tvAccountOrderNumVal.setTag(null);
-        this.tvAccountPoints.setTag(null);
-        this.tvAccountSettings.setTag(null);
-        this.tvAccountUserId.setTag(null);
-        this.tvAccountUsername.setTag(null);
-        this.tvDeliveryVatTotalVal.setTag(null);
-        this.userImg.setTag(null);
+        this.tvAccountAbout.setTag(null);
+        this.tvAccountContact.setTag(null);
+        this.tvAccountFundAds.setTag(null);
+        this.tvAccountLogout.setTag(null);
+        this.tvAccountMyAds.setTag(null);
+        this.tvAccountName.setTag(null);
+        this.tvAccountShare.setTag(null);
+        this.tvAccountTerms.setTag(null);
+        this.tvAccountType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback9 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback5 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback8 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback10 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback7 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback89 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback87 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback86 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback92 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback90 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback88 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback91 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x2L;
         }
         requestRebind();
     }
@@ -179,12 +140,6 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
             }
             return true;
         }
-        else if (fieldId == BR.profileData) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x2L;
-            }
-            return true;
-        }
         return false;
     }
 
@@ -195,169 +150,109 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewmodelProfileDataDeliveryFees = null;
-        grand.app.akar.pages.auth.models.UserData viewmodelProfileDataUserData = null;
-        java.lang.String viewmodelProfileDataDeliveryFeesConcatJavaLangStringConcatViewmodelCountryCurrency = null;
-        java.lang.String viewmodelCountryCurrency = null;
-        java.lang.String stringValueOfViewmodelProfileDataRatesCountConcatTvAccountNumCommentsValAndroidStringComment = null;
-        java.lang.String viewmodelUserDataRate = null;
-        java.lang.String viewmodelUserDataUserCode = null;
-        java.lang.String javaLangStringConcatViewmodelUserDataUserCode = null;
-        java.lang.String stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangString = null;
-        java.lang.String viewmodelUserDataImage = null;
-        java.lang.String stringValueOfViewmodelProfileDataUserDataWallet = null;
-        java.lang.String viewmodelProfileDataDeliveryFeesConcatJavaLangString = null;
-        java.lang.String stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangString = null;
-        java.lang.String stringValueOfViewmodelProfileDataRatesCount = null;
-        double viewmodelProfileDataUserDataWallet = 0.0;
-        java.lang.String viewmodelProfileDataCashPaidConcatJavaLangString = null;
-        int viewmodelProfileDataRatesCount = 0;
-        java.lang.String stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangStringConcatViewmodelCountryCurrency = null;
-        java.lang.String viewmodelProfileDataCashPaid = null;
-        int viewmodelProfileDataOrdersCount = 0;
+        int viewmodelUserDataType = 0;
+        boolean viewmodelUserDataTypeInt0 = false;
+        java.lang.String viewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = null;
         java.lang.String viewmodelUserDataName = null;
         grand.app.akar.pages.auth.models.UserData viewmodelUserData = null;
-        grand.app.akar.pages.myAccount.models.ProfileData viewmodelProfileData = null;
-        java.lang.String viewmodelProfileDataCashPaidConcatJavaLangStringConcatViewmodelCountryCurrency = null;
-        java.lang.String stringValueOfViewmodelProfileDataOrdersCount = null;
-        java.lang.String stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangStringConcatTvAccountOrderNumValAndroidStringOrder = null;
+        boolean viewmodelUserDataTypeInt1 = false;
+        java.lang.String viewmodelUserDataTypeInt0JavaLangStringTvAccountTypeAndroidStringSeekerJavaLangStringViewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = null;
         grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x3L) != 0) {
 
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.countryCurrency
-                    viewmodelCountryCurrency = viewmodel.getCountryCurrency();
-                    // read viewmodel.profileData
-                    viewmodelProfileData = viewmodel.getProfileData();
+                    // read viewmodel.userData
+                    viewmodelUserData = viewmodel.userData;
                 }
 
 
-                if (viewmodelProfileData != null) {
-                    // read viewmodel.profileData.deliveryFees
-                    viewmodelProfileDataDeliveryFees = viewmodelProfileData.getDeliveryFees();
-                    // read viewmodel.profileData.userData
-                    viewmodelProfileDataUserData = viewmodelProfileData.getUserData();
-                    // read viewmodel.profileData.ratesCount
-                    viewmodelProfileDataRatesCount = viewmodelProfileData.getRatesCount();
-                    // read viewmodel.profileData.cashPaid
-                    viewmodelProfileDataCashPaid = viewmodelProfileData.getCashPaid();
-                    // read viewmodel.profileData.ordersCount
-                    viewmodelProfileDataOrdersCount = viewmodelProfileData.getOrdersCount();
+                if (viewmodelUserData != null) {
+                    // read viewmodel.userData.type
+                    viewmodelUserDataType = viewmodelUserData.getType();
+                    // read viewmodel.userData.name
+                    viewmodelUserDataName = viewmodelUserData.getName();
                 }
 
 
-                if (viewmodelProfileDataDeliveryFees != null) {
-                    // read viewmodel.profileData.deliveryFees.concat(" ")
-                    viewmodelProfileDataDeliveryFeesConcatJavaLangString = viewmodelProfileDataDeliveryFees.concat(" ");
+                // read viewmodel.userData.type == 0
+                viewmodelUserDataTypeInt0 = (viewmodelUserDataType) == (0);
+            if((dirtyFlags & 0x3L) != 0) {
+                if(viewmodelUserDataTypeInt0) {
+                        dirtyFlags |= 0x20L;
                 }
-                if (viewmodelProfileDataUserData != null) {
-                    // read viewmodel.profileData.userData.wallet
-                    viewmodelProfileDataUserDataWallet = viewmodelProfileDataUserData.getWallet();
+                else {
+                        dirtyFlags |= 0x10L;
                 }
-                // read String.valueOf(viewmodel.profileData.ratesCount)
-                stringValueOfViewmodelProfileDataRatesCount = java.lang.String.valueOf(viewmodelProfileDataRatesCount);
-                // read String.valueOf(viewmodel.profileData.ordersCount)
-                stringValueOfViewmodelProfileDataOrdersCount = java.lang.String.valueOf(viewmodelProfileDataOrdersCount);
-                if (viewmodelProfileDataCashPaid != null) {
-                    // read viewmodel.profileData.cashPaid.concat(" ")
-                    viewmodelProfileDataCashPaidConcatJavaLangString = viewmodelProfileDataCashPaid.concat(" ");
-                }
-
-
-                if (viewmodelProfileDataDeliveryFeesConcatJavaLangString != null) {
-                    // read viewmodel.profileData.deliveryFees.concat(" ").concat(viewmodel.countryCurrency)
-                    viewmodelProfileDataDeliveryFeesConcatJavaLangStringConcatViewmodelCountryCurrency = viewmodelProfileDataDeliveryFeesConcatJavaLangString.concat(viewmodelCountryCurrency);
-                }
-                // read String.valueOf(viewmodel.profileData.userData.wallet)
-                stringValueOfViewmodelProfileDataUserDataWallet = java.lang.String.valueOf(viewmodelProfileDataUserDataWallet);
-                if (stringValueOfViewmodelProfileDataRatesCount != null) {
-                    // read String.valueOf(viewmodel.profileData.ratesCount).concat(@android:string/comment)
-                    stringValueOfViewmodelProfileDataRatesCountConcatTvAccountNumCommentsValAndroidStringComment = stringValueOfViewmodelProfileDataRatesCount.concat(tvAccountNumCommentsVal.getResources().getString(R.string.comment));
-                }
-                if (stringValueOfViewmodelProfileDataOrdersCount != null) {
-                    // read String.valueOf(viewmodel.profileData.ordersCount).concat(" ")
-                    stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangString = stringValueOfViewmodelProfileDataOrdersCount.concat(" ");
-                }
-                if (viewmodelProfileDataCashPaidConcatJavaLangString != null) {
-                    // read viewmodel.profileData.cashPaid.concat(" ").concat(viewmodel.countryCurrency)
-                    viewmodelProfileDataCashPaidConcatJavaLangStringConcatViewmodelCountryCurrency = viewmodelProfileDataCashPaidConcatJavaLangString.concat(viewmodelCountryCurrency);
-                }
-
-
-                if (stringValueOfViewmodelProfileDataUserDataWallet != null) {
-                    // read String.valueOf(viewmodel.profileData.userData.wallet).concat(" ")
-                    stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangString = stringValueOfViewmodelProfileDataUserDataWallet.concat(" ");
-                }
-                if (stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangString != null) {
-                    // read String.valueOf(viewmodel.profileData.ordersCount).concat(" ").concat(@android:string/order)
-                    stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangStringConcatTvAccountOrderNumValAndroidStringOrder = stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangString.concat(tvAccountOrderNumVal.getResources().getString(R.string.order));
-                }
-
-
-                if (stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangString != null) {
-                    // read String.valueOf(viewmodel.profileData.userData.wallet).concat(" ").concat(viewmodel.countryCurrency)
-                    stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangStringConcatViewmodelCountryCurrency = stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangString.concat(viewmodelCountryCurrency);
-                }
-            if ((dirtyFlags & 0x5L) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.userData
-                        viewmodelUserData = viewmodel.userData;
-                    }
-
-
-                    if (viewmodelUserData != null) {
-                        // read viewmodel.userData.rate
-                        viewmodelUserDataRate = viewmodelUserData.getRate();
-                        // read viewmodel.userData.userCode
-                        viewmodelUserDataUserCode = viewmodelUserData.getUserCode();
-                        // read viewmodel.userData.image
-                        viewmodelUserDataImage = viewmodelUserData.getImage();
-                        // read viewmodel.userData.name
-                        viewmodelUserDataName = viewmodelUserData.getName();
-                    }
-
-
-                    // read "#".concat(viewmodel.userData.userCode)
-                    javaLangStringConcatViewmodelUserDataUserCode = "#".concat(viewmodelUserDataUserCode);
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback10);
-            this.tvAccountMyOrders.setOnClickListener(mCallback7);
-            this.tvAccountNumCommentsText.setOnClickListener(mCallback8);
-            this.tvAccountNumCommentsVal.setOnClickListener(mCallback9);
-            this.tvAccountPoints.setOnClickListener(mCallback6);
-            this.tvAccountSettings.setOnClickListener(mCallback5);
+        if ((dirtyFlags & 0x10L) != 0) {
+
+                // read viewmodel.userData.type == 1
+                viewmodelUserDataTypeInt1 = (viewmodelUserDataType) == (1);
+            if((dirtyFlags & 0x10L) != 0) {
+                if(viewmodelUserDataTypeInt1) {
+                        dirtyFlags |= 0x8L;
+                }
+                else {
+                        dirtyFlags |= 0x4L;
+                }
+            }
+
+
+                // read viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
+                viewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = ((viewmodelUserDataTypeInt1) ? (((" ( ") + (tvAccountType.getResources().getString(R.string.owner))) + (" )")) : (((" ( ") + (tvAccountType.getResources().getString(R.string.realtor))) + (" )")));
         }
-        if ((dirtyFlags & 0x5L) != 0) {
-            // api target 1
 
-            grand.app.akar.base.ApplicationBinding.setRate(this.rating, viewmodelUserDataRate);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountUserId, javaLangStringConcatViewmodelUserDataUserCode);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountUsername, viewmodelUserDataName);
-            grand.app.akar.base.ApplicationBinding.loadImage(this.userImg, viewmodelUserDataImage);
+        if ((dirtyFlags & 0x3L) != 0) {
+
+                // read viewmodel.userData.type == 0 ? ((" ( ") + (@android:string/seeker)) + (" )") : viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
+                viewmodelUserDataTypeInt0JavaLangStringTvAccountTypeAndroidStringSeekerJavaLangStringViewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = ((viewmodelUserDataTypeInt0) ? (((" ( ") + (tvAccountType.getResources().getString(R.string.seeker))) + (" )")) : (viewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString));
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountBalance, stringValueOfViewmodelProfileDataUserDataWalletConcatJavaLangStringConcatViewmodelCountryCurrency);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountBillingTotalVal, viewmodelProfileDataCashPaidConcatJavaLangStringConcatViewmodelCountryCurrency);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountNumCommentsVal, stringValueOfViewmodelProfileDataRatesCountConcatTvAccountNumCommentsValAndroidStringComment);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountOrderNumVal, stringValueOfViewmodelProfileDataOrdersCountConcatJavaLangStringConcatTvAccountOrderNumValAndroidStringOrder);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDeliveryVatTotalVal, viewmodelProfileDataDeliveryFeesConcatJavaLangStringConcatViewmodelCountryCurrency);
+            this.tvAccountAbout.setOnClickListener(mCallback89);
+            this.tvAccountContact.setOnClickListener(mCallback88);
+            this.tvAccountFundAds.setOnClickListener(mCallback87);
+            this.tvAccountLogout.setOnClickListener(mCallback92);
+            this.tvAccountMyAds.setOnClickListener(mCallback86);
+            this.tvAccountShare.setOnClickListener(mCallback91);
+            this.tvAccountTerms.setOnClickListener(mCallback90);
+        }
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountName, viewmodelUserDataName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountType, viewmodelUserDataTypeInt0JavaLangStringTvAccountTypeAndroidStringSeekerJavaLangStringViewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAbout();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -372,23 +267,6 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
 
 
                     viewmodel.toMyPoints();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toReviews();
                 }
                 break;
             }
@@ -409,7 +287,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 }
                 break;
             }
-            case 4: {
+            case 7: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -426,7 +304,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 }
                 break;
             }
-            case 6: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -439,7 +317,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toLogout();
+                    viewmodel.toTerms();
                 }
                 break;
             }
@@ -456,7 +334,24 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toMyOrders();
+                    viewmodel.toSettings();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toReviews();
                 }
                 break;
             }
@@ -466,8 +361,11 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.profileData
-        flag 2 (0x3L): null
+        flag 1 (0x2L): null
+        flag 2 (0x3L): viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
+        flag 3 (0x4L): viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
+        flag 4 (0x5L): viewmodel.userData.type == 0 ? ((" ( ") + (@android:string/seeker)) + (" )") : viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
+        flag 5 (0x6L): viewmodel.userData.type == 0 ? ((" ( ") + (@android:string/seeker)) + (" )") : viewmodel.userData.type == 1 ? ((" ( ") + (@android:string/owner)) + (" )") : ((" ( ") + (@android:string/realtor)) + (" )")
     flag mapping end*/
     //end
 }

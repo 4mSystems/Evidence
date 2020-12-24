@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -70,10 +70,10 @@ public abstract class FragmentAddOfficeFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final AppCompatImageView furnitureToggle;
+  public final SwitchCompat furnitureToggle;
 
   @NonNull
-  public final AppCompatImageView garageToggle;
+  public final SwitchCompat garageToggle;
 
   @NonNull
   public final ImageView headerIndicator;
@@ -222,24 +222,23 @@ public abstract class FragmentAddOfficeFormBinding extends ViewDataBinding {
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
       MaterialCardView buildingYear, AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
-      AppCompatImageView garageToggle, ImageView headerIndicator,
-      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
-      IncrementalView incrementalViewFrontCount, IncrementalView incrementalViewKitchenNumber,
-      IncrementalView incrementalViewPathsNumber, IncrementalView incrementalViewRoomsNumber,
-      CustomEditText inputAddress, CustomEditText inputDesc, CustomEditText inputLandSize,
-      CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
-      LinearLayout optionalLayout, AppCompatCheckBox policeStation, AppCompatCheckBox school,
-      CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
-      CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
-      CustomTextViewMedium tvDocType, CustomTextViewMedium tvFrontCount,
-      CustomTextViewMedium tvFurniture, CustomTextViewMedium tvGarage,
-      CustomTextViewMedium tvKitchenCount, CustomTextViewMedium tvLandSize,
-      CustomTextViewMedium tvPathsCount, CustomTextViewMedium tvPaymentType,
-      CustomTextViewMedium tvPrice, CustomTextViewMedium tvRoomsCount,
-      CustomTextViewMedium tvServices, CustomTextViewMedium tvStreetSize, View v1, View v10,
-      View v11, View v12, View v13, View v14, View v15, View v16, View v17, View v2, View v3,
-      View v4, View v5, View v9) {
+      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
+      SwitchCompat garageToggle, ImageView headerIndicator, CustomTextViewMedium headerMenuName,
+      AppCompatCheckBox hospital, IncrementalView incrementalViewFrontCount,
+      IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
+      IncrementalView incrementalViewRoomsNumber, CustomEditText inputAddress,
+      CustomEditText inputDesc, CustomEditText inputLandSize, CustomEditText inputPrice,
+      CustomEditText inputStreetSize, AppCompatCheckBox mosque, LinearLayout optionalLayout,
+      AppCompatCheckBox policeStation, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
+      CustomTextViewMedium tvBuildingDesc, CustomTextViewMedium tvBuildingYear,
+      CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,
+      CustomTextViewMedium tvFrontCount, CustomTextViewMedium tvFurniture,
+      CustomTextViewMedium tvGarage, CustomTextViewMedium tvKitchenCount,
+      CustomTextViewMedium tvLandSize, CustomTextViewMedium tvPathsCount,
+      CustomTextViewMedium tvPaymentType, CustomTextViewMedium tvPrice,
+      CustomTextViewMedium tvRoomsCount, CustomTextViewMedium tvServices,
+      CustomTextViewMedium tvStreetSize, View v1, View v10, View v11, View v12, View v13, View v14,
+      View v15, View v16, View v17, View v2, View v3, View v4, View v5, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br3 = br3;
     this.btCustomize = btCustomize;

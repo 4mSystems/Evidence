@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -19,10 +21,13 @@ import com.google.gson.Gson;
 import grand.app.akar.PassingObject;
 import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.activity.MainActivity;
+import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.ParentActivity;
+import grand.app.akar.pages.auth.models.cities.Cities;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.R;
 
+import static android.app.Activity.RESULT_OK;
 
 
 public class MovementHelper {
@@ -130,6 +135,15 @@ public class MovementHelper {
         ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
     }
 
+    public static void finishWithResult(PassingObject passingObject, Context context) {
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Constants.BUNDLE, passingObject);
+        intent.putExtra(Constants.BUNDLE, bundle);
+        ((ParentActivity) context).setResult(RESULT_OK, intent);
+        ((Activity) context).finish();
+    }
+
     public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject) {
 //        Intent intent = new Intent(from, MapAddressActivity.class);
 //        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
@@ -190,5 +204,13 @@ public class MovementHelper {
             context = ((ContextWrapper) context).getBaseContext();
         }
         return (Activity) context;
+    }
+
+    public static Bitmap resizeIcon(int drawable) {
+        int height = 50;
+        int width = 50;
+        BitmapDrawable bitmapDrawable = (BitmapDrawable) MyApplication.getInstance().getResources().getDrawable(drawable, null);
+        Bitmap b = bitmapDrawable.getBitmap();
+        return Bitmap.createScaledBitmap(b, width, height, false);
     }
 }

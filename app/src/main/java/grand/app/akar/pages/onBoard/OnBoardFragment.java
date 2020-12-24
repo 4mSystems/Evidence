@@ -10,7 +10,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
-import com.smarteist.autoimageslider.CircularSliderHandle;
+import com.smarteist.autoimageslider.SliderAnimations;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -22,11 +22,14 @@ import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentOnboardBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.auth.login.LoginFragment;
 import grand.app.akar.pages.onBoard.models.BoardResponse;
 import grand.app.akar.pages.splash.SplashViewModel;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
 import grand.app.akar.utils.session.UserHelper;
+
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 
 
 public class OnBoardFragment extends BaseFragment {
@@ -53,17 +56,17 @@ public class OnBoardFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         fragmentOnboardBinding.setOnBoardViewModels(viewModel);
+        fragmentOnboardBinding.imageSlider.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         viewModel.getSlider();
         liveDataListeners();
         // fill list screen
-        fragmentOnboardBinding.imageSlider.setCurrentPageListener(new CircularSliderHandle.CurrentPageListener() {
-            @Override
-            public void onCurrentPageChanged(int currentPosition) {
-                if (currentPosition == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
-                    fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.startApp));
-                } else {
-                    fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.next));
-                }
+        fragmentOnboardBinding.imageSlider.setCurrentPageListener(currentPosition -> {
+            if (currentPosition == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
+                fragmentOnboardBinding.startApp.setVisibility(View.VISIBLE);
+                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
+            } else {
+                fragmentOnboardBinding.startApp.setVisibility(View.GONE);
+                fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.VISIBLE);
             }
         });
         return fragmentOnboardBinding.getRoot();
@@ -74,19 +77,28 @@ public class OnBoardFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.NEXT)) {
-//                if (fragmentOnboardBinding.appCompatButtonNext.getText().toString().equals(getResources().getString(R.string.next)))
-//                    fragmentOnboardBinding.imageSlider.setCurrentPagePosition(fragmentOnboardBinding.imageSlider.getCurrentPagePosition() + 1);
-//                else {
-//                    UserHelper.getInstance(context).addIsFirst(true);
-//                    MovementHelper.startActivityBase(context, CountriesFragment.class.getName(), null,null);
-//                }
-//            } else if (((Mutable) o).message.equals(Constants.BOARD)) {
-//                viewModel.getOnBoardAdapter().updateData(((BoardResponse) ((Mutable) o).object).getOnBoardList());
-//                viewModel.setupSlider(fragmentOnboardBinding.imageSlider);
-//                if (viewModel.getOnBoardAdapter().pagerList.size() == 1)
-//                    fragmentOnboardBinding.appCompatButtonNext.setText(getResources().getString(R.string.startApp));
-//            }
+            switch (((Mutable) o).message) {
+                case Constants.NEXT:
+                    fragmentOnboardBinding.imageSlider.setCurrentPagePosition(fragmentOnboardBinding.imageSlider.getCurrentPagePosition() + 1);
+                    if (fragmentOnboardBinding.imageSlider.getCurrentPagePosition() == viewModel.getOnBoardAdapter().pagerList.size() - 1) {
+                        fragmentOnboardBinding.startApp.setVisibility(View.VISIBLE);
+                        fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
+                    } else
+                        fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.VISIBLE);
+                    break;
+                case Constants.START_APP:
+                    MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                    UserHelper.getInstance(context).addIsFirst(true);
+                    break;
+                case Constants.BOARD:
+                    viewModel.getOnBoardAdapter().updateData(((BoardResponse) ((Mutable) o).object).getOnBoardList());
+                    viewModel.setupSlider(fragmentOnboardBinding.imageSlider);
+                    if (viewModel.getOnBoardAdapter().pagerList.size() == 1) {
+                        fragmentOnboardBinding.appCompatButtonNext.setVisibility(View.GONE);
+                        fragmentOnboardBinding.startApp.setVisibility(View.VISIBLE);
+                    }
+                    break;
+            }
         });
 
     }

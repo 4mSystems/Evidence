@@ -4,8 +4,8 @@ package grand.app.akar.activity;
 import androidx.lifecycle.MutableLiveData;
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
-import grand.app.akar.connection.Api;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -15,22 +15,23 @@ import javax.inject.Provider;
 public final class MainActivity_MembersInjector implements MembersInjector<MainActivity> {
   private final Provider<MutableLiveData<Mutable>> liveDataProvider;
 
-  private final Provider<Api> apiProvider;
+  private final Provider<HomeViewModel> viewModelProvider;
 
   public MainActivity_MembersInjector(Provider<MutableLiveData<Mutable>> liveDataProvider,
-      Provider<Api> apiProvider) {
+      Provider<HomeViewModel> viewModelProvider) {
     this.liveDataProvider = liveDataProvider;
-    this.apiProvider = apiProvider;
+    this.viewModelProvider = viewModelProvider;
   }
 
   public static MembersInjector<MainActivity> create(
-      Provider<MutableLiveData<Mutable>> liveDataProvider, Provider<Api> apiProvider) {
-    return new MainActivity_MembersInjector(liveDataProvider, apiProvider);}
+      Provider<MutableLiveData<Mutable>> liveDataProvider,
+      Provider<HomeViewModel> viewModelProvider) {
+    return new MainActivity_MembersInjector(liveDataProvider, viewModelProvider);}
 
   @Override
   public void injectMembers(MainActivity instance) {
     injectLiveData(instance, liveDataProvider.get());
-    injectApi(instance, apiProvider.get());
+    injectViewModel(instance, viewModelProvider.get());
   }
 
   @InjectedFieldSignature("grand.app.akar.activity.MainActivity.liveData")
@@ -38,8 +39,8 @@ public final class MainActivity_MembersInjector implements MembersInjector<MainA
     instance.liveData = liveData;
   }
 
-  @InjectedFieldSignature("grand.app.akar.activity.MainActivity.api")
-  public static void injectApi(MainActivity instance, Api api) {
-    instance.api = api;
+  @InjectedFieldSignature("grand.app.akar.activity.MainActivity.viewModel")
+  public static void injectViewModel(MainActivity instance, HomeViewModel viewModel) {
+    instance.viewModel = viewModel;
   }
 }

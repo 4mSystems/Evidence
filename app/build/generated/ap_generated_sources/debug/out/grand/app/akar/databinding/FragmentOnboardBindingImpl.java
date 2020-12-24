@@ -19,9 +19,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback12;
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback4 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback11 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -116,15 +116,15 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback3);
-            this.startApp.setOnClickListener(mCallback4);
+            this.appCompatButtonNext.setOnClickListener(mCallback11);
+            this.startApp.setOnClickListener(mCallback12);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // onBoardViewModels
                 grand.app.akar.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
@@ -137,11 +137,11 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
                 if (onBoardViewModelsJavaLangObjectNull) {
 
 
-                    onBoardViewModels.toNext();
+                    onBoardViewModels.toLogin();
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // onBoardViewModels
                 grand.app.akar.pages.splash.SplashViewModel onBoardViewModels = mOnBoardViewModels;
