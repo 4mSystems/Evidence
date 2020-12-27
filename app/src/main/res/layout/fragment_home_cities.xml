@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.ads.viewModels.AdsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <grand.app.akar.customViews.views.CustomTextViewMedium
+            android:id="@+id/libya_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20h"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:gravity="center"
+            android:text="@string/libya_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <grand.app.akar.customViews.views.CustomTextViewMedium
+            android:id="@+id/btn_diff_locations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8h"
+            android:layout_marginEnd="@dimen/dp50w"
+            android:layout_marginStart="@dimen/dp50w"
+            android:background="@drawable/corner_view_primary_yellow"
+            android:gravity="center"
+            android:padding="@dimen/dp8h"
+            android:text="@string/cities_home_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/libya_name" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/google_base_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:contentDescription="@string/home_search_hint"
+            android:onClick="@{()-> viewmodel.reCenterToCurrentLocation()}"
+            app:backgroundTint="@color/white"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/colorPrimaryDark"
+            app:srcCompat="@drawable/ic_google_base_location"
+            app:tint="@color/colorPrimaryDark" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

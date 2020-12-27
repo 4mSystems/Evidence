@@ -4,8 +4,47 @@ import com.google.gson.annotations.SerializedName;
 
 public class HomeData {
 
-	@SerializedName("image")
-	private String image;
+	@SerializedName("floor_no")
+	private String floorNo;
+
+	@SerializedName("total_area")
+	private String totalArea;
+
+	@SerializedName("created_at")
+	private String createdAt;
+
+	@SerializedName("doc_type")
+	private String docType;
+
+	@SerializedName("type")
+	private String type;
+
+	@SerializedName("bathroom_no")
+	private String bathroomNo;
+
+	@SerializedName("premium")
+	private String premium;
+
+	@SerializedName("price")
+	private String price;
+
+	@SerializedName("listing_num")
+	private String listingNum;
+
+	@SerializedName("room_no")
+	private String roomNo;
+
+	@SerializedName("id")
+	private int id;
+
+	@SerializedName("payment_method")
+	private String paymentMethod;
+
+	@SerializedName("lat")
+	private String lat;
+
+	@SerializedName("area")
+	private String area;
 
 	@SerializedName("address")
 	private String address;
@@ -13,85 +52,130 @@ public class HomeData {
 	@SerializedName("lng")
 	private String lng;
 
-	@SerializedName("distance")
-	private String distance;
+	@SerializedName("categories_id")
+	private int categoriesId;
 
-	@SerializedName("description")
-	private String description;
+	@SerializedName("listing_type")
+	private int listingType;
 
-	@SerializedName("delegate_count")
-	private int delegateCount;
+	@SerializedName("floor_area")
+	private String floorArea;
 
-	@SerializedName("orders_count")
-	private int ordersCount;
+	@SerializedName("kitchen_no")
+	private String kitchenNo;
 
-	@SerializedName("is_delegate_subscribe")
-	private int isDelegateSubscribe;
+	@SerializedName("building_year")
+	private String buildingYear;
 
-	@SerializedName("rate")
-	private String rate;
+	@SerializedName("user_id")
+	private String userId;
 
-	@SerializedName("name")
-	private String name;
+	@SerializedName("default_img")
+	private DefaultImg defaultImg;
 
-	@SerializedName("id")
-	private int id;
+	@SerializedName("status")
+	private String status;
 
-	@SerializedName("cover_image")
-	private String coverImage;
+	@SerializedName("city_id")
+	private String cityId;
 
-	@SerializedName("lat")
-	private String lat;
-
-	public String getImage(){
-		return image;
+	public String getFloorNo() {
+		return floorNo;
 	}
 
-	public String getAddress(){
-		return address;
+	public String getTotalArea() {
+		return totalArea;
 	}
 
-	public String getLng(){
-		return lng;
+	public String getCreatedAt() {
+		return createdAt;
 	}
 
-	public String getDistance(){
-		return distance;
+	public String getDocType() {
+		return docType;
 	}
 
-	public String getDescription(){
-		return description;
+	public String getType() {
+		return type;
 	}
 
-	public int getDelegateCount(){
-		return delegateCount;
+	public String getBathroomNo() {
+		return bathroomNo;
 	}
 
-	public int getOrdersCount(){
-		return ordersCount;
+	public String getPremium() {
+		return premium;
 	}
 
-	public int getIsDelegateSubscribe(){
-		return isDelegateSubscribe;
+	public String getPrice() {
+		return price;
 	}
 
-	public String getRate(){
-		return rate;
+	public String getListingNum() {
+		return listingNum;
 	}
 
-	public String getName(){
-		return name;
+	public String getRoomNo() {
+		return roomNo;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public String getCoverImage(){
-		return coverImage;
+	public String getPaymentMethod() {
+		return paymentMethod;
 	}
 
-	public String getLat(){
+	public String getLat() {
 		return lat;
+	}
+
+	public String getArea() {
+		return area;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public String getLng() {
+		return lng;
+	}
+
+	public int getCategoriesId() {
+		return categoriesId;
+	}
+
+	public int getListingType() {
+		return listingType;
+	}
+
+	public String getFloorArea() {
+		return floorArea;
+	}
+
+	public String getKitchenNo() {
+		return kitchenNo;
+	}
+
+	public String getBuildingYear() {
+		return buildingYear;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public DefaultImg getDefaultImg() {
+		return defaultImg;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public String getCityId() {
+		return cityId;
 	}
 }

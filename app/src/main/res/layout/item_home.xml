@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -15,7 +14,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="@dimen/dp7w"
         app:cardElevation="2dp"
         app:cardUseCompatPadding="true">
 
@@ -25,71 +23,153 @@
             android:layout_marginBottom="@dimen/dp8h"
             android:onClick="@{() -> itemHomeViewModel.itemAction()}">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/img_home_item"
-                android:layout_width="@dimen/dp50w"
-                android:layout_height="@dimen/dp50h"
+                android:layout_width="@dimen/dp100w"
+                android:layout_height="@dimen/dp100h"
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp13h"
-                app:imageUrl="@{itemHomeViewModel.image}"
+                android:layout_marginBottom="@dimen/dp8h"
+                android:src="@drawable/holo"
+                app:imageUrl="@{itemHomeViewModel.homeData.defaultImg.media}"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="@dimen/dp8h" />
 
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_home_item"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginEnd="@dimen/dp6w"
                 android:ellipsize="end"
+                android:hint="@{itemHomeViewModel.title}"
                 android:lines="1"
-                android:text="@{itemHomeViewModel.homeData.name}"
                 android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
-                app:layout_constraintEnd_toStartOf="@+id/distance"
+                app:layout_constraintEnd_toStartOf="@+id/tv_home_distance"
                 app:layout_constraintStart_toEndOf="@+id/img_home_item"
                 app:layout_constraintTop_toTopOf="@+id/img_home_item" />
 
-            <grand.app.akar.customViews.views.CustomTextViewMedium
+            <grand.app.akar.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_home_distance"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@{itemHomeViewModel.homeData.distance}"
-                android:textAlignment="viewStart"
+                android:layout_height="@dimen/dp18h"
                 android:layout_marginEnd="@dimen/dp6w"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/medium_color"
-                app:layout_constraintBottom_toBottomOf="@id/distance"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp4w"
+                android:paddingEnd="@dimen/dp4w"
+                android:text="@{itemHomeViewModel.homeData.createdAt}"
+                android:textColor="@color/colordark"
+                android:textSize="@dimen/sp10"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/distance" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/distance"
-                android:layout_width="@dimen/dp12w"
-                android:layout_height="@dimen/dp12h"
-                android:src="@drawable/ic_distance"
-                app:layout_constraintEnd_toStartOf="@+id/tv_home_distance"
-                app:layout_constraintBottom_toBottomOf="@id/tv_home_item"
                 app:layout_constraintTop_toTopOf="@+id/img_home_item" />
 
-            <grand.app.akar.customViews.views.CustomTextViewMedium
+            <grand.app.akar.customViews.views.CustomTextViewRegular
                 android:id="@+id/tv_home_desc"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp6w"
-                android:text="@{itemHomeViewModel.homeData.description}"
+                android:text="@{itemHomeViewModel.homeData.type.equals(`0`)?itemHomeViewModel.homeData.price.concat(@string/rent):itemHomeViewModel.homeData.price.concat(@string/sell)}"
                 android:textAlignment="viewStart"
-                android:lines="2"
-                android:ellipsize="end"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                android:textColor="@color/medium_color"
+                android:textColor="@color/colordark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/img_home_item"
                 app:layout_constraintTop_toBottomOf="@id/tv_home_item" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_building"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:drawableStart="@drawable/ic_villa"
+                android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.area.concat(@string/meter)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toStartOf="@+id/tv_beds"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_beds"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp2w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:drawableStart="@drawable/ic_bed_with_two_pillows_bottom_view"
+                android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.roomNo!=null ?itemHomeViewModel.homeData.roomNo.concat(@string/room):``}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                android:visibility="@{itemHomeViewModel.homeData.roomNo!=null?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toStartOf="@+id/tv_path"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_building"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_path"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp2w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:drawableStart="@drawable/ic_bathroom"
+                android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.bathroomNo!=null ?itemHomeViewModel.homeData.bathroomNo.concat(@string/bath):``}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                android:visibility="@{itemHomeViewModel.homeData.bathroomNo!=null?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_beds"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_desc" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="tv_building,tv_beds,tv_path" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.address}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toBottomOf="@id/br10" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

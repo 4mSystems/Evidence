@@ -14,7 +14,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.distance, 6);
+        sViewsWithIds.put(R.id.br10, 10);
     }
     // views
     @NonNull
@@ -29,24 +29,32 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
     // Inverse Binding Event Handlers
 
     public ItemHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private ItemHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[2]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
+            , (androidx.constraintlayout.widget.Barrier) bindings[10]
+            , (com.makeramen.roundedimageview.RoundedImageView) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[5]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[4]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[9]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
             );
         this.imgHomeItem.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[1];
         this.mboundView1.setTag(null);
+        this.tvBeds.setTag(null);
+        this.tvBuilding.setTag(null);
         this.tvHomeDesc.setTag(null);
         this.tvHomeDistance.setTag(null);
         this.tvHomeItem.setTag(null);
+        this.tvLocation.setTag(null);
+        this.tvPath.setTag(null);
         setRootTag(root);
         // listeners
         mCallback93 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
@@ -124,23 +132,35 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String itemHomeViewModelHomeDataDistance = null;
-        java.lang.String itemHomeViewModelHomeDataDescription = null;
-        java.lang.String itemHomeViewModelImage = null;
-        grand.app.akar.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
-        java.lang.String itemHomeViewModelHomeDataName = null;
+        java.lang.String itemHomeViewModelHomeDataCreatedAt = null;
+        boolean itemHomeViewModelHomeDataRoomNoJavaLangObjectNull = false;
+        java.lang.String itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell = null;
+        java.lang.String itemHomeViewModelHomeDataBathroomNo = null;
+        java.lang.String itemHomeViewModelHomeDataArea = null;
+        int itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullViewVISIBLEViewGONE = 0;
+        java.lang.String itemHomeViewModelHomeDataRoomNo = null;
+        java.lang.String itemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoom = null;
+        int itemHomeViewModelHomeDataRoomNoJavaLangObjectNullViewVISIBLEViewGONE = 0;
+        java.lang.String itemHomeViewModelHomeDataTypeEqualsJavaLangString0ItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRentItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell = null;
+        java.lang.String itemHomeViewModelHomeDataDefaultImgMedia = null;
         grand.app.akar.pages.home.models.HomeData itemHomeViewModelHomeData = null;
+        java.lang.String itemHomeViewModelHomeDataAddress = null;
+        java.lang.String itemHomeViewModelTitle = null;
+        java.lang.String itemHomeViewModelHomeDataRoomNoJavaLangObjectNullItemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoomJavaLangString = null;
+        boolean itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull = false;
+        java.lang.String itemHomeViewModelHomeDataPrice = null;
+        java.lang.String itemHomeViewModelHomeDataAreaConcatTvBuildingAndroidStringMeter = null;
+        java.lang.String itemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBath = null;
+        grand.app.akar.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
+        java.lang.String itemHomeViewModelHomeDataType = null;
+        grand.app.akar.pages.home.models.DefaultImg itemHomeViewModelHomeDataDefaultImg = null;
+        java.lang.String itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullItemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBathJavaLangString = null;
+        boolean itemHomeViewModelHomeDataTypeEqualsJavaLangString0 = false;
+        java.lang.String itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRent = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
-            if ((dirtyFlags & 0x5L) != 0) {
-
-                    if (itemHomeViewModel != null) {
-                        // read itemHomeViewModel.image
-                        itemHomeViewModelImage = itemHomeViewModel.image;
-                    }
-            }
 
                 if (itemHomeViewModel != null) {
                     // read itemHomeViewModel.homeData
@@ -149,31 +169,152 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
 
 
                 if (itemHomeViewModelHomeData != null) {
-                    // read itemHomeViewModel.homeData.distance
-                    itemHomeViewModelHomeDataDistance = itemHomeViewModelHomeData.getDistance();
-                    // read itemHomeViewModel.homeData.description
-                    itemHomeViewModelHomeDataDescription = itemHomeViewModelHomeData.getDescription();
-                    // read itemHomeViewModel.homeData.name
-                    itemHomeViewModelHomeDataName = itemHomeViewModelHomeData.getName();
+                    // read itemHomeViewModel.homeData.createdAt
+                    itemHomeViewModelHomeDataCreatedAt = itemHomeViewModelHomeData.getCreatedAt();
+                    // read itemHomeViewModel.homeData.bathroomNo
+                    itemHomeViewModelHomeDataBathroomNo = itemHomeViewModelHomeData.getBathroomNo();
+                    // read itemHomeViewModel.homeData.area
+                    itemHomeViewModelHomeDataArea = itemHomeViewModelHomeData.getArea();
+                    // read itemHomeViewModel.homeData.roomNo
+                    itemHomeViewModelHomeDataRoomNo = itemHomeViewModelHomeData.getRoomNo();
+                    // read itemHomeViewModel.homeData.address
+                    itemHomeViewModelHomeDataAddress = itemHomeViewModelHomeData.getAddress();
+                    // read itemHomeViewModel.homeData.type
+                    itemHomeViewModelHomeDataType = itemHomeViewModelHomeData.getType();
+                    // read itemHomeViewModel.homeData.defaultImg
+                    itemHomeViewModelHomeDataDefaultImg = itemHomeViewModelHomeData.getDefaultImg();
                 }
+
+
+                // read itemHomeViewModel.homeData.bathroomNo != null
+                itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull = (itemHomeViewModelHomeDataBathroomNo) != (null);
+                // read itemHomeViewModel.homeData.roomNo != null
+                itemHomeViewModelHomeDataRoomNoJavaLangObjectNull = (itemHomeViewModelHomeDataRoomNo) != (null);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull) {
+                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x800L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemHomeViewModelHomeDataRoomNoJavaLangObjectNull) {
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                        dirtyFlags |= 0x200L;
+                }
+            }
+                if (itemHomeViewModelHomeDataArea != null) {
+                    // read itemHomeViewModel.homeData.area.concat(@android:string/meter)
+                    itemHomeViewModelHomeDataAreaConcatTvBuildingAndroidStringMeter = itemHomeViewModelHomeDataArea.concat(tvBuilding.getResources().getString(R.string.meter));
+                }
+                if (itemHomeViewModelHomeDataType != null) {
+                    // read itemHomeViewModel.homeData.type.equals("0")
+                    itemHomeViewModelHomeDataTypeEqualsJavaLangString0 = itemHomeViewModelHomeDataType.equals("0");
+                }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemHomeViewModelHomeDataTypeEqualsJavaLangString0) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+                if (itemHomeViewModelHomeDataDefaultImg != null) {
+                    // read itemHomeViewModel.homeData.defaultImg.media
+                    itemHomeViewModelHomeDataDefaultImgMedia = itemHomeViewModelHomeDataDefaultImg.getMedia();
+                }
+
+
+                // read itemHomeViewModel.homeData.bathroomNo != null ? View.VISIBLE : View.GONE
+                itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullViewVISIBLEViewGONE = ((itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read itemHomeViewModel.homeData.roomNo != null ? View.VISIBLE : View.GONE
+                itemHomeViewModelHomeDataRoomNoJavaLangObjectNullViewVISIBLEViewGONE = ((itemHomeViewModelHomeDataRoomNoJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemHomeViewModel != null) {
+                        // read itemHomeViewModel.title
+                        itemHomeViewModelTitle = itemHomeViewModel.title;
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x5L) != 0) {
+
+        if ((dirtyFlags & 0x400L) != 0) {
+
+                if (itemHomeViewModelHomeDataRoomNo != null) {
+                    // read itemHomeViewModel.homeData.roomNo.concat(@android:string/room)
+                    itemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoom = itemHomeViewModelHomeDataRoomNo.concat(tvBeds.getResources().getString(R.string.room));
+                }
+        }
+        if ((dirtyFlags & 0x180L) != 0) {
+
+                if (itemHomeViewModelHomeData != null) {
+                    // read itemHomeViewModel.homeData.price
+                    itemHomeViewModelHomeDataPrice = itemHomeViewModelHomeData.getPrice();
+                }
+
+            if ((dirtyFlags & 0x80L) != 0) {
+
+                    if (itemHomeViewModelHomeDataPrice != null) {
+                        // read itemHomeViewModel.homeData.price.concat(@android:string/sell)
+                        itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell = itemHomeViewModelHomeDataPrice.concat(tvHomeDesc.getResources().getString(R.string.sell));
+                    }
+            }
+            if ((dirtyFlags & 0x100L) != 0) {
+
+                    if (itemHomeViewModelHomeDataPrice != null) {
+                        // read itemHomeViewModel.homeData.price.concat(@android:string/rent)
+                        itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRent = itemHomeViewModelHomeDataPrice.concat(tvHomeDesc.getResources().getString(R.string.rent));
+                    }
+            }
+        }
+        if ((dirtyFlags & 0x1000L) != 0) {
+
+                if (itemHomeViewModelHomeDataBathroomNo != null) {
+                    // read itemHomeViewModel.homeData.bathroomNo.concat(@android:string/bath)
+                    itemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBath = itemHomeViewModelHomeDataBathroomNo.concat(tvPath.getResources().getString(R.string.bath));
+                }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read itemHomeViewModel.homeData.type.equals("0") ? itemHomeViewModel.homeData.price.concat(@android:string/rent) : itemHomeViewModel.homeData.price.concat(@android:string/sell)
+                itemHomeViewModelHomeDataTypeEqualsJavaLangString0ItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRentItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell = ((itemHomeViewModelHomeDataTypeEqualsJavaLangString0) ? (itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRent) : (itemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell));
+                // read itemHomeViewModel.homeData.roomNo != null ? itemHomeViewModel.homeData.roomNo.concat(@android:string/room) : ""
+                itemHomeViewModelHomeDataRoomNoJavaLangObjectNullItemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoomJavaLangString = ((itemHomeViewModelHomeDataRoomNoJavaLangObjectNull) ? (itemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoom) : (""));
+                // read itemHomeViewModel.homeData.bathroomNo != null ? itemHomeViewModel.homeData.bathroomNo.concat(@android:string/bath) : ""
+                itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullItemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBathJavaLangString = ((itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull) ? (itemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBath) : (""));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            grand.app.akar.base.ApplicationBinding.loadImage(this.imgHomeItem, itemHomeViewModelImage);
+            grand.app.akar.base.ApplicationBinding.loadImage(this.imgHomeItem, itemHomeViewModelHomeDataDefaultImgMedia);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvBeds, itemHomeViewModelHomeDataRoomNoJavaLangObjectNullItemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoomJavaLangString);
+            this.tvBeds.setVisibility(itemHomeViewModelHomeDataRoomNoJavaLangObjectNullViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvBuilding, itemHomeViewModelHomeDataAreaConcatTvBuildingAndroidStringMeter);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeDesc, itemHomeViewModelHomeDataTypeEqualsJavaLangString0ItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringRentItemHomeViewModelHomeDataPriceConcatTvHomeDescAndroidStringSell);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeDistance, itemHomeViewModelHomeDataCreatedAt);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvLocation, itemHomeViewModelHomeDataAddress);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPath, itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullItemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBathJavaLangString);
+            this.tvPath.setVisibility(itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.mboundView1.setOnClickListener(mCallback93);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeDesc, itemHomeViewModelHomeDataDescription);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeDistance, itemHomeViewModelHomeDataDistance);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeItem, itemHomeViewModelHomeDataName);
+            this.tvHomeItem.setHint(itemHomeViewModelTitle);
         }
     }
     // Listener Stub Implementations
@@ -200,6 +341,16 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         flag 0 (0x1L): itemHomeViewModel
         flag 1 (0x2L): itemHomeViewModel.homeData
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemHomeViewModel.homeData.bathroomNo != null ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemHomeViewModel.homeData.bathroomNo != null ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): itemHomeViewModel.homeData.roomNo != null ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): itemHomeViewModel.homeData.roomNo != null ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): itemHomeViewModel.homeData.type.equals("0") ? itemHomeViewModel.homeData.price.concat(@android:string/rent) : itemHomeViewModel.homeData.price.concat(@android:string/sell)
+        flag 8 (0x9L): itemHomeViewModel.homeData.type.equals("0") ? itemHomeViewModel.homeData.price.concat(@android:string/rent) : itemHomeViewModel.homeData.price.concat(@android:string/sell)
+        flag 9 (0xaL): itemHomeViewModel.homeData.roomNo != null ? itemHomeViewModel.homeData.roomNo.concat(@android:string/room) : ""
+        flag 10 (0xbL): itemHomeViewModel.homeData.roomNo != null ? itemHomeViewModel.homeData.roomNo.concat(@android:string/room) : ""
+        flag 11 (0xcL): itemHomeViewModel.homeData.bathroomNo != null ? itemHomeViewModel.homeData.bathroomNo.concat(@android:string/bath) : ""
+        flag 12 (0xdL): itemHomeViewModel.homeData.bathroomNo != null ? itemHomeViewModel.homeData.bathroomNo.concat(@android:string/bath) : ""
     flag mapping end*/
     //end
 }

@@ -15,6 +15,7 @@ import grand.app.akar.R;
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.adapters.HomeAdapter;
+import grand.app.akar.pages.home.adapters.HomeCategoriesAdapter;
 import grand.app.akar.repository.HomeRepository;
 import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
@@ -22,21 +23,23 @@ import io.reactivex.disposables.CompositeDisposable;
 public class HomeViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     HomeRepository homeRepository;
-    private HomeAdapter homeAdapter;
+    HomeAdapter homeAdapter;
+    HomeCategoriesAdapter categoriesAdapter;
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
         homeAdapter = new HomeAdapter();
+        categoriesAdapter = new HomeCategoriesAdapter();
         this.homeRepository = homeRepository;
         this.liveData = new MutableLiveData<>();
         homeRepository.setLiveData(liveData);
     }
 
-    public void getHome(String url) {
-        compositeDisposable.add(homeRepository.getHome(url));
+    public void getListing() {
+        compositeDisposable.add(homeRepository.getHome(getPassingObject().getId(), getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId()));
     }
 
 
@@ -87,6 +90,10 @@ public class HomeViewModel extends BaseViewModel {
             return false;
     }
 
+    public HomeCategoriesAdapter getCategoriesAdapter() {
+        return categoriesAdapter;
+    }
+
     public void toNewAd() {
         liveData.setValue(new Mutable(Constants.MENU_ADD_AD));
     }
@@ -102,4 +109,13 @@ public class HomeViewModel extends BaseViewModel {
     public void filpCard() {
         liveData.setValue(new Mutable(Constants.FLIP_CARD));
     }
+
+    public void changeMapStyle() {
+        liveData.setValue(new Mutable(Constants.MAP_STYLE));
+    }
+
+    public void reCenterToCurrentLocation() {
+        liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
+    }
+
 }

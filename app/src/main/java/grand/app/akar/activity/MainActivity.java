@@ -3,7 +3,6 @@ package grand.app.akar.activity;
 import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
@@ -13,13 +12,11 @@ import grand.app.akar.R;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.ParentActivity;
-import grand.app.akar.connection.Api;
 import grand.app.akar.customViews.actionbar.HomeActionBarView;
 import grand.app.akar.databinding.ActivityMainBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.AdsInfoFragment;
-import grand.app.akar.pages.ads.AkarLocationsMapFragment;
-import grand.app.akar.pages.home.HomeFragment;
+import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
 import grand.app.akar.utils.Constants;
@@ -42,18 +39,18 @@ public class MainActivity extends ParentActivity {
         activityMainBinding.setViewModel(viewModel);
         activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
         homeActionBarView = new HomeActionBarView(this);
-        MovementHelper.replaceFragment(this, new HomeFragment(), "");
+        MovementHelper.replaceFragment(this, new HomeCitiesFragment(), HomeCitiesFragment.class.getName());
         setEvents();
 
     }
 
     private void setEvents() {
-        viewModel.liveData.observe((LifecycleOwner) this, (Observer<Object>) o -> {
+        viewModel.liveData.observe(this, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (((Mutable) o).message) {
                 case Constants.MENU_HOME:
-                    MovementHelper.replaceFragment(this, new HomeFragment(), "");
+                    MovementHelper.replaceFragment(this, new HomeCitiesFragment(), "");
                     break;
                 case Constants.MENU_FAVORITE:
 //                    MovementHelper.replaceHomeFragment(context, new Favor());
@@ -66,5 +63,10 @@ public class MainActivity extends ParentActivity {
                     break;
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

@@ -1,202 +1,222 @@
 [
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_confirm_code.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_confirm_code.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_rest_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_rest_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_ad_images.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_ad_images.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_category.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_category.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forget_password.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_forget_password.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_home.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\report_dialog.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\report_dialog.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ads_attachments.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_ads_attachments.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_chat.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_chat.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_conversations.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_conversations.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_store_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_store_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_chat.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_chat.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_home_category.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_home_category.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_rest_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_rest_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_conversations.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_conversations.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_contact.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_login.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_login.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_login.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_chat.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/report_warning_dialog.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/report_warning_dialog.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_splash.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_ads_info.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_ads_info.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_grand.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\layout_grand.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_advertising_fee.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_advertising_fee.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_categories.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_categories.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_change_password.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_change_password.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_profile.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_current_ads.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_current_ads.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\report_warning_dialog.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\report_warning_dialog.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/activity_main.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home_map_layout.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\home_map_layout.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_base.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/activity_base.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads_attachments.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_ads_attachments.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/report_dialog.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/report_dialog.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_current_ads.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_current_ads.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_terms.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_terms.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_ads_main.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_my_ads_main.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_office_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_office_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_office_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_office_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_chat.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_chat.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_flat_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_flat_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_land_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_land_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_action_bar_back.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\layout_action_bar_back.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_categories.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_categories.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_city.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_city.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_profile.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_profile.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_akar_locations_map.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_locations_map.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_factory_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_factory_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_ad_images.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_ad_images.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_store_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_store_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_password.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_akar_location_cities.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_akar_location_cities.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_akar_location_cities.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_location_cities.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_villa_house_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_villa_house_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads_info.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_ads_info.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_about.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_about.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_terms.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_terms.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_onboard.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_my_ads.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_my_ads.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/layout_action_bar_home.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_home.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_base.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\activity_base.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_account.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_my_account.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_advertising_fee.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_advertising_fee.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_previous_ads.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_previous_ads.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\layout_action_bar_home.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\layout_action_bar_home.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_city.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_city.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_payment.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_payment.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/notify_item.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/notify_item.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_warehouse_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_warehouse_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_my_ads_main.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_my_ads_main.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home_list_layout.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\home_list_layout.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_akar_locations_map.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_akar_locations_map.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_upload_success.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_upload_success.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_register.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_register.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_conversation.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_conversation.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_conversation.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_conversation.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_home.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_home.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_category.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_category.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_payment.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_payment.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home_cities.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_home_cities.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_warehouse_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_warehouse_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_forget_password.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_forget_password.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_my_ads.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_my_ads.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_previous_ads.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_previous_ads.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_splash.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_onboard.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_onboard.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_grand.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/layout_grand.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_register.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_upload_success.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_upload_success.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\notify_item.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\notify_item.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/layout_action_bar_back.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_factory_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_factory_form.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_notifications.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_notifications.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_account.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_my_account.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_flat_form.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_add_flat_form.xml"
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_about.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_land_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_land_form.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_ads.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_ads.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_villa_house_form.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_villa_house_form.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_confirm_code.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_confirm_code.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_contact.xml"
     }
 ]

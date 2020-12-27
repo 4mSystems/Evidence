@@ -5,7 +5,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.IntentSender;
 import android.content.pm.PackageManager;
-import android.location.LocationManager;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -13,7 +15,6 @@ import androidx.core.app.ActivityCompat;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
@@ -22,13 +23,23 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.google.android.gms.location.SettingsClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.Task;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import grand.app.akar.R;
 import grand.app.akar.base.MyApplication;
+import grand.app.akar.customViews.views.CustomTextViewMedium;
+import grand.app.akar.pages.auth.models.cities.Cities;
+import grand.app.akar.pages.home.models.HomeData;
+
+import static grand.app.akar.utils.helper.MovementHelper.createDrawableFromView;
 
 public class MapHelper {
     public double driverLat, driverLng;
@@ -36,6 +47,7 @@ public class MapHelper {
     public Marker startMarker = null;
     public GoogleMap mMap;
     Context context;
+    public List<Marker> customMarker = new ArrayList<>();
 
     public MapHelper(GoogleMap mMap, Context context) {
         this.mMap = mMap;
@@ -43,8 +55,9 @@ public class MapHelper {
     }
 
     public MapHelper(Context context) {
-        this.context=context;
+        this.context = context;
     }
+
     public void getAddress(double lat, double lng, MapAddressInterface mapAddressInterface) {
         MapAddress mapAddress = new MapAddress((Activity) context, lat, lng);
         mapAddress.getAddressFromUrl(address -> {
@@ -74,7 +87,7 @@ public class MapHelper {
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         driverLat = position.latitude;
         driverLng = position.longitude;
-        addMarker(position, false);
+//        addMarker(position, false);
     }
 
     public void getLastKnownLocation() {
@@ -92,6 +105,41 @@ public class MapHelper {
                     }
                 });
 
+    }
+
+    public void addUserMarker(HomeData homeData) {
+        View markerCustom = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.places_custom_marker, null);
+        CustomTextViewMedium priceView = markerCustom.findViewById(R.id.price_map);
+        priceView.setText(homeData.getPrice());
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.draggable(false);
+        markerOptions.position(new LatLng(Double.parseDouble(homeData.getLat()), Double.parseDouble(homeData.getLng())));
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(context, markerCustom)));
+        Marker marker = mMap.addMarker(markerOptions);
+        marker.setTag(homeData.getId());
+        customMarker.add(marker);
+    }
+
+    public void addCitiesMarker(Cities cities) {
+        View markerCustom = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.cities_custom_marker, null);
+        CustomTextViewMedium priceView = markerCustom.findViewById(R.id.price_map);
+        priceView.setText(cities.getName());
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.draggable(false);
+        markerOptions.position(new LatLng(Double.parseDouble(cities.getLat()), Double.parseDouble(cities.getLng())));
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(context, markerCustom)));
+        Marker marker = mMap.addMarker(markerOptions);
+        marker.setTag(cities.getId());
+        customMarker.add(marker);
+    }
+
+    public int markerPosition(Marker marker) {
+        for (int i = 0; i < customMarker.size(); i++) {
+            if (marker.getTag() == customMarker.get(i).getTag()) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public void enableLocationDialog() {
@@ -125,4 +173,14 @@ public class MapHelper {
         locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         return locationRequest;
     }
+
+    public void changeMapStyle() {
+        if (mMap.getMapType() == GoogleMap.MAP_TYPE_SATELLITE) {
+            mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        } else {
+            mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+        }
+    }
+
+
 }

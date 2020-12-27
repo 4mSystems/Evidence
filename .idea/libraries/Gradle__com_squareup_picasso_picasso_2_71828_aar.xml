@@ -1,9 +1,7 @@
 <component name="libraryTable">
   <library name="Gradle: com.squareup.picasso:picasso:2.71828@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5ed9657c32372d7e34d8452e4a72d1d/jetified-picasso-2.71828/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5ed9657c32372d7e34d8452e4a72d1d/jetified-picasso-2.71828/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5ed9657c32372d7e34d8452e4a72d1d/jetified-picasso-2.71828/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3936d8a2f8250c5d18afceef3f9219d0/jetified-picasso-2.71828/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3936d8a2f8250c5d18afceef3f9219d0/jetified-picasso-2.71828/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3936d8a2f8250c5d18afceef3f9219d0/jetified-picasso-2.71828/res" />
@@ -11,6 +9,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26448fdbfef7f9672347b106b1066abe/jetified-picasso-2.71828/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26448fdbfef7f9672347b106b1066abe/jetified-picasso-2.71828/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/26448fdbfef7f9672347b106b1066abe/jetified-picasso-2.71828/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5a62576d0c7b88c1bbf042ad279645e/jetified-picasso-2.71828/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5a62576d0c7b88c1bbf042ad279645e/jetified-picasso-2.71828/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5a62576d0c7b88c1bbf042ad279645e/jetified-picasso-2.71828/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.71828/2843564e6bac90b1e125104d7c842c87a96a8ee9/picasso-2.71828-javadoc.jar!/" />

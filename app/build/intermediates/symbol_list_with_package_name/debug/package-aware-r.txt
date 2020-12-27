@@ -3135,8 +3135,17 @@ dimen mtrl_navigation_item_icon_size
 dimen mtrl_navigation_item_shape_horizontal_margin
 dimen mtrl_navigation_item_shape_vertical_margin
 dimen mtrl_progress_circular_inset
+dimen mtrl_progress_circular_inset_extra_small
+dimen mtrl_progress_circular_inset_medium
+dimen mtrl_progress_circular_inset_small
 dimen mtrl_progress_circular_radius
 dimen mtrl_progress_circular_size
+dimen mtrl_progress_circular_size_extra_small
+dimen mtrl_progress_circular_size_medium
+dimen mtrl_progress_circular_size_small
+dimen mtrl_progress_circular_track_thickness_extra_small
+dimen mtrl_progress_circular_track_thickness_medium
+dimen mtrl_progress_circular_track_thickness_small
 dimen mtrl_progress_indicator_full_rounded_corner_radius
 dimen mtrl_progress_track_thickness
 dimen mtrl_shape_corner_size_large_component
@@ -3455,7 +3464,7 @@ drawable corner_view_primary_accept
 drawable corner_view_primary_dark
 drawable corner_view_primary_dark_code
 drawable corner_view_primary_gray
-drawable corner_view_primary_reject
+drawable corner_view_primary_yellow
 drawable cost
 drawable del_icon
 drawable design_bottom_navigation_item_background
@@ -3753,6 +3762,7 @@ drawable ic_clock_black_24dp
 drawable ic_contact_location
 drawable ic_current
 drawable ic_current_location
+drawable ic_custom_map_marker
 drawable ic_delete
 drawable ic_distance
 drawable ic_driver_location
@@ -3763,8 +3773,10 @@ drawable ic_error_outline_white_24dp
 drawable ic_expansion_header_indicator_grey_24dp
 drawable ic_facebook
 drawable ic_filled_radio
+drawable ic_filter
 drawable ic_fund_ads
 drawable ic_google
+drawable ic_google_base_location
 drawable ic_home
 drawable ic_home_notification
 drawable ic_icon_favorites
@@ -3772,11 +3784,13 @@ drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_layout
 drawable ic_left_arrow
 drawable ic_living_room
 drawable ic_location
 drawable ic_lock
 drawable ic_man
+drawable ic_map
 drawable ic_menu
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
@@ -3792,6 +3806,7 @@ drawable ic_profile_camera
 drawable ic_remove
 drawable ic_search
 drawable ic_send
+drawable ic_sort
 drawable ic_special_pormote
 drawable ic_swap_vert_24dp
 drawable ic_time
@@ -3850,6 +3865,7 @@ drawable notify_panel_notification_icon_bg
 drawable payment
 drawable phone
 drawable places_autocomplete_toolbar_shadow
+drawable places_custom_marker_background
 drawable places_powered_by_google_dark
 drawable places_powered_by_google_light
 drawable points
@@ -4078,6 +4094,7 @@ id cancel_action
 id cancel_button
 id card_list
 id card_map
+id cat_home_rc
 id cat_toggle
 id center
 id center_horizontal
@@ -4112,12 +4129,14 @@ id confirm_button
 id container
 id content
 id contentPanel
+id contiguous
 id coordinator
 id cos
 id counterclockwise
 id countryCodeHolder
 id custom
 id customPanel
+id custom_img
 id cut
 id dark
 id dataBinding
@@ -4143,7 +4162,7 @@ id direct
 id disableHome
 id disablePostScroll
 id disableScroll
-id distance
+id disjoint
 id dragDown
 id dragEnd
 id dragLeft
@@ -4185,12 +4204,15 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id frame_to_list
 id furniture_toggle
 id garage_toggle
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
+id google_base_location
+id google_map_style
 id graph
 id graph_wrap
 id group_divider
@@ -4214,6 +4236,7 @@ id horizontal
 id hospital
 id hybrid
 id ib_close
+id ic_filter
 id icon
 id icon_group
 id icon_only
@@ -4288,6 +4311,7 @@ id largeLabel
 id layout
 id left
 id leftToRight
+id libya_name
 id light
 id line
 id line1
@@ -4296,6 +4320,7 @@ id linear
 id linear_flag_border
 id linear_flag_holder
 id listMode
+id list_buttons
 id list_item
 id listview
 id ll_base_action_bar_container
@@ -4303,6 +4328,10 @@ id ll_base_container
 id loading
 id lottie_layer_name
 id map
+id mapContainer
+id mapView
+id map_buttons
+id map_include
 id mapview
 id masked
 id material_clock_display
@@ -4433,6 +4462,7 @@ id pool_toggle
 id position
 id postLayout
 id preferenceDivider
+id price_map
 id progress_circular
 id progress_horizontal
 id radio
@@ -4471,7 +4501,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id seamless
 id searchContainer
 id search_badge
 id search_bar
@@ -4485,6 +4514,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
+id selected_rc
 id selection_type
 id shortcut
 id showCustom
@@ -4499,8 +4529,8 @@ id snackbar_text
 id snap
 id snapMargins
 id software
+id sort
 id spacer
-id spacing
 id special_register_info1
 id special_register_info2
 id special_register_info3
@@ -4790,6 +4820,7 @@ layout abc_tooltip
 layout activity_base
 layout activity_main
 layout bottom_nav_bar
+layout cities_custom_marker
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4831,6 +4862,7 @@ layout fragment_conversations
 layout fragment_current_ads
 layout fragment_forget_password
 layout fragment_home
+layout fragment_home_cities
 layout fragment_login
 layout fragment_my_account
 layout fragment_my_ads_main
@@ -4847,11 +4879,13 @@ layout home_list_layout
 layout home_map_layout
 layout incremental_view
 layout item_ad_images
+layout item_ads
 layout item_category
 layout item_chat
 layout item_city
 layout item_conversation
 layout item_home
+layout item_home_category
 layout item_my_ads
 layout layout_action_bar_back
 layout layout_action_bar_home
@@ -4931,6 +4965,7 @@ layout places_autocomplete_impl_fragment_overlay
 layout places_autocomplete_impl_powered_by_google
 layout places_autocomplete_impl_search_bar
 layout places_autocomplete_prediction
+layout places_custom_marker
 layout popup_photo_full
 layout report_dialog
 layout report_warning_dialog
@@ -5054,6 +5089,7 @@ string back_car_add
 string bank_name
 string bank_name_account
 string bank_number_account
+string bath
 string be_delegate
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
@@ -5091,6 +5127,7 @@ string choose_city
 string choose_country
 string choose_membrship
 string choose_membrship_input
+string cities_home_title
 string civil_car_add
 string clear_text_end_icon_content_description
 string client_reviews
@@ -5233,6 +5270,7 @@ string library_roundedimageview_libraryVersion
 string library_roundedimageview_libraryWebsite
 string library_roundedimageview_licenseId
 string library_roundedimageview_repositoryLink
+string libya_name
 string license_car_add
 string license_civil_image
 string license_civil_image_hint
@@ -5244,6 +5282,7 @@ string login_header
 string login_header_number
 string logout
 string manage_building
+string map_text
 string market
 string market_delegate_count
 string market_details
@@ -5269,6 +5308,7 @@ string menuConversations
 string menuFavorites
 string menuHome
 string message_hint
+string meter
 string mobile_data
 string mosque
 string msg_server_error
@@ -5390,6 +5430,7 @@ string report
 string report_desc
 string requested_dialog_title
 string rest
+string room
 string rooms_count
 string sac
 string save
@@ -5416,6 +5457,7 @@ string slider_desc3
 string slider_title1
 string slider_title2
 string slider_title3
+string sort
 string special_register
 string special_register_info2
 string special_register_info3
@@ -5988,12 +6030,12 @@ style ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Header_Tex
 style ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Spinner
 style ThemeOverlay_MaterialComponents_MaterialCalendar
 style ThemeOverlay_MaterialComponents_MaterialCalendar_Fullscreen
-style ThemeOverlay_MaterialComponents_MaterialTimePicker
 style ThemeOverlay_MaterialComponents_TextInputEditText
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox
 style ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense
+style ThemeOverlay_MaterialComponents_TimePicker
 style ThemeOverlay_MaterialComponents_TimePicker_Display
 style ThemeOverlay_MaterialComponents_Toolbar_Primary
 style ThemeOverlay_MaterialComponents_Toolbar_Surface
@@ -6125,6 +6167,9 @@ style Widget_MaterialComponents_Chip_Entry
 style Widget_MaterialComponents_Chip_Filter
 style Widget_MaterialComponents_ChipGroup
 style Widget_MaterialComponents_CircularProgressIndicator
+style Widget_MaterialComponents_CircularProgressIndicator_ExtraSmall
+style Widget_MaterialComponents_CircularProgressIndicator_Medium
+style Widget_MaterialComponents_CircularProgressIndicator_Small
 style Widget_MaterialComponents_CollapsingToolbar
 style Widget_MaterialComponents_CompoundButton_CheckBox
 style Widget_MaterialComponents_CompoundButton_RadioButton

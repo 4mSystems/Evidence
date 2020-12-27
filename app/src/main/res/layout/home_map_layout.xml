@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
 
-    <TextView
-        style="@style/Base.TextAppearance.AppCompat.Display1"
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/mapContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Map"
-        android:textColor="@color/white" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+</layout>

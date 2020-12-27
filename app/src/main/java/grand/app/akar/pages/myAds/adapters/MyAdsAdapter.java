@@ -92,7 +92,7 @@ public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> im
                 } else {
                     List<HomeData> filteredList = new ArrayList<>();
                     for (HomeData row : homeDataList) {
-                        if (row.getName().toLowerCase().contains(charString.toLowerCase())) {
+                        if (row.getPrice().toLowerCase().contains(charString.toLowerCase())) {
                             filteredList.add(row);
                         }
                     }

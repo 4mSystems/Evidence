@@ -90,6 +90,8 @@ import grand.app.akar.pages.conversations.ConversationsFragment_MembersInjector;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_Factory;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_MembersInjector;
+import grand.app.akar.pages.home.HomeCitiesFragment;
+import grand.app.akar.pages.home.HomeCitiesFragment_MembersInjector;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.home.HomeFragment_MembersInjector;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
@@ -390,6 +392,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public void inject(PaymentFragment paymentFragment) {
     injectPaymentFragment(paymentFragment);}
 
+  @Override
+  public void inject(HomeCitiesFragment homeCitiesFragment) {
+    injectHomeCitiesFragment(homeCitiesFragment);}
+
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
     return instance;
@@ -648,6 +654,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private PaymentFragment injectPaymentFragment(PaymentFragment instance) {
     PaymentFragment_MembersInjector.injectViewModel(instance, getPaymentViewModel());
+    return instance;
+  }
+
+  private HomeCitiesFragment injectHomeCitiesFragment(HomeCitiesFragment instance) {
+    HomeCitiesFragment_MembersInjector.injectViewModel(instance, getAdsViewModel());
     return instance;
   }
 

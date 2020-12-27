@@ -55,8 +55,9 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Me
         CategoriesData menuModel = categoriesDataList.get(position);
         ItemCategoryViewModel itemMenuViewModel = new ItemCategoryViewModel(menuModel);
         itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> {
+            notifyItemChanged(lastId);
             lastId = position;
-            notifyDataSetChanged();
+            notifyItemChanged(lastId);
         });
         if (lastId == position) {
             holder.itemMenuBinding.catToggle.setImageBitmap(AppHelper.convertVectorToBitMap(ResourceManager.getDrawable(R.drawable.ic_toggel_category)));

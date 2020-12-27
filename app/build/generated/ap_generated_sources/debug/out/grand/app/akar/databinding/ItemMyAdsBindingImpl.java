@@ -14,6 +14,7 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.tv_home_item, 3);
         sViewsWithIds.put(R.id.tv_home_distance, 4);
         sViewsWithIds.put(R.id.tv_home_desc, 5);
         sViewsWithIds.put(R.id.tv_building, 6);
@@ -58,7 +59,6 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[1];
         this.mboundView1.setTag(null);
-        this.tvHomeItem.setTag(null);
         setRootTag(root);
         // listeners
         mCallback84 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
@@ -136,21 +136,14 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String itemHomeViewModelImage = null;
         grand.app.akar.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
-        java.lang.String itemHomeViewModelHomeDataName = null;
+        grand.app.akar.pages.home.models.DefaultImg itemHomeViewModelHomeDataDefaultImg = null;
+        java.lang.String itemHomeViewModelHomeDataDefaultImgMedia = null;
         grand.app.akar.pages.home.models.HomeData itemHomeViewModelHomeData = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
-            if ((dirtyFlags & 0x5L) != 0) {
-
-                    if (itemHomeViewModel != null) {
-                        // read itemHomeViewModel.image
-                        itemHomeViewModelImage = itemHomeViewModel.image;
-                    }
-            }
 
                 if (itemHomeViewModel != null) {
                     // read itemHomeViewModel.homeData
@@ -159,25 +152,26 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
 
 
                 if (itemHomeViewModelHomeData != null) {
-                    // read itemHomeViewModel.homeData.name
-                    itemHomeViewModelHomeDataName = itemHomeViewModelHomeData.getName();
+                    // read itemHomeViewModel.homeData.defaultImg
+                    itemHomeViewModelHomeDataDefaultImg = itemHomeViewModelHomeData.getDefaultImg();
+                }
+
+
+                if (itemHomeViewModelHomeDataDefaultImg != null) {
+                    // read itemHomeViewModel.homeData.defaultImg.media
+                    itemHomeViewModelHomeDataDefaultImgMedia = itemHomeViewModelHomeDataDefaultImg.getMedia();
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            grand.app.akar.base.ApplicationBinding.loadImage(this.imgHomeItem, itemHomeViewModelImage);
+            grand.app.akar.base.ApplicationBinding.loadImage(this.imgHomeItem, itemHomeViewModelHomeDataDefaultImgMedia);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.mboundView1.setOnClickListener(mCallback84);
-        }
-        if ((dirtyFlags & 0x7L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvHomeItem, itemHomeViewModelHomeDataName);
         }
     }
     // Listener Stub Implementations

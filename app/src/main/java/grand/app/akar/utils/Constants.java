@@ -114,11 +114,11 @@ public class Constants {
     public static final String WARNING = "WARNING";
     public static final String PROFILE_DATA = "PROFILE_DATA";
     public static final String MY_POINTS = "MY_POINTS";
-    public static final String DESTINATION_LOCATION = "DESTINATION_LOCATION";
+    public static final String MAP_STYLE = "MAP_STYLE";
 
 
     public static final String REGISTER = "register";
-    public static final String DELIVERY_TIMES = "DELIVERY_TIMES";
+    public static final String CURRENT_LOCATION = "CURRENT_LOCATION";
 
 
     public static boolean DATA_CHANGED = false;

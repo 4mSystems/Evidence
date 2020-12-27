@@ -2,47 +2,57 @@ package grand.app.akar.pages.settings.models.settings;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
+import grand.app.akar.pages.ads.models.CategoriesData;
+
 public class SettingsData {
 
-	@SerializedName("second_phone")
-	private String secondPhone;
+    @SerializedName("second_phone")
+    private String secondPhone;
 
-	@SerializedName("lng")
-	private String lng;
+    @SerializedName("lng")
+    private String lng;
 
-	@SerializedName("phone")
-	private String phone;
+    @SerializedName("phone")
+    private String phone;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	@SerializedName("email")
-	private String email;
+    @SerializedName("email")
+    private String email;
 
-	@SerializedName("lat")
-	private String lat;
+    @SerializedName("lat")
+    private String lat;
+    @SerializedName("categories")
+    private List<CategoriesData> categoriesDataList;
 
-	public String getSecondPhone(){
-		return secondPhone;
-	}
+    public List<CategoriesData> getCategoriesDataList() {
+        return categoriesDataList;
+    }
 
-	public String getLng(){
-		return lng;
-	}
+    public String getSecondPhone() {
+        return secondPhone;
+    }
 
-	public String getPhone(){
-		return phone;
-	}
+    public String getLng() {
+        return lng;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getPhone() {
+        return phone;
+    }
 
-	public String getEmail(){
-		return email;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getLat(){
-		return lat;
-	}
+    public String getEmail() {
+        return email;
+    }
+
+    public String getLat() {
+        return lat;
+    }
 }

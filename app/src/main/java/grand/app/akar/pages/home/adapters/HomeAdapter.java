@@ -1,6 +1,7 @@
 package grand.app.akar.pages.home.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MenuView> impl
 
     public MutableLiveData<Integer> getLiveDataAdapter() {
         return liveDataAdapter;
+    }
+
+    public List<HomeData> getHomeDataListFiltered() {
+        return homeDataListFiltered;
     }
 
     @NonNull
@@ -95,7 +100,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MenuView> impl
                 } else {
                     List<HomeData> filteredList = new ArrayList<>();
                     for (HomeData row : homeDataList) {
-                        if (row.getName().toLowerCase().contains(charString.toLowerCase())) {
+                        if (row.getPrice().toLowerCase().contains(charString.toLowerCase())) {
                             filteredList.add(row);
                         }
                     }

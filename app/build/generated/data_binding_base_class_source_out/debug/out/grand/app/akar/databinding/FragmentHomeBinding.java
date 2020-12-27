@@ -7,29 +7,97 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import grand.app.akar.R;
+import grand.app.akar.customViews.views.CustomTextViewMedium;
+import grand.app.akar.customViews.views.CustomTextViewRegular;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
   @NonNull
+  public final CustomTextViewMedium btnDiffLocations;
+
+  @NonNull
   public final FrameLayout cardList;
 
   @NonNull
   public final FrameLayout cardMap;
 
+  @NonNull
+  public final RecyclerView catHomeRc;
+
+  @NonNull
+  public final FloatingActionButton frameToList;
+
+  @NonNull
+  public final FloatingActionButton googleBaseLocation;
+
+  @NonNull
+  public final FloatingActionButton googleMapStyle;
+
+  @NonNull
+  public final AppCompatImageView icFilter;
+
+  @NonNull
+  public final CustomTextViewMedium inputSearch;
+
+  @NonNull
+  public final MaterialCardView listButtons;
+
+  @NonNull
+  public final CustomTextViewRegular map;
+
+  @NonNull
+  public final ConstraintLayout mapButtons;
+
+  @NonNull
+  public final HomeMapLayoutBinding mapInclude;
+
+  @NonNull
+  public final RecyclerView selectedRc;
+
+  @NonNull
+  public final CustomTextViewRegular sort;
+
+  @NonNull
+  public final View v17;
+
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      FrameLayout cardList, FrameLayout cardMap) {
+      CustomTextViewMedium btnDiffLocations, FrameLayout cardList, FrameLayout cardMap,
+      RecyclerView catHomeRc, FloatingActionButton frameToList,
+      FloatingActionButton googleBaseLocation, FloatingActionButton googleMapStyle,
+      AppCompatImageView icFilter, CustomTextViewMedium inputSearch, MaterialCardView listButtons,
+      CustomTextViewRegular map, ConstraintLayout mapButtons, HomeMapLayoutBinding mapInclude,
+      RecyclerView selectedRc, CustomTextViewRegular sort, View v17) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnDiffLocations = btnDiffLocations;
     this.cardList = cardList;
     this.cardMap = cardMap;
+    this.catHomeRc = catHomeRc;
+    this.frameToList = frameToList;
+    this.googleBaseLocation = googleBaseLocation;
+    this.googleMapStyle = googleMapStyle;
+    this.icFilter = icFilter;
+    this.inputSearch = inputSearch;
+    this.listButtons = listButtons;
+    this.map = map;
+    this.mapButtons = mapButtons;
+    this.mapInclude = mapInclude;
+    this.selectedRc = selectedRc;
+    this.sort = sort;
+    this.v17 = v17;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

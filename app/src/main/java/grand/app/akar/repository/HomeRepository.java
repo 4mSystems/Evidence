@@ -32,8 +32,8 @@ public class HomeRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getHome(String url) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME + url, new Object(), HomeResponse.class,
+    public Disposable getHome(int cityId, int catId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.LISTING + cityId + "/" + catId, new Object(), HomeResponse.class,
                 Constants.HOME, true);
     }
 
@@ -41,8 +41,9 @@ public class HomeRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REGISTERED_SHOPS, new Object(), HomeResponse.class,
                 Constants.REGISTERED_SHOPS, true);
     }
+
     public Disposable subscribeAsDelegate(int shopId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE_AS_DELEGATE+shopId, new Object(), StatusMessage.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE_AS_DELEGATE + shopId, new Object(), StatusMessage.class,
                 Constants.SUBSCRIBE_AS_DELEGATE, true);
     }
 }

@@ -19,7 +19,6 @@ public class ItemCategoryViewModel extends BaseViewModel {
     }
 
     public void itemAction() {
-        //TODO Item Action with liveData
         getLiveData().setValue(Constants.MENu);
     }
 

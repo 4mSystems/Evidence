@@ -98,6 +98,9 @@ public class AdsViewModel extends BaseViewModel {
     public void toCategories() {
         liveData.setValue(new Mutable(Constants.CATEGORIES));
     }
+    public void reCenterToCurrentLocation() {
+        liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
+    }
 
     public void selectCity() {
         liveData.setValue(new Mutable(Constants.SELECT));

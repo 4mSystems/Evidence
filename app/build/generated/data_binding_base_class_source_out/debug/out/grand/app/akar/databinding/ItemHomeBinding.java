@@ -6,45 +6,64 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.makeramen.roundedimageview.RoundedImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
+import grand.app.akar.customViews.views.CustomTextViewRegular;
 import grand.app.akar.pages.home.viewModels.ItemHomeViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class ItemHomeBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView distance;
+  public final Barrier br10;
 
   @NonNull
-  public final CircleImageView imgHomeItem;
+  public final RoundedImageView imgHomeItem;
 
   @NonNull
-  public final CustomTextViewMedium tvHomeDesc;
+  public final CustomTextViewRegular tvBeds;
 
   @NonNull
-  public final CustomTextViewMedium tvHomeDistance;
+  public final CustomTextViewRegular tvBuilding;
+
+  @NonNull
+  public final CustomTextViewRegular tvHomeDesc;
+
+  @NonNull
+  public final CustomTextViewRegular tvHomeDistance;
 
   @NonNull
   public final CustomTextViewMedium tvHomeItem;
+
+  @NonNull
+  public final CustomTextViewRegular tvLocation;
+
+  @NonNull
+  public final CustomTextViewRegular tvPath;
 
   @Bindable
   protected ItemHomeViewModel mItemHomeViewModel;
 
   protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView distance, CircleImageView imgHomeItem, CustomTextViewMedium tvHomeDesc,
-      CustomTextViewMedium tvHomeDistance, CustomTextViewMedium tvHomeItem) {
+      Barrier br10, RoundedImageView imgHomeItem, CustomTextViewRegular tvBeds,
+      CustomTextViewRegular tvBuilding, CustomTextViewRegular tvHomeDesc,
+      CustomTextViewRegular tvHomeDistance, CustomTextViewMedium tvHomeItem,
+      CustomTextViewRegular tvLocation, CustomTextViewRegular tvPath) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.distance = distance;
+    this.br10 = br10;
     this.imgHomeItem = imgHomeItem;
+    this.tvBeds = tvBeds;
+    this.tvBuilding = tvBuilding;
     this.tvHomeDesc = tvHomeDesc;
     this.tvHomeDistance = tvHomeDistance;
     this.tvHomeItem = tvHomeItem;
+    this.tvLocation = tvLocation;
+    this.tvPath = tvPath;
   }
 
   public abstract void setItemHomeViewModel(@Nullable ItemHomeViewModel itemHomeViewModel);

@@ -15,7 +15,7 @@ public class URLS {
     public static final String FORGET_PASSWORD = "user/send-code";
     public static final String CHANGE_PASSWORD = "forget-password";
 
-    public final static String HOME = "delegate/get-shops?lat=";
+    public final static String LISTING = "listings/home/";
     //    public  final static String COMPANIES = "company/companies?category_id=5&lat=30.1341689&lng=31.3655877&city_id=1";
     public final static String UPDATE_PAYMENT = "user/update-payment";
     public final static String CARS_NATIONALS = "app/cars-nationals";

@@ -29,6 +29,8 @@ import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.chat.view.ChatFragment;
 import grand.app.akar.pages.conversations.ConversationsFragment;
+import grand.app.akar.pages.home.FragmentRentSheetDialog;
+import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
 import grand.app.akar.pages.myAds.CurrentAdsFragment;
@@ -120,6 +122,10 @@ public interface IApplicationComponent {
     void inject(MyAdsMainFragment myAdsMainFragment);
 
     void inject(PaymentFragment paymentFragment);
+
+    void inject(HomeCitiesFragment homeCitiesFragment);
+
+    void inject(FragmentRentSheetDialog fragmentRentSheetDialog);
 
     @Component.Builder
     interface Builder {

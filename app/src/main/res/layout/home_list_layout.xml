@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
 
-    <TextView
-        style="@style/Base.TextAppearance.AppCompat.Display1"
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
+    </data>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="List"
-        android:textColor="@color/white" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <grand.app.akar.customViews.views.CustomTextViewMedium
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ksdhlkshdflkhsdf"
+            android:textAppearance="@style/TextAppearance.AppCompat" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cat_home_rc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp4h"
+            app:adapter="@{viewmodel.homeAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:listitem="@layout/item_home" />
+
+    </FrameLayout>
+</layout>

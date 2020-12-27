@@ -32,7 +32,7 @@
                 android:layout_marginTop="@dimen/dp13h"
                 android:src="@drawable/holo"
                 app:riv_corner_radius="@dimen/dp8h"
-                app:imageUrl="@{itemHomeViewModel.image}"
+                app:imageUrl="@{itemHomeViewModel.homeData.defaultImg.media}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -46,7 +46,6 @@
                 android:ellipsize="end"
                 android:hint="فيلا للإيجار"
                 android:lines="1"
-                android:text="@{itemHomeViewModel.homeData.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"

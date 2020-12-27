@@ -94,14 +94,6 @@ public class ParentActivity extends AppCompatActivity implements
         registerReceiver(connectivityReceiver, intentFilter);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        // No Internet Dialog
-//        if (noInternetDialog != null) {
-//            noInternetDialog.destroy();
-//        }
-    }
 
     @Override
     protected void onStop() {
