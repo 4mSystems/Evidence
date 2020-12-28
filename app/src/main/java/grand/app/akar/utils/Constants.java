@@ -40,7 +40,7 @@ public class Constants {
     public final static String HIDE_PROGRESS = "hideProgress";
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
-    public final static String REGISTERED_SHOPS = "REGISTERED_SHOPS";
+    public final static String FAVORITES = "FAVORITES";
     public final static String FAILURE_CONNECTION = "failure_connection";
     public final static String AD_UPLOAD_ATTACH = "AD_UPLOAD_ATTACH";
 
@@ -123,13 +123,14 @@ public class Constants {
 
     public static boolean DATA_CHANGED = false;
 
-    public static final String LAT = "LAT";
-    public static final String LNG = "LNG";
-    public static final String PICKED_SUCCESSFULLY = "PICKED_SUCCESSFULLY";
-    public static final String ADDRESS = "ADDRESS";
-    public static final String CHECK_PROMO = "CHECK_PROMO";
-    public final static String PROMO_DIALOG = "PROMO_DIALOG";
-    public static final String CREATE_ORDER = "CREATE_ORDER";
+    public static final String SEARCH_LISTING_TYPE = "SEARCH_LISTING_TYPE";
+    public static final String RESULT_SEARCH_LISTING_TYPE = "RESULT_SEARCH_LISTING_TYPE";
+    public static final String REMOVE_FAVO = "REMOVE_FAVO";
+    public static final String REMOVE_ADD_FAVORITE = "REMOVE_ADD_FAVORITE";
+    public static final String MY_LISTING = "MY_LISTING";
+    public static final String MY_PREMIUM_ADS = "MY_PREMIUM_ADS";
+    public final static String REMOVE_AD = "REMOVE_AD";
+    public static final String GET_AD_DETAILS = "GET_AD_DETAILS";
     public static final String SAVED_LOCATIONS = "SAVED_LOCATIONS";
     public static final String CITY = "CITY";
     public static final String CONTACT = "CONTACT";

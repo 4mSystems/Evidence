@@ -8,6 +8,10 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_category.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_favorites_main.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_my_favorites_main.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -60,6 +64,10 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\report_warning_dialog.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_contact_favorites.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_contact_favorites.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home_map_layout.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\home_map_layout.xml"
     },
@@ -100,12 +108,12 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_ad_images.xml"
     },
     {
-        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_password.xml",
-        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
-    },
-    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_akar_location_cities.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_akar_location_cities.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_change_password.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_change_password.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ads_info.xml",
@@ -140,12 +148,20 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_payment.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_rent_dialog.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_ad_rent_dialog.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_add_warehouse_form.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_add_warehouse_form.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home_list_layout.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\home_list_layout.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_favorites.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\item_favorites.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_upload_success.xml",
@@ -184,6 +200,10 @@
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_register.xml"
     },
     {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ad_details.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_ad_details.xml"
+    },
+    {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\notify_item.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\notify_item.xml"
     },
@@ -194,6 +214,10 @@
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_my_account.xml",
         "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_my_account.xml"
+    },
+    {
+        "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_favorites.xml",
+        "source": "F:\\mostafa elnagar\\Akar\\app\\src\\main\\res\\layout\\fragment_favorites.xml"
     },
     {
         "merged": "F:\\mostafa elnagar\\Akar\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_about.xml",

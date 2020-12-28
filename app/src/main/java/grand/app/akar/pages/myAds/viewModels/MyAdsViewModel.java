@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.favorites.models.FavoriteRequest;
 import grand.app.akar.pages.myAds.adapters.MyAdsAdapter;
 import grand.app.akar.repository.AdsRepository;
 import grand.app.akar.utils.Constants;
@@ -27,17 +28,21 @@ public class MyAdsViewModel extends BaseViewModel {
         adsRepository.setLiveData(liveData);
     }
 
-    public void storeOrders() {
-//        compositeDisposable.add(marketRepository.storeOrders(getOrdersRequest()));
+    public void myListing(int type) {
+        compositeDisposable.add(adsRepository.getMyListing(type));
     }
 
+    public void myPremiumListing(int type) {
+        compositeDisposable.add(adsRepository.getMyPremiumListing(type));
+    }
+    public void removeAd(int listingId) {
+        // the parameter in the url is type send 0 for favorites and 1 for contacts
+        compositeDisposable.add(adsRepository.removeAd(listingId));
+    }
     public AdsRepository getAdsRepository() {
         return adsRepository;
     }
 
-    public void showOrderFilter() {
-        liveData.setValue(new Mutable(Constants.ORDER_FILTER));
-    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {

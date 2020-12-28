@@ -20,9 +20,9 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback57;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback54 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback56 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback57 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -169,8 +169,8 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.close1.setOnClickListener(mCallback54);
-            this.image1.setOnClickListener(mCallback53);
+            this.close1.setOnClickListener(mCallback57);
+            this.image1.setOnClickListener(mCallback56);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
@@ -187,23 +187,6 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                grand.app.akar.pages.ads.viewModels.ItemPublicOrderImagesViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.removeImage();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -218,6 +201,23 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
 
 
                     itemViewModel.itemAction();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                grand.app.akar.pages.ads.viewModels.ItemPublicOrderImagesViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.removeImage();
                 }
                 break;
             }

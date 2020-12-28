@@ -22,13 +22,13 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback55;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
     private final android.view.View.OnClickListener mCallback58;
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,10 +55,10 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         this.play.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback57 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback55 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback58 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback56 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback59 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback60 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback58 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback61 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -192,10 +192,10 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.close7.setOnClickListener(mCallback56);
-            this.confirmBtn.setOnClickListener(mCallback58);
-            this.image7.setOnClickListener(mCallback55);
-            this.play.setOnClickListener(mCallback57);
+            this.close7.setOnClickListener(mCallback59);
+            this.confirmBtn.setOnClickListener(mCallback61);
+            this.image7.setOnClickListener(mCallback58);
+            this.play.setOnClickListener(mCallback60);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -207,6 +207,23 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.removeVideo();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -255,23 +272,6 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
 
 
                     viewmodel.uploadAd();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.removeVideo();
                 }
                 break;
             }

@@ -3457,6 +3457,7 @@ drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable corner_view_auth
+drawable corner_view_gradient
 drawable corner_view_gray_background
 drawable corner_view_light
 drawable corner_view_points
@@ -3753,12 +3754,14 @@ drawable ic_bathroom
 drawable ic_bed_with_two_pillows_bottom_view
 drawable ic_call_white
 drawable ic_chat
+drawable ic_chat_bubbles_with_ellipsis
 drawable ic_check_white_24dp
 drawable ic_checked
 drawable ic_clear_black_24dp
 drawable ic_clear_white_24dp
 drawable ic_client
 drawable ic_clock_black_24dp
+drawable ic_close
 drawable ic_contact_location
 drawable ic_current
 drawable ic_current_location
@@ -3767,6 +3770,7 @@ drawable ic_delete
 drawable ic_distance
 drawable ic_driver_location
 drawable ic_email
+drawable ic_emergency_call
 drawable ic_empty_radio
 drawable ic_error
 drawable ic_error_outline_white_24dp
@@ -3801,6 +3805,7 @@ drawable ic_no_wifi_1
 drawable ic_no_wifi_2
 drawable ic_order_price
 drawable ic_pin
+drawable ic_pinned
 drawable ic_play
 drawable ic_profile_camera
 drawable ic_remove
@@ -4032,8 +4037,10 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id ad_desc
 id ad_images_rc
 id add
+id address
 id address_progress
 id adjust_height
 id adjust_width
@@ -4054,6 +4061,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
+id back
 id back_and_forth
 id barrier
 id baseline
@@ -4067,6 +4075,7 @@ id br10
 id br11
 id br2
 id br3
+id br4
 id br9
 id bt_customize
 id bt_holy_king
@@ -4090,6 +4099,7 @@ id btn_wifi_on
 id buildingYear
 id buttonPanel
 id cache_measures
+id call
 id cancel_action
 id cancel_button
 id card_list
@@ -4134,6 +4144,7 @@ id coordinator
 id cos
 id counterclockwise
 id countryCodeHolder
+id cover_image
 id custom
 id customPanel
 id custom_img
@@ -4148,11 +4159,14 @@ id decrement
 id default_activity_button
 id deltaRelative
 id dependency_ordering
+id desc
+id desc_text
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id details_card
 id dialog_body
 id dialog_button
 id dialog_header
@@ -4193,6 +4207,7 @@ id expansionLayoutHeader
 id fab
 id fade
 id fastscroll
+id favorite
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4322,11 +4337,13 @@ id linear_flag_holder
 id listMode
 id list_buttons
 id list_item
+id listing_type_sheet
 id listview
 id ll_base_action_bar_container
 id ll_base_container
 id loading
 id lottie_layer_name
+id main_favo_title
 id map
 id mapContainer
 id mapView
@@ -4462,15 +4479,19 @@ id pool_toggle
 id position
 id postLayout
 id preferenceDivider
+id price
 id price_map
 id progress_circular
 id progress_horizontal
 id radio
+id radioRent
+id radioSell
 id ratio
 id rectangle
 id rectangles
 id recycler_countryDialog
 id repeat
+id report
 id restart
 id reverse
 id reverseSawtooth
@@ -4516,6 +4537,7 @@ id select_dialog_listview
 id selected
 id selected_rc
 id selection_type
+id share
 id shortcut
 id showCustom
 id showHome
@@ -4840,6 +4862,8 @@ layout design_text_input_start_icon
 layout dialog_no_internet
 layout fastscroll__default_bubble
 layout fragment_about
+layout fragment_ad_details
+layout fragment_ad_rent_dialog
 layout fragment_add_factory_form
 layout fragment_add_flat_form
 layout fragment_add_land_form
@@ -4858,14 +4882,17 @@ layout fragment_change_password
 layout fragment_chat
 layout fragment_confirm_code
 layout fragment_contact
+layout fragment_contact_favorites
 layout fragment_conversations
 layout fragment_current_ads
+layout fragment_favorites
 layout fragment_forget_password
 layout fragment_home
 layout fragment_home_cities
 layout fragment_login
 layout fragment_my_account
 layout fragment_my_ads_main
+layout fragment_my_favorites_main
 layout fragment_notifications
 layout fragment_onboard
 layout fragment_payment
@@ -4884,6 +4911,7 @@ layout item_category
 layout item_chat
 layout item_city
 layout item_conversation
+layout item_favorites
 layout item_home
 layout item_home_category
 layout item_my_ads
@@ -4991,10 +5019,14 @@ layout toast_layout
 layout year_label_text_view
 menu bottom_navigation_menu
 mipmap ic_close
+mipmap ic_detail_call
 mipmap ic_edit_profile
+mipmap ic_favorite
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap ic_report
 mipmap ic_send_chat
+mipmap ic_share
 plurals mtrl_badge_content_description
 raw a_new_lang_template
 raw ccp_afrikaans
@@ -5099,6 +5131,7 @@ string building_desc_hint
 string building_size
 string building_year
 string call
+string call_client
 string call_grand
 string camera
 string car_back_image
@@ -5118,6 +5151,7 @@ string change_new_password
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
+string chat_client
 string chat_hint
 string chip_text
 string choose_akar_category
@@ -5131,6 +5165,7 @@ string cities_home_title
 string civil_car_add
 string clear_text_end_icon_content_description
 string client_reviews
+string coin
 string comment
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -5208,6 +5243,8 @@ string factory_used
 string factory_year
 string factory_year_hint
 string fastscroll__app_name
+string favorite_contact_title
+string favorite_title
 string fcm_fallback_notification_channel_label
 string fieldRequired
 string flat
@@ -5310,6 +5347,7 @@ string menuHome
 string message_hint
 string meter
 string mobile_data
+string monthly
 string mosque
 string msg_server_error
 string mtrl_badge_numberless_content_description
@@ -5426,6 +5464,7 @@ string register_name
 string register_password
 string register_phone
 string rent
+string rent_title
 string report
 string report_desc
 string requested_dialog_title
@@ -5451,6 +5490,7 @@ string send_order
 string services
 string settings
 string share
+string share_detail
 string slider_desc1
 string slider_desc2
 string slider_desc3

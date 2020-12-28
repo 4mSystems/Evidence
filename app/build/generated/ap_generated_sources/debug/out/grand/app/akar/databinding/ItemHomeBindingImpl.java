@@ -14,27 +14,30 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.br10, 10);
+        sViewsWithIds.put(R.id.img_home_item, 10);
+        sViewsWithIds.put(R.id.br10, 11);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback93;
+    private final android.view.View.OnClickListener mCallback98;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private ItemHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[10]
-            , (com.makeramen.roundedimageview.RoundedImageView) bindings[2]
+            , (androidx.constraintlayout.widget.Barrier) bindings[11]
+            , (com.google.android.material.card.MaterialCardView) bindings[10]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[7]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[5]
@@ -43,11 +46,12 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[9]
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[8]
             );
-        this.imgHomeItem.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[1];
         this.mboundView1.setTag(null);
+        this.mboundView2 = (androidx.appcompat.widget.AppCompatImageView) bindings[2];
+        this.mboundView2.setTag(null);
         this.tvBeds.setTag(null);
         this.tvBuilding.setTag(null);
         this.tvHomeDesc.setTag(null);
@@ -57,7 +61,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         this.tvPath.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback93 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback98 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -293,10 +297,15 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
                 itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullItemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBathJavaLangString = ((itemHomeViewModelHomeDataBathroomNoJavaLangObjectNull) ? (itemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBath) : (""));
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView1.setOnClickListener(mCallback98);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            grand.app.akar.base.ApplicationBinding.loadImage(this.imgHomeItem, itemHomeViewModelHomeDataDefaultImgMedia);
+            grand.app.akar.base.ApplicationBinding.loadImage(this.mboundView2, itemHomeViewModelHomeDataDefaultImgMedia);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvBeds, itemHomeViewModelHomeDataRoomNoJavaLangObjectNullItemHomeViewModelHomeDataRoomNoConcatTvBedsAndroidStringRoomJavaLangString);
             this.tvBeds.setVisibility(itemHomeViewModelHomeDataRoomNoJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvBuilding, itemHomeViewModelHomeDataAreaConcatTvBuildingAndroidStringMeter);
@@ -305,11 +314,6 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvLocation, itemHomeViewModelHomeDataAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPath, itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullItemHomeViewModelHomeDataBathroomNoConcatTvPathAndroidStringBathJavaLangString);
             this.tvPath.setVisibility(itemHomeViewModelHomeDataBathroomNoJavaLangObjectNullViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.mboundView1.setOnClickListener(mCallback93);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

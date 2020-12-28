@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -27,16 +28,20 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final CustomBottomNavigationView homeNavigationMenu;
 
+  @NonNull
+  public final ConstraintLayout llBaseContainer;
+
   @Bindable
   protected HomeViewModel mViewModel;
 
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
       FloatingActionButton fab, LinearLayout flHomeContainer,
-      CustomBottomNavigationView homeNavigationMenu) {
+      CustomBottomNavigationView homeNavigationMenu, ConstraintLayout llBaseContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.fab = fab;
     this.flHomeContainer = flHomeContainer;
     this.homeNavigationMenu = homeNavigationMenu;
+    this.llBaseContainer = llBaseContainer;
   }
 
   public abstract void setViewModel(@Nullable HomeViewModel viewModel);

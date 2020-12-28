@@ -33,6 +33,8 @@ grand/app/akar/databinding/FragmentProfileBinding.java
 grand/app/akar/pages/ads/adapter/CitiesAdapter.java
  grand.app.akar.pages.ads.adapter.CitiesAdapter
  grand.app.akar.pages.ads.adapter.CitiesAdapter$MenuView
+grand/app/akar/pages/home/models/SearchRequest.java
+ grand.app.akar.pages.home.models.SearchRequest
 grand/app/akar/repository/HomeRepository.java
  grand.app.akar.repository.HomeRepository
 grand/app/akar/pages/ads/forms/AddFactoryFormFragment.java
@@ -55,8 +57,12 @@ grand/app/akar/pages/auth/forgetPassword/ForgetPasswordFragment.java
  grand.app.akar.pages.auth.forgetPassword.ForgetPasswordFragment
 grand/app/akar/pages/settings/viewModels/SettingsViewModel.java
  grand.app.akar.pages.settings.viewModels.SettingsViewModel
+grand/app/akar/pages/adDetails/models/AdDetailsData.java
+ grand.app.akar.pages.adDetails.models.AdDetailsData
 grand/app/akar/repository/ServiceRepository.java
  grand.app.akar.repository.ServiceRepository
+grand/app/akar/databinding/FragmentAdRentDialogBinding.java
+ grand.app.akar.databinding.FragmentAdRentDialogBinding
 grand/app/akar/repository/SettingsRepository.java
  grand.app.akar.repository.SettingsRepository
 grand/app/akar/pages/chat/model/Chat.java
@@ -78,6 +84,8 @@ grand/app/akar/databinding/FragmentNotificationsBinding.java
  grand.app.akar.databinding.FragmentNotificationsBinding
 grand/app/akar/ResponseHeader.java
  grand.app.akar.ResponseHeader
+grand/app/akar/pages/adDetails/models/AdDetailsResponse.java
+ grand.app.akar.pages.adDetails.models.AdDetailsResponse
 grand/app/akar/databinding/FragmentAkarLocationsMapBinding.java
  grand.app.akar.databinding.FragmentAkarLocationsMapBinding
 grand/app/akar/pages/conversations/ConversationsFragment.java
@@ -91,6 +99,8 @@ grand/app/akar/pages/auth/models/ChangePasswordRequest.java
  grand.app.akar.pages.auth.models.ChangePasswordRequest
 grand/app/akar/pages/myAds/models/MyOrdersRequest.java
  grand.app.akar.pages.myAds.models.MyOrdersRequest
+grand/app/akar/pages/adDetails/viewModels/AdDetailsViewModel.java
+ grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel
 grand/app/akar/repository/AdsRepository.java
  grand.app.akar.repository.AdsRepository
 grand/app/akar/pages/onBoard/models/BoardResponse.java
@@ -106,6 +116,9 @@ grand/app/akar/pages/myAccount/models/ProfileData.java
  grand.app.akar.pages.myAccount.models.ProfileData
 grand/app/akar/databinding/FragmentCategoriesBinding.java
  grand.app.akar.databinding.FragmentCategoriesBinding
+grand/app/akar/pages/favorites/adapters/MyFavoritesAdapter.java
+ grand.app.akar.pages.favorites.adapters.MyFavoritesAdapter
+ grand.app.akar.pages.favorites.adapters.MyFavoritesAdapter$MenuView
 grand/app/akar/customViews/views/CustomTextViewRegular.java
  grand.app.akar.customViews.views.CustomTextViewRegular
 grand/app/akar/pages/auth/payment/PaymentViewModel.java
@@ -120,6 +133,8 @@ grand/app/akar/pages/ads/viewModels/AddVillaHouseViewModel.java
  grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel
 grand/app/akar/databinding/ItemChatBinding.java
  grand.app.akar.databinding.ItemChatBinding
+grand/app/akar/pages/favorites/adapters/MyFavoritesViewPagerAdapter.java
+ grand.app.akar.pages.favorites.adapters.MyFavoritesViewPagerAdapter
 grand/app/akar/databinding/ReportDialogBinding.java
  grand.app.akar.databinding.ReportDialogBinding
 grand/app/akar/activity/BaseActivity.java
@@ -128,6 +143,8 @@ grand/app/akar/databinding/FragmentAddStoreFormBinding.java
  grand.app.akar.databinding.FragmentAddStoreFormBinding
 grand/app/akar/utils/PopUp/PopUpInterface.java
  grand.app.akar.utils.PopUp.PopUpInterface
+grand/app/akar/pages/home/viewModels/SearchViewModel.java
+ grand.app.akar.pages.home.viewModels.SearchViewModel
 grand/app/akar/databinding/FragmentMyAdsMainBinding.java
  grand.app.akar.databinding.FragmentMyAdsMainBinding
 grand/app/akar/databinding/FragmentAddOfficeFormBinding.java
@@ -140,6 +157,8 @@ grand/app/akar/base/BaseFragment.java
  grand.app.akar.base.BaseFragment
 grand/app/akar/databinding/FragmentRegisterBinding.java
  grand.app.akar.databinding.FragmentRegisterBinding
+grand/app/akar/pages/favorites/viewModels/MyFavoritesViewModel.java
+ grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel
 grand/app/akar/databinding/ReportWarningDialogBinding.java
  grand.app.akar.databinding.ReportWarningDialogBinding
 grand/app/akar/databinding/LayoutActionBarBackBinding.java
@@ -158,6 +177,8 @@ grand/app/akar/databinding/FragmentSplashBinding.java
  grand.app.akar.databinding.FragmentSplashBinding
 grand/app/akar/databinding/ItemAdsBinding.java
  grand.app.akar.databinding.ItemAdsBinding
+grand/app/akar/pages/favorites/FavoritesFragment.java
+ grand.app.akar.pages.favorites.FavoritesFragment
 grand/app/akar/pages/settings/models/settings/SettingsResponse.java
  grand.app.akar.pages.settings.models.settings.SettingsResponse
 grand/app/akar/DataBindingTriggerClass.java
@@ -176,6 +197,8 @@ grand/app/akar/databinding/FragmentOnboardBinding.java
  grand.app.akar.databinding.FragmentOnboardBinding
 grand/app/akar/databinding/FragmentAdvertisingFeeBinding.java
  grand.app.akar.databinding.FragmentAdvertisingFeeBinding
+grand/app/akar/databinding/FragmentMyFavoritesMainBinding.java
+ grand.app.akar.databinding.FragmentMyFavoritesMainBinding
 grand/app/akar/databinding/FragmentUploadSuccessBinding.java
  grand.app.akar.databinding.FragmentUploadSuccessBinding
 grand/app/akar/pages/ads/forms/AddFlatFormFragment.java
@@ -241,6 +264,8 @@ grand/app/akar/pages/notifications/models/NotificationsData.java
  grand.app.akar.pages.notifications.models.NotificationsData
 grand/app/akar/pages/ads/AkarLocationsMapFragment.java
  grand.app.akar.pages.ads.AkarLocationsMapFragment
+grand/app/akar/pages/favorites/models/FavoriteRequest.java
+ grand.app.akar.pages.favorites.models.FavoriteRequest
 grand/app/akar/pages/ads/viewModels/CategoriesViewModel.java
  grand.app.akar.pages.ads.viewModels.CategoriesViewModel
 grand/app/akar/connection/ConnectionHelper.java
@@ -258,6 +283,8 @@ grand/app/akar/utils/resources/ResourceManager.java
  grand.app.akar.utils.resources.ResourceManager
 grand/app/akar/pages/onBoard/IntroItem.java
  grand.app.akar.pages.onBoard.IntroItem
+grand/app/akar/databinding/FragmentContactFavoritesBinding.java
+ grand.app.akar.databinding.FragmentContactFavoritesBinding
 grand/app/akar/pages/home/HomeFragment.java
  grand.app.akar.pages.home.HomeFragment
 grand/app/akar/utils/session/LanguagesHelper.java
@@ -280,7 +307,6 @@ grand/app/akar/customViews/actionbar/BackActionBarView.java
  grand.app.akar.customViews.actionbar.BackActionBarView$1
 grand/app/akar/pages/myAds/adapters/MyAdsAdapter.java
  grand.app.akar.pages.myAds.adapters.MyAdsAdapter
- grand.app.akar.pages.myAds.adapters.MyAdsAdapter$1
  grand.app.akar.pages.myAds.adapters.MyAdsAdapter$MenuView
 grand/app/akar/pages/chat/model/ChatSendResponse.java
  grand.app.akar.pages.chat.model.ChatSendResponse
@@ -301,6 +327,8 @@ grand/app/akar/pages/settings/viewModels/DocumentsViewModel.java
  grand.app.akar.pages.settings.viewModels.DocumentsViewModel
 grand/app/akar/pages/auth/forgetPassword/ForgetPasswordViewModel.java
  grand.app.akar.pages.auth.forgetPassword.ForgetPasswordViewModel
+grand/app/akar/pages/adDetails/models/ListingOptions.java
+ grand.app.akar.pages.adDetails.models.ListingOptions
 grand/app/akar/activity/MainActivity.java
  grand.app.akar.activity.MainActivity
 grand/app/akar/pages/profile/ProfileViewModel.java
@@ -315,6 +343,8 @@ grand/app/akar/pages/myAds/adapters/MyAdsViewPagerAdapter.java
  grand.app.akar.pages.myAds.adapters.MyAdsViewPagerAdapter
 grand/app/akar/pages/settings/models/AboutResponse.java
  grand.app.akar.pages.settings.models.AboutResponse
+grand/app/akar/databinding/ItemFavoritesBinding.java
+ grand.app.akar.databinding.ItemFavoritesBinding
 grand/app/akar/repository/ChatRepository.java
  grand.app.akar.repository.ChatRepository
 grand/app/akar/databinding/FragmentTermsBinding.java
@@ -359,6 +389,8 @@ grand/app/akar/pages/home/viewModels/ItemHomeViewModel.java
  grand.app.akar.pages.home.viewModels.ItemHomeViewModel
 grand/app/akar/pages/profile/ProfileFragment.java
  grand.app.akar.pages.profile.ProfileFragment
+grand/app/akar/databinding/FragmentAdDetailsBinding.java
+ grand.app.akar.databinding.FragmentAdDetailsBinding
 grand/app/akar/utils/helper/AppHelper.java
  grand.app.akar.utils.helper.AppHelper
  grand.app.akar.utils.helper.AppHelper$1
@@ -412,6 +444,8 @@ grand/app/akar/databinding/FragmentAboutBinding.java
  grand.app.akar.databinding.FragmentAboutBinding
 grand/app/akar/pages/myAds/viewModels/MyAdsViewModel.java
  grand.app.akar.pages.myAds.viewModels.MyAdsViewModel
+grand/app/akar/pages/adDetails/AdDetailsFragment.java
+ grand.app.akar.pages.adDetails.AdDetailsFragment
 grand/app/akar/pages/auth/changePassword/ChangePasswordViewModel.java
  grand.app.akar.pages.auth.changePassword.ChangePasswordViewModel
 grand/app/akar/databinding/LayoutActionBarHomeBinding.java
@@ -430,6 +464,8 @@ grand/app/akar/utils/Constants.java
  grand.app.akar.utils.Constants
 grand/app/akar/pages/ads/forms/AdsAttachmentsFragment.java
  grand.app.akar.pages.ads.forms.AdsAttachmentsFragment
+grand/app/akar/databinding/FragmentFavoritesBinding.java
+ grand.app.akar.databinding.FragmentFavoritesBinding
 grand/app/akar/customViews/views/CustomTextViewMedium.java
  grand.app.akar.customViews.views.CustomTextViewMedium
 grand/app/akar/utils/validation/Validate.java
@@ -438,6 +474,8 @@ grand/app/akar/pages/myAccount/models/CalculatedPoints.java
  grand.app.akar.pages.myAccount.models.CalculatedPoints
 grand/app/akar/pages/settings/models/settings/SettingsData.java
  grand.app.akar.pages.settings.models.settings.SettingsData
+grand/app/akar/pages/adDetails/models/SliderItem.java
+ grand.app.akar.pages.adDetails.models.SliderItem
 grand/app/akar/databinding/FragmentPreviousAdsBinding.java
  grand.app.akar.databinding.FragmentPreviousAdsBinding
 grand/app/akar/pages/ads/viewModels/AttachmentsViewModel.java
@@ -458,8 +496,12 @@ grand/app/akar/pages/splash/SplashFragment.java
  grand.app.akar.pages.splash.SplashFragment
 grand/app/akar/pages/myAds/CurrentAdsFragment.java
  grand.app.akar.pages.myAds.CurrentAdsFragment
+grand/app/akar/pages/favorites/MyFavoritesMainFragment.java
+ grand.app.akar.pages.favorites.MyFavoritesMainFragment
 grand/app/akar/base/MyApplication.java
  grand.app.akar.base.MyApplication
+grand/app/akar/pages/favorites/FavoritesContactFragment.java
+ grand.app.akar.pages.favorites.FavoritesContactFragment
 grand/app/akar/base/maps/MapHelper.java
  grand.app.akar.base.maps.MapHelper
 grand/app/akar/databinding/LayoutGrandBinding.java

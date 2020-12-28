@@ -33,17 +33,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final android.widget.ImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback106;
+    private final android.view.View.OnClickListener mCallback112;
     @Nullable
-    private final android.view.View.OnClickListener mCallback104;
+    private final android.view.View.OnClickListener mCallback110;
     @Nullable
-    private final android.view.View.OnClickListener mCallback102;
+    private final android.view.View.OnClickListener mCallback108;
     @Nullable
-    private final android.view.View.OnClickListener mCallback107;
+    private final android.view.View.OnClickListener mCallback113;
     @Nullable
-    private final android.view.View.OnClickListener mCallback105;
+    private final android.view.View.OnClickListener mCallback111;
     @Nullable
-    private final android.view.View.OnClickListener mCallback103;
+    private final android.view.View.OnClickListener mCallback109;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -274,12 +274,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback106 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback104 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback107 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback105 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback103 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback112 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback110 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback108 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback113 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback111 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback109 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -383,17 +383,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback106);
-            this.imgRegisterLogo.setOnClickListener(mCallback102);
+            this.appCompatButtonNext.setOnClickListener(mCallback112);
+            this.imgRegisterLogo.setOnClickListener(mCallback108);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputName, inputNametextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.inputRegisterCity.setOnClickListener(mCallback105);
+            this.inputRegisterCity.setOnClickListener(mCallback111);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterConfirmPassword, inputRegisterConfirmPasswordtextAttrChanged);
-            this.inputRegisterUserType.setOnClickListener(mCallback104);
-            this.mboundView11.setOnClickListener(mCallback107);
-            this.mboundView2.setOnClickListener(mCallback103);
+            this.inputRegisterUserType.setOnClickListener(mCallback110);
+            this.mboundView11.setOnClickListener(mCallback113);
+            this.mboundView2.setOnClickListener(mCallback109);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

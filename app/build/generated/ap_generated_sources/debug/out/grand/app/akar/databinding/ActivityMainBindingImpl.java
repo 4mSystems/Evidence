@@ -17,11 +17,9 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
         sViewsWithIds.put(R.id.fl_home_container, 3);
     }
     // views
-    @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback81;
+    private final android.view.View.OnClickListener mCallback84;
     // values
     // listeners
     private OnNavigationItemSelectedListenerImpl mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener;
@@ -35,14 +33,14 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2]
             , (android.widget.LinearLayout) bindings[3]
             , (grand.app.akar.customViews.views.CustomBottomNavigationView) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
             );
         this.fab.setTag(null);
         this.homeNavigationMenu.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
-        this.mboundView0.setTag(null);
+        this.llBaseContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback81 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback84 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -127,7 +125,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.fab.setOnClickListener(mCallback81);
+            this.fab.setOnClickListener(mCallback84);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

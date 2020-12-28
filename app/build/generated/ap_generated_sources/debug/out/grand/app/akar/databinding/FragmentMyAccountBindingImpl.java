@@ -25,17 +25,17 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback89;
+    private final android.view.View.OnClickListener mCallback96;
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback94;
     @Nullable
     private final android.view.View.OnClickListener mCallback92;
     @Nullable
-    private final android.view.View.OnClickListener mCallback90;
+    private final android.view.View.OnClickListener mCallback97;
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback95;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback93;
     @Nullable
     private final android.view.View.OnClickListener mCallback91;
     // values
@@ -75,13 +75,13 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         this.tvAccountType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback87 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback86 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback92 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback90 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback88 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback91 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback96 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback94 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback92 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback97 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback95 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback93 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback91 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -217,13 +217,13 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.tvAccountAbout.setOnClickListener(mCallback89);
-            this.tvAccountContact.setOnClickListener(mCallback88);
-            this.tvAccountFundAds.setOnClickListener(mCallback87);
-            this.tvAccountLogout.setOnClickListener(mCallback92);
-            this.tvAccountMyAds.setOnClickListener(mCallback86);
-            this.tvAccountShare.setOnClickListener(mCallback91);
-            this.tvAccountTerms.setOnClickListener(mCallback90);
+            this.tvAccountAbout.setOnClickListener(mCallback94);
+            this.tvAccountContact.setOnClickListener(mCallback93);
+            this.tvAccountFundAds.setOnClickListener(mCallback92);
+            this.tvAccountLogout.setOnClickListener(mCallback97);
+            this.tvAccountMyAds.setOnClickListener(mCallback91);
+            this.tvAccountShare.setOnClickListener(mCallback96);
+            this.tvAccountTerms.setOnClickListener(mCallback95);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -236,6 +236,23 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toReviews();
+                }
+                break;
+            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -266,24 +283,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toMyPoints();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toSettings();
+                    viewmodel.toMyPremiumAds();
                 }
                 break;
             }
@@ -338,7 +338,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 }
                 break;
             }
-            case 6: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -351,7 +351,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toReviews();
+                    viewmodel.toMyAds();
                 }
                 break;
             }

@@ -9,10 +9,13 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
@@ -20,6 +23,7 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentMyAdsMainBinding;
 import grand.app.akar.pages.myAds.adapters.MyAdsViewPagerAdapter;
 import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel;
+import grand.app.akar.utils.Constants;
 
 
 public class MyAdsMainFragment extends BaseFragment {
@@ -34,7 +38,12 @@ public class MyAdsMainFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewModel(viewModel);
-        MyAdsViewPagerAdapter pagerAdapter = new MyAdsViewPagerAdapter(getActivity().getSupportFragmentManager());
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+        }
+        MyAdsViewPagerAdapter pagerAdapter = new MyAdsViewPagerAdapter(getActivity().getSupportFragmentManager(),viewModel.getPassingObject().getId());
         binding.pager.setOffscreenPageLimit(1);
         binding.pager.setAdapter(pagerAdapter);
         binding.tabs.setupWithViewPager(binding.pager);

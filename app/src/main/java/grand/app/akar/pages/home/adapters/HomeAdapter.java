@@ -22,6 +22,7 @@ import java.util.List;
 import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.databinding.ItemHomeBinding;
+import grand.app.akar.pages.adDetails.AdDetailsFragment;
 import grand.app.akar.pages.home.models.HomeData;
 import grand.app.akar.pages.home.viewModels.ItemHomeViewModel;
 import grand.app.akar.utils.helper.MovementHelper;
@@ -61,7 +62,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MenuView> impl
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
         HomeData menuModel = homeDataListFiltered.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
-//        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel), menuModel.getName(), MarketMainFragment.class.getName(), null));
+        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel), null, AdDetailsFragment.class.getName(), null));
         holder.setViewModel(itemMenuViewModel);
     }
 

@@ -12,88 +12,98 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     @Nullable
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
-        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(18);
-        sIncludes.setIncludes(3, 
+        sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(19);
+        sIncludes.setIncludes(0, 
+            new String[] {"fragment_ad_rent_dialog"},
+            new int[] {11},
+            new int[] {grand.app.akar.R.layout.fragment_ad_rent_dialog});
+        sIncludes.setIncludes(4, 
             new String[] {"home_map_layout"},
-            new int[] {9},
+            new int[] {10},
             new int[] {grand.app.akar.R.layout.home_map_layout});
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.btn_diff_locations, 10);
-        sViewsWithIds.put(R.id.input_search, 11);
-        sViewsWithIds.put(R.id.ic_filter, 12);
-        sViewsWithIds.put(R.id.card_list, 13);
-        sViewsWithIds.put(R.id.list_buttons, 14);
-        sViewsWithIds.put(R.id.sort, 15);
-        sViewsWithIds.put(R.id.v17, 16);
-        sViewsWithIds.put(R.id.map_buttons, 17);
+        sViewsWithIds.put(R.id.input_search, 12);
+        sViewsWithIds.put(R.id.ic_filter, 13);
+        sViewsWithIds.put(R.id.card_list, 14);
+        sViewsWithIds.put(R.id.list_buttons, 15);
+        sViewsWithIds.put(R.id.sort, 16);
+        sViewsWithIds.put(R.id.v17, 17);
+        sViewsWithIds.put(R.id.map_buttons, 18);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView2;
+    private final androidx.recyclerview.widget.RecyclerView mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback100;
+    private final android.view.View.OnClickListener mCallback106;
     @Nullable
-    private final android.view.View.OnClickListener mCallback99;
+    private final android.view.View.OnClickListener mCallback104;
     @Nullable
-    private final android.view.View.OnClickListener mCallback98;
+    private final android.view.View.OnClickListener mCallback102;
     @Nullable
-    private final android.view.View.OnClickListener mCallback97;
+    private final android.view.View.OnClickListener mCallback105;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback103;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 2
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
-            , (android.widget.FrameLayout) bindings[13]
-            , (android.widget.FrameLayout) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[8]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6]
+        super(bindingComponent, root, 3
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
+            , (android.widget.FrameLayout) bindings[14]
+            , (android.widget.FrameLayout) bindings[4]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[2]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[9]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[7]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[12]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[11]
-            , (com.google.android.material.card.MaterialCardView) bindings[14]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[5]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[17]
-            , (grand.app.akar.databinding.HomeMapLayoutBinding) bindings[9]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[15]
-            , (android.view.View) bindings[16]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[8]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[12]
+            , (com.google.android.material.card.MaterialCardView) bindings[15]
+            , (grand.app.akar.databinding.FragmentAdRentDialogBinding) bindings[11]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[18]
+            , (grand.app.akar.databinding.HomeMapLayoutBinding) bindings[10]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[16]
+            , (android.view.View) bindings[17]
             );
+        this.btnDiffLocations.setTag(null);
         this.cardMap.setTag(null);
         this.catHomeRc.setTag(null);
         this.frameToList.setTag(null);
         this.googleBaseLocation.setTag(null);
         this.googleMapStyle.setTag(null);
+        setContainedBinding(this.listingTypeSheet);
         this.map.setTag(null);
         setContainedBinding(this.mapInclude);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
-        this.mboundView2.setTag(null);
+        this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
+        this.mboundView3.setTag(null);
         this.selectedRc.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback100 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback99 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback98 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback97 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback106 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback104 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback105 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback103 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         mapInclude.invalidateAll();
+        listingTypeSheet.invalidateAll();
         requestRebind();
     }
 
@@ -105,6 +115,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
             }
         }
         if (mapInclude.hasPendingBindings()) {
+            return true;
+        }
+        if (listingTypeSheet.hasPendingBindings()) {
             return true;
         }
         return false;
@@ -123,10 +136,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.home.viewModels.HomeViewModel Viewmodel) {
-        updateRegistration(1, Viewmodel);
+        updateRegistration(2, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -136,19 +149,22 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     public void setLifecycleOwner(@Nullable androidx.lifecycle.LifecycleOwner lifecycleOwner) {
         super.setLifecycleOwner(lifecycleOwner);
         mapInclude.setLifecycleOwner(lifecycleOwner);
+        listingTypeSheet.setLifecycleOwner(lifecycleOwner);
     }
 
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeMapInclude((grand.app.akar.databinding.HomeMapLayoutBinding) object, fieldId);
+                return onChangeListingTypeSheet((grand.app.akar.databinding.FragmentAdRentDialogBinding) object, fieldId);
             case 1 :
+                return onChangeMapInclude((grand.app.akar.databinding.HomeMapLayoutBinding) object, fieldId);
+            case 2 :
                 return onChangeViewmodel((grand.app.akar.pages.home.viewModels.HomeViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeMapInclude(grand.app.akar.databinding.HomeMapLayoutBinding MapInclude, int fieldId) {
+    private boolean onChangeListingTypeSheet(grand.app.akar.databinding.FragmentAdRentDialogBinding ListingTypeSheet, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -157,10 +173,19 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         }
         return false;
     }
-    private boolean onChangeViewmodel(grand.app.akar.pages.home.viewModels.HomeViewModel Viewmodel, int fieldId) {
+    private boolean onChangeMapInclude(grand.app.akar.databinding.HomeMapLayoutBinding MapInclude, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewmodel(grand.app.akar.pages.home.viewModels.HomeViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -174,11 +199,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelSearchRequestListingType = 0;
         grand.app.akar.pages.home.adapters.HomeCategoriesAdapter viewmodelCategoriesAdapter = null;
+        java.lang.String viewmodelSearchRequestListingTypeInt0BtnDiffLocationsAndroidStringRentBtnDiffLocationsAndroidStringSell = null;
         grand.app.akar.pages.home.adapters.HomeAdapter viewmodelHomeAdapter = null;
+        grand.app.akar.pages.home.models.SearchRequest viewmodelSearchRequest = null;
+        boolean viewmodelSearchRequestListingTypeInt0 = false;
         grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x6L) != 0) {
+        if ((dirtyFlags & 0xcL) != 0) {
 
 
 
@@ -187,31 +216,59 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                     viewmodelCategoriesAdapter = viewmodel.getCategoriesAdapter();
                     // read viewmodel.homeAdapter
                     viewmodelHomeAdapter = viewmodel.getHomeAdapter();
+                    // read viewmodel.searchRequest
+                    viewmodelSearchRequest = viewmodel.getSearchRequest();
                 }
+
+
+                if (viewmodelSearchRequest != null) {
+                    // read viewmodel.searchRequest.listing_type
+                    viewmodelSearchRequestListingType = viewmodelSearchRequest.getListing_type();
+                }
+
+
+                // read viewmodel.searchRequest.listing_type == 0
+                viewmodelSearchRequestListingTypeInt0 = (viewmodelSearchRequestListingType) == (0);
+            if((dirtyFlags & 0xcL) != 0) {
+                if(viewmodelSearchRequestListingTypeInt0) {
+                        dirtyFlags |= 0x20L;
+                }
+                else {
+                        dirtyFlags |= 0x10L;
+                }
+            }
+
+
+                // read viewmodel.searchRequest.listing_type == 0 ? @android:string/rent : @android:string/sell
+                viewmodelSearchRequestListingTypeInt0BtnDiffLocationsAndroidStringRentBtnDiffLocationsAndroidStringSell = ((viewmodelSearchRequestListingTypeInt0) ? (btnDiffLocations.getResources().getString(R.string.rent)) : (btnDiffLocations.getResources().getString(R.string.sell)));
         }
         // batch finished
-        if ((dirtyFlags & 0x6L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
+            this.btnDiffLocations.setOnClickListener(mCallback102);
+            this.frameToList.setOnClickListener(mCallback106);
+            this.googleBaseLocation.setOnClickListener(mCallback104);
+            this.googleMapStyle.setOnClickListener(mCallback105);
+            this.map.setOnClickListener(mCallback103);
+        }
+        if ((dirtyFlags & 0xcL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnDiffLocations, viewmodelSearchRequestListingTypeInt0BtnDiffLocationsAndroidStringRentBtnDiffLocationsAndroidStringSell);
             grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.catHomeRc, viewmodelCategoriesAdapter, "1", "2");
-            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.mboundView2, viewmodelHomeAdapter, "1", "1");
+            this.listingTypeSheet.setViewModel(viewmodel);
+            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.mboundView3, viewmodelHomeAdapter, "1", "1");
             grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.selectedRc, viewmodelHomeAdapter, "1", "2");
         }
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.frameToList.setOnClickListener(mCallback100);
-            this.googleBaseLocation.setOnClickListener(mCallback98);
-            this.googleMapStyle.setOnClickListener(mCallback99);
-            this.map.setOnClickListener(mCallback97);
-        }
         executeBindingsOn(mapInclude);
+        executeBindingsOn(listingTypeSheet);
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -241,11 +298,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.changeMapStyle();
+                    viewmodel.reCenterToCurrentLocation();
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -258,11 +315,28 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.reCenterToCurrentLocation();
+                    viewmodel.rentTypeFilter();
                 }
                 break;
             }
-            case 1: {
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.changeMapStyle();
+                }
+                break;
+            }
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -284,9 +358,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): mapInclude
-        flag 1 (0x2L): viewmodel
-        flag 2 (0x3L): null
+        flag 0 (0x1L): listingTypeSheet
+        flag 1 (0x2L): mapInclude
+        flag 2 (0x3L): viewmodel
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.searchRequest.listing_type == 0 ? @android:string/rent : @android:string/sell
+        flag 5 (0x6L): viewmodel.searchRequest.listing_type == 0 ? @android:string/rent : @android:string/sell
     flag mapping end*/
     //end
 }

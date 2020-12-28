@@ -26,6 +26,12 @@ public class ItemHomeViewModel extends BaseViewModel {
     public void itemAction() {
         getLiveData().setValue(Constants.MENu);
     }
+    public void removeFavorite() {
+        getLiveData().setValue(Constants.REMOVE_FAVO);
+    }
+    public void removeAd() {
+        getLiveData().setValue(Constants.REMOVE_AD);
+    }
 
     public void setTitle(HomeData homeData) {
         String type = homeData.getType();

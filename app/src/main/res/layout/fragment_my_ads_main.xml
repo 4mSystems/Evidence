@@ -30,10 +30,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:tabBackground="@drawable/tab_color_selector"
-            app:tabIndicatorColor="@color/colorPrimaryDark"
-            app:tabSelectedTextColor="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/white"
+            app:tabSelectedTextColor="@color/white"
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
-            app:tabTextColor="@color/colorPrimaryDark" />
+            app:tabTextColor="@color/colorPrimaryHolo" />
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/pager"

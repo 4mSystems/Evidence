@@ -311,5 +311,12 @@
     <string name="libya_name">الجمهورية العربية الليبية</string>
     <string name="cities_home_title">اضغط على المؤشر لاختيار المنطقة</string>
     <string name="rent_title">نوع الوحدة</string>
+    <string name="favorite_contact_title">تم التواصل</string>
+    <string name="favorite_title">المفضلة</string>
+    <string name="coin">د.ل</string>
+    <string name="monthly">/ شهرياً</string>
+    <string name="call_client">اتصال</string>
+    <string name="chat_client">محادثة</string>
+    <string name="share_detail">مشاركة</string>
 
 </resources>

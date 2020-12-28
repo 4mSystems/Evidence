@@ -13,16 +13,20 @@ import grand.app.akar.pages.myAds.PreviousAdsFragment;
 import grand.app.akar.utils.resources.ResourceManager;
 
 public class MyAdsViewPagerAdapter extends FragmentStatePagerAdapter {
-    public MyAdsViewPagerAdapter(FragmentManager fm) {
+    int pageType;
+
+    public MyAdsViewPagerAdapter(FragmentManager fm, int pageType) {
         super(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        this.pageType = pageType;
     }
 
     @Override
-    public @NotNull Fragment getItem(int position) {
+    public @NotNull
+    Fragment getItem(int position) {
         if (position == 1) {
-            return new PreviousAdsFragment();
+            return new PreviousAdsFragment(pageType);
         } else {
-            return new CurrentAdsFragment();
+            return new CurrentAdsFragment(pageType);
         }
     }
 

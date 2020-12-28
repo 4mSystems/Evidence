@@ -45,8 +45,12 @@ public class MyAccountViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.LOGOUT));
     }
 
-    public void toMyOrders() {
+    public void toMyAds() {
         liveData.setValue(new Mutable(Constants.MY_ADS));
+    }
+
+    public void toMyPremiumAds() {
+        liveData.setValue(new Mutable(Constants.MY_PREMIUM_ADS));
     }
 
     public void toAbout() {

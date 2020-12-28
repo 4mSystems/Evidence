@@ -10,6 +10,7 @@ import grand.app.akar.model.base.Mutable;
 
 import grand.app.akar.model.base.StatusMessage;
 import grand.app.akar.pages.home.models.HomeResponse;
+import grand.app.akar.pages.home.models.SearchRequest;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -37,9 +38,9 @@ public class HomeRepository extends BaseRepository {
                 Constants.HOME, true);
     }
 
-    public Disposable getRegisteredStores() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REGISTERED_SHOPS, new Object(), HomeResponse.class,
-                Constants.REGISTERED_SHOPS, true);
+    public Disposable search(SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEARCH , searchRequest, HomeResponse.class,
+                Constants.HOME, true);
     }
 
     public Disposable subscribeAsDelegate(int shopId) {

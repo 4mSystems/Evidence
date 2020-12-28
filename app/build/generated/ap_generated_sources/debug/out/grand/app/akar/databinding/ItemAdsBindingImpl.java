@@ -23,7 +23,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding implements grand.app.akar
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback122;
+    private final android.view.View.OnClickListener mCallback128;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,7 +57,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding implements grand.app.akar
         this.tvPath.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback122 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback128 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -268,7 +268,7 @@ public class ItemAdsBindingImpl extends ItemAdsBinding implements grand.app.akar
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback122);
+            this.mboundView1.setOnClickListener(mCallback128);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

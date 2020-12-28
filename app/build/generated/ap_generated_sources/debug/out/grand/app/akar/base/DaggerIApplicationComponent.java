@@ -12,6 +12,11 @@ import grand.app.akar.connection.ConnectionHelper_Factory;
 import grand.app.akar.connection.ConnectionModule;
 import grand.app.akar.connection.ConnectionModule_WebServiceFactory;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.adDetails.AdDetailsFragment;
+import grand.app.akar.pages.adDetails.AdDetailsFragment_MembersInjector;
+import grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel;
+import grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel_Factory;
+import grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel_MembersInjector;
 import grand.app.akar.pages.ads.AdsInfoFragment;
 import grand.app.akar.pages.ads.AdsInfoFragment_MembersInjector;
 import grand.app.akar.pages.ads.AdvertisingFeeFragment;
@@ -90,6 +95,15 @@ import grand.app.akar.pages.conversations.ConversationsFragment_MembersInjector;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_Factory;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel_MembersInjector;
+import grand.app.akar.pages.favorites.FavoritesContactFragment;
+import grand.app.akar.pages.favorites.FavoritesContactFragment_MembersInjector;
+import grand.app.akar.pages.favorites.FavoritesFragment;
+import grand.app.akar.pages.favorites.FavoritesFragment_MembersInjector;
+import grand.app.akar.pages.favorites.MyFavoritesMainFragment;
+import grand.app.akar.pages.favorites.MyFavoritesMainFragment_MembersInjector;
+import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel;
+import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel_Factory;
+import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel_MembersInjector;
 import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.HomeCitiesFragment_MembersInjector;
 import grand.app.akar.pages.home.HomeFragment;
@@ -230,6 +244,12 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private PaymentViewModel getPaymentViewModel() {
     return injectPaymentViewModel(PaymentViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+
+  private MyFavoritesViewModel getMyFavoritesViewModel() {
+    return injectMyFavoritesViewModel(MyFavoritesViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private AdDetailsViewModel getAdDetailsViewModel() {
+    return injectAdDetailsViewModel(AdDetailsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
 
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
@@ -395,6 +415,22 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(HomeCitiesFragment homeCitiesFragment) {
     injectHomeCitiesFragment(homeCitiesFragment);}
+
+  @Override
+  public void inject(MyFavoritesMainFragment myFavoritesMainFragment) {
+    injectMyFavoritesMainFragment(myFavoritesMainFragment);}
+
+  @Override
+  public void inject(FavoritesFragment favoritesFragment) {
+    injectFavoritesFragment(favoritesFragment);}
+
+  @Override
+  public void inject(FavoritesContactFragment favoritesContactFragment) {
+    injectFavoritesContactFragment(favoritesContactFragment);}
+
+  @Override
+  public void inject(AdDetailsFragment adDetailsFragment) {
+    injectAdDetailsFragment(adDetailsFragment);}
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
@@ -659,6 +695,37 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private HomeCitiesFragment injectHomeCitiesFragment(HomeCitiesFragment instance) {
     HomeCitiesFragment_MembersInjector.injectViewModel(instance, getAdsViewModel());
+    return instance;
+  }
+
+  private MyFavoritesViewModel injectMyFavoritesViewModel(MyFavoritesViewModel instance) {
+    MyFavoritesViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private MyFavoritesMainFragment injectMyFavoritesMainFragment(MyFavoritesMainFragment instance) {
+    MyFavoritesMainFragment_MembersInjector.injectViewModel(instance, getMyFavoritesViewModel());
+    return instance;
+  }
+
+  private FavoritesFragment injectFavoritesFragment(FavoritesFragment instance) {
+    FavoritesFragment_MembersInjector.injectViewModel(instance, getMyFavoritesViewModel());
+    return instance;
+  }
+
+  private FavoritesContactFragment injectFavoritesContactFragment(
+      FavoritesContactFragment instance) {
+    FavoritesContactFragment_MembersInjector.injectViewModel(instance, getMyFavoritesViewModel());
+    return instance;
+  }
+
+  private AdDetailsViewModel injectAdDetailsViewModel(AdDetailsViewModel instance) {
+    AdDetailsViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private AdDetailsFragment injectAdDetailsFragment(AdDetailsFragment instance) {
+    AdDetailsFragment_MembersInjector.injectViewModel(instance, getAdDetailsViewModel());
     return instance;
   }
 

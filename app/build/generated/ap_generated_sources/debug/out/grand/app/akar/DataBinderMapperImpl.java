@@ -9,6 +9,8 @@ import androidx.databinding.ViewDataBinding;
 import grand.app.akar.databinding.ActivityBaseBindingImpl;
 import grand.app.akar.databinding.ActivityMainBindingImpl;
 import grand.app.akar.databinding.FragmentAboutBindingImpl;
+import grand.app.akar.databinding.FragmentAdDetailsBindingImpl;
+import grand.app.akar.databinding.FragmentAdRentDialogBindingImpl;
 import grand.app.akar.databinding.FragmentAddFactoryFormBindingImpl;
 import grand.app.akar.databinding.FragmentAddFlatFormBindingImpl;
 import grand.app.akar.databinding.FragmentAddLandFormBindingImpl;
@@ -27,14 +29,17 @@ import grand.app.akar.databinding.FragmentChangePasswordBindingImpl;
 import grand.app.akar.databinding.FragmentChatBindingImpl;
 import grand.app.akar.databinding.FragmentConfirmCodeBindingImpl;
 import grand.app.akar.databinding.FragmentContactBindingImpl;
+import grand.app.akar.databinding.FragmentContactFavoritesBindingImpl;
 import grand.app.akar.databinding.FragmentConversationsBindingImpl;
 import grand.app.akar.databinding.FragmentCurrentAdsBindingImpl;
+import grand.app.akar.databinding.FragmentFavoritesBindingImpl;
 import grand.app.akar.databinding.FragmentForgetPasswordBindingImpl;
 import grand.app.akar.databinding.FragmentHomeBindingImpl;
 import grand.app.akar.databinding.FragmentHomeCitiesBindingImpl;
 import grand.app.akar.databinding.FragmentLoginBindingImpl;
 import grand.app.akar.databinding.FragmentMyAccountBindingImpl;
 import grand.app.akar.databinding.FragmentMyAdsMainBindingImpl;
+import grand.app.akar.databinding.FragmentMyFavoritesMainBindingImpl;
 import grand.app.akar.databinding.FragmentNotificationsBindingImpl;
 import grand.app.akar.databinding.FragmentOnboardBindingImpl;
 import grand.app.akar.databinding.FragmentPaymentBindingImpl;
@@ -52,6 +57,7 @@ import grand.app.akar.databinding.ItemCategoryBindingImpl;
 import grand.app.akar.databinding.ItemChatBindingImpl;
 import grand.app.akar.databinding.ItemCityBindingImpl;
 import grand.app.akar.databinding.ItemConversationBindingImpl;
+import grand.app.akar.databinding.ItemFavoritesBindingImpl;
 import grand.app.akar.databinding.ItemHomeBindingImpl;
 import grand.app.akar.databinding.ItemHomeCategoryBindingImpl;
 import grand.app.akar.databinding.ItemMyAdsBindingImpl;
@@ -78,116 +84,130 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTABOUT = 3;
 
-  private static final int LAYOUT_FRAGMENTADDFACTORYFORM = 4;
+  private static final int LAYOUT_FRAGMENTADDETAILS = 4;
 
-  private static final int LAYOUT_FRAGMENTADDFLATFORM = 5;
+  private static final int LAYOUT_FRAGMENTADRENTDIALOG = 5;
 
-  private static final int LAYOUT_FRAGMENTADDLANDFORM = 6;
+  private static final int LAYOUT_FRAGMENTADDFACTORYFORM = 6;
 
-  private static final int LAYOUT_FRAGMENTADDOFFICEFORM = 7;
+  private static final int LAYOUT_FRAGMENTADDFLATFORM = 7;
 
-  private static final int LAYOUT_FRAGMENTADDRESTFORM = 8;
+  private static final int LAYOUT_FRAGMENTADDLANDFORM = 8;
 
-  private static final int LAYOUT_FRAGMENTADDSTOREFORM = 9;
+  private static final int LAYOUT_FRAGMENTADDOFFICEFORM = 9;
 
-  private static final int LAYOUT_FRAGMENTADDVILLAHOUSEFORM = 10;
+  private static final int LAYOUT_FRAGMENTADDRESTFORM = 10;
 
-  private static final int LAYOUT_FRAGMENTADDWAREHOUSEFORM = 11;
+  private static final int LAYOUT_FRAGMENTADDSTOREFORM = 11;
 
-  private static final int LAYOUT_FRAGMENTADSATTACHMENTS = 12;
+  private static final int LAYOUT_FRAGMENTADDVILLAHOUSEFORM = 12;
 
-  private static final int LAYOUT_FRAGMENTADSINFO = 13;
+  private static final int LAYOUT_FRAGMENTADDWAREHOUSEFORM = 13;
 
-  private static final int LAYOUT_FRAGMENTADVERTISINGFEE = 14;
+  private static final int LAYOUT_FRAGMENTADSATTACHMENTS = 14;
 
-  private static final int LAYOUT_FRAGMENTAKARLOCATIONCITIES = 15;
+  private static final int LAYOUT_FRAGMENTADSINFO = 15;
 
-  private static final int LAYOUT_FRAGMENTAKARLOCATIONSMAP = 16;
+  private static final int LAYOUT_FRAGMENTADVERTISINGFEE = 16;
 
-  private static final int LAYOUT_FRAGMENTCATEGORIES = 17;
+  private static final int LAYOUT_FRAGMENTAKARLOCATIONCITIES = 17;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 18;
+  private static final int LAYOUT_FRAGMENTAKARLOCATIONSMAP = 18;
 
-  private static final int LAYOUT_FRAGMENTCHAT = 19;
+  private static final int LAYOUT_FRAGMENTCATEGORIES = 19;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 20;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 20;
 
-  private static final int LAYOUT_FRAGMENTCONTACT = 21;
+  private static final int LAYOUT_FRAGMENTCHAT = 21;
 
-  private static final int LAYOUT_FRAGMENTCONVERSATIONS = 22;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 22;
 
-  private static final int LAYOUT_FRAGMENTCURRENTADS = 23;
+  private static final int LAYOUT_FRAGMENTCONTACT = 23;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 24;
+  private static final int LAYOUT_FRAGMENTCONTACTFAVORITES = 24;
 
-  private static final int LAYOUT_FRAGMENTHOME = 25;
+  private static final int LAYOUT_FRAGMENTCONVERSATIONS = 25;
 
-  private static final int LAYOUT_FRAGMENTHOMECITIES = 26;
+  private static final int LAYOUT_FRAGMENTCURRENTADS = 26;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 27;
+  private static final int LAYOUT_FRAGMENTFAVORITES = 27;
 
-  private static final int LAYOUT_FRAGMENTMYACCOUNT = 28;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 28;
 
-  private static final int LAYOUT_FRAGMENTMYADSMAIN = 29;
+  private static final int LAYOUT_FRAGMENTHOME = 29;
 
-  private static final int LAYOUT_FRAGMENTNOTIFICATIONS = 30;
+  private static final int LAYOUT_FRAGMENTHOMECITIES = 30;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 31;
+  private static final int LAYOUT_FRAGMENTLOGIN = 31;
 
-  private static final int LAYOUT_FRAGMENTPAYMENT = 32;
+  private static final int LAYOUT_FRAGMENTMYACCOUNT = 32;
 
-  private static final int LAYOUT_FRAGMENTPREVIOUSADS = 33;
+  private static final int LAYOUT_FRAGMENTMYADSMAIN = 33;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 34;
+  private static final int LAYOUT_FRAGMENTMYFAVORITESMAIN = 34;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 35;
+  private static final int LAYOUT_FRAGMENTNOTIFICATIONS = 35;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 36;
+  private static final int LAYOUT_FRAGMENTONBOARD = 36;
 
-  private static final int LAYOUT_FRAGMENTTERMS = 37;
+  private static final int LAYOUT_FRAGMENTPAYMENT = 37;
 
-  private static final int LAYOUT_FRAGMENTUPLOADSUCCESS = 38;
+  private static final int LAYOUT_FRAGMENTPREVIOUSADS = 38;
 
-  private static final int LAYOUT_HOMELISTLAYOUT = 39;
+  private static final int LAYOUT_FRAGMENTPROFILE = 39;
 
-  private static final int LAYOUT_HOMEMAPLAYOUT = 40;
+  private static final int LAYOUT_FRAGMENTREGISTER = 40;
 
-  private static final int LAYOUT_ITEMADIMAGES = 41;
+  private static final int LAYOUT_FRAGMENTSPLASH = 41;
 
-  private static final int LAYOUT_ITEMADS = 42;
+  private static final int LAYOUT_FRAGMENTTERMS = 42;
 
-  private static final int LAYOUT_ITEMCATEGORY = 43;
+  private static final int LAYOUT_FRAGMENTUPLOADSUCCESS = 43;
 
-  private static final int LAYOUT_ITEMCHAT = 44;
+  private static final int LAYOUT_HOMELISTLAYOUT = 44;
 
-  private static final int LAYOUT_ITEMCITY = 45;
+  private static final int LAYOUT_HOMEMAPLAYOUT = 45;
 
-  private static final int LAYOUT_ITEMCONVERSATION = 46;
+  private static final int LAYOUT_ITEMADIMAGES = 46;
 
-  private static final int LAYOUT_ITEMHOME = 47;
+  private static final int LAYOUT_ITEMADS = 47;
 
-  private static final int LAYOUT_ITEMHOMECATEGORY = 48;
+  private static final int LAYOUT_ITEMCATEGORY = 48;
 
-  private static final int LAYOUT_ITEMMYADS = 49;
+  private static final int LAYOUT_ITEMCHAT = 49;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 50;
+  private static final int LAYOUT_ITEMCITY = 50;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 51;
+  private static final int LAYOUT_ITEMCONVERSATION = 51;
 
-  private static final int LAYOUT_LAYOUTGRAND = 52;
+  private static final int LAYOUT_ITEMFAVORITES = 52;
 
-  private static final int LAYOUT_NOTIFYITEM = 53;
+  private static final int LAYOUT_ITEMHOME = 53;
 
-  private static final int LAYOUT_REPORTDIALOG = 54;
+  private static final int LAYOUT_ITEMHOMECATEGORY = 54;
 
-  private static final int LAYOUT_REPORTWARNINGDIALOG = 55;
+  private static final int LAYOUT_ITEMMYADS = 55;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(55);
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 56;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 57;
+
+  private static final int LAYOUT_LAYOUTGRAND = 58;
+
+  private static final int LAYOUT_NOTIFYITEM = 59;
+
+  private static final int LAYOUT_REPORTDIALOG = 60;
+
+  private static final int LAYOUT_REPORTWARNINGDIALOG = 61;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(61);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_about, LAYOUT_FRAGMENTABOUT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_ad_details, LAYOUT_FRAGMENTADDETAILS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_ad_rent_dialog, LAYOUT_FRAGMENTADRENTDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_add_factory_form, LAYOUT_FRAGMENTADDFACTORYFORM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_add_flat_form, LAYOUT_FRAGMENTADDFLATFORM);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_add_land_form, LAYOUT_FRAGMENTADDLANDFORM);
@@ -206,14 +226,17 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_chat, LAYOUT_FRAGMENTCHAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_contact, LAYOUT_FRAGMENTCONTACT);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_contact_favorites, LAYOUT_FRAGMENTCONTACTFAVORITES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_conversations, LAYOUT_FRAGMENTCONVERSATIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_current_ads, LAYOUT_FRAGMENTCURRENTADS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_favorites, LAYOUT_FRAGMENTFAVORITES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_home_cities, LAYOUT_FRAGMENTHOMECITIES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_my_account, LAYOUT_FRAGMENTMYACCOUNT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_my_ads_main, LAYOUT_FRAGMENTMYADSMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_my_favorites_main, LAYOUT_FRAGMENTMYFAVORITESMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_notifications, LAYOUT_FRAGMENTNOTIFICATIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_onboard, LAYOUT_FRAGMENTONBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.fragment_payment, LAYOUT_FRAGMENTPAYMENT);
@@ -231,6 +254,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_chat, LAYOUT_ITEMCHAT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_city, LAYOUT_ITEMCITY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_conversation, LAYOUT_ITEMCONVERSATION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_favorites, LAYOUT_ITEMFAVORITES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_home, LAYOUT_ITEMHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_home_category, LAYOUT_ITEMHOMECATEGORY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(grand.app.akar.R.layout.item_my_ads, LAYOUT_ITEMMYADS);
@@ -262,6 +286,18 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new FragmentAboutBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for fragment_about is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTADDETAILS: {
+        if ("layout/fragment_ad_details_0".equals(tag)) {
+          return new FragmentAdDetailsBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_ad_details is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTADRENTDIALOG: {
+        if ("layout/fragment_ad_rent_dialog_0".equals(tag)) {
+          return new FragmentAdRentDialogBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_ad_rent_dialog is invalid. Received: " + tag);
       }
       case  LAYOUT_FRAGMENTADDFACTORYFORM: {
         if ("layout/fragment_add_factory_form_0".equals(tag)) {
@@ -371,6 +407,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for fragment_contact is invalid. Received: " + tag);
       }
+      case  LAYOUT_FRAGMENTCONTACTFAVORITES: {
+        if ("layout/fragment_contact_favorites_0".equals(tag)) {
+          return new FragmentContactFavoritesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_contact_favorites is invalid. Received: " + tag);
+      }
       case  LAYOUT_FRAGMENTCONVERSATIONS: {
         if ("layout/fragment_conversations_0".equals(tag)) {
           return new FragmentConversationsBindingImpl(component, view);
@@ -382,6 +424,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new FragmentCurrentAdsBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for fragment_current_ads is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTFAVORITES: {
+        if ("layout/fragment_favorites_0".equals(tag)) {
+          return new FragmentFavoritesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_favorites is invalid. Received: " + tag);
       }
       case  LAYOUT_FRAGMENTFORGETPASSWORD: {
         if ("layout/fragment_forget_password_0".equals(tag)) {
@@ -418,6 +466,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new FragmentMyAdsMainBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for fragment_my_ads_main is invalid. Received: " + tag);
+      }
+      case  LAYOUT_FRAGMENTMYFAVORITESMAIN: {
+        if ("layout/fragment_my_favorites_main_0".equals(tag)) {
+          return new FragmentMyFavoritesMainBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_my_favorites_main is invalid. Received: " + tag);
       }
       case  LAYOUT_FRAGMENTNOTIFICATIONS: {
         if ("layout/fragment_notifications_0".equals(tag)) {
@@ -515,11 +569,24 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_city is invalid. Received: " + tag);
       }
+    }
+    return null;
+  }
+
+  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
+      View view, int internalId, Object tag) {
+    switch(internalId) {
       case  LAYOUT_ITEMCONVERSATION: {
         if ("layout/item_conversation_0".equals(tag)) {
           return new ItemConversationBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for item_conversation is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMFAVORITES: {
+        if ("layout/item_favorites_0".equals(tag)) {
+          return new ItemFavoritesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_favorites is invalid. Received: " + tag);
       }
       case  LAYOUT_ITEMHOME: {
         if ("layout/item_home_0".equals(tag)) {
@@ -545,13 +612,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_action_bar_back is invalid. Received: " + tag);
       }
-    }
-    return null;
-  }
-
-  private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
-      View view, int internalId, Object tag) {
-    switch(internalId) {
       case  LAYOUT_LAYOUTACTIONBARHOME: {
         if ("layout/layout_action_bar_home_0".equals(tag)) {
           return new LayoutActionBarHomeBindingImpl(component, view);
@@ -648,50 +708,54 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(31);
+    static final SparseArray<String> sKeys = new SparseArray<String>(33);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
-      sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "categoriesData");
-      sKeys.put(4, "cities");
-      sKeys.put(5, "citiesList");
-      sKeys.put(6, "createRequest");
-      sKeys.put(7, "dealingType");
-      sKeys.put(8, "docType");
-      sKeys.put(9, "fileObjectVideo");
-      sKeys.put(10, "homeData");
-      sKeys.put(11, "itemChatViewModel");
-      sKeys.put(12, "itemHomeViewModel");
-      sKeys.put(13, "itemViewModel");
-      sKeys.put(14, "loginStatus");
-      sKeys.put(15, "manager");
-      sKeys.put(16, "myAdsAdapter");
-      sKeys.put(17, "notificationsData");
-      sKeys.put(18, "notifyItemViewModels");
-      sKeys.put(19, "notifyViewModel");
-      sKeys.put(20, "onBoardAdapter");
-      sKeys.put(21, "onBoardViewModels");
-      sKeys.put(22, "orderImages");
-      sKeys.put(23, "passingObject");
-      sKeys.put(24, "paymentMethod");
-      sKeys.put(25, "profileData");
-      sKeys.put(26, "selected");
-      sKeys.put(27, "settingsData");
-      sKeys.put(28, "userDocuments");
-      sKeys.put(29, "viewModel");
-      sKeys.put(30, "viewmodel");
+      sKeys.put(2, "adDetailsData");
+      sKeys.put(3, "baseViewModel");
+      sKeys.put(4, "categoriesData");
+      sKeys.put(5, "cities");
+      sKeys.put(6, "citiesList");
+      sKeys.put(7, "createRequest");
+      sKeys.put(8, "dealingType");
+      sKeys.put(9, "docType");
+      sKeys.put(10, "fileObjectVideo");
+      sKeys.put(11, "homeData");
+      sKeys.put(12, "itemChatViewModel");
+      sKeys.put(13, "itemHomeViewModel");
+      sKeys.put(14, "itemViewModel");
+      sKeys.put(15, "loginStatus");
+      sKeys.put(16, "manager");
+      sKeys.put(17, "myAdsAdapter");
+      sKeys.put(18, "myFavoritesAdapter");
+      sKeys.put(19, "notificationsData");
+      sKeys.put(20, "notifyItemViewModels");
+      sKeys.put(21, "notifyViewModel");
+      sKeys.put(22, "onBoardAdapter");
+      sKeys.put(23, "onBoardViewModels");
+      sKeys.put(24, "orderImages");
+      sKeys.put(25, "passingObject");
+      sKeys.put(26, "paymentMethod");
+      sKeys.put(27, "profileData");
+      sKeys.put(28, "selected");
+      sKeys.put(29, "settingsData");
+      sKeys.put(30, "userDocuments");
+      sKeys.put(31, "viewModel");
+      sKeys.put(32, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(55);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(61);
 
     static {
       sKeys.put("layout/activity_base_0", grand.app.akar.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", grand.app.akar.R.layout.activity_main);
       sKeys.put("layout/fragment_about_0", grand.app.akar.R.layout.fragment_about);
+      sKeys.put("layout/fragment_ad_details_0", grand.app.akar.R.layout.fragment_ad_details);
+      sKeys.put("layout/fragment_ad_rent_dialog_0", grand.app.akar.R.layout.fragment_ad_rent_dialog);
       sKeys.put("layout/fragment_add_factory_form_0", grand.app.akar.R.layout.fragment_add_factory_form);
       sKeys.put("layout/fragment_add_flat_form_0", grand.app.akar.R.layout.fragment_add_flat_form);
       sKeys.put("layout/fragment_add_land_form_0", grand.app.akar.R.layout.fragment_add_land_form);
@@ -710,14 +774,17 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_chat_0", grand.app.akar.R.layout.fragment_chat);
       sKeys.put("layout/fragment_confirm_code_0", grand.app.akar.R.layout.fragment_confirm_code);
       sKeys.put("layout/fragment_contact_0", grand.app.akar.R.layout.fragment_contact);
+      sKeys.put("layout/fragment_contact_favorites_0", grand.app.akar.R.layout.fragment_contact_favorites);
       sKeys.put("layout/fragment_conversations_0", grand.app.akar.R.layout.fragment_conversations);
       sKeys.put("layout/fragment_current_ads_0", grand.app.akar.R.layout.fragment_current_ads);
+      sKeys.put("layout/fragment_favorites_0", grand.app.akar.R.layout.fragment_favorites);
       sKeys.put("layout/fragment_forget_password_0", grand.app.akar.R.layout.fragment_forget_password);
       sKeys.put("layout/fragment_home_0", grand.app.akar.R.layout.fragment_home);
       sKeys.put("layout/fragment_home_cities_0", grand.app.akar.R.layout.fragment_home_cities);
       sKeys.put("layout/fragment_login_0", grand.app.akar.R.layout.fragment_login);
       sKeys.put("layout/fragment_my_account_0", grand.app.akar.R.layout.fragment_my_account);
       sKeys.put("layout/fragment_my_ads_main_0", grand.app.akar.R.layout.fragment_my_ads_main);
+      sKeys.put("layout/fragment_my_favorites_main_0", grand.app.akar.R.layout.fragment_my_favorites_main);
       sKeys.put("layout/fragment_notifications_0", grand.app.akar.R.layout.fragment_notifications);
       sKeys.put("layout/fragment_onboard_0", grand.app.akar.R.layout.fragment_onboard);
       sKeys.put("layout/fragment_payment_0", grand.app.akar.R.layout.fragment_payment);
@@ -735,6 +802,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_chat_0", grand.app.akar.R.layout.item_chat);
       sKeys.put("layout/item_city_0", grand.app.akar.R.layout.item_city);
       sKeys.put("layout/item_conversation_0", grand.app.akar.R.layout.item_conversation);
+      sKeys.put("layout/item_favorites_0", grand.app.akar.R.layout.item_favorites);
       sKeys.put("layout/item_home_0", grand.app.akar.R.layout.item_home);
       sKeys.put("layout/item_home_category_0", grand.app.akar.R.layout.item_home_category);
       sKeys.put("layout/item_my_ads_0", grand.app.akar.R.layout.item_my_ads);

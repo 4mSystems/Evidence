@@ -23,7 +23,7 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback69;
+    private final android.view.View.OnClickListener mCallback72;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback69 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback72 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -128,7 +128,7 @@ public class FragmentAkarLocationCitiesBindingImpl extends FragmentAkarLocationC
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.confirmBtn.setOnClickListener(mCallback69);
+            this.confirmBtn.setOnClickListener(mCallback72);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

@@ -23,9 +23,9 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,8 +47,8 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback18 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -122,31 +122,14 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnDiffLocations.setOnClickListener(mCallback17);
-            this.confirmBtn.setOnClickListener(mCallback18);
+            this.btnDiffLocations.setOnClickListener(mCallback20);
+            this.confirmBtn.setOnClickListener(mCallback21);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toCities();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -161,6 +144,23 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
 
 
                     viewmodel.toCategories();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AdsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toCities();
                 }
                 break;
             }

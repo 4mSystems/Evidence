@@ -54,6 +54,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final MaterialCardView listButtons;
 
   @NonNull
+  public final FragmentAdRentDialogBinding listingTypeSheet;
+
+  @NonNull
   public final CustomTextViewRegular map;
 
   @NonNull
@@ -79,8 +82,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       RecyclerView catHomeRc, FloatingActionButton frameToList,
       FloatingActionButton googleBaseLocation, FloatingActionButton googleMapStyle,
       AppCompatImageView icFilter, CustomTextViewMedium inputSearch, MaterialCardView listButtons,
-      CustomTextViewRegular map, ConstraintLayout mapButtons, HomeMapLayoutBinding mapInclude,
-      RecyclerView selectedRc, CustomTextViewRegular sort, View v17) {
+      FragmentAdRentDialogBinding listingTypeSheet, CustomTextViewRegular map,
+      ConstraintLayout mapButtons, HomeMapLayoutBinding mapInclude, RecyclerView selectedRc,
+      CustomTextViewRegular sort, View v17) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnDiffLocations = btnDiffLocations;
     this.cardList = cardList;
@@ -92,6 +96,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.icFilter = icFilter;
     this.inputSearch = inputSearch;
     this.listButtons = listButtons;
+    this.listingTypeSheet = listingTypeSheet;
     this.map = map;
     this.mapButtons = mapButtons;
     this.mapInclude = mapInclude;

@@ -16,6 +16,7 @@ import grand.app.akar.customViews.actionbar.HomeActionBarView;
 import grand.app.akar.databinding.ActivityMainBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.ads.AdsInfoFragment;
+import grand.app.akar.pages.favorites.MyFavoritesMainFragment;
 import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
@@ -39,7 +40,7 @@ public class MainActivity extends ParentActivity {
         activityMainBinding.setViewModel(viewModel);
         activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
         homeActionBarView = new HomeActionBarView(this);
-        MovementHelper.replaceFragment(this, new HomeCitiesFragment(), HomeCitiesFragment.class.getName());
+        MovementHelper.replaceFragment(this, new HomeCitiesFragment(), "");
         setEvents();
 
     }
@@ -53,7 +54,7 @@ public class MainActivity extends ParentActivity {
                     MovementHelper.replaceFragment(this, new HomeCitiesFragment(), "");
                     break;
                 case Constants.MENU_FAVORITE:
-//                    MovementHelper.replaceHomeFragment(context, new Favor());
+                    MovementHelper.replaceFragment(this, new MyFavoritesMainFragment(),"");
                     break;
                 case Constants.MENU_ACCOUNT:
                     MovementHelper.replaceFragment(this, new MyAccountFragment(), "");

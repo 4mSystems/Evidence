@@ -4,13 +4,14 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.google.android.material.card.MaterialCardView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.CustomTextViewRegular;
@@ -23,7 +24,7 @@ public abstract class ItemMyAdsBinding extends ViewDataBinding {
   public final Barrier br10;
 
   @NonNull
-  public final RoundedImageView imgHomeItem;
+  public final MaterialCardView imgHomeItem;
 
   @NonNull
   public final CustomTextViewRegular tvBeds;
@@ -47,20 +48,20 @@ public abstract class ItemMyAdsBinding extends ViewDataBinding {
   public final CustomTextViewRegular tvPath;
 
   @NonNull
-  public final CustomTextViewRegular tvPormote;
+  public final RelativeLayout tvPormote;
 
   @NonNull
-  public final CustomTextViewRegular tvRemove;
+  public final RelativeLayout tvRemove;
 
   @Bindable
   protected ItemHomeViewModel mItemHomeViewModel;
 
   protected ItemMyAdsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br10, RoundedImageView imgHomeItem, CustomTextViewRegular tvBeds,
+      Barrier br10, MaterialCardView imgHomeItem, CustomTextViewRegular tvBeds,
       CustomTextViewRegular tvBuilding, CustomTextViewRegular tvHomeDesc,
       CustomTextViewRegular tvHomeDistance, CustomTextViewMedium tvHomeItem,
-      CustomTextViewRegular tvLocation, CustomTextViewRegular tvPath,
-      CustomTextViewRegular tvPormote, CustomTextViewRegular tvRemove) {
+      CustomTextViewRegular tvLocation, CustomTextViewRegular tvPath, RelativeLayout tvPormote,
+      RelativeLayout tvRemove) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br10 = br10;
     this.imgHomeItem = imgHomeItem;

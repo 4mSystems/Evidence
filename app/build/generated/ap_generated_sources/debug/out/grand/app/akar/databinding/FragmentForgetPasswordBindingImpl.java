@@ -26,9 +26,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback96;
+    private final android.view.View.OnClickListener mCallback100;
     @Nullable
-    private final android.view.View.OnClickListener mCallback95;
+    private final android.view.View.OnClickListener mCallback101;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -94,8 +94,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.tvSocialTitle.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback96 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback95 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback100 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback101 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -233,9 +233,9 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback96);
+            this.appCompatButtonNext.setOnClickListener(mCallback101);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback95);
+            this.mboundView1.setOnClickListener(mCallback100);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -253,23 +253,6 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.sendCode();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -285,6 +268,23 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.sendCode();
                 }
                 break;
             }

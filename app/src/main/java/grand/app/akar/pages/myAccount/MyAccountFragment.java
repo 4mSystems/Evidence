@@ -25,6 +25,7 @@ import grand.app.akar.databinding.FragmentMyAccountBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.myAccount.models.ProfileDataResponse;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
+import grand.app.akar.pages.myAds.MyAdsMainFragment;
 import grand.app.akar.pages.settings.AboutAppFragment;
 import grand.app.akar.pages.settings.ContactUsFragment;
 import grand.app.akar.pages.settings.TermsFragment;
@@ -61,6 +62,15 @@ public class MyAccountFragment extends BaseFragment {
                 case Constants.CONTACT:
                     MovementHelper.startActivity(context, ContactUsFragment.class.getName(), getResources().getString(R.string.tv_account_contact), null);
                     break;
+                case Constants.MY_ADS:
+                    //0 => my listing , 1=> my-premium-listing
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(0), getResources().getString(R.string.my_ads), MyAdsMainFragment.class.getName(), null);
+                    break;
+                 case Constants.MY_PREMIUM_ADS:
+                    //0 => my listing , 1=> my-premium-listing
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(1), getResources().getString(R.string.my_fund_ads), MyAdsMainFragment.class.getName(), null);
+                    break;
+
             }
         });
     }

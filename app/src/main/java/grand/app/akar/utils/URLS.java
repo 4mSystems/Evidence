@@ -18,13 +18,13 @@ public class URLS {
     public final static String LISTING = "listings/home/";
     //    public  final static String COMPANIES = "company/companies?category_id=5&lat=30.1341689&lng=31.3655877&city_id=1";
     public final static String UPDATE_PAYMENT = "user/update-payment";
-    public final static String CARS_NATIONALS = "app/cars-nationals";
-    public final static String WAITING_ORDERS = "delegate/waiting-orders?lat=";
+    public final static String SEARCH = "listings/search";
+    public final static String FAVORITES = "listings/favorites/";
     public final static String SUBSCRIBE_AS_DELEGATE = "delegate/subscribe-as-delegate?shop_id=";
 
-    public final static String REGISTERED_SHOPS = "delegate/subscribed-shops";
-    public final static String STORE_ORDERS = "delegate/my-orders?lat=";
-    public final static String ORDER_DETAILS = "delegate/order-details?order_id=";
+    public final static String REMOVE_ADD_FAVORITE = "listings/add-to-fav";
+    public final static String MY_LISTING = "listings/my-listing/";
+    public final static String MY_PREMIUM_LISTING = "listings/my-premium-listing/";
     public final static String ABOUT = "settings/about-us";
     public final static String TERMS = "settings/terms";
 
@@ -32,8 +32,8 @@ public class URLS {
     public static final String CONTACT_US = "settings/contact-us";
     public static final String NOTIFICATIONS = "notifications";
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
-    public final static String GET_CLIENT_REVIEWS = "delegate/rates-of-orders";
-    public final static String GET_MAX_OFFER = "delegate/get-order-offers?order_id=";
+    public final static String REMOVE_AD = "listings/delete-listing/";
+    public final static String GET_AD_DETAILS = "listings/listing/";
 
 
     public static final String SEND_NEW_OFFER = "delegate/add-order-offer";

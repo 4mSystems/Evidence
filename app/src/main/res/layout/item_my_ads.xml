@@ -24,17 +24,25 @@
             android:layout_marginBottom="@dimen/dp8h"
             android:onClick="@{() -> itemHomeViewModel.itemAction()}">
 
-            <com.makeramen.roundedimageview.RoundedImageView
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/img_home_item"
-                android:layout_width="@dimen/dp100w"
-                android:layout_height="@dimen/dp100h"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp13h"
-                android:src="@drawable/holo"
-                app:riv_corner_radius="@dimen/dp8h"
-                app:imageUrl="@{itemHomeViewModel.homeData.defaultImg.media}"
+                android:layout_marginBottom="@dimen/dp2h"
+                app:cardCornerRadius="@dimen/dp8w"
+                app:cardUseCompatPadding="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp100w"
+                    android:layout_height="@dimen/dp100h"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/holo"
+                    app:imageUrl="@{itemHomeViewModel.homeData.defaultImg.media}" />
+            </com.google.android.material.card.MaterialCardView>
 
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
@@ -44,7 +52,7 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginEnd="@dimen/dp6w"
                 android:ellipsize="end"
-                android:hint="فيلا للإيجار"
+                android:hint="@{itemHomeViewModel.title}"
                 android:lines="1"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -62,7 +70,7 @@
                 android:gravity="center"
                 android:paddingStart="@dimen/dp4w"
                 android:paddingEnd="@dimen/dp4w"
-                android:text="#65462623"
+                android:text="@{`# `.concat(String.valueOf(itemHomeViewModel.homeData.id))}"
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp10"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +83,7 @@
                 android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp6w"
-                android:text="١٠٠٠ د.ل / شهرياً"
+                android:text="@{itemHomeViewModel.homeData.type.equals(`0`)?itemHomeViewModel.homeData.price.concat(@string/coin).concat(@string/monthly):itemHomeViewModel.homeData.price.concat(@string/coin)}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
@@ -92,8 +100,10 @@
                 android:layout_marginEnd="@dimen/dp6w"
                 android:drawableStart="@drawable/ic_villa"
                 android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
                 android:gravity="center"
-                android:text="١٥٠ متر"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.area.concat(@string/meter)}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
                 app:layout_constraintEnd_toStartOf="@+id/tv_beds"
@@ -110,10 +120,13 @@
                 android:layout_marginEnd="@dimen/dp6w"
                 android:drawableStart="@drawable/ic_bed_with_two_pillows_bottom_view"
                 android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
                 android:gravity="center"
-                android:text="٢ سرير"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.roomNo!=null ?itemHomeViewModel.homeData.roomNo.concat(@string/room):``}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                android:visibility="@{itemHomeViewModel.homeData.roomNo!=null?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@+id/tv_path"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/tv_building"
@@ -128,10 +141,13 @@
                 android:layout_marginEnd="@dimen/dp6w"
                 android:drawableStart="@drawable/ic_bathroom"
                 android:drawablePadding="@dimen/dp4w"
+                android:ellipsize="end"
                 android:gravity="center"
-                android:text="٢ سرير"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.bathroomNo!=null ?itemHomeViewModel.homeData.bathroomNo.concat(@string/bath):``}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
+                android:visibility="@{itemHomeViewModel.homeData.bathroomNo!=null?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/tv_beds"
@@ -153,7 +169,9 @@
                 android:layout_marginEnd="@dimen/dp6w"
                 android:drawableStart="@drawable/ic_location"
                 android:drawablePadding="@dimen/dp4w"
-                android:text="شارع الأنباري ٫ حي الدار البيضا - المدينة المنورة"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{itemHomeViewModel.homeData.address}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
@@ -161,43 +179,57 @@
                 app:layout_constraintStart_toEndOf="@+id/img_home_item"
                 app:layout_constraintTop_toBottomOf="@id/br10" />
 
-            <grand.app.akar.customViews.views.CustomTextViewRegular
+            <RelativeLayout
                 android:id="@+id/tv_pormote"
-                android:layout_width="@dimen/dp70w"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/dp25h"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_dark_code"
-                android:drawableStart="@drawable/ic_special_pormote"
-                android:gravity="center"
-                android:paddingStart="@dimen/dp4w"
-                android:paddingEnd="@dimen/dp4w"
-                android:text="@string/pormote_ad"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
+                android:visibility="@{itemHomeViewModel.homeData.premium==1?View.GONE:View.VISIBLE}"
                 app:layout_constraintEnd_toStartOf="@+id/tv_remove"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/img_home_item"
-                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_location">
 
-            <grand.app.akar.customViews.views.CustomTextViewRegular
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/ic_special_pormote"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:gravity="center"
+                    android:text="@string/pormote_ad"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:id="@+id/tv_remove"
-                android:layout_width="@dimen/dp70w"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/dp25h"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp6w"
                 android:background="@drawable/corner_view_primary_accept"
-                android:drawableStart="@drawable/ic_delete"
-                android:gravity="center"
-                android:paddingStart="@dimen/dp4w"
-                android:paddingEnd="@dimen/dp4w"
-                android:text="@string/delete_ad"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/tv_pormote"
-                app:layout_constraintTop_toBottomOf="@+id/tv_location" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_location">
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableStart="@drawable/ic_delete"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:gravity="center"
+                    android:onClick="@{()-> itemHomeViewModel.removeAd()}"
+                    android:text="@string/delete_ad"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp10" />
+
+            </RelativeLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

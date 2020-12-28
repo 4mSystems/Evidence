@@ -9,6 +9,7 @@ import android.widget.Filterable;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -19,20 +20,24 @@ import java.util.List;
 
 import grand.app.akar.R;
 import grand.app.akar.databinding.ItemHomeBinding;
+import grand.app.akar.databinding.ItemMyAdsBinding;
 import grand.app.akar.pages.home.models.HomeData;
 import grand.app.akar.pages.home.viewModels.ItemHomeViewModel;
+import grand.app.akar.utils.Constants;
 
 
-public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> implements Filterable {
+public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> {
     private List<HomeData> homeDataList;
-    private List<HomeData> homeDataListFiltered;
     private MutableLiveData<Integer> liveDataAdapter = new MutableLiveData<>();
     private Context context;
+    public int lastPosition;
 
     public MyAdsAdapter() {
         this.homeDataList = new ArrayList<>();
-        this.homeDataListFiltered = homeDataList;
+    }
 
+    public List<HomeData> getHomeDataList() {
+        return homeDataList;
     }
 
     public MutableLiveData<Integer> getLiveDataAdapter() {
@@ -42,7 +47,7 @@ public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> im
     @NonNull
     @Override
     public MenuView onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_home,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_ads,
                 parent, false);
         this.context = parent.getContext();
         return new MenuView(itemView);
@@ -51,16 +56,21 @@ public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> im
 
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
-        HomeData menuModel = homeDataListFiltered.get(position);
+        HomeData menuModel = homeDataList.get(position);
         ItemHomeViewModel itemMenuViewModel = new ItemHomeViewModel(menuModel);
-//        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel), menuModel.getName(), MarketMainFragment.class.getName(), null));
+        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) context), (Object o) -> {
+            if (o.equals(Constants.REMOVE_AD)) {
+                lastPosition = position;
+                liveDataAdapter.setValue(menuModel.getId());
+            }
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 
 
     public void update(List<HomeData> dataList) {
-        this.homeDataListFiltered.clear();
-        homeDataListFiltered.addAll(dataList);
+        this.homeDataList.clear();
+        homeDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -78,42 +88,12 @@ public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> im
 
     @Override
     public int getItemCount() {
-        return homeDataListFiltered.size();
+        return homeDataList.size();
     }
 
-    @Override
-    public Filter getFilter() {
-        return new Filter() {
-            @Override
-            protected FilterResults performFiltering(CharSequence charSequence) {
-                String charString = charSequence.toString();
-                if (charString.isEmpty()) {
-                    homeDataListFiltered = homeDataList;
-                } else {
-                    List<HomeData> filteredList = new ArrayList<>();
-                    for (HomeData row : homeDataList) {
-                        if (row.getPrice().toLowerCase().contains(charString.toLowerCase())) {
-                            filteredList.add(row);
-                        }
-                    }
-
-                    homeDataListFiltered = filteredList;
-                }
-                FilterResults filterResults = new FilterResults();
-                filterResults.values = homeDataListFiltered;
-                return filterResults;
-            }
-
-            @Override
-            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
-                homeDataListFiltered = (ArrayList<HomeData>) filterResults.values;
-                notifyDataSetChanged();
-            }
-        };
-    }
 
     public class MenuView extends RecyclerView.ViewHolder {
-        public ItemHomeBinding itemMenuBinding;
+        public ItemMyAdsBinding itemMenuBinding;
 
         MenuView(View itemView) {
             super(itemView);

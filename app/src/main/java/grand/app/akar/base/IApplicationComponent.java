@@ -6,6 +6,7 @@ import dagger.Component;
 import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.activity.MainActivity;
 import grand.app.akar.connection.ConnectionModule;
+import grand.app.akar.pages.adDetails.AdDetailsFragment;
 import grand.app.akar.pages.ads.AdsInfoFragment;
 import grand.app.akar.pages.ads.AdvertisingFeeFragment;
 import grand.app.akar.pages.ads.AkarLocationsCitiesFragment;
@@ -29,7 +30,9 @@ import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.pages.auth.register.RegisterFragment;
 import grand.app.akar.pages.chat.view.ChatFragment;
 import grand.app.akar.pages.conversations.ConversationsFragment;
-import grand.app.akar.pages.home.FragmentRentSheetDialog;
+import grand.app.akar.pages.favorites.FavoritesContactFragment;
+import grand.app.akar.pages.favorites.FavoritesFragment;
+import grand.app.akar.pages.favorites.MyFavoritesMainFragment;
 import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
@@ -125,7 +128,13 @@ public interface IApplicationComponent {
 
     void inject(HomeCitiesFragment homeCitiesFragment);
 
-    void inject(FragmentRentSheetDialog fragmentRentSheetDialog);
+    void inject(MyFavoritesMainFragment myFavoritesMainFragment);
+
+    void inject(FavoritesFragment favoritesFragment);
+
+    void inject(FavoritesContactFragment favoritesContactFragment);
+
+    void inject(AdDetailsFragment adDetailsFragment);
 
     @Component.Builder
     interface Builder {

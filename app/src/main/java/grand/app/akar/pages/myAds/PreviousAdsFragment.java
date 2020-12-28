@@ -8,16 +8,25 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
+
+import grand.app.akar.BR;
 import grand.app.akar.R;
+import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentPreviousAdsBinding;
+import grand.app.akar.model.base.Mutable;
+import grand.app.akar.model.base.StatusMessage;
+import grand.app.akar.pages.home.models.HomeResponse;
 import grand.app.akar.pages.myAds.viewModels.MyAdsViewModel;
+import grand.app.akar.utils.Constants;
 
 
 public class PreviousAdsFragment extends BaseFragment {
@@ -25,6 +34,11 @@ public class PreviousAdsFragment extends BaseFragment {
     private Context context;
     @Inject
     MyAdsViewModel viewModel;
+    int pageType;
+
+    public PreviousAdsFragment(int pageType) {
+        this.pageType = pageType;
+    }
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,25 +50,32 @@ public class PreviousAdsFragment extends BaseFragment {
     }
 
     private void setEvent() {
-//        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
-//            Mutable mutable = (Mutable) o;
-//            handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.STORE_ORDERS)) {
-//                viewModel.getOrdersAdapter().update(((WaitingOrderResponse) (mutable).object).getData(), viewModel.getOrdersRequest().getDepartment_id());
-//                viewModel.notifyChange(BR.storesAdapter);
-//            } else if (((Mutable) o).message.equals(Constants.ORDER_FILTER)) {
-//                showOrderFilter();
-//            }
-//        });
+        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+            Mutable mutable = (Mutable) o;
+            handleActions(mutable);
+            if (mutable.message.equals(Constants.MY_LISTING)) {
+                viewModel.getMyAdsAdapter().update(((HomeResponse) mutable.object).getHomeDataList());
+                viewModel.notifyChange(BR.myAdsAdapter);
+            } else if (mutable.message.equals(Constants.REMOVE_AD)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getMyAdsAdapter().getHomeDataList().remove(viewModel.getMyAdsAdapter().lastPosition);
+                viewModel.getMyAdsAdapter().notifyItemRemoved(viewModel.getMyAdsAdapter().lastPosition);
+            }
+        });
+        viewModel.getMyAdsAdapter().getLiveDataAdapter().observe((LifecycleOwner) context, integer -> viewModel.removeAd(integer));
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        if (viewModel.getOrdersAdapter().getItemCount() == 0) {
-//            initLastLocation(3);
-//        }
-//        viewModel.getMarketRepository().setLiveData(viewModel.liveData);
+        ((BaseActivity) context).enableRefresh(false);
+        if (viewModel.getMyAdsAdapter().getItemCount() == 0) {
+            if (pageType == 0)
+                viewModel.myListing(1);
+            else
+                viewModel.myPremiumListing(1);
+        }
+        viewModel.getAdsRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

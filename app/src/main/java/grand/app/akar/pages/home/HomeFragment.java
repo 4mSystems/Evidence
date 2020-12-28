@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
@@ -23,6 +24,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
@@ -40,10 +42,14 @@ import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.models.HomeResponse;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 import grand.app.akar.utils.session.UserHelper;
 
 
-public class HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class
+
+
+HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private Context context;
     @Inject
@@ -55,6 +61,7 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
     MapHelper mapHelper;
     GoogleMap mMap;
     Bundle savedInstanceState;
+    BottomSheetBehavior listingSheetBehavior;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -62,6 +69,8 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        listingSheetBehavior = BottomSheetBehavior.from(binding.listingTypeSheet.listingTypeSheet);
+        listingSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
@@ -78,7 +87,11 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            Log.e("setEvent", "setEvent: " + mutable.message);
             switch (mutable.message) {
+                case Constants.RESULT_SEARCH_LISTING_TYPE:
+                    listingSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+                    break;
                 case Constants.FLIP_CARD:
                     flipCard();
                     break;
@@ -88,7 +101,13 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
                 case Constants.CURRENT_LOCATION:
                     mapHelper.getLastKnownLocation();
                     break;
+                case Constants.SEARCH_LISTING_TYPE:
+                    listingSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+                    break;
                 case Constants.HOME:
+                    Log.e("setEvent", "setEvent: ");
+                    mMap.clear();
+                    viewModel.getHomeAdapter().getHomeDataListFiltered().clear();
                     viewModel.getHomeAdapter().update(((HomeResponse) mutable.object).getHomeDataList());
                     for (int i = 0; i < viewModel.getHomeAdapter().getItemCount(); i++) {
                         mapHelper.addUserMarker(viewModel.getHomeAdapter().getHomeDataListFiltered().get(i));
@@ -156,6 +175,7 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
 
     @Override
     public void onResume() {
+        Log.e("onResume", "onResume: ");
         binding.mapInclude.mapView.onResume();
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
         super.onResume();

@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                 
+                            
+                                                                                  
+
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_ad_details_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/searchContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp200h"
+                android:scaleType="centerCrop"
+                android:src="@color/overlayBackground"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp20w"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp20w"
+                android:background="@color/overlayBackground"
+                android:padding="@dimen/dp10h"
+                android:src="@drawable/ic_pinned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp120h"
+                android:layout_marginEnd="@dimen/dp18w"
+                android:background="@color/white"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintTop_toBottomOf="@id/back">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:tag="binding_1"                                                    
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp4h"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:tag="binding_2"                                                           
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/black"
+                        app:layout_constraintTop_toBottomOf="@id/price" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewRegular
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginEnd="@dimen/dp12w"
+                        android:layout_marginBottom="@dimen/dp4h"
+                        android:tag="binding_3"                                                                              
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/address" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/v18"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/details_card" />
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/ad_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@string/building_desc"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:tag="binding_4"                                                                            
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v18" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/desc_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp6h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_5"                                                                                                       
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                                                                                                                   
+                app:layout_constraintTop_toBottomOf="@id/ad_desc" />
+
+            <View
+                android:id="@+id/v19"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/desc_text" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/img_home_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp13h"
+                android:layout_marginBottom="@dimen/dp2h"
+                app:cardCornerRadius="@dimen/dp8w"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v19">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dp90w"
+                    android:layout_height="@dimen/dp90h"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/holo"
+                    android:tag="binding_6"                                    />
+            </com.google.android.material.card.MaterialCardView>
+
+            <grand.app.akar.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_home_item"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:ellipsize="end"
+                android:lines="1"
+                android:tag="binding_7"                                    
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toTopOf="@+id/img_home_item" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_home_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:text="شركة الماس للخدمات العقارية"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toBottomOf="@id/tv_home_item" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tv_pormote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp4h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toEndOf="@+id/img_home_item"
+                app:layout_constraintTop_toBottomOf="@+id/tv_home_desc">
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_view_gradient"
+                    android:drawableStart="@drawable/ic_emergency_call"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:gravity="center"
+                    android:padding="@dimen/dp8h"
+                    android:text="@string/call_client"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tv_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginTop="@dimen/dp4h"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintStart_toEndOf="@+id/tv_pormote"
+                app:layout_constraintTop_toBottomOf="@+id/tv_home_desc">
+
+                <grand.app.akar.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/corner_view_gradient"
+                    android:drawableStart="@drawable/ic_chat_bubbles_with_ellipsis"
+                    android:drawablePadding="@dimen/dp4w"
+                    android:gravity="center"
+                    android:padding="@dimen/dp8h"
+                    android:text="@string/chat_client"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="img_home_item,tv_pormote,tv_remove" />
+
+            <View
+                android:id="@+id/v5"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="@dimen/dp14h"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/br4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/map"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp200h"
+                android:tag="binding_8"                   
+                android:scaleType="centerCrop"
+                android:src="@drawable/map_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_9"                   
+                android:src="@drawable/ic_contact_location"
+                app:layout_constraintBottom_toBottomOf="@id/map"
+                app:layout_constraintEnd_toEndOf="@id/map"
+                app:layout_constraintStart_toStartOf="@id/map"
+                app:layout_constraintTop_toTopOf="@id/map" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selected_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginBottom="@dimen/dp40h"
+                android:tag="binding_10"              
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/map"
+                                        
+                                  />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                app:cardElevation="@dimen/dp4h"
+                app:layout_constraintTop_toBottomOf="@id/selected_rc">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp6h">
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp6h"
+                        android:drawableTop="@mipmap/ic_favorite"
+                        android:tag="binding_11"                                                    
+                        android:text="@string/favorite_title"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toStartOf="@+id/call"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp6h"
+                        android:drawableTop="@mipmap/ic_detail_call"
+                        android:text="@string/call_client"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toStartOf="@+id/share"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/favorite"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp6h"
+                        android:drawableTop="@mipmap/ic_share"
+                        android:text="@string/share_detail"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toStartOf="@+id/report"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/call"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <grand.app.akar.customViews.views.CustomTextViewMedium
+                        android:id="@+id/report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp6h"
+                        android:layout_marginEnd="@dimen/dp15w"
+                        android:drawableTop="@mipmap/ic_report"
+                        android:text="@string/report"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/share"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

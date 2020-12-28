@@ -1,8 +1,10 @@
 package grand.app.akar.pages.home.viewModels;
 
 import android.view.MenuItem;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
+import androidx.databinding.Bindable;
 import androidx.databinding.BindingMethod;
 import androidx.databinding.BindingMethods;
 import androidx.lifecycle.MutableLiveData;
@@ -16,6 +18,7 @@ import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.adapters.HomeAdapter;
 import grand.app.akar.pages.home.adapters.HomeCategoriesAdapter;
+import grand.app.akar.pages.home.models.SearchRequest;
 import grand.app.akar.repository.HomeRepository;
 import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
@@ -28,9 +31,11 @@ public class HomeViewModel extends BaseViewModel {
     HomeRepository homeRepository;
     HomeAdapter homeAdapter;
     HomeCategoriesAdapter categoriesAdapter;
+    SearchRequest searchRequest;
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
+        searchRequest = new SearchRequest();
         homeAdapter = new HomeAdapter();
         categoriesAdapter = new HomeCategoriesAdapter();
         this.homeRepository = homeRepository;
@@ -40,6 +45,12 @@ public class HomeViewModel extends BaseViewModel {
 
     public void getListing() {
         compositeDisposable.add(homeRepository.getHome(getPassingObject().getId(), getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId()));
+    }
+
+    public void search() {
+        getSearchRequest().setCategory_id(getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId());
+        getSearchRequest().setCity_id(getPassingObject().getId());
+        compositeDisposable.add(homeRepository.search(getSearchRequest()));
     }
 
 
@@ -68,6 +79,16 @@ public class HomeViewModel extends BaseViewModel {
     })
     public class DataBindingAdapter {
 
+    }
+
+    public void rentType(RadioGroup radioGroup, int id) {
+        if (id == R.id.radioRent) {
+            getSearchRequest().setListing_type(0);
+        } else
+            getSearchRequest().setListing_type(1);
+        notifyChange();
+        search();
+        liveData.setValue(new Mutable(Constants.RESULT_SEARCH_LISTING_TYPE));
     }
 
     public boolean onNavigationClick(@NonNull MenuItem item) {
@@ -118,4 +139,11 @@ public class HomeViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
     }
 
+    public void rentTypeFilter() {
+        liveData.setValue(new Mutable(Constants.SEARCH_LISTING_TYPE));
+    }
+
+    public SearchRequest getSearchRequest() {
+        return searchRequest;
+    }
 }

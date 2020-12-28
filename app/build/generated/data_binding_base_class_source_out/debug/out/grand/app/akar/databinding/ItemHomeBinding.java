@@ -10,7 +10,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.makeramen.roundedimageview.RoundedImageView;
+import com.google.android.material.card.MaterialCardView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.CustomTextViewRegular;
@@ -23,7 +23,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   public final Barrier br10;
 
   @NonNull
-  public final RoundedImageView imgHomeItem;
+  public final MaterialCardView imgHomeItem;
 
   @NonNull
   public final CustomTextViewRegular tvBeds;
@@ -50,7 +50,7 @@ public abstract class ItemHomeBinding extends ViewDataBinding {
   protected ItemHomeViewModel mItemHomeViewModel;
 
   protected ItemHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br10, RoundedImageView imgHomeItem, CustomTextViewRegular tvBeds,
+      Barrier br10, MaterialCardView imgHomeItem, CustomTextViewRegular tvBeds,
       CustomTextViewRegular tvBuilding, CustomTextViewRegular tvHomeDesc,
       CustomTextViewRegular tvHomeDistance, CustomTextViewMedium tvHomeItem,
       CustomTextViewRegular tvLocation, CustomTextViewRegular tvPath) {
