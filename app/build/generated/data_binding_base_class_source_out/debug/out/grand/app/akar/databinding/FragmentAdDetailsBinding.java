@@ -15,6 +15,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
+import com.smarteist.autoimageslider.SliderView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.CustomTextViewRegular;
@@ -39,7 +40,10 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
   public final CustomTextViewMedium call;
 
   @NonNull
-  public final AppCompatImageView coverImage;
+  public final SliderView coverImage;
+
+  @NonNull
+  public final CustomTextViewMedium delete;
 
   @NonNull
   public final CustomTextViewRegular desc;
@@ -63,6 +67,9 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
   public final CustomTextViewMedium price;
 
   @NonNull
+  public final CustomTextViewMedium refresh;
+
+  @NonNull
   public final CustomTextViewMedium report;
 
   @NonNull
@@ -73,6 +80,9 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewMedium share;
+
+  @NonNull
+  public final CustomTextViewMedium shareOwner;
 
   @NonNull
   public final CustomTextViewRegular tvHomeDesc;
@@ -100,11 +110,12 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
 
   protected FragmentAdDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewMedium adDesc, CustomTextViewMedium address, AppCompatImageView back,
-      Barrier br4, CustomTextViewMedium call, AppCompatImageView coverImage,
+      Barrier br4, CustomTextViewMedium call, SliderView coverImage, CustomTextViewMedium delete,
       CustomTextViewRegular desc, CustomTextViewRegular descText, CardView detailsCard,
       CustomTextViewMedium favorite, MaterialCardView imgHomeItem, AppCompatImageView map,
-      CustomTextViewMedium price, CustomTextViewMedium report, ConstraintLayout searchContainer,
-      RecyclerView selectedRc, CustomTextViewMedium share, CustomTextViewRegular tvHomeDesc,
+      CustomTextViewMedium price, CustomTextViewMedium refresh, CustomTextViewMedium report,
+      ConstraintLayout searchContainer, RecyclerView selectedRc, CustomTextViewMedium share,
+      CustomTextViewMedium shareOwner, CustomTextViewRegular tvHomeDesc,
       CustomTextViewMedium tvHomeItem, CardView tvPormote, CardView tvRemove, View v18, View v19,
       View v5) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -114,6 +125,7 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
     this.br4 = br4;
     this.call = call;
     this.coverImage = coverImage;
+    this.delete = delete;
     this.desc = desc;
     this.descText = descText;
     this.detailsCard = detailsCard;
@@ -121,10 +133,12 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
     this.imgHomeItem = imgHomeItem;
     this.map = map;
     this.price = price;
+    this.refresh = refresh;
     this.report = report;
     this.searchContainer = searchContainer;
     this.selectedRc = selectedRc;
     this.share = share;
+    this.shareOwner = shareOwner;
     this.tvHomeDesc = tvHomeDesc;
     this.tvHomeItem = tvHomeItem;
     this.tvPormote = tvPormote;

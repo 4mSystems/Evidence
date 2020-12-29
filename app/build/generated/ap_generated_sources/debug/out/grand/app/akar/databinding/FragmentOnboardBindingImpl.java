@@ -19,9 +19,9 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
+    private final android.view.View.OnClickListener mCallback15;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback11 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -116,8 +116,8 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback11);
-            this.startApp.setOnClickListener(mCallback12);
+            this.appCompatButtonNext.setOnClickListener(mCallback15);
+            this.startApp.setOnClickListener(mCallback16);
         }
     }
     // Listener Stub Implementations

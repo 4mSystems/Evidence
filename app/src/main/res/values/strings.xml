@@ -318,5 +318,21 @@
     <string name="call_client">اتصال</string>
     <string name="chat_client">محادثة</string>
     <string name="share_detail">مشاركة</string>
+    <string name="sort_title">الترتيب حسب</string>
+    <string name="latest">الأحدث</string>
+    <string name="price_high_low">السعر : الأعلى إلى الأقل</string>
+    <string name="price_low_high">السعر : الأقل إلي الأعلي</string>
+    <string name="big_area">المنطقة : الأكبر</string>
+    <string name="samllest_area">المنطقة : الأصغر</string>
+    <string name="high_views">الأكثر مشاهدة</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="refresh">تحديث</string>
+    <string name="delete">حذف</string>
+    <string name="edit_images">تعديل الصور</string>
+    <string name="edit_location">تعديل الموقع</string>
+    <string name="edit_details">تعديل التفاصيل</string>
+    <string name="cancel">إلغاء</string>
+    <string name="remove_image_first">يجب حذف الصورة اولا</string>
 
 </resources>

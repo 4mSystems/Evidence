@@ -14,7 +14,7 @@ import androidx.databinding.ViewDataBinding;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.customViews.views.CustomTextViewRegular;
-import grand.app.akar.pages.home.viewModels.HomeViewModel;
+import grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -35,7 +35,7 @@ public abstract class ReportWarningDialogBinding extends ViewDataBinding {
   public final AppCompatButton optionDone;
 
   @Bindable
-  protected HomeViewModel mViewModel;
+  protected AdDetailsViewModel mViewModel;
 
   protected ReportWarningDialogBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular dialogBody, AppCompatImageView dialogHeader,
@@ -48,10 +48,10 @@ public abstract class ReportWarningDialogBinding extends ViewDataBinding {
     this.optionDone = optionDone;
   }
 
-  public abstract void setViewModel(@Nullable HomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable AdDetailsViewModel viewModel);
 
   @Nullable
-  public HomeViewModel getViewModel() {
+  public AdDetailsViewModel getViewModel() {
     return mViewModel;
   }
 

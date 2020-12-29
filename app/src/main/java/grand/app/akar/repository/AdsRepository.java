@@ -15,6 +15,8 @@ import grand.app.akar.connection.FileObject;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.model.base.StatusMessage;
 import grand.app.akar.pages.adDetails.models.AdDetailsResponse;
+import grand.app.akar.pages.adDetails.models.ReportRequest;
+import grand.app.akar.pages.adDetails.models.UpdatedImagesRequest;
 import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.favorites.models.FavoriteRequest;
 import grand.app.akar.pages.home.models.HomeResponse;
@@ -41,10 +43,13 @@ public class AdsRepository extends BaseRepository {
     }
 
     public Disposable createAd(CreateAdRequest createAdRequest, List<FileObject> fileObjectList) {
-        Log.e("teassss", createAdRequest.toString());
-
         return connectionHelper.requestApi(URLS.CREATE_AD, createAdRequest, fileObjectList, StatusMessage.class,
                 Constants.CREATE_AD, true);
+    }
+
+    public Disposable updateAdImages(UpdatedImagesRequest updatedImagesRequest, List<FileObject> fileObjectList) {
+        return connectionHelper.requestApi(URLS.UPDATE_IMAGES, updatedImagesRequest, fileObjectList, StatusMessage.class,
+                Constants.UPDATE_IMAGES, true);
     }
 
     public Disposable getServices() {
@@ -80,6 +85,16 @@ public class AdsRepository extends BaseRepository {
     public Disposable getAdDetails(int listingId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_AD_DETAILS + listingId, new Object(), AdDetailsResponse.class,
                 Constants.GET_AD_DETAILS, true);
+    }
+
+    public Disposable sendReport(ReportRequest reportRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_REPORT, reportRequest, StatusMessage.class,
+                Constants.SEND_REPORT, true);
+    }
+
+    public Disposable updateDate(int listingId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UPDATE_AD_DATE+listingId, new Object(), StatusMessage.class,
+                Constants.UPDATE_AD_DATE, true);
     }
 
 }

@@ -8,9 +8,11 @@ import android.content.pm.PackageManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.widget.ImageViewCompat;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.ResolvableApiException;
@@ -38,6 +40,7 @@ import grand.app.akar.base.MyApplication;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.pages.auth.models.cities.Cities;
 import grand.app.akar.pages.home.models.HomeData;
+import grand.app.akar.utils.resources.ResourceManager;
 
 import static grand.app.akar.utils.helper.MovementHelper.createDrawableFromView;
 
@@ -67,7 +70,6 @@ public class MapHelper {
 
     }
 
-    private final String TAG = "MapHelper";
 
     public void addMarker(LatLng position, boolean draggable) {
         markerOptionsDriver = new MarkerOptions();
@@ -82,8 +84,8 @@ public class MapHelper {
     }
 
     public void animateCamera(LatLng position) {
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 13));
-        CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(17).bearing(90).tilt(40).build();
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(position, 10));
+        CameraPosition cameraPosition = new CameraPosition.Builder().target(position).zoom(10).bearing(90).tilt(40).build();
         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
         driverLat = position.latitude;
         driverLng = position.longitude;
@@ -110,7 +112,12 @@ public class MapHelper {
     public void addUserMarker(HomeData homeData) {
         View markerCustom = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.places_custom_marker, null);
         CustomTextViewMedium priceView = markerCustom.findViewById(R.id.price_map);
+        ImageView viewCompat = markerCustom.findViewById(R.id.custom_img);
         priceView.setText(homeData.getPrice());
+        if (homeData.getPremium() == 0) {
+            viewCompat.setImageDrawable(ResourceManager.getDrawable(R.drawable.places_custom_marker_background));
+        } else
+            viewCompat.setImageDrawable(ResourceManager.getDrawable(R.drawable.places_custom_marker_premium_background));
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.draggable(false);
         markerOptions.position(new LatLng(Double.parseDouble(homeData.getLat()), Double.parseDouble(homeData.getLng())));

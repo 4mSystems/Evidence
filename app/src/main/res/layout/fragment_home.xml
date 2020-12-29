@@ -161,6 +161,7 @@
                         android:drawableStart="@drawable/ic_sort"
                         android:drawablePadding="@dimen/dp4w"
                         android:text="@string/sort"
+                        android:onClick="@{()->viewmodel.sortDialog()}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         app:layout_constraintStart_toStartOf="parent"

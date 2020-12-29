@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
+            type="grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -35,55 +35,23 @@
             <View
                 android:id="@+id/v13"
                 android:layout_width="match_parent"
-                android:layout_height="6dp"
+                android:layout_height="3dp"
                 android:layout_marginTop="@dimen/dp14h"
                 android:background="@color/colorLight"
                 app:layout_constraintTop_toBottomOf="@id/dialog_header" />
 
-            <CheckBox
-                android:id="@+id/wrong_price"
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/selected_rc"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/wrong_price"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v13" />
-
-            <CheckBox
-                android:id="@+id/wrong_location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/wrong_location"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wrong_price" />
-
-            <CheckBox
-                android:id="@+id/wrong_behave"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/wrong_behave"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wrong_location" />
-
-            <CheckBox
-                android:id="@+id/wrong_building"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/wrong_building"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wrong_behave" />
-
-            <CheckBox
-                android:id="@+id/other_reason"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/other_reason"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/wrong_building" />
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginBottom="@dimen/dp40h"
+                app:adapter="@{viewModel.reportDialogReasonsAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/v13"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}" />
 
             <grand.app.akar.customViews.views.CustomEditText
                 android:id="@+id/input_desc"
@@ -103,7 +71,8 @@
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/other_reason" />
+                app:layout_constraintTop_toBottomOf="@+id/selected_rc"
+                app:text="@={viewModel.reportRequest.text}" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/option_done"
@@ -112,6 +81,7 @@
                 android:layout_marginTop="@dimen/dp18h"
                 android:background="@color/colorPrimary"
                 android:text="@string/report"
+                android:onClick="@{()-> viewModel.sendReport()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"

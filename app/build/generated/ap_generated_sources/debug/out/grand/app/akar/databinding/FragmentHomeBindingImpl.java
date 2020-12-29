@@ -15,18 +15,17 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         sIncludes = new androidx.databinding.ViewDataBinding.IncludedLayouts(19);
         sIncludes.setIncludes(0, 
             new String[] {"fragment_ad_rent_dialog"},
-            new int[] {11},
+            new int[] {12},
             new int[] {grand.app.akar.R.layout.fragment_ad_rent_dialog});
         sIncludes.setIncludes(4, 
             new String[] {"home_map_layout"},
-            new int[] {10},
+            new int[] {11},
             new int[] {grand.app.akar.R.layout.home_map_layout});
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 12);
-        sViewsWithIds.put(R.id.ic_filter, 13);
-        sViewsWithIds.put(R.id.card_list, 14);
-        sViewsWithIds.put(R.id.list_buttons, 15);
-        sViewsWithIds.put(R.id.sort, 16);
+        sViewsWithIds.put(R.id.input_search, 13);
+        sViewsWithIds.put(R.id.ic_filter, 14);
+        sViewsWithIds.put(R.id.card_list, 15);
+        sViewsWithIds.put(R.id.list_buttons, 16);
         sViewsWithIds.put(R.id.v17, 17);
         sViewsWithIds.put(R.id.map_buttons, 18);
     }
@@ -37,15 +36,17 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     private final androidx.recyclerview.widget.RecyclerView mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback106;
+    private final android.view.View.OnClickListener mCallback118;
     @Nullable
-    private final android.view.View.OnClickListener mCallback104;
+    private final android.view.View.OnClickListener mCallback116;
     @Nullable
-    private final android.view.View.OnClickListener mCallback102;
+    private final android.view.View.OnClickListener mCallback120;
     @Nullable
-    private final android.view.View.OnClickListener mCallback105;
+    private final android.view.View.OnClickListener mCallback117;
     @Nullable
-    private final android.view.View.OnClickListener mCallback103;
+    private final android.view.View.OnClickListener mCallback121;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback119;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -56,21 +57,21 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 3
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
-            , (android.widget.FrameLayout) bindings[14]
+            , (android.widget.FrameLayout) bindings[15]
             , (android.widget.FrameLayout) bindings[4]
             , (androidx.recyclerview.widget.RecyclerView) bindings[2]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[9]
-            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[7]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[10]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[8]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[12]
-            , (com.google.android.material.card.MaterialCardView) bindings[15]
-            , (grand.app.akar.databinding.FragmentAdRentDialogBinding) bindings[11]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
+            , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[9]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[14]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[13]
+            , (com.google.android.material.card.MaterialCardView) bindings[16]
+            , (grand.app.akar.databinding.FragmentAdRentDialogBinding) bindings[12]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[7]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[18]
-            , (grand.app.akar.databinding.HomeMapLayoutBinding) bindings[10]
+            , (grand.app.akar.databinding.HomeMapLayoutBinding) bindings[11]
             , (androidx.recyclerview.widget.RecyclerView) bindings[5]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[16]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[6]
             , (android.view.View) bindings[17]
             );
         this.btnDiffLocations.setTag(null);
@@ -87,13 +88,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         this.mboundView3 = (androidx.recyclerview.widget.RecyclerView) bindings[3];
         this.mboundView3.setTag(null);
         this.selectedRc.setTag(null);
+        this.sort.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback106 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback104 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback105 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback103 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback118 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback116 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback120 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback117 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback121 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback119 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -246,11 +249,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnDiffLocations.setOnClickListener(mCallback102);
-            this.frameToList.setOnClickListener(mCallback106);
-            this.googleBaseLocation.setOnClickListener(mCallback104);
-            this.googleMapStyle.setOnClickListener(mCallback105);
-            this.map.setOnClickListener(mCallback103);
+            this.btnDiffLocations.setOnClickListener(mCallback116);
+            this.frameToList.setOnClickListener(mCallback121);
+            this.googleBaseLocation.setOnClickListener(mCallback119);
+            this.googleMapStyle.setOnClickListener(mCallback120);
+            this.map.setOnClickListener(mCallback118);
+            this.sort.setOnClickListener(mCallback117);
         }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
@@ -268,23 +272,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.filpCard();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -298,7 +285,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.reCenterToCurrentLocation();
+                    viewmodel.filpCard();
                 }
                 break;
             }
@@ -319,7 +306,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                 }
                 break;
             }
-            case 4: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -349,7 +336,41 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
                 if (viewmodelJavaLangObjectNull) {
 
 
+                    viewmodel.sortDialog();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
                     viewmodel.filpCard();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.reCenterToCurrentLocation();
                 }
                 break;
             }

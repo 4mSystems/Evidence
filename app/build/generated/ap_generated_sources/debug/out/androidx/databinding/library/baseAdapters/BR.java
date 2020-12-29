@@ -57,13 +57,17 @@ public class BR {
 
   public static final int profileData = 27;
 
-  public static final int selected = 28;
+  public static final int reasonsItem = 28;
 
-  public static final int settingsData = 29;
+  public static final int selected = 29;
 
-  public static final int userDocuments = 30;
+  public static final int settingsData = 30;
 
-  public static final int viewModel = 31;
+  public static final int sliderItem = 31;
 
-  public static final int viewmodel = 32;
+  public static final int userDocuments = 32;
+
+  public static final int viewModel = 33;
+
+  public static final int viewmodel = 34;
 }

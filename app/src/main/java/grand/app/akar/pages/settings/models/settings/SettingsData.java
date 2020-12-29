@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 import grand.app.akar.pages.ads.models.CategoriesData;
+import grand.app.akar.pages.splash.models.ReasonsItem;
 
 public class SettingsData {
 
@@ -27,6 +28,12 @@ public class SettingsData {
     private String lat;
     @SerializedName("categories")
     private List<CategoriesData> categoriesDataList;
+    @SerializedName("reasons")
+    private List<ReasonsItem> reasonsItemList;
+
+    public List<ReasonsItem> getReasonsItemList() {
+        return reasonsItemList;
+    }
 
     public List<CategoriesData> getCategoriesDataList() {
         return categoriesDataList;

@@ -16,6 +16,16 @@ public class SliderItem{
 	@SerializedName("type")
 	private int type;
 
+	public SliderItem(int listingId, int id, String media, int type) {
+		this.listingId = listingId;
+		this.id = id;
+		this.media = media;
+		this.type = type;
+	}
+
+	public SliderItem() {
+	}
+
 	public int getListingId(){
 		return listingId;
 	}
@@ -26,6 +36,10 @@ public class SliderItem{
 
 	public String getMedia(){
 		return media;
+	}
+
+	public void setMedia(String media) {
+		this.media = media;
 	}
 
 	public int getType(){

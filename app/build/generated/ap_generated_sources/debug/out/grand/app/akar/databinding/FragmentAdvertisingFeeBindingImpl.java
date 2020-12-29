@@ -29,7 +29,7 @@ public class FragmentAdvertisingFeeBindingImpl extends FragmentAdvertisingFeeBin
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback55;
+    private final android.view.View.OnClickListener mCallback68;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,7 +55,7 @@ public class FragmentAdvertisingFeeBindingImpl extends FragmentAdvertisingFeeBin
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback68 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -129,7 +129,7 @@ public class FragmentAdvertisingFeeBindingImpl extends FragmentAdvertisingFeeBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.confirmBtn.setOnClickListener(mCallback55);
+            this.confirmBtn.setOnClickListener(mCallback68);
         }
     }
     // Listener Stub Implementations

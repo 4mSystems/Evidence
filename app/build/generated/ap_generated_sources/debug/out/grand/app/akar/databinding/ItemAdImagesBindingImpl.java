@@ -20,9 +20,9 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback69;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback70;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,8 +41,8 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback56 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback57 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback69 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback70 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -169,8 +169,8 @@ public class ItemAdImagesBindingImpl extends ItemAdImagesBinding implements gran
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.close1.setOnClickListener(mCallback57);
-            this.image1.setOnClickListener(mCallback56);
+            this.close1.setOnClickListener(mCallback70);
+            this.image1.setOnClickListener(mCallback69);
         }
         if ((dirtyFlags & 0xdL) != 0) {
             // api target 1

@@ -59,25 +59,25 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
     private final grand.app.akar.customViews.views.DateEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback44;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback37;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback38;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback41;
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback35;
     @Nullable
-    private final android.view.View.OnClickListener mCallback22;
+    private final android.view.View.OnClickListener mCallback36;
     // values
     // listeners
     private OnCheckedChangeListenerImpl mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
@@ -553,16 +553,16 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
         this.school.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback30 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
-        mCallback28 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback31 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
-        mCallback25 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback26 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback23 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback24 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback29 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
-        mCallback22 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback43 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
+        mCallback42 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback44 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
+        mCallback37 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback40 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback38 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback41 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback35 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback36 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -1041,16 +1041,16 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
         if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
-            this.btCustomize.setOnClickListener(mCallback28);
-            this.btHolyKing.setOnClickListener(mCallback29);
-            this.btMnahda.setOnClickListener(mCallback23);
-            this.btSac.setOnClickListener(mCallback25);
-            this.btTitleDeed.setOnClickListener(mCallback30);
-            this.btTransform.setOnClickListener(mCallback26);
-            this.btnCash.setOnClickListener(mCallback24);
-            this.btnRealEstateCertificate.setOnClickListener(mCallback27);
-            this.btnSell.setOnClickListener(mCallback22);
-            this.confirmBtn.setOnClickListener(mCallback31);
+            this.btCustomize.setOnClickListener(mCallback41);
+            this.btHolyKing.setOnClickListener(mCallback42);
+            this.btMnahda.setOnClickListener(mCallback36);
+            this.btSac.setOnClickListener(mCallback38);
+            this.btTitleDeed.setOnClickListener(mCallback43);
+            this.btTransform.setOnClickListener(mCallback39);
+            this.btnCash.setOnClickListener(mCallback37);
+            this.btnRealEstateCertificate.setOnClickListener(mCallback40);
+            this.btnSell.setOnClickListener(mCallback35);
+            this.confirmBtn.setOnClickListener(mCallback44);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFrontCount, incrementalViewFrontCountvalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewKitchenNumber, incrementalViewKitchenNumbervalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewPathsNumber, incrementalViewPathsNumbervalueAttrChanged);
@@ -1147,7 +1147,7 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 6: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1162,7 +1162,7 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
 
 
 
-                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
+                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
                 }
                 break;
             }
@@ -1185,7 +1185,7 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
                 }
                 break;
             }
-            case 7: {
+            case 8: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1200,7 +1200,7 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
 
 
 
-                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
+                    viewmodel.docTypeAction(btHolyKing.getResources().getString(R.string.holy_king), 2);
                 }
                 break;
             }
@@ -1218,62 +1218,6 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
 
 
                     viewmodel.createFlatStoreOfficeAd();
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.dealingTypeAction(1);
                 }
                 break;
             }
@@ -1296,7 +1240,7 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
                 }
                 break;
             }
-            case 8: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1311,7 +1255,45 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
 
 
 
-                    viewmodel.docTypeAction(btHolyKing.getResources().getString(R.string.holy_king), 2);
+                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
+                }
+                break;
+            }
+            case 7: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
                 }
                 break;
             }
@@ -1330,6 +1312,24 @@ public class FragmentAddOfficeFormBindingImpl extends FragmentAddOfficeFormBindi
 
 
                     viewmodel.dealingTypeAction(0);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.dealingTypeAction(1);
                 }
                 break;
             }

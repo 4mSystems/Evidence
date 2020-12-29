@@ -14,58 +14,63 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.attach_title, 6);
-        sViewsWithIds.put(R.id.video_title, 7);
+        sViewsWithIds.put(R.id.attach_title, 7);
+        sViewsWithIds.put(R.id.video_title, 8);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback74;
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback72;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback75;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback73;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback71;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentAdsAttachmentsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private FragmentAdsAttachmentsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (androidx.appcompat.widget.AppCompatButton) bindings[5]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[6]
             , (com.makeramen.roundedimageview.RoundedImageView) bindings[2]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[8]
             );
         this.adImagesRc.setTag(null);
         this.close7.setTag(null);
         this.confirmBtn.setTag(null);
+        this.editBtn.setTag(null);
         this.image7.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.play.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback60 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback58 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback61 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback74 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback72 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback75 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback73 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback71 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -123,6 +128,12 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
             }
             return true;
         }
+        else if (fieldId == BR.sliderItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -133,49 +144,98 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelSliderItemSizeInt0ViewVISIBLEViewGONE = 0;
+        int ViewmodelSliderItemSizeInt0ViewVISIBLEViewGONE1 = 0;
+        int viewmodelSliderItemSize = 0;
+        boolean viewmodelSliderItemSizeInt0 = false;
         grand.app.akar.connection.FileObject viewmodelFileObjectVideo = null;
+        java.util.List<grand.app.akar.pages.adDetails.models.SliderItem> viewmodelSliderItem = null;
         boolean textUtilsIsEmptyViewmodelFileObjectVideoFilePath = false;
         java.lang.String viewmodelFileObjectVideoFilePath = null;
         boolean TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1 = false;
         grand.app.akar.pages.ads.adapter.AdImagesAdapter viewmodelImagesAdapter = null;
         int textUtilsIsEmptyViewmodelFileObjectVideoFilePathViewVISIBLEViewGONE = 0;
+        boolean ViewmodelSliderItemSizeInt01 = false;
         grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.fileObjectVideo
-                    viewmodelFileObjectVideo = viewmodel.getFileObjectVideo();
+                    if (viewmodel != null) {
+                        // read viewmodel.fileObjectVideo
+                        viewmodelFileObjectVideo = viewmodel.getFileObjectVideo();
+                    }
+
+
+                    if (viewmodelFileObjectVideo != null) {
+                        // read viewmodel.fileObjectVideo.filePath
+                        viewmodelFileObjectVideoFilePath = viewmodelFileObjectVideo.getFilePath();
+                    }
+
+
+                    // read TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath)
+                    textUtilsIsEmptyViewmodelFileObjectVideoFilePath = android.text.TextUtils.isEmpty(viewmodelFileObjectVideoFilePath);
+
+
+                    // read !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath)
+                    TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1 = !textUtilsIsEmptyViewmodelFileObjectVideoFilePath;
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1) {
+                            dirtyFlags |= 0x200L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100L;
+                    }
                 }
 
 
-                if (viewmodelFileObjectVideo != null) {
-                    // read viewmodel.fileObjectVideo.filePath
-                    viewmodelFileObjectVideoFilePath = viewmodelFileObjectVideo.getFilePath();
-                }
-
-
-                // read TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath)
-                textUtilsIsEmptyViewmodelFileObjectVideoFilePath = android.text.TextUtils.isEmpty(viewmodelFileObjectVideoFilePath);
-
-
-                // read !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath)
-                TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1 = !textUtilsIsEmptyViewmodelFileObjectVideoFilePath;
-            if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
+                    // read !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
+                    textUtilsIsEmptyViewmodelFileObjectVideoFilePathViewVISIBLEViewGONE = ((TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0xdL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.sliderItem
+                        viewmodelSliderItem = viewmodel.getSliderItem();
+                    }
 
 
-                // read !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
-                textUtilsIsEmptyViewmodelFileObjectVideoFilePathViewVISIBLEViewGONE = ((TextUtilsIsEmptyViewmodelFileObjectVideoFilePath1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
-            if ((dirtyFlags & 0x5L) != 0) {
+                    if (viewmodelSliderItem != null) {
+                        // read viewmodel.sliderItem.size()
+                        viewmodelSliderItemSize = viewmodelSliderItem.size();
+                    }
+
+
+                    // read viewmodel.sliderItem.size() > 0
+                    viewmodelSliderItemSizeInt0 = (viewmodelSliderItemSize) > (0);
+                    // read viewmodel.sliderItem.size() == 0
+                    ViewmodelSliderItemSizeInt01 = (viewmodelSliderItemSize) == (0);
+                if((dirtyFlags & 0xdL) != 0) {
+                    if(viewmodelSliderItemSizeInt0) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
+                if((dirtyFlags & 0xdL) != 0) {
+                    if(ViewmodelSliderItemSizeInt01) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.sliderItem.size() > 0 ? View.VISIBLE : View.GONE
+                    viewmodelSliderItemSizeInt0ViewVISIBLEViewGONE = ((viewmodelSliderItemSizeInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.sliderItem.size() == 0 ? View.VISIBLE : View.GONE
+                    ViewmodelSliderItemSizeInt0ViewVISIBLEViewGONE1 = ((ViewmodelSliderItemSizeInt01) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0x9L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.imagesAdapter
@@ -184,29 +244,53 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x5L) != 0) {
+        if ((dirtyFlags & 0x9L) != 0) {
             // api target 1
 
             grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.adImagesRc, viewmodelImagesAdapter, "3", "1");
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.close7.setOnClickListener(mCallback59);
-            this.confirmBtn.setOnClickListener(mCallback61);
-            this.image7.setOnClickListener(mCallback58);
-            this.play.setOnClickListener(mCallback60);
+            this.close7.setOnClickListener(mCallback72);
+            this.confirmBtn.setOnClickListener(mCallback74);
+            this.editBtn.setOnClickListener(mCallback75);
+            this.image7.setOnClickListener(mCallback71);
+            this.play.setOnClickListener(mCallback73);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.close7.setVisibility(textUtilsIsEmptyViewmodelFileObjectVideoFilePathViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xdL) != 0) {
+            // api target 1
+
+            this.confirmBtn.setVisibility(ViewmodelSliderItemSizeInt0ViewVISIBLEViewGONE1);
+            this.editBtn.setVisibility(viewmodelSliderItemSizeInt0ViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.uploadAd();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -221,6 +305,23 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
 
 
                     viewmodel.removeVideo();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.updateImages();
                 }
                 break;
             }
@@ -258,23 +359,6 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
                 }
                 break;
             }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.uploadAd();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -282,9 +366,14 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     /* flag mapping
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.fileObjectVideo
-        flag 2 (0x3L): null
-        flag 3 (0x4L): !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
+        flag 2 (0x3L): viewmodel.sliderItem
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.sliderItem.size() > 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.sliderItem.size() > 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.sliderItem.size() == 0 ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.sliderItem.size() == 0 ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.fileObjectVideo.filePath) ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

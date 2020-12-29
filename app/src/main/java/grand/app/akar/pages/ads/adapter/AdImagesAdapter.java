@@ -1,6 +1,7 @@
 package grand.app.akar.pages.ads.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,13 +24,13 @@ import grand.app.akar.pages.ads.models.OrderImages;
 import grand.app.akar.pages.ads.viewModels.ItemPublicOrderImagesViewModel;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.MovementHelper;
-import grand.app.akar.utils.resources.ResourceManager;
 
 
 public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuView> {
     public List<OrderImages> orderImagesList;
     private Context context;
     private MutableLiveData<Integer> newImageLiveData = new MediatorLiveData<>();
+    private List<Integer> deletedIdsList = new ArrayList<>();
 
     public AdImagesAdapter() {
         this.orderImagesList = new ArrayList<>();
@@ -37,6 +38,10 @@ public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuVi
 
     public MutableLiveData<Integer> getNewImageLiveData() {
         return newImageLiveData;
+    }
+
+    public List<Integer> getDeletedIdsList() {
+        return deletedIdsList;
     }
 
     @NonNull
@@ -58,7 +63,11 @@ public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuVi
                 newImageLiveData.setValue(position);
             } else if (o.equals(Constants.REMOVE_IMAGE)) {
                 orderImagesList.get(position).setPath("");
-//                holder.itemMenuBinding.image1.setImageResource(R.drawable.holo);
+                if (menuModel.getId() != 0) {
+                    deletedIdsList.add(menuModel.getId());
+                    menuModel.setId(0);
+                }
+                Log.e("onBindViewHolder", "onBindViewHolder: " + menuModel.getDeletedId());
                 notifyDataSetChanged();
             }
         });

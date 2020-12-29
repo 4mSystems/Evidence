@@ -47,25 +47,25 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback64;
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback63;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback57;
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback58;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     private OnCheckedChangeListenerImpl mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
@@ -373,16 +373,16 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         this.school.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback42 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback49 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
-        mCallback47 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback50 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
-        mCallback48 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback51 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
-        mCallback45 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback46 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback55 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback56 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback64 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
+        mCallback59 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback62 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback63 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
+        mCallback57 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback60 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback58 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback61 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
         invalidateAll();
     }
 
@@ -822,16 +822,16 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.btCustomize.setOnClickListener(mCallback48);
-            this.btHolyKing.setOnClickListener(mCallback49);
-            this.btMnahda.setOnClickListener(mCallback43);
-            this.btSac.setOnClickListener(mCallback45);
-            this.btTitleDeed.setOnClickListener(mCallback50);
-            this.btTransform.setOnClickListener(mCallback46);
-            this.btnCash.setOnClickListener(mCallback44);
-            this.btnRealEstateCertificate.setOnClickListener(mCallback47);
-            this.btnSell.setOnClickListener(mCallback42);
-            this.confirmBtn.setOnClickListener(mCallback51);
+            this.btCustomize.setOnClickListener(mCallback61);
+            this.btHolyKing.setOnClickListener(mCallback62);
+            this.btMnahda.setOnClickListener(mCallback56);
+            this.btSac.setOnClickListener(mCallback58);
+            this.btTitleDeed.setOnClickListener(mCallback63);
+            this.btTransform.setOnClickListener(mCallback59);
+            this.btnCash.setOnClickListener(mCallback57);
+            this.btnRealEstateCertificate.setOnClickListener(mCallback60);
+            this.btnSell.setOnClickListener(mCallback55);
+            this.confirmBtn.setOnClickListener(mCallback64);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFrontCount, incrementalViewFrontCountvalueAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputAddress, inputAddresstextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputDesc, inputDesctextAttrChanged);
@@ -914,24 +914,6 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.dealingTypeAction(1);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -950,7 +932,42 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 3: {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.dealingTypeAction(1);
+                }
+                break;
+            }
+            case 10: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createLandAd();
+                }
+                break;
+            }
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -965,7 +982,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
 
 
 
-                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
+                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
                 }
                 break;
             }
@@ -988,25 +1005,6 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
-                }
-                break;
-            }
             case 9: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1026,7 +1024,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 7: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1041,11 +1039,11 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
 
 
 
-                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
+                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
                 }
                 break;
             }
-            case 10: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1058,7 +1056,9 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createLandAd();
+
+
+                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
                 }
                 break;
             }
@@ -1081,7 +1081,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 5: {
+            case 7: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1096,7 +1096,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
 
 
 
-                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
+                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
                 }
                 break;
             }

@@ -3466,6 +3466,7 @@ drawable corner_view_primary_dark
 drawable corner_view_primary_dark_code
 drawable corner_view_primary_gray
 drawable corner_view_primary_yellow
+drawable corner_view_top
 drawable cost
 drawable del_icon
 drawable design_bottom_navigation_item_background
@@ -3769,6 +3770,7 @@ drawable ic_custom_map_marker
 drawable ic_delete
 drawable ic_distance
 drawable ic_driver_location
+drawable ic_edit
 drawable ic_email
 drawable ic_emergency_call
 drawable ic_empty_radio
@@ -3782,7 +3784,6 @@ drawable ic_fund_ads
 drawable ic_google
 drawable ic_google_base_location
 drawable ic_home
-drawable ic_home_notification
 drawable ic_icon_favorites
 drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
@@ -3792,7 +3793,6 @@ drawable ic_layout
 drawable ic_left_arrow
 drawable ic_living_room
 drawable ic_location
-drawable ic_lock
 drawable ic_man
 drawable ic_map
 drawable ic_menu
@@ -3803,7 +3803,6 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_my_ads
 drawable ic_no_wifi_1
 drawable ic_no_wifi_2
-drawable ic_order_price
 drawable ic_pin
 drawable ic_pinned
 drawable ic_play
@@ -3815,23 +3814,19 @@ drawable ic_sort
 drawable ic_special_pormote
 drawable ic_swap_vert_24dp
 drawable ic_time
-drawable ic_timer
 drawable ic_toggel_category
 drawable ic_toggle_empty
 drawable ic_toggle_fill
-drawable ic_upload
 drawable ic_villa
 drawable ic_warning
 drawable ic_whatsapp
 drawable ic_wifi_24dp
 drawable left_chat
-drawable line_gray
 drawable loader
 drawable loader2
 drawable loader3
 drawable loader_place_holder
 drawable logo
-drawable map
 drawable map_img
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -3844,7 +3839,6 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable month_ripplr
-drawable more
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -3871,6 +3865,7 @@ drawable payment
 drawable phone
 drawable places_autocomplete_toolbar_shadow
 drawable places_custom_marker_background
+drawable places_custom_marker_premium_background
 drawable places_powered_by_google_dark
 drawable places_powered_by_google_light
 drawable points
@@ -4126,6 +4121,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id clockwise
+id close
 id close1
 id close7
 id collapseActionView
@@ -4157,6 +4153,8 @@ id decelerateAndComplete
 id decor_content_parent
 id decrement
 id default_activity_button
+id delete
+id delete_ad
 id deltaRelative
 id dependency_ordering
 id desc
@@ -4189,7 +4187,11 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editBtn
 id editText_search
+id edit_details
+id edit_images
+id edit_location
 id edit_query
 id egypt
 id elastic
@@ -4435,7 +4437,6 @@ id onDateChanged
 id option_cancel
 id option_done
 id optional_layout
-id other_reason
 id outline
 id outward
 id packed
@@ -4484,12 +4485,20 @@ id price_map
 id progress_circular
 id progress_horizontal
 id radio
+id radioBigArea
+id radioGroup
+id radioLatest
+id radioPriceHighLow
+id radioPriceLowHigh
 id radioRent
 id radioSell
+id radioSmallestArea
+id radioViews
 id ratio
 id rectangle
 id rectangles
 id recycler_countryDialog
+id refresh
 id repeat
 id report
 id restart
@@ -4538,6 +4547,7 @@ id selected
 id selected_rc
 id selection_type
 id share
+id share_owner
 id shortcut
 id showCustom
 id showHome
@@ -4751,6 +4761,7 @@ id v19
 id v2
 id v20
 id v21
+id v22
 id v3
 id v4
 id v5
@@ -4769,9 +4780,6 @@ id withinBounds
 id worm
 id wrap
 id wrap_content
-id wrong_behave
-id wrong_building
-id wrong_location
 id wrong_price
 id year
 id yearView
@@ -4859,6 +4867,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_edit_option
 layout dialog_no_internet
 layout fastscroll__default_bubble
 layout fragment_about
@@ -4904,6 +4913,7 @@ layout fragment_terms
 layout fragment_upload_success
 layout home_list_layout
 layout home_map_layout
+layout home_sort
 layout incremental_view
 layout item_ad_images
 layout item_ads
@@ -4915,6 +4925,7 @@ layout item_favorites
 layout item_home
 layout item_home_category
 layout item_my_ads
+layout item_reasons
 layout layout_action_bar_back
 layout layout_action_bar_home
 layout layout_code_picker
@@ -5000,6 +5011,7 @@ layout report_warning_dialog
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout slider_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -5123,6 +5135,7 @@ string bank_name_account
 string bank_number_account
 string bath
 string be_delegate
+string big_area
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string building
@@ -5134,6 +5147,7 @@ string call
 string call_client
 string call_grand
 string camera
+string cancel
 string car_back_image
 string car_front_image
 string car_front_image_hint
@@ -5215,6 +5229,7 @@ string default_web_client_id
 string define_roundedimageview
 string del_cost_hint
 string delegate
+string delete
 string delete_ad
 string delivery_Cost
 string delivery_cost_send
@@ -5228,6 +5243,9 @@ string document
 string donot_have_account
 string driver_location_url
 string edit
+string edit_details
+string edit_images
+string edit_location
 string elevator
 string email
 string email_hint
@@ -5272,7 +5290,9 @@ string google_crash_reporting_api_key
 string google_map
 string google_storage_bucket
 string have_account
+string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string high_views
 string holy_king
 string home_search_hint
 string hospital
@@ -5296,6 +5316,7 @@ string label_year
 string land
 string land_size
 string land_size_hint
+string latest
 string less_order_offer
 string library_name
 string library_roundedimageview_author
@@ -5447,7 +5468,9 @@ string pool
 string pormote_ad
 string post_ad
 string previous_ads
+string price_high_low
 string price_hint
+string price_low_high
 string price_required
 string privacy
 string profile_edit
@@ -5455,6 +5478,7 @@ string project_id
 string rate
 string real_estate_certificate
 string realtor
+string refresh
 string register
 string register_city
 string register_city_hint
@@ -5463,6 +5487,7 @@ string register_last_name
 string register_name
 string register_password
 string register_phone
+string remove_image_first
 string rent
 string rent_title
 string report
@@ -5472,6 +5497,7 @@ string rest
 string room
 string rooms_count
 string sac
+string samllest_area
 string save
 string school
 string search_hint
@@ -5498,6 +5524,7 @@ string slider_title1
 string slider_title2
 string slider_title3
 string sort
+string sort_title
 string special_register
 string special_register_info2
 string special_register_info3
@@ -5777,6 +5804,8 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style CustomBottomSheetDialogTheme
+style CustomBottomSheetStyle
 style CustomToolbarTheme
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents

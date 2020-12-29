@@ -36,12 +36,12 @@ public class URLS {
     public final static String GET_AD_DETAILS = "listings/listing/";
 
 
-    public static final String SEND_NEW_OFFER = "delegate/add-order-offer";
+    public static final String SEND_REPORT = "listings/report";
     public static final String GET_PROFILE_DATA = "delegate/profile-data";
-    public static final String PRODUCT_DETAILS = "product/showDetailsProduct";
+    public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
 
     /*
     {{moata}}/user/variations-calculations?product_id=5&advanced[]=2&advanced[]=3
      */
-    public static final String CALCULATE = "user/variations-calculations";
+    public static final String UPDATE_IMAGES = "listings/update-listing-images";
 }

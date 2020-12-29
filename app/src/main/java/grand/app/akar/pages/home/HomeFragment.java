@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,9 +26,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.Collections;
 
 import javax.inject.Inject;
 
@@ -38,6 +42,7 @@ import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.maps.MapHelper;
 import grand.app.akar.databinding.FragmentHomeBinding;
+import grand.app.akar.databinding.HomeSortBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.models.HomeResponse;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
@@ -62,6 +67,7 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
     GoogleMap mMap;
     Bundle savedInstanceState;
     BottomSheetBehavior listingSheetBehavior;
+    BottomSheetDialog sheetDialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -87,7 +93,6 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            Log.e("setEvent", "setEvent: " + mutable.message);
             switch (mutable.message) {
                 case Constants.RESULT_SEARCH_LISTING_TYPE:
                     listingSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
@@ -101,11 +106,21 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
                 case Constants.CURRENT_LOCATION:
                     mapHelper.getLastKnownLocation();
                     break;
+                case Constants.SORT_DIALOG:
+                    HomeSortBinding sortBinding = DataBindingUtil.inflate(LayoutInflater.from(context), R.layout.home_sort, null, false);
+                    sheetDialog = new BottomSheetDialog(context);
+                    sheetDialog.setContentView(sortBinding.getRoot());
+                    sortBinding.setViewModel(viewModel);
+                    sheetDialog.show();
+                    break;
+                case Constants.DISMISS:
+                    if (sheetDialog != null)
+                        sheetDialog.dismiss();
+                    break;
                 case Constants.SEARCH_LISTING_TYPE:
                     listingSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                     break;
                 case Constants.HOME:
-                    Log.e("setEvent", "setEvent: ");
                     mMap.clear();
                     viewModel.getHomeAdapter().getHomeDataListFiltered().clear();
                     viewModel.getHomeAdapter().update(((HomeResponse) mutable.object).getHomeDataList());
@@ -115,6 +130,10 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
                     break;
 
             }
+        });
+        viewModel.getCategoriesAdapter().getLiveData().observe((LifecycleOwner) context, integer -> {
+            viewModel.getSearchRequest().setCategory_id(integer);
+            viewModel.search();
         });
         loadAnimations();
         changeCameraDistance();
@@ -175,9 +194,12 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
 
     @Override
     public void onResume() {
-        Log.e("onResume", "onResume: ");
         binding.mapInclude.mapView.onResume();
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
+        if (Constants.DATA_CHANGED ){
+            Constants.DATA_CHANGED = false;
+            viewModel.getListing();
+        }
         super.onResume();
     }
 

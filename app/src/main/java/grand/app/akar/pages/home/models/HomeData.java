@@ -73,9 +73,11 @@ public class HomeData {
 
     @SerializedName("building_year")
     private String buildingYear;
+    @SerializedName("views")
+    private String views;
 
     @SerializedName("user_id")
-    private String userId;
+    private int userId;
 
     @SerializedName("default_img")
     private DefaultImg defaultImg;
@@ -179,7 +181,7 @@ public class HomeData {
         return buildingYear;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
@@ -205,5 +207,9 @@ public class HomeData {
 
     public List<SliderItem> getSlider() {
         return slider;
+    }
+
+    public String getViews() {
+        return views;
     }
 }

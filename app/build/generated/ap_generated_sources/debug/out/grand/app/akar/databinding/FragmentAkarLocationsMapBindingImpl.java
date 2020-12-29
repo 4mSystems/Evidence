@@ -23,9 +23,9 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback34;
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,8 +47,8 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback34 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback33 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -122,8 +122,8 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnDiffLocations.setOnClickListener(mCallback20);
-            this.confirmBtn.setOnClickListener(mCallback21);
+            this.btnDiffLocations.setOnClickListener(mCallback33);
+            this.confirmBtn.setOnClickListener(mCallback34);
         }
     }
     // Listener Stub Implementations

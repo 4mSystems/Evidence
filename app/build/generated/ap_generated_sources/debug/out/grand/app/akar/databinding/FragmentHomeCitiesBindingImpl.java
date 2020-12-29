@@ -23,7 +23,7 @@ public class FragmentHomeCitiesBindingImpl extends FragmentHomeCitiesBinding imp
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback99;
+    private final android.view.View.OnClickListener mCallback113;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentHomeCitiesBindingImpl extends FragmentHomeCitiesBinding imp
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback99 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback113 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,7 +117,7 @@ public class FragmentHomeCitiesBindingImpl extends FragmentHomeCitiesBinding imp
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.googleBaseLocation.setOnClickListener(mCallback99);
+            this.googleBaseLocation.setOnClickListener(mCallback113);
         }
     }
     // Listener Stub Implementations

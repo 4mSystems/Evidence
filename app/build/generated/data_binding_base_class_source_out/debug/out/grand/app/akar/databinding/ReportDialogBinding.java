@@ -4,17 +4,17 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
-import grand.app.akar.pages.home.viewModels.HomeViewModel;
+import grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
@@ -29,46 +29,29 @@ public abstract class ReportDialogBinding extends ViewDataBinding {
   public final AppCompatButton optionDone;
 
   @NonNull
-  public final CheckBox otherReason;
+  public final RecyclerView selectedRc;
 
   @NonNull
   public final View v13;
 
-  @NonNull
-  public final CheckBox wrongBehave;
-
-  @NonNull
-  public final CheckBox wrongBuilding;
-
-  @NonNull
-  public final CheckBox wrongLocation;
-
-  @NonNull
-  public final CheckBox wrongPrice;
-
   @Bindable
-  protected HomeViewModel mViewModel;
+  protected AdDetailsViewModel mViewModel;
 
   protected ReportDialogBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewMedium dialogHeader, CustomEditText inputDesc, AppCompatButton optionDone,
-      CheckBox otherReason, View v13, CheckBox wrongBehave, CheckBox wrongBuilding,
-      CheckBox wrongLocation, CheckBox wrongPrice) {
+      RecyclerView selectedRc, View v13) {
     super(_bindingComponent, _root, _localFieldCount);
     this.dialogHeader = dialogHeader;
     this.inputDesc = inputDesc;
     this.optionDone = optionDone;
-    this.otherReason = otherReason;
+    this.selectedRc = selectedRc;
     this.v13 = v13;
-    this.wrongBehave = wrongBehave;
-    this.wrongBuilding = wrongBuilding;
-    this.wrongLocation = wrongLocation;
-    this.wrongPrice = wrongPrice;
   }
 
-  public abstract void setViewModel(@Nullable HomeViewModel viewModel);
+  public abstract void setViewModel(@Nullable AdDetailsViewModel viewModel);
 
   @Nullable
-  public HomeViewModel getViewModel() {
+  public AdDetailsViewModel getViewModel() {
     return mViewModel;
   }
 

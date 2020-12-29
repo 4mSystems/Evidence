@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -28,11 +29,17 @@ public class HomeCategoriesAdapter extends RecyclerView.Adapter<HomeCategoriesAd
     private List<CategoriesData> categoriesDataList;
     private Context context;
     public int lastId = 0;
+    private MutableLiveData<Integer> liveData = new MutableLiveData<>();
 
     public HomeCategoriesAdapter() {
         this.categoriesDataList = new ArrayList<>();
 
     }
+
+    public MutableLiveData<Integer> getLiveData() {
+        return liveData;
+    }
+
     public List<CategoriesData> getCategoriesDataList() {
         return categoriesDataList;
     }
@@ -55,6 +62,7 @@ public class HomeCategoriesAdapter extends RecyclerView.Adapter<HomeCategoriesAd
             notifyItemChanged(lastId);
             lastId = position;
             notifyItemChanged(lastId);
+            liveData.setValue(menuModel.getId());
         });
         if (lastId == position) {
             holder.itemMenuBinding.v16.setBackgroundColor(ResourceManager.getColor(R.color.white));

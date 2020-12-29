@@ -11,6 +11,9 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.Collections;
+import java.util.Comparator;
+
 import javax.inject.Inject;
 
 import grand.app.akar.R;
@@ -18,6 +21,7 @@ import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.home.adapters.HomeAdapter;
 import grand.app.akar.pages.home.adapters.HomeCategoriesAdapter;
+import grand.app.akar.pages.home.models.HomeData;
 import grand.app.akar.pages.home.models.SearchRequest;
 import grand.app.akar.repository.HomeRepository;
 import grand.app.akar.utils.Constants;
@@ -44,12 +48,12 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void getListing() {
+        getSearchRequest().setCategory_id(getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId());
+        getSearchRequest().setCity_id(getPassingObject().getId());
         compositeDisposable.add(homeRepository.getHome(getPassingObject().getId(), getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId()));
     }
 
     public void search() {
-        getSearchRequest().setCategory_id(getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastId).getId());
-        getSearchRequest().setCity_id(getPassingObject().getId());
         compositeDisposable.add(homeRepository.search(getSearchRequest()));
     }
 
@@ -89,6 +93,25 @@ public class HomeViewModel extends BaseViewModel {
         notifyChange();
         search();
         liveData.setValue(new Mutable(Constants.RESULT_SEARCH_LISTING_TYPE));
+    }
+
+    public void sortType(RadioGroup radioGroup, int id) {
+        liveData.setValue(new Mutable(Constants.DISMISS));
+        if (id == R.id.radioLatest) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getCreatedAt().compareTo(u1.getCreatedAt()));
+        } else if (id == R.id.radioPriceHighLow) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getPrice().compareTo(u2.getPrice()));
+        } else if (id == R.id.radioPriceLowHigh) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getPrice().compareTo(u1.getPrice()));
+        } else if (id == R.id.radioBigArea) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getArea().compareTo(u2.getArea()));
+        } else if (id == R.id.radioSmallestArea) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getArea().compareTo(u1.getArea()));
+        }else if (id == R.id.radioViews) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getViews().compareTo(u2.getViews()));
+        }
+        getHomeAdapter().notifyDataSetChanged();
+
     }
 
     public boolean onNavigationClick(@NonNull MenuItem item) {
@@ -137,6 +160,10 @@ public class HomeViewModel extends BaseViewModel {
 
     public void reCenterToCurrentLocation() {
         liveData.setValue(new Mutable(Constants.CURRENT_LOCATION));
+    }
+
+    public void sortDialog() {
+        liveData.setValue(new Mutable(Constants.SORT_DIALOG));
     }
 
     public void rentTypeFilter() {

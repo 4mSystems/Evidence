@@ -29,9 +29,9 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback101;
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback102;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -71,8 +71,8 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         this.tvPormote.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback87 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback88 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback101 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -333,8 +333,8 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback87);
-            this.mboundView11.setOnClickListener(mCallback88);
+            this.mboundView1.setOnClickListener(mCallback101);
+            this.mboundView11.setOnClickListener(mCallback102);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

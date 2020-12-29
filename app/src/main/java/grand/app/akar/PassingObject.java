@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 import java.io.Serializable;
 import java.util.List;
 
+import grand.app.akar.pages.adDetails.models.SliderItem;
 import grand.app.akar.pages.auth.models.cities.Cities;
 
 public class PassingObject implements Serializable {
@@ -13,6 +14,7 @@ public class PassingObject implements Serializable {
     private String object;
     private String object2;
     private List<Cities> objectList;
+    private List<SliderItem> sliderItemList;
 
     public PassingObject() {
     }
@@ -41,6 +43,10 @@ public class PassingObject implements Serializable {
         this.object = object;
     }
 
+    public PassingObject(int id, List<SliderItem> sliderItemList) {
+        this.id = id;
+        this.sliderItemList = sliderItemList;
+    }
 
     public PassingObject(Object objectClass) {
         Gson gson = new Gson();
@@ -91,5 +97,13 @@ public class PassingObject implements Serializable {
 
     public void setObjectList(List<Cities> objectList) {
         this.objectList = objectList;
+    }
+
+    public List<SliderItem> getSliderItemList() {
+        return sliderItemList;
+    }
+
+    public void setSliderItemList(List<SliderItem> sliderItemList) {
+        this.sliderItemList = sliderItemList;
     }
 }

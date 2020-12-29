@@ -33,6 +33,9 @@ public abstract class FragmentAdsAttachmentsBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
+  public final AppCompatButton editBtn;
+
+  @NonNull
   public final RoundedImageView image7;
 
   @NonNull
@@ -46,13 +49,14 @@ public abstract class FragmentAdsAttachmentsBinding extends ViewDataBinding {
 
   protected FragmentAdsAttachmentsBinding(Object _bindingComponent, View _root,
       int _localFieldCount, RecyclerView adImagesRc, CustomTextViewMedium attachTitle,
-      AppCompatImageView close7, AppCompatButton confirmBtn, RoundedImageView image7,
-      AppCompatImageView play, CustomTextViewMedium videoTitle) {
+      AppCompatImageView close7, AppCompatButton confirmBtn, AppCompatButton editBtn,
+      RoundedImageView image7, AppCompatImageView play, CustomTextViewMedium videoTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.adImagesRc = adImagesRc;
     this.attachTitle = attachTitle;
     this.close7 = close7;
     this.confirmBtn = confirmBtn;
+    this.editBtn = editBtn;
     this.image7 = image7;
     this.play = play;
     this.videoTitle = videoTitle;

@@ -63,7 +63,12 @@ public class AdsAttachmentsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.setCreateAdRequest(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CreateAdRequest.class));
+            if (viewModel.getPassingObject().getObjectClass() instanceof CreateAdRequest)
+                viewModel.setCreateAdRequest(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CreateAdRequest.class));
+            else {
+                viewModel.setSliderItem(viewModel.getPassingObject().getSliderItemList());
+            }
+
         }
         viewModel.setUpAdImages();
         setEvent();
@@ -86,6 +91,10 @@ public class AdsAttachmentsFragment extends BaseFragment {
                     MovementHelper.startActivity(context, AdUploadingSuccessFragment.class.getName(), getString(R.string.add_success_added), null);
                     MovementHelper.finishWithResult(viewModel.getPassingObject(), context);
                     break;
+                case Constants.UPDATE_IMAGES:
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    Constants.DATA_CHANGED = true;
+                    break;
                 case Constants.WARNING:
                     showError(getString(R.string.image_required));
                     break;
@@ -93,7 +102,10 @@ public class AdsAttachmentsFragment extends BaseFragment {
         });
         viewModel.getImagesAdapter().getNewImageLiveData().observe(((LifecycleOwner) context), integer -> {
             imagePosition = integer;
-            pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
+            if (viewModel.getImagesAdapter().orderImagesList.get(integer).getId() == 0)
+                pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
+            else
+                showError(getString(R.string.remove_image_first));
         });
     }
 

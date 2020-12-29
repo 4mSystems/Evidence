@@ -32,11 +32,11 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
     private final android.widget.LinearLayout mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -145,9 +145,9 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         this.tvLoginForget.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback19 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback18 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback31 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -242,11 +242,11 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements gr
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnPhone.setOnClickListener(mCallback18);
+            this.btnPhone.setOnClickListener(mCallback31);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputPhone, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputPhoneandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputRegisterPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputRegisterPasswordandroidTextAttrChanged);
-            this.mboundView5.setOnClickListener(mCallback19);
-            this.tvLoginForget.setOnClickListener(mCallback17);
+            this.mboundView5.setOnClickListener(mCallback32);
+            this.tvLoginForget.setOnClickListener(mCallback30);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

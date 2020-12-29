@@ -23,7 +23,7 @@ public class FragmentUploadSuccessBindingImpl extends FragmentUploadSuccessBindi
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback16;
+    private final android.view.View.OnClickListener mCallback29;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentUploadSuccessBindingImpl extends FragmentUploadSuccessBindi
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback16 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback29 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -117,7 +117,7 @@ public class FragmentUploadSuccessBindingImpl extends FragmentUploadSuccessBindi
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.confirmBtn.setOnClickListener(mCallback16);
+            this.confirmBtn.setOnClickListener(mCallback29);
         }
     }
     // Listener Stub Implementations

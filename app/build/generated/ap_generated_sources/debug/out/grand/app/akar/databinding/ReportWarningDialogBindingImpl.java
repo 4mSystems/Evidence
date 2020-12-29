@@ -68,7 +68,7 @@ public class ReportWarningDialogBindingImpl extends ReportWarningDialogBinding  
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((grand.app.akar.pages.home.viewModels.HomeViewModel) variable);
+            setViewModel((grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel) variable);
         }
         else {
             variableSet = false;
@@ -76,7 +76,7 @@ public class ReportWarningDialogBindingImpl extends ReportWarningDialogBinding  
             return variableSet;
     }
 
-    public void setViewModel(@Nullable grand.app.akar.pages.home.viewModels.HomeViewModel ViewModel) {
+    public void setViewModel(@Nullable grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel ViewModel) {
         this.mViewModel = ViewModel;
     }
 
@@ -84,11 +84,11 @@ public class ReportWarningDialogBindingImpl extends ReportWarningDialogBinding  
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewModel((grand.app.akar.pages.home.viewModels.HomeViewModel) object, fieldId);
+                return onChangeViewModel((grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewModel(grand.app.akar.pages.home.viewModels.HomeViewModel ViewModel, int fieldId) {
+    private boolean onChangeViewModel(grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel ViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;

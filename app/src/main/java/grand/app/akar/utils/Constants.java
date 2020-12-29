@@ -54,7 +54,7 @@ public class Constants {
     public static final String SETTINGS = "SETTINGS";
     public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
     public static final String MY_ADS = "MY_ORDERS";
-    public static final String ORDER_FILTER = "ORDER_FILTER";
+    public static final String SORT_DIALOG = "SORT_DIALOG";
     public static final String CATEGORIES = "CATEGORIES";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
     public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
@@ -131,14 +131,14 @@ public class Constants {
     public static final String MY_PREMIUM_ADS = "MY_PREMIUM_ADS";
     public final static String REMOVE_AD = "REMOVE_AD";
     public static final String GET_AD_DETAILS = "GET_AD_DETAILS";
-    public static final String SAVED_LOCATIONS = "SAVED_LOCATIONS";
-    public static final String CITY = "CITY";
+    public static final String CALL = "CALL";
+    public static final String REPORT = "REPORT";
     public static final String CONTACT = "CONTACT";
-    public static final String REMOVE_FROM_CART = "REMOVE_FROM_CART";
+    public static final String SEND_REPORT = "SEND_REPORT";
 
-    public static final String ADD_TO_CART = "ADD_TO_CART";
-    public static final String TO_CART = "TO_CART";
-    public static final String STATUS = "status";
+    public static final String UPDATE_AD_DATE = "UPDATE_AD_DATE";
+    public static final String EDIT_DIALOG = "EDIT_DIALOG";
+    public static final String UPDATE_IMAGES = "UPDATE_IMAGES";
     public static final String NOTIFICATIONS = "notifications";
     public static final String SELECT = "select";
     public static final String FILTER = "filter";
