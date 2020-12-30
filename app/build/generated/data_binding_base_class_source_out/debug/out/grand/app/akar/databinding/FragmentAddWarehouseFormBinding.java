@@ -4,13 +4,12 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -70,13 +69,13 @@ public abstract class FragmentAddWarehouseFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
-  public final SwitchCompat garageToggle;
+  public final AppCompatImageView garageToggle;
 
   @NonNull
-  public final ImageView headerIndicator;
+  public final AppCompatImageView headerIndicator;
 
   @NonNull
   public final CustomTextViewMedium headerMenuName;
@@ -223,23 +222,23 @@ public abstract class FragmentAddWarehouseFormBinding extends ViewDataBinding {
       CustomTextViewMedium btnCash, CustomTextViewMedium btnRealEstateCertificate,
       CustomTextViewMedium btnSell, MaterialCardView buildingYear, AppCompatButton confirmBtn,
       ExpansionLayout expansionLayout, ExpansionHeader expansionLayoutHeader,
-      SwitchCompat furnitureToggle, SwitchCompat garageToggle, ImageView headerIndicator,
-      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
-      IncrementalView incrementalViewFrontCount, IncrementalView incrementalViewPathsNumber,
-      IncrementalView incrementalViewRoomsNumber, CustomEditText inputAddress,
-      CustomEditText inputDesc, CustomEditText inputPrice, CustomEditText inputStreetSize,
-      CustomEditText inputWarehouseHigh, CustomEditText inputWarehouseSize,
-      AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
-      AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
-      CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
-      CustomTextViewMedium tvDocType, CustomTextViewMedium tvFrontCount,
-      CustomTextViewMedium tvFurniture, CustomTextViewMedium tvGarage,
-      CustomTextViewMedium tvPathsCount, CustomTextViewMedium tvPaymentType,
-      CustomTextViewMedium tvPrice, CustomTextViewMedium tvRoomsCount,
-      CustomTextViewMedium tvServices, CustomTextViewMedium tvStreetSize,
-      CustomTextViewMedium tvWarehouseHigh, CustomTextViewMedium tvWarehouseSize, View v1, View v11,
-      View v12, View v13, View v14, View v15, View v16, View v17, View v2, View v3, View v4,
-      View v5, View v8, View v9) {
+      AppCompatImageView furnitureToggle, AppCompatImageView garageToggle,
+      AppCompatImageView headerIndicator, CustomTextViewMedium headerMenuName,
+      AppCompatCheckBox hospital, IncrementalView incrementalViewFrontCount,
+      IncrementalView incrementalViewPathsNumber, IncrementalView incrementalViewRoomsNumber,
+      CustomEditText inputAddress, CustomEditText inputDesc, CustomEditText inputPrice,
+      CustomEditText inputStreetSize, CustomEditText inputWarehouseHigh,
+      CustomEditText inputWarehouseSize, AppCompatCheckBox mosque, LinearLayout optionalLayout,
+      AppCompatCheckBox policeStation, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
+      CustomTextViewMedium tvBuildingDesc, CustomTextViewMedium tvBuildingYear,
+      CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,
+      CustomTextViewMedium tvFrontCount, CustomTextViewMedium tvFurniture,
+      CustomTextViewMedium tvGarage, CustomTextViewMedium tvPathsCount,
+      CustomTextViewMedium tvPaymentType, CustomTextViewMedium tvPrice,
+      CustomTextViewMedium tvRoomsCount, CustomTextViewMedium tvServices,
+      CustomTextViewMedium tvStreetSize, CustomTextViewMedium tvWarehouseHigh,
+      CustomTextViewMedium tvWarehouseSize, View v1, View v11, View v12, View v13, View v14,
+      View v15, View v16, View v17, View v2, View v3, View v4, View v5, View v8, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br3 = br3;
     this.btCustomize = btCustomize;

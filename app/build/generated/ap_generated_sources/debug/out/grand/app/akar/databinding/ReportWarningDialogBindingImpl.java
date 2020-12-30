@@ -17,8 +17,8 @@ public class ReportWarningDialogBindingImpl extends ReportWarningDialogBinding  
         sViewsWithIds.put(R.id.dialog_header, 1);
         sViewsWithIds.put(R.id.dialog_title, 2);
         sViewsWithIds.put(R.id.dialog_body, 3);
-        sViewsWithIds.put(R.id.option_done, 4);
-        sViewsWithIds.put(R.id.option_cancel, 5);
+        sViewsWithIds.put(R.id.option_cancel, 4);
+        sViewsWithIds.put(R.id.option_done, 5);
     }
     // views
     @NonNull
@@ -36,8 +36,8 @@ public class ReportWarningDialogBindingImpl extends ReportWarningDialogBinding  
             , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[3]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[1]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
             , (androidx.appcompat.widget.AppCompatButton) bindings[4]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
             );
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);

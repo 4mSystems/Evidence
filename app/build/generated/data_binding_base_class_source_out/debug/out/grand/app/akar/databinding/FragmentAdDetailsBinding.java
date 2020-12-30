@@ -14,6 +14,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.github.florent37.shapeofview.shapes.BubbleView;
 import com.google.android.material.card.MaterialCardView;
 import com.smarteist.autoimageslider.SliderView;
 import grand.app.akar.R;
@@ -56,6 +57,9 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewMedium favorite;
+
+  @NonNull
+  public final BubbleView heart;
 
   @NonNull
   public final MaterialCardView imgHomeItem;
@@ -112,10 +116,10 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
       CustomTextViewMedium adDesc, CustomTextViewMedium address, AppCompatImageView back,
       Barrier br4, CustomTextViewMedium call, SliderView coverImage, CustomTextViewMedium delete,
       CustomTextViewRegular desc, CustomTextViewRegular descText, CardView detailsCard,
-      CustomTextViewMedium favorite, MaterialCardView imgHomeItem, AppCompatImageView map,
-      CustomTextViewMedium price, CustomTextViewMedium refresh, CustomTextViewMedium report,
-      ConstraintLayout searchContainer, RecyclerView selectedRc, CustomTextViewMedium share,
-      CustomTextViewMedium shareOwner, CustomTextViewRegular tvHomeDesc,
+      CustomTextViewMedium favorite, BubbleView heart, MaterialCardView imgHomeItem,
+      AppCompatImageView map, CustomTextViewMedium price, CustomTextViewMedium refresh,
+      CustomTextViewMedium report, ConstraintLayout searchContainer, RecyclerView selectedRc,
+      CustomTextViewMedium share, CustomTextViewMedium shareOwner, CustomTextViewRegular tvHomeDesc,
       CustomTextViewMedium tvHomeItem, CardView tvPormote, CardView tvRemove, View v18, View v19,
       View v5) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -130,6 +134,7 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
     this.descText = descText;
     this.detailsCard = detailsCard;
     this.favorite = favorite;
+    this.heart = heart;
     this.imgHomeItem = imgHomeItem;
     this.map = map;
     this.price = price;

@@ -13,7 +13,8 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.tv_home_bar_text, 2);
     }
     // views
     @NonNull
@@ -26,10 +27,11 @@ public class FragmentConversationsBindingImpl extends FragmentConversationsBindi
     // Inverse Binding Event Handlers
 
     public FragmentConversationsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private FragmentConversationsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

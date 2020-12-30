@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
@@ -20,6 +22,9 @@ import java.lang.Object;
 
 public abstract class ItemChatBinding extends ViewDataBinding {
   @NonNull
+  public final Barrier br12;
+
+  @NonNull
   public final CircleImageView driverImage;
 
   @NonNull
@@ -29,18 +34,23 @@ public abstract class ItemChatBinding extends ViewDataBinding {
   public final CustomTextViewRegular itemMessageTime;
 
   @NonNull
+  public final RecyclerView rcChat;
+
+  @NonNull
   public final ConstraintLayout rlItemChat;
 
   @Bindable
   protected ItemChatViewModel mItemChatViewModel;
 
   protected ItemChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CircleImageView driverImage, CustomTextViewMedium itemMessage,
-      CustomTextViewRegular itemMessageTime, ConstraintLayout rlItemChat) {
+      Barrier br12, CircleImageView driverImage, CustomTextViewMedium itemMessage,
+      CustomTextViewRegular itemMessageTime, RecyclerView rcChat, ConstraintLayout rlItemChat) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.br12 = br12;
     this.driverImage = driverImage;
     this.itemMessage = itemMessage;
     this.itemMessageTime = itemMessageTime;
+    this.rcChat = rcChat;
     this.rlItemChat = rlItemChat;
   }
 

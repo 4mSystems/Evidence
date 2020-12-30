@@ -24,7 +24,7 @@ public class ItemFavoritesBindingImpl extends ItemFavoritesBinding implements gr
     private final androidx.appcompat.widget.AppCompatImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback103;
+    private final android.view.View.OnClickListener mCallback147;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -57,7 +57,7 @@ public class ItemFavoritesBindingImpl extends ItemFavoritesBinding implements gr
         this.tvPath.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback103 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback147 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -304,7 +304,7 @@ public class ItemFavoritesBindingImpl extends ItemFavoritesBinding implements gr
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.tvHomeDistance.setOnClickListener(mCallback103);
+            this.tvHomeDistance.setOnClickListener(mCallback147);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

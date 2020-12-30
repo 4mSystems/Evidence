@@ -19,7 +19,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:visibility="@{viewModel.adDetailsData.listing!=null?View.VISIBLE:View.GONE,default=gone}">
 
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/cover_image"
@@ -103,7 +104,7 @@
                         android:layout_marginStart="@dimen/dp12w"
                         android:layout_marginTop="@dimen/dp4h"
                         android:layout_marginEnd="@dimen/dp12w"
-                        android:text="@{viewModel.homeData.price.concat(` `).concat(@string/coin)}"
+                        android:text="@{viewModel.adDetailsData.listing.price.concat(` `).concat(@string/coin)}"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colorPrimary"
@@ -116,7 +117,7 @@
                         android:layout_marginStart="@dimen/dp12w"
                         android:layout_marginTop="@dimen/dp4h"
                         android:layout_marginEnd="@dimen/dp12w"
-                        android:text="@{viewModel.title.concat(` | `).concat(viewModel.homeData.address)}"
+                        android:text="@{viewModel.title.concat(` | `).concat(viewModel.adDetailsData.listing.listingOptions!=null ?viewModel.adDetailsData.listing.address:``)}"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/black"
@@ -129,11 +130,11 @@
                         android:layout_marginStart="@dimen/dp12w"
                         android:layout_marginEnd="@dimen/dp12w"
                         android:layout_marginBottom="@dimen/dp4h"
-                        android:text="@{viewModel.homeData.listingOptions!=null ?viewModel.homeData.listingOptions.desc:` `}"
+                        android:text="@{viewModel.adDetailsData.listing.listingOptions!=null ?viewModel.adDetailsData.listing.listingOptions.desc:` `}"
                         android:textAlignment="viewStart"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colordark"
-                        android:visibility="@{viewModel.homeData.listingOptions!=null &amp;&amp;viewModel.homeData.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
+                        android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/address" />
 
@@ -160,7 +161,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:visibility="@{viewModel.homeData.listingOptions!=null &amp;&amp;viewModel.homeData.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
+                android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v18" />
 
@@ -175,7 +176,7 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
-                android:visibility="@{viewModel.homeData.listingOptions!=null &amp;&amp;viewModel.homeData.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
+                android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
                 app:layout_constraintTop_toBottomOf="@id/ad_desc" />
 
             <View
@@ -319,15 +320,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/v5" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="@{()->viewModel.toMap()}"
-                android:src="@drawable/ic_contact_location"
+            <com.github.florent37.shapeofview.shapes.BubbleView
+                android:id="@+id/heart"
+                android:layout_width="@dimen/dp40w"
+                android:layout_height="@dimen/dp40h"
+                android:layout_marginBottom="8dp"
+                android:elevation="6dp"
                 app:layout_constraintBottom_toBottomOf="@id/map"
                 app:layout_constraintEnd_toEndOf="@id/map"
                 app:layout_constraintStart_toStartOf="@id/map"
-                app:layout_constraintTop_toTopOf="@id/map" />
+                app:layout_constraintTop_toTopOf="@id/map">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{()->viewModel.toMap()}"
+                    app:imageUrl="@{viewModel.adDetailsData.listing.defaultImg.media}"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash" />
+            </com.github.florent37.shapeofview.shapes.BubbleView>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/selected_rc"
@@ -362,7 +372,7 @@
                         android:layout_marginStart="@dimen/dp15w"
                         android:layout_marginTop="@dimen/dp6h"
                         android:drawableTop="@mipmap/ic_favorite"
-                        android:onClick="@{()-> viewModel.removeFavorites(0,viewModel.homeData.id)}"
+                        android:onClick="@{()-> viewModel.removeFavorites(0,viewModel.adDetailsData.listing.id)}"
                         android:text="@string/favorite_title"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -445,7 +455,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp6h"
-                        android:drawableTop="@mipmap/ic_favorite"
+                        android:drawableTop="@mipmap/ic_refresh"
                         android:onClick="@{()-> viewModel.updateDate()}"
                         android:text="@string/refresh"
                         android:textAlignment="center"
@@ -481,8 +491,8 @@
                         android:layout_marginStart="@dimen/dp15w"
                         android:layout_marginTop="@dimen/dp6h"
                         android:layout_marginEnd="@dimen/dp15w"
-                        android:drawableTop="@mipmap/ic_report"
-                        android:onClick="@{()-> viewModel.delete()}"
+                        android:drawableTop="@mipmap/ic_delete"
+                        android:onClick="@{()-> viewModel.removeDialog()}"
                         android:text="@string/delete"
                         android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"

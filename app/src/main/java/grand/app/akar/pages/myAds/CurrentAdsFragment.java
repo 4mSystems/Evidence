@@ -75,6 +75,13 @@ public class CurrentAdsFragment extends BaseFragment {
             else
                 viewModel.myPremiumListing(0);
         }
+        if (Constants.DATA_CHANGED ){
+            Constants.DATA_CHANGED = false;
+            if (pageType == 0)
+                viewModel.myListing(0);
+            else
+                viewModel.myPremiumListing(0);
+        }
         viewModel.getAdsRepository().setLiveData(viewModel.liveData);
     }
 

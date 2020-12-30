@@ -18,12 +18,15 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.databinding.ItemHomeBinding;
 import grand.app.akar.databinding.ItemMyAdsBinding;
+import grand.app.akar.pages.adDetails.AdDetailsFragment;
 import grand.app.akar.pages.home.models.HomeData;
 import grand.app.akar.pages.home.viewModels.ItemHomeViewModel;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 
 
 public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> {
@@ -62,6 +65,8 @@ public class MyAdsAdapter extends RecyclerView.Adapter<MyAdsAdapter.MenuView> {
             if (o.equals(Constants.REMOVE_AD)) {
                 lastPosition = position;
                 liveDataAdapter.setValue(menuModel.getId());
+            } else if (o.equals(Constants.MENu)) {
+                MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel), null, AdDetailsFragment.class.getName(), null);
             }
         });
         holder.setViewModel(itemMenuViewModel);

@@ -245,17 +245,16 @@
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewRoomsNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewRoomsNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v8"
-                 />
+                app:layout_constraintTop_toBottomOf="@id/v8" />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewRoomsNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:value="@={viewmodel.createAdRequest.room_no}"
                 android:layout_margin="@dimen/dp14h"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v8" />
+                app:layout_constraintTop_toBottomOf="@id/v8"
+                app:value="@={viewmodel.createAdRequest.room_no}" />
 
             <View
                 android:id="@+id/v9"
@@ -279,17 +278,16 @@
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewPathsNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewPathsNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v9"
-                />
+                app:layout_constraintTop_toBottomOf="@id/v9" />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewPathsNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp14h"
-                app:value="@={viewmodel.createAdRequest.bathroom_no}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v9" />
+                app:layout_constraintTop_toBottomOf="@id/v9"
+                app:value="@={viewmodel.createAdRequest.bathroom_no}" />
 
             <View
                 android:id="@+id/v10"
@@ -314,17 +312,16 @@
                 app:layout_constraintBottom_toBottomOf="@+id/incrementalViewKitchenNumber"
                 app:layout_constraintEnd_toStartOf="@+id/incrementalViewKitchenNumber"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v10"
-                 />
+                app:layout_constraintTop_toBottomOf="@id/v10" />
 
             <grand.app.akar.customViews.views.IncrementalView
                 android:id="@+id/incrementalViewKitchenNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp14h"
-                app:value="@={viewmodel.createAdRequest.kitchen_no}"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v10" />
+                app:layout_constraintTop_toBottomOf="@id/v10"
+                app:value="@={viewmodel.createAdRequest.kitchen_no}" />
 
             <View
                 android:id="@+id/v11"
@@ -730,13 +727,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/elevator_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
-                            android:src="@drawable/ic_toggle_fill"
+                            android:onClick="@{()-> viewmodel.liftChecked()}"
+                            android:src="@{viewmodel.lift==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
 
@@ -756,13 +753,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/garage_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
-                            android:src="@drawable/ic_toggle_fill"
+                            android:onClick="@{()-> viewmodel.garageChecked()}"
+                            android:src="@{viewmodel.garage==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
 
@@ -782,13 +779,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/furniture_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
-                            android:src="@drawable/ic_toggle_fill"
+                            android:onClick="@{()-> viewmodel.furnChecked()}"
+                            android:src="@{viewmodel.furniture==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
 
@@ -820,7 +817,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.mosque==0?false:true}"
+                            android:onClick="@{()-> viewmodel.mosqueChecked()}"
                             android:text="@string/mosque"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_services" />
@@ -830,7 +828,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.school==0?false:true}"
+                            android:onClick="@{()-> viewmodel.schoolChecked()}"
                             android:text="@string/school"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/mosque" />
@@ -840,8 +839,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:checked="@{viewmodel.hospital==0?false:true}"
+                            android:onClick="@{()-> viewmodel.hospitalChecked()}"
                             android:text="@string/hospital"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/school" />
 
@@ -850,10 +850,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
+                            android:checked="@{viewmodel.policeStation==0?false:true}"
+                            android:onClick="@{()-> viewmodel.stationChecked()}"
                             android:text="@string/police_station"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/hospital" />
+
 
                         <View
                             android:id="@+id/v17"
@@ -887,12 +889,12 @@
                             android:inputType="textMultiLine"
                             android:textAlignment="viewStart"
                             android:textColorHint="@color/medium_color"
-                            app:text="@={viewmodel.createAdRequest.desc}"
                             app:helperTextTextColor="@color/black"
                             app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tv_building_desc" />
+                            app:layout_constraintTop_toBottomOf="@+id/tv_building_desc"
+                            app:text="@={viewmodel.createAdRequest.desc}" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -909,8 +911,8 @@
                 android:layout_marginEnd="@dimen/dp32w"
                 android:layout_marginBottom="@dimen/dp18h"
                 android:background="@drawable/corner_view_primary_dark"
-                android:text="@string/post_ad"
                 android:onClick="@{()-> viewmodel.createFlatStoreOfficeAd()}"
+                android:text="@{viewmodel.createAdRequest.listing_id==0?@string/post_ad:@string/edit}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"

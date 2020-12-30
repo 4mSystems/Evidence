@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -64,7 +63,7 @@ public abstract class FragmentAddFlatFormBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
-  public final SwitchCompat elevatorToggle;
+  public final AppCompatImageView elevatorToggle;
 
   @NonNull
   public final ExpansionLayout expansionLayout;
@@ -73,10 +72,10 @@ public abstract class FragmentAddFlatFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
-  public final SwitchCompat garageToggle;
+  public final AppCompatImageView garageToggle;
 
   @NonNull
   public final AppCompatImageView headerIndicator;
@@ -245,17 +244,17 @@ public abstract class FragmentAddFlatFormBinding extends ViewDataBinding {
       CustomTextViewMedium btMnahda, CustomTextViewMedium btSac, CustomTextViewMedium btTitleDeed,
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
-      MaterialCardView buildingYear, AppCompatButton confirmBtn, SwitchCompat elevatorToggle,
+      MaterialCardView buildingYear, AppCompatButton confirmBtn, AppCompatImageView elevatorToggle,
       ExpansionLayout expansionLayout, ExpansionHeader expansionLayoutHeader,
-      SwitchCompat furnitureToggle, SwitchCompat garageToggle, AppCompatImageView headerIndicator,
-      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
-      IncrementalView incrementalViewFloorNumber, IncrementalView incrementalViewFrontCount,
-      IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
-      IncrementalView incrementalViewRoomsNumber, CustomEditText inputAddress,
-      CustomEditText inputDesc, CustomEditText inputFloorNum, CustomEditText inputLandSize,
-      CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
-      LinearLayout optionalLayout, AppCompatCheckBox policeStation, AppCompatCheckBox school,
-      CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
+      AppCompatImageView furnitureToggle, AppCompatImageView garageToggle,
+      AppCompatImageView headerIndicator, CustomTextViewMedium headerMenuName,
+      AppCompatCheckBox hospital, IncrementalView incrementalViewFloorNumber,
+      IncrementalView incrementalViewFrontCount, IncrementalView incrementalViewKitchenNumber,
+      IncrementalView incrementalViewPathsNumber, IncrementalView incrementalViewRoomsNumber,
+      CustomEditText inputAddress, CustomEditText inputDesc, CustomEditText inputFloorNum,
+      CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
+      AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
+      AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
       CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
       CustomTextViewMedium tvDocType, CustomTextViewMedium tvElevator,
       CustomTextViewMedium tvFloorCount, CustomTextViewMedium tvFloorNumber,

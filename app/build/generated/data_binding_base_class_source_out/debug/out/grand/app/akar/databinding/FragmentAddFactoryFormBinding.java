@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -76,10 +76,10 @@ public abstract class FragmentAddFactoryFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
-  public final SwitchCompat garageToggle;
+  public final AppCompatImageView garageToggle;
 
   @NonNull
   public final ImageView headerIndicator;
@@ -217,13 +217,14 @@ public abstract class FragmentAddFactoryFormBinding extends ViewDataBinding {
       CustomTextViewMedium btUsed, CustomTextViewMedium btnCash, CustomTextViewMedium btnNew,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
       MaterialCardView buildingYear, AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
-      SwitchCompat garageToggle, ImageView headerIndicator, CustomTextViewMedium headerMenuName,
-      AppCompatCheckBox hospital, IncrementalView incrementalViewFrontCount,
-      CustomEditText inputAddress, CustomEditText inputBuildingSize, CustomEditText inputDesc,
-      CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
-      AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
-      AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
+      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
+      AppCompatImageView garageToggle, ImageView headerIndicator,
+      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
+      IncrementalView incrementalViewFrontCount, CustomEditText inputAddress,
+      CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputLandSize,
+      CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
+      LinearLayout optionalLayout, AppCompatCheckBox policeStation, AppCompatCheckBox school,
+      CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
       CustomTextViewMedium tvBuildingSize, CustomTextViewMedium tvBuildingYear,
       CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,
       CustomTextViewMedium tvFactoryStatus, CustomTextViewMedium tvFrontCount,

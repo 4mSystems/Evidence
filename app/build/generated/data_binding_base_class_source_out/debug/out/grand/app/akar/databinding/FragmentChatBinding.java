@@ -11,6 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import grand.app.akar.R;
 import grand.app.akar.pages.chat.viewmodel.ChatViewModel;
 import java.lang.Deprecated;
@@ -27,17 +28,22 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
   public final AppCompatImageView more;
 
   @NonNull
+  public final RecyclerView rcChat;
+
+  @NonNull
   public final View v14;
 
   @Bindable
   protected ChatViewModel mViewmodel;
 
   protected FragmentChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView attach, ConstraintLayout chatActions, AppCompatImageView more, View v14) {
+      AppCompatImageView attach, ConstraintLayout chatActions, AppCompatImageView more,
+      RecyclerView rcChat, View v14) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attach = attach;
     this.chatActions = chatActions;
     this.more = more;
+    this.rcChat = rcChat;
     this.v14 = v14;
   }
 

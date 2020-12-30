@@ -41,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp8h"
             android:text="@string/edit_location"
+            android:onClick="@{()-> viewModel.toEditLocation()}"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
@@ -53,7 +54,6 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="@dimen/dp10h"
-
             android:background="@color/overlayBackground"
             app:layout_constraintTop_toBottomOf="@id/edit_location" />
 
@@ -64,6 +64,7 @@
             android:layout_marginTop="@dimen/dp8h"
             android:text="@string/edit_details"
             android:textAlignment="center"
+            android:onClick="@{()-> viewModel.toEditAdData()}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
@@ -84,7 +85,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp8h"
-            android:onClick="@{()-> viewModel.delete()}"
+            android:onClick="@{()-> viewModel.removeDialog()}"
             android:text="@string/delete_ad"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"

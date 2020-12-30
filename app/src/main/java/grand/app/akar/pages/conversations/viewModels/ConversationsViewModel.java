@@ -12,10 +12,10 @@ import grand.app.akar.repository.ChatRepository;
 
 public class ConversationsViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     ChatRepository repository;
-    private ConversationsAdapter conversationsAdapter;
+     ConversationsAdapter conversationsAdapter;
 
     @Inject
     public ConversationsViewModel(ChatRepository repository) {
@@ -25,8 +25,8 @@ public class ConversationsViewModel extends BaseViewModel {
         repository.setLiveData(liveData);
     }
 
-    public void getTerms() {
-        compositeDisposable.add(repository.getTerms());
+    public void getConversations() {
+        compositeDisposable.add(repository.getConversations());
     }
 
     protected void unSubscribeFromObservable() {

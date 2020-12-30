@@ -14,10 +14,8 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.v19, 4);
-        sViewsWithIds.put(R.id.edit_location, 5);
-        sViewsWithIds.put(R.id.v20, 6);
-        sViewsWithIds.put(R.id.edit_details, 7);
+        sViewsWithIds.put(R.id.v19, 6);
+        sViewsWithIds.put(R.id.v20, 7);
         sViewsWithIds.put(R.id.v21, 8);
         sViewsWithIds.put(R.id.v22, 9);
     }
@@ -26,11 +24,15 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback23;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback24;
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback21;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback22;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -40,26 +42,30 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
     }
     private DialogEditOptionBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
-            , (android.view.View) bindings[4]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
             , (android.view.View) bindings[6]
+            , (android.view.View) bindings[7]
             , (android.view.View) bindings[8]
             , (android.view.View) bindings[9]
             );
         this.close.setTag(null);
         this.deleteAd.setTag(null);
+        this.editDetails.setTag(null);
         this.editImages.setTag(null);
+        this.editLocation.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback14 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback12 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback13 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback23 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback24 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback21 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback22 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback20 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -133,16 +139,35 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.close.setOnClickListener(mCallback14);
-            this.deleteAd.setOnClickListener(mCallback13);
-            this.editImages.setOnClickListener(mCallback12);
+            this.close.setOnClickListener(mCallback24);
+            this.deleteAd.setOnClickListener(mCallback23);
+            this.editDetails.setOnClickListener(mCallback22);
+            this.editImages.setOnClickListener(mCallback20);
+            this.editLocation.setOnClickListener(mCallback21);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
+            case 4: {
+                // localize variables for thread safety
+                // viewModel
+                grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.removeDialog();
+                }
+                break;
+            }
+            case 5: {
                 // localize variables for thread safety
                 // viewModel
                 grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel viewModel = mViewModel;
@@ -156,6 +181,40 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
 
 
                     viewModel.dialogDismiss();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewModel
+                grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toEditLocation();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewModel
+                grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel viewModel = mViewModel;
+                // viewModel != null
+                boolean viewModelJavaLangObjectNull = false;
+
+
+
+                viewModelJavaLangObjectNull = (viewModel) != (null);
+                if (viewModelJavaLangObjectNull) {
+
+
+                    viewModel.toEditAdData();
                 }
                 break;
             }
@@ -173,23 +232,6 @@ public class DialogEditOptionBindingImpl extends DialogEditOptionBinding impleme
 
 
                     viewModel.toEditImages();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewModel
-                grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel viewModel = mViewModel;
-                // viewModel != null
-                boolean viewModelJavaLangObjectNull = false;
-
-
-
-                viewModelJavaLangObjectNull = (viewModel) != (null);
-                if (viewModelJavaLangObjectNull) {
-
-
-                    viewModel.delete();
                 }
                 break;
             }

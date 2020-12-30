@@ -19,40 +19,63 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/driver_image"
-            android:layout_width="@dimen/dp40w"
-            android:layout_height="@dimen/dp40h"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50h"
             android:layout_margin="@dimen/dp8h"
             android:src="@drawable/splash"
             app:civ_border_color="@color/background_gray"
-            app:civ_border_width="6dp"
+            app:civ_border_width="2dp"
+            app:imageUrl="@{itemChatViewModel.userData.id==itemChatViewModel.chat.receiver.id?itemChatViewModel.userData.img:itemChatViewModel.chat.receiver.img}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <grand.app.akar.customViews.views.CustomTextViewMedium
             android:id="@+id/item_message"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp6h"
-            android:background="@drawable/left_chat"
             android:padding="@dimen/dp8h"
+            android:text="@{itemChatViewModel.chat.text}"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            android:text="لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه"
             android:textColor="@color/colordark"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="@{itemChatViewModel.chat.media.size()>0?View.GONE:View.VISIBLE}"
             app:layout_constraintStart_toEndOf="@+id/driver_image"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="@{itemChatViewModel.chat.media.size()>0?View.VISIBLE:View.GONE}"
+            app:adapter="@{itemChatViewModel.imagesAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/driver_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`2`}"
+            app:reverseLayout="false"
+            app:span="@{`2`}"
+            app:stackFromEnd="true"
+            tools:listitem="@layout/item_chat_images" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/br12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="rc_chat,item_message" />
 
         <grand.app.akar.customViews.views.CustomTextViewRegular
             android:id="@+id/item_message_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp6h"
-            android:text="Nov 4, 18:03"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@{itemChatViewModel.chat.createdAt}"
             android:textColor="@color/medium_color"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/item_message" />
+            app:layout_constraintTop_toBottomOf="@id/br12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

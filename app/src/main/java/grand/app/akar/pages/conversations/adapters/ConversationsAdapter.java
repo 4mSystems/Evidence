@@ -1,7 +1,6 @@
 package grand.app.akar.pages.conversations.adapters;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,30 +8,31 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
-import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.ItemConversationBinding;
 import grand.app.akar.model.base.StatusMessage;
+import grand.app.akar.pages.chat.view.ChatFragment;
+import grand.app.akar.pages.conversations.models.ConversationsData;
 import grand.app.akar.pages.conversations.viewModels.ItemConversationsViewModel;
-import grand.app.akar.utils.Constants;
-import grand.app.akar.utils.helper.AppHelper;
 import grand.app.akar.utils.helper.MovementHelper;
-import grand.app.akar.utils.images.PhotoFullPopupWindow;
+import grand.app.akar.utils.resources.ResourceManager;
 
 
 public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdapter.MenuView> {
-    private List<StatusMessage> filesDataList;
+    List<ConversationsData> conversationsDataList;
     private Context context;
 
     public ConversationsAdapter() {
-        this.filesDataList = new ArrayList<>();
+        this.conversationsDataList = new ArrayList<>();
     }
 
     @NonNull
@@ -47,16 +47,16 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
 
     @Override
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
-        StatusMessage menuModel = filesDataList.get(position);
+        ConversationsData menuModel = conversationsDataList.get(position);
         ItemConversationsViewModel itemMenuViewModel = new ItemConversationsViewModel(menuModel);
-
+        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getListingId()), ResourceManager.getString(R.string.menuConversations), ChatFragment.class.getName(), null));
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<StatusMessage> dataList) {
-        this.filesDataList.clear();
-        filesDataList.addAll(dataList);
+    public void update(List<ConversationsData> dataList) {
+        this.conversationsDataList.clear();
+        conversationsDataList.addAll(dataList);
         notifyDataSetChanged();
     }
 
@@ -74,7 +74,7 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
 
     @Override
     public int getItemCount() {
-        return filesDataList.size();
+        return conversationsDataList.size();
     }
 
     public class MenuView extends RecyclerView.ViewHolder {

@@ -3,6 +3,7 @@ package grand.app.akar.pages.ads.viewModels;
 
 import dagger.MembersInjector;
 import dagger.internal.InjectedFieldSignature;
+import grand.app.akar.repository.AdsRepository;
 import grand.app.akar.repository.AuthRepository;
 import javax.inject.Provider;
 
@@ -13,20 +14,31 @@ import javax.inject.Provider;
 public final class AdsViewModel_MembersInjector implements MembersInjector<AdsViewModel> {
   private final Provider<AuthRepository> repositoryProvider;
 
-  public AdsViewModel_MembersInjector(Provider<AuthRepository> repositoryProvider) {
+  private final Provider<AdsRepository> adsRepositoryProvider;
+
+  public AdsViewModel_MembersInjector(Provider<AuthRepository> repositoryProvider,
+      Provider<AdsRepository> adsRepositoryProvider) {
     this.repositoryProvider = repositoryProvider;
+    this.adsRepositoryProvider = adsRepositoryProvider;
   }
 
-  public static MembersInjector<AdsViewModel> create(Provider<AuthRepository> repositoryProvider) {
-    return new AdsViewModel_MembersInjector(repositoryProvider);}
+  public static MembersInjector<AdsViewModel> create(Provider<AuthRepository> repositoryProvider,
+      Provider<AdsRepository> adsRepositoryProvider) {
+    return new AdsViewModel_MembersInjector(repositoryProvider, adsRepositoryProvider);}
 
   @Override
   public void injectMembers(AdsViewModel instance) {
     injectRepository(instance, repositoryProvider.get());
+    injectAdsRepository(instance, adsRepositoryProvider.get());
   }
 
   @InjectedFieldSignature("grand.app.akar.pages.ads.viewModels.AdsViewModel.repository")
   public static void injectRepository(AdsViewModel instance, AuthRepository repository) {
     instance.repository = repository;
+  }
+
+  @InjectedFieldSignature("grand.app.akar.pages.ads.viewModels.AdsViewModel.adsRepository")
+  public static void injectAdsRepository(AdsViewModel instance, AdsRepository adsRepository) {
+    instance.adsRepository = adsRepository;
   }
 }

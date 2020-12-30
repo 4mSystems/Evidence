@@ -67,29 +67,43 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
     private final grand.app.akar.customViews.views.DateEditText mboundView12;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback70;
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback71;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback69;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback79;
     @Nullable
-    private final android.view.View.OnClickListener mCallback52;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback65;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback77;
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback64;
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback78;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback66;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback74;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback62;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback76;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback63;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback75;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback72;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback73;
     // values
     // listeners
-    private OnCheckedChangeListenerImpl mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
-    private OnCheckedChangeListenerImpl1 mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener incrementalViewFloorNumbervalueAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
@@ -590,11 +604,11 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
             , (com.google.android.material.card.MaterialCardView) bindings[54]
             , (androidx.appcompat.widget.AppCompatButton) bindings[31]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[23]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[23]
             , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[64]
             , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[61]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[25]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[24]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[25]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[24]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[62]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[63]
             , (androidx.appcompat.widget.AppCompatCheckBox) bindings[28]
@@ -613,7 +627,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             , (androidx.appcompat.widget.AppCompatCheckBox) bindings[26]
             , (android.widget.LinearLayout) bindings[60]
             , (androidx.appcompat.widget.AppCompatCheckBox) bindings[29]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[22]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[22]
             , (androidx.appcompat.widget.AppCompatCheckBox) bindings[27]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[37]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[76]
@@ -690,23 +704,32 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
         this.school.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback47 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback48 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback45 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback46 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback52 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
-        mCallback54 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
-        mCallback53 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
-        mCallback50 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback51 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback70 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
+        mCallback71 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
+        mCallback69 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback67 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback79 = new grand.app.akar.generated.callback.OnClickListener(this, 18);
+        mCallback68 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback65 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback77 = new grand.app.akar.generated.callback.OnClickListener(this, 16);
+        mCallback64 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback78 = new grand.app.akar.generated.callback.OnClickListener(this, 17);
+        mCallback66 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback74 = new grand.app.akar.generated.callback.OnClickListener(this, 13);
+        mCallback62 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback76 = new grand.app.akar.generated.callback.OnClickListener(this, 15);
+        mCallback63 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback75 = new grand.app.akar.generated.callback.OnClickListener(this, 14);
+        mCallback72 = new grand.app.akar.generated.callback.OnClickListener(this, 11);
+        mCallback73 = new grand.app.akar.generated.callback.OnClickListener(this, 12);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x800L;
+                mDirtyFlags = 0x100000L;
+                mDirtyFlags_1 = 0x0L;
         }
         requestRebind();
     }
@@ -714,7 +737,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
     @Override
     public boolean hasPendingBindings() {
         synchronized(this) {
-            if (mDirtyFlags != 0) {
+            if (mDirtyFlags != 0 || mDirtyFlags_1 != 0) {
                 return true;
             }
         }
@@ -827,15 +850,69 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             }
             return true;
         }
-        else if (fieldId == BR.paymentMethod) {
+        else if (fieldId == BR.createAdRequest) {
             synchronized(this) {
                     mDirtyFlags |= 0x200L;
             }
             return true;
         }
-        else if (fieldId == BR.docType) {
+        else if (fieldId == BR.paymentMethod) {
             synchronized(this) {
                     mDirtyFlags |= 0x400L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.docType) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x800L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.pool) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.lift) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.garage) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.furniture) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.mosque) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x10000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.school) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x20000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.hospital) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x40000L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.policeStation) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80000L;
             }
             return true;
         }
@@ -854,27 +931,34 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
     @Override
     protected void executeBindings() {
         long dirtyFlags = 0;
+        long dirtyFlags_1 = 0;
         synchronized(this) {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
+            dirtyFlags_1 = mDirtyFlags_1;
+            mDirtyFlags_1 = 0;
         }
         boolean viewmodelDealingTypeInt1 = false;
         java.lang.String viewmodelCreateAdRequestBathroomNo = null;
+        boolean viewmodelHospitalInt0BooleanFalseBooleanTrue = false;
         java.lang.String viewmodelCreateAdRequestAreaErrorGet = null;
         android.graphics.drawable.Drawable viewmodelDocTypeInt1BtCustomizeAndroidDrawableCornerViewLightBtCustomizeAndroidDrawableCornerViewPrimaryDark = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestFloorAreaError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestPriceError = null;
+        int viewmodelMosque = 0;
+        android.graphics.drawable.Drawable viewmodelGarageInt0GarageToggleAndroidDrawableIcToggleEmptyGarageToggleAndroidDrawableIcToggleFill = null;
         java.lang.String viewmodelCreateAdRequestAddress = null;
         java.lang.String viewmodelCreateAdRequestPrice = null;
         java.lang.String viewmodelCreateAdRequestTotalArea = null;
         int viewmodelDocTypeInt1BtCustomizeAndroidColorColordarkBtCustomizeAndroidColorWhite = 0;
         int viewmodelDocTypeInt3BtTitleDeedAndroidColorColordarkBtTitleDeedAndroidColorWhite = 0;
         boolean viewmodelDocTypeInt1 = false;
-        android.widget.CompoundButton.OnCheckedChangeListener viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = null;
         boolean viewmodelPaymentMethodInt0 = false;
         java.lang.String viewmodelCreateAdRequestBuildingYearErrorGet = null;
+        int viewmodelHospital = 0;
         android.graphics.drawable.Drawable viewmodelDocTypeInt0BtnRealEstateCertificateAndroidDrawableCornerViewLightBtnRealEstateCertificateAndroidDrawableCornerViewPrimaryDark = null;
         java.lang.String viewmodelCreateAdRequestBuildingYear = null;
+        boolean viewmodelCreateAdRequestListingIdInt0 = false;
         java.lang.String viewmodelCreateAdRequestFloorAreaErrorGet = null;
         android.graphics.drawable.Drawable viewmodelDealingTypeInt1BtnSellAndroidDrawableCornerViewLightBtnSellAndroidDrawableCornerViewPrimaryDark = null;
         grand.app.akar.pages.ads.models.CreateAdRequest viewmodelCreateAdRequest = null;
@@ -884,60 +968,118 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestAddressError = null;
         int viewmodelDealingType = 0;
         int viewmodelDocType = 0;
+        boolean viewmodelGarageInt0 = false;
+        boolean viewmodelLiftInt0 = false;
         int viewmodelDocTypeInt0BtnRealEstateCertificateAndroidColorColordarkBtnRealEstateCertificateAndroidColorWhite = 0;
         boolean viewmodelPaymentMethodInt2 = false;
+        boolean viewmodelPoliceStationInt0BooleanFalseBooleanTrue = false;
         boolean viewmodelDocTypeInt2 = false;
         int viewmodelPaymentMethodInt1BtSacAndroidColorColordarkBtSacAndroidColorWhite = 0;
+        boolean viewmodelHospitalInt0 = false;
+        boolean viewmodelSchoolInt0 = false;
+        boolean viewmodelPoolInt0 = false;
+        int viewmodelSchool = 0;
         boolean viewmodelDealingTypeInt0 = false;
+        int viewmodelPoliceStation = 0;
         boolean viewmodelPaymentMethodInt1 = false;
         java.lang.String viewmodelCreateAdRequestRoomNo = null;
+        android.graphics.drawable.Drawable viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestAreaError = null;
+        java.lang.String viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit = null;
         int viewmodelPaymentMethodInt2BtTransformAndroidColorColordarkBtTransformAndroidColorWhite = 0;
         boolean viewmodelDocTypeInt3 = false;
+        int viewmodelPool = 0;
         java.lang.String viewmodelCreateAdRequestFloorArea = null;
+        boolean viewmodelMosqueInt0 = false;
+        android.graphics.drawable.Drawable viewmodelLiftInt0ElevatorToggleAndroidDrawableIcToggleEmptyElevatorToggleAndroidDrawableIcToggleFill = null;
         java.lang.String viewmodelCreateAdRequestDesc = null;
         android.graphics.drawable.Drawable viewmodelDealingTypeInt0BtMnahdaAndroidDrawableCornerViewLightBtMnahdaAndroidDrawableCornerViewPrimaryDark = null;
         android.graphics.drawable.Drawable viewmodelPaymentMethodInt1BtSacAndroidDrawableCornerViewLightBtSacAndroidDrawableCornerViewPrimaryDark = null;
         int viewmodelPaymentMethodInt0BtnCashAndroidColorColordarkBtnCashAndroidColorWhite = 0;
         java.lang.String viewmodelCreateAdRequestStreetWidth = null;
+        boolean viewmodelMosqueInt0BooleanFalseBooleanTrue = false;
         java.lang.String viewmodelCreateAdRequestTotalAreaErrorGet = null;
+        boolean viewmodelPoliceStationInt0 = false;
+        int viewmodelLift = 0;
+        boolean viewmodelSchoolInt0BooleanFalseBooleanTrue = false;
+        int viewmodelFurniture = 0;
         grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
         int viewmodelDealingTypeInt0BtMnahdaAndroidColorColordarkBtMnahdaAndroidColorWhite = 0;
         java.lang.String viewmodelCreateAdRequestFloorNo = null;
         android.graphics.drawable.Drawable viewmodelDocTypeInt2BtHolyKingAndroidDrawableCornerViewLightBtHolyKingAndroidDrawableCornerViewPrimaryDark = null;
         java.lang.String viewmodelCreateAdRequestPriceErrorGet = null;
         int viewmodelPaymentMethod = 0;
+        android.graphics.drawable.Drawable viewmodelPoolInt0PoolToggleAndroidDrawableIcToggleEmptyPoolToggleAndroidDrawableIcToggleFill = null;
         java.lang.String viewmodelCreateAdRequestKitchenNo = null;
         android.graphics.drawable.Drawable viewmodelPaymentMethodInt0BtnCashAndroidDrawableCornerViewLightBtnCashAndroidDrawableCornerViewPrimaryDark = null;
         java.lang.String viewmodelCreateAdRequestFrontNo = null;
+        int viewmodelCreateAdRequestListingId = 0;
         java.lang.String viewmodelCreateAdRequestArea = null;
         java.lang.String viewmodelCreateAdRequestAddressErrorGet = null;
-        android.widget.CompoundButton.OnCheckedChangeListener viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = null;
+        boolean viewmodelFurnitureInt0 = false;
         boolean viewmodelDocTypeInt0 = false;
         int viewmodelDealingTypeInt1BtnSellAndroidColorColordarkBtnSellAndroidColorWhite = 0;
+        int viewmodelGarage = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestTotalAreaError = null;
         int viewmodelDocTypeInt2BtHolyKingAndroidColorColordarkBtHolyKingAndroidColorWhite = 0;
 
-        if ((dirtyFlags & 0xf7fL) != 0) {
+        if ((dirtyFlags & 0x1fff7fL) != 0) {
 
 
-            if ((dirtyFlags & 0x820L) != 0) {
+            if ((dirtyFlags & 0x110020L) != 0) {
 
                     if (viewmodel != null) {
-                        // read viewmodel::onToggleChange
-                        viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = (((mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener == null) ? (mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = new OnCheckedChangeListenerImpl()) : mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener).setValue(viewmodel));
-                        // read viewmodel::onCheckChange
-                        viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = (((mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener == null) ? (mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = new OnCheckedChangeListenerImpl1()) : mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener).setValue(viewmodel));
+                        // read viewmodel.mosque
+                        viewmodelMosque = viewmodel.getMosque();
                     }
+
+
+                    // read viewmodel.mosque == 0
+                    viewmodelMosqueInt0 = (viewmodelMosque) == (0);
+                if((dirtyFlags & 0x110020L) != 0) {
+                    if(viewmodelMosqueInt0) {
+                            dirtyFlags |= 0x1000000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x800000000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.mosque == 0 ? false : true
+                    viewmodelMosqueInt0BooleanFalseBooleanTrue = ((viewmodelMosqueInt0) ? (false) : (true));
             }
-            if ((dirtyFlags & 0x87fL) != 0) {
+            if ((dirtyFlags & 0x140020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.hospital
+                        viewmodelHospital = viewmodel.getHospital();
+                    }
+
+
+                    // read viewmodel.hospital == 0
+                    viewmodelHospitalInt0 = (viewmodelHospital) == (0);
+                if((dirtyFlags & 0x140020L) != 0) {
+                    if(viewmodelHospitalInt0) {
+                            dirtyFlags |= 0x400000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x200000L;
+                    }
+                }
+
+
+                    // read viewmodel.hospital == 0 ? false : true
+                    viewmodelHospitalInt0BooleanFalseBooleanTrue = ((viewmodelHospitalInt0) ? (false) : (true));
+            }
+            if ((dirtyFlags & 0x10027fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.createAdRequest
                         viewmodelCreateAdRequest = viewmodel.getCreateAdRequest();
                     }
 
-                if ((dirtyFlags & 0x820L) != 0) {
+                if ((dirtyFlags & 0x100220L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.bathroom_no
@@ -964,11 +1106,29 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestKitchenNo = viewmodelCreateAdRequest.getKitchen_no();
                             // read viewmodel.createAdRequest.front_no
                             viewmodelCreateAdRequestFrontNo = viewmodelCreateAdRequest.getFront_no();
+                            // read viewmodel.createAdRequest.listing_id
+                            viewmodelCreateAdRequestListingId = viewmodelCreateAdRequest.getListing_id();
                             // read viewmodel.createAdRequest.area
                             viewmodelCreateAdRequestArea = viewmodelCreateAdRequest.getArea();
                         }
+
+
+                        // read viewmodel.createAdRequest.listing_id == 0
+                        viewmodelCreateAdRequestListingIdInt0 = (viewmodelCreateAdRequestListingId) == (0);
+                    if((dirtyFlags & 0x100220L) != 0) {
+                        if(viewmodelCreateAdRequestListingIdInt0) {
+                                dirtyFlags |= 0x1000000000000L;
+                        }
+                        else {
+                                dirtyFlags |= 0x800000000000L;
+                        }
+                    }
+
+
+                        // read viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+                        viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit = ((viewmodelCreateAdRequestListingIdInt0) ? (confirmBtn.getResources().getString(R.string.post_ad)) : (confirmBtn.getResources().getString(R.string.edit)));
                 }
-                if ((dirtyFlags & 0x821L) != 0) {
+                if ((dirtyFlags & 0x100221L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.floorAreaError
@@ -982,7 +1142,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestFloorAreaErrorGet = viewmodelCreateAdRequestFloorAreaError.get();
                         }
                 }
-                if ((dirtyFlags & 0x822L) != 0) {
+                if ((dirtyFlags & 0x100222L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.priceError
@@ -996,7 +1156,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestPriceErrorGet = viewmodelCreateAdRequestPriceError.get();
                         }
                 }
-                if ((dirtyFlags & 0x824L) != 0) {
+                if ((dirtyFlags & 0x100224L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.buildingYearError
@@ -1010,7 +1170,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestBuildingYearErrorGet = viewmodelCreateAdRequestBuildingYearError.get();
                         }
                 }
-                if ((dirtyFlags & 0x828L) != 0) {
+                if ((dirtyFlags & 0x100228L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.addressError
@@ -1024,7 +1184,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestAddressErrorGet = viewmodelCreateAdRequestAddressError.get();
                         }
                 }
-                if ((dirtyFlags & 0x830L) != 0) {
+                if ((dirtyFlags & 0x100230L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.areaError
@@ -1038,7 +1198,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                             viewmodelCreateAdRequestAreaErrorGet = viewmodelCreateAdRequestAreaError.get();
                         }
                 }
-                if ((dirtyFlags & 0x860L) != 0) {
+                if ((dirtyFlags & 0x100260L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.totalAreaError
@@ -1053,7 +1213,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                         }
                 }
             }
-            if ((dirtyFlags & 0x920L) != 0) {
+            if ((dirtyFlags & 0x100120L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.dealingType
@@ -1065,24 +1225,24 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     viewmodelDealingTypeInt1 = (viewmodelDealingType) == (1);
                     // read viewmodel.dealingType == 0
                     viewmodelDealingTypeInt0 = (viewmodelDealingType) == (0);
-                if((dirtyFlags & 0x920L) != 0) {
+                if((dirtyFlags & 0x100120L) != 0) {
                     if(viewmodelDealingTypeInt1) {
-                            dirtyFlags |= 0x200000L;
-                            dirtyFlags |= 0x200000000000L;
+                            dirtyFlags |= 0x400000000L;
+                            dirtyFlags_1 |= 0x100L;
                     }
                     else {
-                            dirtyFlags |= 0x100000L;
-                            dirtyFlags |= 0x100000000000L;
+                            dirtyFlags |= 0x200000000L;
+                            dirtyFlags_1 |= 0x80L;
                     }
                 }
-                if((dirtyFlags & 0x920L) != 0) {
+                if((dirtyFlags & 0x100120L) != 0) {
                     if(viewmodelDealingTypeInt0) {
-                            dirtyFlags |= 0x200000000L;
-                            dirtyFlags |= 0x8000000000L;
+                            dirtyFlags |= 0x40000000000000L;
+                            dirtyFlags_1 |= 0x1L;
                     }
                     else {
-                            dirtyFlags |= 0x100000000L;
-                            dirtyFlags |= 0x4000000000L;
+                            dirtyFlags |= 0x20000000000000L;
+                            dirtyFlags |= 0x8000000000000000L;
                     }
                 }
 
@@ -1096,7 +1256,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     // read viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
                     viewmodelDealingTypeInt0BtMnahdaAndroidColorColordarkBtMnahdaAndroidColorWhite = ((viewmodelDealingTypeInt0) ? (getColorFromResource(btMnahda, R.color.colordark)) : (getColorFromResource(btMnahda, R.color.white)));
             }
-            if ((dirtyFlags & 0xc20L) != 0) {
+            if ((dirtyFlags & 0x100820L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.docType
@@ -1112,44 +1272,44 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     viewmodelDocTypeInt3 = (viewmodelDocType) != (3);
                     // read viewmodel.docType != 0
                     viewmodelDocTypeInt0 = (viewmodelDocType) != (0);
-                if((dirtyFlags & 0xc20L) != 0) {
+                if((dirtyFlags & 0x100820L) != 0) {
                     if(viewmodelDocTypeInt1) {
-                            dirtyFlags |= 0x2000L;
-                            dirtyFlags |= 0x8000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x1000L;
-                            dirtyFlags |= 0x4000L;
-                    }
-                }
-                if((dirtyFlags & 0xc20L) != 0) {
-                    if(viewmodelDocTypeInt2) {
-                            dirtyFlags |= 0x20000000000L;
-                            dirtyFlags |= 0x800000000000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x10000000000L;
-                            dirtyFlags |= 0x400000000000L;
-                    }
-                }
-                if((dirtyFlags & 0xc20L) != 0) {
-                    if(viewmodelDocTypeInt3) {
-                            dirtyFlags |= 0x20000L;
-                            dirtyFlags |= 0x2000000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x10000L;
                             dirtyFlags |= 0x1000000L;
+                            dirtyFlags |= 0x10000000L;
                     }
-                }
-                if((dirtyFlags & 0xc20L) != 0) {
-                    if(viewmodelDocTypeInt0) {
-                            dirtyFlags |= 0x80000L;
+                    else {
+                            dirtyFlags |= 0x800000L;
                             dirtyFlags |= 0x8000000L;
                     }
+                }
+                if((dirtyFlags & 0x100820L) != 0) {
+                    if(viewmodelDocTypeInt2) {
+                            dirtyFlags_1 |= 0x4L;
+                            dirtyFlags_1 |= 0x400L;
+                    }
                     else {
-                            dirtyFlags |= 0x40000L;
-                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags_1 |= 0x2L;
+                            dirtyFlags_1 |= 0x200L;
+                    }
+                }
+                if((dirtyFlags & 0x100820L) != 0) {
+                    if(viewmodelDocTypeInt3) {
+                            dirtyFlags |= 0x40000000L;
+                            dirtyFlags |= 0x4000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x20000000L;
+                            dirtyFlags |= 0x2000000000L;
+                    }
+                }
+                if((dirtyFlags & 0x100820L) != 0) {
+                    if(viewmodelDocTypeInt0) {
+                            dirtyFlags |= 0x100000000L;
+                            dirtyFlags |= 0x10000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x80000000L;
+                            dirtyFlags |= 0x8000000000L;
                     }
                 }
 
@@ -1171,7 +1331,122 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     // read viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
                     viewmodelDocTypeInt0BtnRealEstateCertificateAndroidColorColordarkBtnRealEstateCertificateAndroidColorWhite = ((viewmodelDocTypeInt0) ? (getColorFromResource(btnRealEstateCertificate, R.color.colordark)) : (getColorFromResource(btnRealEstateCertificate, R.color.white)));
             }
-            if ((dirtyFlags & 0xa20L) != 0) {
+            if ((dirtyFlags & 0x120020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.school
+                        viewmodelSchool = viewmodel.getSchool();
+                    }
+
+
+                    // read viewmodel.school == 0
+                    viewmodelSchoolInt0 = (viewmodelSchool) == (0);
+                if((dirtyFlags & 0x120020L) != 0) {
+                    if(viewmodelSchoolInt0) {
+                            dirtyFlags |= 0x4000000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x2000000000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.school == 0 ? false : true
+                    viewmodelSchoolInt0BooleanFalseBooleanTrue = ((viewmodelSchoolInt0) ? (false) : (true));
+            }
+            if ((dirtyFlags & 0x180020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.policeStation
+                        viewmodelPoliceStation = viewmodel.getPoliceStation();
+                    }
+
+
+                    // read viewmodel.policeStation == 0
+                    viewmodelPoliceStationInt0 = (viewmodelPoliceStation) == (0);
+                if((dirtyFlags & 0x180020L) != 0) {
+                    if(viewmodelPoliceStationInt0) {
+                            dirtyFlags |= 0x40000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x20000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.policeStation == 0 ? false : true
+                    viewmodelPoliceStationInt0BooleanFalseBooleanTrue = ((viewmodelPoliceStationInt0) ? (false) : (true));
+            }
+            if ((dirtyFlags & 0x101020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.pool
+                        viewmodelPool = viewmodel.getPool();
+                    }
+
+
+                    // read viewmodel.pool == 0
+                    viewmodelPoolInt0 = (viewmodelPool) == (0);
+                if((dirtyFlags & 0x101020L) != 0) {
+                    if(viewmodelPoolInt0) {
+                            dirtyFlags_1 |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags_1 |= 0x8L;
+                    }
+                }
+
+
+                    // read viewmodel.pool == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+                    viewmodelPoolInt0PoolToggleAndroidDrawableIcToggleEmptyPoolToggleAndroidDrawableIcToggleFill = ((viewmodelPoolInt0) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(poolToggle.getContext(), R.drawable.ic_toggle_empty)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(poolToggle.getContext(), R.drawable.ic_toggle_fill)));
+            }
+            if ((dirtyFlags & 0x102020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.lift
+                        viewmodelLift = viewmodel.getLift();
+                    }
+
+
+                    // read viewmodel.lift == 0
+                    viewmodelLiftInt0 = (viewmodelLift) == (0);
+                if((dirtyFlags & 0x102020L) != 0) {
+                    if(viewmodelLiftInt0) {
+                            dirtyFlags |= 0x10000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8000000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.lift == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+                    viewmodelLiftInt0ElevatorToggleAndroidDrawableIcToggleEmptyElevatorToggleAndroidDrawableIcToggleFill = ((viewmodelLiftInt0) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(elevatorToggle.getContext(), R.drawable.ic_toggle_empty)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(elevatorToggle.getContext(), R.drawable.ic_toggle_fill)));
+            }
+            if ((dirtyFlags & 0x108020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.furniture
+                        viewmodelFurniture = viewmodel.getFurniture();
+                    }
+
+
+                    // read viewmodel.furniture == 0
+                    viewmodelFurnitureInt0 = (viewmodelFurniture) == (0);
+                if((dirtyFlags & 0x108020L) != 0) {
+                    if(viewmodelFurnitureInt0) {
+                            dirtyFlags |= 0x400000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x200000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+                    viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill = ((viewmodelFurnitureInt0) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(furnitureToggle.getContext(), R.drawable.ic_toggle_empty)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(furnitureToggle.getContext(), R.drawable.ic_toggle_fill)));
+            }
+            if ((dirtyFlags & 0x100420L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.paymentMethod
@@ -1185,34 +1460,34 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     viewmodelPaymentMethodInt2 = (viewmodelPaymentMethod) != (2);
                     // read viewmodel.paymentMethod != 1
                     viewmodelPaymentMethodInt1 = (viewmodelPaymentMethod) != (1);
-                if((dirtyFlags & 0xa20L) != 0) {
+                if((dirtyFlags & 0x100420L) != 0) {
                     if(viewmodelPaymentMethodInt0) {
-                            dirtyFlags |= 0x2000000000L;
-                            dirtyFlags |= 0x80000000000L;
+                            dirtyFlags |= 0x400000000000000L;
+                            dirtyFlags_1 |= 0x40L;
                     }
                     else {
-                            dirtyFlags |= 0x1000000000L;
-                            dirtyFlags |= 0x40000000000L;
+                            dirtyFlags |= 0x200000000000000L;
+                            dirtyFlags_1 |= 0x20L;
                     }
                 }
-                if((dirtyFlags & 0xa20L) != 0) {
+                if((dirtyFlags & 0x100420L) != 0) {
                     if(viewmodelPaymentMethodInt2) {
-                            dirtyFlags |= 0x800000L;
-                            dirtyFlags |= 0x80000000L;
+                            dirtyFlags |= 0x1000000000L;
+                            dirtyFlags |= 0x4000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x400000L;
-                            dirtyFlags |= 0x40000000L;
+                            dirtyFlags |= 0x800000000L;
+                            dirtyFlags |= 0x2000000000000L;
                     }
                 }
-                if((dirtyFlags & 0xa20L) != 0) {
+                if((dirtyFlags & 0x100420L) != 0) {
                     if(viewmodelPaymentMethodInt1) {
-                            dirtyFlags |= 0x20000000L;
-                            dirtyFlags |= 0x800000000L;
+                            dirtyFlags |= 0x100000000000L;
+                            dirtyFlags |= 0x100000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000000L;
-                            dirtyFlags |= 0x400000000L;
+                            dirtyFlags |= 0x80000000000L;
+                            dirtyFlags |= 0x80000000000000L;
                     }
                 }
 
@@ -1230,9 +1505,32 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                     // read viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
                     viewmodelPaymentMethodInt1BtSacAndroidDrawableCornerViewLightBtSacAndroidDrawableCornerViewPrimaryDark = ((viewmodelPaymentMethodInt1) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btSac.getContext(), R.drawable.corner_view_light)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btSac.getContext(), R.drawable.corner_view_primary_dark)));
             }
+            if ((dirtyFlags & 0x104020L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.garage
+                        viewmodelGarage = viewmodel.getGarage();
+                    }
+
+
+                    // read viewmodel.garage == 0
+                    viewmodelGarageInt0 = (viewmodelGarage) == (0);
+                if((dirtyFlags & 0x104020L) != 0) {
+                    if(viewmodelGarageInt0) {
+                            dirtyFlags |= 0x4000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x2000000L;
+                    }
+                }
+
+
+                    // read viewmodel.garage == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+                    viewmodelGarageInt0GarageToggleAndroidDrawableIcToggleEmptyGarageToggleAndroidDrawableIcToggleFill = ((viewmodelGarageInt0) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(garageToggle.getContext(), R.drawable.ic_toggle_empty)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(garageToggle.getContext(), R.drawable.ic_toggle_fill)));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0xc20L) != 0) {
+        if ((dirtyFlags & 0x100820L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btCustomize, viewmodelDocTypeInt1BtCustomizeAndroidDrawableCornerViewLightBtCustomizeAndroidDrawableCornerViewPrimaryDark);
@@ -1244,19 +1542,23 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnRealEstateCertificate, viewmodelDocTypeInt0BtnRealEstateCertificateAndroidDrawableCornerViewLightBtnRealEstateCertificateAndroidDrawableCornerViewPrimaryDark);
             this.btnRealEstateCertificate.setTextColor(viewmodelDocTypeInt0BtnRealEstateCertificateAndroidColorColordarkBtnRealEstateCertificateAndroidColorWhite);
         }
-        if ((dirtyFlags & 0x800L) != 0) {
+        if ((dirtyFlags & 0x100000L) != 0) {
             // api target 1
 
-            this.btCustomize.setOnClickListener(mCallback51);
-            this.btHolyKing.setOnClickListener(mCallback52);
-            this.btMnahda.setOnClickListener(mCallback46);
-            this.btSac.setOnClickListener(mCallback48);
-            this.btTitleDeed.setOnClickListener(mCallback53);
-            this.btTransform.setOnClickListener(mCallback49);
-            this.btnCash.setOnClickListener(mCallback47);
-            this.btnRealEstateCertificate.setOnClickListener(mCallback50);
-            this.btnSell.setOnClickListener(mCallback45);
-            this.confirmBtn.setOnClickListener(mCallback54);
+            this.btCustomize.setOnClickListener(mCallback68);
+            this.btHolyKing.setOnClickListener(mCallback69);
+            this.btMnahda.setOnClickListener(mCallback63);
+            this.btSac.setOnClickListener(mCallback65);
+            this.btTitleDeed.setOnClickListener(mCallback70);
+            this.btTransform.setOnClickListener(mCallback66);
+            this.btnCash.setOnClickListener(mCallback64);
+            this.btnRealEstateCertificate.setOnClickListener(mCallback67);
+            this.btnSell.setOnClickListener(mCallback62);
+            this.confirmBtn.setOnClickListener(mCallback79);
+            this.elevatorToggle.setOnClickListener(mCallback72);
+            this.furnitureToggle.setOnClickListener(mCallback74);
+            this.garageToggle.setOnClickListener(mCallback73);
+            this.hospital.setOnClickListener(mCallback77);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFloorNumber, incrementalViewFloorNumbervalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFrontCount, incrementalViewFrontCountvalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewKitchenNumber, incrementalViewKitchenNumbervalueAttrChanged);
@@ -1270,8 +1572,12 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPrice, inputPricetextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputStreetSize, inputStreetSizetextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
+            this.mosque.setOnClickListener(mCallback75);
+            this.policeStation.setOnClickListener(mCallback78);
+            this.poolToggle.setOnClickListener(mCallback71);
+            this.school.setOnClickListener(mCallback76);
         }
-        if ((dirtyFlags & 0x920L) != 0) {
+        if ((dirtyFlags & 0x100120L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btMnahda, viewmodelDealingTypeInt0BtMnahdaAndroidDrawableCornerViewLightBtMnahdaAndroidDrawableCornerViewPrimaryDark);
@@ -1279,7 +1585,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSell, viewmodelDealingTypeInt1BtnSellAndroidDrawableCornerViewLightBtnSellAndroidDrawableCornerViewPrimaryDark);
             this.btnSell.setTextColor(viewmodelDealingTypeInt1BtnSellAndroidColorColordarkBtnSellAndroidColorWhite);
         }
-        if ((dirtyFlags & 0xa20L) != 0) {
+        if ((dirtyFlags & 0x100420L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btSac, viewmodelPaymentMethodInt1BtSacAndroidDrawableCornerViewLightBtSacAndroidDrawableCornerViewPrimaryDark);
@@ -1289,13 +1595,10 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnCash, viewmodelPaymentMethodInt0BtnCashAndroidDrawableCornerViewLightBtnCashAndroidDrawableCornerViewPrimaryDark);
             this.btnCash.setTextColor(viewmodelPaymentMethodInt0BtnCashAndroidColorColordarkBtnCashAndroidColorWhite);
         }
-        if ((dirtyFlags & 0x820L) != 0) {
+        if ((dirtyFlags & 0x100220L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.elevatorToggle, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.furnitureToggle, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.garageToggle, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.hospital, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.confirmBtn, viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit);
             grand.app.akar.customViews.views.IncrementalView.getValue(this.incrementalViewFloorNumber, viewmodelCreateAdRequestFloorNo);
             grand.app.akar.customViews.views.IncrementalView.getValue(this.incrementalViewFrontCount, viewmodelCreateAdRequestFrontNo);
             grand.app.akar.customViews.views.IncrementalView.getValue(this.incrementalViewKitchenNumber, viewmodelCreateAdRequestKitchenNo);
@@ -1309,69 +1612,83 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputPrice, viewmodelCreateAdRequestPrice);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputStreetSize, viewmodelCreateAdRequestStreetWidth);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewmodelCreateAdRequestBuildingYear);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mosque, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.policeStation, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.poolToggle, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.school, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
         }
-        if ((dirtyFlags & 0x828L) != 0) {
+        if ((dirtyFlags & 0x102020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.elevatorToggle, viewmodelLiftInt0ElevatorToggleAndroidDrawableIcToggleEmptyElevatorToggleAndroidDrawableIcToggleFill);
+        }
+        if ((dirtyFlags & 0x108020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.furnitureToggle, viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill);
+        }
+        if ((dirtyFlags & 0x104020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.garageToggle, viewmodelGarageInt0GarageToggleAndroidDrawableIcToggleEmptyGarageToggleAndroidDrawableIcToggleFill);
+        }
+        if ((dirtyFlags & 0x140020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.hospital, viewmodelHospitalInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x100228L) != 0) {
             // api target 1
 
             this.inputAddress.setError(viewmodelCreateAdRequestAddressErrorGet);
         }
-        if ((dirtyFlags & 0x860L) != 0) {
+        if ((dirtyFlags & 0x100260L) != 0) {
             // api target 1
 
             this.inputBuildingSize.setError(viewmodelCreateAdRequestTotalAreaErrorGet);
         }
-        if ((dirtyFlags & 0x821L) != 0) {
+        if ((dirtyFlags & 0x100221L) != 0) {
             // api target 1
 
             this.inputFloorSize.setError(viewmodelCreateAdRequestFloorAreaErrorGet);
         }
-        if ((dirtyFlags & 0x830L) != 0) {
+        if ((dirtyFlags & 0x100230L) != 0) {
             // api target 1
 
             this.inputLandSize.setError(viewmodelCreateAdRequestAreaErrorGet);
         }
-        if ((dirtyFlags & 0x822L) != 0) {
+        if ((dirtyFlags & 0x100222L) != 0) {
             // api target 1
 
             this.inputPrice.setError(viewmodelCreateAdRequestPriceErrorGet);
         }
-        if ((dirtyFlags & 0x824L) != 0) {
+        if ((dirtyFlags & 0x100224L) != 0) {
             // api target 1
 
             this.mboundView12.setError(viewmodelCreateAdRequestBuildingYearErrorGet);
         }
+        if ((dirtyFlags & 0x110020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mosque, viewmodelMosqueInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x180020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.policeStation, viewmodelPoliceStationInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x101020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.poolToggle, viewmodelPoolInt0PoolToggleAndroidDrawableIcToggleEmptyPoolToggleAndroidDrawableIcToggleFill);
+        }
+        if ((dirtyFlags & 0x120020L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.school, viewmodelSchoolInt0BooleanFalseBooleanTrue);
+        }
     }
     // Listener Stub Implementations
-    public static class OnCheckedChangeListenerImpl implements android.widget.CompoundButton.OnCheckedChangeListener{
-        private grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value;
-        public OnCheckedChangeListenerImpl setValue(grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onCheckedChanged(android.widget.CompoundButton arg0, boolean arg1) {
-            this.value.onToggleChange(arg0, arg1); 
-        }
-    }
-    public static class OnCheckedChangeListenerImpl1 implements android.widget.CompoundButton.OnCheckedChangeListener{
-        private grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value;
-        public OnCheckedChangeListenerImpl1 setValue(grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onCheckedChanged(android.widget.CompoundButton arg0, boolean arg1) {
-            this.value.onCheckChange(arg0, arg1); 
-        }
-    }
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 5: {
+            case 9: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1386,11 +1703,11 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
 
 
 
-                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
+                    viewmodel.docTypeAction(btTitleDeed.getResources().getString(R.string.title_deed), 3);
                 }
                 break;
             }
-            case 3: {
+            case 10: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1403,64 +1720,7 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-
-                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.dealingTypeAction(0);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.dealingTypeAction(1);
+                    viewmodel.poolChecked();
                 }
                 break;
             }
@@ -1483,42 +1743,6 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                 }
                 break;
             }
-            case 10: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createAd();
-                }
-                break;
-            }
-            case 9: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.docTypeAction(btTitleDeed.getResources().getString(R.string.title_deed), 3);
-                }
-                break;
-            }
             case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1535,6 +1759,23 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
 
 
                     viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
+                }
+                break;
+            }
+            case 18: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createAd();
                 }
                 break;
             }
@@ -1557,10 +1798,223 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
                 }
                 break;
             }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
+                }
+                break;
+            }
+            case 16: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.hospitalChecked();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
+                }
+                break;
+            }
+            case 17: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.stationChecked();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
+                }
+                break;
+            }
+            case 13: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.furnChecked();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.dealingTypeAction(0);
+                }
+                break;
+            }
+            case 15: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.schoolChecked();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.dealingTypeAction(1);
+                }
+                break;
+            }
+            case 14: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.mosqueChecked();
+                }
+                break;
+            }
+            case 11: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.liftChecked();
+                }
+                break;
+            }
+            case 12: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.garageChecked();
+                }
+                break;
+            }
         }
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
+    private  long mDirtyFlags_1 = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel.createAdRequest.floorAreaError
         flag 1 (0x2L): viewmodel.createAdRequest.priceError
@@ -1571,45 +2025,72 @@ public class FragmentAddVillaHouseFormBindingImpl extends FragmentAddVillaHouseF
         flag 6 (0x7L): viewmodel.createAdRequest.totalAreaError
         flag 7 (0x8L): createRequest
         flag 8 (0x9L): viewmodel.dealingType
-        flag 9 (0xaL): viewmodel.paymentMethod
-        flag 10 (0xbL): viewmodel.docType
-        flag 11 (0xcL): null
-        flag 12 (0xdL): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 13 (0xeL): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 14 (0xfL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
-        flag 15 (0x10L): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
-        flag 16 (0x11L): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
-        flag 17 (0x12L): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
-        flag 18 (0x13L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 19 (0x14L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 20 (0x15L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 21 (0x16L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 22 (0x17L): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 23 (0x18L): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 24 (0x19L): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 25 (0x1aL): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 26 (0x1bL): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
-        flag 27 (0x1cL): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
-        flag 28 (0x1dL): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
-        flag 29 (0x1eL): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
-        flag 30 (0x1fL): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
-        flag 31 (0x20L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
-        flag 32 (0x21L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 33 (0x22L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 34 (0x23L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 35 (0x24L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 36 (0x25L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
-        flag 37 (0x26L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
-        flag 38 (0x27L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
-        flag 39 (0x28L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
-        flag 40 (0x29L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 41 (0x2aL): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 42 (0x2bL): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 43 (0x2cL): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 44 (0x2dL): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
-        flag 45 (0x2eL): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
-        flag 46 (0x2fL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
-        flag 47 (0x30L): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
+        flag 9 (0xaL): viewmodel.createAdRequest
+        flag 10 (0xbL): viewmodel.paymentMethod
+        flag 11 (0xcL): viewmodel.docType
+        flag 12 (0xdL): viewmodel.pool
+        flag 13 (0xeL): viewmodel.lift
+        flag 14 (0xfL): viewmodel.garage
+        flag 15 (0x10L): viewmodel.furniture
+        flag 16 (0x11L): viewmodel.mosque
+        flag 17 (0x12L): viewmodel.school
+        flag 18 (0x13L): viewmodel.hospital
+        flag 19 (0x14L): viewmodel.policeStation
+        flag 20 (0x15L): null
+        flag 21 (0x16L): viewmodel.hospital == 0 ? false : true
+        flag 22 (0x17L): viewmodel.hospital == 0 ? false : true
+        flag 23 (0x18L): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 24 (0x19L): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 25 (0x1aL): viewmodel.garage == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 26 (0x1bL): viewmodel.garage == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 27 (0x1cL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
+        flag 28 (0x1dL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
+        flag 29 (0x1eL): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
+        flag 30 (0x1fL): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
+        flag 31 (0x20L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 32 (0x21L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 33 (0x22L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 34 (0x23L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 35 (0x24L): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 36 (0x25L): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 37 (0x26L): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 38 (0x27L): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 39 (0x28L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
+        flag 40 (0x29L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
+        flag 41 (0x2aL): viewmodel.policeStation == 0 ? false : true
+        flag 42 (0x2bL): viewmodel.policeStation == 0 ? false : true
+        flag 43 (0x2cL): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
+        flag 44 (0x2dL): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
+        flag 45 (0x2eL): viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 46 (0x2fL): viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 47 (0x30L): viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+        flag 48 (0x31L): viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+        flag 49 (0x32L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
+        flag 50 (0x33L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
+        flag 51 (0x34L): viewmodel.lift == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 52 (0x35L): viewmodel.lift == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 53 (0x36L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 54 (0x37L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 55 (0x38L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 56 (0x39L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 57 (0x3aL): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
+        flag 58 (0x3bL): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
+        flag 59 (0x3cL): viewmodel.mosque == 0 ? false : true
+        flag 60 (0x3dL): viewmodel.mosque == 0 ? false : true
+        flag 61 (0x3eL): viewmodel.school == 0 ? false : true
+        flag 62 (0x3fL): viewmodel.school == 0 ? false : true
+        flag 63 (0x40L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
+        flag 64 (0x41L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
+        flag 65 (0x42L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 66 (0x43L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 67 (0x44L): viewmodel.pool == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 68 (0x45L): viewmodel.pool == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 69 (0x46L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 70 (0x47L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 71 (0x48L): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
+        flag 72 (0x49L): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
+        flag 73 (0x4aL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
+        flag 74 (0x4bL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
     flag mapping end*/
     //end
 }

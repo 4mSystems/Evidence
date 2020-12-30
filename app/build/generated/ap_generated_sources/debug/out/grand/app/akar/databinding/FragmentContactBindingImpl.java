@@ -28,9 +28,9 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final androidx.appcompat.widget.AppCompatImageView mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback155;
+    private final android.view.View.OnClickListener mCallback214;
     @Nullable
-    private final android.view.View.OnClickListener mCallback156;
+    private final android.view.View.OnClickListener mCallback213;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,8 +61,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.tvContactPhoneWhatsText.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback155 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback156 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback214 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback213 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -166,8 +166,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.map.setOnClickListener(mCallback155);
-            this.mboundView5.setOnClickListener(mCallback156);
+            this.map.setOnClickListener(mCallback213);
+            this.mboundView5.setOnClickListener(mCallback214);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -181,7 +181,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -198,7 +198,7 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

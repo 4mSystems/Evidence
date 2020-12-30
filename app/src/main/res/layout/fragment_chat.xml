@@ -16,10 +16,17 @@
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_chat"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            app:adapter="@{viewmodel.adapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toTopOf="@+id/v14"
             app:layout_constraintTop_toTopOf="parent"
+            app:orientation="@{`1`}"
+            app:reverseLayout="false"
+            app:span="@{`1`}"
+            app:stackFromEnd="true"
             tools:listitem="@layout/item_chat" />
 
         <View
@@ -41,12 +48,13 @@
                 android:id="@+id/attach"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dp12w"
                 android:layout_marginStart="@dimen/dp12w"
-                android:src="@drawable/ic_send"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:src="@drawable/ic_add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
 
             <grand.app.akar.customViews.views.CustomEditText
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -55,9 +63,9 @@
                 android:layout_marginStart="@dimen/dp6h"
                 android:layout_marginEnd="@dimen/dp6w"
                 android:layout_marginBottom="@dimen/dp4h"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:background="@drawable/corner_view_gray_background"
                 android:hint="@string/chat_hint"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/attach"
                 app:layout_constraintStart_toEndOf="@id/more"
@@ -68,11 +76,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
-                android:src="@drawable/ic_add"
+                android:src="@drawable/ic_send"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/black" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

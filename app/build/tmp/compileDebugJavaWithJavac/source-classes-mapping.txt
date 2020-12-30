@@ -1,3 +1,6 @@
+grand/app/akar/pages/chat/adapter/ChatImagesAdapter.java
+ grand.app.akar.pages.chat.adapter.ChatImagesAdapter
+ grand.app.akar.pages.chat.adapter.ChatImagesAdapter$MenuView
 grand/app/akar/databinding/ItemCategoryBinding.java
  grand.app.akar.databinding.ItemCategoryBinding
 grand/app/akar/pages/settings/AboutAppFragment.java
@@ -80,10 +83,10 @@ grand/app/akar/customViews/views/IncrementalView.java
  grand.app.akar.customViews.views.IncrementalView$1
 grand/app/akar/databinding/NotifyItemBinding.java
  grand.app.akar.databinding.NotifyItemBinding
-grand/app/akar/ResponseHeader.java
- grand.app.akar.ResponseHeader
 grand/app/akar/databinding/FragmentNotificationsBinding.java
  grand.app.akar.databinding.FragmentNotificationsBinding
+grand/app/akar/ResponseHeader.java
+ grand.app.akar.ResponseHeader
 grand/app/akar/pages/adDetails/models/AdDetailsResponse.java
  grand.app.akar.pages.adDetails.models.AdDetailsResponse
 grand/app/akar/databinding/FragmentAkarLocationsMapBinding.java
@@ -201,6 +204,8 @@ grand/app/akar/databinding/FragmentOnboardBinding.java
  grand.app.akar.databinding.FragmentOnboardBinding
 grand/app/akar/databinding/FragmentAdvertisingFeeBinding.java
  grand.app.akar.databinding.FragmentAdvertisingFeeBinding
+grand/app/akar/pages/conversations/models/ConversationsResponse.java
+ grand.app.akar.pages.conversations.models.ConversationsResponse
 grand/app/akar/databinding/FragmentMyFavoritesMainBinding.java
  grand.app.akar.databinding.FragmentMyFavoritesMainBinding
 grand/app/akar/databinding/FragmentUploadSuccessBinding.java
@@ -226,9 +231,11 @@ grand/app/akar/pages/notifications/itemViewModels/NotificationsItemViewModels.ja
  grand.app.akar.pages.notifications.itemViewModels.NotificationsItemViewModels
 grand/app/akar/pages/splash/models/ReasonsItem.java
  grand.app.akar.pages.splash.models.ReasonsItem
+grand/app/akar/databinding/ItemChatImagesBinding.java
+ grand.app.akar.databinding.ItemChatImagesBinding
 grand/app/akar/pages/chat/adapter/ChatAdapter.java
  grand.app.akar.pages.chat.adapter.ChatAdapter
- grand.app.akar.pages.chat.adapter.ChatAdapter$NotificationModelView
+ grand.app.akar.pages.chat.adapter.ChatAdapter$ViewHolder
 grand/app/akar/pages/auth/models/cities/Cities.java
  grand.app.akar.pages.auth.models.cities.Cities
 grand/app/akar/pages/ads/forms/AdUploadingSuccessFragment.java
@@ -283,6 +290,8 @@ grand/app/akar/databinding/ItemCityBinding.java
  grand.app.akar.databinding.ItemCityBinding
 grand/app/akar/databinding/ItemReasonsBinding.java
  grand.app.akar.databinding.ItemReasonsBinding
+grand/app/akar/pages/conversations/models/ConversationsData.java
+ grand.app.akar.pages.conversations.models.ConversationsData
 grand/app/akar/pages/settings/ContactUsFragment.java
  grand.app.akar.pages.settings.ContactUsFragment
 grand/app/akar/utils/resources/ResourceManager.java
@@ -310,6 +319,8 @@ grand/app/akar/databinding/ActivityMainBinding.java
 grand/app/akar/pages/home/viewModels/HomeViewModel.java
  grand.app.akar.pages.home.viewModels.HomeViewModel
  grand.app.akar.pages.home.viewModels.HomeViewModel$DataBindingAdapter
+grand/app/akar/pages/chat/viewmodel/ItemChatImagesViewModel.java
+ grand.app.akar.pages.chat.viewmodel.ItemChatImagesViewModel
 grand/app/akar/customViews/actionbar/BackActionBarView.java
  grand.app.akar.customViews.actionbar.BackActionBarView
  grand.app.akar.customViews.actionbar.BackActionBarView$1
@@ -382,6 +393,8 @@ grand/app/akar/utils/images/PhotoFullPopupWindow.java
  grand.app.akar.utils.images.PhotoFullPopupWindow
  grand.app.akar.utils.images.PhotoFullPopupWindow$1
  grand.app.akar.utils.images.PhotoFullPopupWindow$2
+grand/app/akar/pages/ads/models/LocationUpdateRequest.java
+ grand.app.akar.pages.ads.models.LocationUpdateRequest
 grand/app/akar/pages/auth/models/cities/CitiesResponse.java
  grand.app.akar.pages.auth.models.cities.CitiesResponse
 grand/app/akar/customViews/views/DateEditText.java
@@ -431,15 +444,14 @@ grand/app/akar/pages/myAds/MyAdsMainFragment.java
  grand.app.akar.pages.myAds.MyAdsMainFragment
 grand/app/akar/pages/chat/view/ChatFragment.java
  grand.app.akar.pages.chat.view.ChatFragment
- grand.app.akar.pages.chat.view.ChatFragment$1
 grand/app/akar/pages/conversations/viewModels/ItemConversationsViewModel.java
  grand.app.akar.pages.conversations.viewModels.ItemConversationsViewModel
 grand/app/akar/pages/ads/forms/AddResetFormFragment.java
  grand.app.akar.pages.ads.forms.AddResetFormFragment
-grand/app/akar/utils/upload/FileUpload.java
- grand.app.akar.utils.upload.FileUpload
 grand/app/akar/pages/settings/viewModels/MyAccountSettingsViewModel.java
  grand.app.akar.pages.settings.viewModels.MyAccountSettingsViewModel
+grand/app/akar/utils/upload/FileUpload.java
+ grand.app.akar.utils.upload.FileUpload
 grand/app/akar/pages/auth/payment/PaymentFragment.java
  grand.app.akar.pages.auth.payment.PaymentFragment
 grand/app/akar/customViews/views/CustomEditTextT.java

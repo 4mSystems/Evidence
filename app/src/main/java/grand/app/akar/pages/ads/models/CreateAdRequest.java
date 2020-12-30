@@ -4,10 +4,16 @@ import androidx.databinding.ObservableField;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.validation.Validate;
+import kotlin.jvm.Transient;
 
 public class CreateAdRequest {
+    @SerializedName("listing_id")
+    private int listing_id;
     @SerializedName("city_id")
     private int cityId;
     @SerializedName("type")
@@ -59,6 +65,8 @@ public class CreateAdRequest {
     private String furniture;
     @SerializedName("services")
     private String services;
+    @Transient
+    private ArrayList<String> servicesList;
     @SerializedName("desc")
     private String desc;
     public ObservableField<String> priceError = new ObservableField<>();
@@ -150,6 +158,17 @@ public class CreateAdRequest {
             valid = false;
         }
         return valid;
+    }
+
+    public CreateAdRequest() {
+    }
+
+    public int getListing_id() {
+        return listing_id;
+    }
+
+    public void setListing_id(int listing_id) {
+        this.listing_id = listing_id;
     }
 
     public int getCityId() {
@@ -388,6 +407,14 @@ public class CreateAdRequest {
         this.type = type;
     }
 
+    public ArrayList<String> getServicesList() {
+        return servicesList;
+    }
+
+    public void setServicesList(ArrayList<String> servicesList) {
+        this.servicesList = servicesList;
+    }
+
     @Override
     public String toString() {
         return "CreateAdRequest{" +
@@ -431,4 +458,5 @@ public class CreateAdRequest {
                 ", docTypeError=" + docTypeError +
                 '}';
     }
+
 }

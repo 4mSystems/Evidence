@@ -21,6 +21,7 @@ import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentConversationsBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.conversations.models.ConversationsResponse;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
 import grand.app.akar.utils.Constants;
 
@@ -38,7 +39,7 @@ public class ConversationsFragment extends BaseFragment {
         component.inject(this);
         binding.setViewmodel(viewModel);
         setEvent();
-        viewModel.getTerms();
+        viewModel.getConversations();
         return binding.getRoot();
     }
 
@@ -46,8 +47,8 @@ public class ConversationsFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.TERMS)) {
-//                viewModel.setAboutData(((AboutResponse) ((Mutable) o).object).getAboutData());
+            if (((Mutable) o).message.equals(Constants.CONVERSATIONS)) {
+                viewModel.getConversationsAdapter().update(((ConversationsResponse) mutable.object).getData());
             }
         });
     }

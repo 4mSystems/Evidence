@@ -4,13 +4,12 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
-import androidx.appcompat.widget.SwitchCompat;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -64,7 +63,7 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
-  public final SwitchCompat elevatorToggle;
+  public final AppCompatImageView elevatorToggle;
 
   @NonNull
   public final ExpansionLayout expansionLayout;
@@ -73,13 +72,13 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
-  public final SwitchCompat garageToggle;
+  public final AppCompatImageView garageToggle;
 
   @NonNull
-  public final ImageView headerIndicator;
+  public final AppCompatImageView headerIndicator;
 
   @NonNull
   public final CustomTextViewMedium headerMenuName;
@@ -130,7 +129,7 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
   public final AppCompatCheckBox policeStation;
 
   @NonNull
-  public final SwitchCompat poolToggle;
+  public final AppCompatImageView poolToggle;
 
   @NonNull
   public final AppCompatCheckBox school;
@@ -251,27 +250,28 @@ public abstract class FragmentAddRestFormBinding extends ViewDataBinding {
       CustomTextViewMedium btMnahda, CustomTextViewMedium btSac, CustomTextViewMedium btTitleDeed,
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
-      MaterialCardView buildingYear, AppCompatButton confirmBtn, SwitchCompat elevatorToggle,
+      MaterialCardView buildingYear, AppCompatButton confirmBtn, AppCompatImageView elevatorToggle,
       ExpansionLayout expansionLayout, ExpansionHeader expansionLayoutHeader,
-      SwitchCompat furnitureToggle, SwitchCompat garageToggle, ImageView headerIndicator,
-      CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
-      IncrementalView incrementalViewFloorNumber, IncrementalView incrementalViewFrontCount,
-      IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
-      IncrementalView incrementalViewRoomsNumber, CustomEditText inputAddress,
-      CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputLandSize,
-      CustomEditText inputPrice, CustomEditText inputStreetSize, AppCompatCheckBox mosque,
-      LinearLayout optionalLayout, AppCompatCheckBox policeStation, SwitchCompat poolToggle,
-      AppCompatCheckBox school, CustomTextViewMedium tvAddress, CustomTextViewMedium tvBuildingDesc,
-      CustomTextViewMedium tvBuildingSize, CustomTextViewMedium tvBuildingYear,
-      CustomTextViewMedium tvDealType, CustomTextViewMedium tvDocType,
-      CustomTextViewMedium tvElevator, CustomTextViewMedium tvFloorCount,
-      CustomTextViewMedium tvFrontCount, CustomTextViewMedium tvFurniture,
-      CustomTextViewMedium tvGarage, CustomTextViewMedium tvKitchenCount,
-      CustomTextViewMedium tvLandSize, CustomTextViewMedium tvPathsCount,
-      CustomTextViewMedium tvPaymentType, CustomTextViewMedium tvPool, CustomTextViewMedium tvPrice,
-      CustomTextViewMedium tvRoomsCount, CustomTextViewMedium tvServices,
-      CustomTextViewMedium tvStreetSize, View v1, View v10, View v11, View v12, View v13, View v14,
-      View v15, View v16, View v17, View v2, View v3, View v4, View v5, View v6, View v8, View v9) {
+      AppCompatImageView furnitureToggle, AppCompatImageView garageToggle,
+      AppCompatImageView headerIndicator, CustomTextViewMedium headerMenuName,
+      AppCompatCheckBox hospital, IncrementalView incrementalViewFloorNumber,
+      IncrementalView incrementalViewFrontCount, IncrementalView incrementalViewKitchenNumber,
+      IncrementalView incrementalViewPathsNumber, IncrementalView incrementalViewRoomsNumber,
+      CustomEditText inputAddress, CustomEditText inputBuildingSize, CustomEditText inputDesc,
+      CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
+      AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
+      AppCompatImageView poolToggle, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
+      CustomTextViewMedium tvBuildingDesc, CustomTextViewMedium tvBuildingSize,
+      CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
+      CustomTextViewMedium tvDocType, CustomTextViewMedium tvElevator,
+      CustomTextViewMedium tvFloorCount, CustomTextViewMedium tvFrontCount,
+      CustomTextViewMedium tvFurniture, CustomTextViewMedium tvGarage,
+      CustomTextViewMedium tvKitchenCount, CustomTextViewMedium tvLandSize,
+      CustomTextViewMedium tvPathsCount, CustomTextViewMedium tvPaymentType,
+      CustomTextViewMedium tvPool, CustomTextViewMedium tvPrice, CustomTextViewMedium tvRoomsCount,
+      CustomTextViewMedium tvServices, CustomTextViewMedium tvStreetSize, View v1, View v10,
+      View v11, View v12, View v13, View v14, View v15, View v16, View v17, View v2, View v3,
+      View v4, View v5, View v6, View v8, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br3 = br3;
     this.btCustomize = btCustomize;

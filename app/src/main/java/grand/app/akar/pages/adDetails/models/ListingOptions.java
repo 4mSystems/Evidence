@@ -1,5 +1,6 @@
 package grand.app.akar.pages.adDetails.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -25,7 +26,7 @@ public class ListingOptions {
     private int frontNo;
 
     @SerializedName("services")
-    private List<String> services;
+    private ArrayList<String> services;
 
     @SerializedName("street_width")
     private int streetWidth;
@@ -60,7 +61,7 @@ public class ListingOptions {
         return frontNo;
     }
 
-    public List<String> getServices() {
+    public ArrayList<String> getServices() {
         return services;
     }
 

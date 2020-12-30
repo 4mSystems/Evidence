@@ -2,6 +2,7 @@
 package grand.app.akar.pages.ads.viewModels;
 
 import dagger.internal.Factory;
+import grand.app.akar.repository.AdsRepository;
 import grand.app.akar.repository.AuthRepository;
 import javax.inject.Provider;
 
@@ -12,27 +13,36 @@ import javax.inject.Provider;
 public final class AdsViewModel_Factory implements Factory<AdsViewModel> {
   private final Provider<AuthRepository> repositoryProvider;
 
+  private final Provider<AdsRepository> adsRepositoryProvider;
+
   private final Provider<AuthRepository> repositoryProvider2;
 
+  private final Provider<AdsRepository> adsRepositoryProvider2;
+
   public AdsViewModel_Factory(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
+      Provider<AdsRepository> adsRepositoryProvider, Provider<AuthRepository> repositoryProvider2,
+      Provider<AdsRepository> adsRepositoryProvider2) {
     this.repositoryProvider = repositoryProvider;
+    this.adsRepositoryProvider = adsRepositoryProvider;
     this.repositoryProvider2 = repositoryProvider2;
+    this.adsRepositoryProvider2 = adsRepositoryProvider2;
   }
 
   @Override
   public AdsViewModel get() {
-    AdsViewModel instance = newInstance(repositoryProvider.get());
+    AdsViewModel instance = newInstance(repositoryProvider.get(), adsRepositoryProvider.get());
     AdsViewModel_MembersInjector.injectRepository(instance, repositoryProvider2.get());
+    AdsViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider2.get());
     return instance;
   }
 
   public static AdsViewModel_Factory create(Provider<AuthRepository> repositoryProvider,
-      Provider<AuthRepository> repositoryProvider2) {
-    return new AdsViewModel_Factory(repositoryProvider, repositoryProvider2);
+      Provider<AdsRepository> adsRepositoryProvider, Provider<AuthRepository> repositoryProvider2,
+      Provider<AdsRepository> adsRepositoryProvider2) {
+    return new AdsViewModel_Factory(repositoryProvider, adsRepositoryProvider, repositoryProvider2, adsRepositoryProvider2);
   }
 
-  public static AdsViewModel newInstance(AuthRepository repository) {
-    return new AdsViewModel(repository);
+  public static AdsViewModel newInstance(AuthRepository repository, AdsRepository adsRepository) {
+    return new AdsViewModel(repository, adsRepository);
   }
 }

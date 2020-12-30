@@ -1,8 +1,5 @@
 package grand.app.akar.pages.adDetails.viewModels;
 
-
-import android.text.TextUtils;
-
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -24,6 +21,7 @@ import grand.app.akar.pages.adDetails.adapters.SliderAdapter;
 import grand.app.akar.pages.adDetails.models.AdDetailsData;
 import grand.app.akar.pages.adDetails.models.ReportRequest;
 import grand.app.akar.pages.adDetails.models.SliderItem;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.favorites.models.FavoriteRequest;
 import grand.app.akar.pages.home.adapters.HomeAdapter;
 import grand.app.akar.pages.home.models.HomeData;
@@ -46,10 +44,12 @@ public class AdDetailsViewModel extends BaseViewModel {
     SliderAdapter sliderAdapter;
     ReportDialogReasonsAdapter reportDialogReasonsAdapter;
     ReportRequest reportRequest;
+    CreateAdRequest createAdRequest;
 
     @Inject
     public AdDetailsViewModel(AdsRepository adsRepository) {
         reportRequest = new ReportRequest();
+        createAdRequest = new CreateAdRequest();
         reportDialogReasonsAdapter = new ReportDialogReasonsAdapter();
         sliderAdapter = new SliderAdapter();
         homeData = new HomeData();
@@ -95,7 +95,6 @@ public class AdDetailsViewModel extends BaseViewModel {
         return adsRepository;
     }
 
-
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();
@@ -123,6 +122,10 @@ public class AdDetailsViewModel extends BaseViewModel {
         setTitle(homeData);
         notifyChange(BR.homeData);
         this.homeData = homeData;
+    }
+
+    public CreateAdRequest getCreateAdRequest() {
+        return createAdRequest;
     }
 
     @Bindable
@@ -215,11 +218,62 @@ public class AdDetailsViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.REPORT));
     }
 
+    public void removeDialog() {
+        liveData.setValue(new Mutable(Constants.REMOVE_DIALOG));
+    }
+
     public void dialogDismiss() {
         liveData.setValue(new Mutable(Constants.DISMISS));
     }
 
     public void toEditImages() {
         liveData.setValue(new Mutable(Constants.AD_UPLOAD_ATTACH));
+    }
+
+    public void toEditLocation() {
+        liveData.setValue(new Mutable(Constants.MAP_LOCATION));
+    }
+
+    public void toEditAdData() {
+        // adding data to request class to passing it into form category
+        getCreateAdRequest().setListing_id(getAdDetailsData().getListing().getId());
+        getCreateAdRequest().setCityId(Integer.parseInt(getAdDetailsData().getListing().getCityId()));
+        getCreateAdRequest().setType(Integer.parseInt(getAdDetailsData().getListing().getType()));
+        getCreateAdRequest().setLat(getAdDetailsData().getListing().getLat());
+        getCreateAdRequest().setLng(getAdDetailsData().getListing().getLng());
+        getCreateAdRequest().setAddress(getAdDetailsData().getListing().getAddress());
+        getCreateAdRequest().setCategories_id(getAdDetailsData().getListing().getCategoriesId());
+        getCreateAdRequest().setListing_type(getAdDetailsData().getListing().getListingType());
+        getCreateAdRequest().setPrice(getAdDetailsData().getListing().getPrice());
+        getCreateAdRequest().setArea(getAdDetailsData().getListing().getArea());
+        getCreateAdRequest().setTotal_area(getAdDetailsData().getListing().getTotalArea());
+        getCreateAdRequest().setFloor_area(getAdDetailsData().getListing().getFloorArea());
+        getCreateAdRequest().setFloor_no(getAdDetailsData().getListing().getFloorNo());
+        getCreateAdRequest().setRoom_no(getAdDetailsData().getListing().getRoomNo());
+        getCreateAdRequest().setBathroom_no(getAdDetailsData().getListing().getBathroomNo());
+        getCreateAdRequest().setKitchen_no(getAdDetailsData().getListing().getKitchenNo());
+        getCreateAdRequest().setBuilding_year(getAdDetailsData().getListing().getBuildingYear());
+        getCreateAdRequest().setPayment_method(getAdDetailsData().getListing().getPaymentMethod());
+        getCreateAdRequest().setDoc_type(getAdDetailsData().getListing().getDocType());
+        if (getAdDetailsData().getListing().getListingOptions() != null) {
+            getCreateAdRequest().setStreet_width(String.valueOf(getAdDetailsData().getListing().getListingOptions().getStreetWidth()));
+            getCreateAdRequest().setFront_no(String.valueOf(getAdDetailsData().getListing().getListingOptions().getFrontNo()));
+            getCreateAdRequest().setSwimming_pool(String.valueOf(getAdDetailsData().getListing().getListingOptions().getSwimmingPool()));
+            getCreateAdRequest().setLift(String.valueOf(getAdDetailsData().getListing().getListingOptions().getLift()));
+            getCreateAdRequest().setGarage(String.valueOf(getAdDetailsData().getListing().getListingOptions().getGarage()));
+            getCreateAdRequest().setFurniture(String.valueOf(getAdDetailsData().getListing().getListingOptions().getFurniture()));
+            getCreateAdRequest().setServicesList(getAdDetailsData().getListing().getListingOptions().getServices());
+            getCreateAdRequest().setDesc(getAdDetailsData().getListing().getListingOptions().getDesc() != null ? getAdDetailsData().getListing().getListingOptions().getDesc() : "");
+        }
+        liveData.setValue(new Mutable(Constants.EDIT_AD_DETAILS));
+    }
+
+    public String formName(int catId) {
+        for (int i = 0; i < getCategoriesDataList().size(); i++) {
+            if (getCategoriesDataList().get(i).getId() == catId) {
+                return getCategoriesDataList().get(i).getFormPage();
+            }
+        }
+        return null;
     }
 }

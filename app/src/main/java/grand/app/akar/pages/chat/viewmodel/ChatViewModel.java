@@ -4,90 +4,58 @@ package grand.app.akar.pages.chat.viewmodel;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
+import javax.inject.Inject;
+
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.connection.FileObject;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.chat.adapter.ChatAdapter;
 import grand.app.akar.pages.chat.model.ChatRequest;
 import grand.app.akar.pages.chat.model.ChatResponse;
+import grand.app.akar.repository.ChatRepository;
+import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
 
-
-/**
- * Created by Gregory Rasmussen on 7/26/17.
- */
 public class ChatViewModel extends BaseViewModel {
-
     public
     MutableLiveData<Mutable> liveData;
-
-//    @Inject
-//    public ChatRepository repository;
-
-    public ChatResponse response;
-
+    @Inject
+    public ChatRepository repository;
     public ChatAdapter adapter = new ChatAdapter();
     public ChatRequest request = new ChatRequest();
     public FileObject image;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
 
+    @Inject
+    public ChatViewModel(ChatRepository repository) {
+        this.repository = repository;
+        this.liveData = new MutableLiveData<>();
+        repository.setLiveData(liveData);
+    }
 
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    public void chat() {
+        compositeDisposable.add(repository.getChat(getPassingObject().getId()));
+    }
 
-    public ObservableField<String> chatNumber = new ObservableField<>();
+    private void unSubscribeFromObservable() {
+        if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
+            compositeDisposable.dispose();
+        }
+    }
 
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        unSubscribeFromObservable();
+    }
 
-//    @Inject
-//    public ChatViewModel(ChatRepository repository){
-//        this.repository = repository;
-//        this.liveData = new MutableLiveData<>();
-//        repository.setLiveData(liveData);
-//        call();
-//    }
-//
-//    public void call(){
-//        compositeDisposable.add(repository.getChat());
-//    }
-//
-//    private void unSubscribeFromObservable() {
-//        if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
-//            compositeDisposable.dispose();
-//        }
-//    }
-//
-//    public void noData(){
-//        noDataTextDisplay.set(true);
-//        notifyChange();
-//    }
-//
-//    @Override
-//    protected void onCleared() {
-//        super.onCleared();
-//        unSubscribeFromObservable();
-//    }
-//
-//    public void select(){
-//        liveData.setValue(new Mutable(Constants.SELECT));
-//    }
-//
-//    public void sendMessage(){
-//        if(!request.message.trim().equals("")) {
-//            Timber.e("action:sendMessage");
-//            repository.sendChat(request,image);
-//        }
-//    }
-//
-//    public void updateChatCount(){
-//        chatNumber.set(response.messageCount + " "+getString(R.string.message));
-//    }
-//
-//    public void updateAdapter() {
-//        updateChatCount();
-//        adapter.update(response.chats);
-////        notifyChange();
-//    }
+    public void select() {
+        liveData.setValue(new Mutable(Constants.SELECT));
+    }
 
-
-//    public void successSendChat(Chat data) {
-//        adapter.add(data);
-//    }
+    public void sendMessage() {
+        if (!request.message.trim().equals("")) {
+            repository.sendChat(request, image);
+        }
+    }
 }

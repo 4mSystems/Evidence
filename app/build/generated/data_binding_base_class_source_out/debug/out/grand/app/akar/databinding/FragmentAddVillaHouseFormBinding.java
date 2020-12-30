@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -65,7 +64,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
-  public final SwitchCompat elevatorToggle;
+  public final AppCompatImageView elevatorToggle;
 
   @NonNull
   public final ExpansionLayout expansionLayout;
@@ -74,10 +73,10 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
-  public final SwitchCompat garageToggle;
+  public final AppCompatImageView garageToggle;
 
   @NonNull
   public final AppCompatImageView headerIndicator;
@@ -134,7 +133,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
   public final AppCompatCheckBox policeStation;
 
   @NonNull
-  public final SwitchCompat poolToggle;
+  public final AppCompatImageView poolToggle;
 
   @NonNull
   public final AppCompatCheckBox school;
@@ -265,9 +264,9 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
       CustomTextViewMedium btTitleDeed, CustomTextViewMedium btTransform,
       CustomTextViewMedium btnCash, CustomTextViewMedium btnRealEstateCertificate,
       CustomTextViewMedium btnSell, MaterialCardView buildingYear, AppCompatButton confirmBtn,
-      SwitchCompat elevatorToggle, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
-      SwitchCompat garageToggle, AppCompatImageView headerIndicator,
+      AppCompatImageView elevatorToggle, ExpansionLayout expansionLayout,
+      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
+      AppCompatImageView garageToggle, AppCompatImageView headerIndicator,
       CustomTextViewMedium headerMenuName, AppCompatCheckBox hospital,
       IncrementalView incrementalViewFloorNumber, IncrementalView incrementalViewFrontCount,
       IncrementalView incrementalViewKitchenNumber, IncrementalView incrementalViewPathsNumber,
@@ -275,7 +274,7 @@ public abstract class FragmentAddVillaHouseFormBinding extends ViewDataBinding {
       CustomEditText inputBuildingSize, CustomEditText inputDesc, CustomEditText inputFloorSize,
       CustomEditText inputLandSize, CustomEditText inputPrice, CustomEditText inputStreetSize,
       AppCompatCheckBox mosque, LinearLayout optionalLayout, AppCompatCheckBox policeStation,
-      SwitchCompat poolToggle, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
+      AppCompatImageView poolToggle, AppCompatCheckBox school, CustomTextViewMedium tvAddress,
       CustomTextViewMedium tvBuildingDesc, CustomTextViewMedium tvBuildingSize,
       CustomTextViewMedium tvBuildingYear, CustomTextViewMedium tvDealType,
       CustomTextViewMedium tvDocType, CustomTextViewMedium tvElevator,

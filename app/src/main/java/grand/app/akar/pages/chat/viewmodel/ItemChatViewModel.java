@@ -1,48 +1,27 @@
 package grand.app.akar.pages.chat.viewmodel;
 
-
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.databinding.BindingAdapter;
+import androidx.databinding.Bindable;
 
 import grand.app.akar.base.BaseViewModel;
+import grand.app.akar.pages.chat.adapter.ChatImagesAdapter;
 import grand.app.akar.pages.chat.model.Chat;
 
 public class ItemChatViewModel extends BaseViewModel {
-    public Chat chat;
-    public int position;
-    //    public ObservableBoolean isMessage = new ObservableBoolean(false);
-//    public ObservableBoolean isImage = new ObservableBoolean(false);
-    private int layout;
-    private static final String TAG = "ItemChatViewModel";
+    Chat chat;
+    ChatImagesAdapter imagesAdapter;
 
-    //
-//    public Drawable backgroundColor;
-//
-    public ItemChatViewModel(Chat chat, int position) {
+    public ItemChatViewModel(Chat chat) {
         this.chat = chat;
-        this.position = position;
-//        if(chat.type == 1) {
-//            layout = LayoutDirection.RTL;
-//        }else {
-//            layout = LayoutDirection.LTR;
-//        }
-
-//        if(!chat.message.equals(""))
-//            isMessage.set(true);
-//        if(!chat.image.equals(""))
-//            isImage.set(true);
-
-//        notifyChange();
+        imagesAdapter = new ChatImagesAdapter();
+        imagesAdapter.update(chat.getMedia());
     }
 
-
-    public int getLayout() {
-        return layout;
+    public ChatImagesAdapter getImagesAdapter() {
+        return imagesAdapter;
     }
 
-    @BindingAdapter("layout")
-    public static void setLayout(ConstraintLayout linearLayout, int layout) {
-        linearLayout.setLayoutDirection(layout);
+    @Bindable
+    public Chat getChat() {
+        return chat;
     }
-
 }

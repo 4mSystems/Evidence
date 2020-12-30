@@ -169,8 +169,8 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="C:\Users\MAymanM\Desktop\flag.svg" />
-                                                <entry key="paddingPercent" value="30" />
+                                                <entry key="imagePath" value="C:\Users\MAymanM\Desktop\refresh.svg" />
+                                                <entry key="paddingPercent" value="50" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -205,8 +205,8 @@
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="backgroundColor" value="296bb5" />
                                       <entry key="iconShape" value="CIRCLE" />
-                                      <entry key="imageAsset" value="C:\Users\MAymanM\Desktop\flag.svg" />
-                                      <entry key="outputName" value="ic_report" />
+                                      <entry key="imageAsset" value="C:\Users\MAymanM\Desktop\refresh.svg" />
+                                      <entry key="outputName" value="ic_refresh" />
                                     </map>
                                   </option>
                                 </PersistentState>

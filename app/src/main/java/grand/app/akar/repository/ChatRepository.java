@@ -5,6 +5,10 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import grand.app.akar.connection.FileObject;
+import grand.app.akar.pages.chat.model.ChatRequest;
+import grand.app.akar.pages.chat.model.ChatResponse;
+import grand.app.akar.pages.conversations.models.ConversationsResponse;
 import io.reactivex.disposables.Disposable;
 import grand.app.akar.connection.ConnectionHelper;
 import grand.app.akar.model.base.Mutable;
@@ -29,9 +33,18 @@ public class ChatRepository extends BaseRepository {
         this.liveData = liveData;
         connectionHelper.liveData = liveData;
     }
-    public Disposable getTerms() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.TERMS, new Object(), AboutResponse.class,
-                Constants.TERMS, true);
+
+    public Disposable getConversations() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONVERSATIONS, new Object(), ConversationsResponse.class,
+                Constants.CONVERSATIONS, true);
     }
 
+    public Disposable getChat(int listingId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHAT + listingId, new Object(), ChatResponse.class,
+                Constants.CHAT, true);
+    }
+
+    public void sendChat(ChatRequest request, FileObject image) {
+
+    }
 }

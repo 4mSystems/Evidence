@@ -22,15 +22,15 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback74;
+    private final android.view.View.OnClickListener mCallback104;
     @Nullable
-    private final android.view.View.OnClickListener mCallback72;
+    private final android.view.View.OnClickListener mCallback102;
     @Nullable
-    private final android.view.View.OnClickListener mCallback75;
+    private final android.view.View.OnClickListener mCallback105;
     @Nullable
-    private final android.view.View.OnClickListener mCallback73;
+    private final android.view.View.OnClickListener mCallback103;
     @Nullable
-    private final android.view.View.OnClickListener mCallback71;
+    private final android.view.View.OnClickListener mCallback101;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -59,11 +59,11 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         this.play.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback74 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback72 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback75 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback73 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback71 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback104 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback105 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback103 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback101 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -252,11 +252,11 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.close7.setOnClickListener(mCallback72);
-            this.confirmBtn.setOnClickListener(mCallback74);
-            this.editBtn.setOnClickListener(mCallback75);
-            this.image7.setOnClickListener(mCallback71);
-            this.play.setOnClickListener(mCallback73);
+            this.close7.setOnClickListener(mCallback102);
+            this.confirmBtn.setOnClickListener(mCallback104);
+            this.editBtn.setOnClickListener(mCallback105);
+            this.image7.setOnClickListener(mCallback101);
+            this.play.setOnClickListener(mCallback103);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

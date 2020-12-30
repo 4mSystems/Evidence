@@ -31,6 +31,9 @@ public abstract class ItemConversationBinding extends ViewDataBinding {
   public final CustomTextViewRegular conTitle;
 
   @NonNull
+  public final CustomTextViewRegular conTitleAddress;
+
+  @NonNull
   public final CircleImageView conUserImage;
 
   @Bindable
@@ -38,12 +41,14 @@ public abstract class ItemConversationBinding extends ViewDataBinding {
 
   protected ItemConversationBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Barrier br9, CustomTextViewRegular conDescText, CustomTextViewRegular conTime,
-      CustomTextViewRegular conTitle, CircleImageView conUserImage) {
+      CustomTextViewRegular conTitle, CustomTextViewRegular conTitleAddress,
+      CircleImageView conUserImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br9 = br9;
     this.conDescText = conDescText;
     this.conTime = conTime;
     this.conTitle = conTitle;
+    this.conTitleAddress = conTitleAddress;
     this.conUserImage = conUserImage;
   }
 

@@ -26,6 +26,7 @@ import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentAddLandFormBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.model.base.StatusMessage;
 import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel;
 import grand.app.akar.pages.settings.models.AboutResponse;
@@ -58,10 +59,17 @@ public class AddLandFormFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (mutable.message.equals(Constants.AD_UPLOAD_ATTACH)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCreateAdRequest()), getString(R.string.ad_attachment_imgs), AdsAttachmentsFragment.class.getName(), null);
-            } else if (mutable.message.equals(Constants.EMPTY_WARNING)) {
-                showError(getString(R.string.empty_warning));
+            switch (mutable.message) {
+                case Constants.AD_UPLOAD_ATTACH:
+                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCreateAdRequest()), getString(R.string.ad_attachment_imgs), AdsAttachmentsFragment.class.getName(), null);
+                    break;
+                case Constants.EMPTY_WARNING:
+                    showError(getString(R.string.empty_warning));
+                    break;
+                case Constants.UPDATE_AD_DATA:
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    MovementHelper.finishWithResult(new PassingObject(), context);
+                    break;
             }
         });
 

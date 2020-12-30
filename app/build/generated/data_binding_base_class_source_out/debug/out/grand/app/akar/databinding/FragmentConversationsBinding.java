@@ -10,17 +10,22 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import grand.app.akar.R;
+import grand.app.akar.customViews.views.CustomTextViewMedium;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentConversationsBinding extends ViewDataBinding {
+  @NonNull
+  public final CustomTextViewMedium tvHomeBarText;
+
   @Bindable
   protected ConversationsViewModel mViewmodel;
 
-  protected FragmentConversationsBinding(Object _bindingComponent, View _root,
-      int _localFieldCount) {
+  protected FragmentConversationsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      CustomTextViewMedium tvHomeBarText) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.tvHomeBarText = tvHomeBarText;
   }
 
   public abstract void setViewmodel(@Nullable ConversationsViewModel viewmodel);

@@ -27,7 +27,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements gr
     private final grand.app.akar.customViews.views.CustomTextViewRegular mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback122;
+    private final android.view.View.OnClickListener mCallback166;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements gr
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback122 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback166 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -147,7 +147,7 @@ public class FragmentAboutBindingImpl extends FragmentAboutBinding implements gr
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback122);
+            this.mboundView1.setOnClickListener(mCallback166);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

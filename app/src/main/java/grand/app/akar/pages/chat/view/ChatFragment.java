@@ -1,10 +1,10 @@
 package grand.app.akar.pages.chat.view;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,28 +12,33 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.Observer;
 
+
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.inject.Inject;
+
+import grand.app.akar.PassingObject;
 import grand.app.akar.R;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.databinding.FragmentChatBinding;
+import grand.app.akar.model.base.Mutable;
+import grand.app.akar.pages.chat.model.ChatResponse;
 import grand.app.akar.pages.chat.viewmodel.ChatViewModel;
+import grand.app.akar.utils.Constants;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ChatFragment extends BaseFragment {
 
     private Context context;
     private FragmentChatBinding binding;
-    private static final String TAG = "NotificationFragment";
-     ChatViewModel viewModel;
+    @Inject
+    ChatViewModel viewModel;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -41,41 +46,32 @@ public class ChatFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-//        viewModel.call();
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.chat();
+        }
         setEvent();
         return binding.getRoot();
     }
 
 
     private void setEvent() {
-//        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
-//            Mutable mutable = (Mutable) o;
-//            handleActions(mutable);
-//            if (((Mutable) o).message.equals(URLS.CHAT)) {
-//                viewModel.response = (ChatResponse) ((Mutable) o).object;
-//                viewModel.updateAdapter();
-//                binding.rvChat.scrollToPosition(viewModel.adapter.getItemCount() - 1);
-//
-//                Log.d("size",viewModel.adapter.getItemCount()+"");
-//            } else if (((Mutable) o).message.equals(Constants.SELECT)) {
-//                pickImageDialogSelect();
-//            } else if (((Mutable) o).message.equals(URLS.CHAT_SEND)) {
-//                ChatSendResponse chatSendResponse = (ChatSendResponse) ((Mutable) o).object;
-//                viewModel.adapter.add(chatSendResponse.data);
-//                viewModel.response.messageCount++;
-//                viewModel.updateChatCount();
-//                binding.etChatMessage.setText("");
-//                binding.rvChat.scrollToPosition(viewModel.adapter.getItemCount() - 1);
-//                Log.d("size",viewModel.adapter.getItemCount()+"");
-//            }
-//        });
+        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+            Mutable mutable = (Mutable) o;
+            handleActions(mutable);
+            if (mutable.message.equals(Constants.CHAT)) {
+                viewModel.adapter.update(((ChatResponse) mutable.object).getChats());
+                new Handler().postDelayed(() -> binding.rcChat.smoothScrollToPosition(viewModel.adapter.getChatList().size() - 1), 200);
+            }
+        });
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        context.registerReceiver(chat, new IntentFilter(Constants.CHAT));
-//        viewModel.repository.setLiveData(viewModel.liveData);
+        viewModel.repository.setLiveData(viewModel.liveData);
     }
 
     @Override
@@ -83,40 +79,6 @@ public class ChatFragment extends BaseFragment {
         super.onAttach(context);
         this.context = context;
     }
-
-
-    private BroadcastReceiver chat = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-//            if(viewModel != null && viewModel.adapter != null){
-//                Bundle bundle = intent.getBundleExtra(Constants.BUNDLE_NOTIFICATION);
-//                if(bundle != null && bundle.containsKey(Constants.BUNDLE_NOTIFICATION)) {
-//                    NotificationGCMModel notificationGCMModel = (NotificationGCMModel) bundle.getSerializable(Constants.BUNDLE_NOTIFICATION);
-//                    if(notificationGCMModel != null) {
-//                        Chat model = new Chat();
-//                        model.type = 2;
-//                        model.time = notificationGCMModel.time;
-//                        if(notificationGCMModel.typeData == 1)
-//                            model.message = notificationGCMModel.message;
-//                        else
-//                            model.image = notificationGCMModel.image;
-//                        viewModel.adapter.add(model);
-//                        viewModel.response.messageCount++;
-//                        viewModel.updateChatCount();
-//                        binding.rvChat.scrollToPosition(viewModel.adapter.getItemCount() - 1);
-//                    }
-//                }
-//            }
-        }
-    };
-
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        context.unregisterReceiver(chat);
-    }
-
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override

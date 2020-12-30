@@ -12,14 +12,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp4h">
+        android:layout_margin="@dimen/dp4h"
+        android:onClick="@{()-> itemViewModel.itemAction()}">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/con_user_image"
             android:layout_width="@dimen/dp50w"
             android:layout_height="@dimen/dp50h"
             android:layout_margin="@dimen/dp4h"
-            android:src="@color/overlayBackground"
+            android:src="@drawable/splash"
+            app:imageUrl="@{itemViewModel.conversationsData.receiver.img}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,17 +30,33 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8w"
+            android:layout_marginTop="@dimen/dp4h"
             android:layout_marginEnd="@dimen/dp8w"
-            android:layout_marginTop="@dimen/dp3h"
             android:ellipsize="end"
             android:lines="1"
-            android:text="@string/name_hint"
+            android:text="@{itemViewModel.conversationsData.receiver.name}"
             android:textAlignment="viewStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/colordark"
             app:layout_constraintEnd_toStartOf="@+id/con_time"
             app:layout_constraintStart_toEndOf="@+id/con_user_image"
-            app:layout_constraintTop_toTopOf="@+id/con_user_image" />
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <grand.app.akar.customViews.views.CustomTextViewRegular
+            android:id="@+id/con_title_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp8w"
+            android:layout_marginEnd="@dimen/dp8w"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="@{itemViewModel.conversationsData.address}"
+            android:textAlignment="viewStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/con_user_image"
+            app:layout_constraintTop_toBottomOf="@+id/con_title" />
 
         <grand.app.akar.customViews.views.CustomTextViewRegular
             android:id="@+id/con_time"
@@ -46,14 +64,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="@dimen/dp8w"
+            android:layout_marginTop="@dimen/dp4h"
             android:layout_marginEnd="@dimen/dp8w"
-            android:layout_marginTop="@dimen/dp3h"
             android:ellipsize="end"
             android:lines="1"
-            android:text="7 min"
+            android:text="@{itemViewModel.conversationsData.createdAt}"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/con_user_image" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <grand.app.akar.customViews.views.CustomTextViewRegular
             android:id="@+id/con_desc_text"
@@ -62,14 +80,13 @@
             android:layout_marginStart="@dimen/dp8w"
             android:layout_marginEnd="@dimen/dp8w"
             android:ellipsize="end"
-            android:layout_marginTop="@dimen/dp2h"
             android:lines="2"
+            android:text="@{itemViewModel.conversationsData.text}"
             android:textAlignment="viewStart"
-            android:text="لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/con_user_image"
-            app:layout_constraintTop_toBottomOf="@+id/con_title" />
+            app:layout_constraintTop_toBottomOf="@+id/con_title_address" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/br9"
@@ -78,5 +95,11 @@
             app:barrierDirection="bottom"
             app:constraint_referenced_ids="con_user_image,con_desc_text" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp4h"
+            android:background="@color/overlayBackground"
+            app:layout_constraintTop_toBottomOf="@id/br9" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

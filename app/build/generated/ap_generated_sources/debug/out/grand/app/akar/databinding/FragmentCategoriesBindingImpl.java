@@ -22,7 +22,7 @@ public class FragmentCategoriesBindingImpl extends FragmentCategoriesBinding imp
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback99;
+    private final android.view.View.OnClickListener mCallback142;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class FragmentCategoriesBindingImpl extends FragmentCategoriesBinding imp
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback99 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback142 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -126,7 +126,7 @@ public class FragmentCategoriesBindingImpl extends FragmentCategoriesBinding imp
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.confirmBtn.setOnClickListener(mCallback99);
+            this.confirmBtn.setOnClickListener(mCallback142);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

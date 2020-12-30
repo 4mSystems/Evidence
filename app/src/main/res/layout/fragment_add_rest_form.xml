@@ -564,7 +564,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageView
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/headerIndicator"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -725,13 +725,13 @@
                             app:layout_constraintEnd_toStartOf="@+id/pool_toggle"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
-
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/pool_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
+                            android:onClick="@{()-> viewmodel.poolChecked()}"
+                            android:src="@{viewmodel.pool==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/v15" />
 
@@ -751,12 +751,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_pool" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/elevator_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
+                            android:onClick="@{()-> viewmodel.liftChecked()}"
+                            android:src="@{viewmodel.lift==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_pool" />
 
@@ -776,12 +777,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/garage_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
+                            android:onClick="@{()-> viewmodel.garageChecked()}"
+                            android:src="@{viewmodel.garage==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_elevator" />
 
@@ -801,12 +803,13 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/furniture_toggle"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onToggleChange}"
+                            android:onClick="@{()-> viewmodel.furnChecked()}"
+                            android:src="@{viewmodel.furniture==0?@drawable/ic_toggle_empty:@drawable/ic_toggle_fill}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_garage" />
 
@@ -838,7 +841,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.mosque==0?false:true}"
+                            android:onClick="@{()-> viewmodel.mosqueChecked()}"
                             android:text="@string/mosque"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/tv_services" />
@@ -848,7 +852,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.school==0?false:true}"
+                            android:onClick="@{()-> viewmodel.schoolChecked()}"
                             android:text="@string/school"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/mosque" />
@@ -858,7 +863,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.hospital==0?false:true}"
+                            android:onClick="@{()-> viewmodel.hospitalChecked()}"
                             android:text="@string/hospital"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/school" />
@@ -868,7 +874,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp14h"
-                            android:onCheckedChanged="@{viewmodel::onCheckChange}"
+                            android:checked="@{viewmodel.policeStation==0?false:true}"
+                            android:onClick="@{()-> viewmodel.stationChecked()}"
                             android:text="@string/police_station"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@id/hospital" />
@@ -927,7 +934,7 @@
                 android:layout_marginEnd="@dimen/dp32w"
                 android:layout_marginBottom="@dimen/dp18h"
                 android:background="@drawable/corner_view_primary_dark"
-                android:text="@string/post_ad"
+                android:text="@{viewmodel.createAdRequest.listing_id==0?@string/post_ad:@string/edit}"
                 android:onClick="@{()-> viewmodel.createAd()}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"

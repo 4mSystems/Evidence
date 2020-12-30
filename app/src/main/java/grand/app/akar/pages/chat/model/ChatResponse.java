@@ -9,11 +9,11 @@ import grand.app.akar.model.base.StatusMessage;
 
 
 public class ChatResponse extends StatusMessage {
-    @SerializedName("chats")
+    @SerializedName("data")
     @Expose
-    public List<Chat> chats = null;
+    private List<Chat> chats;
 
-    @SerializedName("message_count")
-    @Expose
-    public int messageCount;
+    public List<Chat> getChats() {
+        return chats;
+    }
 }

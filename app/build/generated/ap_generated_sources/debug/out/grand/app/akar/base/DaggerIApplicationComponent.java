@@ -90,6 +90,10 @@ import grand.app.akar.pages.auth.register.RegisterViewModel;
 import grand.app.akar.pages.auth.register.RegisterViewModel_Factory;
 import grand.app.akar.pages.auth.register.RegisterViewModel_MembersInjector;
 import grand.app.akar.pages.chat.view.ChatFragment;
+import grand.app.akar.pages.chat.view.ChatFragment_MembersInjector;
+import grand.app.akar.pages.chat.viewmodel.ChatViewModel;
+import grand.app.akar.pages.chat.viewmodel.ChatViewModel_Factory;
+import grand.app.akar.pages.chat.viewmodel.ChatViewModel_MembersInjector;
 import grand.app.akar.pages.conversations.ConversationsFragment;
 import grand.app.akar.pages.conversations.ConversationsFragment_MembersInjector;
 import grand.app.akar.pages.conversations.viewModels.ConversationsViewModel;
@@ -176,9 +180,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<SettingsRepository> settingsRepositoryProvider;
 
-  private Provider<AdsRepository> adsRepositoryProvider;
-
   private Provider<ChatRepository> chatRepositoryProvider;
+
+  private Provider<AdsRepository> adsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -224,8 +228,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private SettingsViewModel getSettingsViewModel() {
     return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
 
+  private ChatViewModel getChatViewModel() {
+    return injectChatViewModel(ChatViewModel_Factory.newInstance(chatRepositoryProvider.get()));}
+
   private AdsViewModel getAdsViewModel() {
-    return injectAdsViewModel(AdsViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+    return injectAdsViewModel(AdsViewModel_Factory.newInstance(authRepositoryProvider.get(), adsRepositoryProvider.get()));}
 
   private CategoriesViewModel getCategoriesViewModel() {
     return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));}
@@ -260,8 +267,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
-    this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
     this.chatRepositoryProvider = DoubleCheck.provider(ChatRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.adsRepositoryProvider = DoubleCheck.provider(AdsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -330,7 +337,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   @Override
   public void inject(ChatFragment chatFragment) {
-  }
+    injectChatFragment(chatFragment);}
 
   @Override
   public void inject(AdsInfoFragment adsInfoFragment) {
@@ -553,8 +560,19 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private ChatViewModel injectChatViewModel(ChatViewModel instance) {
+    ChatViewModel_MembersInjector.injectRepository(instance, chatRepositoryProvider.get());
+    return instance;
+  }
+
+  private ChatFragment injectChatFragment(ChatFragment instance) {
+    ChatFragment_MembersInjector.injectViewModel(instance, getChatViewModel());
+    return instance;
+  }
+
   private AdsViewModel injectAdsViewModel(AdsViewModel instance) {
     AdsViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    AdsViewModel_MembersInjector.injectAdsRepository(instance, adsRepositoryProvider.get());
     return instance;
   }
 

@@ -39,9 +39,9 @@ public class URLS {
     public static final String SEND_REPORT = "listings/report";
     public static final String GET_PROFILE_DATA = "delegate/profile-data";
     public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
+    public static final String UPDATE_AD_DATA = "listings/update-listing-details";
 
-    /*
-    {{moata}}/user/variations-calculations?product_id=5&advanced[]=2&advanced[]=3
-     */
     public static final String UPDATE_IMAGES = "listings/update-listing-images";
+    public static final String CONVERSATIONS = "settings/messages-history";
+    public static final String CHAT = "settings/messages/";
 }

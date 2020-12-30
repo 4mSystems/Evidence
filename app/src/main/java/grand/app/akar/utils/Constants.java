@@ -141,13 +141,13 @@ public class Constants {
     public static final String UPDATE_IMAGES = "UPDATE_IMAGES";
     public static final String NOTIFICATIONS = "notifications";
     public static final String SELECT = "select";
-    public static final String FILTER = "filter";
+    public static final String UPDATE_AD_DATA = "UPDATE_AD_DATA";
 
     public static final String CHANGE_PASSWORD = "forget-password";
-    public static final String CART = "cart";
+    public static final String EDIT_AD_DETAILS = "EDIT_AD_DETAILS";
     public static final String SERVICES = "services";
-    public static final String LANGUAGE_AR = "ar";
-    public static final String LANGUAGE_EN = "en";
+    public static final String REMOVE_DIALOG = "REMOVE_DIALOG";
+    public static final String CONVERSATIONS = "CONVERSATIONS";
     public static final String DISMISS = "dismiss";
 
     public static final String CHAT = "chat";

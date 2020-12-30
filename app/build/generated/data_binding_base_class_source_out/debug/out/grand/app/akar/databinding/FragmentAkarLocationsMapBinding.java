@@ -29,6 +29,9 @@ public abstract class FragmentAkarLocationsMapBinding extends ViewDataBinding {
   public final AppCompatButton confirmBtn;
 
   @NonNull
+  public final AppCompatButton editBtn;
+
+  @NonNull
   public final CustomTextViewMedium inputSearch;
 
   @NonNull
@@ -39,11 +42,13 @@ public abstract class FragmentAkarLocationsMapBinding extends ViewDataBinding {
 
   protected FragmentAkarLocationsMapBinding(Object _bindingComponent, View _root,
       int _localFieldCount, ProgressBar addressProgress, CustomTextViewMedium btnDiffLocations,
-      AppCompatButton confirmBtn, CustomTextViewMedium inputSearch, MapView mapview) {
+      AppCompatButton confirmBtn, AppCompatButton editBtn, CustomTextViewMedium inputSearch,
+      MapView mapview) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addressProgress = addressProgress;
     this.btnDiffLocations = btnDiffLocations;
     this.confirmBtn = confirmBtn;
+    this.editBtn = editBtn;
     this.inputSearch = inputSearch;
     this.mapview = mapview;
   }

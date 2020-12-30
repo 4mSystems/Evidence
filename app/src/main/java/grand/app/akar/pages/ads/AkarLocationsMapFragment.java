@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,6 +22,7 @@ import androidx.lifecycle.Observer;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -36,6 +38,9 @@ import grand.app.akar.base.maps.MapAddressInterface;
 import grand.app.akar.base.maps.MapHelper;
 import grand.app.akar.databinding.FragmentAkarLocationsMapBinding;
 import grand.app.akar.model.base.Mutable;
+import grand.app.akar.model.base.StatusMessage;
+import grand.app.akar.pages.ads.models.CreateAdRequest;
+import grand.app.akar.pages.ads.models.LocationUpdateRequest;
 import grand.app.akar.pages.ads.viewModels.AdsViewModel;
 import grand.app.akar.pages.auth.models.cities.Cities;
 import grand.app.akar.pages.auth.models.cities.CitiesResponse;
@@ -51,6 +56,7 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
     GoogleMap mMap;
     FragmentAkarLocationsMapBinding binding;
     MapHelper mapHelper;
+    Bundle bundleUpdate;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -58,6 +64,15 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        bundleUpdate = this.getArguments();
+        if (bundleUpdate != null) {
+            String passingObject = bundleUpdate.getString(Constants.BUNDLE);
+            Log.e("onCreateView", "onCreateView: " + passingObject);
+            if (passingObject != null) {
+                viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+                viewModel.setUpdateRequest(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), LocationUpdateRequest.class));
+            }
+        }
         init(savedInstanceState);
         setEvent();
         return binding.getRoot();
@@ -70,9 +85,15 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
             if (((Mutable) o).message.equals(Constants.CITIES)) {
                 viewModel.setCitiesList(((CitiesResponse) mutable.object).getCitiesList());
                 binding.inputSearch.setText(viewModel.getCitiesList().get(0).getName());
-                mapHelper.addMarker(new LatLng(Double.parseDouble(viewModel.getCitiesList().get(0).getLat()), Double.parseDouble(viewModel.getCitiesList().get(0).getLng())), false);
+                if (bundleUpdate == null)
+                    mapHelper.addMarker(new LatLng(Double.parseDouble(viewModel.getCitiesList().get(0).getLat()), Double.parseDouble(viewModel.getCitiesList().get(0).getLng())), false);
+                else
+                    mapHelper.addMarker(new LatLng(Double.parseDouble(viewModel.getCreateAdRequest().getLat()), Double.parseDouble(viewModel.getCreateAdRequest().getLng())), false);
             } else if (mutable.message.equals(Constants.CHOOSE_CITY)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCitiesList()), getResources().getString(R.string.choose_akar_locations), AkarLocationsCitiesFragment.class.getName(), null);
+            } else if (mutable.message.equals(Constants.UPDATE_AD_DATA)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                MovementHelper.finishWithResult(new PassingObject(), context);
             } else if (mutable.message.equals(Constants.CATEGORIES)) {
                 binding.addressProgress.setVisibility(View.VISIBLE);
                 new MapHelper(context).getAddress(Double.parseDouble(viewModel.getCreateAdRequest().getLat()), Double.parseDouble(viewModel.getCreateAdRequest().getLat()), address -> {
@@ -98,11 +119,17 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
                 if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
                     Cities cities = (Cities) bundle.getSerializable(Constants.BUNDLE);
                     if (cities != null) {
-                        binding.inputSearch.setText(cities.getName());
-                        viewModel.getCreateAdRequest().setCityName(cities.getName());
-                        viewModel.getCreateAdRequest().setCityId(cities.getId());
-                        viewModel.getCreateAdRequest().setLat(cities.getLat());
-                        viewModel.getCreateAdRequest().setLng(cities.getLng());
+                        if (bundleUpdate == null) {
+                            binding.inputSearch.setText(cities.getName());
+                            viewModel.getCreateAdRequest().setCityName(cities.getName());
+                            viewModel.getCreateAdRequest().setCityId(cities.getId());
+                            viewModel.getCreateAdRequest().setLat(cities.getLat());
+                            viewModel.getCreateAdRequest().setLng(cities.getLng());
+                        } else {
+                            viewModel.getUpdateRequest().setCityId(cities.getId());
+                            viewModel.getUpdateRequest().setLat(cities.getLat());
+                            viewModel.getUpdateRequest().setLng(cities.getLng());
+                        }
                         mapHelper.addMarker(new LatLng(Double.parseDouble(cities.getLat()), Double.parseDouble(cities.getLng())), false);
                     }
                 }
@@ -157,6 +184,7 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
         binding.mapview.onResume();
         super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
+        viewModel.getAdsRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

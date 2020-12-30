@@ -29,9 +29,11 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback101;
+    private final android.view.View.OnClickListener mCallback144;
     @Nullable
-    private final android.view.View.OnClickListener mCallback102;
+    private final android.view.View.OnClickListener mCallback145;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback146;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -71,8 +73,9 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         this.tvPormote.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback101 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback102 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback144 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback145 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback146 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -333,8 +336,9 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback101);
-            this.mboundView11.setOnClickListener(mCallback102);
+            this.mboundView0.setOnClickListener(mCallback144);
+            this.mboundView1.setOnClickListener(mCallback145);
+            this.mboundView11.setOnClickListener(mCallback146);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -378,6 +382,23 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
                 break;
             }
             case 2: {
+                // localize variables for thread safety
+                // itemHomeViewModel
+                grand.app.akar.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;
+                // itemHomeViewModel != null
+                boolean itemHomeViewModelJavaLangObjectNull = false;
+
+
+
+                itemHomeViewModelJavaLangObjectNull = (itemHomeViewModel) != (null);
+                if (itemHomeViewModelJavaLangObjectNull) {
+
+
+                    itemHomeViewModel.itemAction();
+                }
+                break;
+            }
+            case 3: {
                 // localize variables for thread safety
                 // itemHomeViewModel
                 grand.app.akar.pages.home.viewModels.ItemHomeViewModel itemHomeViewModel = mItemHomeViewModel;

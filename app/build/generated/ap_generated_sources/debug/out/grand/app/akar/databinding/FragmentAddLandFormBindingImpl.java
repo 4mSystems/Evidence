@@ -47,29 +47,37 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback55;
+    private final android.view.View.OnClickListener mCallback94;
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback82;
     @Nullable
-    private final android.view.View.OnClickListener mCallback64;
+    private final android.view.View.OnClickListener mCallback83;
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback92;
     @Nullable
-    private final android.view.View.OnClickListener mCallback63;
+    private final android.view.View.OnClickListener mCallback80;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback81;
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback93;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback87;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback86;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback90;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback88;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback91;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback84;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback85;
     // values
     // listeners
-    private OnCheckedChangeListenerImpl mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
-    private OnCheckedChangeListenerImpl1 mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener;
     // Inverse Binding Event Handlers
     private androidx.databinding.InverseBindingListener incrementalViewFrontCountvalueAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
@@ -312,7 +320,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             , (androidx.appcompat.widget.AppCompatButton) bindings[21]
             , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[39]
             , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[36]
-            , (androidx.appcompat.widget.SwitchCompat) bindings[15]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[15]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[37]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[38]
             , (androidx.appcompat.widget.AppCompatCheckBox) bindings[18]
@@ -373,23 +381,28 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         this.school.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback56 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback64 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
-        mCallback59 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback62 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
-        mCallback63 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
-        mCallback57 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback60 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback58 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback61 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback94 = new grand.app.akar.generated.callback.OnClickListener(this, 15);
+        mCallback82 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback83 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback89 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
+        mCallback92 = new grand.app.akar.generated.callback.OnClickListener(this, 13);
+        mCallback80 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback81 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback93 = new grand.app.akar.generated.callback.OnClickListener(this, 14);
+        mCallback87 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback86 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback90 = new grand.app.akar.generated.callback.OnClickListener(this, 11);
+        mCallback88 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
+        mCallback91 = new grand.app.akar.generated.callback.OnClickListener(this, 12);
+        mCallback84 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback85 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x80L;
+                mDirtyFlags = 0x2000L;
         }
         requestRebind();
     }
@@ -471,15 +484,51 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             }
             return true;
         }
-        else if (fieldId == BR.paymentMethod) {
+        else if (fieldId == BR.createAdRequest) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
             }
             return true;
         }
-        else if (fieldId == BR.docType) {
+        else if (fieldId == BR.paymentMethod) {
             synchronized(this) {
                     mDirtyFlags |= 0x40L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.docType) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.furniture) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x100L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.mosque) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x200L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.school) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x400L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.hospital) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x800L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.policeStation) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1000L;
             }
             return true;
         }
@@ -503,12 +552,17 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             mDirtyFlags = 0;
         }
         boolean viewmodelDealingTypeInt1 = false;
+        android.graphics.drawable.Drawable viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestAreaError = null;
+        java.lang.String viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit = null;
         int viewmodelPaymentMethodInt2BtTransformAndroidColorColordarkBtTransformAndroidColorWhite = 0;
         boolean viewmodelDocTypeInt3 = false;
+        boolean viewmodelHospitalInt0BooleanFalseBooleanTrue = false;
         java.lang.String viewmodelCreateAdRequestAreaErrorGet = null;
         android.graphics.drawable.Drawable viewmodelDocTypeInt1BtCustomizeAndroidDrawableCornerViewLightBtCustomizeAndroidDrawableCornerViewPrimaryDark = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestPriceError = null;
+        boolean viewmodelMosqueInt0 = false;
+        int viewmodelMosque = 0;
         java.lang.String viewmodelCreateAdRequestDesc = null;
         java.lang.String viewmodelCreateAdRequestAddress = null;
         java.lang.String viewmodelCreateAdRequestPrice = null;
@@ -517,14 +571,19 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         android.graphics.drawable.Drawable viewmodelDealingTypeInt0BtMnahdaAndroidDrawableCornerViewLightBtMnahdaAndroidDrawableCornerViewPrimaryDark = null;
         boolean viewmodelDocTypeInt1 = false;
         android.graphics.drawable.Drawable viewmodelPaymentMethodInt1BtSacAndroidDrawableCornerViewLightBtSacAndroidDrawableCornerViewPrimaryDark = null;
-        android.widget.CompoundButton.OnCheckedChangeListener viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = null;
         boolean viewmodelPaymentMethodInt0 = false;
+        int viewmodelHospital = 0;
         int viewmodelPaymentMethodInt0BtnCashAndroidColorColordarkBtnCashAndroidColorWhite = 0;
         android.graphics.drawable.Drawable viewmodelDocTypeInt0BtnRealEstateCertificateAndroidDrawableCornerViewLightBtnRealEstateCertificateAndroidDrawableCornerViewPrimaryDark = null;
+        boolean viewmodelCreateAdRequestListingIdInt0 = false;
         java.lang.String viewmodelCreateAdRequestStreetWidth = null;
+        boolean viewmodelMosqueInt0BooleanFalseBooleanTrue = false;
+        boolean viewmodelPoliceStationInt0 = false;
         android.graphics.drawable.Drawable viewmodelDealingTypeInt1BtnSellAndroidDrawableCornerViewLightBtnSellAndroidDrawableCornerViewPrimaryDark = null;
+        boolean viewmodelSchoolInt0BooleanFalseBooleanTrue = false;
         grand.app.akar.pages.ads.models.CreateAdRequest viewmodelCreateAdRequest = null;
         android.graphics.drawable.Drawable viewmodelPaymentMethodInt2BtTransformAndroidDrawableCornerViewLightBtTransformAndroidDrawableCornerViewPrimaryDark = null;
+        int viewmodelFurniture = 0;
         android.graphics.drawable.Drawable viewmodelDocTypeInt3BtTitleDeedAndroidDrawableCornerViewLightBtTitleDeedAndroidDrawableCornerViewPrimaryDark = null;
         grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
         androidx.databinding.ObservableField<java.lang.String> viewmodelCreateAdRequestAddressError = null;
@@ -536,39 +595,82 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         boolean viewmodelPaymentMethodInt2 = false;
         java.lang.String viewmodelCreateAdRequestPriceErrorGet = null;
         int viewmodelPaymentMethod = 0;
+        boolean viewmodelPoliceStationInt0BooleanFalseBooleanTrue = false;
         boolean viewmodelDocTypeInt2 = false;
         android.graphics.drawable.Drawable viewmodelPaymentMethodInt0BtnCashAndroidDrawableCornerViewLightBtnCashAndroidDrawableCornerViewPrimaryDark = null;
         java.lang.String viewmodelCreateAdRequestFrontNo = null;
         int viewmodelPaymentMethodInt1BtSacAndroidColorColordarkBtSacAndroidColorWhite = 0;
+        boolean viewmodelHospitalInt0 = false;
+        boolean viewmodelSchoolInt0 = false;
+        int viewmodelCreateAdRequestListingId = 0;
         java.lang.String viewmodelCreateAdRequestArea = null;
         java.lang.String viewmodelCreateAdRequestAddressErrorGet = null;
+        int viewmodelSchool = 0;
         boolean viewmodelDealingTypeInt0 = false;
-        android.widget.CompoundButton.OnCheckedChangeListener viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = null;
+        boolean viewmodelFurnitureInt0 = false;
+        int viewmodelPoliceStation = 0;
         boolean viewmodelDocTypeInt0 = false;
         int viewmodelDealingTypeInt1BtnSellAndroidColorColordarkBtnSellAndroidColorWhite = 0;
         boolean viewmodelPaymentMethodInt1 = false;
         int viewmodelDocTypeInt2BtHolyKingAndroidColorColordarkBtHolyKingAndroidColorWhite = 0;
 
-        if ((dirtyFlags & 0xffL) != 0) {
+        if ((dirtyFlags & 0x3fffL) != 0) {
 
 
-            if ((dirtyFlags & 0x84L) != 0) {
+            if ((dirtyFlags & 0x2204L) != 0) {
 
                     if (viewmodel != null) {
-                        // read viewmodel::onToggleChange
-                        viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = (((mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener == null) ? (mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = new OnCheckedChangeListenerImpl()) : mViewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener).setValue(viewmodel));
-                        // read viewmodel::onCheckChange
-                        viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = (((mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener == null) ? (mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener = new OnCheckedChangeListenerImpl1()) : mViewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener).setValue(viewmodel));
+                        // read viewmodel.mosque
+                        viewmodelMosque = viewmodel.getMosque();
                     }
+
+
+                    // read viewmodel.mosque == 0
+                    viewmodelMosqueInt0 = (viewmodelMosque) == (0);
+                if((dirtyFlags & 0x2204L) != 0) {
+                    if(viewmodelMosqueInt0) {
+                            dirtyFlags |= 0x2000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.mosque == 0 ? false : true
+                    viewmodelMosqueInt0BooleanFalseBooleanTrue = ((viewmodelMosqueInt0) ? (false) : (true));
             }
-            if ((dirtyFlags & 0x8fL) != 0) {
+            if ((dirtyFlags & 0x2804L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.hospital
+                        viewmodelHospital = viewmodel.getHospital();
+                    }
+
+
+                    // read viewmodel.hospital == 0
+                    viewmodelHospitalInt0 = (viewmodelHospital) == (0);
+                if((dirtyFlags & 0x2804L) != 0) {
+                    if(viewmodelHospitalInt0) {
+                            dirtyFlags |= 0x200000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100000L;
+                    }
+                }
+
+
+                    // read viewmodel.hospital == 0 ? false : true
+                    viewmodelHospitalInt0BooleanFalseBooleanTrue = ((viewmodelHospitalInt0) ? (false) : (true));
+            }
+            if ((dirtyFlags & 0x202fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.createAdRequest
                         viewmodelCreateAdRequest = viewmodel.getCreateAdRequest();
                     }
 
-                if ((dirtyFlags & 0x85L) != 0) {
+                if ((dirtyFlags & 0x2025L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.areaError
@@ -582,7 +684,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                             viewmodelCreateAdRequestAreaErrorGet = viewmodelCreateAdRequestAreaError.get();
                         }
                 }
-                if ((dirtyFlags & 0x86L) != 0) {
+                if ((dirtyFlags & 0x2026L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.priceError
@@ -596,7 +698,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                             viewmodelCreateAdRequestPriceErrorGet = viewmodelCreateAdRequestPriceError.get();
                         }
                 }
-                if ((dirtyFlags & 0x84L) != 0) {
+                if ((dirtyFlags & 0x2024L) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.desc
@@ -609,11 +711,29 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                             viewmodelCreateAdRequestStreetWidth = viewmodelCreateAdRequest.getStreet_width();
                             // read viewmodel.createAdRequest.front_no
                             viewmodelCreateAdRequestFrontNo = viewmodelCreateAdRequest.getFront_no();
+                            // read viewmodel.createAdRequest.listing_id
+                            viewmodelCreateAdRequestListingId = viewmodelCreateAdRequest.getListing_id();
                             // read viewmodel.createAdRequest.area
                             viewmodelCreateAdRequestArea = viewmodelCreateAdRequest.getArea();
                         }
+
+
+                        // read viewmodel.createAdRequest.listing_id == 0
+                        viewmodelCreateAdRequestListingIdInt0 = (viewmodelCreateAdRequestListingId) == (0);
+                    if((dirtyFlags & 0x2024L) != 0) {
+                        if(viewmodelCreateAdRequestListingIdInt0) {
+                                dirtyFlags |= 0x20000L;
+                        }
+                        else {
+                                dirtyFlags |= 0x10000L;
+                        }
+                    }
+
+
+                        // read viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+                        viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit = ((viewmodelCreateAdRequestListingIdInt0) ? (confirmBtn.getResources().getString(R.string.post_ad)) : (confirmBtn.getResources().getString(R.string.edit)));
                 }
-                if ((dirtyFlags & 0x8cL) != 0) {
+                if ((dirtyFlags & 0x202cL) != 0) {
 
                         if (viewmodelCreateAdRequest != null) {
                             // read viewmodel.createAdRequest.addressError
@@ -628,7 +748,30 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                         }
                 }
             }
-            if ((dirtyFlags & 0x94L) != 0) {
+            if ((dirtyFlags & 0x2104L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.furniture
+                        viewmodelFurniture = viewmodel.getFurniture();
+                    }
+
+
+                    // read viewmodel.furniture == 0
+                    viewmodelFurnitureInt0 = (viewmodelFurniture) == (0);
+                if((dirtyFlags & 0x2104L) != 0) {
+                    if(viewmodelFurnitureInt0) {
+                            dirtyFlags |= 0x8000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x4000L;
+                    }
+                }
+
+
+                    // read viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+                    viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill = ((viewmodelFurnitureInt0) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(furnitureToggle.getContext(), R.drawable.ic_toggle_empty)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(furnitureToggle.getContext(), R.drawable.ic_toggle_fill)));
+            }
+            if ((dirtyFlags & 0x2014L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.dealingType
@@ -640,24 +783,24 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     viewmodelDealingTypeInt1 = (viewmodelDealingType) == (1);
                     // read viewmodel.dealingType == 0
                     viewmodelDealingTypeInt0 = (viewmodelDealingType) == (0);
-                if((dirtyFlags & 0x94L) != 0) {
+                if((dirtyFlags & 0x2014L) != 0) {
                     if(viewmodelDealingTypeInt1) {
-                            dirtyFlags |= 0x2000000L;
-                            dirtyFlags |= 0x20000000000L;
+                            dirtyFlags |= 0x8000000000L;
+                            dirtyFlags |= 0x800000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000000L;
-                            dirtyFlags |= 0x10000000000L;
+                            dirtyFlags |= 0x4000000000L;
+                            dirtyFlags |= 0x400000000000000L;
                     }
                 }
-                if((dirtyFlags & 0x94L) != 0) {
+                if((dirtyFlags & 0x2014L) != 0) {
                     if(viewmodelDealingTypeInt0) {
-                            dirtyFlags |= 0x20000L;
-                            dirtyFlags |= 0x80000000L;
+                            dirtyFlags |= 0x20000000L;
+                            dirtyFlags |= 0x800000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000L;
-                            dirtyFlags |= 0x40000000L;
+                            dirtyFlags |= 0x10000000L;
+                            dirtyFlags |= 0x400000000000L;
                     }
                 }
 
@@ -671,7 +814,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     // read viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
                     viewmodelDealingTypeInt0BtMnahdaAndroidColorColordarkBtMnahdaAndroidColorWhite = ((viewmodelDealingTypeInt0) ? (getColorFromResource(btMnahda, R.color.colordark)) : (getColorFromResource(btMnahda, R.color.white)));
             }
-            if ((dirtyFlags & 0xc4L) != 0) {
+            if ((dirtyFlags & 0x2084L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.docType
@@ -687,44 +830,44 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     viewmodelDocTypeInt2 = (viewmodelDocType) != (2);
                     // read viewmodel.docType != 0
                     viewmodelDocTypeInt0 = (viewmodelDocType) != (0);
-                if((dirtyFlags & 0xc4L) != 0) {
+                if((dirtyFlags & 0x2084L) != 0) {
                     if(viewmodelDocTypeInt3) {
-                            dirtyFlags |= 0x8000L;
-                            dirtyFlags |= 0x20000000L;
+                            dirtyFlags |= 0x8000000L;
+                            dirtyFlags |= 0x200000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
-                            dirtyFlags |= 0x10000000L;
+                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags |= 0x100000000000L;
                     }
                 }
-                if((dirtyFlags & 0xc4L) != 0) {
+                if((dirtyFlags & 0x2084L) != 0) {
                     if(viewmodelDocTypeInt1) {
-                            dirtyFlags |= 0x800L;
-                            dirtyFlags |= 0x2000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x400L;
-                            dirtyFlags |= 0x1000L;
-                    }
-                }
-                if((dirtyFlags & 0xc4L) != 0) {
-                    if(viewmodelDocTypeInt2) {
-                            dirtyFlags |= 0x200000000L;
-                            dirtyFlags |= 0x80000000000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x100000000L;
-                            dirtyFlags |= 0x40000000000L;
-                    }
-                }
-                if((dirtyFlags & 0xc4L) != 0) {
-                    if(viewmodelDocTypeInt0) {
                             dirtyFlags |= 0x800000L;
-                            dirtyFlags |= 0x800000000L;
+                            dirtyFlags |= 0x2000000L;
                     }
                     else {
                             dirtyFlags |= 0x400000L;
+                            dirtyFlags |= 0x1000000L;
+                    }
+                }
+                if((dirtyFlags & 0x2084L) != 0) {
+                    if(viewmodelDocTypeInt2) {
+                            dirtyFlags |= 0x2000000000000L;
+                            dirtyFlags |= 0x2000000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000000000000L;
+                            dirtyFlags |= 0x1000000000000000L;
+                    }
+                }
+                if((dirtyFlags & 0x2084L) != 0) {
+                    if(viewmodelDocTypeInt0) {
+                            dirtyFlags |= 0x800000000L;
+                            dirtyFlags |= 0x8000000000000L;
+                    }
+                    else {
                             dirtyFlags |= 0x400000000L;
+                            dirtyFlags |= 0x4000000000000L;
                     }
                 }
 
@@ -746,7 +889,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     // read viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
                     viewmodelDocTypeInt0BtnRealEstateCertificateAndroidColorColordarkBtnRealEstateCertificateAndroidColorWhite = ((viewmodelDocTypeInt0) ? (getColorFromResource(btnRealEstateCertificate, R.color.colordark)) : (getColorFromResource(btnRealEstateCertificate, R.color.white)));
             }
-            if ((dirtyFlags & 0xa4L) != 0) {
+            if ((dirtyFlags & 0x2044L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.paymentMethod
@@ -760,34 +903,34 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     viewmodelPaymentMethodInt2 = (viewmodelPaymentMethod) != (2);
                     // read viewmodel.paymentMethod != 1
                     viewmodelPaymentMethodInt1 = (viewmodelPaymentMethod) != (1);
-                if((dirtyFlags & 0xa4L) != 0) {
+                if((dirtyFlags & 0x2044L) != 0) {
                     if(viewmodelPaymentMethodInt0) {
-                            dirtyFlags |= 0x200000L;
-                            dirtyFlags |= 0x2000000000L;
+                            dirtyFlags |= 0x200000000L;
+                            dirtyFlags |= 0x80000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x100000L;
-                            dirtyFlags |= 0x1000000000L;
+                            dirtyFlags |= 0x100000000L;
+                            dirtyFlags |= 0x40000000000000L;
                     }
                 }
-                if((dirtyFlags & 0xa4L) != 0) {
+                if((dirtyFlags & 0x2044L) != 0) {
                     if(viewmodelPaymentMethodInt2) {
-                            dirtyFlags |= 0x200L;
-                            dirtyFlags |= 0x8000000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x100L;
-                            dirtyFlags |= 0x4000000L;
-                    }
-                }
-                if((dirtyFlags & 0xa4L) != 0) {
-                    if(viewmodelPaymentMethodInt1) {
                             dirtyFlags |= 0x80000L;
-                            dirtyFlags |= 0x8000000000L;
+                            dirtyFlags |= 0x80000000000L;
                     }
                     else {
                             dirtyFlags |= 0x40000L;
-                            dirtyFlags |= 0x4000000000L;
+                            dirtyFlags |= 0x40000000000L;
+                    }
+                }
+                if((dirtyFlags & 0x2044L) != 0) {
+                    if(viewmodelPaymentMethodInt1) {
+                            dirtyFlags |= 0x80000000L;
+                            dirtyFlags |= 0x200000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40000000L;
+                            dirtyFlags |= 0x100000000000000L;
                     }
                 }
 
@@ -805,9 +948,55 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                     // read viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
                     viewmodelPaymentMethodInt1BtSacAndroidColorColordarkBtSacAndroidColorWhite = ((viewmodelPaymentMethodInt1) ? (getColorFromResource(btSac, R.color.colordark)) : (getColorFromResource(btSac, R.color.white)));
             }
+            if ((dirtyFlags & 0x2404L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.school
+                        viewmodelSchool = viewmodel.getSchool();
+                    }
+
+
+                    // read viewmodel.school == 0
+                    viewmodelSchoolInt0 = (viewmodelSchool) == (0);
+                if((dirtyFlags & 0x2404L) != 0) {
+                    if(viewmodelSchoolInt0) {
+                            dirtyFlags |= 0x20000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.school == 0 ? false : true
+                    viewmodelSchoolInt0BooleanFalseBooleanTrue = ((viewmodelSchoolInt0) ? (false) : (true));
+            }
+            if ((dirtyFlags & 0x3004L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.policeStation
+                        viewmodelPoliceStation = viewmodel.getPoliceStation();
+                    }
+
+
+                    // read viewmodel.policeStation == 0
+                    viewmodelPoliceStationInt0 = (viewmodelPoliceStation) == (0);
+                if((dirtyFlags & 0x3004L) != 0) {
+                    if(viewmodelPoliceStationInt0) {
+                            dirtyFlags |= 0x20000000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10000000000000L;
+                    }
+                }
+
+
+                    // read viewmodel.policeStation == 0 ? false : true
+                    viewmodelPoliceStationInt0BooleanFalseBooleanTrue = ((viewmodelPoliceStationInt0) ? (false) : (true));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0xc4L) != 0) {
+        if ((dirtyFlags & 0x2084L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btCustomize, viewmodelDocTypeInt1BtCustomizeAndroidDrawableCornerViewLightBtCustomizeAndroidDrawableCornerViewPrimaryDark);
@@ -819,27 +1008,32 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnRealEstateCertificate, viewmodelDocTypeInt0BtnRealEstateCertificateAndroidDrawableCornerViewLightBtnRealEstateCertificateAndroidDrawableCornerViewPrimaryDark);
             this.btnRealEstateCertificate.setTextColor(viewmodelDocTypeInt0BtnRealEstateCertificateAndroidColorColordarkBtnRealEstateCertificateAndroidColorWhite);
         }
-        if ((dirtyFlags & 0x80L) != 0) {
+        if ((dirtyFlags & 0x2000L) != 0) {
             // api target 1
 
-            this.btCustomize.setOnClickListener(mCallback61);
-            this.btHolyKing.setOnClickListener(mCallback62);
-            this.btMnahda.setOnClickListener(mCallback56);
-            this.btSac.setOnClickListener(mCallback58);
-            this.btTitleDeed.setOnClickListener(mCallback63);
-            this.btTransform.setOnClickListener(mCallback59);
-            this.btnCash.setOnClickListener(mCallback57);
-            this.btnRealEstateCertificate.setOnClickListener(mCallback60);
-            this.btnSell.setOnClickListener(mCallback55);
-            this.confirmBtn.setOnClickListener(mCallback64);
+            this.btCustomize.setOnClickListener(mCallback86);
+            this.btHolyKing.setOnClickListener(mCallback87);
+            this.btMnahda.setOnClickListener(mCallback81);
+            this.btSac.setOnClickListener(mCallback83);
+            this.btTitleDeed.setOnClickListener(mCallback88);
+            this.btTransform.setOnClickListener(mCallback84);
+            this.btnCash.setOnClickListener(mCallback82);
+            this.btnRealEstateCertificate.setOnClickListener(mCallback85);
+            this.btnSell.setOnClickListener(mCallback80);
+            this.confirmBtn.setOnClickListener(mCallback94);
+            this.furnitureToggle.setOnClickListener(mCallback89);
+            this.hospital.setOnClickListener(mCallback92);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFrontCount, incrementalViewFrontCountvalueAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputAddress, inputAddresstextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputDesc, inputDesctextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputLandSize, inputLandSizetextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPrice, inputPricetextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputStreetSize, inputStreetSizetextAttrChanged);
+            this.mosque.setOnClickListener(mCallback90);
+            this.policeStation.setOnClickListener(mCallback93);
+            this.school.setOnClickListener(mCallback91);
         }
-        if ((dirtyFlags & 0x94L) != 0) {
+        if ((dirtyFlags & 0x2014L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btMnahda, viewmodelDealingTypeInt0BtMnahdaAndroidDrawableCornerViewLightBtMnahdaAndroidDrawableCornerViewPrimaryDark);
@@ -847,7 +1041,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSell, viewmodelDealingTypeInt1BtnSellAndroidDrawableCornerViewLightBtnSellAndroidDrawableCornerViewPrimaryDark);
             this.btnSell.setTextColor(viewmodelDealingTypeInt1BtnSellAndroidColorColordarkBtnSellAndroidColorWhite);
         }
-        if ((dirtyFlags & 0xa4L) != 0) {
+        if ((dirtyFlags & 0x2044L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btSac, viewmodelPaymentMethodInt1BtSacAndroidDrawableCornerViewLightBtSacAndroidDrawableCornerViewPrimaryDark);
@@ -857,63 +1051,151 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnCash, viewmodelPaymentMethodInt0BtnCashAndroidDrawableCornerViewLightBtnCashAndroidDrawableCornerViewPrimaryDark);
             this.btnCash.setTextColor(viewmodelPaymentMethodInt0BtnCashAndroidColorColordarkBtnCashAndroidColorWhite);
         }
-        if ((dirtyFlags & 0x84L) != 0) {
+        if ((dirtyFlags & 0x2024L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.furnitureToggle, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnToggleChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.hospital, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.confirmBtn, viewmodelCreateAdRequestListingIdInt0ConfirmBtnAndroidStringPostAdConfirmBtnAndroidStringEdit);
             grand.app.akar.customViews.views.IncrementalView.getValue(this.incrementalViewFrontCount, viewmodelCreateAdRequestFrontNo);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputAddress, viewmodelCreateAdRequestAddress);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputDesc, viewmodelCreateAdRequestDesc);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputLandSize, viewmodelCreateAdRequestArea);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputPrice, viewmodelCreateAdRequestPrice);
             grand.app.akar.customViews.views.CustomEditText.getText(this.inputStreetSize, viewmodelCreateAdRequestStreetWidth);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.mosque, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.policeStation, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.school, (android.widget.CompoundButton.OnCheckedChangeListener)viewmodelOnCheckChangeAndroidWidgetCompoundButtonOnCheckedChangeListener, (androidx.databinding.InverseBindingListener)null);
         }
-        if ((dirtyFlags & 0x8cL) != 0) {
+        if ((dirtyFlags & 0x2104L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ImageViewBindingAdapter.setImageDrawable(this.furnitureToggle, viewmodelFurnitureInt0FurnitureToggleAndroidDrawableIcToggleEmptyFurnitureToggleAndroidDrawableIcToggleFill);
+        }
+        if ((dirtyFlags & 0x2804L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.hospital, viewmodelHospitalInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x202cL) != 0) {
             // api target 1
 
             this.inputAddress.setError(viewmodelCreateAdRequestAddressErrorGet);
         }
-        if ((dirtyFlags & 0x85L) != 0) {
+        if ((dirtyFlags & 0x2025L) != 0) {
             // api target 1
 
             this.inputLandSize.setError(viewmodelCreateAdRequestAreaErrorGet);
         }
-        if ((dirtyFlags & 0x86L) != 0) {
+        if ((dirtyFlags & 0x2026L) != 0) {
             // api target 1
 
             this.inputPrice.setError(viewmodelCreateAdRequestPriceErrorGet);
         }
+        if ((dirtyFlags & 0x2204L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mosque, viewmodelMosqueInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x3004L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.policeStation, viewmodelPoliceStationInt0BooleanFalseBooleanTrue);
+        }
+        if ((dirtyFlags & 0x2404L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.school, viewmodelSchoolInt0BooleanFalseBooleanTrue);
+        }
     }
     // Listener Stub Implementations
-    public static class OnCheckedChangeListenerImpl implements android.widget.CompoundButton.OnCheckedChangeListener{
-        private grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value;
-        public OnCheckedChangeListenerImpl setValue(grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onCheckedChanged(android.widget.CompoundButton arg0, boolean arg1) {
-            this.value.onToggleChange(arg0, arg1); 
-        }
-    }
-    public static class OnCheckedChangeListenerImpl1 implements android.widget.CompoundButton.OnCheckedChangeListener{
-        private grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value;
-        public OnCheckedChangeListenerImpl1 setValue(grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel value) {
-            this.value = value;
-            return value == null ? null : this;
-        }
-        @Override
-        public void onCheckedChanged(android.widget.CompoundButton arg0, boolean arg1) {
-            this.value.onCheckChange(arg0, arg1); 
-        }
-    }
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 15: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createLandAd();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
+                }
+                break;
+            }
+            case 10: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.furnChecked();
+                }
+                break;
+            }
+            case 13: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.hospitalChecked();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -950,7 +1232,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 10: {
+            case 14: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -963,26 +1245,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createLandAd();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
+                    viewmodel.stationChecked();
                 }
                 break;
             }
@@ -1005,6 +1268,42 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
+            case 7: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
+                }
+                break;
+            }
+            case 11: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.mosqueChecked();
+                }
+                break;
+            }
             case 9: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1024,7 +1323,24 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 3: {
+            case 12: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.schoolChecked();
+                }
+                break;
+            }
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1039,7 +1355,7 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
 
 
 
-                    viewmodel.paymentMethodAction(btnCash.getResources().getString(R.string.cash), 0);
+                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
                 }
                 break;
             }
@@ -1062,44 +1378,6 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
                 }
                 break;
             }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btSac.getResources().getString(R.string.sac), 1);
-                }
-                break;
-            }
-            case 7: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -1110,45 +1388,63 @@ public class FragmentAddLandFormBindingImpl extends FragmentAddLandFormBinding i
         flag 2 (0x3L): viewmodel
         flag 3 (0x4L): viewmodel.createAdRequest.addressError
         flag 4 (0x5L): viewmodel.dealingType
-        flag 5 (0x6L): viewmodel.paymentMethod
-        flag 6 (0x7L): viewmodel.docType
-        flag 7 (0x8L): null
-        flag 8 (0x9L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
-        flag 9 (0xaL): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
-        flag 10 (0xbL): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 11 (0xcL): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 12 (0xdL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
-        flag 13 (0xeL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
-        flag 14 (0xfL): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
-        flag 15 (0x10L): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
-        flag 16 (0x11L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 17 (0x12L): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 18 (0x13L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 19 (0x14L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 20 (0x15L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
-        flag 21 (0x16L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
-        flag 22 (0x17L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 23 (0x18L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 24 (0x19L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 25 (0x1aL): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 26 (0x1bL): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 27 (0x1cL): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 28 (0x1dL): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 29 (0x1eL): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 30 (0x1fL): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
-        flag 31 (0x20L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
-        flag 32 (0x21L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 33 (0x22L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 34 (0x23L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
-        flag 35 (0x24L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
-        flag 36 (0x25L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 37 (0x26L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
-        flag 38 (0x27L): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
-        flag 39 (0x28L): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
-        flag 40 (0x29L): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
-        flag 41 (0x2aL): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
-        flag 42 (0x2bL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
-        flag 43 (0x2cL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
+        flag 5 (0x6L): viewmodel.createAdRequest
+        flag 6 (0x7L): viewmodel.paymentMethod
+        flag 7 (0x8L): viewmodel.docType
+        flag 8 (0x9L): viewmodel.furniture
+        flag 9 (0xaL): viewmodel.mosque
+        flag 10 (0xbL): viewmodel.school
+        flag 11 (0xcL): viewmodel.hospital
+        flag 12 (0xdL): viewmodel.policeStation
+        flag 13 (0xeL): null
+        flag 14 (0xfL): viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 15 (0x10L): viewmodel.furniture == 0 ? @android:drawable/ic_toggle_empty : @android:drawable/ic_toggle_fill
+        flag 16 (0x11L): viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+        flag 17 (0x12L): viewmodel.createAdRequest.listing_id == 0 ? @android:string/post_ad : @android:string/edit
+        flag 18 (0x13L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
+        flag 19 (0x14L): viewmodel.paymentMethod != 2 ? @android:color/colordark : @android:color/white
+        flag 20 (0x15L): viewmodel.hospital == 0 ? false : true
+        flag 21 (0x16L): viewmodel.hospital == 0 ? false : true
+        flag 22 (0x17L): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 23 (0x18L): viewmodel.docType != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 24 (0x19L): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
+        flag 25 (0x1aL): viewmodel.docType != 1 ? @android:color/colordark : @android:color/white
+        flag 26 (0x1bL): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
+        flag 27 (0x1cL): viewmodel.docType != 3 ? @android:color/colordark : @android:color/white
+        flag 28 (0x1dL): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 29 (0x1eL): viewmodel.dealingType == 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 30 (0x1fL): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 31 (0x20L): viewmodel.paymentMethod != 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 32 (0x21L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
+        flag 33 (0x22L): viewmodel.paymentMethod != 0 ? @android:color/colordark : @android:color/white
+        flag 34 (0x23L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 35 (0x24L): viewmodel.docType != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 36 (0x25L): viewmodel.mosque == 0 ? false : true
+        flag 37 (0x26L): viewmodel.mosque == 0 ? false : true
+        flag 38 (0x27L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 39 (0x28L): viewmodel.dealingType == 1 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 40 (0x29L): viewmodel.school == 0 ? false : true
+        flag 41 (0x2aL): viewmodel.school == 0 ? false : true
+        flag 42 (0x2bL): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 43 (0x2cL): viewmodel.paymentMethod != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 44 (0x2dL): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 45 (0x2eL): viewmodel.docType != 3 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 46 (0x2fL): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
+        flag 47 (0x30L): viewmodel.dealingType == 0 ? @android:color/colordark : @android:color/white
+        flag 48 (0x31L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 49 (0x32L): viewmodel.docType != 2 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 50 (0x33L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
+        flag 51 (0x34L): viewmodel.docType != 0 ? @android:color/colordark : @android:color/white
+        flag 52 (0x35L): viewmodel.policeStation == 0 ? false : true
+        flag 53 (0x36L): viewmodel.policeStation == 0 ? false : true
+        flag 54 (0x37L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 55 (0x38L): viewmodel.paymentMethod != 0 ? @android:drawable/corner_view_light : @android:drawable/corner_view_primary_dark
+        flag 56 (0x39L): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
+        flag 57 (0x3aL): viewmodel.paymentMethod != 1 ? @android:color/colordark : @android:color/white
+        flag 58 (0x3bL): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
+        flag 59 (0x3cL): viewmodel.dealingType == 1 ? @android:color/colordark : @android:color/white
+        flag 60 (0x3dL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
+        flag 61 (0x3eL): viewmodel.docType != 2 ? @android:color/colordark : @android:color/white
     flag mapping end*/
     //end
 }

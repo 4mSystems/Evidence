@@ -10,7 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatCheckBox;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -66,7 +65,7 @@ public abstract class FragmentAddLandFormBinding extends ViewDataBinding {
   public final ExpansionHeader expansionLayoutHeader;
 
   @NonNull
-  public final SwitchCompat furnitureToggle;
+  public final AppCompatImageView furnitureToggle;
 
   @NonNull
   public final AppCompatImageView headerIndicator;
@@ -179,7 +178,7 @@ public abstract class FragmentAddLandFormBinding extends ViewDataBinding {
       CustomTextViewMedium btTransform, CustomTextViewMedium btnCash,
       CustomTextViewMedium btnRealEstateCertificate, CustomTextViewMedium btnSell,
       AppCompatButton confirmBtn, ExpansionLayout expansionLayout,
-      ExpansionHeader expansionLayoutHeader, SwitchCompat furnitureToggle,
+      ExpansionHeader expansionLayoutHeader, AppCompatImageView furnitureToggle,
       AppCompatImageView headerIndicator, CustomTextViewMedium headerMenuName,
       AppCompatCheckBox hospital, IncrementalView incrementalViewFrontCount,
       CustomEditText inputAddress, CustomEditText inputDesc, CustomEditText inputLandSize,

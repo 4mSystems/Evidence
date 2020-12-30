@@ -332,5 +332,7 @@
     <string name="edit_details">تعديل التفاصيل</string>
     <string name="cancel">إلغاء</string>
     <string name="remove_image_first">يجب حذف الصورة اولا</string>
+    <string name="delete_warning">هل تريد حذف الإعلان</string>
+    <string name="yes">نعم</string>
 
 </resources>

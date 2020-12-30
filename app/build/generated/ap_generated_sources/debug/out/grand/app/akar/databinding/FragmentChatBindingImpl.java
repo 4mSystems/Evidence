@@ -14,10 +14,10 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.v14, 1);
-        sViewsWithIds.put(R.id.chat_actions, 2);
-        sViewsWithIds.put(R.id.attach, 3);
-        sViewsWithIds.put(R.id.more, 4);
+        sViewsWithIds.put(R.id.v14, 2);
+        sViewsWithIds.put(R.id.chat_actions, 3);
+        sViewsWithIds.put(R.id.attach, 4);
+        sViewsWithIds.put(R.id.more, 5);
     }
     // views
     @NonNull
@@ -28,17 +28,19 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentChatBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentChatBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (android.view.View) bindings[1]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (android.view.View) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.rcChat.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -75,7 +77,13 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
     }
 
     public void setViewmodel(@Nullable grand.app.akar.pages.chat.viewmodel.ChatViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -103,7 +111,24 @@ public class FragmentChatBindingImpl extends FragmentChatBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        grand.app.akar.pages.chat.adapter.ChatAdapter viewmodelAdapter = null;
+        grand.app.akar.pages.chat.viewmodel.ChatViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.adapter
+                    viewmodelAdapter = viewmodel.adapter;
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.rcChat, viewmodelAdapter, "1", "1");
+        }
     }
     // Listener Stub Implementations
     // callback impls

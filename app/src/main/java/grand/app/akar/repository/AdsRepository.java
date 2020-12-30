@@ -1,11 +1,9 @@
 package grand.app.akar.repository;
 
-import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -18,6 +16,7 @@ import grand.app.akar.pages.adDetails.models.AdDetailsResponse;
 import grand.app.akar.pages.adDetails.models.ReportRequest;
 import grand.app.akar.pages.adDetails.models.UpdatedImagesRequest;
 import grand.app.akar.pages.ads.models.CreateAdRequest;
+import grand.app.akar.pages.ads.models.LocationUpdateRequest;
 import grand.app.akar.pages.favorites.models.FavoriteRequest;
 import grand.app.akar.pages.home.models.HomeResponse;
 import grand.app.akar.utils.Constants;
@@ -93,8 +92,17 @@ public class AdsRepository extends BaseRepository {
     }
 
     public Disposable updateDate(int listingId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UPDATE_AD_DATE+listingId, new Object(), StatusMessage.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UPDATE_AD_DATE + listingId, new Object(), StatusMessage.class,
                 Constants.UPDATE_AD_DATE, true);
     }
 
+    public Disposable editAdLocation(LocationUpdateRequest createAdRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_AD_DATA, createAdRequest, StatusMessage.class,
+                Constants.UPDATE_AD_DATA, true);
+    }
+
+    public Disposable editAd(CreateAdRequest createAdRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_AD_DATA, createAdRequest, StatusMessage.class,
+                Constants.UPDATE_AD_DATA, true);
+    }
 }

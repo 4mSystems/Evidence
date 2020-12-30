@@ -19,7 +19,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback98;
+    private final android.view.View.OnClickListener mCallback141;
     // values
     // listeners
     private OnNavigationItemSelectedListenerImpl mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener;
@@ -40,7 +40,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
         this.llBaseContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback98 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback141 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -125,7 +125,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.fab.setOnClickListener(mCallback98);
+            this.fab.setOnClickListener(mCallback141);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

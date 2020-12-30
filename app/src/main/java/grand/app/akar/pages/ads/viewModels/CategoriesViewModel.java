@@ -63,19 +63,7 @@ public class CategoriesViewModel extends BaseViewModel {
     }
 
     private void setUpCategories() {
-        List<CategoriesData> categoriesDataList = new ArrayList<>();
-        categoriesDataList.add(new CategoriesData(1, ResourceManager.getString(R.string.villa), AddVillaHouseManagmentFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(2, ResourceManager.getString(R.string.house), AddVillaHouseManagmentFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(3, ResourceManager.getString(R.string.flat), AddFlatFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(4, ResourceManager.getString(R.string.ware_house), AddWareHosueFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(5, ResourceManager.getString(R.string.store), AddStoreFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(6, ResourceManager.getString(R.string.land), AddLandFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(7, ResourceManager.getString(R.string.manage_building), AddVillaHouseManagmentFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(8, ResourceManager.getString(R.string.factory), AddFactoryFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(9, ResourceManager.getString(R.string.rest), AddResetFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(10, ResourceManager.getString(R.string.building), AddVillaHouseManagmentFormFragment.class.getName()));
-        categoriesDataList.add(new CategoriesData(11, ResourceManager.getString(R.string.office), AddOfficeFormFragment.class.getName()));
-        getCategoriesAdapter().update(categoriesDataList);
+        getCategoriesAdapter().update(getCategoriesDataList());
     }
 
     public void toSelectForm() {
@@ -87,7 +75,7 @@ public class CategoriesViewModel extends BaseViewModel {
     }
 
     public void setCreateAdRequest(CreateAdRequest createAdRequest) {
-        Log.e("setCreateAdRequest", "setCreateAdRequest: "+createAdRequest );
+        Log.e("setCreateAdRequest", "setCreateAdRequest: " + createAdRequest);
         this.createAdRequest = createAdRequest;
     }
 
