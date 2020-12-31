@@ -21,16 +21,20 @@ import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
+import grand.app.akar.base.ParentActivity;
 import grand.app.akar.databinding.FragmentMyAccountBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.myAccount.models.ProfileDataResponse;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
 import grand.app.akar.pages.myAds.MyAdsMainFragment;
+import grand.app.akar.pages.profile.ProfileFragment;
 import grand.app.akar.pages.settings.AboutAppFragment;
 import grand.app.akar.pages.settings.ContactUsFragment;
 import grand.app.akar.pages.settings.TermsFragment;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.AppHelper;
 import grand.app.akar.utils.helper.MovementHelper;
+import grand.app.akar.utils.session.UserHelper;
 
 public class MyAccountFragment extends BaseFragment {
 
@@ -52,9 +56,12 @@ public class MyAccountFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            switch (((Mutable) o).message) {
+            switch (mutable.message) {
                 case Constants.ABOUT:
                     MovementHelper.startActivity(context, AboutAppFragment.class.getName(), null, null);
+                    break;
+                case Constants.PROFILE:
+                    MovementHelper.startActivity(context, ProfileFragment.class.getName(), null, null);
                     break;
                 case Constants.TERMS:
                     MovementHelper.startActivity(context, TermsFragment.class.getName(), null, null);
@@ -62,11 +69,14 @@ public class MyAccountFragment extends BaseFragment {
                 case Constants.CONTACT:
                     MovementHelper.startActivity(context, ContactUsFragment.class.getName(), getResources().getString(R.string.tv_account_contact), null);
                     break;
+                case Constants.SHARE_BAR:
+                    AppHelper.shareApp((ParentActivity) context);
+                    break;
                 case Constants.MY_ADS:
                     //0 => my listing , 1=> my-premium-listing
                     MovementHelper.startActivityWithBundle(context, new PassingObject(0), getResources().getString(R.string.my_ads), MyAdsMainFragment.class.getName(), null);
                     break;
-                 case Constants.MY_PREMIUM_ADS:
+                case Constants.MY_PREMIUM_ADS:
                     //0 => my listing , 1=> my-premium-listing
                     MovementHelper.startActivityWithBundle(context, new PassingObject(1), getResources().getString(R.string.my_fund_ads), MyAdsMainFragment.class.getName(), null);
                     break;
@@ -79,6 +89,8 @@ public class MyAccountFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
+        viewModel.userData = UserHelper.getInstance(context).getUserData();
+        viewModel.notifyChange();
     }
 
     @Override

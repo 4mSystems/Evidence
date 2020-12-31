@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -21,6 +22,9 @@ import java.lang.Object;
 public abstract class FragmentMyAccountBinding extends ViewDataBinding {
   @NonNull
   public final MaterialCardView accountCardContainer;
+
+  @NonNull
+  public final AppCompatImageView editIcon;
 
   @NonNull
   public final CircleImageView imgLoginLogo;
@@ -65,15 +69,17 @@ public abstract class FragmentMyAccountBinding extends ViewDataBinding {
   protected MyAccountViewModel mViewmodel;
 
   protected FragmentMyAccountBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      MaterialCardView accountCardContainer, CircleImageView imgLoginLogo,
-      CustomTextViewMedium tvAccountAbout, CustomTextViewMedium tvAccountContact,
-      CustomTextViewMedium tvAccountFundAds, CustomTextViewMedium tvAccountLogout,
-      CustomTextViewMedium tvAccountMyAds, CustomTextViewMedium tvAccountName,
-      CustomTextViewMedium tvAccountRate, CustomTextViewMedium tvAccountShare,
-      CustomTextViewMedium tvAccountSupportContact, CustomTextViewMedium tvAccountTerms,
-      CustomTextViewMedium tvAccountTitle, CustomTextViewRegular tvAccountType) {
+      MaterialCardView accountCardContainer, AppCompatImageView editIcon,
+      CircleImageView imgLoginLogo, CustomTextViewMedium tvAccountAbout,
+      CustomTextViewMedium tvAccountContact, CustomTextViewMedium tvAccountFundAds,
+      CustomTextViewMedium tvAccountLogout, CustomTextViewMedium tvAccountMyAds,
+      CustomTextViewMedium tvAccountName, CustomTextViewMedium tvAccountRate,
+      CustomTextViewMedium tvAccountShare, CustomTextViewMedium tvAccountSupportContact,
+      CustomTextViewMedium tvAccountTerms, CustomTextViewMedium tvAccountTitle,
+      CustomTextViewRegular tvAccountType) {
     super(_bindingComponent, _root, _localFieldCount);
     this.accountCardContainer = accountCardContainer;
+    this.editIcon = editIcon;
     this.imgLoginLogo = imgLoginLogo;
     this.tvAccountAbout = tvAccountAbout;
     this.tvAccountContact = tvAccountContact;

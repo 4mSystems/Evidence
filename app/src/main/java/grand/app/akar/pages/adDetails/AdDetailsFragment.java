@@ -48,6 +48,7 @@ import grand.app.akar.pages.ads.forms.AdsAttachmentsFragment;
 import grand.app.akar.pages.ads.models.CreateAdRequest;
 import grand.app.akar.pages.ads.models.LocationUpdateRequest;
 import grand.app.akar.pages.auth.models.cities.Cities;
+import grand.app.akar.pages.chat.view.ChatFragment;
 import grand.app.akar.pages.home.models.HomeData;
 import grand.app.akar.utils.Constants;
 import grand.app.akar.utils.helper.AppHelper;
@@ -97,6 +98,9 @@ public class AdDetailsFragment extends BaseFragment {
                     break;
                 case Constants.CALL:
                     MovementHelper.openDialNumber(viewModel.getAdDetailsData().getListing().getUser().getPhone(), context);
+                    break;
+                case Constants.CHAT:
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getAdDetailsData().getListing().getId(), String.valueOf(viewModel.getAdDetailsData().getListing().getUser().getId())), getString(R.string.menuConversations), ChatFragment.class.getName(), null);
                     break;
                 case Constants.SHARE_BAR:
                     AppHelper.shareCustom((Activity) context, viewModel.title, viewModel.title);

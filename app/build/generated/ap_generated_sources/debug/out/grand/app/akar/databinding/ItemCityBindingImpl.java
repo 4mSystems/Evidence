@@ -22,7 +22,7 @@ public class ItemCityBindingImpl extends ItemCityBinding implements grand.app.ak
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback148;
+    private final android.view.View.OnClickListener mCallback152;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemCityBindingImpl extends ItemCityBinding implements grand.app.ak
         this.tvHomeItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback148 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback152 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,7 +139,7 @@ public class ItemCityBindingImpl extends ItemCityBinding implements grand.app.ak
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback148);
+            this.mboundView0.setOnClickListener(mCallback152);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

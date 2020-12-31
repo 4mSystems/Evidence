@@ -18,6 +18,8 @@ public class HomeListLayoutBindingImpl extends HomeListLayoutBinding  {
     // views
     @NonNull
     private final android.widget.FrameLayout mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView1;
     // variables
     // values
     // listeners
@@ -28,11 +30,11 @@ public class HomeListLayoutBindingImpl extends HomeListLayoutBinding  {
     }
     private HomeListLayoutBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
-        this.catHomeRc.setTag(null);
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
+        this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -119,7 +121,7 @@ public class HomeListLayoutBindingImpl extends HomeListLayoutBinding  {
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.catHomeRc, viewmodelHomeAdapter, "1", "1");
+            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelHomeAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations

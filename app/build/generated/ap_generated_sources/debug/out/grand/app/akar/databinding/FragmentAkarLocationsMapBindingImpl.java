@@ -23,11 +23,11 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback49;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback48;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,9 +51,9 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback45 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback43 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback49 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback47 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback48 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -183,9 +183,9 @@ public class FragmentAkarLocationsMapBindingImpl extends FragmentAkarLocationsMa
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnDiffLocations.setOnClickListener(mCallback43);
-            this.confirmBtn.setOnClickListener(mCallback44);
-            this.editBtn.setOnClickListener(mCallback45);
+            this.btnDiffLocations.setOnClickListener(mCallback47);
+            this.confirmBtn.setOnClickListener(mCallback48);
+            this.editBtn.setOnClickListener(mCallback49);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

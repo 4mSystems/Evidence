@@ -92,8 +92,10 @@ public class AdsAttachmentsFragment extends BaseFragment {
                     MovementHelper.finishWithResult(viewModel.getPassingObject(), context);
                     break;
                 case Constants.UPDATE_IMAGES:
+                case Constants.REMOVE_IMAGE:
                     toastMessage(((StatusMessage) mutable.object).mMessage);
                     Constants.DATA_CHANGED = true;
+                    viewModel.goBack(context);
                     break;
                 case Constants.WARNING:
                     showError(getString(R.string.image_required));
@@ -106,6 +108,15 @@ public class AdsAttachmentsFragment extends BaseFragment {
                 pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
             else
                 showError(getString(R.string.remove_image_first));
+        });
+        viewModel.getImagesAdapter().getDeletedLiveData().observe((LifecycleOwner) context, new Observer<Integer>() {
+            @Override
+            public void onChanged(Integer integer) {
+                if (viewModel.getPassingObject().getSliderItemList().size() == 1)
+                    showError(getString(R.string.min_images_required));
+                else
+                    viewModel.removeImage(integer);
+            }
         });
     }
 

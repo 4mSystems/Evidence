@@ -22,7 +22,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements gran
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback176;
+    private final android.view.View.OnClickListener mCallback187;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements gran
         this.tvHomeItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback176 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback187 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,7 +139,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements gran
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback176);
+            this.mboundView0.setOnClickListener(mCallback187);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

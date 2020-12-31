@@ -20,7 +20,7 @@ public class Constants {
     public final static String UPDATE_PROFILE = "update_profile";
 
 
-    public final static String IMAGE = "image";
+    public final static String IMAGE = "img";
     public final static String IMAGES = "imgs";
     public final static String VIDEO = "video";
     public final static String PICK_VIDEO = "PICK_VIDEO";
@@ -151,8 +151,8 @@ public class Constants {
     public static final String DISMISS = "dismiss";
 
     public static final String CHAT = "chat";
-    public static final String ID = "id";
-    public static final String MINUS = "minus";
+    public static final String SEND_MESSAGE = "SEND_MESSAGE";
+    public static final int CUSTOM_REQUEST_CODE = 532;
     public static final String PLUS = "plus";
     public static final String LANGUAGE_SELECTED = "language_selected";
     public static final String TRUE = "true";

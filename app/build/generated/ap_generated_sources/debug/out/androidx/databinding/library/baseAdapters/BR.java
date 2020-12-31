@@ -89,11 +89,15 @@ public class BR {
 
   public static final int sliderItem = 43;
 
-  public static final int updateRequest = 44;
+  public static final int string = 44;
 
-  public static final int userDocuments = 45;
+  public static final int type = 45;
 
-  public static final int viewModel = 46;
+  public static final int updateRequest = 46;
 
-  public static final int viewmodel = 47;
+  public static final int userDocuments = 47;
+
+  public static final int viewModel = 48;
+
+  public static final int viewmodel = 49;
 }

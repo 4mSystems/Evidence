@@ -26,7 +26,103 @@ import java.lang.Object;
 
 public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
   @NonNull
+  public final CustomTextViewRegular adArea;
+
+  @NonNull
+  public final CustomTextViewRegular adAreaTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adBathN;
+
+  @NonNull
+  public final CustomTextViewRegular adBathNTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adBuilding;
+
+  @NonNull
+  public final CustomTextViewRegular adBuildingTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adBuildingYear;
+
+  @NonNull
+  public final CustomTextViewRegular adBuildingYearTxt;
+
+  @NonNull
   public final CustomTextViewMedium adDesc;
+
+  @NonNull
+  public final CustomTextViewRegular adDoc;
+
+  @NonNull
+  public final CustomTextViewRegular adDocTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adFloorN;
+
+  @NonNull
+  public final CustomTextViewRegular adFloorNTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adFontTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adFront;
+
+  @NonNull
+  public final CustomTextViewRegular adId;
+
+  @NonNull
+  public final CustomTextViewRegular adIdTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adKitchenN;
+
+  @NonNull
+  public final CustomTextViewRegular adKitchenNTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adLand;
+
+  @NonNull
+  public final CustomTextViewRegular adLandTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adLastUpdated;
+
+  @NonNull
+  public final CustomTextViewRegular adLastUpdatedTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adPayment;
+
+  @NonNull
+  public final CustomTextViewRegular adPaymentTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adRoomN;
+
+  @NonNull
+  public final CustomTextViewRegular adRoomNTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adStreetWidth;
+
+  @NonNull
+  public final CustomTextViewRegular adStreetWidthTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adTotalArea;
+
+  @NonNull
+  public final CustomTextViewRegular adTotalAreaTxt;
+
+  @NonNull
+  public final CustomTextViewRegular adViews;
+
+  @NonNull
+  public final CustomTextViewRegular adViewsTxt;
 
   @NonNull
   public final CustomTextViewMedium address;
@@ -83,6 +179,9 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
   public final RecyclerView selectedRc;
 
   @NonNull
+  public final RecyclerView servicesRc;
+
+  @NonNull
   public final CustomTextViewMedium share;
 
   @NonNull
@@ -107,23 +206,119 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
   public final View v19;
 
   @NonNull
+  public final View v20;
+
+  @NonNull
+  public final View v21;
+
+  @NonNull
+  public final View v22;
+
+  @NonNull
+  public final View v23;
+
+  @NonNull
+  public final View v24;
+
+  @NonNull
+  public final View v25;
+
+  @NonNull
+  public final View v26;
+
+  @NonNull
+  public final View v27;
+
+  @NonNull
+  public final View v28;
+
+  @NonNull
+  public final View v29;
+
+  @NonNull
+  public final View v30;
+
+  @NonNull
+  public final View v31;
+
+  @NonNull
+  public final View v32;
+
+  @NonNull
+  public final View v33;
+
+  @NonNull
+  public final View v34;
+
+  @NonNull
+  public final View v35;
+
+  @NonNull
   public final View v5;
 
   @Bindable
   protected AdDetailsViewModel mViewModel;
 
   protected FragmentAdDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium adDesc, CustomTextViewMedium address, AppCompatImageView back,
-      Barrier br4, CustomTextViewMedium call, SliderView coverImage, CustomTextViewMedium delete,
-      CustomTextViewRegular desc, CustomTextViewRegular descText, CardView detailsCard,
-      CustomTextViewMedium favorite, BubbleView heart, MaterialCardView imgHomeItem,
-      AppCompatImageView map, CustomTextViewMedium price, CustomTextViewMedium refresh,
-      CustomTextViewMedium report, ConstraintLayout searchContainer, RecyclerView selectedRc,
-      CustomTextViewMedium share, CustomTextViewMedium shareOwner, CustomTextViewRegular tvHomeDesc,
+      CustomTextViewRegular adArea, CustomTextViewRegular adAreaTxt, CustomTextViewRegular adBathN,
+      CustomTextViewRegular adBathNTxt, CustomTextViewRegular adBuilding,
+      CustomTextViewRegular adBuildingTxt, CustomTextViewRegular adBuildingYear,
+      CustomTextViewRegular adBuildingYearTxt, CustomTextViewMedium adDesc,
+      CustomTextViewRegular adDoc, CustomTextViewRegular adDocTxt, CustomTextViewRegular adFloorN,
+      CustomTextViewRegular adFloorNTxt, CustomTextViewRegular adFontTxt,
+      CustomTextViewRegular adFront, CustomTextViewRegular adId, CustomTextViewRegular adIdTxt,
+      CustomTextViewRegular adKitchenN, CustomTextViewRegular adKitchenNTxt,
+      CustomTextViewRegular adLand, CustomTextViewRegular adLandTxt,
+      CustomTextViewRegular adLastUpdated, CustomTextViewRegular adLastUpdatedTxt,
+      CustomTextViewRegular adPayment, CustomTextViewRegular adPaymentTxt,
+      CustomTextViewRegular adRoomN, CustomTextViewRegular adRoomNTxt,
+      CustomTextViewRegular adStreetWidth, CustomTextViewRegular adStreetWidthTxt,
+      CustomTextViewRegular adTotalArea, CustomTextViewRegular adTotalAreaTxt,
+      CustomTextViewRegular adViews, CustomTextViewRegular adViewsTxt, CustomTextViewMedium address,
+      AppCompatImageView back, Barrier br4, CustomTextViewMedium call, SliderView coverImage,
+      CustomTextViewMedium delete, CustomTextViewRegular desc, CustomTextViewRegular descText,
+      CardView detailsCard, CustomTextViewMedium favorite, BubbleView heart,
+      MaterialCardView imgHomeItem, AppCompatImageView map, CustomTextViewMedium price,
+      CustomTextViewMedium refresh, CustomTextViewMedium report, ConstraintLayout searchContainer,
+      RecyclerView selectedRc, RecyclerView servicesRc, CustomTextViewMedium share,
+      CustomTextViewMedium shareOwner, CustomTextViewRegular tvHomeDesc,
       CustomTextViewMedium tvHomeItem, CardView tvPormote, CardView tvRemove, View v18, View v19,
-      View v5) {
+      View v20, View v21, View v22, View v23, View v24, View v25, View v26, View v27, View v28,
+      View v29, View v30, View v31, View v32, View v33, View v34, View v35, View v5) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.adArea = adArea;
+    this.adAreaTxt = adAreaTxt;
+    this.adBathN = adBathN;
+    this.adBathNTxt = adBathNTxt;
+    this.adBuilding = adBuilding;
+    this.adBuildingTxt = adBuildingTxt;
+    this.adBuildingYear = adBuildingYear;
+    this.adBuildingYearTxt = adBuildingYearTxt;
     this.adDesc = adDesc;
+    this.adDoc = adDoc;
+    this.adDocTxt = adDocTxt;
+    this.adFloorN = adFloorN;
+    this.adFloorNTxt = adFloorNTxt;
+    this.adFontTxt = adFontTxt;
+    this.adFront = adFront;
+    this.adId = adId;
+    this.adIdTxt = adIdTxt;
+    this.adKitchenN = adKitchenN;
+    this.adKitchenNTxt = adKitchenNTxt;
+    this.adLand = adLand;
+    this.adLandTxt = adLandTxt;
+    this.adLastUpdated = adLastUpdated;
+    this.adLastUpdatedTxt = adLastUpdatedTxt;
+    this.adPayment = adPayment;
+    this.adPaymentTxt = adPaymentTxt;
+    this.adRoomN = adRoomN;
+    this.adRoomNTxt = adRoomNTxt;
+    this.adStreetWidth = adStreetWidth;
+    this.adStreetWidthTxt = adStreetWidthTxt;
+    this.adTotalArea = adTotalArea;
+    this.adTotalAreaTxt = adTotalAreaTxt;
+    this.adViews = adViews;
+    this.adViewsTxt = adViewsTxt;
     this.address = address;
     this.back = back;
     this.br4 = br4;
@@ -142,6 +337,7 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
     this.report = report;
     this.searchContainer = searchContainer;
     this.selectedRc = selectedRc;
+    this.servicesRc = servicesRc;
     this.share = share;
     this.shareOwner = shareOwner;
     this.tvHomeDesc = tvHomeDesc;
@@ -150,6 +346,22 @@ public abstract class FragmentAdDetailsBinding extends ViewDataBinding {
     this.tvRemove = tvRemove;
     this.v18 = v18;
     this.v19 = v19;
+    this.v20 = v20;
+    this.v21 = v21;
+    this.v22 = v22;
+    this.v23 = v23;
+    this.v24 = v24;
+    this.v25 = v25;
+    this.v26 = v26;
+    this.v27 = v27;
+    this.v28 = v28;
+    this.v29 = v29;
+    this.v30 = v30;
+    this.v31 = v31;
+    this.v32 = v32;
+    this.v33 = v33;
+    this.v34 = v34;
+    this.v35 = v35;
     this.v5 = v5;
   }
 

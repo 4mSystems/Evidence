@@ -133,8 +133,7 @@ public class AttachmentsViewModel extends BaseViewModel {
                 if (getFileObjectList().size() > 0) {
                     if (!TextUtils.isEmpty(getFileObjectVideo().getFilePath()))
                         fileObjectList.add(getFileObjectVideo());
-                    Log.e("updateImages", "updateImages: "+ getImagesAdapter().getDeletedIdsList().toString());
-                    compositeDisposable.add(repository.updateAdImages(new UpdatedImagesRequest(getImagesAdapter().getDeletedIdsList().toString(), getPassingObject().getId()), getFileObjectList()));
+                    compositeDisposable.add(repository.updateAdImages(new UpdatedImagesRequest(getPassingObject().getId()), getFileObjectList()));
                 } else
                     liveData.setValue(new Mutable(Constants.WARNING));
             }
@@ -145,6 +144,10 @@ public class AttachmentsViewModel extends BaseViewModel {
     public void removeVideo() {
         setFileObjectVideo(new FileObject());
         liveData.setValue(new Mutable(Constants.REMOVE_VIDEO));
+    }
+
+    public void removeImage(int imgId) {
+        compositeDisposable.add(repository.removeImage(imgId));
     }
 
     public List<FileObject> getFileObjectList() {

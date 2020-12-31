@@ -243,7 +243,7 @@ public class ItemChatBindingImpl extends ItemChatBinding  {
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.rcChat, itemChatViewModelImagesAdapter, "2", "2");
+            grand.app.akar.base.ApplicationBinding.getItemsV2Binding(this.rcChat, itemChatViewModelImagesAdapter, "1", "2");
         }
     }
     // Listener Stub Implementations

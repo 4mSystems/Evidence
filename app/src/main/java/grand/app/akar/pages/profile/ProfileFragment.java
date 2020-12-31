@@ -30,7 +30,9 @@ import grand.app.akar.connection.FileObject;
 import grand.app.akar.databinding.FragmentProfileBinding;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.auth.models.UsersResponse;
+import grand.app.akar.pages.auth.payment.PaymentFragment;
 import grand.app.akar.utils.Constants;
+import grand.app.akar.utils.helper.MovementHelper;
 import grand.app.akar.utils.resources.ResourceManager;
 import grand.app.akar.utils.session.UserHelper;
 import grand.app.akar.utils.upload.FileOperations;
@@ -64,9 +66,11 @@ public class ProfileFragment extends BaseFragment {
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
                     break;
                 case Constants.UPDATE_PROFILE:
+                    if (viewModel.getType() != 0)
+                        MovementHelper.startActivity(context, PaymentFragment.class.getName(), null, null);
                     UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
                     toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
-//                    viewModel.goBack(context);
+                    viewModel.goBack(context);
                     break;
 
             }
@@ -93,7 +97,7 @@ public class ProfileFragment extends BaseFragment {
         if (requestCode == Constants.FILE_TYPE_IMAGE) {
             FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
             viewModel.getFileObject().add(fileObject);
-//            binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
+            binding.imgLoginLogo.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

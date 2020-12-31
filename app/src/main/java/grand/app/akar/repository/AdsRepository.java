@@ -81,6 +81,11 @@ public class AdsRepository extends BaseRepository {
                 Constants.REMOVE_AD, true);
     }
 
+    public Disposable removeImage(int imgId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REMOVE_IMAGE + imgId, new Object(), StatusMessage.class,
+                Constants.REMOVE_IMAGE, true);
+    }
+
     public Disposable getAdDetails(int listingId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_AD_DETAILS + listingId, new Object(), AdDetailsResponse.class,
                 Constants.GET_AD_DETAILS, true);

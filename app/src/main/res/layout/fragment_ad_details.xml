@@ -19,9 +19,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="@{viewModel.adDetailsData.listing!=null?View.VISIBLE:View.GONE,default=gone}">
-
+            android:layout_height="match_parent">
+            <!--            android:visibility="@{viewModel.adDetailsData.listing!=null?View.VISIBLE:View.GONE,default=gone}"-->
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/cover_image"
                 android:layout_width="wrap_content"
@@ -51,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp20w"
+                android:onClick="@{()->viewModel.goBack(context)}"
                 android:rotation="180"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,13 +142,637 @@
 
             </androidx.cardview.widget.CardView>
 
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_area"
+                android:drawablePadding="@dimen/dp4w"
+                android:text="@string/area"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details_card" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_area_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.floorArea.concat(` `).concat(@string/meter):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/details_card" />
+
             <View
                 android:id="@+id/v18"
                 android:layout_width="match_parent"
-                android:layout_height="4dp"
+                android:layout_height="2dp"
                 android:layout_marginTop="@dimen/dp12h"
                 android:background="@color/overlayBackground"
-                app:layout_constraintTop_toBottomOf="@id/details_card" />
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.frontNo!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_area_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_villa_ad"
+                android:drawablePadding="@dimen/dp4w"
+                android:text="@string/front_count"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.frontNo!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v18" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_font_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.frontNo!=0?String.valueOf(viewModel.adDetailsData.listing.listingOptions.frontNo):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.frontNo!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v18" />
+
+            <View
+                android:id="@+id/v20"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.roomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_font_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_room_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_living_room"
+                android:drawablePadding="@dimen/dp4w"
+                android:text="@string/ad_rooms_count"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.roomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v20" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_room_n_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.roomNo:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.roomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v20" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v21"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.bathroomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_room_n_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_bath_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_bathroom_ad"
+                android:drawablePadding="@dimen/dp4w"
+                android:text="@string/ad_bath_count"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.bathroomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v21" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_bath_n_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.bathroomNo:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.bathroomNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v21" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v22"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.streetWidth!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_bath_n_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_street_width"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_street"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/street_size"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.streetWidth!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v22" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_street_width_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null &amp;&amp;viewModel.adDetailsData.listing.listingOptions!=null?String.valueOf(viewModel.adDetailsData.listing.listingOptions.streetWidth).concat(` `).concat(@string/meter):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; viewModel.adDetailsData.listing.listingOptions.streetWidth!=0?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v22" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v23"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.floorNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_street_width_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_floor_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_steps"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/floor_number"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.floorNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v23" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_floor_n_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.floorNo:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.floorNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v23" />
+
+            <View
+                android:id="@+id/v24"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_floor_n_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_building"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_building"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/building_age"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v24" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_building_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.buildingAge(viewModel.adDetailsData).concat(` `).concat(@string/year):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v24" />
+
+            <View
+                android:id="@+id/v25"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.area.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_building_txt" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_land"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_area"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/land_size_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.area.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v25" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_land_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.area.concat(` `).concat(@string/meter):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.area.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v25" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v26"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.totalArea.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_land_txt" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_total_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_area"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/area_tatal_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.totalArea.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v26" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_total_area_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.totalArea.concat(` `).concat(@string/meter):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.totalArea.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v26" />
+
+            <View
+                android:id="@+id/v27"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.kitchenNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/ad_total_area_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_kitchen_n"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_kitchen"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/kitchen_count_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.kitchenNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v27" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_kitchen_n_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.kitchenNo:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:visibility="@{viewModel.adDetailsData.listing!=null &amp;&amp; !viewModel.adDetailsData.listing.kitchenNo.equals(`0`)?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v27" />
+
+            <View
+                android:id="@+id/v28"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_kitchen_n_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_building_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_crane"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/building_year_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v28" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_building_year_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.buildingYear:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v28" />
+
+            <View
+                android:id="@+id/v29"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_building_year_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_credit_card"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/payment_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v29" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_payment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.paymentMethod:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v29" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v30"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_payment_txt" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_doc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:drawableStart="@drawable/ic_official_documents"
+                android:drawablePadding="@dimen/dp4w"
+                android:gravity="center"
+                android:text="@string/doc_type_ad"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v30" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_doc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.docType:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v30" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v31"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_doc_txt" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:gravity="center"
+                android:text="@string/ad_id"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v31" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_id_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?String.valueOf(viewModel.adDetailsData.listing.id):``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v31" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v32"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_id_txt" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_last_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:gravity="center"
+                android:text="@string/ad_last_updated"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v32" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_last_updated_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.createdAt:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v32" />
+            <!--            android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.area!=null?View.VISIBLE:View.GONE,default=gone}"-->
+            <View
+                android:id="@+id/v33"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_last_updated_txt" />
+
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:gravity="center"
+                android:text="@string/ad_views"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v33" />
+
+            <grand.app.akar.customViews.views.CustomTextViewRegular
+                android:id="@+id/ad_views_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp18w"
+                android:layout_marginTop="@dimen/dp4h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:text="@{viewModel.adDetailsData.listing!=null?viewModel.adDetailsData.listing.views:``}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/v33" />
+
+            <View
+                android:id="@+id/v34"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                app:layout_constraintTop_toBottomOf="@id/ad_views_txt" />
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
                 android:id="@+id/ad_desc"
@@ -163,7 +787,7 @@
                 android:textColor="@color/black"
                 android:visibility="@{viewModel.adDetailsData.listing.listingOptions!=null &amp;&amp;viewModel.adDetailsData.listing.listingOptions.desc!=null?View.VISIBLE:View.GONE,default=gone}"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/v18" />
+                app:layout_constraintTop_toBottomOf="@id/v34" />
 
             <grand.app.akar.customViews.views.CustomTextViewRegular
                 android:id="@+id/desc_text"
@@ -188,6 +812,28 @@
                 android:visibility="@{viewModel.adDetailsData!=null&amp;&amp; viewModel.adDetailsData.listing.userId==viewModel.userData.id?View.GONE:View.VISIBLE,default=gone}"
                 app:layout_constraintTop_toBottomOf="@id/desc_text" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/services_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginBottom="@dimen/dp40h"
+                app:adapter="@{viewModel.servicesAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/v19"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}" />
+
+            <View
+                android:id="@+id/v35"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/dp12h"
+                android:background="@color/overlayBackground"
+                android:visibility="@{viewModel.adDetailsData!=null&amp;&amp; viewModel.adDetailsData.listing.userId==viewModel.userData.id?View.GONE:View.VISIBLE,default=gone}"
+                app:layout_constraintTop_toBottomOf="@id/services_rc" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/img_home_item"
                 android:layout_width="wrap_content"
@@ -198,7 +844,7 @@
                 android:visibility="@{viewModel.adDetailsData!=null&amp;&amp; viewModel.adDetailsData.listing.userId==viewModel.userData.id?View.GONE:View.VISIBLE,default=gone}"
                 app:cardCornerRadius="@dimen/dp8w"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/v19">
+                app:layout_constraintTop_toBottomOf="@+id/v35">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="@dimen/dp90w"
@@ -287,6 +933,7 @@
                     android:drawableStart="@drawable/ic_chat_bubbles_with_ellipsis"
                     android:drawablePadding="@dimen/dp4w"
                     android:gravity="center"
+                    android:onClick="@{()-> viewModel.chat()}"
                     android:padding="@dimen/dp8h"
                     android:text="@string/chat_client"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -330,13 +977,14 @@
                 app:layout_constraintEnd_toEndOf="@id/map"
                 app:layout_constraintStart_toStartOf="@id/map"
                 app:layout_constraintTop_toTopOf="@id/map">
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="@{()->viewModel.toMap()}"
-                    app:imageUrl="@{viewModel.adDetailsData.listing.defaultImg.media}"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/splash" />
+                    android:src="@drawable/splash"
+                    app:imageUrl="@{viewModel.adDetailsData.listing.defaultImg.media}" />
             </com.github.florent37.shapeofview.shapes.BubbleView>
 
             <androidx.recyclerview.widget.RecyclerView

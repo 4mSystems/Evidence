@@ -29,8 +29,8 @@ import grand.app.akar.utils.helper.MovementHelper;
 public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuView> {
     public List<OrderImages> orderImagesList;
     private Context context;
-    private MutableLiveData<Integer> newImageLiveData = new MediatorLiveData<>();
-    private List<Integer> deletedIdsList = new ArrayList<>();
+    private MutableLiveData<Integer> newImageLiveData = new MutableLiveData<>();
+    private MutableLiveData<Integer> deletedLiveData = new MutableLiveData<>();
 
     public AdImagesAdapter() {
         this.orderImagesList = new ArrayList<>();
@@ -40,8 +40,8 @@ public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuVi
         return newImageLiveData;
     }
 
-    public List<Integer> getDeletedIdsList() {
-        return deletedIdsList;
+    public MutableLiveData<Integer> getDeletedLiveData() {
+        return deletedLiveData;
     }
 
     @NonNull
@@ -62,12 +62,10 @@ public class AdImagesAdapter extends RecyclerView.Adapter<AdImagesAdapter.MenuVi
             if (o.equals(Constants.NEW_IMAGE)) {
                 newImageLiveData.setValue(position);
             } else if (o.equals(Constants.REMOVE_IMAGE)) {
-                orderImagesList.get(position).setPath("");
                 if (menuModel.getId() != 0) {
-                    deletedIdsList.add(menuModel.getId());
-                    menuModel.setId(0);
-                }
-                Log.e("onBindViewHolder", "onBindViewHolder: " + menuModel.getDeletedId());
+                    deletedLiveData.setValue(menuModel.getId());
+                } else
+                    orderImagesList.get(position).setPath("");
                 notifyDataSetChanged();
             }
         });

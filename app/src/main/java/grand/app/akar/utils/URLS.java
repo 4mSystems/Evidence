@@ -34,6 +34,7 @@ public class URLS {
     public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
     public final static String REMOVE_AD = "listings/delete-listing/";
     public final static String GET_AD_DETAILS = "listings/listing/";
+    public final static String REMOVE_IMAGE = "listings/delete-img/";
 
 
     public static final String SEND_REPORT = "listings/report";
@@ -44,4 +45,5 @@ public class URLS {
     public static final String UPDATE_IMAGES = "listings/update-listing-images";
     public static final String CONVERSATIONS = "settings/messages-history";
     public static final String CHAT = "settings/messages/";
+    public static final String SEND_MESSAGE = "settings/send-message";
 }

@@ -336,5 +336,23 @@
     <string name="remove_image_first">يجب حذف الصورة اولا</string>
     <string name="delete_warning">هل تريد حذف الإعلان</string>
     <string name="yes">نعم</string>
+    <string name="max_files">لقد توصلت للحد الاقصى</string>
+    <string name="pick_file_title">إختيار الصور</string>
+    <string name="image_selected">تم إختيار الصور بنجاح اضغط للارسال</string>
+    <string name="min_images_required">لا يمكن اتمام عمليه الحذف ,لابد من وجود صورة واحده على الاقل</string>
+    <string name="area">المساحه</string>
+    <string name="ad_rooms_count">عدد الحجرات</string>
+    <string name="ad_bath_count">عدد الحمامات</string>
+    <string name="building_age">عمر العقار</string>
+    <string name="year">سنه</string>
+    <string name="land_size_ad">مساحه الارض</string>
+    <string name="area_tatal_ad">مساحه المبنى الكليه</string>
+    <string name="kitchen_count_ad">عدد المطابخ</string>
+    <string name="building_year_ad">سنه البناء</string>
+    <string name="payment_ad">طريقه الدفع</string>
+    <string name="doc_type_ad">نوع المستند</string>
+    <string name="ad_id">رقم الاعلان</string>
+    <string name="ad_last_updated">أخر تحديث</string>
+    <string name="ad_views">عدد المشاهدات</string>
 
 </resources>

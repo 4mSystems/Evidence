@@ -2,12 +2,15 @@ package grand.app.akar.repository;
 
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import grand.app.akar.connection.FileObject;
 import grand.app.akar.pages.chat.model.ChatRequest;
 import grand.app.akar.pages.chat.model.ChatResponse;
+import grand.app.akar.pages.chat.model.ChatSendResponse;
 import grand.app.akar.pages.conversations.models.ConversationsResponse;
 import io.reactivex.disposables.Disposable;
 import grand.app.akar.connection.ConnectionHelper;
@@ -44,7 +47,14 @@ public class ChatRepository extends BaseRepository {
                 Constants.CHAT, true);
     }
 
-    public void sendChat(ChatRequest request, FileObject image) {
+    public Disposable sendChat(ChatRequest request, List<FileObject> fileObjectList) {
+        if (fileObjectList != null && fileObjectList.size() > 0) {
+            request.setText(null);
+            return connectionHelper.requestApi(URLS.SEND_MESSAGE, request, fileObjectList, ChatSendResponse.class,
+                    Constants.SEND_MESSAGE, true);
+        } else
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEND_MESSAGE, request, ChatSendResponse.class,
+                    Constants.SEND_MESSAGE, true);
 
     }
 }

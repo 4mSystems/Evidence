@@ -27,7 +27,7 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding implement
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback97;
+    private final android.view.View.OnClickListener mCallback101;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding implement
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback97 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback101 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -125,7 +125,7 @@ public class FragmentAdsInfoBindingImpl extends FragmentAdsInfoBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.confirmBtn.setOnClickListener(mCallback97);
+            this.confirmBtn.setOnClickListener(mCallback101);
         }
     }
     // Listener Stub Implementations

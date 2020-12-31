@@ -14,54 +14,60 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_account_title, 10);
-        sViewsWithIds.put(R.id.img_login_logo, 11);
-        sViewsWithIds.put(R.id.account_card_container, 12);
-        sViewsWithIds.put(R.id.tv_account_support_contact, 13);
-        sViewsWithIds.put(R.id.tv_account_rate, 14);
+        sViewsWithIds.put(R.id.tv_account_title, 12);
+        sViewsWithIds.put(R.id.account_card_container, 13);
+        sViewsWithIds.put(R.id.tv_account_support_contact, 14);
+        sViewsWithIds.put(R.id.tv_account_rate, 15);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback158;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback156;
+    @Nullable
     private final android.view.View.OnClickListener mCallback154;
     @Nullable
-    private final android.view.View.OnClickListener mCallback152;
+    private final android.view.View.OnClickListener mCallback160;
     @Nullable
-    private final android.view.View.OnClickListener mCallback150;
+    private final android.view.View.OnClickListener mCallback159;
     @Nullable
-    private final android.view.View.OnClickListener mCallback149;
+    private final android.view.View.OnClickListener mCallback157;
     @Nullable
     private final android.view.View.OnClickListener mCallback155;
     @Nullable
     private final android.view.View.OnClickListener mCallback153;
     @Nullable
-    private final android.view.View.OnClickListener mCallback151;
+    private final android.view.View.OnClickListener mCallback161;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentMyAccountBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private FragmentMyAccountBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.card.MaterialCardView) bindings[12]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[11]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[4]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[3]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[1]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[14]
+            , (com.google.android.material.card.MaterialCardView) bindings[13]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[8]
-            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[13]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[7]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[6]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[11]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[5]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[15]
             , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[10]
-            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[2]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[14]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[9]
+            , (grand.app.akar.customViews.views.CustomTextViewMedium) bindings[12]
+            , (grand.app.akar.customViews.views.CustomTextViewRegular) bindings[3]
             );
+        this.editIcon.setTag(null);
+        this.imgLoginLogo.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         this.tvAccountAbout.setTag(null);
@@ -75,13 +81,15 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         this.tvAccountType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback154 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback152 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback150 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback149 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback155 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback153 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback151 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback158 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback156 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback154 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback160 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback159 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
+        mCallback157 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback155 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback153 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback161 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
         invalidateAll();
     }
 
@@ -155,6 +163,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         java.lang.String viewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = null;
         java.lang.String viewmodelUserDataName = null;
         grand.app.akar.pages.auth.models.UserData viewmodelUserData = null;
+        java.lang.String viewmodelUserDataImg = null;
         boolean viewmodelUserDataTypeInt1 = false;
         java.lang.String viewmodelUserDataTypeInt0JavaLangStringTvAccountTypeAndroidStringSeekerJavaLangStringViewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString = null;
         grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
@@ -174,6 +183,8 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                     viewmodelUserDataType = viewmodelUserData.getType();
                     // read viewmodel.userData.name
                     viewmodelUserDataName = viewmodelUserData.getName();
+                    // read viewmodel.userData.img
+                    viewmodelUserDataImg = viewmodelUserData.getImg();
                 }
 
 
@@ -217,17 +228,20 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.tvAccountAbout.setOnClickListener(mCallback152);
-            this.tvAccountContact.setOnClickListener(mCallback151);
-            this.tvAccountFundAds.setOnClickListener(mCallback150);
-            this.tvAccountLogout.setOnClickListener(mCallback155);
-            this.tvAccountMyAds.setOnClickListener(mCallback149);
-            this.tvAccountShare.setOnClickListener(mCallback154);
-            this.tvAccountTerms.setOnClickListener(mCallback153);
+            this.editIcon.setOnClickListener(mCallback154);
+            this.imgLoginLogo.setOnClickListener(mCallback153);
+            this.tvAccountAbout.setOnClickListener(mCallback158);
+            this.tvAccountContact.setOnClickListener(mCallback157);
+            this.tvAccountFundAds.setOnClickListener(mCallback156);
+            this.tvAccountLogout.setOnClickListener(mCallback161);
+            this.tvAccountMyAds.setOnClickListener(mCallback155);
+            this.tvAccountShare.setOnClickListener(mCallback160);
+            this.tvAccountTerms.setOnClickListener(mCallback159);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
+            grand.app.akar.base.ApplicationBinding.loadImage(this.imgLoginLogo, viewmodelUserDataImg);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountName, viewmodelUserDataName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvAccountType, viewmodelUserDataTypeInt0JavaLangStringTvAccountTypeAndroidStringSeekerJavaLangStringViewmodelUserDataTypeInt1JavaLangStringTvAccountTypeAndroidStringOwnerJavaLangStringJavaLangStringTvAccountTypeAndroidStringRealtorJavaLangString);
         }
@@ -249,7 +263,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toReviews();
+                    viewmodel.toAbout();
                 }
                 break;
             }
@@ -266,7 +280,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toAbout();
+                    viewmodel.toMyPremiumAds();
                 }
                 break;
             }
@@ -283,11 +297,11 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toMyPremiumAds();
+                    viewmodel.toProfile();
                 }
                 break;
             }
-            case 1: {
+            case 8: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -300,7 +314,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toMyAds();
+                    viewmodel.toShare();
                 }
                 break;
             }
@@ -317,7 +331,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toReviews();
+                    viewmodel.toTerms();
                 }
                 break;
             }
@@ -334,7 +348,7 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toTerms();
+                    viewmodel.toSettings();
                 }
                 break;
             }
@@ -351,7 +365,41 @@ public class FragmentMyAccountBindingImpl extends FragmentMyAccountBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toSettings();
+                    viewmodel.toMyAds();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toProfile();
+                }
+                break;
+            }
+            case 9: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toLogout();
                 }
                 break;
             }

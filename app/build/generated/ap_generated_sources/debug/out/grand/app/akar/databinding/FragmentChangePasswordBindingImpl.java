@@ -28,9 +28,9 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback96;
+    private final android.view.View.OnClickListener mCallback100;
     @Nullable
-    private final android.view.View.OnClickListener mCallback95;
+    private final android.view.View.OnClickListener mCallback99;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -133,8 +133,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback96 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback95 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback100 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback99 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -229,10 +229,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback96);
+            this.appCompatButtonNext.setOnClickListener(mCallback100);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback95);
+            this.mboundView1.setOnClickListener(mCallback99);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

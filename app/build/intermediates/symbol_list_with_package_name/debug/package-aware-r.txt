@@ -40,6 +40,8 @@ anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
 anim shake_vibrate
+anim slide_left_in
+anim slide_left_out
 anim wave_1
 anim wave_2
 animator design_appbar_state_list_animator
@@ -117,6 +119,7 @@ attr applyMotionScene
 attr arcMode
 attr arrowHeadLength
 attr arrowShaftLength
+attr arrow_posititon_percent
 attr attributeName
 attr autoCompleteTextViewStyle
 attr autoSizeMaxTextSize
@@ -338,6 +341,10 @@ attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
 attr colorSwitchThumbNormal
+attr color_checked
+attr color_tick
+attr color_unchecked
+attr color_unchecked_stroke
 attr commitIcon
 attr constraintSet
 attr constraintSetEnd
@@ -908,7 +915,6 @@ attr shapeAppearanceLargeComponent
 attr shapeAppearanceMediumComponent
 attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
-attr shape_arc_cropDirection
 attr shape_arc_height
 attr shape_arc_position
 attr shape_bubble_arrowHeight
@@ -923,8 +929,14 @@ attr shape_cutCorner_bottomRightSize
 attr shape_cutCorner_topLeftSize
 attr shape_cutCorner_topRightSize
 attr shape_diagonal_angle
-attr shape_diagonal_direction
 attr shape_diagonal_position
+attr shape_dot_radius
+attr shape_dot_spacing
+attr shape_dottedEdgesCutCorner_bottomLeftSize
+attr shape_dottedEdgesCutCorner_bottomRightSize
+attr shape_dottedEdgesCutCorner_topLeftSize
+attr shape_dottedEdgesCutCorner_topRightSize
+attr shape_edge_position
 attr shape_polygon_noOfSides
 attr shape_roundRect_borderColor
 attr shape_roundRect_borderWidth
@@ -996,6 +1008,7 @@ attr statusBarForeground
 attr statusBarScrim
 attr strokeColor
 attr strokeWidth
+attr stroke_width
 attr subMenuArrow
 attr submitBackground
 attr subtitle
@@ -1211,6 +1224,7 @@ color background_material_dark
 color background_material_light
 color bg_grand_call
 color bg_grand_what
+color bg_gray
 color black
 color bottom_menu_normal
 color bright_foreground_disabled_material_dark
@@ -1226,7 +1240,9 @@ color cardview_light_background
 color cardview_shadow_end_color
 color cardview_shadow_start_color
 color cat_background
+color checkbox_color
 color checkbox_themeable_attribute_color
+color checkbox_unchecked_color
 color circle_shadow
 color colorAccent
 color colorLight
@@ -1791,6 +1807,8 @@ color quantum_yellowA700
 color radiobutton_themeable_attribute_color
 color ripple_material_dark
 color ripple_material_light
+color row_active
+color search_icon_color
 color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
@@ -1807,6 +1825,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color transparent_black
 color warningColor
 color white
 color zxing_transparent
@@ -2989,6 +3008,10 @@ dimen fastscroll__handle_width
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen file_icon_height
+dimen file_icon_width
+dimen file_item_checkbox_size
+dimen file_name_textSize
 dimen google_1x
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
@@ -3754,6 +3777,7 @@ drawable flag_wallis_and_futuna
 drawable flag_yemen
 drawable flag_zambia
 drawable flag_zimbabwe
+drawable gallery_album_overlay
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable grand_exit
@@ -3773,6 +3797,7 @@ drawable ic_action_name
 drawable ic_add
 drawable ic_airplane
 drawable ic_airplanemode_inactive_24dp
+drawable ic_area
 drawable ic_arrow_down_medium
 drawable ic_attach
 drawable ic_auth_password
@@ -3780,8 +3805,11 @@ drawable ic_auth_phone
 drawable ic_back
 drawable ic_backspace_black_24dp
 drawable ic_bathroom
+drawable ic_bathroom_ad
 drawable ic_bed_with_two_pillows_bottom_view
+drawable ic_building
 drawable ic_call_white
+drawable ic_camera
 drawable ic_chat
 drawable ic_chat_bubbles_with_ellipsis
 drawable ic_check_white_24dp
@@ -3792,10 +3820,13 @@ drawable ic_client
 drawable ic_clock_black_24dp
 drawable ic_close
 drawable ic_contact_location
+drawable ic_crane
+drawable ic_credit_card
 drawable ic_current
 drawable ic_current_location
 drawable ic_custom_map_marker
 drawable ic_delete
+drawable ic_deselect_all
 drawable ic_distance
 drawable ic_driver_location
 drawable ic_edit
@@ -3815,6 +3846,7 @@ drawable ic_home
 drawable ic_icon_favorites
 drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
+drawable ic_kitchen
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_layout
@@ -3831,24 +3863,36 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_my_ads
 drawable ic_no_wifi_1
 drawable ic_no_wifi_2
+drawable ic_official_documents
 drawable ic_pin
 drawable ic_pinned
 drawable ic_play
+drawable ic_play_icon
 drawable ic_profile_camera
 drawable ic_remove
 drawable ic_search
+drawable ic_select_all
 drawable ic_send
 drawable ic_sort
 drawable ic_special_pormote
+drawable ic_steps
+drawable ic_street
 drawable ic_swap_vert_24dp
 drawable ic_time
 drawable ic_toggel_category
 drawable ic_toggle_empty
 drawable ic_toggle_fill
 drawable ic_villa
+drawable ic_villa_ad
 drawable ic_warning
 drawable ic_whatsapp
 drawable ic_wifi_24dp
+drawable icon_file_doc
+drawable icon_file_pdf
+drawable icon_file_ppt
+drawable icon_file_unknown
+drawable icon_file_xls
+drawable image_placeholder
 drawable left_chat
 drawable loader
 drawable loader2
@@ -3913,6 +3957,8 @@ drawable success
 drawable switch_fill
 drawable switchempty
 drawable tab_color_selector
+drawable tab_gray
+drawable tab_white
 drawable term
 drawable test_custom_background
 drawable toast_frame
@@ -4051,17 +4097,51 @@ id action_btn_lay
 id action_container
 id action_context_bar
 id action_divider
+id action_done
 id action_image
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_select
 id action_text
 id actions
 id activity_chooser_view_content
+id ad_area
+id ad_area_txt
+id ad_bath_n
+id ad_bath_n_txt
+id ad_building
+id ad_building_txt
+id ad_building_year
+id ad_building_year_txt
 id ad_desc
+id ad_doc
+id ad_doc_txt
+id ad_floor_n
+id ad_floor_n_txt
+id ad_font_txt
+id ad_front
+id ad_id
+id ad_id_txt
 id ad_images_rc
+id ad_kitchen_n
+id ad_kitchen_n_txt
+id ad_land
+id ad_land_txt
+id ad_last_updated
+id ad_last_updated_txt
+id ad_payment
+id ad_payment_txt
+id ad_room_n
+id ad_room_n_txt
+id ad_street_width
+id ad_street_width_txt
+id ad_total_area
+id ad_total_area_txt
+id ad_views
+id ad_views_txt
 id add
 id address
 id address_progress
@@ -4075,6 +4155,7 @@ id animateToEnd
 id animateToStart
 id animationView
 id appCompatButtonNext
+id appbar_layout
 id asConfigured
 id async
 id attach
@@ -4092,6 +4173,7 @@ id beginOnFirstDraw
 id beginning
 id blocking
 id bottom
+id bottomOverlay
 id bounce
 id br1
 id br10
@@ -4220,12 +4302,14 @@ id easeOut
 id editBtn
 id editText_search
 id edit_details
+id edit_icon
 id edit_images
 id edit_location
 id edit_query
 id egypt
 id elastic
 id elevator_toggle
+id empty_view
 id end
 id endToStart
 id end_padder
@@ -4240,6 +4324,10 @@ id fab
 id fade
 id fastscroll
 id favorite
+id file_iv
+id file_name_tv
+id file_size_tv
+id file_type_tv
 id fill
 id fill_horizontal
 id fill_vertical
@@ -4249,6 +4337,8 @@ id fixed
 id fl_home_container
 id flip
 id floating
+id folder_count
+id folder_title
 id forever
 id fragment_container_view_tag
 id frame_to_list
@@ -4344,7 +4434,6 @@ id input_search
 id input_street_size
 id input_warehouse_high
 id input_warehouse_size
-id inside
 id invisible
 id inward
 id italic
@@ -4352,6 +4441,7 @@ id item_message
 id item_message_time
 id item_touch_helper_previous_elevation
 id iv_auto_image_slider
+id iv_photo
 id jumpToEnd
 id jumpToStart
 id labelGroup
@@ -4470,7 +4560,6 @@ id option_cancel
 id option_done
 id optional_layout
 id outline
-id outside
 id outward
 id packed
 id pager
@@ -4515,6 +4604,7 @@ id postLayout
 id preferenceDivider
 id price
 id price_map
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
@@ -4532,6 +4622,7 @@ id rc_chat
 id rectangle
 id rectangles
 id recycler_countryDialog
+id recyclerview
 id refresh
 id repeat
 id report
@@ -4565,6 +4656,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id searchContainer
 id search_badge
 id search_bar
@@ -4580,6 +4672,8 @@ id select_dialog_listview
 id selected
 id selected_rc
 id selection_type
+id send_chat
+id services_rc
 id share
 id share_owner
 id shortcut
@@ -4673,6 +4767,7 @@ id toast_icon
 id toast_root
 id toast_text
 id toggle
+id toolbar
 id top
 id topPanel
 id touch_outside
@@ -4683,6 +4778,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id transparent_bg
 id triangle
 id tv_account_about
 id tv_account_contact
@@ -4796,7 +4892,20 @@ id v2
 id v20
 id v21
 id v22
+id v23
+id v24
+id v25
+id v26
+id v27
+id v28
+id v29
 id v3
+id v30
+id v31
+id v32
+id v33
+id v34
+id v35
 id v4
 id v5
 id v6
@@ -4804,7 +4913,9 @@ id v7
 id v8
 id v9
 id vertical
+id video_icon
 id video_title
+id viewPager
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -4882,7 +4993,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_base
+layout activity_file_picker
 layout activity_main
+layout activity_media_details
 layout bottom_nav_bar
 layout cities_custom_marker
 layout custom_dialog
@@ -4928,17 +5041,21 @@ layout fragment_contact
 layout fragment_contact_favorites
 layout fragment_conversations
 layout fragment_current_ads
+layout fragment_doc_picker
 layout fragment_favorites
 layout fragment_forget_password
 layout fragment_home
 layout fragment_home_cities
 layout fragment_login
+layout fragment_media_folder_picker
+layout fragment_media_picker
 layout fragment_my_account
 layout fragment_my_ads_main
 layout fragment_my_favorites_main
 layout fragment_notifications
 layout fragment_onboard
 layout fragment_payment
+layout fragment_photo_picker
 layout fragment_previous_ads
 layout fragment_profile
 layout fragment_register
@@ -4949,6 +5066,7 @@ layout home_list_layout
 layout home_map_layout
 layout home_sort
 layout incremental_view
+layout item_ad_details_services
 layout item_ad_images
 layout item_ads
 layout item_category
@@ -4956,10 +5074,13 @@ layout item_chat
 layout item_chat_images
 layout item_city
 layout item_conversation
+layout item_doc_layout
 layout item_favorites
+layout item_folder_layout
 layout item_home
 layout item_home_category
 layout item_my_ads
+layout item_photo_layout
 layout item_reasons
 layout layout_action_bar_back
 layout layout_action_bar_home
@@ -5065,6 +5186,10 @@ layout text_view_without_line_height
 layout toast_layout
 layout year_label_text_view
 menu bottom_navigation_menu
+menu doc_picker_menu
+menu media_detail_menu
+menu picker_menu
+menu select_menu
 mipmap ic_close
 mipmap ic_delete
 mipmap ic_detail_call
@@ -5149,8 +5274,14 @@ string about_title
 string account_balance
 string account_my_ads
 string account_verified
+string action_settings
 string ad_attachment_imgs
+string ad_bath_count
 string ad_fee_title
+string ad_id
+string ad_last_updated
+string ad_rooms_count
+string ad_views
 string add_info1
 string add_info2
 string add_info3
@@ -5161,11 +5292,19 @@ string add_info_title
 string add_success_added
 string address_hint
 string airplane_mode
+string all_files
+string all_images
+string all_photos
+string all_videos
 string annual_register
 string app_name
 string appbar_scrolling_view_behavior
+string area
+string area_tatal_ad
 string attachment_images
 string attachment_video
+string attachments_num
+string attachments_title_text
 string back_car_add
 string bank_name
 string bank_name_account
@@ -5176,10 +5315,12 @@ string big_area
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
 string building
+string building_age
 string building_desc
 string building_desc_hint
 string building_size
 string building_year
+string building_year_ad
 string call
 string call_client
 string call_grand
@@ -5277,7 +5418,9 @@ string dialog_upload_docs
 string diff_locations
 string doc_dialog_desc
 string doc_type
+string doc_type_ad
 string document
+string done
 string donot_have_account
 string driver_location_url
 string edit
@@ -5289,6 +5432,7 @@ string email
 string email_hint
 string empty_warning
 string error_icon_content_description
+string excel_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
@@ -5341,6 +5485,8 @@ string identity_number_hint
 string identity_type
 string identity_type_hint
 string image_required
+string image_selected
+string images
 string insurance_car_add
 string insurance_image
 string insurance_image_hint
@@ -5349,10 +5495,12 @@ string invalidPassword
 string invalidPhone
 string item_view_role_description
 string kitchen_count
+string kitchen_count_ad
 string label_month
 string label_year
 string land
 string land_size
+string land_size_ad
 string land_size_hint
 string latest
 string less_order_offer
@@ -5398,6 +5546,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string max_files
 string menuAccount
 string menuAddAds
 string menuConversations
@@ -5405,6 +5554,7 @@ string menuFavorites
 string menuHome
 string message_hint
 string meter
+string min_images_required
 string mobile_data
 string monthly
 string mosque
@@ -5454,6 +5604,8 @@ string new_factory
 string new_review
 string next
 string no
+string no_camera_exists
+string no_files_found
 string no_result_found
 string normal_orders
 string office
@@ -5481,9 +5633,13 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string payment_ad
 string payment_title
 string payment_type
+string pdf_title
+string permission_filepicker_rationale
 string phone
+string pick_file_title
 string places_autocomplete_clear_button
 string places_autocomplete_label
 string places_autocomplete_no_results_for_query
@@ -5505,6 +5661,7 @@ string policy_pay_fees
 string pool
 string pormote_ad
 string post_ad
+string ppt_title
 string previous_ads
 string price_high_low
 string price_hint
@@ -5543,9 +5700,11 @@ string search_locations
 string search_menu_title
 string seeker
 string select_country
+string select_doc_text
 string select_file
 string select_image_from
 string select_image_profile
+string select_photo_text
 string sell
 string send
 string send_offer_warning
@@ -5598,8 +5757,10 @@ string tv_market_details_distance_start
 string tv_points_header
 string tv_settings_nearest_orders
 string tv_settings_registered_stores
+string txt_title
 string upload_doc_btn
 string videoBig
+string videos
 string villa
 string waiting_orders
 string ware_house
@@ -5608,10 +5769,12 @@ string warehouse_high
 string warehouse_size
 string whats
 string wifi
+string word_title
 string wrong_behave
 string wrong_building
 string wrong_location
 string wrong_price
+string year
 string yes
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -5622,6 +5785,7 @@ style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
 style AppTheme
+style AppTheme_PopupOverlay
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -5847,6 +6011,8 @@ style CustomBottomSheetDialogTheme
 style CustomBottomSheetStyle
 style CustomToolbarTheme
 style EmptyTheme
+style FilePickerTheme
+style LibAppTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
 style MaterialAlertDialog_MaterialComponents_Picker_Date_Calendar
@@ -5860,6 +6026,7 @@ style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
 style MonthPickerDialogStyle
 style PauseDialog
 style PauseDialogAnimation
+style PickerTabLayout
 style PinWidget
 style PinWidget_PinView
 style PlacesAutocompleteBase
@@ -5919,6 +6086,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style ShapeAppearanceOverlay_TopLeftCut
 style ShapeAppearanceOverlay_TopRightDifferentCornerSize
+style SmoothCheckBoxStyle
 style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style Test_Theme_MaterialComponents_MaterialCalendar
 style Test_Widget_MaterialComponents_MaterialCalendar
@@ -6373,14 +6541,14 @@ styleable AppCompatSeekBar android_thumb tickMark tickMarkTint tickMarkTintMode
 styleable AppCompatTextHelper android_textAppearance android_drawableTop android_drawableBottom android_drawableLeft android_drawableRight android_drawableStart android_drawableEnd
 styleable AppCompatTextView android_textAppearance autoSizeMaxTextSize autoSizeMinTextSize autoSizePresetSizes autoSizeStepGranularity autoSizeTextType drawableBottomCompat drawableEndCompat drawableLeftCompat drawableRightCompat drawableStartCompat drawableTint drawableTintMode drawableTopCompat firstBaselineToTopHeight fontFamily fontVariationSettings lastBaselineToBottomHeight lineHeight textAllCaps textLocale
 styleable AppCompatTheme android_windowIsFloating android_windowAnimationStyle actionBarDivider actionBarItemBackground actionBarPopupTheme actionBarSize actionBarSplitStyle actionBarStyle actionBarTabBarStyle actionBarTabStyle actionBarTabTextStyle actionBarTheme actionBarWidgetTheme actionButtonStyle actionDropDownStyle actionMenuTextAppearance actionMenuTextColor actionModeBackground actionModeCloseButtonStyle actionModeCloseDrawable actionModeCopyDrawable actionModeCutDrawable actionModeFindDrawable actionModePasteDrawable actionModePopupWindowStyle actionModeSelectAllDrawable actionModeShareDrawable actionModeSplitBackground actionModeStyle actionModeWebSearchDrawable actionOverflowButtonStyle actionOverflowMenuStyle activityChooserViewStyle alertDialogButtonGroupStyle alertDialogCenterButtons alertDialogStyle alertDialogTheme autoCompleteTextViewStyle borderlessButtonStyle buttonBarButtonStyle buttonBarNegativeButtonStyle buttonBarNeutralButtonStyle buttonBarPositiveButtonStyle buttonBarStyle buttonStyle buttonStyleSmall checkboxStyle checkedTextViewStyle colorAccent colorBackgroundFloating colorButtonNormal colorControlActivated colorControlHighlight colorControlNormal colorError colorPrimary colorPrimaryDark colorSwitchThumbNormal controlBackground dialogCornerRadius dialogPreferredPadding dialogTheme dividerHorizontal dividerVertical dropDownListViewStyle dropdownListPreferredItemHeight editTextBackground editTextColor editTextStyle homeAsUpIndicator imageButtonStyle listChoiceBackgroundIndicator listChoiceIndicatorMultipleAnimated listChoiceIndicatorSingleAnimated listDividerAlertDialog listMenuViewStyle listPopupWindowStyle listPreferredItemHeight listPreferredItemHeightLarge listPreferredItemHeightSmall listPreferredItemPaddingEnd listPreferredItemPaddingLeft listPreferredItemPaddingRight listPreferredItemPaddingStart panelBackground panelMenuListTheme panelMenuListWidth popupMenuStyle popupWindowStyle radioButtonStyle ratingBarStyle ratingBarStyleIndicator ratingBarStyleSmall searchViewStyle seekBarStyle selectableItemBackground selectableItemBackgroundBorderless spinnerDropDownItemStyle spinnerStyle switchStyle textAppearanceLargePopupMenu textAppearanceListItem textAppearanceListItemSecondary textAppearanceListItemSmall textAppearancePopupMenuHeader textAppearanceSearchResultSubtitle textAppearanceSearchResultTitle textAppearanceSmallPopupMenu textColorAlertDialogListItem textColorSearchUrl toolbarNavigationButtonStyle toolbarStyle tooltipForegroundColor tooltipFrameBackground viewInflaterClass windowActionBar windowActionBarOverlay windowActionModeOverlay windowFixedHeightMajor windowFixedHeightMinor windowFixedWidthMajor windowFixedWidthMinor windowMinWidthMajor windowMinWidthMinor windowNoTitle
-styleable ArcView shape_arc_cropDirection shape_arc_height shape_arc_position
+styleable ArcView shape_arc_height shape_arc_position
 styleable Badge backgroundColor badgeGravity badgeTextColor horizontalOffset maxCharacterCount number verticalOffset
 styleable BaseProgressIndicator android_indeterminate hideAnimationBehavior indicatorColor minHideDelay showAnimationBehavior showDelay trackColor trackCornerRadius trackThickness
 styleable BottomAppBar backgroundTint elevation fabAlignmentMode fabAnimationMode fabCradleMargin fabCradleRoundedCornerRadius fabCradleVerticalOffset hideOnScroll paddingBottomSystemWindowInsets paddingLeftSystemWindowInsets paddingRightSystemWindowInsets
 styleable BottomNavBar bn_background_color bn_curve_margin bn_curve_rounded_corner_radius bn_curve_vertical_offset bn_fab_background_color bn_fab_icon_color bn_fab_menu_index bn_fab_size bn_item_color bn_menu
 styleable BottomNavigationView backgroundTint elevation itemBackground itemHorizontalTranslationEnabled itemIconSize itemIconTint itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable BottomSheetBehavior_Layout android_elevation backgroundTint behavior_draggable behavior_expandedOffset behavior_fitToContents behavior_halfExpandedRatio behavior_hideable behavior_peekHeight behavior_saveFlags behavior_skipCollapsed gestureInsetBottomIgnored shapeAppearance shapeAppearanceOverlay
-styleable BubbleView shape_bubble_arrowHeight shape_bubble_arrowPosition shape_bubble_arrowWidth shape_bubble_borderRadius
+styleable BubbleView arrow_posititon_percent shape_bubble_arrowHeight shape_bubble_arrowPosition shape_bubble_arrowWidth shape_bubble_borderRadius
 styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
@@ -6404,7 +6572,8 @@ styleable CountryCodePicker ccpDialog_allowSearch ccpDialog_background ccpDialog
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customPixelDimension customStringValue
 styleable CustomEditText android_text android_inputType drawable focusable gravity isValidate phone_expression
 styleable CutCornerView shape_cutCorner_bottomLeftSize shape_cutCorner_bottomRightSize shape_cutCorner_topLeftSize shape_cutCorner_topRightSize
-styleable DiagonalView shape_diagonal_angle shape_diagonal_direction shape_diagonal_position
+styleable DiagonalView shape_diagonal_angle shape_diagonal_position
+styleable DottedEdgesCutCornerView shape_dot_radius shape_dot_spacing shape_dottedEdgesCutCorner_bottomLeftSize shape_dottedEdgesCutCorner_bottomRightSize shape_dottedEdgesCutCorner_topLeftSize shape_dottedEdgesCutCorner_topRightSize shape_edge_position
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
 styleable ExpansionHeader expansion_headerIndicator expansion_headerIndicatorRotationCollapsed expansion_headerIndicatorRotationExpanded expansion_layout expansion_toggleOnClick
 styleable ExpansionLayout expansion_expanded
@@ -6492,6 +6661,7 @@ styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingE
 styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
+styleable SmoothCheckBox color_checked color_tick color_unchecked color_unchecked_stroke duration stroke_width
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_entries android_popupBackground android_prompt android_dropDownWidth popupTheme
@@ -6521,6 +6691,7 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable fastscroll__fastScroller fastscroll__bubbleColor fastscroll__bubbleTextAppearance fastscroll__handleColor
 styleable monthPickerDialog dialogActionButtonColor headerBgColor headerFontColorNormal headerFontColorSelected headerTitleColor monthBgColor monthBgSelectedColor monthFontColorDisabled monthFontColorNormal monthFontColorSelected
+xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

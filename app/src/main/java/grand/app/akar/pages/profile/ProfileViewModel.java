@@ -1,11 +1,13 @@
 package grand.app.akar.pages.profile;
 
+import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
 
 import javax.inject.Inject;
 
+import grand.app.akar.BR;
 import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.connection.FileObject;
 import grand.app.akar.model.base.Mutable;
@@ -22,6 +24,7 @@ public class ProfileViewModel extends BaseViewModel {
     AuthRepository repository;
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
     private RegisterRequest request;
+    private int type;
 
     @Inject
     public ProfileViewModel(AuthRepository repository) {
@@ -30,21 +33,22 @@ public class ProfileViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
         request = new RegisterRequest();
+        request.setCity_id(String.valueOf(userData.getCityId()));
+        request.setEmail(userData.getEmail());
+        request.setName(userData.getName());
+        request.setPhone(userData.getPhone());
+        request.setType(String.valueOf(userData.getType()));
     }
 
     public void updateProfile() {
-        notifyChange();
-        if(getRequest().validate()) {
-            if (getFileObject().size() > 0) {
-                compositeDisposable.add(repository.updateProfile(null, getFileObject()));
-            } else if (getRequest().isPasswordsValid())
-                if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
-                    compositeDisposable.add(repository.updateProfile(request, getFileObject()));
-                } else {
-                    liveData.setValue(new Mutable(Constants.ERROR_TOAST));
-                }
+        if (getRequest().isUpdateValid()) {
+            compositeDisposable.add(repository.updateProfile(request, getFileObject()));
         }
 
+    }
+
+    public void changeUserType(int type) {
+        setType(type);
     }
 
     public void imageSubmit() {
@@ -65,6 +69,17 @@ public class ProfileViewModel extends BaseViewModel {
     protected void onCleared() {
         super.onCleared();
         unSubscribeFromObservable();
+    }
+
+    @Bindable
+    public int getType() {
+        return type;
+    }
+
+    @Bindable
+    public void setType(int type) {
+        notifyChange(BR.type);
+        this.type = type;
     }
 
     public ArrayList<FileObject> getFileObject() {

@@ -36,17 +36,17 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     private final androidx.recyclerview.widget.RecyclerView mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback164;
+    private final android.view.View.OnClickListener mCallback176;
     @Nullable
-    private final android.view.View.OnClickListener mCallback162;
+    private final android.view.View.OnClickListener mCallback174;
     @Nullable
-    private final android.view.View.OnClickListener mCallback160;
+    private final android.view.View.OnClickListener mCallback172;
     @Nullable
-    private final android.view.View.OnClickListener mCallback165;
+    private final android.view.View.OnClickListener mCallback175;
     @Nullable
-    private final android.view.View.OnClickListener mCallback163;
+    private final android.view.View.OnClickListener mCallback173;
     @Nullable
-    private final android.view.View.OnClickListener mCallback161;
+    private final android.view.View.OnClickListener mCallback171;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -91,12 +91,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         this.sort.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback164 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback162 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback160 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback165 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback163 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback161 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback176 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback174 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback172 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback175 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback173 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback171 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -249,12 +249,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnDiffLocations.setOnClickListener(mCallback160);
-            this.frameToList.setOnClickListener(mCallback165);
-            this.googleBaseLocation.setOnClickListener(mCallback163);
-            this.googleMapStyle.setOnClickListener(mCallback164);
-            this.map.setOnClickListener(mCallback162);
-            this.sort.setOnClickListener(mCallback161);
+            this.btnDiffLocations.setOnClickListener(mCallback171);
+            this.frameToList.setOnClickListener(mCallback176);
+            this.googleBaseLocation.setOnClickListener(mCallback174);
+            this.googleMapStyle.setOnClickListener(mCallback175);
+            this.map.setOnClickListener(mCallback173);
+            this.sort.setOnClickListener(mCallback172);
         }
         if ((dirtyFlags & 0xcL) != 0) {
             // api target 1
@@ -272,57 +272,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.changeMapStyle();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.filpCard();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.rentTypeFilter();
-                }
-                break;
-            }
             case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -371,6 +320,57 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements gran
 
 
                     viewmodel.sortDialog();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.changeMapStyle();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.filpCard();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.rentTypeFilter();
                 }
                 break;
             }

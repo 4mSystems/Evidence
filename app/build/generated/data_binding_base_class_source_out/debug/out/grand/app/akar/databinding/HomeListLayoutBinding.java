@@ -9,23 +9,17 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import androidx.recyclerview.widget.RecyclerView;
 import grand.app.akar.R;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class HomeListLayoutBinding extends ViewDataBinding {
-  @NonNull
-  public final RecyclerView catHomeRc;
-
   @Bindable
   protected HomeViewModel mViewmodel;
 
-  protected HomeListLayoutBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView catHomeRc) {
+  protected HomeListLayoutBinding(Object _bindingComponent, View _root, int _localFieldCount) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.catHomeRc = catHomeRc;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

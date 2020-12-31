@@ -33,17 +33,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final android.widget.ImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback168;
+    private final android.view.View.OnClickListener mCallback178;
     @Nullable
-    private final android.view.View.OnClickListener mCallback172;
+    private final android.view.View.OnClickListener mCallback182;
     @Nullable
-    private final android.view.View.OnClickListener mCallback170;
+    private final android.view.View.OnClickListener mCallback180;
     @Nullable
-    private final android.view.View.OnClickListener mCallback169;
+    private final android.view.View.OnClickListener mCallback179;
     @Nullable
-    private final android.view.View.OnClickListener mCallback167;
+    private final android.view.View.OnClickListener mCallback183;
     @Nullable
-    private final android.view.View.OnClickListener mCallback171;
+    private final android.view.View.OnClickListener mCallback181;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -274,12 +274,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback168 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback172 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback170 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback169 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback167 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback171 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback178 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback182 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback180 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback179 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback183 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback181 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -383,17 +383,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback171);
-            this.imgRegisterLogo.setOnClickListener(mCallback167);
+            this.appCompatButtonNext.setOnClickListener(mCallback182);
+            this.imgRegisterLogo.setOnClickListener(mCallback178);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputName, inputNametextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.inputRegisterCity.setOnClickListener(mCallback170);
+            this.inputRegisterCity.setOnClickListener(mCallback181);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputRegisterConfirmPassword, inputRegisterConfirmPasswordtextAttrChanged);
-            this.inputRegisterUserType.setOnClickListener(mCallback169);
-            this.mboundView11.setOnClickListener(mCallback172);
-            this.mboundView2.setOnClickListener(mCallback168);
+            this.inputRegisterUserType.setOnClickListener(mCallback180);
+            this.mboundView11.setOnClickListener(mCallback183);
+            this.mboundView2.setOnClickListener(mCallback179);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -409,6 +409,57 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.imageSubmit();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.register();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.userType();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -459,57 +510,6 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
                     viewmodel.cities();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.userType();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.imageSubmit();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.auth.register.RegisterViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.register();
                 }
                 break;
             }

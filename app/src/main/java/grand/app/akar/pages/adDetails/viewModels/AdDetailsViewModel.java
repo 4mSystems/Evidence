@@ -1,13 +1,18 @@
 package grand.app.akar.pages.adDetails.viewModels;
 
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import com.google.android.gms.maps.model.LatLng;
 import com.smarteist.autoimageslider.SliderView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
@@ -17,6 +22,7 @@ import grand.app.akar.base.BaseViewModel;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.adDetails.adapters.ReportDialogReasonsAdapter;
+import grand.app.akar.pages.adDetails.adapters.ServicesAdapter;
 import grand.app.akar.pages.adDetails.adapters.SliderAdapter;
 import grand.app.akar.pages.adDetails.models.AdDetailsData;
 import grand.app.akar.pages.adDetails.models.ReportRequest;
@@ -45,10 +51,12 @@ public class AdDetailsViewModel extends BaseViewModel {
     ReportDialogReasonsAdapter reportDialogReasonsAdapter;
     ReportRequest reportRequest;
     CreateAdRequest createAdRequest;
+    ServicesAdapter servicesAdapter;
 
     @Inject
     public AdDetailsViewModel(AdsRepository adsRepository) {
         reportRequest = new ReportRequest();
+        servicesAdapter = new ServicesAdapter();
         createAdRequest = new CreateAdRequest();
         reportDialogReasonsAdapter = new ReportDialogReasonsAdapter();
         sliderAdapter = new SliderAdapter();
@@ -136,10 +144,24 @@ public class AdDetailsViewModel extends BaseViewModel {
     @Bindable
     public void setAdDetailsData(AdDetailsData adDetailsData) {
         getHomeAdapter().update(adDetailsData.getRelatedListings());
-        adDetailsData.getListing().getSlider().add(new SliderItem(adDetailsData.getListing().getId(), adDetailsData.getListing().getDefaultImg().getId(), adDetailsData.getListing().getDefaultImg().getMedia(), adDetailsData.getListing().getDefaultImg().getType()));
+        if (adDetailsData.getListing().getDefaultImg() != null)
+            adDetailsData.getListing().getSlider().add(new SliderItem(adDetailsData.getListing().getId(), adDetailsData.getListing().getDefaultImg().getId(), adDetailsData.getListing().getDefaultImg().getMedia(), adDetailsData.getListing().getDefaultImg().getType()));
         getSliderAdapter().updateData(adDetailsData.getListing().getSlider());
+        if (adDetailsData.getListing().getListingOptions().getFurniture() == 1)
+            adDetailsData.getListing().getListingOptions().getServices().add(ResourceManager.getString(R.string.furniture));
+        if (adDetailsData.getListing().getListingOptions().getGarage() == 1)
+            adDetailsData.getListing().getListingOptions().getServices().add(ResourceManager.getString(R.string.garage));
+        if (adDetailsData.getListing().getListingOptions().getLift() == 1)
+            adDetailsData.getListing().getListingOptions().getServices().add(ResourceManager.getString(R.string.elevator));
+        if (adDetailsData.getListing().getListingOptions().getSwimmingPool() == 1)
+            adDetailsData.getListing().getListingOptions().getServices().add(ResourceManager.getString(R.string.pool));
+        servicesAdapter.update(adDetailsData.getListing().getListingOptions().getServices());
         notifyChange(BR.adDetailsData);
         this.adDetailsData = adDetailsData;
+    }
+
+    public ServicesAdapter getServicesAdapter() {
+        return servicesAdapter;
     }
 
     public ReportRequest getReportRequest() {
@@ -204,6 +226,10 @@ public class AdDetailsViewModel extends BaseViewModel {
 
     public void call() {
         liveData.setValue(new Mutable(Constants.CALL));
+    }
+
+    public void chat() {
+        liveData.setValue(new Mutable(Constants.CHAT));
     }
 
     public void share() {
@@ -275,5 +301,20 @@ public class AdDetailsViewModel extends BaseViewModel {
             }
         }
         return null;
+    }
+
+    public String buildingAge(AdDetailsData adDetailsData) {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        Date firstDate, secondDate;
+        long diff = 0;
+        try {
+            firstDate = sdf.parse(adDetailsData.getListing().getBuildingYear());
+            secondDate = sdf.parse(String.valueOf(Calendar.getInstance().get(Calendar.YEAR)));
+            long diffInMillies = Math.abs(secondDate.getTime() - firstDate.getTime());
+            diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return String.valueOf(diff / 365);
     }
 }

@@ -55,13 +55,7 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
   public final CustomEditText inputPhone;
 
   @NonNull
-  public final CustomEditText inputRegisterConfirmPassword;
-
-  @NonNull
   public final CustomTextViewMedium tvAccountTitle;
-
-  @NonNull
-  public final CustomTextViewMedium tvIdentityNumber;
 
   @NonNull
   public final CustomTextViewMedium tvRegisterEmail;
@@ -86,8 +80,7 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
       CustomTextViewMedium btOwner, CustomTextViewMedium btRealtor, CustomTextViewMedium btnSeeker,
       CircleImageView imgLoginLogo, CustomEditText inputEmail, CustomEditText inputName,
       CustomEditText inputNewPassword, CustomEditText inputPhone,
-      CustomEditText inputRegisterConfirmPassword, CustomTextViewMedium tvAccountTitle,
-      CustomTextViewMedium tvIdentityNumber, CustomTextViewMedium tvRegisterEmail,
+      CustomTextViewMedium tvAccountTitle, CustomTextViewMedium tvRegisterEmail,
       CustomTextViewMedium tvRegisterName, CustomTextViewMedium tvRegisterPassword,
       CustomTextViewMedium tvRegisterPhone, CustomTextViewMedium tvType) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -102,9 +95,7 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
     this.inputName = inputName;
     this.inputNewPassword = inputNewPassword;
     this.inputPhone = inputPhone;
-    this.inputRegisterConfirmPassword = inputRegisterConfirmPassword;
     this.tvAccountTitle = tvAccountTitle;
-    this.tvIdentityNumber = tvIdentityNumber;
     this.tvRegisterEmail = tvRegisterEmail;
     this.tvRegisterName = tvRegisterName;
     this.tvRegisterPassword = tvRegisterPassword;

@@ -51,10 +51,7 @@ import grand.app.akar.utils.helper.MovementHelper;
 import grand.app.akar.utils.session.UserHelper;
 
 
-public class
-
-
-HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private Context context;
     @Inject
@@ -140,7 +137,7 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
     }
 
     private void changeCameraDistance() {
-        int distance = 8000;
+        int distance = 10000;
         float scale = getResources().getDisplayMetrics().density * distance;
         binding.cardMap.setCameraDistance(scale);
         binding.cardList.setCameraDistance(scale);
@@ -196,7 +193,7 @@ HomeFragment extends BaseFragment implements OnMapReadyCallback, GoogleMap.OnMar
     public void onResume() {
         binding.mapInclude.mapView.onResume();
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
-        if (Constants.DATA_CHANGED ){
+        if (Constants.DATA_CHANGED) {
             Constants.DATA_CHANGED = false;
             viewModel.getListing();
         }

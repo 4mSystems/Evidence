@@ -49,7 +49,7 @@ public class ConversationsAdapter extends RecyclerView.Adapter<ConversationsAdap
     public void onBindViewHolder(@NonNull final MenuView holder, final int position) {
         ConversationsData menuModel = conversationsDataList.get(position);
         ItemConversationsViewModel itemMenuViewModel = new ItemConversationsViewModel(menuModel);
-        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getListingId()), ResourceManager.getString(R.string.menuConversations), ChatFragment.class.getName(), null));
+        itemMenuViewModel.getLiveData().observe(((LifecycleOwner) MovementHelper.unwrap(context)), o -> MovementHelper.startActivityWithBundle(context, new PassingObject(menuModel.getListingId(), String.valueOf(menuModel.getReceiver().getId())), ResourceManager.getString(R.string.menuConversations), ChatFragment.class.getName(), null));
         holder.setViewModel(itemMenuViewModel);
     }
 

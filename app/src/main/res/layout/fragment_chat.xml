@@ -50,13 +50,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginEnd="@dimen/dp12w"
-                android:src="@drawable/ic_add"
+                android:onClick="@{()-> viewmodel.sendMessage()}"
+                android:src="@drawable/ic_send"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/black" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <grand.app.akar.customViews.views.CustomEditText
+                android:id="@+id/send_chat"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -69,17 +70,20 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/attach"
                 app:layout_constraintStart_toEndOf="@id/more"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:text="@={viewmodel.request.text}" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/more"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
-                android:src="@drawable/ic_send"
+                android:onClick="@{()-> viewmodel.select()}"
+                android:src="@drawable/ic_add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

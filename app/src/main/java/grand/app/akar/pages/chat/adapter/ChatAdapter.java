@@ -50,7 +50,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Chat dataModel = chatList.get(position);
         ItemChatViewModel itemMenuViewModel = new ItemChatViewModel(dataModel);
-        if (dataModel.getReceiver().getId() == UserHelper.getInstance(context).getUserData().getId()) {
+        if (dataModel.getSender_id() == UserHelper.getInstance(context).getUserData().getId()) {
             holder.itemMenuBinding.rlItemChat.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
             holder.itemMenuBinding.itemMessage.setBackgroundColor(context.getResources().getColor(R.color.colorPrimary, null));
             holder.itemMenuBinding.itemMessage.setTextColor(context.getResources().getColor(R.color.white, null));

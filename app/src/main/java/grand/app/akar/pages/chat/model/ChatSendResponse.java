@@ -10,6 +10,9 @@ public class ChatSendResponse extends StatusMessage {
 
     @SerializedName("data")
     @Expose
-    public Chat data;
+    private Chat data;
 
+    public Chat getData() {
+        return data;
+    }
 }

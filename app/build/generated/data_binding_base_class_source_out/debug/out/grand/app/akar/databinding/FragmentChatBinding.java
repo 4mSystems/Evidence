@@ -13,6 +13,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import grand.app.akar.R;
+import grand.app.akar.customViews.views.CustomEditText;
 import grand.app.akar.pages.chat.viewmodel.ChatViewModel;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -31,6 +32,9 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
   public final RecyclerView rcChat;
 
   @NonNull
+  public final CustomEditText sendChat;
+
+  @NonNull
   public final View v14;
 
   @Bindable
@@ -38,12 +42,13 @@ public abstract class FragmentChatBinding extends ViewDataBinding {
 
   protected FragmentChatBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatImageView attach, ConstraintLayout chatActions, AppCompatImageView more,
-      RecyclerView rcChat, View v14) {
+      RecyclerView rcChat, CustomEditText sendChat, View v14) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attach = attach;
     this.chatActions = chatActions;
     this.more = more;
     this.rcChat = rcChat;
+    this.sendChat = sendChat;
     this.v14 = v14;
   }
 

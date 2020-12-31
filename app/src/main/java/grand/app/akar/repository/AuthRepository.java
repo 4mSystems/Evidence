@@ -97,10 +97,6 @@ public class AuthRepository extends BaseRepository {
 
     }
 
-//    public Disposable updateToken(String token) {
-//        return connectionHelper.requestApiBackground(Constants.POST_REQUEST, URLS.UPDATE_TOKEN, new TokenRequest(token));
-//    }
-
     public Disposable forgetPassword(ForgetPasswordRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.FORGET_PASSWORD, request, StatusMessage.class,
                 Constants.FORGET_PASSWORD, true);

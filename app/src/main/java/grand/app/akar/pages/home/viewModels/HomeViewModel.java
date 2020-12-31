@@ -1,5 +1,6 @@
 package grand.app.akar.pages.home.viewModels;
 
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.RadioGroup;
 
@@ -100,14 +101,16 @@ public class HomeViewModel extends BaseViewModel {
         if (id == R.id.radioLatest) {
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getCreatedAt().compareTo(u1.getCreatedAt()));
         } else if (id == R.id.radioPriceHighLow) {
-            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getPrice().compareTo(u2.getPrice()));
-        } else if (id == R.id.radioPriceLowHigh) {
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getPrice().compareTo(u1.getPrice()));
+        } else if (id == R.id.radioPriceLowHigh) {
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getPrice().compareTo(u2.getPrice()));
         } else if (id == R.id.radioBigArea) {
-            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getArea().compareTo(u2.getArea()));
-        } else if (id == R.id.radioSmallestArea) {
+            Log.e("sortType", "sortType: high");
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getArea().compareTo(u1.getArea()));
-        }else if (id == R.id.radioViews) {
+        } else if (id == R.id.radioSmallestArea) {
+            Log.e("sortType", "sortType: low");
+            Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getArea().compareTo(u2.getArea()));
+        } else if (id == R.id.radioViews) {
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getViews().compareTo(u2.getViews()));
         }
         getHomeAdapter().notifyDataSetChanged();

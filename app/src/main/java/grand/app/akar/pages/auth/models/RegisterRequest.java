@@ -60,7 +60,13 @@ public class RegisterRequest {
     }
 
     public boolean isUpdateValid() {
-        return (!TextUtils.isEmpty(name) && !TextUtils.isEmpty(phone));
+        return (!TextUtils.isEmpty(name)
+                && !TextUtils.isEmpty(phone)
+                && !TextUtils.isEmpty(email)
+                && !TextUtils.isEmpty(type)
+                && !TextUtils.isEmpty(city_id)
+
+        );
     }
 
     public boolean isPasswordsValid() {
@@ -113,20 +119,6 @@ public class RegisterRequest {
 
     public void setCity_id(String city_id) {
         this.city_id = city_id;
-    }
-
-
-    public void setValidator(int validator) {
-        this.validator = validator;
-    }
-
-    public int getValidator() {
-        Log.e("VAlidator request", validator + "");
-        return validator;
-    }
-
-    public boolean validate() {
-        return validator == 1;
     }
 
 

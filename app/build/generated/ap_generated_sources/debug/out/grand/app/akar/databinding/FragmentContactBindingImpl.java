@@ -28,9 +28,9 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
     private final androidx.appcompat.widget.AppCompatImageView mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback214;
+    private final android.view.View.OnClickListener mCallback225;
     @Nullable
-    private final android.view.View.OnClickListener mCallback213;
+    private final android.view.View.OnClickListener mCallback224;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,8 +61,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         this.tvContactPhoneWhatsText.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback214 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback213 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback225 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback224 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -166,8 +166,8 @@ public class FragmentContactBindingImpl extends FragmentContactBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.map.setOnClickListener(mCallback213);
-            this.mboundView5.setOnClickListener(mCallback214);
+            this.map.setOnClickListener(mCallback224);
+            this.mboundView5.setOnClickListener(mCallback225);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

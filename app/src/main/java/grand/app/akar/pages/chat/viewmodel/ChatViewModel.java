@@ -1,8 +1,12 @@
 
 package grand.app.akar.pages.chat.viewmodel;
 
-import androidx.databinding.ObservableField;
+import android.text.TextUtils;
+
 import androidx.lifecycle.MutableLiveData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -11,7 +15,6 @@ import grand.app.akar.connection.FileObject;
 import grand.app.akar.model.base.Mutable;
 import grand.app.akar.pages.chat.adapter.ChatAdapter;
 import grand.app.akar.pages.chat.model.ChatRequest;
-import grand.app.akar.pages.chat.model.ChatResponse;
 import grand.app.akar.repository.ChatRepository;
 import grand.app.akar.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
@@ -23,7 +26,7 @@ public class ChatViewModel extends BaseViewModel {
     public ChatRepository repository;
     public ChatAdapter adapter = new ChatAdapter();
     public ChatRequest request = new ChatRequest();
-    public FileObject image;
+    public List<FileObject> fileObjectList = new ArrayList<>();
     CompositeDisposable compositeDisposable = new CompositeDisposable();
 
     @Inject
@@ -54,8 +57,10 @@ public class ChatViewModel extends BaseViewModel {
     }
 
     public void sendMessage() {
-        if (!request.message.trim().equals("")) {
-            repository.sendChat(request, image);
+        request.setListing_id(String.valueOf(getPassingObject().getId()));
+        request.setReceiver_id(String.valueOf(getPassingObject().getObject()));
+        if (fileObjectList.size() > 0 || !TextUtils.isEmpty(request.getText())) {
+            repository.sendChat(request, fileObjectList);
         }
     }
 }

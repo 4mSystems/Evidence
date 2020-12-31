@@ -54,8 +54,9 @@
             app:layout_constraintStart_toEndOf="@+id/driver_image"
             app:layout_constraintTop_toTopOf="parent"
             app:orientation="@{`2`}"
+            android:orientation="horizontal"
             app:reverseLayout="false"
-            app:span="@{`2`}"
+            app:span="@{`1`}"
             app:stackFromEnd="true"
             tools:listitem="@layout/item_chat_images" />
 
@@ -70,7 +71,8 @@
             android:id="@+id/item_message_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp6h"
+            android:layout_marginEnd="@dimen/dp6h"
+            android:hint="@string/edit"
             android:text="@{itemChatViewModel.chat.createdAt}"
             android:textColor="@color/medium_color"
             app:layout_constraintBottom_toBottomOf="parent"

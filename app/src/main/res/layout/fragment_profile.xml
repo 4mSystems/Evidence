@@ -48,12 +48,12 @@
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/account_card_container"
-                    app:cardElevation="4dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp15w"
                     android:layout_marginEnd="@dimen/dp15w"
                     app:cardCornerRadius="@dimen/dp8h"
+                    app:cardElevation="4dp"
                     app:cardUseCompatPadding="true">
 
 
@@ -184,7 +184,6 @@
                             android:hint="@string/password_hint"
                             android:inputType="textPassword"
                             android:textAlignment="viewStart"
-
                             android:textColorHint="@color/medium_color"
                             app:helperTextTextColor="@color/black"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -192,38 +191,6 @@
                             app:layout_constraintTop_toBottomOf="@+id/tv_register_password"
                             app:passwordToggleEnabled="true"
                             app:text="@={viewmodel.request.password}" />
-
-                        <grand.app.akar.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_identity_number"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp14h"
-                            android:layout_marginTop="@dimen/dp8h"
-                            android:text="@string/change_confirm_password"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/colordark"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/input_new_password" />
-
-                        <grand.app.akar.customViews.views.CustomEditText
-                            android:id="@+id/input_register_confirm_password"
-                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp14w"
-                            android:layout_marginTop="@dimen/dp8h"
-                            android:layout_marginEnd="@dimen/dp14w"
-                            android:background="@drawable/corner_view_primary_gray"
-                            android:drawableStart="@drawable/ic_auth_password"
-                            android:drawablePadding="@dimen/dp8w"
-                            android:hint="@string/password_hint"
-                            android:inputType="textPassword"
-                            android:textAlignment="viewStart"
-                            android:textColorHint="@color/medium_color"
-                            app:helperTextTextColor="@color/black"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tv_identity_number" />
 
                         <grand.app.akar.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_type"
@@ -235,7 +202,7 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/colordark"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/input_register_confirm_password" />
+                            app:layout_constraintTop_toBottomOf="@+id/input_new_password" />
 
                         <grand.app.akar.customViews.views.CustomTextViewMedium
                             android:id="@+id/btn_seeker"
@@ -243,11 +210,12 @@
                             android:layout_height="@dimen/dp30h"
                             android:layout_marginStart="@dimen/dp14w"
                             android:layout_marginTop="@dimen/dp8h"
-                            android:background="@drawable/corner_view_primary_dark"
+                            android:background="@{viewmodel.type==0?@drawable/corner_view_primary_dark:@drawable/corner_view_light}"
                             android:gravity="center"
+                            android:onClick="@{()->viewmodel.changeUserType(0)}"
                             android:text="@string/seeker"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/white"
+                            android:textColor="@{viewmodel.type==0?@color/white:@color/colordark}"
                             app:layout_constraintEnd_toStartOf="@+id/bt_owner"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toStartOf="parent"
@@ -258,11 +226,12 @@
                             android:layout_width="@dimen/dp80w"
                             android:layout_height="@dimen/dp30h"
                             android:layout_marginTop="@dimen/dp8h"
-                            android:background="@drawable/corner_view_light"
+                            android:background="@{viewmodel.type==1?@drawable/corner_view_primary_dark:@drawable/corner_view_light}"
                             android:gravity="center"
+                            android:onClick="@{()->viewmodel.changeUserType(1)}"
                             android:text="@string/owner"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colordark"
+                            android:textColor="@{viewmodel.type==1?@color/white:@color/colordark}"
                             app:layout_constraintEnd_toStartOf="@+id/bt_realtor"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/btn_seeker"
@@ -274,11 +243,12 @@
                             android:layout_height="@dimen/dp30h"
                             android:layout_marginTop="@dimen/dp8h"
                             android:layout_marginEnd="@dimen/dp14w"
-                            android:background="@drawable/corner_view_light"
+                            android:background="@{viewmodel.type==2?@drawable/corner_view_primary_dark:@drawable/corner_view_light}"
                             android:gravity="center"
+                            android:onClick="@{()->viewmodel.changeUserType(2)}"
                             android:text="@string/realtor"
                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colordark"
+                            android:textColor="@{viewmodel.type==2?@color/white:@color/colordark}"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.5"
                             app:layout_constraintStart_toEndOf="@+id/bt_owner"
@@ -301,6 +271,7 @@
                             android:layout_marginBottom="@dimen/dp20h"
                             android:background="@drawable/corner_view_primary_dark"
                             android:text="@string/edit"
+                            android:onClick="@{()-> viewmodel.updateProfile()}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -322,6 +293,7 @@
                 android:src="@drawable/splash"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
+                app:imageUrl="@{viewmodel.userData.img}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_account_title" />
@@ -330,6 +302,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp80h"
+                android:onClick="@{()->viewmodel.imageSubmit()}"
                 android:src="@mipmap/ic_edit_profile"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

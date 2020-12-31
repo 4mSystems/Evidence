@@ -37,8 +37,8 @@ public class MyAccountViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CONTACT));
     }
 
-    public void toMyPoints() {
-        liveData.setValue(new Mutable(Constants.MY_POINTS));
+    public void toShare() {
+        liveData.setValue(new Mutable(Constants.SHARE_BAR));
     }
 
     public void toLogout() {
@@ -59,6 +59,10 @@ public class MyAccountViewModel extends BaseViewModel {
 
     public void toReviews() {
         liveData.setValue(new Mutable(Constants.CLIENTS_REVIEWS));
+    }
+
+    public void toProfile() {
+        liveData.setValue(new Mutable(Constants.PROFILE));
     }
 
     protected void unSubscribeFromObservable() {

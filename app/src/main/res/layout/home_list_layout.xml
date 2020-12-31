@@ -15,15 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <grand.app.akar.customViews.views.CustomTextViewMedium
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="ksdhlkshdflkhsdf"
-            android:textAppearance="@style/TextAppearance.AppCompat" />
-
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/cat_home_rc"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/dp4h"
@@ -32,6 +24,5 @@
             app:orientation="@{`1`}"
             app:span="@{`1`}"
             tools:listitem="@layout/item_home" />
-
     </FrameLayout>
 </layout>

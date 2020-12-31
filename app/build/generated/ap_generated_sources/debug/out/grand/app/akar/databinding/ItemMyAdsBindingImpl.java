@@ -29,11 +29,11 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback144;
+    private final android.view.View.OnClickListener mCallback148;
     @Nullable
-    private final android.view.View.OnClickListener mCallback145;
+    private final android.view.View.OnClickListener mCallback149;
     @Nullable
-    private final android.view.View.OnClickListener mCallback146;
+    private final android.view.View.OnClickListener mCallback150;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,9 +73,9 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         this.tvPormote.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback144 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback145 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback146 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback148 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback149 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback150 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -336,9 +336,9 @@ public class ItemMyAdsBindingImpl extends ItemMyAdsBinding implements grand.app.
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback144);
-            this.mboundView1.setOnClickListener(mCallback145);
-            this.mboundView11.setOnClickListener(mCallback146);
+            this.mboundView0.setOnClickListener(mCallback148);
+            this.mboundView1.setOnClickListener(mCallback149);
+            this.mboundView11.setOnClickListener(mCallback150);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

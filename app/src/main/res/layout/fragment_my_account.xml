@@ -18,6 +18,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp30h"
             android:background="@drawable/auth_header">
 
             <grand.app.akar.customViews.views.CustomTextViewMedium
@@ -38,9 +39,11 @@
                 android:layout_height="@dimen/dp50h"
                 android:layout_marginStart="@dimen/dp25w"
                 android:layout_marginTop="@dimen/dp12h"
+                android:onClick="@{()-> viewmodel.toProfile()}"
                 android:src="@drawable/splash"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
+                app:imageUrl="@{viewmodel.userData.img}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_account_title" />
 
@@ -51,7 +54,7 @@
                 android:layout_marginEnd="@dimen/dp8w"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="@id/img_login_logo"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/edit_icon"
                 app:layout_constraintStart_toEndOf="@id/img_login_logo"
                 app:layout_constraintTop_toTopOf="@id/img_login_logo">
 
@@ -76,6 +79,17 @@
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp10" />
             </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/edit_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp20w"
+                android:onClick="@{()-> viewmodel.toProfile()}"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/img_login_logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/img_login_logo" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -229,7 +243,7 @@
                         android:drawableStart="@drawable/ic_account_share"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center"
-                        android:onClick="@{()-> viewmodel.toReviews()}"
+                        android:onClick="@{()-> viewmodel.toShare()}"
                         android:text="@string/share"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
@@ -247,7 +261,7 @@
                         android:drawableStart="@drawable/ic_account_logout"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center"
-                        android:onClick="@{()-> viewmodel.toReviews()}"
+                        android:onClick="@{()-> viewmodel.toLogout()}"
                         android:text="@string/logout"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
