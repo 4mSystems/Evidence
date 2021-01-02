@@ -57,8 +57,8 @@ public class MyAccountViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.ABOUT));
     }
 
-    public void toReviews() {
-        liveData.setValue(new Mutable(Constants.CLIENTS_REVIEWS));
+    public void rateApp() {
+        liveData.setValue(new Mutable(Constants.RATE_APP));
     }
 
     public void toProfile() {

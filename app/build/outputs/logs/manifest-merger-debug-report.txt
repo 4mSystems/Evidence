@@ -72,6 +72,7 @@ MERGED from [com.makeramen:roundedimageview:2.3.0] /home/elnagar/.gradle/caches/
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/bf75ca3ba15a4ce3877683c6bd40b543/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.zagori:bottomnavbar:1.0.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/398ae4a4c191f909cf193efebf1a3ecf/jetified-bottomnavbar-1.0.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:2:1-36:12
+MERGED from [com.github.guilhe:seekbar-ranged-view:2.0.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8f536e03b8de0ed464de8a30f729b6b5/jetified-seekbar-ranged-view-2.0.5/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/deeba6b063d111e13a237b83e5a11ca6/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.databinding:viewbinding:4.1.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/175d586ff9003896f57f497b176bf24c/jetified-viewbinding-4.1.1/AndroidManifest.xml:17:1-22:12
@@ -531,6 +532,8 @@ MERGED from [com.zagori:bottomnavbar:1.0.2] /home/elnagar/.gradle/caches/transfo
 MERGED from [com.zagori:bottomnavbar:1.0.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/398ae4a4c191f909cf193efebf1a3ecf/jetified-bottomnavbar-1.0.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.github.guilhe:seekbar-ranged-view:2.0.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8f536e03b8de0ed464de8a30f729b6b5/jetified-seekbar-ranged-view-2.0.5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.guilhe:seekbar-ranged-view:2.0.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8f536e03b8de0ed464de8a30f729b6b5/jetified-seekbar-ranged-view-2.0.5/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/deeba6b063d111e13a237b83e5a11ca6/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41

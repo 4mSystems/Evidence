@@ -4,13 +4,13 @@ package grand.app.akar.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import de.hdodenhof.circleimageview.CircleImageView;
 import grand.app.akar.R;
 import grand.app.akar.customViews.views.CustomEditText;
 import grand.app.akar.customViews.views.CustomTextViewMedium;
@@ -23,7 +23,7 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   public final AppCompatButton appCompatButtonNext;
 
   @NonNull
-  public final ImageView imgRegisterLogo;
+  public final CircleImageView imgRegisterLogo;
 
   @NonNull
   public final CustomEditText inputEmail;
@@ -77,14 +77,15 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   protected RegisterViewModel mViewmodel;
 
   protected FragmentRegisterBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, ImageView imgRegisterLogo, CustomEditText inputEmail,
-      CustomEditText inputName, CustomEditText inputNewPassword, CustomEditText inputPhone,
-      CustomEditText inputRegisterCity, CustomEditText inputRegisterConfirmPassword,
-      CustomEditText inputRegisterUserType, CustomTextViewMedium tvCity,
-      CustomTextViewMedium tvForgetTimer, CustomTextViewMedium tvIdentityNumber,
-      CustomTextViewMedium tvLoginForget, CustomTextViewMedium tvRegisterEmail,
-      CustomTextViewMedium tvRegisterName, CustomTextViewMedium tvRegisterPassword,
-      CustomTextViewMedium tvRegisterPhone, CustomTextViewMedium tvType) {
+      AppCompatButton appCompatButtonNext, CircleImageView imgRegisterLogo,
+      CustomEditText inputEmail, CustomEditText inputName, CustomEditText inputNewPassword,
+      CustomEditText inputPhone, CustomEditText inputRegisterCity,
+      CustomEditText inputRegisterConfirmPassword, CustomEditText inputRegisterUserType,
+      CustomTextViewMedium tvCity, CustomTextViewMedium tvForgetTimer,
+      CustomTextViewMedium tvIdentityNumber, CustomTextViewMedium tvLoginForget,
+      CustomTextViewMedium tvRegisterEmail, CustomTextViewMedium tvRegisterName,
+      CustomTextViewMedium tvRegisterPassword, CustomTextViewMedium tvRegisterPhone,
+      CustomTextViewMedium tvType) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.imgRegisterLogo = imgRegisterLogo;

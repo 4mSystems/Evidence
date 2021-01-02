@@ -6,6 +6,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewmodel"
             type="grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel" />
@@ -116,7 +118,6 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
                     <!--gifts-->
                     <grand.app.akar.customViews.views.CustomTextViewMedium
                         android:id="@+id/tv_account_my_ads"
@@ -131,6 +132,7 @@
                         android:text="@string/account_my_ads"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
+                        android:visibility="@{viewmodel.userData.type!=0?View.VISIBLE:View.GONE}"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -144,6 +146,7 @@
                         android:drawableStart="@drawable/ic_fund_ads"
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center_vertical"
+                        android:visibility="@{viewmodel.userData.type!=0?View.VISIBLE:View.GONE}"
                         android:onClick="@{()->viewmodel.toMyPremiumAds()}"
                         android:text="@string/my_fund_ads"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -228,6 +231,7 @@
                         android:drawablePadding="@dimen/dp15w"
                         android:gravity="center"
                         android:text="@string/rate"
+                        android:onClick="@{()-> viewmodel.rateApp()}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/colordark"
                         app:layout_constraintStart_toStartOf="parent"

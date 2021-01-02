@@ -39,7 +39,10 @@ public class MainActivity extends ParentActivity {
         IApplicationComponent component = ((MyApplication) getApplicationContext()).getApplicationComponent();
         component.inject(this);
         activityMainBinding.setViewModel(viewModel);
-        activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
+        if (viewModel.userData.getType() != 0)
+            activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.bottom_navigation_menu);
+        else
+            activityMainBinding.homeNavigationMenu.inflateMenu(R.menu.searcher_bottom_navigation_menu);
         homeActionBarView = new HomeActionBarView(this);
         MovementHelper.replaceFragment(this, new HomeCitiesFragment(), "");
         setEvents();

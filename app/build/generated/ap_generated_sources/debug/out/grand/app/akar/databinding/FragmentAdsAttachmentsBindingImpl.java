@@ -22,15 +22,15 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback106;
+    private final android.view.View.OnClickListener mCallback124;
     @Nullable
-    private final android.view.View.OnClickListener mCallback108;
+    private final android.view.View.OnClickListener mCallback122;
     @Nullable
-    private final android.view.View.OnClickListener mCallback107;
+    private final android.view.View.OnClickListener mCallback125;
     @Nullable
-    private final android.view.View.OnClickListener mCallback105;
+    private final android.view.View.OnClickListener mCallback123;
     @Nullable
-    private final android.view.View.OnClickListener mCallback109;
+    private final android.view.View.OnClickListener mCallback121;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -59,11 +59,11 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         this.play.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback106 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback108 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback107 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback105 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback109 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback124 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback122 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback125 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback123 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback121 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -252,11 +252,11 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.close7.setOnClickListener(mCallback106);
-            this.confirmBtn.setOnClickListener(mCallback108);
-            this.editBtn.setOnClickListener(mCallback109);
-            this.image7.setOnClickListener(mCallback105);
-            this.play.setOnClickListener(mCallback107);
+            this.close7.setOnClickListener(mCallback122);
+            this.confirmBtn.setOnClickListener(mCallback124);
+            this.editBtn.setOnClickListener(mCallback125);
+            this.image7.setOnClickListener(mCallback121);
+            this.play.setOnClickListener(mCallback123);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -274,6 +274,23 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.uploadAd();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -291,7 +308,7 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
                 }
                 break;
             }
-            case 4: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -304,7 +321,7 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.uploadAd();
+                    viewmodel.updateImages();
                 }
                 break;
             }
@@ -339,23 +356,6 @@ public class FragmentAdsAttachmentsBindingImpl extends FragmentAdsAttachmentsBin
 
 
                     viewmodel.pickVideo();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.updateImages();
                 }
                 break;
             }

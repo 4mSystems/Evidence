@@ -26,7 +26,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback162;
+    private final android.view.View.OnClickListener mCallback179;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,7 +61,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         this.tvPath.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback162 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback179 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -300,7 +300,7 @@ public class ItemHomeBindingImpl extends ItemHomeBinding implements grand.app.ak
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback162);
+            this.mboundView1.setOnClickListener(mCallback179);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

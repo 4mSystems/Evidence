@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menuHome"
+        android:color="@color/dark_grey"
+        android:icon="@drawable/ic_home"
+        android:title="@string/menuHome" />
+    <item
+        android:id="@+id/menuFavorites"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_icon_favorites"
+        android:title="@string/menuFavorites" />
+    <item
+        android:id="@+id/menuConversations"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/menuConversations" />
+
+    <item
+        android:id="@+id/menuAccount"
+        android:color="@color/bottom_menu_normal"
+        android:icon="@drawable/ic_man"
+        android:title="@string/menuAccount" />
+</menu>

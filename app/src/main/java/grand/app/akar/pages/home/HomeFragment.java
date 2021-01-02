@@ -117,6 +117,9 @@ public class HomeFragment extends BaseFragment implements OnMapReadyCallback, Go
                 case Constants.SEARCH_LISTING_TYPE:
                     listingSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                     break;
+                case Constants.FILTER:
+                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCategoriesAdapter().getCategoriesDataList().get(viewModel.getCategoriesAdapter().lastId).getId(), String.valueOf(viewModel.getPassingObject().getId())), null, FilterFragment.class.getName(), null);
+                    break;
                 case Constants.HOME:
                     mMap.clear();
                     viewModel.getHomeAdapter().getHomeDataListFiltered().clear();

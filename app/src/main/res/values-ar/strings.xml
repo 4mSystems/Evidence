@@ -352,5 +352,14 @@
     <string name="ad_id">رقم الاعلان</string>
     <string name="ad_last_updated">أخر تحديث</string>
     <string name="ad_views">عدد المشاهدات</string>
+    <string name="filter">تصفية نتائج البحث</string>
+    <string name="reset">مسح</string>
+    <string name="price">السعر</string>
+    <string name="ad_floor_size">مساحه الطابق</string>
+    <string name="ad_floor_count">عدد الطوابق</string>
+    <string name="factory_size_ad">مساحه المسقوف</string>
+    <string name="ad_time">الاعلان خلال اسبوعين فقط</string>
+    <string name="filter_btn">تصفيه</string>
+    <string name="ad_deal_type">نوع المعامله</string>
 
 </resources>

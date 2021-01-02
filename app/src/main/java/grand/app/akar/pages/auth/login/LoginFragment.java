@@ -58,7 +58,7 @@ public class LoginFragment extends BaseFragment {
                     MovementHelper.startActivity(context, RegisterFragment.class.getName(), null, null);
                     break;
                 case Constants.LOGIN:
-                    if (((UsersResponse) mutable.object).getData().getPaymentStatus() == 0) {
+                    if (((UsersResponse) mutable.object).getData().getPaymentStatus() == 0 && ((UsersResponse) mutable.object).getData().getType() != 0) {
                         showError(((UsersResponse) mutable.object).mMessage);
                         UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
                         MovementHelper.startActivity(context, PaymentFragment.class.getName(), null, null);

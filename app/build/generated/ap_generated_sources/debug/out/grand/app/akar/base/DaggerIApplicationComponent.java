@@ -108,10 +108,15 @@ import grand.app.akar.pages.favorites.MyFavoritesMainFragment_MembersInjector;
 import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel;
 import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel_Factory;
 import grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel_MembersInjector;
+import grand.app.akar.pages.home.FilterFragment;
+import grand.app.akar.pages.home.FilterFragment_MembersInjector;
 import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.HomeCitiesFragment_MembersInjector;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.home.HomeFragment_MembersInjector;
+import grand.app.akar.pages.home.viewModels.FilterViewModel;
+import grand.app.akar.pages.home.viewModels.FilterViewModel_Factory;
+import grand.app.akar.pages.home.viewModels.FilterViewModel_MembersInjector;
 import grand.app.akar.pages.home.viewModels.HomeViewModel;
 import grand.app.akar.pages.home.viewModels.HomeViewModel_Factory;
 import grand.app.akar.pages.home.viewModels.HomeViewModel_MembersInjector;
@@ -257,6 +262,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AdDetailsViewModel getAdDetailsViewModel() {
     return injectAdDetailsViewModel(AdDetailsViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
+
+  private FilterViewModel getFilterViewModel() {
+    return injectFilterViewModel(FilterViewModel_Factory.newInstance(adsRepositoryProvider.get()));}
 
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
@@ -438,6 +446,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(AdDetailsFragment adDetailsFragment) {
     injectAdDetailsFragment(adDetailsFragment);}
+
+  @Override
+  public void inject(FilterFragment filterFragment) {
+    injectFilterFragment(filterFragment);}
 
   private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
     HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
@@ -744,6 +756,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AdDetailsFragment injectAdDetailsFragment(AdDetailsFragment instance) {
     AdDetailsFragment_MembersInjector.injectViewModel(instance, getAdDetailsViewModel());
+    return instance;
+  }
+
+  private FilterViewModel injectFilterViewModel(FilterViewModel instance) {
+    FilterViewModel_MembersInjector.injectRepository(instance, adsRepositoryProvider.get());
+    return instance;
+  }
+
+  private FilterFragment injectFilterFragment(FilterFragment instance) {
+    FilterFragment_MembersInjector.injectViewModel(instance, getFilterViewModel());
     return instance;
   }
 

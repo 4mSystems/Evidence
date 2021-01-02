@@ -104,7 +104,7 @@ public class Constants {
 
     public static final String civil_image = "civil_image";
     public static final int civil_image_code = 384;
-    public static final String CLIENTS_REVIEWS = "CLIENTS_REVIEWS";
+    public static final String RATE_APP = "RATE_APP";
     public static final String ABOUT = "about";
     public static final String TERMS = "terms";
     public static final String FIELD = "FIELD";
@@ -113,7 +113,7 @@ public class Constants {
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String WARNING = "WARNING";
     public static final String PROFILE_DATA = "PROFILE_DATA";
-    public static final String MY_POINTS = "MY_POINTS";
+    public static final String RESET = "RESET";
     public static final String MAP_STYLE = "MAP_STYLE";
 
 
@@ -153,7 +153,7 @@ public class Constants {
     public static final String CHAT = "chat";
     public static final String SEND_MESSAGE = "SEND_MESSAGE";
     public static final int CUSTOM_REQUEST_CODE = 532;
-    public static final String PLUS = "plus";
+    public static final String FILTER = "FILTER";
     public static final String LANGUAGE_SELECTED = "language_selected";
     public static final String TRUE = "true";
     public static final String PDF = "pdf";

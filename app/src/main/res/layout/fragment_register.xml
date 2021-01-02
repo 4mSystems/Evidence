@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:background="@drawable/auth_header">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/img_register_logo"
                 android:layout_width="@dimen/dp100w"
                 android:layout_height="@dimen/dp100h"

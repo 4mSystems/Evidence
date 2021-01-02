@@ -64,12 +64,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxhdpi/ic_action_name.png"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xhdpi_holo.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xhdpi/holo.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_by_grand.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/by_grand.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xhdpi_holo.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xhdpi/holo.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_dialog_edit_option.xml.flat",
@@ -104,24 +104,24 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/onboard_slider_item.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_home_list_layout.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/home_list_layout.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_location.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_location.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_client.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxhdpi/ic_client.png"
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_home_list_layout.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/home_list_layout.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_distance.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xhdpi/ic_distance.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_corner_view_primary_accept.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/corner_view_primary_accept.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_distance.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xhdpi/ic_distance.png"
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_client.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxhdpi/ic_client.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_favorite.png.flat",
@@ -152,12 +152,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_empty_radio.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-mdpi_slider2.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-mdpi/slider2.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_action_name.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-hdpi/ic_action_name.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-mdpi_slider2.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-mdpi/slider2.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_fragment_akar_locations_map.xml.flat",
@@ -240,12 +240,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xhdpi/ic_client.png"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/menu_bottom_navigation_menu.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/menu/bottom_navigation_menu.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_phone.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxxhdpi/phone.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/menu_bottom_navigation_menu.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/menu/bottom_navigation_menu.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_switchempty.png.flat",
@@ -290,6 +290,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_driver_location.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_driver_location.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_fragment_filter.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_filter.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_item_ad_images.xml.flat",
@@ -344,16 +348,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_villa.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_share.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-xxhdpi/ic_share.png"
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_item_ad_details_services.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_ad_details_services.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/layout_item_ad_details_services.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_ad_details_services.xml"
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_share.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-xxhdpi/ic_share.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_distance.png.flat",
@@ -382,6 +386,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_add.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_add.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/menu_searcher_bottom_navigation_menu.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/menu/searcher_bottom_navigation_menu.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_distance.png.flat",
@@ -732,12 +740,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_account_about.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_distance.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxhdpi/ic_distance.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_official_documents.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_official_documents.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_distance.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxhdpi/ic_distance.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_account_box.png.flat",
@@ -860,16 +868,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-hdpi/ic_detail_call.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_street.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_street.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_send_chat.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-xxxhdpi/ic_send_chat.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_kitchen.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_kitchen.xml"
-    },
-    {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_street.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_street.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_close.png.flat",
@@ -1512,16 +1520,16 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_account_call.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_area.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_area.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_favorite.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/mipmap-xxhdpi/ic_favorite.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_action_name.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable-xxxhdpi/ic_action_name.png"
-    },
-    {
-        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable_ic_area.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/drawable/ic_area.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/res/merged/debug/drawable-mdpi_ic_client.png.flat",

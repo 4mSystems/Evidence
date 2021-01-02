@@ -17,14 +17,12 @@ import javax.inject.Inject;
 
 import grand.app.akar.PassingObject;
 import grand.app.akar.R;
-import grand.app.akar.activity.BaseActivity;
 import grand.app.akar.base.BaseFragment;
 import grand.app.akar.base.IApplicationComponent;
 import grand.app.akar.base.MyApplication;
 import grand.app.akar.base.ParentActivity;
 import grand.app.akar.databinding.FragmentMyAccountBinding;
 import grand.app.akar.model.base.Mutable;
-import grand.app.akar.pages.myAccount.models.ProfileDataResponse;
 import grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel;
 import grand.app.akar.pages.myAds.MyAdsMainFragment;
 import grand.app.akar.pages.profile.ProfileFragment;
@@ -71,6 +69,9 @@ public class MyAccountFragment extends BaseFragment {
                     break;
                 case Constants.SHARE_BAR:
                     AppHelper.shareApp((ParentActivity) context);
+                    break;
+                case Constants.RATE_APP:
+                    AppHelper.rateApp(context);
                     break;
                 case Constants.MY_ADS:
                     //0 => my listing , 1=> my-premium-listing

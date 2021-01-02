@@ -73,11 +73,11 @@ public class ConfirmCodeFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.CONFIRM_CODE)) {
                 if (viewModel.getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER) {
-                    if (((UsersResponse) ((Mutable) o).object).getData().getPaymentStatus() == 0 && ((UsersResponse) ((Mutable) o).object).getData().getType() != 0) {
+                    if (((UsersResponse) mutable.object).getData().getPaymentStatus() == 0 && ((UsersResponse) mutable.object).getData().getType() != 0) {
                         UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
                         MovementHelper.startActivity(context, PaymentFragment.class.getName(), null, null);
                     } else {
-                        UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+                        UserHelper.getInstance(context).userLogin(((UsersResponse) mutable.object).getData());
                         MovementHelper.startActivityMain(context);
                     }
                 } else {

@@ -59,37 +59,37 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
     private final grand.app.akar.customViews.views.DateEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback188;
+    private final android.view.View.OnClickListener mCallback217;
     @Nullable
-    private final android.view.View.OnClickListener mCallback189;
+    private final android.view.View.OnClickListener mCallback206;
     @Nullable
-    private final android.view.View.OnClickListener mCallback203;
+    private final android.view.View.OnClickListener mCallback218;
     @Nullable
-    private final android.view.View.OnClickListener mCallback198;
+    private final android.view.View.OnClickListener mCallback215;
     @Nullable
-    private final android.view.View.OnClickListener mCallback199;
+    private final android.view.View.OnClickListener mCallback216;
     @Nullable
-    private final android.view.View.OnClickListener mCallback192;
+    private final android.view.View.OnClickListener mCallback209;
     @Nullable
-    private final android.view.View.OnClickListener mCallback193;
+    private final android.view.View.OnClickListener mCallback207;
     @Nullable
-    private final android.view.View.OnClickListener mCallback191;
+    private final android.view.View.OnClickListener mCallback219;
     @Nullable
-    private final android.view.View.OnClickListener mCallback190;
+    private final android.view.View.OnClickListener mCallback208;
     @Nullable
-    private final android.view.View.OnClickListener mCallback201;
+    private final android.view.View.OnClickListener mCallback221;
     @Nullable
-    private final android.view.View.OnClickListener mCallback196;
+    private final android.view.View.OnClickListener mCallback210;
     @Nullable
-    private final android.view.View.OnClickListener mCallback202;
+    private final android.view.View.OnClickListener mCallback220;
     @Nullable
-    private final android.view.View.OnClickListener mCallback197;
+    private final android.view.View.OnClickListener mCallback213;
     @Nullable
-    private final android.view.View.OnClickListener mCallback194;
+    private final android.view.View.OnClickListener mCallback214;
     @Nullable
-    private final android.view.View.OnClickListener mCallback200;
+    private final android.view.View.OnClickListener mCallback211;
     @Nullable
-    private final android.view.View.OnClickListener mCallback195;
+    private final android.view.View.OnClickListener mCallback212;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -563,22 +563,22 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
         this.school.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback188 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
-        mCallback189 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback203 = new grand.app.akar.generated.callback.OnClickListener(this, 16);
-        mCallback198 = new grand.app.akar.generated.callback.OnClickListener(this, 11);
-        mCallback199 = new grand.app.akar.generated.callback.OnClickListener(this, 12);
-        mCallback192 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback193 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
-        mCallback191 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback190 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback201 = new grand.app.akar.generated.callback.OnClickListener(this, 14);
-        mCallback196 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
-        mCallback202 = new grand.app.akar.generated.callback.OnClickListener(this, 15);
-        mCallback197 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
-        mCallback194 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
-        mCallback200 = new grand.app.akar.generated.callback.OnClickListener(this, 13);
-        mCallback195 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback217 = new grand.app.akar.generated.callback.OnClickListener(this, 12);
+        mCallback206 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback218 = new grand.app.akar.generated.callback.OnClickListener(this, 13);
+        mCallback215 = new grand.app.akar.generated.callback.OnClickListener(this, 10);
+        mCallback216 = new grand.app.akar.generated.callback.OnClickListener(this, 11);
+        mCallback209 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
+        mCallback207 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback219 = new grand.app.akar.generated.callback.OnClickListener(this, 14);
+        mCallback208 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback221 = new grand.app.akar.generated.callback.OnClickListener(this, 16);
+        mCallback210 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback220 = new grand.app.akar.generated.callback.OnClickListener(this, 15);
+        mCallback213 = new grand.app.akar.generated.callback.OnClickListener(this, 8);
+        mCallback214 = new grand.app.akar.generated.callback.OnClickListener(this, 9);
+        mCallback211 = new grand.app.akar.generated.callback.OnClickListener(this, 6);
+        mCallback212 = new grand.app.akar.generated.callback.OnClickListener(this, 7);
         invalidateAll();
     }
 
@@ -1296,19 +1296,19 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
         if ((dirtyFlags & 0x10000L) != 0) {
             // api target 1
 
-            this.btCustomize.setOnClickListener(mCallback194);
-            this.btHolyKing.setOnClickListener(mCallback195);
-            this.btMnahda.setOnClickListener(mCallback189);
-            this.btSac.setOnClickListener(mCallback191);
-            this.btTitleDeed.setOnClickListener(mCallback196);
-            this.btTransform.setOnClickListener(mCallback192);
-            this.btnCash.setOnClickListener(mCallback190);
-            this.btnRealEstateCertificate.setOnClickListener(mCallback193);
-            this.btnSell.setOnClickListener(mCallback188);
-            this.confirmBtn.setOnClickListener(mCallback203);
-            this.furnitureToggle.setOnClickListener(mCallback198);
-            this.garageToggle.setOnClickListener(mCallback197);
-            this.hospital.setOnClickListener(mCallback201);
+            this.btCustomize.setOnClickListener(mCallback212);
+            this.btHolyKing.setOnClickListener(mCallback213);
+            this.btMnahda.setOnClickListener(mCallback207);
+            this.btSac.setOnClickListener(mCallback209);
+            this.btTitleDeed.setOnClickListener(mCallback214);
+            this.btTransform.setOnClickListener(mCallback210);
+            this.btnCash.setOnClickListener(mCallback208);
+            this.btnRealEstateCertificate.setOnClickListener(mCallback211);
+            this.btnSell.setOnClickListener(mCallback206);
+            this.confirmBtn.setOnClickListener(mCallback221);
+            this.furnitureToggle.setOnClickListener(mCallback216);
+            this.garageToggle.setOnClickListener(mCallback215);
+            this.hospital.setOnClickListener(mCallback219);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewFrontCount, incrementalViewFrontCountvalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewPathsNumber, incrementalViewPathsNumbervalueAttrChanged);
             grand.app.akar.customViews.views.IncrementalView.setValueListner(this.incrementalViewRoomsNumber, incrementalViewRoomsNumbervalueAttrChanged);
@@ -1319,9 +1319,9 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputWarehouseHigh, inputWarehouseHightextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputWarehouseSize, inputWarehouseSizetextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView9, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView9androidTextAttrChanged);
-            this.mosque.setOnClickListener(mCallback199);
-            this.policeStation.setOnClickListener(mCallback202);
-            this.school.setOnClickListener(mCallback200);
+            this.mosque.setOnClickListener(mCallback217);
+            this.policeStation.setOnClickListener(mCallback220);
+            this.school.setOnClickListener(mCallback218);
         }
         if ((dirtyFlags & 0x10050L) != 0) {
             // api target 1
@@ -1416,6 +1416,23 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 12: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.mosqueChecked();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1434,7 +1451,7 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 }
                 break;
             }
-            case 2: {
+            case 13: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1447,12 +1464,11 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-                    viewmodel.dealingTypeAction(1);
+                    viewmodel.schoolChecked();
                 }
                 break;
             }
-            case 16: {
+            case 10: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1465,7 +1481,7 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createWareHouseAd();
+                    viewmodel.garageChecked();
                 }
                 break;
             }
@@ -1483,61 +1499,6 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
 
 
                     viewmodel.furnChecked();
-                }
-                break;
-            }
-            case 12: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.mosqueChecked();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
                 }
                 break;
             }
@@ -1560,6 +1521,41 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.dealingTypeAction(1);
+                }
+                break;
+            }
+            case 14: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.hospitalChecked();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1579,7 +1575,7 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 }
                 break;
             }
-            case 14: {
+            case 16: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1592,7 +1588,62 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.hospitalChecked();
+                    viewmodel.createWareHouseAd();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.paymentMethodAction(btTransform.getResources().getString(R.string.transform), 2);
+                }
+                break;
+            }
+            case 15: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.stationChecked();
+                }
+                break;
+            }
+            case 8: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.docTypeAction(btHolyKing.getResources().getString(R.string.holy_king), 2);
                 }
                 break;
             }
@@ -1615,7 +1666,7 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 }
                 break;
             }
-            case 15: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1628,24 +1679,9 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.stationChecked();
-                }
-                break;
-            }
-            case 10: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
 
 
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.garageChecked();
+                    viewmodel.docTypeAction(btnRealEstateCertificate.getResources().getString(R.string.real_estate_certificate), 0);
                 }
                 break;
             }
@@ -1665,42 +1701,6 @@ public class FragmentAddWarehouseFormBindingImpl extends FragmentAddWarehouseFor
 
 
                     viewmodel.docTypeAction(btCustomize.getResources().getString(R.string.customize), 1);
-                }
-                break;
-            }
-            case 13: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.schoolChecked();
-                }
-                break;
-            }
-            case 8: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.docTypeAction(btHolyKing.getResources().getString(R.string.holy_king), 2);
                 }
                 break;
             }

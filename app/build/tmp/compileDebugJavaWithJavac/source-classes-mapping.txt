@@ -150,8 +150,6 @@ grand/app/akar/databinding/FragmentAddStoreFormBinding.java
  grand.app.akar.databinding.FragmentAddStoreFormBinding
 grand/app/akar/utils/PopUp/PopUpInterface.java
  grand.app.akar.utils.PopUp.PopUpInterface
-grand/app/akar/pages/home/viewModels/SearchViewModel.java
- grand.app.akar.pages.home.viewModels.SearchViewModel
 grand/app/akar/databinding/FragmentMyAdsMainBinding.java
  grand.app.akar.databinding.FragmentMyAdsMainBinding
 grand/app/akar/databinding/FragmentAddOfficeFormBinding.java
@@ -334,6 +332,8 @@ grand/app/akar/pages/chat/model/ChatSendResponse.java
 grand/app/akar/base/ConnectivityReceiver.java
  grand.app.akar.base.ConnectivityReceiver
  grand.app.akar.base.ConnectivityReceiver$ConnectivityReceiverListener
+grand/app/akar/databinding/FragmentFilterBinding.java
+ grand.app.akar.databinding.FragmentFilterBinding
 grand/app/akar/databinding/FragmentAdsInfoBinding.java
  grand.app.akar.databinding.FragmentAdsInfoBinding
 grand/app/akar/customViews/grandDialog/GrandImageDialog.java
@@ -385,6 +385,14 @@ grand/app/akar/pages/ads/forms/AddStoreFormFragment.java
  grand.app.akar.pages.ads.forms.AddStoreFormFragment
 grand/app/akar/connection/ConnectionListenerInterFace.java
  grand.app.akar.connection.ConnectionListenerInterFace
+grand/app/akar/pages/home/FilterFragment.java
+ grand.app.akar.pages.home.FilterFragment
+ grand.app.akar.pages.home.FilterFragment$1
+ grand.app.akar.pages.home.FilterFragment$2
+ grand.app.akar.pages.home.FilterFragment$3
+ grand.app.akar.pages.home.FilterFragment$4
+ grand.app.akar.pages.home.FilterFragment$5
+ grand.app.akar.pages.home.FilterFragment$6
 grand/app/akar/base/ParentActivity.java
  grand.app.akar.base.ParentActivity
 grand/app/akar/model/base/Mutable.java
@@ -499,6 +507,8 @@ grand/app/akar/pages/ads/models/OrderImages.java
  grand.app.akar.pages.ads.models.OrderImages
 grand/app/akar/utils/Constants.java
  grand.app.akar.utils.Constants
+grand/app/akar/pages/home/viewModels/FilterViewModel.java
+ grand.app.akar.pages.home.viewModels.FilterViewModel
 grand/app/akar/pages/ads/forms/AdsAttachmentsFragment.java
  grand.app.akar.pages.ads.forms.AdsAttachmentsFragment
  grand.app.akar.pages.ads.forms.AdsAttachmentsFragment$1

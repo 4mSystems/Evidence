@@ -21,7 +21,7 @@ public class ItemHomeCategoryBindingImpl extends ItemHomeCategoryBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback226;
+    private final android.view.View.OnClickListener mCallback244;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class ItemHomeCategoryBindingImpl extends ItemHomeCategoryBinding impleme
         this.tvHomeItem.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback226 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback244 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -137,7 +137,7 @@ public class ItemHomeCategoryBindingImpl extends ItemHomeCategoryBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView0.setOnClickListener(mCallback226);
+            this.mboundView0.setOnClickListener(mCallback244);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

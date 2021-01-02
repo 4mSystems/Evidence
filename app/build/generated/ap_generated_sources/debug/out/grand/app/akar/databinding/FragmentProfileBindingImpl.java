@@ -30,15 +30,15 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     private final androidx.appcompat.widget.AppCompatImageView mboundView10;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback164;
+    private final android.view.View.OnClickListener mCallback184;
     @Nullable
-    private final android.view.View.OnClickListener mCallback165;
+    private final android.view.View.OnClickListener mCallback180;
     @Nullable
-    private final android.view.View.OnClickListener mCallback166;
+    private final android.view.View.OnClickListener mCallback181;
     @Nullable
-    private final android.view.View.OnClickListener mCallback167;
+    private final android.view.View.OnClickListener mCallback182;
     @Nullable
-    private final android.view.View.OnClickListener mCallback163;
+    private final android.view.View.OnClickListener mCallback183;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -229,11 +229,11 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         this.mboundView10.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback164 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
-        mCallback165 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
-        mCallback166 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
-        mCallback167 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
-        mCallback163 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback184 = new grand.app.akar.generated.callback.OnClickListener(this, 5);
+        mCallback180 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback181 = new grand.app.akar.generated.callback.OnClickListener(this, 2);
+        mCallback182 = new grand.app.akar.generated.callback.OnClickListener(this, 3);
+        mCallback183 = new grand.app.akar.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -417,15 +417,15 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback166);
-            this.btOwner.setOnClickListener(mCallback164);
-            this.btRealtor.setOnClickListener(mCallback165);
-            this.btnSeeker.setOnClickListener(mCallback163);
+            this.appCompatButtonNext.setOnClickListener(mCallback183);
+            this.btOwner.setOnClickListener(mCallback181);
+            this.btRealtor.setOnClickListener(mCallback182);
+            this.btnSeeker.setOnClickListener(mCallback180);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputName, inputNametextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
             grand.app.akar.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
-            this.mboundView10.setOnClickListener(mCallback167);
+            this.mboundView10.setOnClickListener(mCallback184);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -451,6 +451,41 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.imageSubmit();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeUserType(0);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -501,41 +536,6 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
 
 
                     viewmodel.updateProfile();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.imageSubmit();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                grand.app.akar.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeUserType(0);
                 }
                 break;
             }

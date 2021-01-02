@@ -141,6 +141,8 @@ dependencies {
     //shapeOf
     implementation 'com.github.florent37:shapeofview:1.4.7'
     implementation 'com.droidninja:filepicker:2.2.4'
-
+    //expandables
+    implementation 'com.github.florent37:expansionpanel:1.2.2'
+    implementation 'com.github.guilhe:seekbar-ranged-view:2.0.5'
 
 }

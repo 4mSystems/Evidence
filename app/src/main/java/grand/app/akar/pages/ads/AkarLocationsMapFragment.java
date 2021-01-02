@@ -67,7 +67,6 @@ public class AkarLocationsMapFragment extends BaseFragment implements OnMapReady
         bundleUpdate = this.getArguments();
         if (bundleUpdate != null) {
             String passingObject = bundleUpdate.getString(Constants.BUNDLE);
-            Log.e("onCreateView", "onCreateView: " + passingObject);
             if (passingObject != null) {
                 viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
                 viewModel.setUpdateRequest(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), LocationUpdateRequest.class));

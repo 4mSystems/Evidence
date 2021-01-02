@@ -418,6 +418,7 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
         grand.app.akar.pages.home.adapters.HomeAdapter viewModelHomeAdapter = null;
         java.lang.String stringValueOfViewModelAdDetailsDataListingId = null;
         int viewModelUserDataType = 0;
+        int viewModelAdDetailsDataListingJavaLangObjectNullViewVISIBLEViewGONE = 0;
         int viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsFrontNoInt0BooleanFalseViewVISIBLEViewGONE = 0;
         grand.app.akar.pages.adDetails.adapters.ServicesAdapter viewModelServicesAdapter = null;
         java.lang.String viewModelAdDetailsDataListingAddress = null;
@@ -516,10 +517,11 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
                         dirtyFlags |= 0x4000000000000000L;
                         dirtyFlags_1 |= 0x1L;
                         dirtyFlags_1 |= 0x4L;
-                        dirtyFlags_1 |= 0x100L;
+                        dirtyFlags_1 |= 0x40L;
                         dirtyFlags_1 |= 0x400L;
                         dirtyFlags_1 |= 0x1000L;
-                        dirtyFlags_1 |= 0x400000L;
+                        dirtyFlags_1 |= 0x4000L;
+                        dirtyFlags_1 |= 0x1000000L;
                 }
                 else {
                         dirtyFlags |= 0x8L;
@@ -541,26 +543,29 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
                         dirtyFlags |= 0x2000000000000000L;
                         dirtyFlags |= 0x8000000000000000L;
                         dirtyFlags_1 |= 0x2L;
-                        dirtyFlags_1 |= 0x80L;
+                        dirtyFlags_1 |= 0x20L;
                         dirtyFlags_1 |= 0x200L;
                         dirtyFlags_1 |= 0x800L;
-                        dirtyFlags_1 |= 0x200000L;
+                        dirtyFlags_1 |= 0x2000L;
+                        dirtyFlags_1 |= 0x800000L;
                 }
             }
 
 
                 // read viewModel.adDetailsData.listing.listingOptions != null
                 viewModelAdDetailsDataListingListingOptionsJavaLangObjectNull = (viewModelAdDetailsDataListingListingOptions) != (null);
+                // read viewModel.adDetailsData.listing != null ? View.VISIBLE : View.GONE
+                viewModelAdDetailsDataListingJavaLangObjectNullViewVISIBLEViewGONE = ((viewModelAdDetailsDataListingJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelAdDetailsDataListingListingOptionsJavaLangObjectNull) {
                         dirtyFlags |= 0x1000L;
                         dirtyFlags |= 0x1000000L;
-                        dirtyFlags_1 |= 0x40000L;
+                        dirtyFlags_1 |= 0x100000L;
                 }
                 else {
                         dirtyFlags |= 0x800L;
                         dirtyFlags |= 0x800000L;
-                        dirtyFlags_1 |= 0x20000L;
+                        dirtyFlags_1 |= 0x80000L;
                 }
             }
                 if (viewModelAdDetailsDataListingDefaultImg != null) {
@@ -621,35 +626,35 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
                 viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsJavaLangObjectNullBooleanFalse = ((viewModelAdDetailsDataListingJavaLangObjectNull) ? (viewModelAdDetailsDataListingListingOptionsJavaLangObjectNull) : (false));
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsJavaLangObjectNullBooleanFalse) {
-                        dirtyFlags_1 |= 0x10000L;
+                        dirtyFlags_1 |= 0x40000L;
                 }
                 else {
-                        dirtyFlags_1 |= 0x8000L;
+                        dirtyFlags_1 |= 0x20000L;
                 }
             }
         }
-        if ((dirtyFlags_1 & 0x400000L) != 0) {
+        if ((dirtyFlags_1 & 0x1000000L) != 0) {
 
                 if (viewModelAdDetailsDataListing != null) {
                     // read viewModel.adDetailsData.listing.docType
                     viewModelAdDetailsDataListingDocType = viewModelAdDetailsDataListing.getDocType();
                 }
         }
-        if ((dirtyFlags_1 & 0x1000L) != 0) {
+        if ((dirtyFlags_1 & 0x4000L) != 0) {
 
                 if (viewModelAdDetailsDataListing != null) {
                     // read viewModel.adDetailsData.listing.paymentMethod
                     viewModelAdDetailsDataListingPaymentMethod = viewModelAdDetailsDataListing.getPaymentMethod();
                 }
         }
-        if ((dirtyFlags & 0x1000L) != 0 || (dirtyFlags_1 & 0x40000L) != 0) {
+        if ((dirtyFlags & 0x1000L) != 0 || (dirtyFlags_1 & 0x100000L) != 0) {
 
                 if (viewModelAdDetailsDataListingListingOptions != null) {
                     // read viewModel.adDetailsData.listing.listingOptions.desc
                     viewModelAdDetailsDataListingListingOptionsDesc = viewModelAdDetailsDataListingListingOptions.getDesc();
                 }
 
-            if ((dirtyFlags_1 & 0x40000L) != 0) {
+            if ((dirtyFlags_1 & 0x100000L) != 0) {
 
                     // read viewModel.adDetailsData.listing.listingOptions.desc != null
                     viewModelAdDetailsDataListingListingOptionsDescJavaLangObjectNull = (viewModelAdDetailsDataListingListingOptionsDesc) != (null);
@@ -818,14 +823,14 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
                     viewModelAdDetailsDataListingBuildingYear = viewModelAdDetailsDataListing.getBuildingYear();
                 }
         }
-        if ((dirtyFlags_1 & 0x500L) != 0) {
+        if ((dirtyFlags_1 & 0x1400L) != 0) {
 
                 if (viewModelAdDetailsDataListing != null) {
                     // read viewModel.adDetailsData.listing.totalArea
                     viewModelAdDetailsDataListingTotalArea = viewModelAdDetailsDataListing.getTotalArea();
                 }
 
-            if ((dirtyFlags_1 & 0x100L) != 0) {
+            if ((dirtyFlags_1 & 0x400L) != 0) {
 
                     if (viewModelAdDetailsDataListingTotalArea != null) {
                         // read viewModel.adDetailsData.listing.totalArea.equals("0")
@@ -836,7 +841,7 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
                     // read !viewModel.adDetailsData.listing.totalArea.equals("0")
                     ViewModelAdDetailsDataListingTotalAreaEqualsJavaLangString01 = !viewModelAdDetailsDataListingTotalAreaEqualsJavaLangString0;
             }
-            if ((dirtyFlags_1 & 0x400L) != 0) {
+            if ((dirtyFlags_1 & 0x1000L) != 0) {
 
                     if (viewModelAdDetailsDataListingTotalArea != null) {
                         // read viewModel.adDetailsData.listing.totalArea.concat(" ")
@@ -1006,11 +1011,11 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsFrontNoInt0BooleanFalse) {
                         dirtyFlags |= 0x4000000000L;
-                        dirtyFlags_1 |= 0x40L;
+                        dirtyFlags_1 |= 0x100L;
                 }
                 else {
                         dirtyFlags |= 0x2000000000L;
-                        dirtyFlags_1 |= 0x20L;
+                        dirtyFlags_1 |= 0x80L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
@@ -1031,10 +1036,10 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
             }
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingBathroomNoEqualsJavaLangString0BooleanFalse) {
-                        dirtyFlags_1 |= 0x100000L;
+                        dirtyFlags_1 |= 0x400000L;
                 }
                 else {
-                        dirtyFlags_1 |= 0x80000L;
+                        dirtyFlags_1 |= 0x200000L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
@@ -1049,10 +1054,10 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
             }
             if((dirtyFlags & 0x7L) != 0) {
                 if(viewModelAdDetailsDataListingJavaLangObjectNullViewModelAdDetailsDataListingKitchenNoEqualsJavaLangString0BooleanFalse) {
-                        dirtyFlags_1 |= 0x4000L;
+                        dirtyFlags_1 |= 0x10000L;
                 }
                 else {
-                        dirtyFlags_1 |= 0x2000L;
+                        dirtyFlags_1 |= 0x8000L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
@@ -1107,7 +1112,7 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
         }
         // batch finished
 
-        if ((dirtyFlags_1 & 0x10000L) != 0) {
+        if ((dirtyFlags_1 & 0x40000L) != 0) {
 
                 if (viewModelAdDetailsDataListingListingOptions != null) {
                     // read viewModel.adDetailsData.listing.listingOptions.streetWidth
@@ -1192,6 +1197,7 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.descText, viewModelAdDetailsDataListingListingOptionsJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsDescJavaLangString);
             this.descText.setVisibility(viewModelAdDetailsDataListingListingOptionsJavaLangObjectNullViewModelAdDetailsDataListingListingOptionsDescJavaLangObjectNullBooleanFalseViewVISIBLEViewGONE);
             this.imgHomeItem.setVisibility(viewModelAdDetailsDataJavaLangObjectNullViewModelAdDetailsDataListingUserIdViewModelUserDataIdBooleanFalseViewGONEViewVISIBLE);
+            this.mboundView0.setVisibility(viewModelAdDetailsDataListingJavaLangObjectNullViewVISIBLEViewGONE);
             this.mboundView2.setVisibility(viewModelAdDetailsDataJavaLangObjectNullViewModelAdDetailsDataListingUserIdViewModelUserDataIdBooleanFalseViewGONEViewVISIBLE);
             this.mboundView3.setVisibility(viewModelAdDetailsDataJavaLangObjectNullViewModelAdDetailsDataListingUserIdViewModelUserDataIdBooleanFalseViewVISIBLEViewGONE);
             grand.app.akar.base.ApplicationBinding.loadImage(this.mboundView45, viewModelAdDetailsDataListingUserImg);
@@ -1588,24 +1594,26 @@ public class FragmentAdDetailsBindingImpl extends FragmentAdDetailsBinding imple
         flag 66 (0x43L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.kitchenNo.equals("0") : false
         flag 67 (0x44L): viewModel.adDetailsData != null ? viewModel.adDetailsData.listing.userId == viewModel.userData.id : false ? View.GONE : View.VISIBLE
         flag 68 (0x45L): viewModel.adDetailsData != null ? viewModel.adDetailsData.listing.userId == viewModel.userData.id : false ? View.GONE : View.VISIBLE
-        flag 69 (0x46L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions.frontNo != 0 : false ? View.VISIBLE : View.GONE
-        flag 70 (0x47L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions.frontNo != 0 : false ? View.VISIBLE : View.GONE
-        flag 71 (0x48L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.totalArea.equals("0") : false
-        flag 72 (0x49L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.totalArea.equals("0") : false
-        flag 73 (0x4aL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.totalArea.concat(" ").concat(@android:string/meter) : ""
-        flag 74 (0x4bL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.totalArea.concat(" ").concat(@android:string/meter) : ""
-        flag 75 (0x4cL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.paymentMethod : ""
-        flag 76 (0x4dL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.paymentMethod : ""
-        flag 77 (0x4eL): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.kitchenNo.equals("0") : false ? View.VISIBLE : View.GONE
-        flag 78 (0x4fL): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.kitchenNo.equals("0") : false ? View.VISIBLE : View.GONE
-        flag 79 (0x50L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions != null : false ? String.valueOf(viewModel.adDetailsData.listing.listingOptions.streetWidth).concat(" ").concat(@android:string/meter) : ""
-        flag 80 (0x51L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions != null : false ? String.valueOf(viewModel.adDetailsData.listing.listingOptions.streetWidth).concat(" ").concat(@android:string/meter) : ""
-        flag 81 (0x52L): viewModel.adDetailsData.listing.listingOptions != null ? viewModel.adDetailsData.listing.listingOptions.desc != null : false
-        flag 82 (0x53L): viewModel.adDetailsData.listing.listingOptions != null ? viewModel.adDetailsData.listing.listingOptions.desc != null : false
-        flag 83 (0x54L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.bathroomNo.equals("0") : false ? View.VISIBLE : View.GONE
-        flag 84 (0x55L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.bathroomNo.equals("0") : false ? View.VISIBLE : View.GONE
-        flag 85 (0x56L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.docType : ""
-        flag 86 (0x57L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.docType : ""
+        flag 69 (0x46L): viewModel.adDetailsData.listing != null ? View.VISIBLE : View.GONE
+        flag 70 (0x47L): viewModel.adDetailsData.listing != null ? View.VISIBLE : View.GONE
+        flag 71 (0x48L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions.frontNo != 0 : false ? View.VISIBLE : View.GONE
+        flag 72 (0x49L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions.frontNo != 0 : false ? View.VISIBLE : View.GONE
+        flag 73 (0x4aL): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.totalArea.equals("0") : false
+        flag 74 (0x4bL): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.totalArea.equals("0") : false
+        flag 75 (0x4cL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.totalArea.concat(" ").concat(@android:string/meter) : ""
+        flag 76 (0x4dL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.totalArea.concat(" ").concat(@android:string/meter) : ""
+        flag 77 (0x4eL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.paymentMethod : ""
+        flag 78 (0x4fL): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.paymentMethod : ""
+        flag 79 (0x50L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.kitchenNo.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 80 (0x51L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.kitchenNo.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 81 (0x52L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions != null : false ? String.valueOf(viewModel.adDetailsData.listing.listingOptions.streetWidth).concat(" ").concat(@android:string/meter) : ""
+        flag 82 (0x53L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.listingOptions != null : false ? String.valueOf(viewModel.adDetailsData.listing.listingOptions.streetWidth).concat(" ").concat(@android:string/meter) : ""
+        flag 83 (0x54L): viewModel.adDetailsData.listing.listingOptions != null ? viewModel.adDetailsData.listing.listingOptions.desc != null : false
+        flag 84 (0x55L): viewModel.adDetailsData.listing.listingOptions != null ? viewModel.adDetailsData.listing.listingOptions.desc != null : false
+        flag 85 (0x56L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.bathroomNo.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 86 (0x57L): viewModel.adDetailsData.listing != null ? !viewModel.adDetailsData.listing.bathroomNo.equals("0") : false ? View.VISIBLE : View.GONE
+        flag 87 (0x58L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.docType : ""
+        flag 88 (0x59L): viewModel.adDetailsData.listing != null ? viewModel.adDetailsData.listing.docType : ""
     flag mapping end*/
     //end
 }

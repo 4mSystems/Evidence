@@ -19,7 +19,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback145;
+    private final android.view.View.OnClickListener mCallback161;
     // values
     // listeners
     private OnNavigationItemSelectedListenerImpl mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener;
@@ -40,7 +40,7 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
         this.llBaseContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback145 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
+        mCallback161 = new grand.app.akar.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -109,8 +109,12 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewModelUserDataType = 0;
         com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener viewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener = null;
+        int viewModelUserDataTypeInt0ViewVISIBLEViewGONE = 0;
+        grand.app.akar.pages.auth.models.UserData viewModelUserData = null;
         grand.app.akar.pages.home.viewModels.HomeViewModel viewModel = mViewModel;
+        boolean viewModelUserDataTypeInt0 = false;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -119,17 +123,42 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
                 if (viewModel != null) {
                     // read viewModel::onNavigationClick
                     viewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener = (((mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener == null) ? (mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener = new OnNavigationItemSelectedListenerImpl()) : mViewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener).setValue(viewModel));
+                    // read viewModel.userData
+                    viewModelUserData = viewModel.userData;
                 }
+
+
+                if (viewModelUserData != null) {
+                    // read viewModel.userData.type
+                    viewModelUserDataType = viewModelUserData.getType();
+                }
+
+
+                // read viewModel.userData.type != 0
+                viewModelUserDataTypeInt0 = (viewModelUserDataType) != (0);
+            if((dirtyFlags & 0x3L) != 0) {
+                if(viewModelUserDataTypeInt0) {
+                        dirtyFlags |= 0x8L;
+                }
+                else {
+                        dirtyFlags |= 0x4L;
+                }
+            }
+
+
+                // read viewModel.userData.type != 0 ? View.VISIBLE : View.GONE
+                viewModelUserDataTypeInt0ViewVISIBLEViewGONE = ((viewModelUserDataTypeInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.fab.setOnClickListener(mCallback145);
+            this.fab.setOnClickListener(mCallback161);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
+            this.fab.setVisibility(viewModelUserDataTypeInt0ViewVISIBLEViewGONE);
             this.homeNavigationMenu.setOnNavigationItemSelectedListener(viewModelOnNavigationClickComGoogleAndroidMaterialBottomnavigationBottomNavigationViewOnNavigationItemSelectedListener);
         }
     }
@@ -167,6 +196,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding implements gran
     /* flag mapping
         flag 0 (0x1L): viewModel
         flag 1 (0x2L): null
+        flag 2 (0x3L): viewModel.userData.type != 0 ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): viewModel.userData.type != 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

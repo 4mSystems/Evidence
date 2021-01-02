@@ -33,6 +33,7 @@ import grand.app.akar.pages.conversations.ConversationsFragment;
 import grand.app.akar.pages.favorites.FavoritesContactFragment;
 import grand.app.akar.pages.favorites.FavoritesFragment;
 import grand.app.akar.pages.favorites.MyFavoritesMainFragment;
+import grand.app.akar.pages.home.FilterFragment;
 import grand.app.akar.pages.home.HomeCitiesFragment;
 import grand.app.akar.pages.home.HomeFragment;
 import grand.app.akar.pages.myAccount.MyAccountFragment;
@@ -135,6 +136,8 @@ public interface IApplicationComponent {
     void inject(FavoritesContactFragment favoritesContactFragment);
 
     void inject(AdDetailsFragment adDetailsFragment);
+
+    void inject(FilterFragment filterFragment);
 
     @Component.Builder
     interface Builder {

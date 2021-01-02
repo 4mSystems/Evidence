@@ -105,10 +105,8 @@ public class HomeViewModel extends BaseViewModel {
         } else if (id == R.id.radioPriceLowHigh) {
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getPrice().compareTo(u2.getPrice()));
         } else if (id == R.id.radioBigArea) {
-            Log.e("sortType", "sortType: high");
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u2.getArea().compareTo(u1.getArea()));
         } else if (id == R.id.radioSmallestArea) {
-            Log.e("sortType", "sortType: low");
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getArea().compareTo(u2.getArea()));
         } else if (id == R.id.radioViews) {
             Collections.sort(getHomeAdapter().getHomeDataListFiltered(), (u1, u2) -> u1.getViews().compareTo(u2.getViews()));
@@ -171,6 +169,10 @@ public class HomeViewModel extends BaseViewModel {
 
     public void rentTypeFilter() {
         liveData.setValue(new Mutable(Constants.SEARCH_LISTING_TYPE));
+    }
+
+    public void toFilter() {
+        liveData.setValue(new Mutable(Constants.FILTER));
     }
 
     public SearchRequest getSearchRequest() {

@@ -14,13 +14,14 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewModel.adDetailsData.listing!=null?View.VISIBLE:View.GONE,default=gone}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/searchContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <!--            android:visibility="@{viewModel.adDetailsData.listing!=null?View.VISIBLE:View.GONE,default=gone}"-->
+
             <com.smarteist.autoimageslider.SliderView
                 android:id="@+id/cover_image"
                 android:layout_width="wrap_content"

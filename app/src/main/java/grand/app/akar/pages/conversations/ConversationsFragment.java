@@ -48,7 +48,8 @@ public class ConversationsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.CONVERSATIONS)) {
-                viewModel.getConversationsAdapter().update(((ConversationsResponse) mutable.object).getData());
+                if (((ConversationsResponse) mutable.object).getData() != null)
+                    viewModel.getConversationsAdapter().update(((ConversationsResponse) mutable.object).getData());
             }
         });
     }

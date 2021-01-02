@@ -130,6 +130,7 @@ attr autoSizeTextType
 attr autoTransition
 attr background
 attr backgroundColor
+attr backgroundHeight
 attr backgroundInsetBottom
 attr backgroundInsetEnd
 attr backgroundInsetStart
@@ -389,6 +390,8 @@ attr counterOverflowTextColor
 attr counterTextAppearance
 attr counterTextColor
 attr crossfade
+attr currentMax
+attr currentMin
 attr currentState
 attr cursorColor
 attr cursorWidth
@@ -759,6 +762,7 @@ attr materialClockStyle
 attr materialThemeOverlay
 attr materialTimePickerStyle
 attr materialTimePickerTheme
+attr max
 attr maxAcceleration
 attr maxActionInlineWidth
 attr maxButtonHeight
@@ -770,6 +774,7 @@ attr maxVelocity
 attr maxWidth
 attr measureWithLargestChild
 attr menu
+attr min
 attr minHeight
 attr minHideDelay
 attr minSeparation
@@ -869,6 +874,8 @@ attr preserveIconSpacing
 attr pressedTranslationZ
 attr progressBarPadding
 attr progressBarStyle
+attr progressColor
+attr progressHeight
 attr queryBackground
 attr queryHint
 attr radioButtonStyle
@@ -897,6 +904,7 @@ attr riv_tile_mode_x
 attr riv_tile_mode_y
 attr round
 attr roundPercent
+attr rounded
 attr saturation
 attr scopeUris
 attr scrimAnimationDuration
@@ -1090,12 +1098,15 @@ attr themeLineHeight
 attr thickness
 attr thumbColor
 attr thumbElevation
+attr thumbNormalResource
+attr thumbPressedResource
 attr thumbRadius
 attr thumbStrokeColor
 attr thumbStrokeWidth
 attr thumbTextPadding
 attr thumbTint
 attr thumbTintMode
+attr thumbsResource
 attr tickColor
 attr tickColorActive
 attr tickColorInactive
@@ -3519,6 +3530,8 @@ drawable corner_view_primary_gray
 drawable corner_view_primary_yellow
 drawable corner_view_top
 drawable cost
+drawable default_thumb
+drawable default_thumb_pressed
 drawable del_icon
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -4319,7 +4332,15 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id expansionLayout
+id expansionLayoutDealType
+id expansionLayoutDocType
+id expansionLayoutFactorySize
+id expansionLayoutFloorArea
 id expansionLayoutHeader
+id expansionLayoutLandArea
+id expansionLayoutPaymentType
+id expansionLayoutStreetWidth
+id expansionLayoutTotalArea
 id fab
 id fade
 id fastscroll
@@ -4332,6 +4353,8 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filter_reset
+id filter_title
 id fitToContents
 id fixed
 id fl_home_container
@@ -4376,6 +4399,15 @@ id hybrid
 id ib_close
 id ic_filter
 id icon
+id icon_down
+id icon_down2
+id icon_down3
+id icon_down4
+id icon_down5
+id icon_down6
+id icon_down7
+id icon_down8
+id icon_down9
 id icon_group
 id icon_only
 id ifRoom
@@ -4401,8 +4433,10 @@ id img_login_google
 id img_login_logo
 id img_register_logo
 id increment
+id incrementalViewBathNumber
 id incrementalViewFloorNumber
 id incrementalViewFrontCount
+id incrementalViewFrontNumber
 id incrementalViewKitchenNumber
 id incrementalViewPathsNumber
 id incrementalViewRoomsNumber
@@ -4494,6 +4528,12 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id max_factory_size
+id max_floor_area
+id max_land_area
+id max_price
+id max_street_width
+id max_total_area
 id media_actions
 id menuAccount
 id menuAdd
@@ -4502,6 +4542,12 @@ id menuFavorites
 id menuHome
 id message
 id middle
+id min_factory_size
+id min_floor_area
+id min_land_area
+id min_price
+id min_street_width
+id min_total_area
 id mini
 id mirror
 id month
@@ -4617,6 +4663,12 @@ id radioRent
 id radioSell
 id radioSmallestArea
 id radioViews
+id rangeBar
+id rangeBarFactorySize
+id rangeBarFloorArea
+id rangeBarLandArea
+id rangeBarStreetWidth
+id rangeBarTotalArea
 id ratio
 id rc_chat
 id rectangle
@@ -4760,6 +4812,7 @@ id textinput_prefix_text
 id textinput_suffix_text
 id thinWorm
 id time
+id time_toggle
 id title
 id titleDividerNoCustom
 id title_template
@@ -4780,6 +4833,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id transparent_bg
 id triangle
+id tv_about
 id tv_account_about
 id tv_account_contact
 id tv_account_fund_ads
@@ -4794,7 +4848,9 @@ id tv_account_title
 id tv_account_type
 id tv_action_bar_location
 id tv_action_bar_title
+id tv_ad_time
 id tv_address
+id tv_bath_count
 id tv_beds
 id tv_board_desc
 id tv_board_title
@@ -4816,7 +4872,9 @@ id tv_contact_phone_whats_text
 id tv_deal_type
 id tv_doc_type
 id tv_elevator
+id tv_factory_size
 id tv_factory_status
+id tv_floor_area
 id tv_floor_count
 id tv_floor_number
 id tv_floor_size
@@ -4833,6 +4891,7 @@ id tv_home_distance
 id tv_home_item
 id tv_identity_number
 id tv_kitchen_count
+id tv_land_area
 id tv_land_size
 id tv_location
 id tv_login_forget
@@ -4867,8 +4926,10 @@ id tv_rooms_count
 id tv_services
 id tv_social_title
 id tv_street_size
+id tv_street_width
 id tv_take_me
 id tv_title
+id tv_total_area
 id tv_type
 id tv_warehouse_high
 id tv_warehouse_size
@@ -5043,6 +5104,7 @@ layout fragment_conversations
 layout fragment_current_ads
 layout fragment_doc_picker
 layout fragment_favorites
+layout fragment_filter
 layout fragment_forget_password
 layout fragment_home
 layout fragment_home_cities
@@ -5189,6 +5251,7 @@ menu bottom_navigation_menu
 menu doc_picker_menu
 menu media_detail_menu
 menu picker_menu
+menu searcher_bottom_navigation_menu
 menu select_menu
 mipmap ic_close
 mipmap ic_delete
@@ -5277,10 +5340,14 @@ string account_verified
 string action_settings
 string ad_attachment_imgs
 string ad_bath_count
+string ad_deal_type
 string ad_fee_title
+string ad_floor_count
+string ad_floor_size
 string ad_id
 string ad_last_updated
 string ad_rooms_count
+string ad_time
 string ad_views
 string add_info1
 string add_info2
@@ -5438,6 +5505,7 @@ string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
 string factory
 string factory_size
+string factory_size_ad
 string factory_status
 string factory_used
 string factory_year
@@ -5447,6 +5515,8 @@ string favorite_contact_title
 string favorite_title
 string fcm_fallback_notification_channel_label
 string fieldRequired
+string filter
+string filter_btn
 string flat
 string flat_size
 string floor_count
@@ -5663,6 +5733,7 @@ string pormote_ad
 string post_ad
 string ppt_title
 string previous_ads
+string price
 string price_high_low
 string price_hint
 string price_low_high
@@ -5688,6 +5759,7 @@ string rent_title
 string report
 string report_desc
 string requested_dialog_title
+string reset
 string rest
 string room
 string rooms_count
@@ -6655,6 +6727,7 @@ styleable RoundedImageView android_scaleType riv_border_color riv_border_width r
 styleable ScrimInsetsFrameLayout insetForeground
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
+styleable SeekBarRangedView backgroundColor backgroundHeight currentMax currentMin max min progressColor progressHeight rounded thumbNormalResource thumbPressedResource thumbsResource
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeOfView shape_clip_drawable
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth

@@ -156,6 +156,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/layout_action_bar_home.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_filter.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/fragment_filter.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/akary/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home.xml",
         "source": "/home/elnagar/AndroidStudioProjects/akary/app/src/main/res/layout/item_home.xml"
     },

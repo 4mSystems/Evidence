@@ -4,6 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
@@ -38,23 +41,24 @@
             app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
             app:itemTextColor="@color/navigation_selection"
             app:labelVisibilityMode="labeled"
-            app:onNavigationItemSelected="@{viewModel::onNavigationClick}"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:onNavigationItemSelected="@{viewModel::onNavigationClick}" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginBottom="40dp"
             android:clickable="true"
             android:contentDescription="@string/app_name"
             android:focusable="true"
-            android:src="@drawable/ic_add"
-            app:tint="@color/white"
             android:onClick="@{()-> viewModel.toNewAd()}"
-            android:layout_marginBottom="40dp"
+            android:src="@drawable/ic_add"
+            android:visibility="@{viewModel.userData.type!=0?View.VISIBLE:View.GONE}"
+            app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
