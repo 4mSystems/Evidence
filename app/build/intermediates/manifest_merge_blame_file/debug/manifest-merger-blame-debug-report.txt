@@ -1,384 +1,353 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="grand.app.akar"
+3    package="te.app.evidence"
 4    android:versionCode="1"
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml
+8-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml
+9-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-11-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:6:5-75
-11-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:6:22-72
+11-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:6:5-75
+11-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:6:22-72
 12    <uses-permission android:name="android.permission.CALL_PHONE" />
-12-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:7:5-69
-12-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:7:22-66
+12-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:7:5-69
+12-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:7:22-66
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:8:5-65
-13-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:8:22-62
+13-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:8:5-65
+13-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:8:22-62
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:9:5-80
-14-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:9:22-77
+14-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:9:5-80
+14-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:9:22-77
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:10:5-81
-15-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:10:22-78
+15-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:10:5-81
+15-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:10:22-78
 16    <uses-permission android:name="android.permission.INTERNET" />
-16-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:11:5-67
-16-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:11:22-64
+16-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:11:5-67
+16-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:11:22-64
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:12:5-79
-17-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:12:22-76
+17-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:12:5-79
+17-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:12:22-76
 18    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-18-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:13:5-81
-18-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:13:22-78
+18-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:13:5-81
+18-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:13:22-78
 19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-19-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:14:5-79
-19-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:14:22-76
-20    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-20-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:10:5-76
-20-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:10:22-73
-21
-22    <uses-feature
-22-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:26:5-28:35
-23        android:glEsVersion="0x00020000"
-23-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:27:9-41
-24        android:required="true" />
-24-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
-25
-26    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-26-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:5-68
-26-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:22-65
-27    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-27-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:5-82
-27-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:22-79
-28    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-28-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:5-110
-28-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:22-107
-29
-30    <application
-30-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:16:5-59:19
-31        android:name="grand.app.akar.base.MyApplication"
-31-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:17:9-57
-32        android:allowBackup="true"
-32-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:18:9-35
-33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/877adde09d532379f8f9cfb98e394ba3/core-1.3.1/AndroidManifest.xml:24:18-86
-34        android:debuggable="true"
-35        android:extractNativeLibs="false"
-36        android:hardwareAccelerated="true"
-36-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:19:9-43
-37        android:icon="@mipmap/ic_launcher"
-37-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:20:9-43
-38        android:label="@string/app_name"
-38-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:21:9-41
-39        android:largeHeap="true"
-39-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:22:9-33
-40        android:launchMode="singleTask"
-40-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:23:9-40
-41        android:requestLegacyExternalStorage="true"
-41-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:24:9-52
-42        android:supportsRtl="true"
-42-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:25:9-35
-43        android:testOnly="true"
-44        android:theme="@style/AppTheme"
-44-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:26:9-40
-45        android:usesCleartextTraffic="true" >
-45-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:27:9-44
+19-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:14:5-79
+19-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:14:22-76
+20    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+20-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:5-68
+20-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:24:22-65
+21    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+21-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:5-82
+21-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:26:22-79
+22    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+22-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:5-110
+22-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:26:22-107
+23
+24    <application
+24-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:16:5-59:19
+25        android:name="te.app.evidence.base.MyApplication"
+25-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:17:9-58
+26        android:allowBackup="true"
+26-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:18:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/877adde09d532379f8f9cfb98e394ba3/core-1.3.1/AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:hardwareAccelerated="true"
+30-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:19:9-43
+31        android:icon="@mipmap/ic_launcher"
+31-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:20:9-43
+32        android:label="@string/app_name"
+32-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:21:9-41
+33        android:largeHeap="true"
+33-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:22:9-33
+34        android:launchMode="singleTask"
+34-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:23:9-40
+35        android:requestLegacyExternalStorage="true"
+35-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:24:9-52
+36        android:supportsRtl="true"
+36-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:25:9-35
+37        android:testOnly="true"
+38        android:theme="@style/AppTheme"
+38-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:26:9-40
+39        android:usesCleartextTraffic="true" >
+39-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:27:9-44
+40        <meta-data
+40-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:30:9-32:69
+41            android:name="com.google.android.gms.version"
+41-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:31:13-58
+42            android:value="@integer/google_play_services_version" />
+42-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:32:13-66
+43        <meta-data
+43-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:33:9-35:54
+44            android:name="com.google.firebase.messaging.default_notification_icon"
+44-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:34:13-83
+45            android:resource="@mipmap/ic_launcher" />
+45-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:35:13-51
 46        <meta-data
-46-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:30:9-32:69
-47            android:name="com.google.android.gms.version"
-47-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:31:13-58
-48            android:value="@integer/google_play_services_version" />
-48-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:32:13-66
+46-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:36:9-38:54
+47            android:name="com.google.firebase.messaging.default_notification_color"
+47-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:37:13-84
+48            android:resource="@color/colorPrimary" />
+48-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:38:13-51
 49        <meta-data
-49-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:33:9-35:54
-50            android:name="com.google.firebase.messaging.default_notification_icon"
-50-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:34:13-83
-51            android:resource="@mipmap/ic_launcher" />
-51-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:35:13-51
-52        <meta-data
-52-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:36:9-38:54
-53            android:name="com.google.firebase.messaging.default_notification_color"
-53-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:37:13-84
-54            android:resource="@color/colorPrimary" />
-54-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:38:13-51
-55        <meta-data
-55-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:39:9-41:50
-56            android:name="com.google.android.geo.API_KEY"
-56-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:40:13-58
-57            android:value="@string/google_map" />
-57-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:41:13-47
-58
-59        <activity
-59-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:43:9-46:69
-60            android:name="grand.app.akar.activity.MainActivity"
-60-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:44:13-64
-61            android:configChanges="orientation|keyboardHidden|screenSize"
-61-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:45:13-74
-62            android:windowSoftInputMode="stateHidden|adjustResize" />
-62-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:46:13-67
-63        <activity
-63-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:48:9-58:20
-64            android:name="grand.app.akar.activity.BaseActivity"
-64-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:49:13-64
-65            android:configChanges="orientation|keyboardHidden|screenSize"
-65-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:50:13-74
-66            android:windowSoftInputMode="stateHidden|adjustResize" >
-66-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:51:13-67
-67            <intent-filter>
-67-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:52:13-57:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:53:17-69
-68-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:53:25-66
-69                <action android:name="android.intent.action.VIEW" />
-69-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:54:17-69
-69-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:54:25-66
-70
-71                <category android:name="android.intent.category.LAUNCHER" />
-71-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:56:17-77
-71-->/home/elnagar/AndroidStudioProjects/akary/app/src/main/AndroidManifest.xml:56:27-74
-72            </intent-filter>
-73        </activity>
-74        <activity
-74-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:14:9-20:20
-75            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-75-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:15:13-91
-76            android:exported="false"
-76-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:16:13-37
-77            android:label="@string/places_autocomplete_label"
-77-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:17:13-62
-78            android:theme="@style/PlacesAutocompleteOverlay"
-78-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:18:13-61
-79            android:windowSoftInputMode="adjustResize" >
-79-->[com.google.android.libraries.places:places:2.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/236fa171ca13dd3e06795c9b34f43948/jetified-places-2.4.0/AndroidManifest.xml:19:13-55
-80        </activity> <!-- Needs to be explicitly declared on P+ -->
-81        <uses-library
-81-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:33:9-35:40
-82            android:name="org.apache.http.legacy"
-82-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:34:13-50
-83            android:required="false" />
-83-->[com.google.android.gms:play-services-maps:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c8a686f6993e9af99fbd418d51af39d2/jetified-play-services-maps-17.0.0/AndroidManifest.xml:35:13-37
-84        <!--
-85             FirebaseMessagingService performs security checks at runtime,
-86             but set to not exported to explicitly avoid allowing another app to call it.
-87        -->
-88        <service
-88-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:28:9-35:19
-89            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-89-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:29:13-82
-90            android:directBootAware="true"
-90-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:30:13-43
-91            android:exported="false" >
-91-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:31:13-37
-92            <intent-filter android:priority="-500" >
-92-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:32:13-34:29
-92-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:32:28-51
-93                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-93-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:33:17-78
-93-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:33:25-75
-94            </intent-filter>
-95        </service>
-96        <service
-96-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:36:9-42:19
-97            android:name="com.google.firebase.components.ComponentDiscoveryService"
-97-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:37:13-84
-98            android:directBootAware="true"
-98-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
-99            android:exported="false" >
-99-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:38:13-37
-100            <meta-data
-100-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:39:13-41:85
-101                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-101-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:40:17-119
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:41:17-82
+49-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:39:9-41:50
+50            android:name="com.google.android.geo.API_KEY"
+50-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:40:13-58
+51            android:value="@string/google_map" />
+51-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:41:13-47
+52
+53        <activity
+53-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:43:9-46:69
+54            android:name="te.app.evidence.activity.MainActivity"
+54-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:44:13-65
+55            android:configChanges="orientation|keyboardHidden|screenSize"
+55-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:45:13-74
+56            android:windowSoftInputMode="stateHidden|adjustResize" />
+56-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:46:13-67
+57        <activity
+57-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:48:9-58:20
+58            android:name="te.app.evidence.activity.BaseActivity"
+58-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:49:13-65
+59            android:configChanges="orientation|keyboardHidden|screenSize"
+59-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:50:13-74
+60            android:windowSoftInputMode="stateHidden|adjustResize" >
+60-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:51:13-67
+61            <intent-filter>
+61-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:52:13-57:29
+62                <action android:name="android.intent.action.MAIN" />
+62-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:53:17-69
+62-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:53:25-66
+63                <action android:name="android.intent.action.VIEW" />
+63-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:54:17-69
+63-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:54:25-66
+64
+65                <category android:name="android.intent.category.LAUNCHER" />
+65-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:56:17-77
+65-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:56:27-74
+66            </intent-filter>
+67        </activity>
+68        <!--
+69             FirebaseMessagingService performs security checks at runtime,
+70             but set to not exported to explicitly avoid allowing another app to call it.
+71        -->
+72        <service
+72-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:28:9-35:19
+73            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+73-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:29:13-82
+74            android:directBootAware="true"
+74-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:30:13-43
+75            android:exported="false" >
+75-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:31:13-37
+76            <intent-filter android:priority="-500" >
+76-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:32:13-34:29
+76-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:32:28-51
+77                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+77-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:33:17-78
+77-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:33:25-75
+78            </intent-filter>
+79        </service>
+80        <service
+80-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:36:9-42:19
+81            android:name="com.google.firebase.components.ComponentDiscoveryService"
+81-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:37:13-84
+82            android:directBootAware="true"
+82-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:35:13-43
+83            android:exported="false" >
+83-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:38:13-37
+84            <meta-data
+84-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:39:13-41:85
+85                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+85-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:40:17-119
+86                android:value="com.google.firebase.components.ComponentRegistrar" />
+86-->[com.google.firebase:firebase-messaging:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/91fc5466f023d81892baa0995c3ca1f7/jetified-firebase-messaging-21.0.1/AndroidManifest.xml:41:17-82
+87            <meta-data
+87-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:32:13-34:85
+88                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+88-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:33:17-96
+89                android:value="com.google.firebase.components.ComponentRegistrar" />
+89-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:34:17-82
+90            <meta-data
+90-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:30:13-32:85
+91                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+91-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:31:17-139
+92                android:value="com.google.firebase.components.ComponentRegistrar" />
+92-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:32:17-82
+93            <meta-data
+93-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
+94                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+94-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
+95                android:value="com.google.firebase.components.ComponentRegistrar" />
+95-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
+96            <meta-data
+96-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
+97                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+97-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
+98                android:value="com.google.firebase.components.ComponentRegistrar" />
+98-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
+99            <!--
+100                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+101                clients to use it as well, by defining this registrar in their own core/common library.
+102            -->
 103            <meta-data
-103-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:32:13-34:85
-104                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-104-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:33:17-96
+103-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
+104                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+104-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
 105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:34:17-82
-106            <meta-data
-106-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:30:13-32:85
-107                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-107-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:31:17-139
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.android.gms:play-services-measurement-api:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a5ac87c284e9b7939a8b189963aa8020/jetified-play-services-measurement-api-18.0.0/AndroidManifest.xml:32:17-82
-109            <meta-data
-109-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:18:13-20:85
-110                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-110-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:19:17-127
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-installations:16.3.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/28e0bf56dcba64ddada8339dfd42a546/jetified-firebase-installations-16.3.5/AndroidManifest.xml:20:17-82
-112            <meta-data
-112-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:28:13-30:85
-113                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-113-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:29:17-115
-114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-datatransport:17.0.10] /home/elnagar/.gradle/caches/transforms-2/files-2.1/454931d9961d8bac06892d7d7382f279/jetified-firebase-datatransport-17.0.10/AndroidManifest.xml:30:17-82
-115            <!--
-116                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-117                clients to use it as well, by defining this registrar in their own core/common library.
-118            -->
-119            <meta-data
-119-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:43:13-45:85
-120                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-120-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
-121                android:value="com.google.firebase.components.ComponentRegistrar" />
-121-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
-122        </service>
-123
-124        <receiver
-124-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:37:9-44:20
-125            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-125-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:38:13-78
-126            android:exported="true"
-126-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:39:13-36
-127            android:permission="com.google.android.c2dm.permission.SEND" >
-127-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:40:13-73
-128            <intent-filter>
-128-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:41:13-43:29
-129                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-129-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:17-81
-129-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:25-78
-130            </intent-filter>
-131        </receiver>
-132
-133        <activity
-133-->[com.google.android.gms:play-services-base:17.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ca4f4307a57d6100d16f046b037bf5e/jetified-play-services-base-17.3.0/AndroidManifest.xml:23:9-26:75
-134            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-134-->[com.google.android.gms:play-services-base:17.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ca4f4307a57d6100d16f046b037bf5e/jetified-play-services-base-17.3.0/AndroidManifest.xml:24:13-79
-135            android:exported="false"
-135-->[com.google.android.gms:play-services-base:17.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ca4f4307a57d6100d16f046b037bf5e/jetified-play-services-base-17.3.0/AndroidManifest.xml:25:13-37
-136            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-136-->[com.google.android.gms:play-services-base:17.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ca4f4307a57d6100d16f046b037bf5e/jetified-play-services-base-17.3.0/AndroidManifest.xml:26:13-72
-137
-138        <provider
-138-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
-139            android:name="com.google.firebase.provider.FirebaseInitProvider"
-139-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
-140            android:authorities="grand.app.akar.firebaseinitprovider"
-140-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
-141            android:directBootAware="true"
-141-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
-142            android:exported="false"
-142-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
-143            android:initOrder="100" />
-143-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
-144
-145        <receiver
-145-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:29:9-33:20
-146            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-146-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:30:13-85
-147            android:enabled="true"
-147-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:31:13-35
-148            android:exported="false" >
-148-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:32:13-37
-149        </receiver>
-150
-151        <service
-151-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:35:9-38:40
-152            android:name="com.google.android.gms.measurement.AppMeasurementService"
-152-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:36:13-84
-153            android:enabled="true"
-153-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:37:13-35
-154            android:exported="false" />
-154-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:38:13-37
-155        <service
-155-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:39:9-43:72
-156            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-156-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:40:13-87
-157            android:enabled="true"
-157-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:41:13-35
-158            android:exported="false"
-158-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:42:13-37
-159            android:permission="android.permission.BIND_JOB_SERVICE" />
-159-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:43:13-69
-160
-161        <provider
-161-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce1d61e0cbf46299f5d0f2a3f25500d2/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
-162            android:name="com.squareup.picasso.PicassoProvider"
-162-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce1d61e0cbf46299f5d0f2a3f25500d2/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
-163            android:authorities="grand.app.akar.com.squareup.picasso"
-163-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce1d61e0cbf46299f5d0f2a3f25500d2/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
-164            android:exported="false" />
-164-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce1d61e0cbf46299f5d0f2a3f25500d2/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+105-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:45:17-82
+106        </service>
+107
+108        <receiver
+108-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:37:9-44:20
+109            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+109-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:38:13-78
+110            android:exported="true"
+110-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:39:13-36
+111            android:permission="com.google.android.c2dm.permission.SEND" >
+111-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:40:13-73
+112            <intent-filter>
+112-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:41:13-43:29
+113                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+113-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:17-81
+113-->[com.google.firebase:firebase-iid:21.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/973e833ad3072d2c2571e0abe7122b9e/jetified-firebase-iid-21.0.1/AndroidManifest.xml:42:25-78
+114            </intent-filter>
+115        </receiver>
+116        <receiver
+116-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:29:9-33:20
+117            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+117-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:30:13-85
+118            android:enabled="true"
+118-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:31:13-35
+119            android:exported="false" >
+119-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:32:13-37
+120        </receiver>
+121
+122        <service
+122-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:35:9-38:40
+123            android:name="com.google.android.gms.measurement.AppMeasurementService"
+123-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:36:13-84
+124            android:enabled="true"
+124-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:37:13-35
+125            android:exported="false" />
+125-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:38:13-37
+126        <service
+126-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:39:9-43:72
+127            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+127-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:40:13-87
+128            android:enabled="true"
+128-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:41:13-35
+129            android:exported="false"
+129-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:42:13-37
+130            android:permission="android.permission.BIND_JOB_SERVICE" />
+130-->[com.google.android.gms:play-services-measurement:18.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8daf2eeb41d7b67ffc9f843efb114914/jetified-play-services-measurement-18.0.0/AndroidManifest.xml:43:13-69
+131
+132        <provider
+132-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:26:9-31:39
+133            android:name="com.google.firebase.provider.FirebaseInitProvider"
+133-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:27:13-77
+134            android:authorities="te.app.evidence.firebaseinitprovider"
+134-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:28:13-72
+135            android:directBootAware="true"
+135-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:29:13-43
+136            android:exported="false"
+136-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:30:13-37
+137            android:initOrder="100" />
+137-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5ce78734972381fc7695c36cf532d8e7/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
+138
+139        <activity
+139-->[com.google.android.gms:play-services-base:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/60aa178cc15296d7562e71417c1e627f/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+140            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+140-->[com.google.android.gms:play-services-base:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/60aa178cc15296d7562e71417c1e627f/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+141            android:exported="false"
+141-->[com.google.android.gms:play-services-base:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/60aa178cc15296d7562e71417c1e627f/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+142-->[com.google.android.gms:play-services-base:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/60aa178cc15296d7562e71417c1e627f/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+143
+144        <provider
+144-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+145            android:name="com.squareup.picasso.PicassoProvider"
+145-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+146            android:authorities="te.app.evidence.com.squareup.picasso"
+146-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+147            android:exported="false" />
+147-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+148
+149        <activity
+149-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:18:9-20:62
+150            android:name="droidninja.filepicker.FilePickerActivity"
+150-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:19:13-68
+151            android:configChanges="orientation|screenSize" />
+151-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:20:13-59
+152        <activity
+152-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:21:9-23:62
+153            android:name="droidninja.filepicker.MediaDetailsActivity"
+153-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:22:13-70
+154            android:configChanges="orientation|screenSize" />
+154-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:23:13-59
+155
+156        <provider
+156-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:25:9-33:20
+157            android:name="droidninja.filepicker.utils.FilePickerProvider"
+157-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:26:13-74
+158            android:authorities="te.app.evidence.droidninja.filepicker.provider"
+158-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:27:13-82
+159            android:exported="false"
+159-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:28:13-37
+160            android:grantUriPermissions="true" >
+160-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:29:13-47
+161            <meta-data
+161-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:30:13-32:58
+162                android:name="android.support.FILE_PROVIDER_PATHS"
+162-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:31:17-67
+163                android:resource="@xml/provider_paths" />
+163-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:32:17-55
+164        </provider>
 165
-166        <activity
-166-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:18:9-20:62
-167            android:name="droidninja.filepicker.FilePickerActivity"
-167-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:19:13-68
-168            android:configChanges="orientation|screenSize" />
-168-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:20:13-59
-169        <activity
-169-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:21:9-23:62
-170            android:name="droidninja.filepicker.MediaDetailsActivity"
-170-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:22:13-70
-171            android:configChanges="orientation|screenSize" />
-171-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:23:13-59
-172
-173        <provider
-173-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:25:9-33:20
-174            android:name="droidninja.filepicker.utils.FilePickerProvider"
-174-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:26:13-74
-175            android:authorities="grand.app.akar.droidninja.filepicker.provider"
-175-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:27:13-82
-176            android:exported="false"
-176-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:28:13-37
-177            android:grantUriPermissions="true" >
-177-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:29:13-47
-178            <meta-data
-178-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:30:13-32:58
-179                android:name="android.support.FILE_PROVIDER_PATHS"
-179-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:31:17-67
-180                android:resource="@xml/provider_paths" />
-180-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:32:17-55
-181        </provider>
-182
-183        <service
-183-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
-184            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-184-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
-185            android:exported="false" >
-185-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
-186            <meta-data
-186-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
-187                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-187-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
-188                android:value="cct" />
-188-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
-189        </service>
+166        <service
+166-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+167            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+167-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+168            android:exported="false" >
+168-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+169            <meta-data
+169-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+170                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+170-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+171                android:value="cct" />
+171-->[com.google.android.datatransport:transport-backend-cct:2.3.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/24c7d9a523bf3a35b8663ea458b4fc0f/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+172        </service>
+173
+174        <provider
+174-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+175            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+175-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+176            android:authorities="te.app.evidence.lifecycle-process"
+176-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+177            android:exported="false"
+177-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+178            android:multiprocess="true" />
+178-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+179
+180        <service
+180-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
+181            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+181-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
+182            android:exported="false"
+182-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
+183            android:permission="android.permission.BIND_JOB_SERVICE" >
+183-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
+184        </service>
+185
+186        <receiver
+186-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
+187            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+187-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
+188            android:exported="false" />
+188-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
+189    </application>
 190
-191        <provider
-191-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-192            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-192-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-193            android:authorities="grand.app.akar.lifecycle-process"
-193-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-194            android:exported="false"
-194-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-195            android:multiprocess="true" />
-195-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/00c950af8d83bb2cfde05b9b315381e1/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-196
-197        <service
-197-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:26:9-30:19
-198            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-198-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:27:13-117
-199            android:exported="false"
-199-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:28:13-37
-200            android:permission="android.permission.BIND_JOB_SERVICE" >
-200-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:29:13-69
-201        </service>
-202
-203        <receiver
-203-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:32:9-34:40
-204            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-204-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:33:13-132
-205            android:exported="false" />
-205-->[com.google.android.datatransport:transport-runtime:2.2.5] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9dce573ef305211a49d50594c9a9afd4/jetified-transport-runtime-2.2.5/AndroidManifest.xml:34:13-37
-206    </application>
-207
-208</manifest>
+191</manifest>

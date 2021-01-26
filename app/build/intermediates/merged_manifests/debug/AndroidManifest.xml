@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="grand.app.akar"
+    package="te.app.evidence"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -17,18 +17,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-    <uses-feature
-        android:glEsVersion="0x00020000"
-        android:required="true" />
-
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
-        android:name="grand.app.akar.base.MyApplication"
+        android:name="te.app.evidence.base.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -57,11 +51,11 @@
             android:value="@string/google_map" />
 
         <activity
-            android:name="grand.app.akar.activity.MainActivity"
+            android:name="te.app.evidence.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity
-            android:name="grand.app.akar.activity.BaseActivity"
+            android:name="te.app.evidence.activity.BaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" >
             <intent-filter>
@@ -71,16 +65,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.google.android.libraries.places.widget.AutocompleteActivity"
-            android:exported="false"
-            android:label="@string/places_autocomplete_label"
-            android:theme="@style/PlacesAutocompleteOverlay"
-            android:windowSoftInputMode="adjustResize" >
-        </activity> <!-- Needs to be explicitly declared on P+ -->
-        <uses-library
-            android:name="org.apache.http.legacy"
-            android:required="false" />
         <!--
              FirebaseMessagingService performs security checks at runtime,
              but set to not exported to explicitly avoid allowing another app to call it.
@@ -129,19 +113,6 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </receiver>
-
-        <activity
-            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-            android:exported="false"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-
-        <provider
-            android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="grand.app.akar.firebaseinitprovider"
-            android:directBootAware="true"
-            android:exported="false"
-            android:initOrder="100" />
-
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
             android:enabled="true"
@@ -159,8 +130,20 @@
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="te.app.evidence.firebaseinitprovider"
+            android:directBootAware="true"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="grand.app.akar.com.squareup.picasso"
+            android:authorities="te.app.evidence.com.squareup.picasso"
             android:exported="false" />
 
         <activity
@@ -172,7 +155,7 @@
 
         <provider
             android:name="droidninja.filepicker.utils.FilePickerProvider"
-            android:authorities="grand.app.akar.droidninja.filepicker.provider"
+            android:authorities="te.app.evidence.droidninja.filepicker.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -190,7 +173,7 @@
 
         <provider
             android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-            android:authorities="grand.app.akar.lifecycle-process"
+            android:authorities="te.app.evidence.lifecycle-process"
             android:exported="false"
             android:multiprocess="true" />
 

@@ -5,11 +5,6 @@
 
     <data>
 
-        <import type="android.view.View" />
-
-        <variable
-            name="viewModel"
-            type="grand.app.akar.pages.home.viewModels.HomeViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +14,7 @@
         tools:context=".activity.MainActivity">
 
         <LinearLayout
-            android:id="@+id/fl_home_container"
+            android:id="@+id/ll_base_action_bar_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_alignParentStart="true"
@@ -27,38 +22,9 @@
             android:layout_alignParentEnd="true"
             android:background="@color/white"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@id/home_navigation_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <grand.app.akar.customViews.views.CustomBottomNavigationView
-            android:id="@+id/home_navigation_menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:itemIconTint="@color/navigation_selection"
-            app:itemTextAppearanceActive="@style/TextAppearance.AppCompat.Small"
-            app:itemTextColor="@color/navigation_selection"
-            app:labelVisibilityMode="labeled"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:onNavigationItemSelected="@{viewModel::onNavigationClick}" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:clickable="true"
-            android:contentDescription="@string/app_name"
-            android:focusable="true"
-            android:onClick="@{()-> viewModel.toNewAd()}"
-            android:src="@drawable/ic_add"
-            android:visibility="@{viewModel.userData.type!=0?View.VISIBLE:View.GONE}"
-            app:backgroundTint="@color/colorPrimary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:tint="@color/white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

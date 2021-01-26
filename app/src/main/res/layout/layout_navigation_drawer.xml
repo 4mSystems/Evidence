@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="menuViewModel"
+            type="te.app.evidence.customViews.menu.MenuViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/dl_main_navigation_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_navigation_drawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_base_action_bar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/fl_home_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/ll_base_action_bar_container">
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_navigation_drawer_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@drawable/corner_view_gradient"
+                android:orientation="vertical">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_navigation_drawer_logo"
+                        android:orientation="vertical">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/vv_navigation_drawer_image"
+                            android:layout_width="@dimen/dp60h"
+                            android:layout_height="@dimen/dp60h"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/logo"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="4dp" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/tv_user_login"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp8h"
+                            android:text="Mostafa Elnagar"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp25h"
+                            android:drawableStart="@drawable/ic_home"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuHome"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_users"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuUsers"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_users"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuClients"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_cases"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuCases"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_mohdars"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuMohdar"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_categories"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuCat"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_reports"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/menuReports"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_logout"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:text="@string/logout"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+
+            </RelativeLayout>
+        </androidx.drawerlayout.widget.DrawerLayout>
+    </RelativeLayout>
+</layout>

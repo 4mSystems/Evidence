@@ -1,15 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.GrenderG:Toasty:1.4.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f4b444e59a6fe8c87e593142a0f295/jetified-Toasty-1.4.1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f4b444e59a6fe8c87e593142a0f295/jetified-Toasty-1.4.1/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e8f4b444e59a6fe8c87e593142a0f295/jetified-Toasty-1.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d0fa19f6c51f4eb08055e8a8603bc64/jetified-Toasty-1.4.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d0fa19f6c51f4eb08055e8a8603bc64/jetified-Toasty-1.4.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7d0fa19f6c51f4eb08055e8a8603bc64/jetified-Toasty-1.4.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/837147503386546290cfd2fa1fcf02f1/jetified-Toasty-1.4.1/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/837147503386546290cfd2fa1fcf02f1/jetified-Toasty-1.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/837147503386546290cfd2fa1fcf02f1/jetified-Toasty-1.4.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/837147503386546290cfd2fa1fcf02f1/jetified-Toasty-1.4.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87de7734e49416c0d8736954fa4c0598/jetified-Toasty-1.4.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87de7734e49416c0d8736954fa4c0598/jetified-Toasty-1.4.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/87de7734e49416c0d8736954fa4c0598/jetified-Toasty-1.4.1/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "grand.app.akar",
+  "applicationId": "te.app.evidence",
   "variantName": "debug",
   "elements": [
     {

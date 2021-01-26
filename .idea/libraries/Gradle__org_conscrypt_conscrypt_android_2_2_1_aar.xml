@@ -1,7 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: org.conscrypt:conscrypt-android:2.2.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4f02c7979bd1a2b1d59ac8aa439587e6/jetified-conscrypt-android-2.2.1/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/971cf5f9aca20dca7406686aa79ee439/jetified-conscrypt-android-2.2.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/971cf5f9aca20dca7406686aa79ee439/jetified-conscrypt-android-2.2.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/971cf5f9aca20dca7406686aa79ee439/jetified-conscrypt-android-2.2.1/AndroidManifest.xml" />

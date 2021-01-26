@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">عقارى</string>
+    <string name="app_name">Evidence</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="design_program">Design and programming</string>
@@ -25,8 +25,8 @@
     <string name="password">كلمة المرور<font fgcolor='#E80101'>*</font></string>
     <string name="login">تسجيل الدخول</string>
     <string name="phone">من فضلك قم بإدخال رقم الجوال</string>
-    <string name="invalidEmail">Invalid Email,  nearme@example.com</string>
-    <string name="invalidPassword">Password weak, at least 8 character with number and letters</string>
+    <string name="invalidEmail">بريد إلكتروني غير صالح ، Evidence@example.com</string>
+    <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف مع أرقام وأحرف</string>
     <string name="invalidPhone">Invalid phone</string>
     <string name="fieldRequired">This field is required</string>
     <string name="next">التالى</string>
@@ -42,10 +42,10 @@
     <string name="login_header">تسجيل الدخول</string>
     <string name="login_header_number"> رقم الجوال</string>
     <string name="login_forget">هل فقدت كلمة المرور ؟</string>
-    <string name="forget_header">نسيت كلمة المرور</string>
+    <string name="forget_header">نسيت كلمة المرور؟</string>
     <string name="forget_remember">تذكرت كلمة المرور</string>
     <string name="send">إرسال</string>
-    <string name="confirm_header_text">سيتم إرسال كود التأكيد على رقم جوالك قم بإدخال كود التفعيل</string>
+    <string name="confirm_header_text">كود تأكيد كلمة المرور</string>
     <string name="confirm">تأكيد</string>
     <string name="confirm_resend">إعادة ارسال</string>
     <string name="change_header">كلمة مرور جديدة</string>
@@ -86,10 +86,10 @@
     <string name="bank_name">اسم البنك</string>
     <string name="document">تحميل المستند</string>
     <string name="menuHome">الرئيسية</string>
-    <string name="menuFavorites">المفضلة</string>
-    <string name="menuAddAds">إضافة إعلان</string>
-    <string name="menuAccount">حسابي</string>
-    <string name="home_search_hint">ابحث عن هنا</string>
+    <string name="menuClients">العملاء</string>
+    <string name="menuCases">الدعاوي</string>
+    <string name="menuUsers">المستخدمين</string>
+    <string name="home_search_hint">ابحث</string>
     <string name="normal_orders">طلبات التوصيل</string>
     <string name="stores_orders">طلبات المتاجر</string>
     <string name="order_distance">"مسافة الطلب : "</string>
@@ -177,7 +177,7 @@
     <string name="donot_have_account">ليس لديك حساب؟</string>
     <string name="choose_membrship">نوع العضوية <font fgcolor='#E80101'>*</font></string>
     <string name="choose_membrship_input">اختر نوع العضوية</string>
-    <string name="forget_body">من فضلك إدخل رقم الهاتف  لإرسال كود التحقق</string>
+    <string name="forget_body">برجاء إدخال البريد الإلكتروني لإستعادة كلمة المرور</string>
     <string name="forget_password">ادخل رقم الهاتف</string>
     <string name="change_confirm_password_no_star">تأكيد كلمة المرور</string>
     <string name="forget_social_header">تسجيل الدخول بالسوشيال ميديا</string>
@@ -297,7 +297,7 @@
     <string name="add_info_title">شروط إضافة إعلان</string>
     <string name="save">Save</string>
     <string name="API_KEY">AIzaSyBnui_-Aq3WohKtd4VUahlpWv_2xEocpRg</string>
-    <string name="choose_akar_category">اختر القسم</string>
+    <string name="choose_category">اختر القسم</string>
     <string name="ad_attachment_imgs">إرفاق صور</string>
     <string name="price_required">يرجى إدخال السعر</string>
     <string name="videoBig">حجم الفيديو كبير يرجى اختيار فيديو اخر</string>
@@ -314,7 +314,7 @@
     <string name="favorite_contact_title">تم التواصل</string>
     <string name="favorite_title">المفضلة</string>
     <string name="coin">د.ل</string>
-    <string name="monthly">/ شهرياً</string>
+    <string name="month">/ شهرياً</string>
     <string name="call_client">اتصال</string>
     <string name="chat_client">محادثة</string>
     <string name="share_detail">مشاركة</string>
@@ -361,5 +361,34 @@
     <string name="ad_time">الاعلان خلال اسبوعين فقط</string>
     <string name="filter_btn">تصفيه</string>
     <string name="ad_deal_type">نوع المعامله</string>
+    <string name="legal_cons">محامون ومستشارون قانونيون</string>
+    <string name="app_login_hint">يرجي ادخال البريد الالكتروني و كلمة المرور</string>
+    <string name="send_code">إرسال كود التأكيد</string>
+    <string name="confirm_header_text2">برجاء تفقد بريدك الإلكتروني و كتابة كود التأكيد الخاص بك</string>
+    <string name="save_password">حفظ كلمة المرور</string>
+    <string name="menuMohdar">المحضرين</string>
+    <string name="menuCat">التصنيفات</string>
+    <string name="menuReports">التقارير</string>
+    <string name="sessions">الجلسات</string>
+    <string name="nextSessions">الجلسات القادمة</string>
+    <string name="previousSessions">الجلسات الفائتة</string>
+    <string name="case_number">case number</string>
+    <string name="session_date">Session date</string>
+    <string name="status">Status</string>
+    <string name="court_mohdr">Court bailiffs</string>
+    <string name="paper_type">Paper type</string>
+    <string name="view_more">View more</string>
+    <string name="court">Court</string>
+    <string name="paper_delivered_date">Paper submitted date</string>
+    <string name="paper_number">Paper number</string>
+    <string name="clients">Clients</string>
+    <string name="opponents">Opponents</string>
+    <string name="notes">Notes</string>
+    <string name="user_name">Username</string>
+    <string name="user_type">Type</string>
+    <string name="user_permission">Permission</string>
+    <string name="add_new_user">Add new user</string>
+    <string name="daily_reports">Daily reports</string>
+    <string name="monthly_reports">Monthly reports</string>
 
 </resources>

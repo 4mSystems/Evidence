@@ -1,586 +1,253 @@
-grand/app/akar/pages/chat/adapter/ChatImagesAdapter.java
- grand.app.akar.pages.chat.adapter.ChatImagesAdapter
- grand.app.akar.pages.chat.adapter.ChatImagesAdapter$MenuView
-grand/app/akar/databinding/ItemCategoryBinding.java
- grand.app.akar.databinding.ItemCategoryBinding
-grand/app/akar/pages/settings/AboutAppFragment.java
- grand.app.akar.pages.settings.AboutAppFragment
-grand/app/akar/databinding/FragmentLoginBinding.java
- grand.app.akar.databinding.FragmentLoginBinding
-grand/app/akar/databinding/FragmentChangePasswordBinding.java
- grand.app.akar.databinding.FragmentChangePasswordBinding
-grand/app/akar/utils/session/SharedPreferenceHelper.java
- grand.app.akar.utils.session.SharedPreferenceHelper
-grand/app/akar/customViews/views/CustomTextViewBold.java
- grand.app.akar.customViews.views.CustomTextViewBold
-grand/app/akar/pages/auth/models/ForgetPasswordRequest.java
- grand.app.akar.pages.auth.models.ForgetPasswordRequest
-grand/app/akar/pages/ads/viewModels/AdsViewModel.java
- grand.app.akar.pages.ads.viewModels.AdsViewModel
-grand/app/akar/base/ApplicationComponent.java
- grand.app.akar.base.ApplicationComponent
-grand/app/akar/pages/auth/login/LoginFragment.java
- grand.app.akar.pages.auth.login.LoginFragment
-grand/app/akar/databinding/FragmentContactBinding.java
- grand.app.akar.databinding.FragmentContactBinding
-grand/app/akar/pages/splash/models/BannersItem.java
- grand.app.akar.pages.splash.models.BannersItem
-grand/app/akar/utils/helper/MovementHelper.java
- grand.app.akar.utils.helper.MovementHelper
-grand/app/akar/databinding/HomeListLayoutBinding.java
- grand.app.akar.databinding.HomeListLayoutBinding
-grand/app/akar/databinding/FragmentAkarLocationCitiesBinding.java
- grand.app.akar.databinding.FragmentAkarLocationCitiesBinding
-grand/app/akar/databinding/FragmentProfileBinding.java
- grand.app.akar.databinding.FragmentProfileBinding
-grand/app/akar/pages/ads/adapter/CitiesAdapter.java
- grand.app.akar.pages.ads.adapter.CitiesAdapter
- grand.app.akar.pages.ads.adapter.CitiesAdapter$MenuView
-grand/app/akar/pages/home/models/SearchRequest.java
- grand.app.akar.pages.home.models.SearchRequest
-grand/app/akar/repository/HomeRepository.java
- grand.app.akar.repository.HomeRepository
-grand/app/akar/pages/ads/forms/AddFactoryFormFragment.java
- grand.app.akar.pages.ads.forms.AddFactoryFormFragment
-grand/app/akar/pages/conversations/viewModels/ConversationsViewModel.java
- grand.app.akar.pages.conversations.viewModels.ConversationsViewModel
-grand/app/akar/base/maps/MapAddressInterface.java
- grand.app.akar.base.maps.MapAddressInterface
-grand/app/akar/utils/PopUp/PopUpMenuHelper.java
- grand.app.akar.utils.PopUp.PopUpMenuHelper
-grand/app/akar/BuildConfig.java
- grand.app.akar.BuildConfig
-grand/app/akar/pages/notifications/models/NotificationsResponse.java
- grand.app.akar.pages.notifications.models.NotificationsResponse
-grand/app/akar/utils/upload/FileOperations.java
- grand.app.akar.utils.upload.FileOperations
-grand/app/akar/pages/splash/SplashViewModel.java
- grand.app.akar.pages.splash.SplashViewModel
-grand/app/akar/pages/auth/forgetPassword/ForgetPasswordFragment.java
- grand.app.akar.pages.auth.forgetPassword.ForgetPasswordFragment
-grand/app/akar/pages/settings/viewModels/SettingsViewModel.java
- grand.app.akar.pages.settings.viewModels.SettingsViewModel
-grand/app/akar/pages/adDetails/models/AdDetailsData.java
- grand.app.akar.pages.adDetails.models.AdDetailsData
-grand/app/akar/repository/ServiceRepository.java
- grand.app.akar.repository.ServiceRepository
-grand/app/akar/databinding/FragmentAdRentDialogBinding.java
- grand.app.akar.databinding.FragmentAdRentDialogBinding
-grand/app/akar/repository/SettingsRepository.java
- grand.app.akar.repository.SettingsRepository
-grand/app/akar/pages/chat/model/Chat.java
- grand.app.akar.pages.chat.model.Chat
-grand/app/akar/databinding/FragmentAddVillaHouseFormBinding.java
- grand.app.akar.databinding.FragmentAddVillaHouseFormBinding
-grand/app/akar/databinding/FragmentForgetPasswordBinding.java
- grand.app.akar.databinding.FragmentForgetPasswordBinding
-grand/app/akar/databinding/FragmentAdsAttachmentsBinding.java
- grand.app.akar.databinding.FragmentAdsAttachmentsBinding
-grand/app/akar/pages/ads/CategoriesFragment.java
- grand.app.akar.pages.ads.CategoriesFragment
-grand/app/akar/customViews/views/IncrementalView.java
- grand.app.akar.customViews.views.IncrementalView
- grand.app.akar.customViews.views.IncrementalView$1
-grand/app/akar/databinding/NotifyItemBinding.java
- grand.app.akar.databinding.NotifyItemBinding
-grand/app/akar/ResponseHeader.java
- grand.app.akar.ResponseHeader
-grand/app/akar/databinding/FragmentNotificationsBinding.java
- grand.app.akar.databinding.FragmentNotificationsBinding
-grand/app/akar/pages/adDetails/models/AdDetailsResponse.java
- grand.app.akar.pages.adDetails.models.AdDetailsResponse
-grand/app/akar/databinding/FragmentAkarLocationsMapBinding.java
- grand.app.akar.databinding.FragmentAkarLocationsMapBinding
-grand/app/akar/pages/conversations/ConversationsFragment.java
- grand.app.akar.pages.conversations.ConversationsFragment
-grand/app/akar/repository/BaseRepository.java
- grand.app.akar.repository.BaseRepository
-grand/app/akar/databinding/HomeSortBinding.java
- grand.app.akar.databinding.HomeSortBinding
-grand/app/akar/pages/conversations/adapters/ConversationsAdapter.java
- grand.app.akar.pages.conversations.adapters.ConversationsAdapter
- grand.app.akar.pages.conversations.adapters.ConversationsAdapter$MenuView
-grand/app/akar/pages/auth/models/ChangePasswordRequest.java
- grand.app.akar.pages.auth.models.ChangePasswordRequest
-grand/app/akar/pages/myAds/models/MyOrdersRequest.java
- grand.app.akar.pages.myAds.models.MyOrdersRequest
-grand/app/akar/pages/adDetails/viewModels/AdDetailsViewModel.java
- grand.app.akar.pages.adDetails.viewModels.AdDetailsViewModel
-grand/app/akar/repository/AdsRepository.java
- grand.app.akar.repository.AdsRepository
-grand/app/akar/pages/onBoard/models/BoardResponse.java
- grand.app.akar.pages.onBoard.models.BoardResponse
-grand/app/akar/pages/onBoard/OnBoardFragment.java
- grand.app.akar.pages.onBoard.OnBoardFragment
-grand/app/akar/databinding/FragmentChatBinding.java
- grand.app.akar.databinding.FragmentChatBinding
-grand/app/akar/pages/ads/adapter/AdImagesAdapter.java
- grand.app.akar.pages.ads.adapter.AdImagesAdapter
- grand.app.akar.pages.ads.adapter.AdImagesAdapter$MenuView
-grand/app/akar/pages/myAccount/models/ProfileData.java
- grand.app.akar.pages.myAccount.models.ProfileData
-grand/app/akar/databinding/FragmentCategoriesBinding.java
- grand.app.akar.databinding.FragmentCategoriesBinding
-grand/app/akar/databinding/DialogEditOptionBinding.java
- grand.app.akar.databinding.DialogEditOptionBinding
-grand/app/akar/pages/favorites/adapters/MyFavoritesAdapter.java
- grand.app.akar.pages.favorites.adapters.MyFavoritesAdapter
- grand.app.akar.pages.favorites.adapters.MyFavoritesAdapter$MenuView
-grand/app/akar/customViews/views/CustomTextViewRegular.java
- grand.app.akar.customViews.views.CustomTextViewRegular
-grand/app/akar/pages/auth/payment/PaymentViewModel.java
- grand.app.akar.pages.auth.payment.PaymentViewModel
-grand/app/akar/pages/auth/changePassword/ChangePasswordRequest.java
- grand.app.akar.pages.auth.changePassword.ChangePasswordRequest
-grand/app/akar/base/ApplicationBinding.java
- grand.app.akar.base.ApplicationBinding
-grand/app/akar/pages/auth/models/LoginRequest.java
- grand.app.akar.pages.auth.models.LoginRequest
-grand/app/akar/pages/ads/viewModels/AddVillaHouseViewModel.java
- grand.app.akar.pages.ads.viewModels.AddVillaHouseViewModel
-grand/app/akar/databinding/ItemChatBinding.java
- grand.app.akar.databinding.ItemChatBinding
-grand/app/akar/pages/favorites/adapters/MyFavoritesViewPagerAdapter.java
- grand.app.akar.pages.favorites.adapters.MyFavoritesViewPagerAdapter
-grand/app/akar/databinding/ReportDialogBinding.java
- grand.app.akar.databinding.ReportDialogBinding
-grand/app/akar/activity/BaseActivity.java
- grand.app.akar.activity.BaseActivity
-grand/app/akar/databinding/FragmentAddStoreFormBinding.java
- grand.app.akar.databinding.FragmentAddStoreFormBinding
-grand/app/akar/utils/PopUp/PopUpInterface.java
- grand.app.akar.utils.PopUp.PopUpInterface
-grand/app/akar/databinding/FragmentMyAdsMainBinding.java
- grand.app.akar.databinding.FragmentMyAdsMainBinding
-grand/app/akar/databinding/FragmentAddOfficeFormBinding.java
- grand.app.akar.databinding.FragmentAddOfficeFormBinding
-grand/app/akar/pages/settings/models/UserDocumentsResponse.java
- grand.app.akar.pages.settings.models.UserDocumentsResponse
-grand/app/akar/utils/images/ImageConstants.java
- grand.app.akar.utils.images.ImageConstants
-grand/app/akar/base/BaseFragment.java
- grand.app.akar.base.BaseFragment
-grand/app/akar/databinding/FragmentRegisterBinding.java
- grand.app.akar.databinding.FragmentRegisterBinding
-grand/app/akar/pages/favorites/viewModels/MyFavoritesViewModel.java
- grand.app.akar.pages.favorites.viewModels.MyFavoritesViewModel
-grand/app/akar/databinding/ReportWarningDialogBinding.java
- grand.app.akar.databinding.ReportWarningDialogBinding
-grand/app/akar/databinding/LayoutActionBarBackBinding.java
- grand.app.akar.databinding.LayoutActionBarBackBinding
-grand/app/akar/utils/session/UserHelper.java
- grand.app.akar.utils.session.UserHelper
-grand/app/akar/utils/URLS.java
- grand.app.akar.utils.URLS
-grand/app/akar/pages/notifications/viewModels/NotificationsViewModels.java
- grand.app.akar.pages.notifications.viewModels.NotificationsViewModels
-grand/app/akar/databinding/ItemHomeCategoryBinding.java
- grand.app.akar.databinding.ItemHomeCategoryBinding
-grand/app/akar/pages/auth/changePassword/ChangePasswordFragment.java
- grand.app.akar.pages.auth.changePassword.ChangePasswordFragment
-grand/app/akar/databinding/FragmentSplashBinding.java
- grand.app.akar.databinding.FragmentSplashBinding
-grand/app/akar/databinding/ItemAdsBinding.java
- grand.app.akar.databinding.ItemAdsBinding
-grand/app/akar/pages/favorites/FavoritesFragment.java
- grand.app.akar.pages.favorites.FavoritesFragment
-grand/app/akar/pages/settings/models/settings/SettingsResponse.java
- grand.app.akar.pages.settings.models.settings.SettingsResponse
-grand/app/akar/DataBindingTriggerClass.java
- grand.app.akar.DataBindingTriggerClass
-grand/app/akar/pages/ads/forms/AddVillaHouseManagmentFormFragment.java
- grand.app.akar.pages.ads.forms.AddVillaHouseManagmentFormFragment
-grand/app/akar/databinding/ItemAdDetailsServicesBinding.java
- grand.app.akar.databinding.ItemAdDetailsServicesBinding
-grand/app/akar/pages/ads/AdvertisingFeeFragment.java
- grand.app.akar.pages.ads.AdvertisingFeeFragment
-grand/app/akar/pages/ads/forms/AddOfficeFormFragment.java
- grand.app.akar.pages.ads.forms.AddOfficeFormFragment
-grand/app/akar/databinding/FragmentHomeBinding.java
- grand.app.akar.databinding.FragmentHomeBinding
-grand/app/akar/pages/myAccount/viewModels/MyAccountViewModel.java
- grand.app.akar.pages.myAccount.viewModels.MyAccountViewModel
-grand/app/akar/databinding/FragmentOnboardBinding.java
- grand.app.akar.databinding.FragmentOnboardBinding
-grand/app/akar/databinding/FragmentAdvertisingFeeBinding.java
- grand.app.akar.databinding.FragmentAdvertisingFeeBinding
-grand/app/akar/pages/conversations/models/ConversationsResponse.java
- grand.app.akar.pages.conversations.models.ConversationsResponse
-grand/app/akar/databinding/FragmentMyFavoritesMainBinding.java
- grand.app.akar.databinding.FragmentMyFavoritesMainBinding
-grand/app/akar/databinding/FragmentUploadSuccessBinding.java
- grand.app.akar.databinding.FragmentUploadSuccessBinding
-grand/app/akar/pages/ads/forms/AddFlatFormFragment.java
- grand.app.akar.pages.ads.forms.AddFlatFormFragment
-grand/app/akar/pages/ads/AdsInfoFragment.java
- grand.app.akar.pages.ads.AdsInfoFragment
-grand/app/akar/databinding/FragmentAddFactoryFormBinding.java
- grand.app.akar.databinding.FragmentAddFactoryFormBinding
-grand/app/akar/databinding/FragmentCurrentAdsBinding.java
- grand.app.akar.databinding.FragmentCurrentAdsBinding
-grand/app/akar/pages/ads/forms/AddLandFormFragment.java
- grand.app.akar.pages.ads.forms.AddLandFormFragment
-grand/app/akar/pages/home/adapters/HomeCategoriesAdapter.java
- grand.app.akar.pages.home.adapters.HomeCategoriesAdapter
- grand.app.akar.pages.home.adapters.HomeCategoriesAdapter$MenuView
-grand/app/akar/pages/ads/models/CreateAdRequest.java
- grand.app.akar.pages.ads.models.CreateAdRequest
-grand/app/akar/databinding/ItemConversationBinding.java
- grand.app.akar.databinding.ItemConversationBinding
-grand/app/akar/pages/notifications/itemViewModels/NotificationsItemViewModels.java
- grand.app.akar.pages.notifications.itemViewModels.NotificationsItemViewModels
-grand/app/akar/pages/splash/models/ReasonsItem.java
- grand.app.akar.pages.splash.models.ReasonsItem
-grand/app/akar/databinding/ItemChatImagesBinding.java
- grand.app.akar.databinding.ItemChatImagesBinding
-grand/app/akar/pages/chat/adapter/ChatAdapter.java
- grand.app.akar.pages.chat.adapter.ChatAdapter
- grand.app.akar.pages.chat.adapter.ChatAdapter$ViewHolder
-grand/app/akar/pages/auth/models/cities/Cities.java
- grand.app.akar.pages.auth.models.cities.Cities
-grand/app/akar/pages/ads/forms/AdUploadingSuccessFragment.java
- grand.app.akar.pages.ads.forms.AdUploadingSuccessFragment
-grand/app/akar/pages/splash/models/SettingsResponse.java
- grand.app.akar.pages.splash.models.SettingsResponse
-grand/app/akar/pages/settings/models/UserDocuments.java
- grand.app.akar.pages.settings.models.UserDocuments
-grand/app/akar/pages/home/adapters/HomeAdapter.java
- grand.app.akar.pages.home.adapters.HomeAdapter
- grand.app.akar.pages.home.adapters.HomeAdapter$1
- grand.app.akar.pages.home.adapters.HomeAdapter$MenuView
-grand/app/akar/customViews/views/CustomBottomNavigationView.java
- grand.app.akar.customViews.views.CustomBottomNavigationView
-grand/app/akar/pages/notifications/adapters/NotificationsAdapter.java
- grand.app.akar.pages.notifications.adapters.NotificationsAdapter
- grand.app.akar.pages.notifications.adapters.NotificationsAdapter$ViewHolder
-grand/app/akar/databinding/FragmentAddFlatFormBinding.java
- grand.app.akar.databinding.FragmentAddFlatFormBinding
-grand/app/akar/pages/myAccount/MyAccountFragment.java
- grand.app.akar.pages.myAccount.MyAccountFragment
-grand/app/akar/databinding/FragmentConversationsBinding.java
- grand.app.akar.databinding.FragmentConversationsBinding
-grand/app/akar/databinding/FragmentConfirmCodeBinding.java
- grand.app.akar.databinding.FragmentConfirmCodeBinding
-grand/app/akar/pages/ads/viewModels/ItemPublicOrderImagesViewModel.java
- grand.app.akar.pages.ads.viewModels.ItemPublicOrderImagesViewModel
-grand/app/akar/pages/ads/forms/AddWareHosueFormFragment.java
- grand.app.akar.pages.ads.forms.AddWareHosueFormFragment
-grand/app/akar/pages/auth/confirmCode/ConfirmViewModel.java
- grand.app.akar.pages.auth.confirmCode.ConfirmViewModel
-grand/app/akar/databinding/ActivityBaseBinding.java
- grand.app.akar.databinding.ActivityBaseBinding
-grand/app/akar/pages/auth/register/RegisterViewModel.java
- grand.app.akar.pages.auth.register.RegisterViewModel
-grand/app/akar/pages/notifications/models/NotificationsData.java
- grand.app.akar.pages.notifications.models.NotificationsData
-grand/app/akar/pages/ads/AkarLocationsMapFragment.java
- grand.app.akar.pages.ads.AkarLocationsMapFragment
-grand/app/akar/pages/favorites/models/FavoriteRequest.java
- grand.app.akar.pages.favorites.models.FavoriteRequest
-grand/app/akar/pages/ads/viewModels/CategoriesViewModel.java
- grand.app.akar.pages.ads.viewModels.CategoriesViewModel
-grand/app/akar/connection/ConnectionHelper.java
- grand.app.akar.connection.ConnectionHelper
- grand.app.akar.connection.ConnectionHelper$1
- grand.app.akar.connection.ConnectionHelper$2
- grand.app.akar.connection.ConnectionHelper$3
-grand/app/akar/connection/FileObject.java
- grand.app.akar.connection.FileObject
-grand/app/akar/databinding/ItemCityBinding.java
- grand.app.akar.databinding.ItemCityBinding
-grand/app/akar/databinding/ItemReasonsBinding.java
- grand.app.akar.databinding.ItemReasonsBinding
-grand/app/akar/pages/conversations/models/ConversationsData.java
- grand.app.akar.pages.conversations.models.ConversationsData
-grand/app/akar/pages/settings/ContactUsFragment.java
- grand.app.akar.pages.settings.ContactUsFragment
-grand/app/akar/utils/resources/ResourceManager.java
- grand.app.akar.utils.resources.ResourceManager
-grand/app/akar/pages/onBoard/IntroItem.java
- grand.app.akar.pages.onBoard.IntroItem
-grand/app/akar/databinding/FragmentContactFavoritesBinding.java
- grand.app.akar.databinding.FragmentContactFavoritesBinding
-grand/app/akar/pages/home/HomeFragment.java
- grand.app.akar.pages.home.HomeFragment
-grand/app/akar/utils/session/LanguagesHelper.java
- grand.app.akar.utils.session.LanguagesHelper
-grand/app/akar/pages/auth/models/UserData.java
- grand.app.akar.pages.auth.models.UserData
-grand/app/akar/pages/myAds/PreviousAdsFragment.java
- grand.app.akar.pages.myAds.PreviousAdsFragment
-grand/app/akar/pages/adDetails/models/ReportRequest.java
- grand.app.akar.pages.adDetails.models.ReportRequest
-grand/app/akar/base/LiveData.java
- grand.app.akar.base.LiveData
-grand/app/akar/pages/auth/models/RegisterRequest.java
- grand.app.akar.pages.auth.models.RegisterRequest
-grand/app/akar/databinding/ActivityMainBinding.java
- grand.app.akar.databinding.ActivityMainBinding
-grand/app/akar/pages/home/viewModels/HomeViewModel.java
- grand.app.akar.pages.home.viewModels.HomeViewModel
- grand.app.akar.pages.home.viewModels.HomeViewModel$DataBindingAdapter
-grand/app/akar/pages/chat/viewmodel/ItemChatImagesViewModel.java
- grand.app.akar.pages.chat.viewmodel.ItemChatImagesViewModel
-grand/app/akar/customViews/actionbar/BackActionBarView.java
- grand.app.akar.customViews.actionbar.BackActionBarView
- grand.app.akar.customViews.actionbar.BackActionBarView$1
-grand/app/akar/pages/myAds/adapters/MyAdsAdapter.java
- grand.app.akar.pages.myAds.adapters.MyAdsAdapter
- grand.app.akar.pages.myAds.adapters.MyAdsAdapter$MenuView
-grand/app/akar/pages/chat/model/ChatSendResponse.java
- grand.app.akar.pages.chat.model.ChatSendResponse
-grand/app/akar/base/ConnectivityReceiver.java
- grand.app.akar.base.ConnectivityReceiver
- grand.app.akar.base.ConnectivityReceiver$ConnectivityReceiverListener
-grand/app/akar/databinding/FragmentFilterBinding.java
- grand.app.akar.databinding.FragmentFilterBinding
-grand/app/akar/databinding/FragmentAdsInfoBinding.java
- grand.app.akar.databinding.FragmentAdsInfoBinding
-grand/app/akar/customViews/grandDialog/GrandImageDialog.java
- grand.app.akar.customViews.grandDialog.GrandDialog
- grand.app.akar.customViews.grandDialog.GrandDialog$1
- grand.app.akar.customViews.grandDialog.GrandDialog$2
- grand.app.akar.customViews.grandDialog.GrandDialog$3
- grand.app.akar.customViews.grandDialog.GrandDialog$4
- grand.app.akar.customViews.grandDialog.GrandImageDialog
- grand.app.akar.customViews.grandDialog.GrandImageDialog$1
-grand/app/akar/pages/settings/viewModels/DocumentsViewModel.java
- grand.app.akar.pages.settings.viewModels.DocumentsViewModel
-grand/app/akar/pages/auth/forgetPassword/ForgetPasswordViewModel.java
- grand.app.akar.pages.auth.forgetPassword.ForgetPasswordViewModel
-grand/app/akar/pages/adDetails/models/ListingOptions.java
- grand.app.akar.pages.adDetails.models.ListingOptions
-grand/app/akar/activity/MainActivity.java
- grand.app.akar.activity.MainActivity
-grand/app/akar/pages/profile/ProfileViewModel.java
- grand.app.akar.pages.profile.ProfileViewModel
-grand/app/akar/databinding/HomeMapLayoutBinding.java
- grand.app.akar.databinding.HomeMapLayoutBinding
-grand/app/akar/pages/adDetails/viewModels/ItemServicesViewModel.java
- grand.app.akar.pages.adDetails.viewModels.ItemServicesViewModel
-grand/app/akar/repository/AuthRepository.java
- grand.app.akar.repository.AuthRepository
-grand/app/akar/pages/chat/model/ChatResponse.java
- grand.app.akar.pages.chat.model.ChatResponse
-grand/app/akar/pages/myAds/adapters/MyAdsViewPagerAdapter.java
- grand.app.akar.pages.myAds.adapters.MyAdsViewPagerAdapter
-grand/app/akar/pages/settings/models/AboutResponse.java
- grand.app.akar.pages.settings.models.AboutResponse
-grand/app/akar/pages/adDetails/adapters/SliderAdapter.java
- grand.app.akar.pages.adDetails.adapters.SliderAdapter
- grand.app.akar.pages.adDetails.adapters.SliderAdapter$SliderAdapterVH
-grand/app/akar/databinding/ItemFavoritesBinding.java
- grand.app.akar.databinding.ItemFavoritesBinding
-grand/app/akar/repository/ChatRepository.java
- grand.app.akar.repository.ChatRepository
-grand/app/akar/databinding/FragmentTermsBinding.java
- grand.app.akar.databinding.FragmentTermsBinding
-grand/app/akar/customViews/actionbar/HomeActionBarView.java
- grand.app.akar.customViews.actionbar.HomeActionBarView
-grand/app/akar/PassingObject.java
- grand.app.akar.PassingObject
-grand/app/akar/pages/notifications/NotificationsFragment.java
- grand.app.akar.pages.notifications.NotificationsFragment
-grand/app/akar/pages/ads/forms/AddStoreFormFragment.java
- grand.app.akar.pages.ads.forms.AddStoreFormFragment
-grand/app/akar/connection/ConnectionListenerInterFace.java
- grand.app.akar.connection.ConnectionListenerInterFace
-grand/app/akar/pages/home/FilterFragment.java
- grand.app.akar.pages.home.FilterFragment
- grand.app.akar.pages.home.FilterFragment$1
- grand.app.akar.pages.home.FilterFragment$2
- grand.app.akar.pages.home.FilterFragment$3
- grand.app.akar.pages.home.FilterFragment$4
- grand.app.akar.pages.home.FilterFragment$5
- grand.app.akar.pages.home.FilterFragment$6
-grand/app/akar/base/ParentActivity.java
- grand.app.akar.base.ParentActivity
-grand/app/akar/model/base/Mutable.java
- grand.app.akar.model.base.Mutable
-grand/app/akar/pages/ads/AkarLocationsCitiesFragment.java
- grand.app.akar.pages.ads.AkarLocationsCitiesFragment
-grand/app/akar/pages/auth/models/ConfirmCodeRequest.java
- grand.app.akar.pages.auth.models.ConfirmCodeRequest
-grand/app/akar/utils/images/PhotoFullPopupWindow.java
- grand.app.akar.utils.images.PhotoFullPopupWindow
- grand.app.akar.utils.images.PhotoFullPopupWindow$1
- grand.app.akar.utils.images.PhotoFullPopupWindow$2
-grand/app/akar/pages/ads/models/LocationUpdateRequest.java
- grand.app.akar.pages.ads.models.LocationUpdateRequest
-grand/app/akar/pages/auth/models/cities/CitiesResponse.java
- grand.app.akar.pages.auth.models.cities.CitiesResponse
-grand/app/akar/customViews/views/DateEditText.java
- grand.app.akar.customViews.views.DateEditText
-grand/app/akar/databinding/FragmentAddRestFormBinding.java
- grand.app.akar.databinding.FragmentAddRestFormBinding
-grand/app/akar/pages/settings/TermsFragment.java
- grand.app.akar.pages.settings.TermsFragment
-grand/app/akar/base/BaseViewModel.java
- grand.app.akar.base.BaseViewModel
-grand/app/akar/databinding/FragmentAddLandFormBinding.java
- grand.app.akar.databinding.FragmentAddLandFormBinding
-grand/app/akar/customViews/actionbar/MenuActionBarView.java
- grand.app.akar.customViews.actionbar.MenuActionBarView
-grand/app/akar/pages/home/viewModels/ItemHomeViewModel.java
- grand.app.akar.pages.home.viewModels.ItemHomeViewModel
-grand/app/akar/pages/profile/ProfileFragment.java
- grand.app.akar.pages.profile.ProfileFragment
-grand/app/akar/databinding/FragmentAdDetailsBinding.java
- grand.app.akar.databinding.FragmentAdDetailsBinding
-grand/app/akar/pages/adDetails/adapters/ReportDialogReasonsAdapter.java
- grand.app.akar.pages.adDetails.adapters.ReportDialogReasonsAdapter
- grand.app.akar.pages.adDetails.adapters.ReportDialogReasonsAdapter$MenuView
-grand/app/akar/utils/helper/AppHelper.java
- grand.app.akar.utils.helper.AppHelper
- grand.app.akar.utils.helper.AppHelper$1
-grand/app/akar/databinding/FragmentPaymentBinding.java
- grand.app.akar.databinding.FragmentPaymentBinding
-grand/app/akar/pages/home/models/HomeResponse.java
- grand.app.akar.pages.home.models.HomeResponse
-grand/app/akar/databinding/FragmentHomeCitiesBinding.java
- grand.app.akar.databinding.FragmentHomeCitiesBinding
-grand/app/akar/databinding/ItemAdImagesBinding.java
- grand.app.akar.databinding.ItemAdImagesBinding
-grand/app/akar/pages/ads/itemViewModels/ItemCityViewModel.java
- grand.app.akar.pages.ads.itemViewModels.ItemCityViewModel
-grand/app/akar/databinding/FragmentAddWarehouseFormBinding.java
- grand.app.akar.databinding.FragmentAddWarehouseFormBinding
-grand/app/akar/pages/chat/model/ChatRequest.java
- grand.app.akar.pages.chat.model.ChatRequest
-grand/app/akar/pages/auth/confirmCode/ConfirmCodeFragment.java
- grand.app.akar.pages.auth.confirmCode.ConfirmCodeFragment
- grand.app.akar.pages.auth.confirmCode.ConfirmCodeFragment$1
-grand/app/akar/pages/adDetails/models/UpdatedImagesRequest.java
- grand.app.akar.pages.adDetails.models.UpdatedImagesRequest
-grand/app/akar/pages/myAds/MyAdsMainFragment.java
- grand.app.akar.pages.myAds.MyAdsMainFragment
-grand/app/akar/pages/chat/view/ChatFragment.java
- grand.app.akar.pages.chat.view.ChatFragment
-grand/app/akar/pages/conversations/viewModels/ItemConversationsViewModel.java
- grand.app.akar.pages.conversations.viewModels.ItemConversationsViewModel
-grand/app/akar/pages/ads/forms/AddResetFormFragment.java
- grand.app.akar.pages.ads.forms.AddResetFormFragment
-grand/app/akar/utils/upload/FileUpload.java
- grand.app.akar.utils.upload.FileUpload
-grand/app/akar/pages/settings/viewModels/MyAccountSettingsViewModel.java
- grand.app.akar.pages.settings.viewModels.MyAccountSettingsViewModel
-grand/app/akar/pages/auth/payment/PaymentFragment.java
- grand.app.akar.pages.auth.payment.PaymentFragment
-grand/app/akar/customViews/views/CustomEditTextT.java
- grand.app.akar.customViews.views.CustomEditTextT
- grand.app.akar.customViews.views.CustomEditTextT$1
-grand/app/akar/utils/session/MyContextWrapper.java
- grand.app.akar.utils.session.MyContextWrapper
-grand/app/akar/pages/auth/register/RegisterFragment.java
- grand.app.akar.pages.auth.register.RegisterFragment
-grand/app/akar/pages/chat/viewmodel/ItemChatViewModel.java
- grand.app.akar.pages.chat.viewmodel.ItemChatViewModel
-grand/app/akar/connection/ConnectionModule.java
- grand.app.akar.connection.ConnectionModule
- grand.app.akar.connection.ConnectionModule$1
-grand/app/akar/pages/home/HomeCitiesFragment.java
- grand.app.akar.pages.home.HomeCitiesFragment
-grand/app/akar/pages/adDetails/adapters/ServicesAdapter.java
- grand.app.akar.pages.adDetails.adapters.ServicesAdapter
- grand.app.akar.pages.adDetails.adapters.ServicesAdapter$MenuView
-grand/app/akar/databinding/FragmentAboutBinding.java
- grand.app.akar.databinding.FragmentAboutBinding
-grand/app/akar/pages/myAds/viewModels/MyAdsViewModel.java
- grand.app.akar.pages.myAds.viewModels.MyAdsViewModel
-grand/app/akar/pages/adDetails/AdDetailsFragment.java
- grand.app.akar.pages.adDetails.AdDetailsFragment
-grand/app/akar/pages/adDetails/viewModels/ItemReasonsViewModel.java
- grand.app.akar.pages.adDetails.viewModels.ItemReasonsViewModel
-grand/app/akar/pages/auth/changePassword/ChangePasswordViewModel.java
- grand.app.akar.pages.auth.changePassword.ChangePasswordViewModel
-grand/app/akar/databinding/LayoutActionBarHomeBinding.java
- grand.app.akar.databinding.LayoutActionBarHomeBinding
-grand/app/akar/pages/ads/models/CategoriesData.java
- grand.app.akar.pages.ads.models.CategoriesData
-grand/app/akar/databinding/FragmentMyAccountBinding.java
- grand.app.akar.databinding.FragmentMyAccountBinding
-grand/app/akar/pages/auth/login/LoginViewModel.java
- grand.app.akar.pages.auth.login.LoginViewModel
-grand/app/akar/databinding/ItemMyAdsBinding.java
- grand.app.akar.databinding.ItemMyAdsBinding
-grand/app/akar/pages/ads/models/OrderImages.java
- grand.app.akar.pages.ads.models.OrderImages
-grand/app/akar/utils/Constants.java
- grand.app.akar.utils.Constants
-grand/app/akar/pages/home/viewModels/FilterViewModel.java
- grand.app.akar.pages.home.viewModels.FilterViewModel
-grand/app/akar/pages/ads/forms/AdsAttachmentsFragment.java
- grand.app.akar.pages.ads.forms.AdsAttachmentsFragment
- grand.app.akar.pages.ads.forms.AdsAttachmentsFragment$1
-grand/app/akar/databinding/FragmentFavoritesBinding.java
- grand.app.akar.databinding.FragmentFavoritesBinding
-grand/app/akar/customViews/views/CustomTextViewMedium.java
- grand.app.akar.customViews.views.CustomTextViewMedium
-grand/app/akar/utils/validation/Validate.java
- grand.app.akar.utils.validation.Validate
-grand/app/akar/pages/myAccount/models/CalculatedPoints.java
- grand.app.akar.pages.myAccount.models.CalculatedPoints
-grand/app/akar/pages/settings/models/settings/SettingsData.java
- grand.app.akar.pages.settings.models.settings.SettingsData
-grand/app/akar/pages/adDetails/models/SliderItem.java
- grand.app.akar.pages.adDetails.models.SliderItem
-grand/app/akar/databinding/FragmentPreviousAdsBinding.java
- grand.app.akar.databinding.FragmentPreviousAdsBinding
-grand/app/akar/pages/ads/viewModels/AttachmentsViewModel.java
- grand.app.akar.pages.ads.viewModels.AttachmentsViewModel
-grand/app/akar/pages/splash/models/SettingData.java
- grand.app.akar.pages.splash.models.SettingData
-grand/app/akar/databinding/ItemHomeBinding.java
- grand.app.akar.databinding.ItemHomeBinding
-grand/app/akar/pages/ads/itemViewModels/ItemCategoryViewModel.java
- grand.app.akar.pages.ads.itemViewModels.ItemCategoryViewModel
-grand/app/akar/utils/PopUp/PopUp.java
- grand.app.akar.utils.PopUp.PopUp
-grand/app/akar/pages/settings/models/AboutData.java
- grand.app.akar.pages.settings.models.AboutData
-grand/app/akar/pages/myAccount/models/ProfileDataResponse.java
- grand.app.akar.pages.myAccount.models.ProfileDataResponse
-grand/app/akar/pages/splash/SplashFragment.java
- grand.app.akar.pages.splash.SplashFragment
-grand/app/akar/pages/myAds/CurrentAdsFragment.java
- grand.app.akar.pages.myAds.CurrentAdsFragment
-grand/app/akar/pages/favorites/MyFavoritesMainFragment.java
- grand.app.akar.pages.favorites.MyFavoritesMainFragment
-grand/app/akar/base/MyApplication.java
- grand.app.akar.base.MyApplication
-grand/app/akar/pages/favorites/FavoritesContactFragment.java
- grand.app.akar.pages.favorites.FavoritesContactFragment
-grand/app/akar/base/maps/MapHelper.java
- grand.app.akar.base.maps.MapHelper
-grand/app/akar/databinding/LayoutGrandBinding.java
- grand.app.akar.databinding.LayoutGrandBinding
-grand/app/akar/pages/chat/viewmodel/ChatViewModel.java
- grand.app.akar.pages.chat.viewmodel.ChatViewModel
-grand/app/akar/pages/home/models/DefaultImg.java
- grand.app.akar.pages.home.models.DefaultImg
-grand/app/akar/pages/home/models/HomeData.java
- grand.app.akar.pages.home.models.HomeData
-grand/app/akar/connection/Api.java
- grand.app.akar.connection.Api
-grand/app/akar/pages/onBoard/models/OnBoard.java
- grand.app.akar.pages.onBoard.models.OnBoard
-grand/app/akar/pages/onBoard/OnBoardAdapter.java
- grand.app.akar.pages.onBoard.OnBoardAdapter
- grand.app.akar.pages.onBoard.OnBoardAdapter$SliderAdapterVH
-grand/app/akar/base/maps/MapAddress.java
- grand.app.akar.base.maps.MapAddress
- grand.app.akar.base.maps.MapAddress$1
-grand/app/akar/pages/ads/adapter/CategoriesAdapter.java
- grand.app.akar.pages.ads.adapter.CategoriesAdapter
- grand.app.akar.pages.ads.adapter.CategoriesAdapter$MenuView
-grand/app/akar/model/base/StatusMessage.java
- grand.app.akar.model.base.StatusMessage
-grand/app/akar/customViews/views/CustomEditText.java
- grand.app.akar.customViews.views.CustomEditText
- grand.app.akar.customViews.views.CustomEditText$1
- grand.app.akar.customViews.views.CustomEditText$2
-grand/app/akar/pages/auth/models/UsersResponse.java
- grand.app.akar.pages.auth.models.UsersResponse
-grand/app/akar/base/IApplicationComponent.java
- grand.app.akar.base.IApplicationComponent
- grand.app.akar.base.IApplicationComponent$Builder
+te/app/evidence/pages/splash/models/SettingData.java
+ te.app.evidence.pages.splash.models.SettingData
+te/app/evidence/pages/home/HomeFragment.java
+ te.app.evidence.pages.home.HomeFragment
+te/app/evidence/pages/auth/forgetPassword/ForgetPasswordFragment.java
+ te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment
+te/app/evidence/utils/Constants.java
+ te.app.evidence.utils.Constants
+te/app/evidence/utils/helper/MovementHelper.java
+ te.app.evidence.utils.helper.MovementHelper
+te/app/evidence/customViews/circleProgress/OverdrawValueRenderer.java
+ te.app.evidence.customViews.circleProgress.OverdrawValueRenderer
+te/app/evidence/utils/upload/FileUpload.java
+ te.app.evidence.utils.upload.FileUpload
+te/app/evidence/customViews/menu/MenuModel.java
+ te.app.evidence.customViews.menu.MenuModel
+te/app/evidence/databinding/LayoutActionBarHomeBinding.java
+ te.app.evidence.databinding.LayoutActionBarHomeBinding
+te/app/evidence/pages/onBoard/models/OnBoard.java
+ te.app.evidence.pages.onBoard.models.OnBoard
+te/app/evidence/pages/auth/models/cities/Cities.java
+ te.app.evidence.pages.auth.models.cities.Cities
+te/app/evidence/pages/settings/viewModels/SettingsViewModel.java
+ te.app.evidence.pages.settings.viewModels.SettingsViewModel
+te/app/evidence/pages/settings/models/settings/SettingsData.java
+ te.app.evidence.pages.settings.models.settings.SettingsData
+te/app/evidence/pages/splash/models/SettingsResponse.java
+ te.app.evidence.pages.splash.models.SettingsResponse
+te/app/evidence/base/BaseViewModel.java
+ te.app.evidence.base.BaseViewModel
+te/app/evidence/utils/URLS.java
+ te.app.evidence.utils.URLS
+te/app/evidence/pages/settings/models/AboutData.java
+ te.app.evidence.pages.settings.models.AboutData
+te/app/evidence/DataBindingTriggerClass.java
+ te.app.evidence.DataBindingTriggerClass
+te/app/evidence/pages/auth/models/RegisterRequest.java
+ te.app.evidence.pages.auth.models.RegisterRequest
+te/app/evidence/customViews/actionbar/MenuActionBarView.java
+ te.app.evidence.customViews.actionbar.MenuActionBarView
+te/app/evidence/customViews/circleProgress/AnimationMode.java
+ te.app.evidence.customViews.circleProgress.AnimationMode
+te/app/evidence/customViews/views/CustomEditText.java
+ te.app.evidence.customViews.views.CustomEditText
+ te.app.evidence.customViews.views.CustomEditText$1
+te/app/evidence/pages/settings/models/AboutResponse.java
+ te.app.evidence.pages.settings.models.AboutResponse
+te/app/evidence/pages/settings/viewModels/MyAccountSettingsViewModel.java
+ te.app.evidence.pages.settings.viewModels.MyAccountSettingsViewModel
+te/app/evidence/pages/onBoard/OnBoardFragment.java
+ te.app.evidence.pages.onBoard.OnBoardFragment
+te/app/evidence/connection/ConnectionHelper.java
+ te.app.evidence.connection.ConnectionHelper
+ te.app.evidence.connection.ConnectionHelper$1
+ te.app.evidence.connection.ConnectionHelper$2
+ te.app.evidence.connection.ConnectionHelper$3
+te/app/evidence/base/ParentActivity.java
+ te.app.evidence.base.ParentActivity
+te/app/evidence/pages/auth/login/LoginViewModel.java
+ te.app.evidence.pages.auth.login.LoginViewModel
+te/app/evidence/databinding/FragmentProfileBinding.java
+ te.app.evidence.databinding.FragmentProfileBinding
+te/app/evidence/pages/auth/changePassword/ChangePasswordViewModel.java
+ te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel
+te/app/evidence/utils/upload/FileOperations.java
+ te.app.evidence.utils.upload.FileOperations
+te/app/evidence/base/BaseFragment.java
+ te.app.evidence.base.BaseFragment
+te/app/evidence/databinding/FragmentChangePasswordBinding.java
+ te.app.evidence.databinding.FragmentChangePasswordBinding
+te/app/evidence/base/ApplicationBinding.java
+ te.app.evidence.base.ApplicationBinding
+te/app/evidence/pages/settings/models/UserDocuments.java
+ te.app.evidence.pages.settings.models.UserDocuments
+te/app/evidence/utils/PopUp/PopUpMenuHelper.java
+ te.app.evidence.utils.PopUp.PopUpMenuHelper
+te/app/evidence/base/LiveData.java
+ te.app.evidence.base.LiveData
+te/app/evidence/utils/session/MyContextWrapper.java
+ te.app.evidence.utils.session.MyContextWrapper
+te/app/evidence/pages/home/viewModels/HomeViewModel.java
+ te.app.evidence.pages.home.viewModels.HomeViewModel
+te/app/evidence/connection/Api.java
+ te.app.evidence.connection.Api
+te/app/evidence/repository/AdsRepository.java
+ te.app.evidence.repository.AdsRepository
+te/app/evidence/pages/auth/models/ForgetPasswordRequest.java
+ te.app.evidence.pages.auth.models.ForgetPasswordRequest
+te/app/evidence/databinding/FragmentSplashBinding.java
+ te.app.evidence.databinding.FragmentSplashBinding
+te/app/evidence/databinding/FragmentOnboardBinding.java
+ te.app.evidence.databinding.FragmentOnboardBinding
+te/app/evidence/utils/PopUp/PopUpInterface.java
+ te.app.evidence.utils.PopUp.PopUpInterface
+te/app/evidence/repository/SettingsRepository.java
+ te.app.evidence.repository.SettingsRepository
+te/app/evidence/repository/BaseRepository.java
+ te.app.evidence.repository.BaseRepository
+te/app/evidence/customViews/menu/NavigationDrawerView.java
+ te.app.evidence.customViews.menu.NavigationDrawerView
+te/app/evidence/customViews/circleProgress/LinearValueRenderer.java
+ te.app.evidence.customViews.circleProgress.LinearValueRenderer
+te/app/evidence/activity/BaseActivity.java
+ te.app.evidence.activity.BaseActivity
+te/app/evidence/pages/profile/ProfileViewModel.java
+ te.app.evidence.pages.profile.ProfileViewModel
+te/app/evidence/pages/splash/models/ReasonsItem.java
+ te.app.evidence.pages.splash.models.ReasonsItem
+te/app/evidence/customViews/actionbar/BackActionBarView.java
+ te.app.evidence.customViews.actionbar.BackActionBarView
+ te.app.evidence.customViews.actionbar.BackActionBarView$1
+te/app/evidence/customViews/views/CustomTextViewRegular.java
+ te.app.evidence.customViews.views.CustomTextViewRegular
+te/app/evidence/PassingObject.java
+ te.app.evidence.PassingObject
+te/app/evidence/databinding/ActivityBaseBinding.java
+ te.app.evidence.databinding.ActivityBaseBinding
+te/app/evidence/pages/auth/models/ConfirmCodeRequest.java
+ te.app.evidence.pages.auth.models.ConfirmCodeRequest
+te/app/evidence/databinding/LayoutActionBarBackBinding.java
+ te.app.evidence.databinding.LayoutActionBarBackBinding
+te/app/evidence/utils/images/PhotoFullPopupWindow.java
+ te.app.evidence.utils.images.PhotoFullPopupWindow
+ te.app.evidence.utils.images.PhotoFullPopupWindow$1
+ te.app.evidence.utils.images.PhotoFullPopupWindow$2
+te/app/evidence/pages/auth/models/ChangePasswordRequest.java
+ te.app.evidence.pages.auth.models.ChangePasswordRequest
+te/app/evidence/databinding/ActivityMainBinding.java
+ te.app.evidence.databinding.ActivityMainBinding
+te/app/evidence/customViews/views/CustomTextViewMedium.java
+ te.app.evidence.customViews.views.CustomTextViewMedium
+te/app/evidence/utils/session/LanguagesHelper.java
+ te.app.evidence.utils.session.LanguagesHelper
+te/app/evidence/databinding/FragmentForgetPasswordBinding.java
+ te.app.evidence.databinding.FragmentForgetPasswordBinding
+te/app/evidence/customViews/circleProgress/Renderer.java
+ te.app.evidence.customViews.circleProgress.Renderer
+te/app/evidence/databinding/FragmentLoginBinding.java
+ te.app.evidence.databinding.FragmentLoginBinding
+te/app/evidence/pages/splash/SplashFragment.java
+ te.app.evidence.pages.splash.SplashFragment
+te/app/evidence/repository/ChatRepository.java
+ te.app.evidence.repository.ChatRepository
+te/app/evidence/pages/onBoard/OnBoardAdapter.java
+ te.app.evidence.pages.onBoard.OnBoardAdapter
+ te.app.evidence.pages.onBoard.OnBoardAdapter$SliderAdapterVH
+te/app/evidence/pages/auth/models/UsersResponse.java
+ te.app.evidence.pages.auth.models.UsersResponse
+te/app/evidence/customViews/views/CustomTextViewBold.java
+ te.app.evidence.customViews.views.CustomTextViewBold
+te/app/evidence/utils/resources/ResourceManager.java
+ te.app.evidence.utils.resources.ResourceManager
+te/app/evidence/pages/settings/models/settings/SettingsResponse.java
+ te.app.evidence.pages.settings.models.settings.SettingsResponse
+te/app/evidence/databinding/FragmentHomeBinding.java
+ te.app.evidence.databinding.FragmentHomeBinding
+te/app/evidence/databinding/FragmentConfirmCodeBinding.java
+ te.app.evidence.databinding.FragmentConfirmCodeBinding
+te/app/evidence/pages/splash/SplashViewModel.java
+ te.app.evidence.pages.splash.SplashViewModel
+te/app/evidence/customViews/actionbar/HomeActionBarView.java
+ te.app.evidence.customViews.actionbar.HomeActionBarView
+te/app/evidence/pages/auth/changePassword/ChangePasswordRequest.java
+ te.app.evidence.pages.auth.changePassword.ChangePasswordRequest
+te/app/evidence/repository/HomeRepository.java
+ te.app.evidence.repository.HomeRepository
+te/app/evidence/connection/ConnectionModule.java
+ te.app.evidence.connection.ConnectionModule
+ te.app.evidence.connection.ConnectionModule$1
+te/app/evidence/base/ApplicationComponent.java
+ te.app.evidence.base.ApplicationComponent
+te/app/evidence/pages/auth/forgetPassword/ForgetPasswordViewModel.java
+ te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel
+te/app/evidence/customViews/circleProgress/FitChartValue.java
+ te.app.evidence.customViews.circleProgress.FitChartValue
+te/app/evidence/base/ConnectivityReceiver.java
+ te.app.evidence.base.ConnectivityReceiver
+ te.app.evidence.base.ConnectivityReceiver$ConnectivityReceiverListener
+te/app/evidence/repository/ServiceRepository.java
+ te.app.evidence.repository.ServiceRepository
+te/app/evidence/pages/profile/ProfileFragment.java
+ te.app.evidence.pages.profile.ProfileFragment
+te/app/evidence/customViews/circleProgress/RendererFactory.java
+ te.app.evidence.customViews.circleProgress.RendererFactory
+te/app/evidence/customViews/circleProgress/FitChart.java
+ te.app.evidence.customViews.circleProgress.FitChart
+te/app/evidence/utils/session/UserHelper.java
+ te.app.evidence.utils.session.UserHelper
+te/app/evidence/pages/auth/changePassword/ChangePasswordFragment.java
+ te.app.evidence.pages.auth.changePassword.ChangePasswordFragment
+te/app/evidence/pages/auth/models/cities/CitiesResponse.java
+ te.app.evidence.pages.auth.models.cities.CitiesResponse
+te/app/evidence/pages/auth/models/LoginRequest.java
+ te.app.evidence.pages.auth.models.LoginRequest
+te/app/evidence/customViews/views/CustomBottomNavigationView.java
+ te.app.evidence.customViews.views.CustomBottomNavigationView
+te/app/evidence/activity/MainActivity.java
+ te.app.evidence.activity.MainActivity
+te/app/evidence/pages/settings/viewModels/DocumentsViewModel.java
+ te.app.evidence.pages.settings.viewModels.DocumentsViewModel
+te/app/evidence/base/IApplicationComponent.java
+ te.app.evidence.base.IApplicationComponent
+ te.app.evidence.base.IApplicationComponent$Builder
+te/app/evidence/pages/splash/models/BannersItem.java
+ te.app.evidence.pages.splash.models.BannersItem
+te/app/evidence/base/MyApplication.java
+ te.app.evidence.base.MyApplication
+te/app/evidence/connection/ConnectionListenerInterFace.java
+ te.app.evidence.connection.ConnectionListenerInterFace
+te/app/evidence/customViews/menu/MenuViewModel.java
+ te.app.evidence.customViews.menu.MenuViewModel
+te/app/evidence/connection/FileObject.java
+ te.app.evidence.connection.FileObject
+te/app/evidence/pages/auth/models/UserData.java
+ te.app.evidence.pages.auth.models.UserData
+te/app/evidence/pages/onBoard/IntroItem.java
+ te.app.evidence.pages.onBoard.IntroItem
+te/app/evidence/utils/session/SharedPreferenceHelper.java
+ te.app.evidence.utils.session.SharedPreferenceHelper
+te/app/evidence/databinding/LayoutNavigationDrawerBinding.java
+ te.app.evidence.databinding.LayoutNavigationDrawerBinding
+te/app/evidence/pages/auth/confirmCode/ConfirmCodeFragment.java
+ te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment
+ te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment$1
+te/app/evidence/utils/PopUp/PopUp.java
+ te.app.evidence.utils.PopUp.PopUp
+te/app/evidence/pages/settings/models/UserDocumentsResponse.java
+ te.app.evidence.pages.settings.models.UserDocumentsResponse
+te/app/evidence/model/base/StatusMessage.java
+ te.app.evidence.model.base.StatusMessage
+te/app/evidence/utils/helper/AppHelper.java
+ te.app.evidence.utils.helper.AppHelper
+ te.app.evidence.utils.helper.AppHelper$1
+te/app/evidence/pages/home/viewModels/ItemHomeSliderViewModel.java
+ te.app.evidence.pages.home.viewModels.ItemHomeSliderViewModel
+te/app/evidence/pages/auth/confirmCode/ConfirmViewModel.java
+ te.app.evidence.pages.auth.confirmCode.ConfirmViewModel
+te/app/evidence/customViews/circleProgress/BaseRenderer.java
+ te.app.evidence.customViews.circleProgress.BaseRenderer
+te/app/evidence/utils/images/ImageConstants.java
+ te.app.evidence.utils.images.ImageConstants
+te/app/evidence/utils/validation/Validate.java
+ te.app.evidence.utils.validation.Validate
+te/app/evidence/pages/onBoard/models/BoardResponse.java
+ te.app.evidence.pages.onBoard.models.BoardResponse
+te/app/evidence/BuildConfig.java
+ te.app.evidence.BuildConfig
+te/app/evidence/pages/auth/login/LoginFragment.java
+ te.app.evidence.pages.auth.login.LoginFragment
+te/app/evidence/repository/AuthRepository.java
+ te.app.evidence.repository.AuthRepository
+te/app/evidence/model/base/Mutable.java
+ te.app.evidence.model.base.Mutable

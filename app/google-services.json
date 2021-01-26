@@ -1,78 +1,42 @@
 {
   "project_info": {
-    "project_number": "593893271277",
-    "firebase_url": "https://come-and-go-8dd90.firebaseio.com",
-    "project_id": "come-and-go-8dd90",
-    "storage_bucket": "come-and-go-8dd90.appspot.com"
+    "project_number": "946730578976",
+    "project_id": "evidence-45abd",
+    "storage_bucket": "evidence-45abd.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:593893271277:android:ff26aa8474d59d4f3c0ee4",
+        "mobilesdk_app_id": "1:946730578976:android:5910c85ba448e6f837b845",
         "android_client_info": {
-          "package_name": "app.grand.comego"
+          "package_name": "te.app.evidence"
         }
       },
       "oauth_client": [
         {
-          "client_id": "593893271277-7pu1t66gll4vnlelktl73utn7fldvggf.apps.googleusercontent.com",
+          "client_id": "946730578976-q47nqc12rcljshvpb8ush8pu4ck49s4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "te.app.evidence",
+            "certificate_hash": "378078b653fa381bd0d833952b39cf1025ba0b3f"
+          }
+        },
+        {
+          "client_id": "946730578976-k7geftn055uiqn9p4bh9valh5ibcsvc2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAjGGo3nwLpHb-MF3_1x__mWdLnGFmv94U"
+          "current_key": "AIzaSyDdpnNzaAbHDKmFvre7niofKL5clOD2mgY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "593893271277-7pu1t66gll4vnlelktl73utn7fldvggf.apps.googleusercontent.com",
+              "client_id": "946730578976-k7geftn055uiqn9p4bh9valh5ibcsvc2.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "593893271277-v808utlusr3ut2ir83ktet5di7gqhmdi.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.2grand.Come-And-Go"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:593893271277:android:f3ffaca8d78cb2283c0ee4",
-        "android_client_info": {
-          "package_name": "grand.app.akar"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "593893271277-7pu1t66gll4vnlelktl73utn7fldvggf.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAjGGo3nwLpHb-MF3_1x__mWdLnGFmv94U"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "593893271277-7pu1t66gll4vnlelktl73utn7fldvggf.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "593893271277-v808utlusr3ut2ir83ktet5di7gqhmdi.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.2grand.Come-And-Go"
-              }
             }
           ]
         }

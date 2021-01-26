@@ -2,23 +2,23 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="grand.app.moon.views.fragments.SplashFragment">
+    tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
 
         <variable
             name="viewmodel"
-            type="grand.app.akar.pages.auth.confirmCode.ConfirmViewModel" />
+            type="te.app.evidence.pages.auth.confirmCode.ConfirmViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/auth_header">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/img_login_logo"
@@ -29,16 +29,17 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp8w"
-                android:src="@drawable/ic_back"
                 android:onClick="@{()-> viewmodel.goBack(context)}"
+                android:src="@drawable/ic_back"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/img_login_logo" />
 
-            <grand.app.akar.customViews.views.CustomTextViewMedium
+            <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/tv_login_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,90 +51,104 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/img_login_logo" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_confirm_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp18h"
-                app:layout_constraintTop_toBottomOf="@+id/tv_login_title"
-                android:background="@drawable/corner_view_auth">
+                android:text="@string/confirm_header_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_login_title" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_confirm_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp13h"
+                android:text="@string/confirm_header_text2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_confirm_title" />
 
 
-                <com.chaos.view.PinView
-                    android:id="@+id/pin_Validate"
-                    style="@style/PinWidget.PinView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:cursorVisible="true"
-                    android:gravity="center_horizontal"
-                    android:inputType="number"
-                    android:itemBackground="@color/white"
-                    android:padding="8dp"
-                    android:text="@={viewmodel.request.code}"
-                    android:textColor="@color/overlayBackground"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:cursorColor="#8A98A3"
-                    app:cursorWidth="2dp"
-                    app:hideLineWhenFilled="false"
-                    app:itemCount="4"
-                    app:itemHeight="50dp"
-                    app:itemSpacing="@dimen/dp8w"
-                    app:itemWidth="50dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:lineWidth="2dp"
-                    app:viewType="rectangle" />
+            <com.chaos.view.PinView
+                android:id="@+id/pin_Validate"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp18h"
+                android:cursorVisible="true"
+                android:gravity="center_horizontal"
+                android:inputType="number"
+                android:itemBackground="@color/colorPrimary"
+                android:padding="8dp"
+                android:text="@={viewmodel.request.code}"
+                android:textColor="@color/overlayBackground"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:cursorColor="#8A98A3"
+                app:cursorWidth="2dp"
+                app:hideLineWhenFilled="false"
+                app:itemCount="4"
+                app:itemHeight="50dp"
+                app:itemSpacing="@dimen/dp8w"
+                app:itemWidth="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_confirm_title_2"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/appCompatButtonNext"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp12w"
-                    android:layout_marginTop="@dimen/dp20h"
-                    android:layout_marginEnd="@dimen/dp12w"
-                    android:background="@drawable/corner_view_primary_dark"
-                    android:onClick="@{()->viewmodel.confirmCode()}"
-                    android:text="@string/confirm"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/pin_Validate" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/appCompatButtonNext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginTop="@dimen/dp20h"
+                android:layout_marginEnd="@dimen/dp12w"
+                android:background="@drawable/corner_view_primary_gray"
+                android:onClick="@{()->viewmodel.confirmCode()}"
+                android:text="@string/confirm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pin_Validate" />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp15h"
-                    android:gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/appCompatButtonNext">
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_login_forget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12h"
+                android:layout_marginEnd="@dimen/dp4w"
+                android:layout_marginBottom="@dimen/dp12h"
+                android:enabled="false"
+                android:onClick="@{()->viewmodel.resendCode()}"
+                android:text="@string/confirm_resend"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_forget_timer" />
 
-                    <grand.app.akar.customViews.views.CustomTextViewMedium
-                        android:id="@+id/tv_login_forget"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/dp4w"
-                        android:enabled="false"
-                        android:onClick="@{()->viewmodel.resendCode()}"
-                        android:text="@string/confirm_resend"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/colorPrimary" />
-
-                    <grand.app.akar.customViews.views.CustomTextViewMedium
-                        android:id="@+id/tv_forget_timer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="#252F43" />
-                </LinearLayout>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_forget_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#252F43"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatButtonNext" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>
