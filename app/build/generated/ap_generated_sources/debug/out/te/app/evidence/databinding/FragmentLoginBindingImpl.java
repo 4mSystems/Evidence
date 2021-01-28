@@ -27,7 +27,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -129,7 +129,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -293,7 +293,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
 
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputPassword, inputPasswordtextAttrChanged);
-            this.startApp.setOnClickListener(mCallback5);
+            this.startApp.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

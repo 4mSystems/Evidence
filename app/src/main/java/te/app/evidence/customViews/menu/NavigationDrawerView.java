@@ -1,26 +1,24 @@
 package te.app.evidence.customViews.menu;
 
-/**
- * Created by mohamedatef on 12/30/18.
- */
 
 import android.annotation.SuppressLint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 
 import te.app.evidence.R;
 import te.app.evidence.customViews.actionbar.HomeActionBarView;
 import te.app.evidence.databinding.LayoutNavigationDrawerBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.clients.ClientsFragment;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 
 @SuppressLint("ViewConstructor")
@@ -64,65 +62,15 @@ public class NavigationDrawerView extends RelativeLayout {
         this.homeActionBarView = homeActionBarView;
     }
 
-    //home - profile - ads - stories - chat_history - gallery - orders - reviews - famous_people - credit_card
-    //label_notification - photographer_people - help_and_support - label_privacy_policy - label_language
-    // label_share_app - rate_app - be_shop - label_logout
     private void setEvents() {
-//        menuViewModel.getMenuAdapter().getLiveDataAdapter().observeForever(new Observer<Integer>() {
-//            @Override
-//            public void onChanged(@Nullable Integer position) {
-//                Log.e("onChanged", "onChanged: " + position);
-//                layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
-////                // select menu
-////                int pos = position;
-////                String id = menu.get(pos).id;
-////                Log.d(TAG, "onChanged: " + id);
-////                Intent intent = null;
-////                Service service = MoataHelper.checkServiceSelect(id);
-////                if (service != null) {
-////                    Bundle bundle = new Bundle();
-////                    bundle.putSerializable(Constants.CATEGORY, service);
-////                    bundle.putString(Constants.SEARCH_BAR, Constants.SEARCH_BAR);
-////                    bundle.putString(Constants.PAGE, CategoryFragment.class.getName());
-////                    MovementHelper.startActivityBase(context, bundle, service.name);
-////                } else if (id.equals(Constants.HOME)) {
-////                    homePage();
-////                } else if (id.equals(Constants.CHAT)) {
-////                    if (UserHelper.getUserId() != -1)
-////                        goToBasePage(ChatFragment.class.getName(), context.getString(R.string.chat), new Bundle());
-////                    else
-////                        liveData.setValue(new Mutable(Constants.LOGIN_FIRST));
-////                } else if (id.equals(Constants.MYREQUESTS)) {
-////                    if (UserHelper.getUserId() != -1)
-////                        goToBasePage(OrdersFragment.class.getName(), context.getString(R.string.my_requests), new Bundle());
-////                    else
-////                        liveData.setValue(new Mutable(Constants.LOGIN_FIRST));
-////                } else if (id.equals(Constants.FAVOURITE)) {
-////                    if (UserHelper.getUserId() != -1)
-////                        goToBasePage(FavouriteFragment.class.getName(), context.getString(R.string.favourite), new Bundle());
-////                    else
-////                        liveData.setValue(new Mutable(Constants.LOGIN_FIRST));
-////                } else if (id.equals(Constants.COMPLAIN)) {
-////                    Bundle bundle = new Bundle();
-////                    bundle.putInt(Constants.STATUS, 1);
-////                    goToBasePage(ContactUsFragment.class.getName(), context.getString(R.string.complain_and_suggest), bundle);
-////                } else if (id.equals(Constants.CONTACT_US)) {
-////                    goToBasePage(ContactUsFragment.class.getName(), context.getString(R.string.contact_us), new Bundle());
-////                } else if (id.equals(Constants.RATE_APP)) {
-////                    MovementHelper.startWebPage(context, AppHelper.getPlayStoreLink(context));
-////                } else if (id.equals(Constants.SOCIAL)) {
-////                    goToBasePage(SocialMediaFragment.class.getName(), context.getString(R.string.social_media), new Bundle());
-////                } else if (id.equals(Constants.TERMS_AND_CONDITIONS)) {
-////                    Bundle bundle = new Bundle();
-////                    bundle.putInt(Constants.STATUS, 1);
-////                    goToBasePage(SettingsFragment.class.getName(), context.getString(R.string.terms_and_conditions), bundle);
-////                } else if (id.equals(Constants.LANGUAGE)) {
-////                    new LanguageDialog(context).show();
-////                } else if (id.equals(Constants.NOTIFICATIONS)) {
-////                    goToBasePage(NotificationFragment.class.getName(), context.getString(R.string.notifications), new Bundle());
-////                }
-//            }
-//        });
+        menuViewModel.getLiveData().observe(context, o -> {
+            if (o.equals(Constants.CLIENTS)) {
+                homeActionBarView.setTitle(ResourceManager.getString(R.string.clients));
+                MovementHelper.replaceFragment(context, new ClientsFragment(), "");
+
+            }
+            layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
+        });
 
     }
 

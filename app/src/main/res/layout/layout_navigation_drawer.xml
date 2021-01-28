@@ -123,6 +123,7 @@
                             android:drawableStart="@drawable/ic_users"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.toClients()}"
                             android:text="@string/menuClients"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />

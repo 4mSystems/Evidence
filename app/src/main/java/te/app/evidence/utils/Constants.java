@@ -2,7 +2,7 @@ package te.app.evidence.utils;
 
 public class Constants {
 
-    public static final String CREATE_AD = "CREATE_AD";
+    public static final String CLIENTS = "CLIENTS";
     public static final String SHOW_CITIES = "SHOW_CITIES";
     public static final String USER_TYPES = "USER_TYPES";
 

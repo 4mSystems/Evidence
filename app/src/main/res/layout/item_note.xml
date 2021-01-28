@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.evidence.pages.clients.viewModels.ClientsItemViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:id="@+id/layout_clients_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_headerIndicator="@id/icon_down_qu"
+            app:expansion_layout="@id/expansionLayoutClients"
+            app:expansion_toggleOnClick="true"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- HEADER INDICATOR -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp3h">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_down_qu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_qualifications"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_qualifications"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_qualifications"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp6h"
+                    android:text="#34234"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp8h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/layout_clients_header" />
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutClients"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_expanded="false"
+            app:layout_constraintTop_toBottomOf="@id/v1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/unit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/emp_name"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/unit_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="A-161a-Ground-GB-1-Ph.1"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/unit_text"
+                    app:layout_constraintTop_toTopOf="@id/unit_text" />
+
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/unit_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/client_note_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp5w"
+                    android:text="@string/client_note"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toStartOf="@id/client_note_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/client_note_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="Egypt,Cairo,nasr city awl makrm jhjghadgsjdgfsjhfg"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/client_note_text"
+                    app:layout_constraintTop_toTopOf="@id/client_note_text" />
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/client_note_value" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

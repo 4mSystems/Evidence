@@ -393,5 +393,22 @@
     <string name="add_new_user">Add new user</string>
     <string name="daily_reports">Daily reports</string>
     <string name="monthly_reports">Monthly reports</string>
+    <string name="client_unit">Unit</string>
+    <string name="client_address">Addess</string>
+    <string name="client_note">Note</string>
+    <string name="client_profile">Profile</string>
+    <string name="attachments">Attachments</string>
+    <string name="client_search_hint">Looking for client ?</string>
+    <string name="client_name">Client name</string>
+    <string name="add_new_client">Add client</string>
+    <string name="client_data">Client Data</string>
+    <string name="client_notes">Notes</string>
+    <string name="emp_name">Employee name</string>
+    <string name="note_search_hint">Looking for note ?</string>
+    <string name="file">File</string>
+    <string name="attach_search_hint">Looking for file ?</string>
+    <string name="add_new_attach">Add new attachment</string>
+    <string name="cat_name">Category name</string>
+    <string name="add_new_category">Add new category</string>
 
 </resources>

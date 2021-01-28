@@ -12,14 +12,20 @@ te/app/evidence/customViews/circleProgress/OverdrawValueRenderer.java
  te.app.evidence.customViews.circleProgress.OverdrawValueRenderer
 te/app/evidence/utils/upload/FileUpload.java
  te.app.evidence.utils.upload.FileUpload
+te/app/evidence/pages/clients/ClientsFragment.java
+ te.app.evidence.pages.clients.ClientsFragment
 te/app/evidence/customViews/menu/MenuModel.java
  te.app.evidence.customViews.menu.MenuModel
+te/app/evidence/pages/users/viewModels/UsersViewModel.java
+ te.app.evidence.pages.users.viewModels.UsersViewModel
 te/app/evidence/databinding/LayoutActionBarHomeBinding.java
  te.app.evidence.databinding.LayoutActionBarHomeBinding
 te/app/evidence/pages/onBoard/models/OnBoard.java
  te.app.evidence.pages.onBoard.models.OnBoard
 te/app/evidence/pages/auth/models/cities/Cities.java
  te.app.evidence.pages.auth.models.cities.Cities
+te/app/evidence/databinding/FragmentClientsBinding.java
+ te.app.evidence.databinding.FragmentClientsBinding
 te/app/evidence/pages/settings/viewModels/SettingsViewModel.java
  te.app.evidence.pages.settings.viewModels.SettingsViewModel
 te/app/evidence/pages/settings/models/settings/SettingsData.java
@@ -49,6 +55,8 @@ te/app/evidence/pages/settings/viewModels/MyAccountSettingsViewModel.java
  te.app.evidence.pages.settings.viewModels.MyAccountSettingsViewModel
 te/app/evidence/pages/onBoard/OnBoardFragment.java
  te.app.evidence.pages.onBoard.OnBoardFragment
+te/app/evidence/databinding/FragmentUserPermissionBinding.java
+ te.app.evidence.databinding.FragmentUserPermissionBinding
 te/app/evidence/connection/ConnectionHelper.java
  te.app.evidence.connection.ConnectionHelper
  te.app.evidence.connection.ConnectionHelper$1
@@ -74,6 +82,8 @@ te/app/evidence/pages/settings/models/UserDocuments.java
  te.app.evidence.pages.settings.models.UserDocuments
 te/app/evidence/utils/PopUp/PopUpMenuHelper.java
  te.app.evidence.utils.PopUp.PopUpMenuHelper
+te/app/evidence/pages/home/viewModels/MohdrItemViewModel.java
+ te.app.evidence.pages.home.viewModels.MohdrItemViewModel
 te/app/evidence/base/LiveData.java
  te.app.evidence.base.LiveData
 te/app/evidence/utils/session/MyContextWrapper.java
@@ -90,14 +100,16 @@ te/app/evidence/databinding/FragmentSplashBinding.java
  te.app.evidence.databinding.FragmentSplashBinding
 te/app/evidence/databinding/FragmentOnboardBinding.java
  te.app.evidence.databinding.FragmentOnboardBinding
+te/app/evidence/pages/users/viewModels/AddUserViewModel.java
+ te.app.evidence.pages.users.viewModels.AddUserViewModel
 te/app/evidence/utils/PopUp/PopUpInterface.java
  te.app.evidence.utils.PopUp.PopUpInterface
 te/app/evidence/repository/SettingsRepository.java
  te.app.evidence.repository.SettingsRepository
 te/app/evidence/repository/BaseRepository.java
  te.app.evidence.repository.BaseRepository
-te/app/evidence/customViews/menu/NavigationDrawerView.java
- te.app.evidence.customViews.menu.NavigationDrawerView
+te/app/evidence/pages/onBoard/models/BoardResponse.java
+ te.app.evidence.pages.onBoard.models.BoardResponse
 te/app/evidence/customViews/circleProgress/LinearValueRenderer.java
  te.app.evidence.customViews.circleProgress.LinearValueRenderer
 te/app/evidence/activity/BaseActivity.java
@@ -109,6 +121,8 @@ te/app/evidence/pages/splash/models/ReasonsItem.java
 te/app/evidence/customViews/actionbar/BackActionBarView.java
  te.app.evidence.customViews.actionbar.BackActionBarView
  te.app.evidence.customViews.actionbar.BackActionBarView$1
+te/app/evidence/pages/reporters/viewModels/ReportersDetailsViewModel.java
+ te.app.evidence.pages.reporters.viewModels.ReportersDetailsViewModel
 te/app/evidence/customViews/views/CustomTextViewRegular.java
  te.app.evidence.customViews.views.CustomTextViewRegular
 te/app/evidence/PassingObject.java
@@ -117,6 +131,10 @@ te/app/evidence/databinding/ActivityBaseBinding.java
  te.app.evidence.databinding.ActivityBaseBinding
 te/app/evidence/pages/auth/models/ConfirmCodeRequest.java
  te.app.evidence.pages.auth.models.ConfirmCodeRequest
+te/app/evidence/pages/home/viewModels/SessionItemViewModel.java
+ te.app.evidence.pages.home.viewModels.SessionItemViewModel
+te/app/evidence/pages/users/AddUserFragment.java
+ te.app.evidence.pages.users.AddUserFragment
 te/app/evidence/databinding/LayoutActionBarBackBinding.java
  te.app.evidence.databinding.LayoutActionBarBackBinding
 te/app/evidence/utils/images/PhotoFullPopupWindow.java
@@ -148,18 +166,26 @@ te/app/evidence/pages/auth/models/UsersResponse.java
  te.app.evidence.pages.auth.models.UsersResponse
 te/app/evidence/customViews/views/CustomTextViewBold.java
  te.app.evidence.customViews.views.CustomTextViewBold
+te/app/evidence/databinding/FragmentUsersBinding.java
+ te.app.evidence.databinding.FragmentUsersBinding
+te/app/evidence/pages/users/viewModels/UserItemViewModel.java
+ te.app.evidence.pages.users.viewModels.UserItemViewModel
 te/app/evidence/utils/resources/ResourceManager.java
  te.app.evidence.utils.resources.ResourceManager
+te/app/evidence/pages/users/viewModels/UserPermissionsViewModel.java
+ te.app.evidence.pages.users.viewModels.UserPermissionsViewModel
 te/app/evidence/pages/settings/models/settings/SettingsResponse.java
  te.app.evidence.pages.settings.models.settings.SettingsResponse
 te/app/evidence/databinding/FragmentHomeBinding.java
  te.app.evidence.databinding.FragmentHomeBinding
 te/app/evidence/databinding/FragmentConfirmCodeBinding.java
  te.app.evidence.databinding.FragmentConfirmCodeBinding
+te/app/evidence/databinding/FragmentAddUserBinding.java
+ te.app.evidence.databinding.FragmentAddUserBinding
 te/app/evidence/pages/splash/SplashViewModel.java
  te.app.evidence.pages.splash.SplashViewModel
-te/app/evidence/customViews/actionbar/HomeActionBarView.java
- te.app.evidence.customViews.actionbar.HomeActionBarView
+te/app/evidence/BuildConfig.java
+ te.app.evidence.BuildConfig
 te/app/evidence/pages/auth/changePassword/ChangePasswordRequest.java
  te.app.evidence.pages.auth.changePassword.ChangePasswordRequest
 te/app/evidence/repository/HomeRepository.java
@@ -167,8 +193,10 @@ te/app/evidence/repository/HomeRepository.java
 te/app/evidence/connection/ConnectionModule.java
  te.app.evidence.connection.ConnectionModule
  te.app.evidence.connection.ConnectionModule$1
-te/app/evidence/base/ApplicationComponent.java
- te.app.evidence.base.ApplicationComponent
+te/app/evidence/databinding/ItemMohdrBinding.java
+ te.app.evidence.databinding.ItemMohdrBinding
+te/app/evidence/model/base/Mutable.java
+ te.app.evidence.model.base.Mutable
 te/app/evidence/pages/auth/forgetPassword/ForgetPasswordViewModel.java
  te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel
 te/app/evidence/customViews/circleProgress/FitChartValue.java
@@ -178,6 +206,8 @@ te/app/evidence/base/ConnectivityReceiver.java
  te.app.evidence.base.ConnectivityReceiver$ConnectivityReceiverListener
 te/app/evidence/repository/ServiceRepository.java
  te.app.evidence.repository.ServiceRepository
+te/app/evidence/pages/clients/viewModels/ClientsItemViewModel.java
+ te.app.evidence.pages.clients.viewModels.ClientsItemViewModel
 te/app/evidence/pages/profile/ProfileFragment.java
  te.app.evidence.pages.profile.ProfileFragment
 te/app/evidence/customViews/circleProgress/RendererFactory.java
@@ -188,23 +218,28 @@ te/app/evidence/utils/session/UserHelper.java
  te.app.evidence.utils.session.UserHelper
 te/app/evidence/pages/auth/changePassword/ChangePasswordFragment.java
  te.app.evidence.pages.auth.changePassword.ChangePasswordFragment
+te/app/evidence/databinding/ItemClientsBinding.java
+ te.app.evidence.databinding.ItemClientsBinding
 te/app/evidence/pages/auth/models/cities/CitiesResponse.java
  te.app.evidence.pages.auth.models.cities.CitiesResponse
 te/app/evidence/pages/auth/models/LoginRequest.java
  te.app.evidence.pages.auth.models.LoginRequest
 te/app/evidence/customViews/views/CustomBottomNavigationView.java
  te.app.evidence.customViews.views.CustomBottomNavigationView
-te/app/evidence/activity/MainActivity.java
- te.app.evidence.activity.MainActivity
+te/app/evidence/pages/auth/login/LoginFragment.java
+ te.app.evidence.pages.auth.login.LoginFragment
 te/app/evidence/pages/settings/viewModels/DocumentsViewModel.java
  te.app.evidence.pages.settings.viewModels.DocumentsViewModel
-te/app/evidence/base/IApplicationComponent.java
- te.app.evidence.base.IApplicationComponent
- te.app.evidence.base.IApplicationComponent$Builder
+te/app/evidence/pages/users/UserPermissionsFragment.java
+ te.app.evidence.pages.users.UserPermissionsFragment
+te/app/evidence/repository/AuthRepository.java
+ te.app.evidence.repository.AuthRepository
 te/app/evidence/pages/splash/models/BannersItem.java
  te.app.evidence.pages.splash.models.BannersItem
-te/app/evidence/base/MyApplication.java
- te.app.evidence.base.MyApplication
+te/app/evidence/databinding/ItemSessionBinding.java
+ te.app.evidence.databinding.ItemSessionBinding
+te/app/evidence/utils/validation/Validate.java
+ te.app.evidence.utils.validation.Validate
 te/app/evidence/connection/ConnectionListenerInterFace.java
  te.app.evidence.connection.ConnectionListenerInterFace
 te/app/evidence/customViews/menu/MenuViewModel.java
@@ -215,8 +250,12 @@ te/app/evidence/pages/auth/models/UserData.java
  te.app.evidence.pages.auth.models.UserData
 te/app/evidence/pages/onBoard/IntroItem.java
  te.app.evidence.pages.onBoard.IntroItem
+te/app/evidence/pages/reporters/ReportersDetailsFragment.java
+ te.app.evidence.pages.reporters.ReportersDetailsFragment
 te/app/evidence/utils/session/SharedPreferenceHelper.java
  te.app.evidence.utils.session.SharedPreferenceHelper
+te/app/evidence/pages/clients/viewModels/ClientsViewModel.java
+ te.app.evidence.pages.clients.viewModels.ClientsViewModel
 te/app/evidence/databinding/LayoutNavigationDrawerBinding.java
  te.app.evidence.databinding.LayoutNavigationDrawerBinding
 te/app/evidence/pages/auth/confirmCode/ConfirmCodeFragment.java
@@ -224,8 +263,14 @@ te/app/evidence/pages/auth/confirmCode/ConfirmCodeFragment.java
  te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment$1
 te/app/evidence/utils/PopUp/PopUp.java
  te.app.evidence.utils.PopUp.PopUp
+te/app/evidence/pages/users/UsersFragment.java
+ te.app.evidence.pages.users.UsersFragment
 te/app/evidence/pages/settings/models/UserDocumentsResponse.java
  te.app.evidence.pages.settings.models.UserDocumentsResponse
+te/app/evidence/databinding/ItemUserBinding.java
+ te.app.evidence.databinding.ItemUserBinding
+te/app/evidence/databinding/FragmentReporterDetailsBinding.java
+ te.app.evidence.databinding.FragmentReporterDetailsBinding
 te/app/evidence/model/base/StatusMessage.java
  te.app.evidence.model.base.StatusMessage
 te/app/evidence/utils/helper/AppHelper.java
@@ -239,15 +284,16 @@ te/app/evidence/customViews/circleProgress/BaseRenderer.java
  te.app.evidence.customViews.circleProgress.BaseRenderer
 te/app/evidence/utils/images/ImageConstants.java
  te.app.evidence.utils.images.ImageConstants
-te/app/evidence/utils/validation/Validate.java
- te.app.evidence.utils.validation.Validate
-te/app/evidence/pages/onBoard/models/BoardResponse.java
- te.app.evidence.pages.onBoard.models.BoardResponse
-te/app/evidence/BuildConfig.java
- te.app.evidence.BuildConfig
-te/app/evidence/pages/auth/login/LoginFragment.java
- te.app.evidence.pages.auth.login.LoginFragment
-te/app/evidence/repository/AuthRepository.java
- te.app.evidence.repository.AuthRepository
-te/app/evidence/model/base/Mutable.java
- te.app.evidence.model.base.Mutable
+te/app/evidence/base/ApplicationComponent.java
+ te.app.evidence.base.ApplicationComponent
+te/app/evidence/base/IApplicationComponent.java
+ te.app.evidence.base.IApplicationComponent
+ te.app.evidence.base.IApplicationComponent$Builder
+te/app/evidence/activity/MainActivity.java
+ te.app.evidence.activity.MainActivity
+te/app/evidence/customViews/actionbar/HomeActionBarView.java
+ te.app.evidence.customViews.actionbar.HomeActionBarView
+te/app/evidence/customViews/menu/NavigationDrawerView.java
+ te.app.evidence.customViews.menu.NavigationDrawerView
+te/app/evidence/base/MyApplication.java
+ te.app.evidence.base.MyApplication

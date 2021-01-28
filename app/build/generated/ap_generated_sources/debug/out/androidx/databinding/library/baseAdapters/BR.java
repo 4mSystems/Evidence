@@ -7,25 +7,27 @@ public class BR {
 
   public static final int baseViewModel = 2;
 
-  public static final int loginStatus = 3;
+  public static final int itemViewModel = 3;
 
-  public static final int menuModel = 4;
+  public static final int loginStatus = 4;
 
-  public static final int menuViewModel = 5;
+  public static final int menuModel = 5;
 
-  public static final int onBoardAdapter = 6;
+  public static final int menuViewModel = 6;
 
-  public static final int onBoardViewModels = 7;
+  public static final int onBoardAdapter = 7;
 
-  public static final int passingObject = 8;
+  public static final int onBoardViewModels = 8;
 
-  public static final int selectedBtn = 9;
+  public static final int passingObject = 9;
 
-  public static final int settingsData = 10;
+  public static final int selectedBtn = 10;
 
-  public static final int type = 11;
+  public static final int settingsData = 11;
 
-  public static final int userDocuments = 12;
+  public static final int type = 12;
 
-  public static final int viewmodel = 13;
+  public static final int userDocuments = 13;
+
+  public static final int viewmodel = 14;
 }

@@ -33,6 +33,9 @@ import te.app.evidence.pages.auth.login.LoginFragment_MembersInjector;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
+import te.app.evidence.pages.clients.ClientsFragment;
+import te.app.evidence.pages.clients.ClientsFragment_MembersInjector;
+import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.HomeFragment_MembersInjector;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
@@ -43,11 +46,23 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
+import te.app.evidence.pages.reporters.ReportersDetailsFragment;
+import te.app.evidence.pages.reporters.ReportersDetailsFragment_MembersInjector;
+import te.app.evidence.pages.reporters.viewModels.ReportersDetailsViewModel;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.splash.SplashFragment_MembersInjector;
 import te.app.evidence.pages.splash.SplashViewModel;
 import te.app.evidence.pages.splash.SplashViewModel_Factory;
 import te.app.evidence.pages.splash.SplashViewModel_MembersInjector;
+import te.app.evidence.pages.users.AddUserFragment;
+import te.app.evidence.pages.users.AddUserFragment_MembersInjector;
+import te.app.evidence.pages.users.UserPermissionsFragment;
+import te.app.evidence.pages.users.UserPermissionsFragment_MembersInjector;
+import te.app.evidence.pages.users.UsersFragment;
+import te.app.evidence.pages.users.UsersFragment_MembersInjector;
+import te.app.evidence.pages.users.viewModels.AddUserViewModel;
+import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel;
+import te.app.evidence.pages.users.viewModels.UsersViewModel;
 import te.app.evidence.repository.AuthRepository;
 import te.app.evidence.repository.AuthRepository_Factory;
 
@@ -145,6 +160,26 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public void inject(HomeFragment homeFragment) {
     injectHomeFragment(homeFragment);}
 
+  @Override
+  public void inject(ReportersDetailsFragment reportersDetailsFragment) {
+    injectReportersDetailsFragment(reportersDetailsFragment);}
+
+  @Override
+  public void inject(UsersFragment usersFragment) {
+    injectUsersFragment(usersFragment);}
+
+  @Override
+  public void inject(AddUserFragment addUserFragment) {
+    injectAddUserFragment(addUserFragment);}
+
+  @Override
+  public void inject(UserPermissionsFragment userPermissionsFragment) {
+    injectUserPermissionsFragment(userPermissionsFragment);}
+
+  @Override
+  public void inject(ClientsFragment clientsFragment) {
+    injectClientsFragment(clientsFragment);}
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
     return instance;
@@ -217,6 +252,32 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private HomeFragment injectHomeFragment(HomeFragment instance) {
     HomeFragment_MembersInjector.injectViewModel(instance, new HomeViewModel());
+    return instance;
+  }
+
+  private ReportersDetailsFragment injectReportersDetailsFragment(
+      ReportersDetailsFragment instance) {
+    ReportersDetailsFragment_MembersInjector.injectViewModel(instance, new ReportersDetailsViewModel());
+    return instance;
+  }
+
+  private UsersFragment injectUsersFragment(UsersFragment instance) {
+    UsersFragment_MembersInjector.injectViewModel(instance, new UsersViewModel());
+    return instance;
+  }
+
+  private AddUserFragment injectAddUserFragment(AddUserFragment instance) {
+    AddUserFragment_MembersInjector.injectViewModel(instance, new AddUserViewModel());
+    return instance;
+  }
+
+  private UserPermissionsFragment injectUserPermissionsFragment(UserPermissionsFragment instance) {
+    UserPermissionsFragment_MembersInjector.injectViewModel(instance, new UserPermissionsViewModel());
+    return instance;
+  }
+
+  private ClientsFragment injectClientsFragment(ClientsFragment instance) {
+    ClientsFragment_MembersInjector.injectViewModel(instance, new ClientsViewModel());
     return instance;
   }
 

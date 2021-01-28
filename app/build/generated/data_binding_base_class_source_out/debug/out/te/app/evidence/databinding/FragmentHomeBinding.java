@@ -54,7 +54,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final CustomTextViewMedium homeUsers;
 
   @NonNull
-  public final CustomEditText inputEmail;
+  public final CustomEditText inputSearch;
 
   @NonNull
   public final AppCompatButton nextMohdareen;
@@ -72,7 +72,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       Barrier br1, Barrier br2, Barrier br3, CustomTextViewMedium homeCases,
       MaterialCardView homeItem1, MaterialCardView homeItem2, MaterialCardView homeItem3,
       MaterialCardView homeItem4, CustomTextViewMedium homeMohdrs, CustomTextViewMedium homeSession,
-      CustomTextViewMedium homeUsers, CustomEditText inputEmail, AppCompatButton nextMohdareen,
+      CustomTextViewMedium homeUsers, CustomEditText inputSearch, AppCompatButton nextMohdareen,
       AppCompatButton nextSessions, AppCompatButton previousSessions) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br1 = br1;
@@ -86,7 +86,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.homeMohdrs = homeMohdrs;
     this.homeSession = homeSession;
     this.homeUsers = homeUsers;
-    this.inputEmail = inputEmail;
+    this.inputSearch = inputSearch;
     this.nextMohdareen = nextMohdareen;
     this.nextSessions = nextSessions;
     this.previousSessions = previousSessions;

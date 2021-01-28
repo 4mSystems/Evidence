@@ -17,14 +17,23 @@ import java.util.HashMap;
 import java.util.List;
 import te.app.evidence.databinding.ActivityBaseBindingImpl;
 import te.app.evidence.databinding.ActivityMainBindingImpl;
+import te.app.evidence.databinding.FragmentAddUserBindingImpl;
 import te.app.evidence.databinding.FragmentChangePasswordBindingImpl;
+import te.app.evidence.databinding.FragmentClientsBindingImpl;
 import te.app.evidence.databinding.FragmentConfirmCodeBindingImpl;
 import te.app.evidence.databinding.FragmentForgetPasswordBindingImpl;
 import te.app.evidence.databinding.FragmentHomeBindingImpl;
 import te.app.evidence.databinding.FragmentLoginBindingImpl;
 import te.app.evidence.databinding.FragmentOnboardBindingImpl;
 import te.app.evidence.databinding.FragmentProfileBindingImpl;
+import te.app.evidence.databinding.FragmentReporterDetailsBindingImpl;
 import te.app.evidence.databinding.FragmentSplashBindingImpl;
+import te.app.evidence.databinding.FragmentUserPermissionBindingImpl;
+import te.app.evidence.databinding.FragmentUsersBindingImpl;
+import te.app.evidence.databinding.ItemClientsBindingImpl;
+import te.app.evidence.databinding.ItemMohdrBindingImpl;
+import te.app.evidence.databinding.ItemSessionBindingImpl;
+import te.app.evidence.databinding.ItemUserBindingImpl;
 import te.app.evidence.databinding.LayoutActionBarBackBindingImpl;
 import te.app.evidence.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.evidence.databinding.LayoutNavigationDrawerBindingImpl;
@@ -34,41 +43,68 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ACTIVITYMAIN = 2;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 3;
+  private static final int LAYOUT_FRAGMENTADDUSER = 3;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 4;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 4;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 5;
+  private static final int LAYOUT_FRAGMENTCLIENTS = 5;
 
-  private static final int LAYOUT_FRAGMENTHOME = 6;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 6;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 7;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 7;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 8;
+  private static final int LAYOUT_FRAGMENTHOME = 8;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 9;
+  private static final int LAYOUT_FRAGMENTLOGIN = 9;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 10;
+  private static final int LAYOUT_FRAGMENTONBOARD = 10;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 11;
+  private static final int LAYOUT_FRAGMENTPROFILE = 11;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 12;
+  private static final int LAYOUT_FRAGMENTREPORTERDETAILS = 12;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 13;
+  private static final int LAYOUT_FRAGMENTSPLASH = 13;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(13);
+  private static final int LAYOUT_FRAGMENTUSERPERMISSION = 14;
+
+  private static final int LAYOUT_FRAGMENTUSERS = 15;
+
+  private static final int LAYOUT_ITEMCLIENTS = 16;
+
+  private static final int LAYOUT_ITEMMOHDR = 17;
+
+  private static final int LAYOUT_ITEMSESSION = 18;
+
+  private static final int LAYOUT_ITEMUSER = 19;
+
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 20;
+
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 21;
+
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 22;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(22);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_main, LAYOUT_ACTIVITYMAIN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_add_user, LAYOUT_FRAGMENTADDUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_change_password, LAYOUT_FRAGMENTCHANGEPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_clients, LAYOUT_FRAGMENTCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_confirm_code, LAYOUT_FRAGMENTCONFIRMCODE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_forget_password, LAYOUT_FRAGMENTFORGETPASSWORD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_home, LAYOUT_FRAGMENTHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_onboard, LAYOUT_FRAGMENTONBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_reporter_details, LAYOUT_FRAGMENTREPORTERDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_user_permission, LAYOUT_FRAGMENTUSERPERMISSION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_users, LAYOUT_FRAGMENTUSERS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_mohdr, LAYOUT_ITEMMOHDR);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_session, LAYOUT_ITEMSESSION);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_user, LAYOUT_ITEMUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_navigation_drawer, LAYOUT_LAYOUTNAVIGATIONDRAWER);
@@ -95,11 +131,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for activity_main is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTADDUSER: {
+          if ("layout/fragment_add_user_0".equals(tag)) {
+            return new FragmentAddUserBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_add_user is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTCHANGEPASSWORD: {
           if ("layout/fragment_change_password_0".equals(tag)) {
             return new FragmentChangePasswordBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_change_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTCLIENTS: {
+          if ("layout/fragment_clients_0".equals(tag)) {
+            return new FragmentClientsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_clients is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTCONFIRMCODE: {
           if ("layout/fragment_confirm_code_0".equals(tag)) {
@@ -137,11 +185,53 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_profile is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTREPORTERDETAILS: {
+          if ("layout/fragment_reporter_details_0".equals(tag)) {
+            return new FragmentReporterDetailsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_reporter_details is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTSPLASH: {
           if ("layout/fragment_splash_0".equals(tag)) {
             return new FragmentSplashBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_splash is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTUSERPERMISSION: {
+          if ("layout/fragment_user_permission_0".equals(tag)) {
+            return new FragmentUserPermissionBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_user_permission is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTUSERS: {
+          if ("layout/fragment_users_0".equals(tag)) {
+            return new FragmentUsersBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_users is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMCLIENTS: {
+          if ("layout/item_clients_0".equals(tag)) {
+            return new ItemClientsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_clients is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMMOHDR: {
+          if ("layout/item_mohdr_0".equals(tag)) {
+            return new ItemMohdrBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_mohdr is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMSESSION: {
+          if ("layout/item_session_0".equals(tag)) {
+            return new ItemSessionBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_session is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMUSER: {
+          if ("layout/item_user_0".equals(tag)) {
+            return new ItemUserBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_user is invalid. Received: " + tag);
         }
         case  LAYOUT_LAYOUTACTIONBARBACK: {
           if ("layout/layout_action_bar_back_0".equals(tag)) {
@@ -206,40 +296,50 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(14);
+    static final SparseArray<String> sKeys = new SparseArray<String>(15);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "loginStatus");
-      sKeys.put(4, "menuModel");
-      sKeys.put(5, "menuViewModel");
-      sKeys.put(6, "onBoardAdapter");
-      sKeys.put(7, "onBoardViewModels");
-      sKeys.put(8, "passingObject");
-      sKeys.put(9, "selectedBtn");
-      sKeys.put(10, "settingsData");
-      sKeys.put(11, "type");
-      sKeys.put(12, "userDocuments");
-      sKeys.put(13, "viewmodel");
+      sKeys.put(3, "itemViewModel");
+      sKeys.put(4, "loginStatus");
+      sKeys.put(5, "menuModel");
+      sKeys.put(6, "menuViewModel");
+      sKeys.put(7, "onBoardAdapter");
+      sKeys.put(8, "onBoardViewModels");
+      sKeys.put(9, "passingObject");
+      sKeys.put(10, "selectedBtn");
+      sKeys.put(11, "settingsData");
+      sKeys.put(12, "type");
+      sKeys.put(13, "userDocuments");
+      sKeys.put(14, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(13);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(22);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
       sKeys.put("layout/activity_main_0", te.app.evidence.R.layout.activity_main);
+      sKeys.put("layout/fragment_add_user_0", te.app.evidence.R.layout.fragment_add_user);
       sKeys.put("layout/fragment_change_password_0", te.app.evidence.R.layout.fragment_change_password);
+      sKeys.put("layout/fragment_clients_0", te.app.evidence.R.layout.fragment_clients);
       sKeys.put("layout/fragment_confirm_code_0", te.app.evidence.R.layout.fragment_confirm_code);
       sKeys.put("layout/fragment_forget_password_0", te.app.evidence.R.layout.fragment_forget_password);
       sKeys.put("layout/fragment_home_0", te.app.evidence.R.layout.fragment_home);
       sKeys.put("layout/fragment_login_0", te.app.evidence.R.layout.fragment_login);
       sKeys.put("layout/fragment_onboard_0", te.app.evidence.R.layout.fragment_onboard);
       sKeys.put("layout/fragment_profile_0", te.app.evidence.R.layout.fragment_profile);
+      sKeys.put("layout/fragment_reporter_details_0", te.app.evidence.R.layout.fragment_reporter_details);
       sKeys.put("layout/fragment_splash_0", te.app.evidence.R.layout.fragment_splash);
+      sKeys.put("layout/fragment_user_permission_0", te.app.evidence.R.layout.fragment_user_permission);
+      sKeys.put("layout/fragment_users_0", te.app.evidence.R.layout.fragment_users);
+      sKeys.put("layout/item_clients_0", te.app.evidence.R.layout.item_clients);
+      sKeys.put("layout/item_mohdr_0", te.app.evidence.R.layout.item_mohdr);
+      sKeys.put("layout/item_session_0", te.app.evidence.R.layout.item_session);
+      sKeys.put("layout/item_user_0", te.app.evidence.R.layout.item_user);
       sKeys.put("layout/layout_action_bar_back_0", te.app.evidence.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", te.app.evidence.R.layout.layout_action_bar_home);
       sKeys.put("layout/layout_navigation_drawer_0", te.app.evidence.R.layout.layout_navigation_drawer);
