@@ -18,6 +18,8 @@ import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
+import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
+import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.reporters.ReportersDetailsFragment;
@@ -71,6 +73,10 @@ public interface IApplicationComponent {
     void inject(CategoriesFragment categoriesFragment);
 
     void inject(AddCategoryFragment addCategoryFragment);
+
+    void inject(BailiffsFragment bailiffsFragment);
+
+    void inject(AddBailiffsFragment addBailiffsFragment);
 
     @Component.Builder
     interface Builder {

@@ -395,7 +395,7 @@
     <string name="client_note">Note</string>
     <string name="client_profile">Profile</string>
     <string name="attachments">Attachments</string>
-    <string name="client_search_hint">try to find client...</string>
+    <string name="client_search_hint">try to find client…</string>
     <string name="client_name">Client name</string>
     <string name="add_new_client">Add client</string>
     <string name="client_data">Client Data</string>
@@ -407,5 +407,8 @@
     <string name="add_new_attach">Add new attachment</string>
     <string name="cat_name">Category name</string>
     <string name="add_new_category">Add new category</string>
+    <string name="mohdr_search_hint">Looking for bailiffs</string>
+    <string name="client">Client</string>
+    <string name="addressed_to">Addressed to</string>
 
 </resources>
