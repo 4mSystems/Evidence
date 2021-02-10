@@ -22,15 +22,15 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
         sViewsWithIds.put(R.id.unit_text, 6);
         sViewsWithIds.put(R.id.unit_value, 7);
         sViewsWithIds.put(R.id.v2, 8);
-        sViewsWithIds.put(R.id.client_address_text, 9);
-        sViewsWithIds.put(R.id.client_address_value, 10);
-        sViewsWithIds.put(R.id.v3, 11);
-        sViewsWithIds.put(R.id.client_note_text, 12);
-        sViewsWithIds.put(R.id.client_note_value, 13);
-        sViewsWithIds.put(R.id.v4, 14);
-        sViewsWithIds.put(R.id.client_type_text, 15);
-        sViewsWithIds.put(R.id.client_type_value, 16);
-        sViewsWithIds.put(R.id.v5, 17);
+        sViewsWithIds.put(R.id.client_type_text, 9);
+        sViewsWithIds.put(R.id.client_type_value, 10);
+        sViewsWithIds.put(R.id.v5, 11);
+        sViewsWithIds.put(R.id.client_address_text, 12);
+        sViewsWithIds.put(R.id.client_address_value, 13);
+        sViewsWithIds.put(R.id.v3, 14);
+        sViewsWithIds.put(R.id.client_note_text, 15);
+        sViewsWithIds.put(R.id.client_note_value, 16);
+        sViewsWithIds.put(R.id.v4, 17);
         sViewsWithIds.put(R.id.attachments, 18);
         sViewsWithIds.put(R.id.permission, 19);
         sViewsWithIds.put(R.id.delete, 20);
@@ -50,12 +50,12 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
     private ItemClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[20]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
             , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[5]
@@ -67,9 +67,9 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             , (android.view.View) bindings[4]
             , (android.view.View) bindings[8]
-            , (android.view.View) bindings[11]
             , (android.view.View) bindings[14]
             , (android.view.View) bindings[17]
+            , (android.view.View) bindings[11]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

@@ -32,11 +32,11 @@ public class ProfileViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
         request = new RegisterRequest();
-        request.setCity_id(String.valueOf(userData.getCityId()));
-        request.setEmail(userData.getEmail());
-        request.setName(userData.getName());
-        request.setPhone(userData.getPhone());
-        request.setType(String.valueOf(userData.getType()));
+//        request.setCity_id(String.valueOf(userData.getCityId()));
+//        request.setEmail(userData.getEmail());
+//        request.setName(userData.getName());
+//        request.setPhone(userData.getPhone());
+//        request.setType(String.valueOf(userData.getType()));
     }
 
     public void updateProfile() {

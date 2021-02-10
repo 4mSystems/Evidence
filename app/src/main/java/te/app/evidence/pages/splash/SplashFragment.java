@@ -41,7 +41,7 @@ public class SplashFragment extends BaseFragment {
         component.inject(this);
         fragmentSplashBinding.setViewmodel(viewModel);
         setEvent();
-        viewModel.getSettings();
+        viewModel.runSplash();
         return fragmentSplashBinding.getRoot();
     }
 
@@ -49,20 +49,16 @@ public class SplashFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (((Mutable) o).message.equals(Constants.SETTINGS)) {
-//                if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
-//                    if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-//                        MovementHelper.startActivityMain(context);
-//                    } else
-//                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
-//                } else {
-//                    MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
-//                }
-//                UserHelper.getInstance(context).userSettings(((SettingsResponse) mutable.object).getData());
-//            } else if (mutable.message.equals(Constants.GET_USER_DOCUMENTS)) {
-//                Log.e("setEvent", "setEvent: ");
-//            }
-            MovementHelper.startActivityMain(context);
+            if (((Mutable) o).message.equals(Constants.DEFAULT_LANGUAGE)) {
+                if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
+                    MovementHelper.startActivityMain(context);
+                } else {
+                    if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
+                        MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
+                    } else
+                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                }
+            }
         });
     }
 

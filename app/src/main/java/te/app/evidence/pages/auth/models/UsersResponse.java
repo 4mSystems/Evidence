@@ -7,9 +7,9 @@ import te.app.evidence.model.base.StatusMessage;
 public class UsersResponse extends StatusMessage {
 
 	@SerializedName("data")
-	private UserData data;
+	private UserMainData data;
 
-	public UserData getData(){
+	public UserMainData getData(){
 		return data;
 	}
 }

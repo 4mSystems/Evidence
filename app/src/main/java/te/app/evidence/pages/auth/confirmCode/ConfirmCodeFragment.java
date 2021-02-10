@@ -75,7 +75,7 @@ public class ConfirmCodeFragment extends BaseFragment {
                     UserHelper.getInstance(context).userLogin(((UsersResponse) mutable.object).getData());
                     MovementHelper.startActivityMain(context);
                 } else {
-                    UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getJwt());
+                    UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getUserData().getApiToken());
                     MovementHelper.startActivity(context, ChangePasswordFragment.class.getName(), null, null);
                 }
                 viewModel.goBack(context);

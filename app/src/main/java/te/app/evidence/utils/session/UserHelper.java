@@ -6,11 +6,12 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 
 import te.app.evidence.pages.auth.models.UserData;
+import te.app.evidence.pages.auth.models.UserMainData;
 import te.app.evidence.pages.settings.models.settings.SettingsData;
 
 public class UserHelper {
-    private static UserHelper mInstance;
-    private Context mCtx;
+     static UserHelper mInstance;
+     Context mCtx;
     private static final String SHARED_PREF_NAME = "myshared";
 
     private UserHelper(Context context) {
@@ -25,7 +26,7 @@ public class UserHelper {
         return mInstance;
     }
 
-    public void userLogin(UserData userData) {
+    public void userLogin(UserMainData userData) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
@@ -43,11 +44,10 @@ public class UserHelper {
 
     }
 
-    public UserData getUserData() {
+    public UserMainData getUserData() {
         Gson gson = new Gson();
         String json = addUserData();
-        UserData obj = gson.fromJson(json, UserData.class);
-        return obj;
+        return gson.fromJson(json, UserMainData.class);
     }
 
     public void userSettings(SettingsData settingsData) {

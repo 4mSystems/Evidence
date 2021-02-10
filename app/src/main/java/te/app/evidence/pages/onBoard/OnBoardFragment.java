@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
@@ -65,7 +66,7 @@ public class OnBoardFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.START_APP.equals(mutable.message)) {
                 MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
-                UserHelper.getInstance(context).addIsFirst(true);
+                UserHelper.getInstance(context).addIsFirst(false);
             }
         });
 

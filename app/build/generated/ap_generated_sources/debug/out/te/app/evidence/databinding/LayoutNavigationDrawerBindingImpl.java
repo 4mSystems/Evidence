@@ -29,7 +29,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback13;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,7 +53,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -127,7 +127,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback4);
+            this.mboundView1.setOnClickListener(mCallback13);
         }
     }
     // Listener Stub Implementations

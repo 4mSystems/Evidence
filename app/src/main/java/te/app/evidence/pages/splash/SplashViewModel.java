@@ -1,6 +1,8 @@
 package te.app.evidence.pages.splash;
 
 
+import android.os.Handler;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -25,8 +27,8 @@ import io.reactivex.disposables.CompositeDisposable;
 
 public class SplashViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private OnBoardAdapter onBoardAdapter = new OnBoardAdapter();
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    OnBoardAdapter onBoardAdapter = new OnBoardAdapter();
     @Inject
     AuthRepository repository;
 
@@ -35,6 +37,9 @@ public class SplashViewModel extends BaseViewModel {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
+    }
+    public void runSplash() {
+        new Handler().postDelayed(() -> liveData.setValue(new Mutable(Constants.DEFAULT_LANGUAGE)), 3000);
     }
 
     public AuthRepository getRepository() {
@@ -71,10 +76,6 @@ public class SplashViewModel extends BaseViewModel {
         onBoardList.add(new OnBoard(ResourceManager.getDrawable(R.drawable.board3), ResourceManager.getString(R.string.slider_title3), ResourceManager.getString(R.string.slider_desc3), 1));
         getOnBoardAdapter().updateData(onBoardList);
         sliderView.setSliderAdapter(onBoardAdapter);
-    }
-
-    public void toNext() {
-        liveData.setValue(new Mutable(Constants.NEXT));
     }
 
     public void toLogin() {

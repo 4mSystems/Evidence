@@ -3051,6 +3051,7 @@ drawable gallery_album_overlay
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable home_img
+drawable ic_add_category
 drawable ic_add_user
 drawable ic_airplane
 drawable ic_airplanemode_inactive_24dp
@@ -3059,6 +3060,7 @@ drawable ic_attachments
 drawable ic_auth_password
 drawable ic_auth_phone
 drawable ic_back
+drawable ic_calendar
 drawable ic_camera
 drawable ic_cases
 drawable ic_categories
@@ -3083,6 +3085,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_no_wifi_1
 drawable ic_no_wifi_2
+drawable ic_pdf
 drawable ic_permission_off
 drawable ic_permission_on
 drawable ic_play_icon
@@ -3090,6 +3093,7 @@ drawable ic_reports
 drawable ic_search
 drawable ic_select_all
 drawable ic_swap_vert_24dp
+drawable ic_upload_folder
 drawable ic_user_delete
 drawable ic_user_edit
 drawable ic_user_permission
@@ -3251,6 +3255,7 @@ id bounce
 id br1
 id br2
 id br3
+id br4
 id btn_airplane_off
 id btn_mobile_on
 id btn_wifi_on
@@ -3258,6 +3263,7 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
+id cat_name
 id center
 id center_horizontal
 id center_vertical
@@ -3275,8 +3281,14 @@ id circle_center
 id clear_text
 id client_address_text
 id client_address_value
+id client_cases
+id client_data
+id client_data_container
+id client_name_text
+id client_name_value
 id client_note_text
 id client_note_value
+id client_notes
 id client_type_text
 id client_type_value
 id clip_horizontal
@@ -3352,10 +3364,14 @@ id expansionLayoutClients
 id expansionLayoutSessions
 id fab_label
 id fade
+id file_desc_text
+id file_desc_value
 id file_iv
 id file_name_tv
 id file_size_tv
+id file_text
 id file_type_tv
+id file_value
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3523,6 +3539,8 @@ id onDateChanged
 id outline
 id outward
 id packed
+id paper_number_text
+id paper_number_value
 id paper_type_text
 id paper_type_value
 id parallax
@@ -3626,6 +3644,8 @@ id start_app
 id staticLayout
 id staticPostLayout
 id status_bar_latest_event_content
+id status_text
+id status_value
 id stop
 id stretch
 id submenuarrow
@@ -3721,10 +3741,13 @@ id v2
 id v3
 id v4
 id v5
+id v6
+id v7
 id vertical
 id video_icon
 id viewPager
 id view_offset_helper
+id view_value
 id visible
 id visible_removing_fragment_view_tag
 id vv_navigation_drawer_image
@@ -3819,8 +3842,16 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_no_internet
+layout fragment_add_attachment
+layout fragment_add_bailiffs
+layout fragment_add_category
+layout fragment_add_client
 layout fragment_add_user
+layout fragment_attachments
+layout fragment_bailiffs
+layout fragment_categories
 layout fragment_change_password
+layout fragment_client_profile
 layout fragment_clients
 layout fragment_confirm_code
 layout fragment_doc_picker
@@ -3836,10 +3867,14 @@ layout fragment_reporter_details
 layout fragment_splash
 layout fragment_user_permission
 layout fragment_users
+layout item_attachment
+layout item_bailiffs
+layout item_category
 layout item_clients
 layout item_doc_layout
 layout item_folder_layout
 layout item_mohdr
+layout item_note
 layout item_photo_layout
 layout item_session
 layout item_user
@@ -3993,9 +4028,13 @@ string add_info4
 string add_info5
 string add_info6
 string add_info_title
+string add_new_attach
+string add_new_category
+string add_new_client
 string add_new_user
 string add_success_added
 string address_hint
+string addressed_to
 string airplane_mode
 string all_files
 string all_images
@@ -4007,6 +4046,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string area
 string area_tatal_ad
+string attach_search_hint
 string attachment_images
 string attachment_video
 string attachments
@@ -4043,6 +4083,7 @@ string car_type
 string car_type_hint
 string case_number
 string cash
+string cat_name
 string change_confirm_password
 string change_confirm_password_no_star
 string change_header
@@ -4064,8 +4105,12 @@ string choose_membrship_input
 string cities_home_title
 string civil_car_add
 string clear_text_end_icon_content_description
+string client
 string client_address
+string client_data
+string client_name
 string client_note
+string client_notes
 string client_profile
 string client_reviews
 string client_search_hint
@@ -4148,6 +4193,7 @@ string edit_location
 string elevator
 string email
 string email_hint
+string emp_name
 string empty_warning
 string error_icon_content_description
 string excel_title
@@ -4165,6 +4211,7 @@ string favorite_contact_title
 string favorite_title
 string fcm_fallback_notification_channel_label
 string fieldRequired
+string file
 string filter
 string filter_btn
 string flat
@@ -4269,6 +4316,7 @@ string message_hint
 string meter
 string min_images_required
 string mobile_data
+string mohdr_search_hint
 string month
 string monthly_reports
 string mosque
@@ -4322,6 +4370,7 @@ string no
 string no_camera_exists
 string no_files_found
 string normal_orders
+string note_search_hint
 string notes
 string office
 string office_size

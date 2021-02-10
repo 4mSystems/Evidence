@@ -48,7 +48,7 @@ public class LanguagesHelper {
         if (UserHelper.getInstance(MyApplication.getInstance()).getJwt() != null)
             return UserHelper.getInstance(MyApplication.getInstance()).getJwt();
         else if (UserHelper.getInstance(MyApplication.getInstance()).getUserData()!=null)
-            return UserHelper.getInstance(MyApplication.getInstance()).getUserData().getJwt();
+            return UserHelper.getInstance(MyApplication.getInstance()).getUserData().getUserData().getApiToken();
         return null;
     }
 }

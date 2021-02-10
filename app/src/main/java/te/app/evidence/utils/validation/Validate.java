@@ -27,7 +27,7 @@ public class Validate {
             if (type.equals(Constants.EMAIL) && !Validate.isMail(data)) {
                 error = ResourceManager.getString(R.string.invalidEmail);
                 return false;
-            } else if (type.equals(Constants.PASSWORD) && !isPhoneValid(data)) {
+            } else if (type.equals(Constants.PASSWORD) && !isPassword(data)) {
                 error = ResourceManager.getString(R.string.invalidPassword);
                 return false;
             } else if (type.equals(Constants.PHONE) && !isPhoneValid(data)) {

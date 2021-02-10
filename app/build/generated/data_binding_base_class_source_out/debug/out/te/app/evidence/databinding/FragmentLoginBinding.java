@@ -11,10 +11,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 
@@ -32,10 +32,10 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final CustomTextViewMedium forgetPassword;
 
   @NonNull
-  public final CustomEditText inputEmail;
+  public final TextInputLayout inputEmail;
 
   @NonNull
-  public final CustomEditText inputPassword;
+  public final TextInputLayout inputPassword;
 
   @NonNull
   public final AppCompatImageView loginBackground;
@@ -54,8 +54,8 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewMedium appLoginHint, CustomTextViewMedium appLoginTitle,
-      CustomTextViewMedium appName, CustomTextViewMedium forgetPassword, CustomEditText inputEmail,
-      CustomEditText inputPassword, AppCompatImageView loginBackground,
+      CustomTextViewMedium appName, CustomTextViewMedium forgetPassword, TextInputLayout inputEmail,
+      TextInputLayout inputPassword, AppCompatImageView loginBackground,
       CustomTextViewMedium loginHeader, AppCompatImageView logo, AppCompatButton startApp) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appLoginHint = appLoginHint;

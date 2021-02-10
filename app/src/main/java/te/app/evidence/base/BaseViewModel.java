@@ -16,6 +16,7 @@ import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.pages.auth.models.UserData;
+import te.app.evidence.pages.auth.models.UserMainData;
 import te.app.evidence.utils.images.PhotoFullPopupWindow;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.UserHelper;
@@ -27,7 +28,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     private PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
     private String countryCurrency;
-    public UserData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
+    public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();

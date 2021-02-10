@@ -21,8 +21,8 @@ public class LoginViewModel extends BaseViewModel {
     MutableLiveData<Mutable> liveData;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private LoginRequest loginRequest;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    LoginRequest loginRequest;
     private int loginStatus = View.VISIBLE;
 
     @Inject

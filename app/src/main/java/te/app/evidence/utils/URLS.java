@@ -1,12 +1,12 @@
 package te.app.evidence.utils;
 
 public class URLS {
-    public final static String BASE_URL = "https://aqari.my-staff.net/api/";
+    public final static String BASE_URL = "http://tes.golden-info.com/api/";
     public final static String CREATE_AD = "listings/create";
     public final static String CITIES = "settings/cities";
 
     public final static String SERVICES = "services";
-    public final static String LOGIN_PHONE = "user/login";
+    public final static String LOGIN = "login";
     public final static String SETTINGS = "settings/settings";
     public final static String REGISTER = "user/register";
     public final static String BOARD = "settings/sliders";

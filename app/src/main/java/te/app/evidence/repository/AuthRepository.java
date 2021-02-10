@@ -19,7 +19,6 @@ import te.app.evidence.pages.auth.models.ForgetPasswordRequest;
 import te.app.evidence.pages.auth.models.LoginRequest;
 import te.app.evidence.pages.auth.models.RegisterRequest;
 import te.app.evidence.pages.auth.models.UsersResponse;
-import te.app.evidence.pages.auth.models.cities.CitiesResponse;
 import te.app.evidence.pages.onBoard.models.BoardResponse;
 import te.app.evidence.pages.settings.models.UserDocumentsResponse;
 import te.app.evidence.pages.settings.models.settings.SettingsResponse;
@@ -45,11 +44,6 @@ public class AuthRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getCities() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CITIES, new Object(), CitiesResponse.class,
-                Constants.CITIES, true);
-    }
-
 
     public Disposable getBoard() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BOARD, new Object(), BoardResponse.class,
@@ -62,7 +56,7 @@ public class AuthRepository extends BaseRepository {
     }
 
     public Disposable login(LoginRequest request) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN_PHONE, request, UsersResponse.class,
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN, request, UsersResponse.class,
                 Constants.LOGIN, true);
     }
 

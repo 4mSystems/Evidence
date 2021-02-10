@@ -29,6 +29,7 @@ public class LoginRequest {
     }
 
     public void setEmail(String email) {
+        emailError.set(null);
         this.email = email;
     }
 
@@ -37,6 +38,7 @@ public class LoginRequest {
     }
 
     public void setPassword(String password) {
+        passwordError.set(null);
         this.password = password;
     }
 

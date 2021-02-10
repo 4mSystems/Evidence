@@ -13,6 +13,12 @@ import te.app.evidence.connection.ConnectionHelper_Factory;
 import te.app.evidence.connection.ConnectionModule;
 import te.app.evidence.connection.ConnectionModule_WebServiceFactory;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.attachments.AddAttachmentFragment;
+import te.app.evidence.pages.attachments.AddAttachmentFragment_MembersInjector;
+import te.app.evidence.pages.attachments.AttachmentsFragment;
+import te.app.evidence.pages.attachments.AttachmentsFragment_MembersInjector;
+import te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel;
+import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment_MembersInjector;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel;
@@ -33,12 +39,30 @@ import te.app.evidence.pages.auth.login.LoginFragment_MembersInjector;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
+import te.app.evidence.pages.categories.AddCategoryFragment;
+import te.app.evidence.pages.categories.AddCategoryFragment_MembersInjector;
+import te.app.evidence.pages.categories.CategoriesFragment;
+import te.app.evidence.pages.categories.CategoriesFragment_MembersInjector;
+import te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel;
+import te.app.evidence.pages.categories.viewModels.CategoriesViewModel;
+import te.app.evidence.pages.clients.AddClientFragment;
+import te.app.evidence.pages.clients.AddClientFragment_MembersInjector;
+import te.app.evidence.pages.clients.ClientProfileFragment;
+import te.app.evidence.pages.clients.ClientProfileFragment_MembersInjector;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.clients.ClientsFragment_MembersInjector;
+import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
+import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.HomeFragment_MembersInjector;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
+import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
+import te.app.evidence.pages.mohdrs.AddBailiffsFragment_MembersInjector;
+import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.mohdrs.BailiffsFragment_MembersInjector;
+import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileFragment;
@@ -180,6 +204,38 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   public void inject(ClientsFragment clientsFragment) {
     injectClientsFragment(clientsFragment);}
 
+  @Override
+  public void inject(AddClientFragment addClientFragment) {
+    injectAddClientFragment(addClientFragment);}
+
+  @Override
+  public void inject(ClientProfileFragment clientProfileFragment) {
+    injectClientProfileFragment(clientProfileFragment);}
+
+  @Override
+  public void inject(AttachmentsFragment attachmentsFragment) {
+    injectAttachmentsFragment(attachmentsFragment);}
+
+  @Override
+  public void inject(AddAttachmentFragment addAttachmentFragment) {
+    injectAddAttachmentFragment(addAttachmentFragment);}
+
+  @Override
+  public void inject(CategoriesFragment categoriesFragment) {
+    injectCategoriesFragment(categoriesFragment);}
+
+  @Override
+  public void inject(AddCategoryFragment addCategoryFragment) {
+    injectAddCategoryFragment(addCategoryFragment);}
+
+  @Override
+  public void inject(BailiffsFragment bailiffsFragment) {
+    injectBailiffsFragment(bailiffsFragment);}
+
+  @Override
+  public void inject(AddBailiffsFragment addBailiffsFragment) {
+    injectAddBailiffsFragment(addBailiffsFragment);}
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
     return instance;
@@ -278,6 +334,46 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ClientsFragment injectClientsFragment(ClientsFragment instance) {
     ClientsFragment_MembersInjector.injectViewModel(instance, new ClientsViewModel());
+    return instance;
+  }
+
+  private AddClientFragment injectAddClientFragment(AddClientFragment instance) {
+    AddClientFragment_MembersInjector.injectViewModel(instance, new AddClientViewModel());
+    return instance;
+  }
+
+  private ClientProfileFragment injectClientProfileFragment(ClientProfileFragment instance) {
+    ClientProfileFragment_MembersInjector.injectViewModel(instance, new ClientProfileViewModel());
+    return instance;
+  }
+
+  private AttachmentsFragment injectAttachmentsFragment(AttachmentsFragment instance) {
+    AttachmentsFragment_MembersInjector.injectViewModel(instance, new AttachmentsViewModel());
+    return instance;
+  }
+
+  private AddAttachmentFragment injectAddAttachmentFragment(AddAttachmentFragment instance) {
+    AddAttachmentFragment_MembersInjector.injectViewModel(instance, new AddAttachmentViewModel());
+    return instance;
+  }
+
+  private CategoriesFragment injectCategoriesFragment(CategoriesFragment instance) {
+    CategoriesFragment_MembersInjector.injectViewModel(instance, new CategoriesViewModel());
+    return instance;
+  }
+
+  private AddCategoryFragment injectAddCategoryFragment(AddCategoryFragment instance) {
+    AddCategoryFragment_MembersInjector.injectViewModel(instance, new AddCategoriesViewModel());
+    return instance;
+  }
+
+  private BailiffsFragment injectBailiffsFragment(BailiffsFragment instance) {
+    BailiffsFragment_MembersInjector.injectViewModel(instance, new BailiffsViewModel());
+    return instance;
+  }
+
+  private AddBailiffsFragment injectAddBailiffsFragment(AddBailiffsFragment instance) {
+    AddBailiffsFragment_MembersInjector.injectViewModel(instance, new AddBailiffsViewModel());
     return instance;
   }
 

@@ -17,8 +17,8 @@ public class ChangePasswordViewModel extends BaseViewModel {
     MutableLiveData<Mutable> liveData;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private RegisterRequest request;
+     CompositeDisposable compositeDisposable = new CompositeDisposable();
+     RegisterRequest request;
 
     @Inject
     public ChangePasswordViewModel(AuthRepository repository) {
@@ -26,7 +26,7 @@ public class ChangePasswordViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
         request = new RegisterRequest();
-        userData = new UserData();
+//        userData = new UserData();
     }
 
     public void submit() {

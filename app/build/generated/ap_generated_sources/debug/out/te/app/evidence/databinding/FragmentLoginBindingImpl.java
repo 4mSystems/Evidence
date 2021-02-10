@@ -14,29 +14,34 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.login_background, 4);
-        sViewsWithIds.put(R.id.logo, 5);
-        sViewsWithIds.put(R.id.app_name, 6);
-        sViewsWithIds.put(R.id.app_login_title, 7);
-        sViewsWithIds.put(R.id.login_header, 8);
-        sViewsWithIds.put(R.id.app_login_hint, 9);
-        sViewsWithIds.put(R.id.forget_password, 10);
+        sViewsWithIds.put(R.id.login_background, 7);
+        sViewsWithIds.put(R.id.logo, 8);
+        sViewsWithIds.put(R.id.app_name, 9);
+        sViewsWithIds.put(R.id.app_login_title, 10);
+        sViewsWithIds.put(R.id.login_header, 11);
+        sViewsWithIds.put(R.id.app_login_hint, 12);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView2;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback2;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener inputEmailtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.loginRequest.email
             //         is viewmodel.loginRequest.setEmail((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = te.app.evidence.customViews.views.CustomEditText.setText(inputEmail);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -68,12 +73,12 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             }
         }
     };
-    private androidx.databinding.InverseBindingListener inputPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.loginRequest.password
             //         is viewmodel.loginRequest.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = te.app.evidence.customViews.views.CustomEditText.setText(inputPassword);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
             // localize variables for thread safety
             // viewmodel.loginRequest.password
             java.lang.String viewmodelLoginRequestPassword = null;
@@ -107,29 +112,35 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     };
 
     public FragmentLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 3
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[1]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[2]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[6]
             );
+        this.forgetPassword.setTag(null);
         this.inputEmail.setTag(null);
         this.inputPassword.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
+        this.mboundView2.setTag(null);
+        this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
+        this.mboundView4.setTag(null);
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -220,14 +231,14 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        androidx.databinding.ObservableField<java.lang.String> viewmodelLoginRequestPasswordError = null;
-        java.lang.String viewmodelLoginRequestPasswordErrorGet = null;
         java.lang.String viewmodelLoginRequestPassword = null;
         te.app.evidence.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
+        java.lang.String viewmodelLoginRequestEmail = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelLoginRequestPasswordError = null;
+        java.lang.String viewmodelLoginRequestPasswordErrorGet = null;
         java.lang.String viewmodelLoginRequestEmailErrorGet = null;
         te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
         androidx.databinding.ObservableField<java.lang.String> viewmodelLoginRequestEmailError = null;
-        java.lang.String viewmodelLoginRequestEmail = null;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
@@ -238,6 +249,15 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                     viewmodelLoginRequest = viewmodel.getLoginRequest();
                 }
 
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodelLoginRequest != null) {
+                        // read viewmodel.loginRequest.password
+                        viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
+                        // read viewmodel.loginRequest.email
+                        viewmodelLoginRequestEmail = viewmodelLoginRequest.getEmail();
+                    }
+            }
             if ((dirtyFlags & 0xbL) != 0) {
 
                     if (viewmodelLoginRequest != null) {
@@ -250,15 +270,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                     if (viewmodelLoginRequestPasswordError != null) {
                         // read viewmodel.loginRequest.passwordError.get()
                         viewmodelLoginRequestPasswordErrorGet = viewmodelLoginRequestPasswordError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodelLoginRequest != null) {
-                        // read viewmodel.loginRequest.password
-                        viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
-                        // read viewmodel.loginRequest.email
-                        viewmodelLoginRequestEmail = viewmodelLoginRequest.getEmail();
                     }
             }
             if ((dirtyFlags & 0xeL) != 0) {
@@ -277,46 +288,69 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            this.forgetPassword.setOnClickListener(mCallback2);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
+            this.startApp.setOnClickListener(mCallback3);
+        }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             this.inputEmail.setError(viewmodelLoginRequestEmailErrorGet);
-        }
-        if ((dirtyFlags & 0xaL) != 0) {
-            // api target 1
-
-            te.app.evidence.customViews.views.CustomEditText.getText(this.inputEmail, viewmodelLoginRequestEmail);
-            te.app.evidence.customViews.views.CustomEditText.getText(this.inputPassword, viewmodelLoginRequestPassword);
-        }
-        if ((dirtyFlags & 0x8L) != 0) {
-            // api target 1
-
-            te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputEmail, inputEmailtextAttrChanged);
-            te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputPassword, inputPasswordtextAttrChanged);
-            this.startApp.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.inputPassword.setError(viewmodelLoginRequestPasswordErrorGet);
         }
+        if ((dirtyFlags & 0xaL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelLoginRequestEmail);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelLoginRequestPassword);
+        }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.login();
+                    viewmodel.forgetPassword();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.login();
+                }
+                break;
+            }
         }
     }
     // dirty flag

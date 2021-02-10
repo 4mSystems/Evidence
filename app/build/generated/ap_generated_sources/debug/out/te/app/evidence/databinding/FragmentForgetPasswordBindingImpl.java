@@ -27,7 +27,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -90,7 +90,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -182,7 +182,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback7);
+            this.appCompatButtonNext.setOnClickListener(mCallback4);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {

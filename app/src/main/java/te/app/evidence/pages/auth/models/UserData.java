@@ -4,20 +4,38 @@ import com.google.gson.annotations.SerializedName;
 
 public class UserData {
 
-	@SerializedName("img")
-	private String img;
+	@SerializedName("image")
+	private String image;
 
-	@SerializedName("verified_status")
-	private int verifiedStatus;
+	@SerializedName("address")
+	private String address;
+
+	@SerializedName("api_token")
+	private String apiToken;
+
+	@SerializedName("created_at")
+	private String createdAt;
+
+	@SerializedName("email_verified_at")
+	private Object emailVerifiedAt;
+
+	@SerializedName("package_id")
+	private String packageId;
+
+	@SerializedName("type")
+	private String type;
+
+	@SerializedName("updated_at")
+	private String updatedAt;
 
 	@SerializedName("phone")
 	private String phone;
 
-	@SerializedName("jwt")
-	private String jwt;
+	@SerializedName("parent_id")
+	private Object parentId;
 
-	@SerializedName("payment_status")
-	private int paymentStatus;
+	@SerializedName("cat_id")
+	private String catId;
 
 	@SerializedName("name")
 	private String name;
@@ -25,33 +43,54 @@ public class UserData {
 	@SerializedName("id")
 	private int id;
 
-	@SerializedName("type")
-	private int type;
-
 	@SerializedName("email")
 	private String email;
 
-	@SerializedName("city_id")
-	private int cityId;
+	@SerializedName("status")
+	private String status;
 
-	public String getImg(){
-		return img;
+	public String getImage(){
+		return image;
 	}
 
-	public int getVerifiedStatus(){
-		return verifiedStatus;
+	public String getAddress(){
+		return address;
+	}
+
+	public String getApiToken(){
+		return apiToken;
+	}
+
+	public String getCreatedAt(){
+		return createdAt;
+	}
+
+	public Object getEmailVerifiedAt(){
+		return emailVerifiedAt;
+	}
+
+	public String getPackageId(){
+		return packageId;
+	}
+
+	public String getType(){
+		return type;
+	}
+
+	public String getUpdatedAt(){
+		return updatedAt;
 	}
 
 	public String getPhone(){
 		return phone;
 	}
 
-	public String getJwt(){
-		return jwt;
+	public Object getParentId(){
+		return parentId;
 	}
 
-	public int getPaymentStatus(){
-		return paymentStatus;
+	public String getCatId(){
+		return catId;
 	}
 
 	public String getName(){
@@ -62,15 +101,11 @@ public class UserData {
 		return id;
 	}
 
-	public int getType(){
-		return type;
-	}
-
 	public String getEmail(){
 		return email;
 	}
 
-	public int getCityId(){
-		return cityId;
+	public String getStatus(){
+		return status;
 	}
 }
