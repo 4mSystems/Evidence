@@ -8,12 +8,13 @@ import javax.inject.Singleton;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
 
 @Singleton
-public class ServiceRepository extends BaseRepository {
+public class ClientsRepository extends BaseRepository {
 
     @Inject
     ConnectionHelper connectionHelper;
@@ -21,18 +22,18 @@ public class ServiceRepository extends BaseRepository {
     MutableLiveData<Mutable> liveData;
 
     @Inject
-    public ServiceRepository(ConnectionHelper connectionHelper){
+    public ClientsRepository(ConnectionHelper connectionHelper) {
         this.connectionHelper = connectionHelper;
     }
 
-    public void setLiveData(MutableLiveData<Mutable> liveData){
+    public void setLiveData(MutableLiveData<Mutable> liveData) {
         this.liveData = liveData;
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getServices() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SERVICES,new Object(), StatusMessage.class,
-                Constants.SERVICES,false);
+    public Disposable getClients() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS, new Object(), ClientsResponse.class,
+                Constants.CLIENTS, true);
     }
 
 }

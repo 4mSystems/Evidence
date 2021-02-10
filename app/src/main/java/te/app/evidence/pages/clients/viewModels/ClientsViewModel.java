@@ -6,24 +6,38 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.clients.adapters.ClientsAdapter;
+import te.app.evidence.repository.ClientsRepository;
 
 public class ClientsViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    ClientsRepository clientsRepository;
+    ClientsAdapter clientsAdapter;
 
     @Inject
-    public ClientsViewModel() {
+    public ClientsViewModel(ClientsRepository clientsRepository) {
+        this.clientsRepository = clientsRepository;
         this.liveData = new MutableLiveData<>();
+        clientsRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+    public void clients() {
+        compositeDisposable.add(clientsRepository.getClients());
     }
 
+    @Bindable
+    public ClientsAdapter getClientsAdapter() {
+        return this.clientsAdapter == null ? this.clientsAdapter = new ClientsAdapter() : this.clientsAdapter;
+    }
+
+    public ClientsRepository getClientsRepository() {
+        return clientsRepository;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -31,32 +45,9 @@ public class ClientsViewModel extends BaseViewModel {
         }
     }
 
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();
         unSubscribeFromObservable();
-    }
-
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
     }
 }

@@ -9,7 +9,7 @@
             type="te.app.evidence.pages.clients.viewModels.ClientsItemViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -46,23 +46,24 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dp6h"
-                    android:text="@string/user_name"
+                    android:text="@{itemViewModel.clients.clientName}"
                     android:textAlignment="viewStart"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_qualifications" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.github.florent37.expansionpanel.ExpansionHeader>
-
-        <View
-            android:id="@+id/v1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/dp8h"
-            android:background="@color/line_color"
-            app:layout_constraintTop_toBottomOf="@id/layout_clients_header" />
 
         <com.github.florent37.expansionpanel.ExpansionLayout
             android:id="@+id/expansionLayoutClients"
@@ -97,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="A-161a-Ground-GB-1-Ph.1"
+                    android:text="@{itemViewModel.clients.clientUnit}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -131,8 +132,9 @@
                     android:id="@+id/client_type_value"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="Client"
+                    android:text="@{itemViewModel.clients.type}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -169,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="مكتب 131 الدور ال11 برج مامكو 1 شارع كورنيش النيل"
+                    android:text="@{itemViewModel.clients.clientAddress}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -205,7 +207,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="Egypt,Cairo,nasr city awl makrm jhjghadgsjdgfsjhfg"
+                    android:text="@{itemViewModel.clients.notes}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -286,9 +288,23 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/v4" />
 
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/br5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="edit,delete,attachments,permission" />
+
+                <View
+                    android:id="@+id/v8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/br5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.github.florent37.expansionpanel.ExpansionLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

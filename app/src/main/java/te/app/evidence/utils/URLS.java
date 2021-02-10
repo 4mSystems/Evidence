@@ -2,7 +2,7 @@ package te.app.evidence.utils;
 
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
-    public final static String CREATE_AD = "listings/create";
+    public final static String CLIENTS = "clients";
     public final static String CITIES = "settings/cities";
 
     public final static String SERVICES = "services";

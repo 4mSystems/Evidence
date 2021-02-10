@@ -9,31 +9,31 @@ import te.app.evidence.connection.ConnectionHelper;
     "unchecked",
     "rawtypes"
 })
-public final class ServiceRepository_Factory implements Factory<ServiceRepository> {
+public final class ClientsRepository_Factory implements Factory<ClientsRepository> {
   private final Provider<ConnectionHelper> connectionHelperProvider;
 
   private final Provider<ConnectionHelper> connectionHelperProvider2;
 
-  public ServiceRepository_Factory(Provider<ConnectionHelper> connectionHelperProvider,
+  public ClientsRepository_Factory(Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
     this.connectionHelperProvider = connectionHelperProvider;
     this.connectionHelperProvider2 = connectionHelperProvider2;
   }
 
   @Override
-  public ServiceRepository get() {
-    ServiceRepository instance = newInstance(connectionHelperProvider.get());
-    ServiceRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider2.get());
+  public ClientsRepository get() {
+    ClientsRepository instance = newInstance(connectionHelperProvider.get());
+    ClientsRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider2.get());
     return instance;
   }
 
-  public static ServiceRepository_Factory create(
+  public static ClientsRepository_Factory create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new ServiceRepository_Factory(connectionHelperProvider, connectionHelperProvider2);
+    return new ClientsRepository_Factory(connectionHelperProvider, connectionHelperProvider2);
   }
 
-  public static ServiceRepository newInstance(ConnectionHelper connectionHelper) {
-    return new ServiceRepository(connectionHelper);
+  public static ClientsRepository newInstance(ConnectionHelper connectionHelper) {
+    return new ClientsRepository(connectionHelper);
   }
 }

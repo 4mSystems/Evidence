@@ -45,7 +45,7 @@ public class Constants {
     public final static String AD_UPLOAD_ATTACH = "AD_UPLOAD_ATTACH";
 
     public final static String LANGUAGE = "language";
-    public static final String DEFAULT_LANGUAGE = "ar";
+    public static final String DEFAULT_LANGUAGE = "en";
     public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";

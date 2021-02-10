@@ -10,24 +10,24 @@ import te.app.evidence.connection.ConnectionHelper;
     "unchecked",
     "rawtypes"
 })
-public final class ServiceRepository_MembersInjector implements MembersInjector<ServiceRepository> {
+public final class ClientsRepository_MembersInjector implements MembersInjector<ClientsRepository> {
   private final Provider<ConnectionHelper> connectionHelperProvider;
 
-  public ServiceRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider) {
+  public ClientsRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider) {
     this.connectionHelperProvider = connectionHelperProvider;
   }
 
-  public static MembersInjector<ServiceRepository> create(
+  public static MembersInjector<ClientsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider) {
-    return new ServiceRepository_MembersInjector(connectionHelperProvider);}
+    return new ClientsRepository_MembersInjector(connectionHelperProvider);}
 
   @Override
-  public void injectMembers(ServiceRepository instance) {
+  public void injectMembers(ClientsRepository instance) {
     injectConnectionHelper(instance, connectionHelperProvider.get());
   }
 
-  @InjectedFieldSignature("te.app.evidence.repository.ServiceRepository.connectionHelper")
-  public static void injectConnectionHelper(ServiceRepository instance,
+  @InjectedFieldSignature("te.app.evidence.repository.ClientsRepository.connectionHelper")
+  public static void injectConnectionHelper(ClientsRepository instance,
       ConnectionHelper connectionHelper) {
     instance.connectionHelper = connectionHelper;
   }

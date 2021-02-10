@@ -54,6 +54,8 @@ import te.app.evidence.pages.clients.ClientsFragment_MembersInjector;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
+import te.app.evidence.pages.clients.viewModels.ClientsViewModel_Factory;
+import te.app.evidence.pages.clients.viewModels.ClientsViewModel_MembersInjector;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.HomeFragment_MembersInjector;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
@@ -89,6 +91,8 @@ import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel;
 import te.app.evidence.pages.users.viewModels.UsersViewModel;
 import te.app.evidence.repository.AuthRepository;
 import te.app.evidence.repository.AuthRepository_Factory;
+import te.app.evidence.repository.ClientsRepository;
+import te.app.evidence.repository.ClientsRepository_Factory;
 
 @SuppressWarnings({
     "unchecked",
@@ -102,6 +106,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
   private Provider<AuthRepository> authRepositoryProvider;
+
+  private Provider<ClientsRepository> clientsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -135,6 +141,9 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private ProfileViewModel getProfileViewModel() {
     return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));}
 
+  private ClientsViewModel getClientsViewModel() {
+    return injectClientsViewModel(ClientsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -142,6 +151,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -332,8 +342,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private ClientsViewModel injectClientsViewModel(ClientsViewModel instance) {
+    ClientsViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider.get());
+    return instance;
+  }
+
   private ClientsFragment injectClientsFragment(ClientsFragment instance) {
-    ClientsFragment_MembersInjector.injectViewModel(instance, new ClientsViewModel());
+    ClientsFragment_MembersInjector.injectViewModel(instance, getClientsViewModel());
     return instance;
   }
 

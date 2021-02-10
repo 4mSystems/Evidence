@@ -14,7 +14,8 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ll_base_action_bar_container, 1);
+        sViewsWithIds.put(R.id.ll_base_container, 1);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 2);
     }
     // views
     // variables
@@ -23,14 +24,15 @@ public class ActivityMainBindingImpl extends ActivityMainBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityMainBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
     }
     private ActivityMainBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (android.widget.LinearLayout) bindings[1]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[0]
+            , (android.widget.LinearLayout) bindings[2]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[1]
+            , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[0]
             );
-        this.llBaseContainer.setTag(null);
+        this.swipeContainer.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();

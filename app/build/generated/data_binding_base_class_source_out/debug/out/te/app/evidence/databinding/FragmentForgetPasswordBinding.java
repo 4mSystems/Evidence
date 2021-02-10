@@ -11,10 +11,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel;
@@ -30,7 +30,7 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   public final CustomTextViewMedium appName;
 
   @NonNull
-  public final CustomEditText inputPhone;
+  public final TextInputLayout inputEmail;
 
   @NonNull
   public final AppCompatImageView loginBackground;
@@ -52,14 +52,14 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
 
   protected FragmentForgetPasswordBinding(Object _bindingComponent, View _root,
       int _localFieldCount, AppCompatButton appCompatButtonNext, CustomTextViewMedium appLoginTitle,
-      CustomTextViewMedium appName, CustomEditText inputPhone, AppCompatImageView loginBackground,
+      CustomTextViewMedium appName, TextInputLayout inputEmail, AppCompatImageView loginBackground,
       AppCompatImageView logo, CustomTextViewMedium tvForgetRemember,
       CustomTextViewMedium tvForgetTitle, CustomTextViewRegular tvLoginHeaderNumber) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.appLoginTitle = appLoginTitle;
     this.appName = appName;
-    this.inputPhone = inputPhone;
+    this.inputEmail = inputEmail;
     this.loginBackground = loginBackground;
     this.logo = logo;
     this.tvForgetRemember = tvForgetRemember;

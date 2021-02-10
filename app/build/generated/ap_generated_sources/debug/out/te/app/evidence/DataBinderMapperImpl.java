@@ -416,24 +416,26 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(15);
+    static final SparseArray<String> sKeys = new SparseArray<String>(17);
 
     static {
       sKeys.put(0, "_all");
       sKeys.put(1, "aboutData");
       sKeys.put(2, "baseViewModel");
-      sKeys.put(3, "itemViewModel");
-      sKeys.put(4, "loginStatus");
-      sKeys.put(5, "menuModel");
-      sKeys.put(6, "menuViewModel");
-      sKeys.put(7, "onBoardAdapter");
-      sKeys.put(8, "onBoardViewModels");
-      sKeys.put(9, "passingObject");
-      sKeys.put(10, "selectedBtn");
-      sKeys.put(11, "settingsData");
-      sKeys.put(12, "type");
-      sKeys.put(13, "userDocuments");
-      sKeys.put(14, "viewmodel");
+      sKeys.put(3, "clients");
+      sKeys.put(4, "clientsAdapter");
+      sKeys.put(5, "itemViewModel");
+      sKeys.put(6, "loginStatus");
+      sKeys.put(7, "menuModel");
+      sKeys.put(8, "menuViewModel");
+      sKeys.put(9, "onBoardAdapter");
+      sKeys.put(10, "onBoardViewModels");
+      sKeys.put(11, "passingObject");
+      sKeys.put(12, "selectedBtn");
+      sKeys.put(13, "settingsData");
+      sKeys.put(14, "type");
+      sKeys.put(15, "userDocuments");
+      sKeys.put(16, "viewmodel");
     }
   }
 

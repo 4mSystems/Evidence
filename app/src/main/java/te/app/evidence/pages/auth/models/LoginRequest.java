@@ -55,7 +55,7 @@ public class LoginRequest {
         if (!Validate.isValid(email, Constants.EMAIL)) {
             emailError.set(Validate.error);
             valid = false;
-        } else if (!Validate.isValid(password, Constants.PASSWORD)) {
+        } else if (!Validate.isValid(password, Constants.FIELD)) {
             passwordError.set(Validate.error);
             valid = false;
         }

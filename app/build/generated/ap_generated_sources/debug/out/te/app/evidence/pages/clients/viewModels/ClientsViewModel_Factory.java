@@ -2,26 +2,38 @@
 package te.app.evidence.pages.clients.viewModels;
 
 import dagger.internal.Factory;
+import javax.inject.Provider;
+import te.app.evidence.repository.ClientsRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class ClientsViewModel_Factory implements Factory<ClientsViewModel> {
+  private final Provider<ClientsRepository> clientsRepositoryProvider;
+
+  private final Provider<ClientsRepository> clientsRepositoryProvider2;
+
+  public ClientsViewModel_Factory(Provider<ClientsRepository> clientsRepositoryProvider,
+      Provider<ClientsRepository> clientsRepositoryProvider2) {
+    this.clientsRepositoryProvider = clientsRepositoryProvider;
+    this.clientsRepositoryProvider2 = clientsRepositoryProvider2;
+  }
+
   @Override
   public ClientsViewModel get() {
-    return newInstance();
+    ClientsViewModel instance = newInstance(clientsRepositoryProvider.get());
+    ClientsViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider2.get());
+    return instance;
   }
 
-  public static ClientsViewModel_Factory create() {
-    return InstanceHolder.INSTANCE;
+  public static ClientsViewModel_Factory create(
+      Provider<ClientsRepository> clientsRepositoryProvider,
+      Provider<ClientsRepository> clientsRepositoryProvider2) {
+    return new ClientsViewModel_Factory(clientsRepositoryProvider, clientsRepositoryProvider2);
   }
 
-  public static ClientsViewModel newInstance() {
-    return new ClientsViewModel();
-  }
-
-  private static final class InstanceHolder {
-    private static final ClientsViewModel_Factory INSTANCE = new ClientsViewModel_Factory();
+  public static ClientsViewModel newInstance(ClientsRepository clientsRepository) {
+    return new ClientsViewModel(clientsRepository);
   }
 }

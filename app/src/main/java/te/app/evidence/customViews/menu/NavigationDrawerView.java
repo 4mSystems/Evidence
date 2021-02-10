@@ -67,7 +67,6 @@ public class NavigationDrawerView extends RelativeLayout {
             if (o.equals(Constants.CLIENTS)) {
                 homeActionBarView.setTitle(ResourceManager.getString(R.string.clients));
                 MovementHelper.replaceFragment(context, new ClientsFragment(), "");
-
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });

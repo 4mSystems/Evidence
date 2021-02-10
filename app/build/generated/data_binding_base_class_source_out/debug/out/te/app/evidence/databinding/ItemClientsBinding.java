@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -22,6 +23,9 @@ import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
 public abstract class ItemClientsBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewRegular attachments;
+
+  @NonNull
+  public final Barrier br5;
 
   @NonNull
   public final CustomTextViewRegular clientAddressText;
@@ -83,11 +87,14 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   @NonNull
   public final View v5;
 
+  @NonNull
+  public final View v8;
+
   @Bindable
   protected ClientsItemViewModel mItemViewModel;
 
   protected ItemClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular attachments, CustomTextViewRegular clientAddressText,
+      CustomTextViewRegular attachments, Barrier br5, CustomTextViewRegular clientAddressText,
       CustomTextViewRegular clientAddressValue, CustomTextViewRegular clientNoteText,
       CustomTextViewRegular clientNoteValue, CustomTextViewRegular clientTypeText,
       CustomTextViewRegular clientTypeValue, CustomTextViewRegular delete,
@@ -95,9 +102,10 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
       AppCompatImageView iconDownQu, ExpansionHeader layoutClientsHeader,
       CustomTextViewRegular permission, CustomTextViewMedium tvQualifications,
       CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v1, View v2, View v3,
-      View v4, View v5) {
+      View v4, View v5, View v8) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attachments = attachments;
+    this.br5 = br5;
     this.clientAddressText = clientAddressText;
     this.clientAddressValue = clientAddressValue;
     this.clientNoteText = clientNoteText;
@@ -118,6 +126,7 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
     this.v3 = v3;
     this.v4 = v4;
     this.v5 = v5;
+    this.v8 = v8;
   }
 
   public abstract void setItemViewModel(@Nullable ClientsItemViewModel itemViewModel);

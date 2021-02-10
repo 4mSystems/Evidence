@@ -25,6 +25,7 @@ public class MainActivity extends ParentActivity {
     ActivityMainBinding activityMainBinding;
     @Inject
     MutableLiveData<Mutable> liveData;
+    MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +42,23 @@ public class MainActivity extends ParentActivity {
         navigationDrawerView.setActionBar(homeActionBarView);
         homeActionBarView.setTitle(getString(R.string.menuHome));
         MovementHelper.replaceFragment(this, new HomeFragment(), "");
-
+        enableRefresh(false);
+        activityMainBinding.swipeContainer.setOnRefreshListener(() -> {
+            refreshingLiveData.setValue(true);
+        });
     }
 
+    public void enableRefresh(boolean status) {
+        activityMainBinding.swipeContainer.setEnabled(status);
+    }
+
+    public void stopRefresh(boolean status) {
+        activityMainBinding.swipeContainer.setRefreshing(status);
+    }
+
+    public MutableLiveData<Boolean> getRefreshingLiveData() {
+        return refreshingLiveData;
+    }
 
     @Override
     public void onBackPressed() {

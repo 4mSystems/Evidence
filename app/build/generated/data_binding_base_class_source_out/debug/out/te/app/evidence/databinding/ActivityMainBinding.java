@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -21,11 +22,16 @@ public abstract class ActivityMainBinding extends ViewDataBinding {
   @NonNull
   public final ConstraintLayout llBaseContainer;
 
+  @NonNull
+  public final SwipeRefreshLayout swipeContainer;
+
   protected ActivityMainBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LinearLayout llBaseActionBarContainer, ConstraintLayout llBaseContainer) {
+      LinearLayout llBaseActionBarContainer, ConstraintLayout llBaseContainer,
+      SwipeRefreshLayout swipeContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.llBaseContainer = llBaseContainer;
+    this.swipeContainer = swipeContainer;
   }
 
   @NonNull

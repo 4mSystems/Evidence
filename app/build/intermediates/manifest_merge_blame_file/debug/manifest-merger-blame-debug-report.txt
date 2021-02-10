@@ -268,13 +268,13 @@
 142-->[com.google.android.gms:play-services-base:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/60aa178cc15296d7562e71417c1e627f/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
 143
 144        <provider
-144-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+144-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/37363e9a111246d634404121ececcc24/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 145            android:name="com.squareup.picasso.PicassoProvider"
-145-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+145-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/37363e9a111246d634404121ececcc24/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 146            android:authorities="te.app.evidence.com.squareup.picasso"
-146-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+146-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/37363e9a111246d634404121ececcc24/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 147            android:exported="false" />
-147-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce9fe28317c2c1352c2c508621735767/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+147-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/37363e9a111246d634404121ececcc24/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 148
 149        <activity
 149-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/327efe14f89d21d0fae4ff0407cd9212/jetified-filepicker-2.2.4/AndroidManifest.xml:18:9-20:62

@@ -3256,6 +3256,7 @@ id br1
 id br2
 id br3
 id br4
+id br5
 id btn_airplane_off
 id btn_mobile_on
 id btn_wifi_on
@@ -3432,7 +3433,6 @@ id input_confirm_password
 id input_email
 id input_new_password
 id input_password
-id input_phone
 id input_search
 id invisible
 id inward
@@ -3743,6 +3743,7 @@ id v4
 id v5
 id v6
 id v7
+id v8
 id vertical
 id video_icon
 id viewPager

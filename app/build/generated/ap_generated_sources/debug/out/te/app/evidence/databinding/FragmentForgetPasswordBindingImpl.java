@@ -14,29 +14,31 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.login_background, 3);
-        sViewsWithIds.put(R.id.logo, 4);
-        sViewsWithIds.put(R.id.app_name, 5);
-        sViewsWithIds.put(R.id.app_login_title, 6);
-        sViewsWithIds.put(R.id.tv_forget_title, 7);
-        sViewsWithIds.put(R.id.tv_login_header_number, 8);
-        sViewsWithIds.put(R.id.tv_forget_remember, 9);
+        sViewsWithIds.put(R.id.login_background, 4);
+        sViewsWithIds.put(R.id.logo, 5);
+        sViewsWithIds.put(R.id.app_name, 6);
+        sViewsWithIds.put(R.id.app_login_title, 7);
+        sViewsWithIds.put(R.id.tv_forget_title, 8);
+        sViewsWithIds.put(R.id.tv_login_header_number, 9);
+        sViewsWithIds.put(R.id.tv_forget_remember, 10);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener inputPhonetextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.phone
             //         is viewmodel.request.setPhone((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = te.app.evidence.customViews.views.CustomEditText.setText(inputPhone);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -70,24 +72,26 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     };
 
     public FragmentForgetPasswordBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private FragmentForgetPasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[1]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
             );
         this.appCompatButtonNext.setTag(null);
-        this.inputPhone.setTag(null);
+        this.inputEmail.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
+        this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
         mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
@@ -183,12 +187,13 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
             // api target 1
 
             this.appCompatButtonNext.setOnClickListener(mCallback4);
-            te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputPhone, inputPhonetextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            te.app.evidence.customViews.views.CustomEditText.getText(this.inputPhone, viewmodelRequestPhone);
+            this.inputEmail.setError(viewmodelRequestPhone);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelRequestPhone);
         }
     }
     // Listener Stub Implementations

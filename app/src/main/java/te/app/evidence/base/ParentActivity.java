@@ -61,6 +61,7 @@ public class ParentActivity extends AppCompatActivity implements
     protected boolean notification_checked = false;
 
     protected void initializeLanguage() {
+        LanguagesHelper.setLanguage("en");
         LanguagesHelper.changeLanguage(this, LanguagesHelper.getCurrentLanguage());
         LanguagesHelper.changeLanguage(MyApplication.getInstance(), LanguagesHelper.getCurrentLanguage());
     }
@@ -69,7 +70,6 @@ public class ParentActivity extends AppCompatActivity implements
         FirebaseMessaging.getInstance().getToken()
                 .addOnCompleteListener(task -> {
                     if (!task.isSuccessful()) {
-                        Log.e("FirebaseMessaging", "Fetching FCM registration token failed", task.getException());
                         return;
                     }
                     String token = task.getResult();
