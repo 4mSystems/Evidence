@@ -3,9 +3,9 @@ package te.app.evidence.utils;
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
     public final static String CLIENTS = "clients";
-    public final static String CITIES = "settings/cities";
+    public final static String ADD_CLIENTS = "add_client";
 
-    public final static String SERVICES = "services";
+    public final static String CATEGORIES = "categories";
     public final static String LOGIN = "login";
     public final static String SETTINGS = "settings/settings";
     public final static String REGISTER = "user/register";

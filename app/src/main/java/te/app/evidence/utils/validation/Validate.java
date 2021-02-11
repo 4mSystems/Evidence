@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.BatteryManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
 import android.webkit.URLUtil;
@@ -23,15 +24,13 @@ public class Validate {
     public static String error;
 
     public static boolean isValid(String data, String type) {
+        Log.e("isValid", "isValid: " + data + "type :" + type);
         if (isValid(data)) {
             if (type.equals(Constants.EMAIL) && !Validate.isMail(data)) {
                 error = ResourceManager.getString(R.string.invalidEmail);
                 return false;
             } else if (type.equals(Constants.PASSWORD) && !isPassword(data)) {
                 error = ResourceManager.getString(R.string.invalidPassword);
-                return false;
-            } else if (type.equals(Constants.PHONE) && !isPhoneValid(data)) {
-                error = ResourceManager.getString(R.string.invalidPhone);
                 return false;
             }
             return true;
@@ -59,8 +58,7 @@ public class Validate {
     }
 
     public static boolean isValid(String data) {
-        if (data != null && data.trim().equals("")) {
-            Log.e("valid", "dataFalse");
+        if (TextUtils.isEmpty(data)) {
             error = ResourceManager.getString(R.string.fieldRequired);
             return false;
         }

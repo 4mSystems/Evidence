@@ -2,59 +2,39 @@ package te.app.evidence.repository;
 
 import androidx.lifecycle.MutableLiveData;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import io.reactivex.disposables.Disposable;
+import te.app.evidence.connection.ConnectionHelper;
+import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.categories.models.CategoriesResponse;
+import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.URLS;
 
 
 public class BaseRepository {
-    private int status = 0;
-    private String message = "";
-    private MutableLiveData<Object> mMutableLiveData;
-    private static final String TAG = "BaseRepository";
+    @Inject
+    ConnectionHelper connectionHelper;
 
-//    public BaseRepository(MutableLiveData<Object> mMutableLiveData) {
-//        this.mMutableLiveData = mMutableLiveData;
-//    }
+    MutableLiveData<Mutable> liveData;
 
-    public boolean catchErrorResponse(Object response) {
-//        Log.d(TAG, "catchErrorResponse: response");
-//        if(response instanceof NoConnectivityException) {
-//            Log.d(TAG, "NoConnectivityException: ");
-//            mMutableLiveData.setValue(Constants.HIDE_PROGRESS);
-//            NoConnectivityException throwable = (NoConnectivityException) response;
-//            message = throwable.getMessage();
-//            Timber.e("NoConnectivityException2:"+message);
-//            mMutableLiveData.setValue(Constants.FAILURE_CONNECTION);
-//            return true;
-//        }else if(response instanceof Throwable){
-//            Log.d(TAG, "Throwable: ");
-//            mMutableLiveData.setValue(Constants.HIDE_PROGRESS);
-//            Throwable throwable = (Throwable) response;
-//            message = throwable.getMessage();
-//            mMutableLiveData.setValue(Constants.SERVER_ERROR);
-//            return true;
-//        }
-//        Log.d(TAG, "failed: ");
-        return false;
+    @Inject
+    public BaseRepository(ConnectionHelper connectionHelper) {
+        this.connectionHelper = connectionHelper;
     }
 
-    public String getMessage() {
-        return message;
+    public BaseRepository() {
     }
 
-    public int getStatus() {
-        return status;
+    public void setLiveData(MutableLiveData<Mutable> liveData) {
+        this.liveData = liveData;
+        connectionHelper.liveData = liveData;
     }
 
-
-    public void setMessage(int status, String message) {
-        this.status = status;
-        this.message = message;
-        if (status == Constants.RESPONSE_JWT_EXPIRE) {
-            if (mMutableLiveData != null) mMutableLiveData.setValue(Constants.LOGOUT);
-        }
-    }
-
-    public MutableLiveData<Object> getmMutableLiveData() {
-        return mMutableLiveData;
+    public Disposable getCategories() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CATEGORIES, new Object(), CategoriesResponse.class,
+                Constants.CATEGORIES, true);
     }
 }

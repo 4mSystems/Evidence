@@ -13,17 +13,23 @@ import te.app.evidence.connection.ConnectionHelper;
 public final class SettingsRepository_MembersInjector implements MembersInjector<SettingsRepository> {
   private final Provider<ConnectionHelper> connectionHelperProvider;
 
-  public SettingsRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider) {
+  private final Provider<ConnectionHelper> connectionHelperProvider2;
+
+  public SettingsRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider,
+      Provider<ConnectionHelper> connectionHelperProvider2) {
     this.connectionHelperProvider = connectionHelperProvider;
+    this.connectionHelperProvider2 = connectionHelperProvider2;
   }
 
   public static MembersInjector<SettingsRepository> create(
-      Provider<ConnectionHelper> connectionHelperProvider) {
-    return new SettingsRepository_MembersInjector(connectionHelperProvider);}
+      Provider<ConnectionHelper> connectionHelperProvider,
+      Provider<ConnectionHelper> connectionHelperProvider2) {
+    return new SettingsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
 
   @Override
   public void injectMembers(SettingsRepository instance) {
-    injectConnectionHelper(instance, connectionHelperProvider.get());
+    BaseRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider.get());
+    injectConnectionHelper(instance, connectionHelperProvider2.get());
   }
 
   @InjectedFieldSignature("te.app.evidence.repository.SettingsRepository.connectionHelper")

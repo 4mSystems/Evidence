@@ -39,9 +39,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback15;
+    private final android.view.View.OnClickListener mCallback19;
     @Nullable
-    private final android.view.View.OnClickListener mCallback14;
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -79,8 +79,8 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback19 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback18 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -209,8 +209,8 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback15);
-            this.clientNotes.setOnClickListener(mCallback14);
+            this.clientCases.setOnClickListener(mCallback19);
+            this.clientNotes.setOnClickListener(mCallback18);
         }
     }
     // Listener Stub Implementations

@@ -8,6 +8,8 @@ import javax.inject.Singleton;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.clients.models.AddClientRequest;
+import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
@@ -34,6 +36,11 @@ public class ClientsRepository extends BaseRepository {
     public Disposable getClients() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS, new Object(), ClientsResponse.class,
                 Constants.CLIENTS, true);
+    }
+
+    public Disposable addNewClient(AddClientRequest addClientRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENTS, addClientRequest, AddClientResponse.class,
+                Constants.ADD_CLIENTS, true);
     }
 
 }

@@ -413,5 +413,7 @@
     <string name="mohdr_search_hint">Looking for bailiffs</string>
     <string name="client">Client</string>
     <string name="addressed_to">Addressed to</string>
+    <string name="khesm">khesm</string>
+    <string name="client_add">client</string>
 
 </resources>

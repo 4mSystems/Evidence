@@ -52,6 +52,8 @@ import te.app.evidence.pages.clients.ClientProfileFragment_MembersInjector;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.clients.ClientsFragment_MembersInjector;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
+import te.app.evidence.pages.clients.viewModels.AddClientViewModel_Factory;
+import te.app.evidence.pages.clients.viewModels.AddClientViewModel_MembersInjector;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel_Factory;
@@ -144,14 +146,17 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private ClientsViewModel getClientsViewModel() {
     return injectClientsViewModel(ClientsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
 
+  private AddClientViewModel getAddClientViewModel() {
+    return injectAddClientViewModel(AddClientViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
     this.getMutableLiveDataProvider = DoubleCheck.provider(LiveData_GetMutableLiveDataFactory.create(liveDataParam));
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
-    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
-    this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider));
+    this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -352,8 +357,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private AddClientViewModel injectAddClientViewModel(AddClientViewModel instance) {
+    AddClientViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider.get());
+    return instance;
+  }
+
   private AddClientFragment injectAddClientFragment(AddClientFragment instance) {
-    AddClientFragment_MembersInjector.injectViewModel(instance, new AddClientViewModel());
+    AddClientFragment_MembersInjector.injectViewModel(instance, getAddClientViewModel());
     return instance;
   }
 

@@ -10,6 +10,7 @@ import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.clients.adapters.ClientsAdapter;
 import te.app.evidence.repository.ClientsRepository;
+import te.app.evidence.utils.Constants;
 
 public class ClientsViewModel extends BaseViewModel {
 
@@ -33,6 +34,10 @@ public class ClientsViewModel extends BaseViewModel {
     @Bindable
     public ClientsAdapter getClientsAdapter() {
         return this.clientsAdapter == null ? this.clientsAdapter = new ClientsAdapter() : this.clientsAdapter;
+    }
+
+    public void toNewClient() {
+        liveData.setValue(new Mutable(Constants.ADD_CLIENTS));
     }
 
     public ClientsRepository getClientsRepository() {

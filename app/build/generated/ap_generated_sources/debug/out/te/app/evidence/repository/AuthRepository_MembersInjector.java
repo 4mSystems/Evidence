@@ -13,17 +13,23 @@ import te.app.evidence.connection.ConnectionHelper;
 public final class AuthRepository_MembersInjector implements MembersInjector<AuthRepository> {
   private final Provider<ConnectionHelper> connectionHelperProvider;
 
-  public AuthRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider) {
+  private final Provider<ConnectionHelper> connectionHelperProvider2;
+
+  public AuthRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider,
+      Provider<ConnectionHelper> connectionHelperProvider2) {
     this.connectionHelperProvider = connectionHelperProvider;
+    this.connectionHelperProvider2 = connectionHelperProvider2;
   }
 
   public static MembersInjector<AuthRepository> create(
-      Provider<ConnectionHelper> connectionHelperProvider) {
-    return new AuthRepository_MembersInjector(connectionHelperProvider);}
+      Provider<ConnectionHelper> connectionHelperProvider,
+      Provider<ConnectionHelper> connectionHelperProvider2) {
+    return new AuthRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
 
   @Override
   public void injectMembers(AuthRepository instance) {
-    injectConnectionHelper(instance, connectionHelperProvider.get());
+    BaseRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider.get());
+    injectConnectionHelper(instance, connectionHelperProvider2.get());
   }
 
   @InjectedFieldSignature("te.app.evidence.repository.AuthRepository.connectionHelper")

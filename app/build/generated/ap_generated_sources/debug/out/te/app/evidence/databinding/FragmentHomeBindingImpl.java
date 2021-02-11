@@ -32,11 +32,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback11;
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback12;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback10;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -69,9 +69,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.previousSessions.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback11 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -215,9 +215,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.nextMohdareen.setOnClickListener(mCallback9);
-            this.nextSessions.setOnClickListener(mCallback7);
-            this.previousSessions.setOnClickListener(mCallback8);
+            this.nextMohdareen.setOnClickListener(mCallback12);
+            this.nextSessions.setOnClickListener(mCallback10);
+            this.previousSessions.setOnClickListener(mCallback11);
         }
     }
     // Listener Stub Implementations

@@ -3,10 +3,10 @@ package te.app.evidence.utils;
 public class Constants {
 
     public static final String CLIENTS = "CLIENTS";
-    public static final String SHOW_CITIES = "SHOW_CITIES";
-    public static final String USER_TYPES = "USER_TYPES";
+    public static final String ADD_CLIENTS = "ADD_CLIENTS";
+    public static final String SHOW_CATEGORIES = "SHOW_CATEGORIES";
 
-    public final static String ADD_FORM = "ADD_FORM";
+    public final static String SHOW_CLIENT_TYPE = "SHOW_CLIENT_TYPE";
     public final static String START_APP = "START_APP";
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";

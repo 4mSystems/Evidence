@@ -14,23 +14,29 @@ public final class SettingsRepository_Factory implements Factory<SettingsReposit
 
   private final Provider<ConnectionHelper> connectionHelperProvider2;
 
+  private final Provider<ConnectionHelper> connectionHelperProvider3;
+
   public SettingsRepository_Factory(Provider<ConnectionHelper> connectionHelperProvider,
-      Provider<ConnectionHelper> connectionHelperProvider2) {
+      Provider<ConnectionHelper> connectionHelperProvider2,
+      Provider<ConnectionHelper> connectionHelperProvider3) {
     this.connectionHelperProvider = connectionHelperProvider;
     this.connectionHelperProvider2 = connectionHelperProvider2;
+    this.connectionHelperProvider3 = connectionHelperProvider3;
   }
 
   @Override
   public SettingsRepository get() {
     SettingsRepository instance = newInstance(connectionHelperProvider.get());
-    SettingsRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider2.get());
+    BaseRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider2.get());
+    SettingsRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider3.get());
     return instance;
   }
 
   public static SettingsRepository_Factory create(
       Provider<ConnectionHelper> connectionHelperProvider,
-      Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new SettingsRepository_Factory(connectionHelperProvider, connectionHelperProvider2);
+      Provider<ConnectionHelper> connectionHelperProvider2,
+      Provider<ConnectionHelper> connectionHelperProvider3) {
+    return new SettingsRepository_Factory(connectionHelperProvider, connectionHelperProvider2, connectionHelperProvider3);
   }
 
   public static SettingsRepository newInstance(ConnectionHelper connectionHelper) {
