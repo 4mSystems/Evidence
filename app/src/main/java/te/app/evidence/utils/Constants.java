@@ -10,21 +10,21 @@ public class Constants {
     public final static String START_APP = "START_APP";
     public final static String CONFIRM_CODE = "CONFIRM_CODE";
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
-    public final static String CITIES = "CITIES";
+    public final static String EDIT = "EDIT";
 
     public final static String UPDATE_PAYMENT = "UPDATE_PAYMENT";
     public final static String EMAIL = "email";
-    public final static String PHONE = "phone";
+    public final static String DELETE = "DELETE";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
 
     public final static String UPDATE_PROFILE = "update_profile";
 
 
     public final static String IMAGE = "img";
-    public final static String IMAGES = "imgs";
-    public final static String VIDEO = "video";
-    public final static String PICK_VIDEO = "PICK_VIDEO";
-    public final static String HOME = "HOME";
+    public final static String DELETE_CLIENT = "DELETE_CLIENT";
+    public final static String CLIENT_PROFILE = "CLIENT_PROFILE";
+    public final static String ADD_NOTE = "ADD_NOTE";
+    public final static String DELETE_NOTE = "DELETE_NOTE";
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String LOGOUT = "logout";

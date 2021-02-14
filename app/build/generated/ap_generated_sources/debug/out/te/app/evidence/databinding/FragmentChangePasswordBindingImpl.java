@@ -30,9 +30,9 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback9;
+    private final android.view.View.OnClickListener mCallback12;
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback11;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -137,8 +137,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback11 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -233,10 +233,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback9);
+            this.appCompatButtonNext.setOnClickListener(mCallback12);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback8);
+            this.mboundView1.setOnClickListener(mCallback11);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1

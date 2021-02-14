@@ -3099,6 +3099,7 @@ drawable ic_user_edit
 drawable ic_user_permission
 drawable ic_users
 drawable ic_view_more
+drawable ic_warning
 drawable ic_wifi_24dp
 drawable icon_file_doc
 drawable icon_file_pdf
@@ -3329,6 +3330,7 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id dialog_button
+id dialog_header
 id dimensions
 id direct
 id disableHome
@@ -3537,6 +3539,8 @@ id off
 id on
 id onAttachStateChangeListener
 id onDateChanged
+id option_cancel
+id option_done
 id outline
 id outward
 id packed
@@ -3567,6 +3571,8 @@ id progress_horizontal
 id radio
 id ratio
 id rc_clients
+id rc_filter
+id rc_notes
 id rectangle
 id rectangles
 id recyclerview
@@ -3716,10 +3722,12 @@ id tv_change_new_password
 id tv_change_title
 id tv_confirm_title
 id tv_confirm_title_2
+id tv_emp_name
 id tv_forget_remember
 id tv_forget_timer
 id tv_forget_title
 id tv_home_bar_text
+id tv_invetationNum
 id tv_login_forget
 id tv_login_header_number
 id tv_login_title
@@ -3849,6 +3857,7 @@ layout fragment_add_attachment
 layout fragment_add_bailiffs
 layout fragment_add_category
 layout fragment_add_client
+layout fragment_add_note
 layout fragment_add_user
 layout fragment_attachments
 layout fragment_bailiffs
@@ -3872,6 +3881,7 @@ layout fragment_user_permission
 layout fragment_users
 layout item_attachment
 layout item_bailiffs
+layout item_case
 layout item_category
 layout item_clients
 layout item_doc_layout
@@ -3943,6 +3953,7 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout onboard_slider_item
+layout option_dialog
 layout popup_photo_full
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
@@ -4034,6 +4045,7 @@ string add_info_title
 string add_new_attach
 string add_new_category
 string add_new_client
+string add_new_note
 string add_new_user
 string add_success_added
 string address_hint
@@ -4105,6 +4117,7 @@ string choose_city
 string choose_country
 string choose_membrship
 string choose_membrship_input
+string circle_num
 string cities_home_title
 string civil_car_add
 string clear_text_end_icon_content_description
@@ -4191,9 +4204,11 @@ string done
 string donot_have_account
 string driver_location_url
 string edit
+string edit_client
 string edit_details
 string edit_images
 string edit_location
+string edit_note
 string elevator
 string email
 string email_hint
@@ -4264,6 +4279,7 @@ string insurance_image_hint
 string invalidEmail
 string invalidPassword
 string invalidPhone
+string inventation_type
 string item_view_role_description
 string khesm
 string kitchen_count
@@ -4381,6 +4397,7 @@ string office
 string office_size
 string ok
 string opponents
+string option_cancel
 string option_dialog_delete
 string option_dialog_title
 string optional_choose
@@ -4535,6 +4552,7 @@ string user_permission
 string user_type
 string videoBig
 string videos
+string view_case
 string view_more
 string villa
 string waiting_orders

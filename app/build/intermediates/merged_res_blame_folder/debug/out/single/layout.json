@@ -24,6 +24,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_profile.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_case.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_case.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_category.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_category.xml"
     },
@@ -72,6 +76,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_note.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/option_dialog.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/option_dialog.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_user.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_user.xml"
     },
@@ -102,6 +110,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_attachments.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_attachments.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_note.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_note.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",

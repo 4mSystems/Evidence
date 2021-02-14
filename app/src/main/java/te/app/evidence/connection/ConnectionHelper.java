@@ -149,12 +149,18 @@ public class ConnectionHelper {
                         String jsonString = gson.toJson(response);
                         StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                         Log.e(TAG, "onNext: " + statusMessage.mMessage);
-                        if (statusMessage.code == Constants.RESPONSE_SUCCESS)
-                            liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
-                            liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
-                        else
-                            liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        try {
+
+
+                            if (statusMessage.code == Constants.RESPONSE_SUCCESS)
+                                liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
+                            else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
+                                liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
+                            else
+                                liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
 
                     @Override
@@ -170,18 +176,6 @@ public class ConnectionHelper {
                     }
                 });
     }
-
-
-    /***
-     *
-     * @param method (method POST-> 200 , GET->201)
-     * @param url (url end point)
-     * @param requestData (json object for request your data)
-     * @param responseType (json object for delivery your response)
-     * @param constantSuccessResponse (constant value for delivery in view example (mutable.message == constantSuccessResponse) => success call)
-     * @param showProgress (boolean take true or false)
-     */
-
 
     public Disposable requestApi(int method, String url, Object requestData, Class<?> responseType, String constantSuccessResponse, boolean showProgress) {
         Flowable<JsonObject> call = null;
@@ -206,17 +200,22 @@ public class ConnectionHelper {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
                         StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
-                        if (statusMessage.code == Constants.RESPONSE_SUCCESS)
-                            liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
-                            liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
-                        else if (statusMessage.code == Constants.RESPONSE_404)
-                            liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
-                        else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
-                            Log.e(TAG, "onNext: " + response.toString());
-                            liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
-                        } else
-                            liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        try {
+                            if (statusMessage.code == Constants.RESPONSE_SUCCESS)
+                                liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
+                            else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
+                                liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
+                            else if (statusMessage.code == Constants.RESPONSE_404)
+                                liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
+                            else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
+                                Log.e(TAG, "onNext: " + response.toString());
+                                liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
+                            } else
+                                liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
                     }
 
                     @Override

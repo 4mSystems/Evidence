@@ -79,6 +79,7 @@
                     android:hint="@string/client_address"
                     android:inputType="text"
                     android:text="@={viewmodel.addClientRequest.client_Address}"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -95,14 +96,15 @@
                 app:error="@{viewmodel.addClientRequest.clientTypeError}">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/client_type"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/client_type"
                     android:focusable="false"
-                    android:onClick="@{()-> viewmodel.showClientType()}"
-                    android:gravity="center_vertical"
                     android:hint="@string/user_type"
                     android:inputType="text"
+                    android:onClick="@{()-> viewmodel.showClientType()}"
+                    android:text="@={viewmodel.addClientRequest.type}"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -123,10 +125,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
-                    android:gravity="center_vertical"
                     android:hint="@string/choose_category"
                     android:inputType="text"
                     android:onClick="@{()-> viewmodel.showCategories()}"
+                    android:text="@={viewmodel.addClientRequest.catName}"
+                    android:textAlignment="viewStart"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -145,7 +148,7 @@
                     android:layout_height="@dimen/dp100h"
                     android:gravity="top"
                     android:hint="@string/client_note"
-                    android:inputType="text"
+                    android:inputType="textMultiLine"
                     android:text="@={viewmodel.addClientRequest.notes}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
@@ -156,11 +159,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp30h"
-                android:layout_marginBottom="@dimen/dp30h"
                 android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginBottom="@dimen/dp30h"
                 android:background="@drawable/corner_view_primary_dark"
                 android:onClick="@{()-> viewmodel.addNewClient()}"
-                android:text="@string/add_new_client"
+                android:text="@{viewmodel.passingObject==null?@string/add_new_client:@string/edit_client}"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white" />

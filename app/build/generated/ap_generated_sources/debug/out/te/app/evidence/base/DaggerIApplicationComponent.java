@@ -55,6 +55,8 @@ import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel_Factory;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel_MembersInjector;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
+import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel_Factory;
+import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel_MembersInjector;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel_Factory;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel_MembersInjector;
@@ -67,6 +69,11 @@ import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
+import te.app.evidence.pages.notes.AddNoteFragment;
+import te.app.evidence.pages.notes.AddNoteFragment_MembersInjector;
+import te.app.evidence.pages.notes.viewModels.AddNoteViewModel;
+import te.app.evidence.pages.notes.viewModels.AddNoteViewModel_Factory;
+import te.app.evidence.pages.notes.viewModels.AddNoteViewModel_MembersInjector;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileFragment;
@@ -95,6 +102,8 @@ import te.app.evidence.repository.AuthRepository;
 import te.app.evidence.repository.AuthRepository_Factory;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.repository.ClientsRepository_Factory;
+import te.app.evidence.repository.NotesRepository;
+import te.app.evidence.repository.NotesRepository_Factory;
 
 @SuppressWarnings({
     "unchecked",
@@ -110,6 +119,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<AuthRepository> authRepositoryProvider;
 
   private Provider<ClientsRepository> clientsRepositoryProvider;
+
+  private Provider<NotesRepository> notesRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -149,6 +160,12 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private AddClientViewModel getAddClientViewModel() {
     return injectAddClientViewModel(AddClientViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
 
+  private ClientProfileViewModel getClientProfileViewModel() {
+    return injectClientProfileViewModel(ClientProfileViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+
+  private AddNoteViewModel getAddNoteViewModel() {
+    return injectAddNoteViewModel(AddNoteViewModel_Factory.newInstance(notesRepositoryProvider.get()));}
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -157,6 +174,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.notesRepositoryProvider = DoubleCheck.provider(NotesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -250,6 +268,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(AddBailiffsFragment addBailiffsFragment) {
     injectAddBailiffsFragment(addBailiffsFragment);}
+
+  @Override
+  public void inject(AddNoteFragment addNoteFragment) {
+    injectAddNoteFragment(addNoteFragment);}
 
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
@@ -367,8 +389,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private ClientProfileViewModel injectClientProfileViewModel(ClientProfileViewModel instance) {
+    ClientProfileViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider.get());
+    return instance;
+  }
+
   private ClientProfileFragment injectClientProfileFragment(ClientProfileFragment instance) {
-    ClientProfileFragment_MembersInjector.injectViewModel(instance, new ClientProfileViewModel());
+    ClientProfileFragment_MembersInjector.injectViewModel(instance, getClientProfileViewModel());
     return instance;
   }
 
@@ -399,6 +426,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AddBailiffsFragment injectAddBailiffsFragment(AddBailiffsFragment instance) {
     AddBailiffsFragment_MembersInjector.injectViewModel(instance, new AddBailiffsViewModel());
+    return instance;
+  }
+
+  private AddNoteViewModel injectAddNoteViewModel(AddNoteViewModel instance) {
+    AddNoteViewModel_MembersInjector.injectNotesRepository(instance, notesRepositoryProvider.get());
+    return instance;
+  }
+
+  private AddNoteFragment injectAddNoteFragment(AddNoteFragment instance) {
+    AddNoteFragment_MembersInjector.injectViewModel(instance, getAddNoteViewModel());
     return instance;
   }
 

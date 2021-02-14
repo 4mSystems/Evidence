@@ -281,7 +281,7 @@
     <string name="seeker">باحث عن عقار</string>
     <string name="payment_title">الدفع</string>
     <string name="annual_register">قيمة الإشتراك السنوي</string>
-    <string name="option_dialog_delete">هل أنت متأكد ان الإعلان مخالف ؟</string>
+    <string name="option_dialog_delete">Are you want to delete ?</string>
     <string name="option_dialog_title">تحذير</string>
     <string name="no">لا</string>
     <string name="report">إبلاغ</string>
@@ -415,5 +415,12 @@
     <string name="addressed_to">Addressed to</string>
     <string name="khesm">khesm</string>
     <string name="client_add">client</string>
+    <string name="edit_client">Edit client</string>
+    <string name="option_cancel">Cancel</string>
+    <string name="inventation_type">Inventation type</string>
+    <string name="circle_num">Circle number</string>
+    <string name="view_case">View case</string>
+    <string name="add_new_note">New note</string>
+    <string name="edit_note">Edit note</string>
 
 </resources>

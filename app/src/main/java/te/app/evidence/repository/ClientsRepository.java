@@ -11,6 +11,7 @@ import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
+import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -43,4 +44,23 @@ public class ClientsRepository extends BaseRepository {
                 Constants.ADD_CLIENTS, true);
     }
 
+    public Disposable editClient(AddClientRequest addClientRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CLIENTS, addClientRequest, AddClientResponse.class,
+                Constants.ADD_CLIENTS, true);
+    }
+
+    public Disposable deleteClient(int clientId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CLIENT + clientId, new Object(), StatusMessage.class,
+                Constants.DELETE_CLIENT, true);
+    }
+
+    public Disposable getClientProfile(int clientId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_PROFILE + clientId, new Object(), ClientProfileResponse.class,
+                Constants.CLIENT_PROFILE, true);
+    }
+
+    public Disposable deleteNote(int noteId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_NOTE + noteId, new Object(), StatusMessage.class,
+                Constants.DELETE_NOTE, true);
+    }
 }

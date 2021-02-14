@@ -15,14 +15,14 @@ public class URLS {
     public static final String FORGET_PASSWORD = "user/send-code";
     public static final String CHANGE_PASSWORD = "forget-password";
 
-    public final static String LISTING = "listings/home/";
-    //    public  final static String COMPANIES = "company/companies?category_id=5&lat=30.1341689&lng=31.3655877&city_id=1";
+    public final static String EDIT_CLIENTS = "edit_client";
+    public final static String DELETE_CLIENT = "delete_client/";
     public final static String UPDATE_PAYMENT = "user/update-payment";
-    public final static String SEARCH = "listings/search";
-    public final static String FAVORITES = "listings/favorites/";
-    public final static String SUBSCRIBE_AS_DELEGATE = "delegate/subscribe-as-delegate?shop_id=";
+    public final static String CLIENT_PROFILE = "client_Profile/";
+    public final static String ADD_NOTE = "add_clientNote";
+    public final static String EDIT_NOTE = "edit_clientNote";
 
-    public final static String REMOVE_ADD_FAVORITE = "listings/add-to-fav";
+    public final static String DELETE_NOTE = "delete_clientNote/";
     public final static String MY_LISTING = "listings/my-listing/";
     public final static String MY_PREMIUM_LISTING = "listings/my-premium-listing/";
     public final static String ABOUT = "settings/about-us";

@@ -31,6 +31,10 @@ public class PassingObject implements Serializable {
         this.object = object;
     }
 
+    public PassingObject(int id, Object objectClass) {
+        this.id = id;
+        this.objectClass = objectClass;
+    }
 
     public PassingObject(String object) {
         this.object = object;

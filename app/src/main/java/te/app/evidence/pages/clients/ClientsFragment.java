@@ -1,12 +1,16 @@
 package te.app.evidence.pages.clients;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
@@ -16,6 +20,10 @@ import androidx.lifecycle.Observer;
 import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 import javax.inject.Inject;
 
@@ -27,7 +35,9 @@ import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentClientsBinding;
+import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
@@ -42,6 +52,7 @@ public class ClientsFragment extends BaseFragment {
     private Context context;
     @Inject
     ClientsViewModel viewModel;
+    Dialog deleteDialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,15 +72,35 @@ public class ClientsFragment extends BaseFragment {
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getClientsList());
                 viewModel.notifyChange(BR.clientsAdapter);
-                Log.e("setEvent", "setEvent: " + viewModel.getClientsAdapter().getClientsList().size());
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
+                viewModel.getClientsAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
+            } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
+                viewModel.getClientsAdapter().notifyItemRemoved(viewModel.getClientsAdapter().lastSelected);
+                deleteDialog.dismiss();
             }
         });
         ((MainActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
             viewModel.clients();
             ((MainActivity) context).stopRefresh(false);
         });
+        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
+            showDeleteDialog();
+        });
+    }
+
+    private void showDeleteDialog() {
+        deleteDialog = new Dialog(context, R.style.PauseDialog);
+        deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
+        deleteDialog.setContentView(binding.getRoot());
+        binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
+        binding.optionDone.setOnClickListener(v -> viewModel.deleteClient());
+        deleteDialog.show();
     }
 
     @Override
@@ -80,10 +111,15 @@ public class ClientsFragment extends BaseFragment {
                 Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
                 if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
                     PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
-                    viewModel.getClientsAdapter().getClientsList().add(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Clients.class));
-                    viewModel.getClientsAdapter().notifyItemInserted(viewModel.getClientsAdapter().getClientsList().size() - 1);
-                    binding.rcClients.scrollToPosition(viewModel.getClientsAdapter().getClientsList().size() - 1);
-
+                    if (viewModel.getClientsAdapter().lastSelected == -1) {
+                        viewModel.getClientsAdapter().getClientsList().add(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Clients.class));
+                        viewModel.getClientsAdapter().notifyItemInserted(viewModel.getClientsAdapter().getClientsList().size() - 1);
+                        binding.rcClients.scrollToPosition(viewModel.getClientsAdapter().getClientsList().size() - 1);
+                    } else {
+                        viewModel.getClientsAdapter().getClientsList().set(viewModel.getClientsAdapter().lastSelected, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Clients.class));
+                        viewModel.getClientsAdapter().notifyItemChanged(viewModel.getClientsAdapter().lastSelected);
+                        binding.rcClients.scrollToPosition(viewModel.getClientsAdapter().lastSelected);
+                    }
                 }
             }
         }

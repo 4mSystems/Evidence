@@ -11,6 +11,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
@@ -29,6 +31,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
 import te.app.evidence.pages.clients.models.AddClientResponse;
+import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
 import te.app.evidence.pages.users.viewModels.AddUserViewModel;
 import te.app.evidence.utils.Constants;
@@ -48,9 +51,13 @@ public class AddClientFragment extends BaseFragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_client, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        if (viewModel.userData.getUserData().getType().equals("admin"))
-            viewModel.getCategories();
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.setClients(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), Clients.class));
+        }
         setEvent();
         return binding.getRoot();
     }

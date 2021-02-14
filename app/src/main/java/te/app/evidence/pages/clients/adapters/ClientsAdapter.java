@@ -7,6 +7,9 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,14 +17,22 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemClientsBinding;
+import te.app.evidence.pages.clients.AddClientFragment;
+import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHolder> {
-     List<Clients> clientsList;
-     Context context;
+    List<Clients> clientsList;
+    Context context;
+    public int lastSelected = -1;
+    public MutableLiveData<Object> actionLiveData = new MutableLiveData<>();
 
     public ClientsAdapter() {
         this.clientsList = new ArrayList<>();
@@ -45,6 +56,16 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         Clients client = clientsList.get(position);
         ClientsItemViewModel itemMenuViewModel = new ClientsItemViewModel(client);
+        itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
+            lastSelected = position;
+            if (o.equals(Constants.EDIT)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.edit_client), AddClientFragment.class.getName(), null);
+            } else if (o.equals(Constants.CLIENT_PROFILE)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.client_profile), ClientProfileFragment.class.getName(), null);
+            } else if (o.equals(Constants.DELETE)) {
+                actionLiveData.setValue(o);
+            }
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 

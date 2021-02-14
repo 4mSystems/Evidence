@@ -5,6 +5,7 @@ import androidx.databinding.ObservableField;
 import com.google.gson.annotations.SerializedName;
 
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.session.LanguagesHelper;
 import te.app.evidence.utils.validation.Validate;
 
 public class AddClientRequest {
@@ -20,6 +21,9 @@ public class AddClientRequest {
     private String type;
     @SerializedName("cat_id")
     private String cat_id;
+    @SerializedName("client_id")
+    private String client_id;
+    private transient String catName;
     public ObservableField<String> clientNameError = new ObservableField<>();
     public ObservableField<String> clientUnitError = new ObservableField<>();
     public ObservableField<String> clientAddressError = new ObservableField<>();
@@ -104,5 +108,21 @@ public class AddClientRequest {
     public void setCat_id(String cat_id) {
         clientCatError.set(null);
         this.cat_id = cat_id;
+    }
+
+    public String getCatName() {
+        return catName;
+    }
+
+    public void setCatName(String catName) {
+        this.catName = catName;
+    }
+
+    public String getClient_id() {
+        return client_id;
+    }
+
+    public void setClient_id(String client_id) {
+        this.client_id = client_id;
     }
 }

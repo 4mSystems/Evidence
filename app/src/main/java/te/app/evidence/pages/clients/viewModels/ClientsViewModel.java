@@ -31,6 +31,10 @@ public class ClientsViewModel extends BaseViewModel {
         compositeDisposable.add(clientsRepository.getClients());
     }
 
+    public void deleteClient() {
+        compositeDisposable.add(clientsRepository.deleteClient(getClientsAdapter().getClientsList().get(getClientsAdapter().lastSelected).getId()));
+    }
+
     @Bindable
     public ClientsAdapter getClientsAdapter() {
         return this.clientsAdapter == null ? this.clientsAdapter = new ClientsAdapter() : this.clientsAdapter;

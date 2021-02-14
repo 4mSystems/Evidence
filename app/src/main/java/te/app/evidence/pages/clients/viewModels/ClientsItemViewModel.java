@@ -4,6 +4,7 @@ import androidx.databinding.Bindable;
 
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.pages.clients.models.Clients;
+import te.app.evidence.utils.Constants;
 
 public class ClientsItemViewModel extends BaseViewModel {
     public Clients clients;
@@ -17,8 +18,16 @@ public class ClientsItemViewModel extends BaseViewModel {
         return clients;
     }
 
-    public void itemAction() {
-//        getLiveData().setValue(Constants.DELETE);
+    public void toEdit() {
+        getLiveData().setValue(Constants.EDIT);
+    }
+
+    public void toDelete() {
+        getLiveData().setValue(Constants.DELETE);
+    }
+
+    public void toClientProfile() {
+        getLiveData().setValue(Constants.CLIENT_PROFILE);
     }
 
 }

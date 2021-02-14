@@ -31,9 +31,9 @@ public class HomeRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-
-    public Disposable subscribeAsDelegate(int shopId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE_AS_DELEGATE + shopId, new Object(), StatusMessage.class,
-                Constants.SUBSCRIBE_AS_DELEGATE, true);
-    }
+//
+//    public Disposable subscribeAsDelegate(int shopId) {
+//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE_AS_DELEGATE + shopId, new Object(), StatusMessage.class,
+//                Constants.SUBSCRIBE_AS_DELEGATE, true);
+//    }
 }

@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemClientsBindingImpl extends ItemClientsBinding  {
+public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,22 +14,19 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_clients_header, 6);
-        sViewsWithIds.put(R.id.icon_down_qu, 7);
-        sViewsWithIds.put(R.id.v1, 8);
-        sViewsWithIds.put(R.id.expansionLayoutClients, 9);
-        sViewsWithIds.put(R.id.unit_text, 10);
-        sViewsWithIds.put(R.id.v2, 11);
-        sViewsWithIds.put(R.id.client_type_text, 12);
-        sViewsWithIds.put(R.id.v5, 13);
-        sViewsWithIds.put(R.id.client_address_text, 14);
-        sViewsWithIds.put(R.id.v3, 15);
-        sViewsWithIds.put(R.id.client_note_text, 16);
-        sViewsWithIds.put(R.id.v4, 17);
-        sViewsWithIds.put(R.id.attachments, 18);
-        sViewsWithIds.put(R.id.permission, 19);
-        sViewsWithIds.put(R.id.delete, 20);
-        sViewsWithIds.put(R.id.edit, 21);
+        sViewsWithIds.put(R.id.layout_clients_header, 9);
+        sViewsWithIds.put(R.id.icon_down_qu, 10);
+        sViewsWithIds.put(R.id.v1, 11);
+        sViewsWithIds.put(R.id.expansionLayoutClients, 12);
+        sViewsWithIds.put(R.id.unit_text, 13);
+        sViewsWithIds.put(R.id.v2, 14);
+        sViewsWithIds.put(R.id.client_type_text, 15);
+        sViewsWithIds.put(R.id.v5, 16);
+        sViewsWithIds.put(R.id.client_address_text, 17);
+        sViewsWithIds.put(R.id.v3, 18);
+        sViewsWithIds.put(R.id.client_note_text, 19);
+        sViewsWithIds.put(R.id.v4, 20);
+        sViewsWithIds.put(R.id.attachments, 21);
         sViewsWithIds.put(R.id.br5, 22);
         sViewsWithIds.put(R.id.v8, 23);
     }
@@ -37,6 +34,12 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
     @NonNull
     private final android.widget.LinearLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback6;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -46,39 +49,45 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
     }
     private ItemClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
-            , (androidx.constraintlayout.widget.Barrier) bindings[22]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[14]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[16]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[20]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[9]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[6]
+            , (androidx.constraintlayout.widget.Barrier) bindings[22]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
+            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[12]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
+            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (android.view.View) bindings[8]
             , (android.view.View) bindings[11]
-            , (android.view.View) bindings[15]
-            , (android.view.View) bindings[17]
-            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[18]
+            , (android.view.View) bindings[20]
+            , (android.view.View) bindings[16]
             , (android.view.View) bindings[23]
             );
         this.clientAddressValue.setTag(null);
         this.clientNoteValue.setTag(null);
         this.clientTypeValue.setTag(null);
+        this.delete.setTag(null);
+        this.edit.setTag(null);
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.permission.setTag(null);
         this.tvQualifications.setTag(null);
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback5 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -194,9 +203,71 @@ public class ItemClientsBindingImpl extends ItemClientsBinding  {
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvQualifications, itemViewModelClientsClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.unitValue, itemViewModelClientsClientUnit);
         }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.delete.setOnClickListener(mCallback6);
+            this.edit.setOnClickListener(mCallback7);
+            this.permission.setOnClickListener(mCallback5);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toEdit();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toClientProfile();
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

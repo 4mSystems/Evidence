@@ -12,6 +12,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -64,6 +65,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
   public final CustomEditText inputSearch;
 
   @NonNull
+  public final RecyclerView rcNotes;
+
+  @NonNull
   public final CustomTextViewRegular unitText;
 
   @NonNull
@@ -94,7 +98,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
       CustomTextViewRegular clientNameText, CustomTextViewRegular clientNameValue,
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
       AppCompatButton clientNotes, CustomTextViewRegular clientTypeText,
-      CustomTextViewRegular clientTypeValue, CustomEditText inputSearch,
+      CustomTextViewRegular clientTypeValue, CustomEditText inputSearch, RecyclerView rcNotes,
       CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v2, View v3, View v4,
       View v5, View v6) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -112,6 +116,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
     this.clientTypeText = clientTypeText;
     this.clientTypeValue = clientTypeValue;
     this.inputSearch = inputSearch;
+    this.rcNotes = rcNotes;
     this.unitText = unitText;
     this.unitValue = unitValue;
     this.v2 = v2;

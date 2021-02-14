@@ -17,7 +17,7 @@ import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
-import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
+import te.app.evidence.pages.notes.viewModels.NotesItemViewModel;
 
 public abstract class ItemNoteBinding extends ViewDataBinding {
   @NonNull
@@ -25,6 +25,12 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewRegular clientNoteValue;
+
+  @NonNull
+  public final CustomTextViewRegular delete;
+
+  @NonNull
+  public final CustomTextViewRegular edit;
 
   @NonNull
   public final ExpansionLayout expansionLayoutClients;
@@ -36,7 +42,7 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
   public final ExpansionHeader layoutClientsHeader;
 
   @NonNull
-  public final CustomTextViewMedium tvQualifications;
+  public final CustomTextViewMedium tvEmpName;
 
   @NonNull
   public final CustomTextViewRegular unitText;
@@ -54,20 +60,23 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
   public final View v4;
 
   @Bindable
-  protected ClientsItemViewModel mItemViewModel;
+  protected NotesItemViewModel mItemViewModel;
 
   protected ItemNoteBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
+      CustomTextViewRegular delete, CustomTextViewRegular edit,
       ExpansionLayout expansionLayoutClients, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutClientsHeader, CustomTextViewMedium tvQualifications,
+      ExpansionHeader layoutClientsHeader, CustomTextViewMedium tvEmpName,
       CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v1, View v3, View v4) {
     super(_bindingComponent, _root, _localFieldCount);
     this.clientNoteText = clientNoteText;
     this.clientNoteValue = clientNoteValue;
+    this.delete = delete;
+    this.edit = edit;
     this.expansionLayoutClients = expansionLayoutClients;
     this.iconDownQu = iconDownQu;
     this.layoutClientsHeader = layoutClientsHeader;
-    this.tvQualifications = tvQualifications;
+    this.tvEmpName = tvEmpName;
     this.unitText = unitText;
     this.unitValue = unitValue;
     this.v1 = v1;
@@ -75,10 +84,10 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
     this.v4 = v4;
   }
 
-  public abstract void setItemViewModel(@Nullable ClientsItemViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable NotesItemViewModel itemViewModel);
 
   @Nullable
-  public ClientsItemViewModel getItemViewModel() {
+  public NotesItemViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

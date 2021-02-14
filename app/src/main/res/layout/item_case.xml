@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="itemViewModel"
+            type="te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:id="@+id/layout_session_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_headerIndicator="@id/icon_down_qu"
+            app:expansion_layout="@id/expansionLayoutSessions"
+            app:expansion_toggleOnClick="true"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- HEADER INDICATOR -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp3h">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_down_qu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_invetationNum"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_invetationNum"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_invetationNum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp6h"
+                    android:text="@{itemViewModel.cases.invetationNum}"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_invetationNum" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutSessions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_expanded="false">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/court_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/inventation_type"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/court_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="@{itemViewModel.cases.inventationType}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/court_text"
+                    app:layout_constraintTop_toTopOf="@+id/court_text" />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/court_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/paper_type_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/circle_num"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/paper_type_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="@{itemViewModel.cases.circleNum}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paper_type_text"
+                    app:layout_constraintTop_toTopOf="@+id/paper_type_text" />
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/paper_type_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/paper_number_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/court"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/paper_number_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:text="@{itemViewModel.cases.court}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paper_number_text"
+                    app:layout_constraintTop_toTopOf="@+id/paper_number_text" />
+
+                <View
+                    android:id="@+id/v6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/paper_number_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/session_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/session_date"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v6" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/session_month_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:text="@{itemViewModel.cases.firstSessionDate}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/session_date_text"
+                    app:layout_constraintTop_toTopOf="@+id/session_date_text" />
+
+                <View
+                    android:id="@+id/v7"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/session_month_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/status_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/addressed_to"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v7" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:padding="@dimen/dp4h"
+                    android:text="to WHOME"
+                    android:textAlignment="center"
+                    android:textColor="@color/colordark"
+                    android:textSize="@dimen/sp10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/status_text"
+                    app:layout_constraintTop_toBottomOf="@+id/v7" />
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/status_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/view_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:drawableTop="@drawable/ic_view_more"
+                    android:text="@string/view_case"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v4" />
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/view_value" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    </LinearLayout>
+</layout>

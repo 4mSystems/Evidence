@@ -50,6 +50,80 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener catNameandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addClientRequest.catName
+            //         is viewmodel.addClientRequest.setCatName((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(catName);
+            // localize variables for thread safety
+            // viewmodel.addClientRequest
+            te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addClientRequest.catName
+            java.lang.String viewmodelAddClientRequestCatName = null;
+            // viewmodel.addClientRequest != null
+            boolean viewmodelAddClientRequestJavaLangObjectNull = false;
+            // viewmodel
+            te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddClientRequest = viewmodel.getAddClientRequest();
+
+                viewmodelAddClientRequestJavaLangObjectNull = (viewmodelAddClientRequest) != (null);
+                if (viewmodelAddClientRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddClientRequest.setCatName(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
+    private androidx.databinding.InverseBindingListener clientTypeandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addClientRequest.type
+            //         is viewmodel.addClientRequest.setType((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(clientType);
+            // localize variables for thread safety
+            // viewmodel.addClientRequest
+            te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addClientRequest.type
+            java.lang.String viewmodelAddClientRequestType = null;
+            // viewmodel.addClientRequest != null
+            boolean viewmodelAddClientRequestJavaLangObjectNull = false;
+            // viewmodel
+            te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddClientRequest = viewmodel.getAddClientRequest();
+
+                viewmodelAddClientRequestJavaLangObjectNull = (viewmodelAddClientRequest) != (null);
+                if (viewmodelAddClientRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddClientRequest.setType(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
     private androidx.databinding.InverseBindingListener mboundView12androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
@@ -244,7 +318,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x80L;
+                mDirtyFlags = 0x100L;
         }
         requestRebind();
     }
@@ -362,6 +436,12 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             }
             return true;
         }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x80L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -375,7 +455,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientUnitError = null;
         java.lang.String viewmodelAddClientRequestClientTypeErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnitErrorGet = null;
+        te.app.evidence.PassingObject viewmodelPassingObject = null;
+        boolean viewmodelPassingObjectJavaLangObjectNull = false;
         java.lang.String viewmodelAddClientRequestClientAddressErrorGet = null;
+        java.lang.String viewmodelAddClientRequestType = null;
         java.lang.String viewmodelAddClientRequestClientNameErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnit = null;
         java.lang.String viewmodelAddClientRequestNotes = null;
@@ -384,166 +467,206 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.String viewmodelAddClientRequestClientName = null;
         te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
         java.lang.String viewmodelAddClientRequestClientNoteErrorGet = null;
+        java.lang.String viewmodelAddClientRequestCatName = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientCatError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientTypeError = null;
+        java.lang.String viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNameError = null;
         java.lang.String viewmodelAddClientRequestClientAddress = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientAddressError = null;
         te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0xffL) != 0) {
+        if ((dirtyFlags & 0x1ffL) != 0) {
 
 
+            if ((dirtyFlags & 0x1c0L) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.addClientRequest
-                    viewmodelAddClientRequest = viewmodel.getAddClientRequest();
+                    if (viewmodel != null) {
+                        // read viewmodel.passingObject
+                        viewmodelPassingObject = viewmodel.getPassingObject();
+                    }
+
+
+                    // read viewmodel.passingObject == null
+                    viewmodelPassingObjectJavaLangObjectNull = (viewmodelPassingObject) == (null);
+                if((dirtyFlags & 0x1c0L) != 0) {
+                    if(viewmodelPassingObjectJavaLangObjectNull) {
+                            dirtyFlags |= 0x400L;
+                    }
+                    else {
+                            dirtyFlags |= 0x200L;
+                    }
                 }
 
-            if ((dirtyFlags & 0xc1L) != 0) {
 
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientUnitError
-                        viewmodelAddClientRequestClientUnitError = viewmodelAddClientRequest.clientUnitError;
-                    }
-                    updateRegistration(0, viewmodelAddClientRequestClientUnitError);
-
-
-                    if (viewmodelAddClientRequestClientUnitError != null) {
-                        // read viewmodel.addClientRequest.clientUnitError.get()
-                        viewmodelAddClientRequestClientUnitErrorGet = viewmodelAddClientRequestClientUnitError.get();
-                    }
+                    // read viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
+                    viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = ((viewmodelPassingObjectJavaLangObjectNull) ? (mboundView13.getResources().getString(R.string.add_new_client)) : (mboundView13.getResources().getString(R.string.edit_client)));
             }
-            if ((dirtyFlags & 0xc0L) != 0) {
+            if ((dirtyFlags & 0x17fL) != 0) {
 
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.client_Unit
-                        viewmodelAddClientRequestClientUnit = viewmodelAddClientRequest.getClient_Unit();
-                        // read viewmodel.addClientRequest.notes
-                        viewmodelAddClientRequestNotes = viewmodelAddClientRequest.getNotes();
-                        // read viewmodel.addClientRequest.client_Name
-                        viewmodelAddClientRequestClientName = viewmodelAddClientRequest.getClient_Name();
-                        // read viewmodel.addClientRequest.client_Address
-                        viewmodelAddClientRequestClientAddress = viewmodelAddClientRequest.getClient_Address();
+                    if (viewmodel != null) {
+                        // read viewmodel.addClientRequest
+                        viewmodelAddClientRequest = viewmodel.getAddClientRequest();
                     }
-            }
-            if ((dirtyFlags & 0xc2L) != 0) {
 
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientNoteError
-                        viewmodelAddClientRequestClientNoteError = viewmodelAddClientRequest.clientNoteError;
-                    }
-                    updateRegistration(1, viewmodelAddClientRequestClientNoteError);
+                if ((dirtyFlags & 0x141L) != 0) {
 
-
-                    if (viewmodelAddClientRequestClientNoteError != null) {
-                        // read viewmodel.addClientRequest.clientNoteError.get()
-                        viewmodelAddClientRequestClientNoteErrorGet = viewmodelAddClientRequestClientNoteError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xc4L) != 0) {
-
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientCatError
-                        viewmodelAddClientRequestClientCatError = viewmodelAddClientRequest.clientCatError;
-                    }
-                    updateRegistration(2, viewmodelAddClientRequestClientCatError);
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientUnitError
+                            viewmodelAddClientRequestClientUnitError = viewmodelAddClientRequest.clientUnitError;
+                        }
+                        updateRegistration(0, viewmodelAddClientRequestClientUnitError);
 
 
-                    if (viewmodelAddClientRequestClientCatError != null) {
-                        // read viewmodel.addClientRequest.clientCatError.get()
-                        viewmodelAddClientRequestClientCatErrorGet = viewmodelAddClientRequestClientCatError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xc8L) != 0) {
+                        if (viewmodelAddClientRequestClientUnitError != null) {
+                            // read viewmodel.addClientRequest.clientUnitError.get()
+                            viewmodelAddClientRequestClientUnitErrorGet = viewmodelAddClientRequestClientUnitError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x140L) != 0) {
 
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientTypeError
-                        viewmodelAddClientRequestClientTypeError = viewmodelAddClientRequest.clientTypeError;
-                    }
-                    updateRegistration(3, viewmodelAddClientRequestClientTypeError);
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.type
+                            viewmodelAddClientRequestType = viewmodelAddClientRequest.getType();
+                            // read viewmodel.addClientRequest.client_Unit
+                            viewmodelAddClientRequestClientUnit = viewmodelAddClientRequest.getClient_Unit();
+                            // read viewmodel.addClientRequest.notes
+                            viewmodelAddClientRequestNotes = viewmodelAddClientRequest.getNotes();
+                            // read viewmodel.addClientRequest.client_Name
+                            viewmodelAddClientRequestClientName = viewmodelAddClientRequest.getClient_Name();
+                            // read viewmodel.addClientRequest.catName
+                            viewmodelAddClientRequestCatName = viewmodelAddClientRequest.getCatName();
+                            // read viewmodel.addClientRequest.client_Address
+                            viewmodelAddClientRequestClientAddress = viewmodelAddClientRequest.getClient_Address();
+                        }
+                }
+                if ((dirtyFlags & 0x142L) != 0) {
 
-
-                    if (viewmodelAddClientRequestClientTypeError != null) {
-                        // read viewmodel.addClientRequest.clientTypeError.get()
-                        viewmodelAddClientRequestClientTypeErrorGet = viewmodelAddClientRequestClientTypeError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xd0L) != 0) {
-
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientNameError
-                        viewmodelAddClientRequestClientNameError = viewmodelAddClientRequest.clientNameError;
-                    }
-                    updateRegistration(4, viewmodelAddClientRequestClientNameError);
-
-
-                    if (viewmodelAddClientRequestClientNameError != null) {
-                        // read viewmodel.addClientRequest.clientNameError.get()
-                        viewmodelAddClientRequestClientNameErrorGet = viewmodelAddClientRequestClientNameError.get();
-                    }
-            }
-            if ((dirtyFlags & 0xe0L) != 0) {
-
-                    if (viewmodelAddClientRequest != null) {
-                        // read viewmodel.addClientRequest.clientAddressError
-                        viewmodelAddClientRequestClientAddressError = viewmodelAddClientRequest.clientAddressError;
-                    }
-                    updateRegistration(5, viewmodelAddClientRequestClientAddressError);
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientNoteError
+                            viewmodelAddClientRequestClientNoteError = viewmodelAddClientRequest.clientNoteError;
+                        }
+                        updateRegistration(1, viewmodelAddClientRequestClientNoteError);
 
 
-                    if (viewmodelAddClientRequestClientAddressError != null) {
-                        // read viewmodel.addClientRequest.clientAddressError.get()
-                        viewmodelAddClientRequestClientAddressErrorGet = viewmodelAddClientRequestClientAddressError.get();
-                    }
+                        if (viewmodelAddClientRequestClientNoteError != null) {
+                            // read viewmodel.addClientRequest.clientNoteError.get()
+                            viewmodelAddClientRequestClientNoteErrorGet = viewmodelAddClientRequestClientNoteError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x144L) != 0) {
+
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientCatError
+                            viewmodelAddClientRequestClientCatError = viewmodelAddClientRequest.clientCatError;
+                        }
+                        updateRegistration(2, viewmodelAddClientRequestClientCatError);
+
+
+                        if (viewmodelAddClientRequestClientCatError != null) {
+                            // read viewmodel.addClientRequest.clientCatError.get()
+                            viewmodelAddClientRequestClientCatErrorGet = viewmodelAddClientRequestClientCatError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x148L) != 0) {
+
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientTypeError
+                            viewmodelAddClientRequestClientTypeError = viewmodelAddClientRequest.clientTypeError;
+                        }
+                        updateRegistration(3, viewmodelAddClientRequestClientTypeError);
+
+
+                        if (viewmodelAddClientRequestClientTypeError != null) {
+                            // read viewmodel.addClientRequest.clientTypeError.get()
+                            viewmodelAddClientRequestClientTypeErrorGet = viewmodelAddClientRequestClientTypeError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x150L) != 0) {
+
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientNameError
+                            viewmodelAddClientRequestClientNameError = viewmodelAddClientRequest.clientNameError;
+                        }
+                        updateRegistration(4, viewmodelAddClientRequestClientNameError);
+
+
+                        if (viewmodelAddClientRequestClientNameError != null) {
+                            // read viewmodel.addClientRequest.clientNameError.get()
+                            viewmodelAddClientRequestClientNameErrorGet = viewmodelAddClientRequestClientNameError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x160L) != 0) {
+
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.clientAddressError
+                            viewmodelAddClientRequestClientAddressError = viewmodelAddClientRequest.clientAddressError;
+                        }
+                        updateRegistration(5, viewmodelAddClientRequestClientAddressError);
+
+
+                        if (viewmodelAddClientRequestClientAddressError != null) {
+                            // read viewmodel.addClientRequest.clientAddressError.get()
+                            viewmodelAddClientRequestClientAddressErrorGet = viewmodelAddClientRequestClientAddressError.get();
+                        }
+                }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x80L) != 0) {
+        if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
             this.catName.setOnClickListener(mCallback2);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
             this.clientType.setOnClickListener(mCallback1);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.clientType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, clientTypeandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             this.mboundView13.setOnClickListener(mCallback3);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0xd0L) != 0) {
+        if ((dirtyFlags & 0x140L) != 0) {
             // api target 1
 
-            this.mboundView1.setError(viewmodelAddClientRequestClientNameErrorGet);
-        }
-        if ((dirtyFlags & 0xc2L) != 0) {
-            // api target 1
-
-            this.mboundView11.setError(viewmodelAddClientRequestClientNoteErrorGet);
-        }
-        if ((dirtyFlags & 0xc0L) != 0) {
-            // api target 1
-
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, viewmodelAddClientRequestCatName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientType, viewmodelAddClientRequestType);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewmodelAddClientRequestNotes);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddClientRequestClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddClientRequestClientUnit);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddClientRequestClientAddress);
         }
-        if ((dirtyFlags & 0xc1L) != 0) {
+        if ((dirtyFlags & 0x150L) != 0) {
+            // api target 1
+
+            this.mboundView1.setError(viewmodelAddClientRequestClientNameErrorGet);
+        }
+        if ((dirtyFlags & 0x142L) != 0) {
+            // api target 1
+
+            this.mboundView11.setError(viewmodelAddClientRequestClientNoteErrorGet);
+        }
+        if ((dirtyFlags & 0x1c0L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView13, viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient);
+        }
+        if ((dirtyFlags & 0x141L) != 0) {
             // api target 1
 
             this.mboundView3.setError(viewmodelAddClientRequestClientUnitErrorGet);
         }
-        if ((dirtyFlags & 0xe0L) != 0) {
+        if ((dirtyFlags & 0x160L) != 0) {
             // api target 1
 
             this.mboundView5.setError(viewmodelAddClientRequestClientAddressErrorGet);
         }
-        if ((dirtyFlags & 0xc8L) != 0) {
+        if ((dirtyFlags & 0x148L) != 0) {
             // api target 1
 
             this.mboundView7.setError(viewmodelAddClientRequestClientTypeErrorGet);
         }
-        if ((dirtyFlags & 0xc4L) != 0) {
+        if ((dirtyFlags & 0x144L) != 0) {
             // api target 1
 
             this.mboundView9.setError(viewmodelAddClientRequestClientCatErrorGet);
@@ -616,7 +739,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         flag 4 (0x5L): viewmodel.addClientRequest.clientNameError
         flag 5 (0x6L): viewmodel.addClientRequest.clientAddressError
         flag 6 (0x7L): viewmodel
-        flag 7 (0x8L): null
+        flag 7 (0x8L): viewmodel.passingObject
+        flag 8 (0x9L): null
+        flag 9 (0xaL): viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 10 (0xbL): viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
     flag mapping end*/
     //end
 }
