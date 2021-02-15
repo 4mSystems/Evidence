@@ -12,11 +12,15 @@ import androidx.databinding.PropertyChangeRegistry;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.pages.auth.models.UserData;
 import te.app.evidence.pages.auth.models.UserMainData;
+import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.utils.images.PhotoFullPopupWindow;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.UserHelper;
@@ -29,6 +33,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     private PassingObject passingObject = new PassingObject();
     private String countryCurrency;
     public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
+    List<CategoriesData> categoriesDataList= new ArrayList<>();
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();
@@ -104,4 +109,12 @@ public class BaseViewModel extends ViewModel implements Observable {
     public void showImage(String imgUrl, View imageView) {
         new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, imageView, imgUrl, null);
     }
+    public List<CategoriesData> getCategoriesDataList() {
+        return categoriesDataList;
+    }
+
+    public void setCategoriesDataList(List<CategoriesData> categoriesDataList) {
+        this.categoriesDataList = categoriesDataList;
+    }
+
 }

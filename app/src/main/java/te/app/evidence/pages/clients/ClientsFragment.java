@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +20,6 @@ import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 import javax.inject.Inject;
@@ -30,7 +27,7 @@ import javax.inject.Inject;
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
-import te.app.evidence.activity.MainActivity;
+import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -82,13 +79,11 @@ public class ClientsFragment extends BaseFragment {
                 deleteDialog.dismiss();
             }
         });
-        ((MainActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
+        ((BaseActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
             viewModel.clients();
-            ((MainActivity) context).stopRefresh(false);
+            ((BaseActivity) context).stopRefresh(false);
         });
-        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
-            showDeleteDialog();
-        });
+        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
     }
 
     private void showDeleteDialog() {
@@ -128,7 +123,7 @@ public class ClientsFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) context).enableRefresh(true);
+        ((BaseActivity) context).enableRefresh(true);
         viewModel.getClientsRepository().setLiveData(viewModel.liveData);
     }
 

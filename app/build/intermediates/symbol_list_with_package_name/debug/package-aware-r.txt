@@ -3031,6 +3031,7 @@ drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
 drawable corner_view_gradient
 drawable corner_view_gray_background
+drawable corner_view_gray_border
 drawable corner_view_light
 drawable corner_view_points
 drawable corner_view_primary_accept
@@ -3570,6 +3571,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rcUsers
 id rc_clients
 id rc_filter
 id rc_notes
@@ -3737,6 +3739,7 @@ id tv_please_turn_on
 id tv_qualifications
 id tv_title
 id tv_user_login
+id tv_username
 id unchecked
 id uniform
 id unit_text
@@ -3744,6 +3747,11 @@ id unit_value
 id unlabeled
 id up
 id useLogo
+id user_address_text
+id user_address_value
+id user_phone_text
+id user_phone_value
+id user_type
 id user_type_text
 id user_type_value
 id v1
@@ -4050,6 +4058,7 @@ string add_new_user
 string add_success_added
 string address_hint
 string addressed_to
+string admin
 string airplane_mode
 string all_files
 string all_images
@@ -4209,6 +4218,7 @@ string edit_details
 string edit_images
 string edit_location
 string edit_note
+string edit_user
 string elevator
 string email
 string email_hint
@@ -4547,6 +4557,7 @@ string tv_settings_nearest_orders
 string tv_settings_registered_stores
 string txt_title
 string upload_doc_btn
+string user
 string user_name
 string user_permission
 string user_type

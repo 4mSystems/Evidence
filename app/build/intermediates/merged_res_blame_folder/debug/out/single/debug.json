@@ -388,6 +388,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_corner_view_gray_border.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/corner_view_gray_border.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_permission_off.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_permission_off.xml"
     },

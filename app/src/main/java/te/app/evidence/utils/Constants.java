@@ -28,10 +28,10 @@ public class Constants {
     public final static String EMPTY_WARNING = "EMPTY_WARNING";
 
     public final static String LOGOUT = "logout";
-    public final static String FLIP_CARD = "FLIP_CARD";
+    public final static String USERS = "USERS";
 
-    public final static String CHOOSE_CITY = "CHOOSE_CITY";
-    public final static String AD_INFO_1 = "AD_INFO_1";
+    public final static String ADD_USER = "ADD_USER";
+    public final static String SHOW_TYPE = "SHOW_TYPE";
     public final static String SUBSCRIBE_AS_DELEGATE = "SUBSCRIBE_AS_DELEGATE";
     public final static String ERROR_TOAST = "error_toast";
 

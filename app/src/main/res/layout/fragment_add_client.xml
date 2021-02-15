@@ -163,7 +163,7 @@
                 android:layout_marginBottom="@dimen/dp30h"
                 android:background="@drawable/corner_view_primary_dark"
                 android:onClick="@{()-> viewmodel.addNewClient()}"
-                android:text="@{viewmodel.passingObject==null?@string/add_new_client:@string/edit_client}"
+                android:text="@{viewmodel.passingObject.objectClass==null?@string/add_new_client:@string/edit_client}"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white" />

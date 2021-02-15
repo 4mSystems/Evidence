@@ -23,8 +23,8 @@ public class URLS {
     public final static String EDIT_NOTE = "edit_clientNote";
 
     public final static String DELETE_NOTE = "delete_clientNote/";
-    public final static String MY_LISTING = "listings/my-listing/";
-    public final static String MY_PREMIUM_LISTING = "listings/my-premium-listing/";
+    public final static String USERS = "users/";
+    public final static String ADD_USER = "add_users";
     public final static String ABOUT = "settings/about-us";
     public final static String TERMS = "settings/terms";
 

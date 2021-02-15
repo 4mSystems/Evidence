@@ -30,7 +30,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     private final com.google.android.material.textfield.TextInputEditText mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback10;
     @Nullable
     private final android.view.View.OnClickListener mCallback9;
     // values
@@ -139,8 +139,8 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -291,10 +291,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.forgetPassword.setOnClickListener(mCallback8);
+            this.forgetPassword.setOnClickListener(mCallback9);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            this.startApp.setOnClickListener(mCallback9);
+            this.startApp.setOnClickListener(mCallback10);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
@@ -317,23 +317,6 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.forgetPassword();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -348,6 +331,23 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
 
 
                     viewmodel.login();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.forgetPassword();
                 }
                 break;
             }

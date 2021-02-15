@@ -6,24 +6,42 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.users.adapters.UsersAdapter;
+import te.app.evidence.repository.SystemUsersRepository;
+import te.app.evidence.utils.Constants;
 
 public class UsersViewModel extends BaseViewModel {
-
+    UsersAdapter usersAdapter;
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    SystemUsersRepository usersRepository;
 
     @Inject
-    public UsersViewModel() {
+    public UsersViewModel(SystemUsersRepository usersRepository) {
+        this.usersRepository = usersRepository;
         this.liveData = new MutableLiveData<>();
+        usersRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+    public void systemUsers() {
+        compositeDisposable.add(usersRepository.getUsers());
     }
 
+    public void toNewUser() {
+        liveData.setValue(new Mutable(Constants.ADD_USER));
+    }
+
+    @Bindable
+    public UsersAdapter getUsersAdapter() {
+        return this.usersAdapter == null ? this.usersAdapter = new UsersAdapter() : this.usersAdapter;
+    }
+
+    public SystemUsersRepository getUsersRepository() {
+        return usersRepository;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -31,32 +49,9 @@ public class UsersViewModel extends BaseViewModel {
         }
     }
 
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();
         unSubscribeFromObservable();
-    }
-
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
     }
 }

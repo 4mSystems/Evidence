@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -17,11 +18,11 @@ import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
-import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
+import te.app.evidence.pages.users.viewModels.UserItemViewModel;
 
 public abstract class ItemUserBinding extends ViewDataBinding {
   @NonNull
-  public final CustomTextViewRegular controlText;
+  public final Barrier br5;
 
   @NonNull
   public final CustomTextViewRegular delete;
@@ -48,7 +49,19 @@ public abstract class ItemUserBinding extends ViewDataBinding {
   public final CustomTextViewRegular permission;
 
   @NonNull
-  public final CustomTextViewMedium tvQualifications;
+  public final CustomTextViewMedium tvUsername;
+
+  @NonNull
+  public final CustomTextViewRegular userAddressText;
+
+  @NonNull
+  public final CustomTextViewRegular userAddressValue;
+
+  @NonNull
+  public final CustomTextViewRegular userPhoneText;
+
+  @NonNull
+  public final CustomTextViewRegular userPhoneValue;
 
   @NonNull
   public final CustomTextViewRegular userTypeText;
@@ -65,18 +78,29 @@ public abstract class ItemUserBinding extends ViewDataBinding {
   @NonNull
   public final View v3;
 
-  @Bindable
-  protected SessionItemViewModel mItemViewModel;
+  @NonNull
+  public final View v4;
 
-  protected ItemUserBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular controlText, CustomTextViewRegular delete, CustomTextViewRegular edit,
-      CustomTextViewRegular emailText, CustomTextViewRegular emailValue,
-      ExpansionLayout expansionLayoutSessions, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutSessionHeader, CustomTextViewRegular permission,
-      CustomTextViewMedium tvQualifications, CustomTextViewRegular userTypeText,
-      CustomTextViewRegular userTypeValue, View v1, View v2, View v3) {
+  @NonNull
+  public final View v5;
+
+  @NonNull
+  public final View v8;
+
+  @Bindable
+  protected UserItemViewModel mItemViewModel;
+
+  protected ItemUserBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br5,
+      CustomTextViewRegular delete, CustomTextViewRegular edit, CustomTextViewRegular emailText,
+      CustomTextViewRegular emailValue, ExpansionLayout expansionLayoutSessions,
+      AppCompatImageView iconDownQu, ExpansionHeader layoutSessionHeader,
+      CustomTextViewRegular permission, CustomTextViewMedium tvUsername,
+      CustomTextViewRegular userAddressText, CustomTextViewRegular userAddressValue,
+      CustomTextViewRegular userPhoneText, CustomTextViewRegular userPhoneValue,
+      CustomTextViewRegular userTypeText, CustomTextViewRegular userTypeValue, View v1, View v2,
+      View v3, View v4, View v5, View v8) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.controlText = controlText;
+    this.br5 = br5;
     this.delete = delete;
     this.edit = edit;
     this.emailText = emailText;
@@ -85,18 +109,25 @@ public abstract class ItemUserBinding extends ViewDataBinding {
     this.iconDownQu = iconDownQu;
     this.layoutSessionHeader = layoutSessionHeader;
     this.permission = permission;
-    this.tvQualifications = tvQualifications;
+    this.tvUsername = tvUsername;
+    this.userAddressText = userAddressText;
+    this.userAddressValue = userAddressValue;
+    this.userPhoneText = userPhoneText;
+    this.userPhoneValue = userPhoneValue;
     this.userTypeText = userTypeText;
     this.userTypeValue = userTypeValue;
     this.v1 = v1;
     this.v2 = v2;
     this.v3 = v3;
+    this.v4 = v4;
+    this.v5 = v5;
+    this.v8 = v8;
   }
 
-  public abstract void setItemViewModel(@Nullable SessionItemViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable UserItemViewModel itemViewModel);
 
   @Nullable
-  public SessionItemViewModel getItemViewModel() {
+  public UserItemViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

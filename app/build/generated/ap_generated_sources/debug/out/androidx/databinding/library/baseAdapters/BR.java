@@ -37,9 +37,13 @@ public class BR {
 
   public static final int settingsData = 17;
 
-  public static final int type = 18;
+  public static final int systemUserData = 18;
 
-  public static final int userDocuments = 19;
+  public static final int type = 19;
 
-  public static final int viewmodel = 20;
+  public static final int userDocuments = 20;
+
+  public static final int usersAdapter = 21;
+
+  public static final int viewmodel = 22;
 }

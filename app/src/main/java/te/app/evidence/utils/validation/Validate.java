@@ -24,7 +24,6 @@ public class Validate {
     public static String error;
 
     public static boolean isValid(String data, String type) {
-        Log.e("isValid", "isValid: " + data + "type :" + type);
         if (isValid(data)) {
             if (type.equals(Constants.EMAIL) && !Validate.isMail(data)) {
                 error = ResourceManager.getString(R.string.invalidEmail);

@@ -76,10 +76,10 @@
                             android:layout_height="@dimen/dp60h"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp25h"
-                            android:scaleType="centerCrop"
                             android:src="@drawable/logo"
                             app:civ_border_color="@color/white"
-                            app:civ_border_width="4dp" />
+                            app:civ_border_width="4dp"
+                            app:imageUrl="@{menuViewModel.userData.userData.image}" />
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_user_login"
@@ -87,7 +87,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp8h"
-                            android:text="Mostafa Elnagar"
+                            android:text="@{menuViewModel.userData.userData.name}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 
@@ -112,6 +112,7 @@
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
                             android:text="@string/menuUsers"
+                            android:onClick="@{()-> menuViewModel.toUsers()}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 

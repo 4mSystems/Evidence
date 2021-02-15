@@ -456,13 +456,13 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.String viewmodelAddClientRequestClientTypeErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnitErrorGet = null;
         te.app.evidence.PassingObject viewmodelPassingObject = null;
-        boolean viewmodelPassingObjectJavaLangObjectNull = false;
         java.lang.String viewmodelAddClientRequestClientAddressErrorGet = null;
         java.lang.String viewmodelAddClientRequestType = null;
         java.lang.String viewmodelAddClientRequestClientNameErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnit = null;
         java.lang.String viewmodelAddClientRequestNotes = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNoteError = null;
+        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = null;
         java.lang.String viewmodelAddClientRequestClientCatErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientName = null;
         te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
@@ -470,9 +470,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.String viewmodelAddClientRequestCatName = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientCatError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientTypeError = null;
-        java.lang.String viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = null;
+        java.lang.Object viewmodelPassingObjectObjectClass = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNameError = null;
         java.lang.String viewmodelAddClientRequestClientAddress = null;
+        boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientAddressError = null;
         te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
 
@@ -487,10 +488,16 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     }
 
 
-                    // read viewmodel.passingObject == null
-                    viewmodelPassingObjectJavaLangObjectNull = (viewmodelPassingObject) == (null);
+                    if (viewmodelPassingObject != null) {
+                        // read viewmodel.passingObject.objectClass
+                        viewmodelPassingObjectObjectClass = viewmodelPassingObject.getObjectClass();
+                    }
+
+
+                    // read viewmodel.passingObject.objectClass == null
+                    viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
                 if((dirtyFlags & 0x1c0L) != 0) {
-                    if(viewmodelPassingObjectJavaLangObjectNull) {
+                    if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
                             dirtyFlags |= 0x400L;
                     }
                     else {
@@ -499,8 +506,8 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 }
 
 
-                    // read viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
-                    viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = ((viewmodelPassingObjectJavaLangObjectNull) ? (mboundView13.getResources().getString(R.string.add_new_client)) : (mboundView13.getResources().getString(R.string.edit_client)));
+                    // read viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+                    viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (mboundView13.getResources().getString(R.string.add_new_client)) : (mboundView13.getResources().getString(R.string.edit_client)));
             }
             if ((dirtyFlags & 0x17fL) != 0) {
 
@@ -649,7 +656,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         if ((dirtyFlags & 0x1c0L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView13, viewmodelPassingObjectJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView13, viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient);
         }
         if ((dirtyFlags & 0x141L) != 0) {
             // api target 1
@@ -741,8 +748,8 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         flag 6 (0x7L): viewmodel
         flag 7 (0x8L): viewmodel.passingObject
         flag 8 (0x9L): null
-        flag 9 (0xaL): viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 10 (0xbL): viewmodel.passingObject == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 9 (0xaL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 10 (0xbL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
     flag mapping end*/
     //end
 }

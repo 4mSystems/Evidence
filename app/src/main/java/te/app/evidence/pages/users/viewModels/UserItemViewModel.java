@@ -1,21 +1,24 @@
 package te.app.evidence.pages.users.viewModels;
 
+import androidx.databinding.Bindable;
+
 import te.app.evidence.base.BaseViewModel;
+import te.app.evidence.pages.users.models.SystemUserData;
+import te.app.evidence.utils.Constants;
 
 public class UserItemViewModel extends BaseViewModel {
-//    public QualificationsItem qualificationsItem;
-//
-//    public ItemProfileInfoViewModel(QualificationsItem qualificationsItem) {
-//        this.qualificationsItem = qualificationsItem;
-//    }
-//
-//    @Bindable
-//    public QualificationsItem getQualificationsItem() {
-//        return qualificationsItem;
-//    }
-//
-//    public void itemAction() {
-//        getLiveData().setValue(Constants.DELETE);
-//    }
+    public SystemUserData systemUserData;
 
+    public UserItemViewModel(SystemUserData qualificationsItem) {
+        this.systemUserData = qualificationsItem;
+    }
+
+    @Bindable
+    public SystemUserData getSystemUserData() {
+        return systemUserData;
+    }
+
+    public void toEdit() {
+        getLiveData().setValue(Constants.EDIT);
+    }
 }

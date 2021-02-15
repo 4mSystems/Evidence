@@ -418,5 +418,8 @@
     <string name="view_case">View case</string>
     <string name="add_new_note">New note</string>
     <string name="edit_note">Edit note</string>
+    <string name="admin">admin</string>
+    <string name="user">User</string>
+    <string name="edit_user">Edit user</string>
 
 </resources>

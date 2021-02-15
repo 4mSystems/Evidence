@@ -10,15 +10,15 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
 
 public abstract class FragmentClientsBinding extends ViewDataBinding {
   @NonNull
-  public final CustomEditText inputSearch;
+  public final TextInputEditText inputSearch;
 
   @NonNull
   public final RecyclerView rcClients;
@@ -27,7 +27,7 @@ public abstract class FragmentClientsBinding extends ViewDataBinding {
   protected ClientsViewModel mViewmodel;
 
   protected FragmentClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText inputSearch, RecyclerView rcClients) {
+      TextInputEditText inputSearch, RecyclerView rcClients) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.rcClients = rcClients;

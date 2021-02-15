@@ -199,8 +199,8 @@ public class ConnectionHelper {
                     public void onNext(JsonObject response) {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
-                        StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                         try {
+                            StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                             if (statusMessage.code == Constants.RESPONSE_SUCCESS)
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
@@ -208,7 +208,6 @@ public class ConnectionHelper {
                             else if (statusMessage.code == Constants.RESPONSE_404)
                                 liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
                             else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
-                                Log.e(TAG, "onNext: " + response.toString());
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             } else
                                 liveData.setValue(new Mutable(Constants.ERROR, statusMessage.mMessage));

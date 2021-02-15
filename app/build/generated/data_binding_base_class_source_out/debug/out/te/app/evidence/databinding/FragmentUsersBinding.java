@@ -9,17 +9,23 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.users.viewModels.UsersViewModel;
 
 public abstract class FragmentUsersBinding extends ViewDataBinding {
+  @NonNull
+  public final RecyclerView rcUsers;
+
   @Bindable
   protected UsersViewModel mViewmodel;
 
-  protected FragmentUsersBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentUsersBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      RecyclerView rcUsers) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.rcUsers = rcUsers;
   }
 
   public abstract void setViewmodel(@Nullable UsersViewModel viewmodel);

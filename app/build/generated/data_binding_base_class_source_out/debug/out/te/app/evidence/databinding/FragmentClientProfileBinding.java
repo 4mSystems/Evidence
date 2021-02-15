@@ -13,10 +13,10 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
@@ -62,7 +62,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
   public final CustomTextViewRegular clientTypeValue;
 
   @NonNull
-  public final CustomEditText inputSearch;
+  public final TextInputEditText inputSearch;
 
   @NonNull
   public final RecyclerView rcNotes;
@@ -98,7 +98,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
       CustomTextViewRegular clientNameText, CustomTextViewRegular clientNameValue,
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
       AppCompatButton clientNotes, CustomTextViewRegular clientTypeText,
-      CustomTextViewRegular clientTypeValue, CustomEditText inputSearch, RecyclerView rcNotes,
+      CustomTextViewRegular clientTypeValue, TextInputEditText inputSearch, RecyclerView rcNotes,
       CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v2, View v3, View v4,
       View v5, View v6) {
     super(_bindingComponent, _root, _localFieldCount);

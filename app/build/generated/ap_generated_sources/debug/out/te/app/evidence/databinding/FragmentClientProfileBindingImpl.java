@@ -31,18 +31,18 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
     private final com.github.clans.fab.FloatingActionButton mboundView10;
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
     private final android.view.View.OnClickListener mCallback25;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -65,7 +65,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[24]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[24]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
@@ -81,7 +81,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.clientNoteValue.setTag(null);
         this.clientNotes.setTag(null);
         this.clientTypeValue.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView10 = (com.github.clans.fab.FloatingActionButton) bindings[10];
         this.mboundView10.setTag(null);
@@ -91,9 +91,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -307,9 +307,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback24);
-            this.clientNotes.setOnClickListener(mCallback23);
-            this.mboundView10.setOnClickListener(mCallback25);
+            this.clientCases.setOnClickListener(mCallback26);
+            this.clientNotes.setOnClickListener(mCallback25);
+            this.mboundView10.setOnClickListener(mCallback27);
         }
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
@@ -326,6 +326,23 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toNewNote();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -357,23 +374,6 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
 
 
                     viewmodel.cases();
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toNewNote();
                 }
                 break;
             }

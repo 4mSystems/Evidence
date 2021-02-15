@@ -6,10 +6,10 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.evidence.pages.home.viewModels.SessionItemViewModel" />
+            type="te.app.evidence.pages.users.viewModels.UserItemViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -36,33 +36,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp8w"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_qualifications"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_username"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_qualifications"
+                    app:layout_constraintTop_toTopOf="@+id/tv_username"
                     app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_qualifications"
+                    android:id="@+id/tv_username"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dp6h"
-                    android:text="@string/user_name"
+                    android:text="@{itemViewModel.systemUserData.name}"
                     android:textAlignment="viewStart"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.github.florent37.expansionpanel.ExpansionHeader>
 
-        <View
-            android:id="@+id/v1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/dp8h"
-            android:background="@color/line_color"
-            app:layout_constraintTop_toBottomOf="@id/layout_session_header" />
 
         <com.github.florent37.expansionpanel.ExpansionLayout
             android:id="@+id/expansionLayoutSessions"
@@ -79,90 +81,147 @@
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/email_text"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp25w"
-                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:layout_marginEnd="@dimen/dp4w"
                     android:text="@string/email"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimary"
-                    app:layout_constraintEnd_toStartOf="@id/email_value"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/email_value"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="Melnagar271@gmail.com"
+                    android:text="@{itemViewModel.systemUserData.email}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/email_text"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <View
                     android:id="@+id/v2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:background="@color/line_color"
                     app:layout_constraintTop_toBottomOf="@id/email_text" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/user_type_text"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp25w"
-                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:layout_marginEnd="@dimen/dp4w"
                     android:text="@string/user_type"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimary"
-                    app:layout_constraintEnd_toStartOf="@id/user_type_value"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/v2" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/user_type_value"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="Admin"
+                    android:text="@{itemViewModel.systemUserData.type}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/user_type_text"
                     app:layout_constraintTop_toBottomOf="@+id/v2" />
 
                 <View
                     android:id="@+id/v3"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="@dimen/dp8h"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:background="@color/line_color"
                     app:layout_constraintTop_toBottomOf="@id/user_type_text" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
-                    android:id="@+id/control_text"
-                    android:layout_width="0dp"
+                    android:id="@+id/user_phone_text"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp25w"
-                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginTop="@dimen/dp12h"
                     android:layout_marginEnd="@dimen/dp4w"
-                    android:text="@string/control"
+                    android:text="@string/phone"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/colorPrimary"
-                    app:layout_constraintBottom_toBottomOf="@+id/permission"
-                    app:layout_constraintEnd_toStartOf="@+id/edit"
-                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/permission" />
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/user_phone_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="@{itemViewModel.systemUserData.phone}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/user_phone_text"
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                <View
+                    android:id="@+id/v4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/user_phone_text" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/user_address_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/client_address"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v4" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/user_address_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="@{itemViewModel.systemUserData.address}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/user_address_text"
+                    app:layout_constraintTop_toBottomOf="@+id/v4" />
+
+                <View
+                    android:id="@+id/v5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/user_address_text" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/permission"
@@ -178,7 +237,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/delete"
-                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+                    app:layout_constraintTop_toBottomOf="@+id/v5" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/delete"
@@ -195,7 +254,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/permission"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toEndOf="@+id/edit"
-                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+                    app:layout_constraintTop_toBottomOf="@+id/v5" />
 
                 <te.app.evidence.customViews.views.CustomTextViewRegular
                     android:id="@+id/edit"
@@ -203,18 +262,33 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp6h"
                     android:drawableTop="@drawable/ic_user_edit"
+                    android:onClick="@{()-> itemViewModel.toEdit()}"
                     android:text="@string/edit"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toStartOf="@+id/delete"
                     app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/control_text"
-                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v5" />
 
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/br5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="edit,delete,permission" />
+
+                <View
+                    android:id="@+id/v8"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/br5" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.github.florent37.expansionpanel.ExpansionLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

@@ -9,17 +9,27 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.users.viewModels.AddUserViewModel;
 
 public abstract class FragmentAddUserBinding extends ViewDataBinding {
+  @NonNull
+  public final TextInputEditText catName;
+
+  @NonNull
+  public final TextInputEditText userType;
+
   @Bindable
   protected AddUserViewModel mViewmodel;
 
-  protected FragmentAddUserBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentAddUserBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      TextInputEditText catName, TextInputEditText userType) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.catName = catName;
+    this.userType = userType;
   }
 
   public abstract void setViewmodel(@Nullable AddUserViewModel viewmodel);

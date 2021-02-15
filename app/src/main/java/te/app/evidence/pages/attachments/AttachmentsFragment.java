@@ -35,7 +35,6 @@ public class AttachmentsFragment extends BaseFragment {
         FragmentAttachmentsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_attachments, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        viewModel.setServices();
         binding.setViewmodel(viewModel);
         setEvent();
         return binding.getRoot();

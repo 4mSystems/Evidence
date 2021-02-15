@@ -25,13 +25,11 @@ public class AddClientViewModel extends BaseViewModel {
     AddClientRequest addClientRequest;
     @Inject
     ClientsRepository clientsRepository;
-    List<CategoriesData> categoriesDataList;
     Clients clients;
 
     @Inject
     public AddClientViewModel(ClientsRepository clientsRepository) {
         clients = new Clients();
-        categoriesDataList = new ArrayList<>();
         this.clientsRepository = clientsRepository;
         this.liveData = new MutableLiveData<>();
         clientsRepository.setLiveData(liveData);
@@ -45,7 +43,7 @@ public class AddClientViewModel extends BaseViewModel {
 
     public void addNewClient() {
         if (getAddClientRequest().isValid())
-            if (getPassingObject() == null)
+            if (getPassingObject().getObjectClass() == null)
                 compositeDisposable.add(clientsRepository.addNewClient(getAddClientRequest()));
             else
                 compositeDisposable.add(clientsRepository.editClient(getAddClientRequest()));
@@ -69,14 +67,6 @@ public class AddClientViewModel extends BaseViewModel {
 
     public ClientsRepository getClientsRepository() {
         return clientsRepository;
-    }
-
-    public List<CategoriesData> getCategoriesDataList() {
-        return categoriesDataList;
-    }
-
-    public void setCategoriesDataList(List<CategoriesData> categoriesDataList) {
-        this.categoriesDataList = categoriesDataList;
     }
 
     @Bindable

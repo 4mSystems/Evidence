@@ -1,29 +1,35 @@
 package te.app.evidence.pages.attachments.viewModels;
 
-import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.repository.AttachmentsRepository;
 
 public class AttachmentsViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    AttachmentsRepository attachmentsRepository;
 
     @Inject
-    public AttachmentsViewModel() {
+    public AttachmentsViewModel(AttachmentsRepository attachmentsRepository) {
+        this.attachmentsRepository = attachmentsRepository;
         this.liveData = new MutableLiveData<>();
+        attachmentsRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+    public void attachments() {
+        compositeDisposable.add(attachmentsRepository.getAttachments());
     }
 
+    public AttachmentsRepository getAttachmentsRepository() {
+        return attachmentsRepository;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -31,32 +37,9 @@ public class AttachmentsViewModel extends BaseViewModel {
         }
     }
 
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();
         unSubscribeFromObservable();
-    }
-
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
     }
 }

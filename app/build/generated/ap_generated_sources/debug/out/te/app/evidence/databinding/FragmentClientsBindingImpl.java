@@ -18,12 +18,12 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
     private final com.github.clans.fab.FloatingActionButton mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -33,17 +33,17 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     }
     private FragmentClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[3]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
         this.mboundView2.setTag(null);
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,7 +134,7 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback21);
+            this.mboundView2.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

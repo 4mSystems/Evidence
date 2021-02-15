@@ -26,15 +26,13 @@ import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentAddClientBinding;
-import te.app.evidence.databinding.FragmentAddUserBinding;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
-import te.app.evidence.pages.users.viewModels.AddUserViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.PopUp.PopUp;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
 import te.app.evidence.utils.helper.MovementHelper;
 
@@ -89,13 +87,13 @@ public class AddClientFragment extends BaseFragment {
     }
 
     private void showClientsType() {
-        List<String> typeList = new ArrayList<>();
-        typeList.add(getString(R.string.client_add));
-        typeList.add(getString(R.string.khesm));
+        List<PopUp> typeList = new ArrayList<>();
+        typeList.add(new PopUp(getString(R.string.client_add), 1));
+        typeList.add(new PopUp(getString(R.string.khesm), 2));
         PopUpMenuHelper.showPopUp(context, binding.clientType, typeList).
                 setOnMenuItemClickListener(item -> {
-                    binding.clientType.setText(typeList.get(item.getItemId()));
-                    viewModel.getAddClientRequest().setType(String.valueOf(typeList.get(item.getItemId())));
+                    binding.clientType.setText(typeList.get(item.getItemId()).getName());
+                    viewModel.getAddClientRequest().setType(String.valueOf(typeList.get(item.getItemId()).getId()));
                     return false;
                 });
     }

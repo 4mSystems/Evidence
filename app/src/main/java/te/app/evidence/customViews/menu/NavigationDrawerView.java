@@ -16,6 +16,7 @@ import te.app.evidence.customViews.actionbar.HomeActionBarView;
 import te.app.evidence.databinding.LayoutNavigationDrawerBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.clients.ClientsFragment;
+import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -65,8 +66,9 @@ public class NavigationDrawerView extends RelativeLayout {
     private void setEvents() {
         menuViewModel.getLiveData().observe(context, o -> {
             if (o.equals(Constants.CLIENTS)) {
-                homeActionBarView.setTitle(ResourceManager.getString(R.string.clients));
-                MovementHelper.replaceFragment(context, new ClientsFragment(), "");
+                MovementHelper.startActivity(context, ClientsFragment.class.getName(), ResourceManager.getString(R.string.clients), null);
+            } else if (o.equals(Constants.USERS)) {
+                MovementHelper.startActivity(context, UsersFragment.class.getName(), ResourceManager.getString(R.string.menuUsers), null);
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });
