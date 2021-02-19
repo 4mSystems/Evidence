@@ -22,7 +22,7 @@ public class AddUserRequest {
     private String type;
     @SerializedName("cat_id")
     private String cat_id;
-    @SerializedName("id")
+    @SerializedName("user_id")
     private String id;
 
     public ObservableField<String> userNameError = new ObservableField<>();
@@ -46,6 +46,30 @@ public class AddUserRequest {
             valid = false;
         } else if (!Validate.isValid(password, Constants.FIELD)) {
             passwordError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(address, Constants.FIELD)) {
+            userAddressError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(type, Constants.FIELD)) {
+            typeError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(cat_id, Constants.FIELD)) {
+            catError.set(Validate.error);
+            valid = false;
+        }
+        return valid;
+    }
+
+    public boolean isUpdateValid() {
+        boolean valid = true;
+        if (!Validate.isValid(name, Constants.FIELD)) {
+            userNameError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+            phoneError.set(Validate.error);
             valid = false;
         } else if (!Validate.isValid(address, Constants.FIELD)) {
             userAddressError.set(Validate.error);

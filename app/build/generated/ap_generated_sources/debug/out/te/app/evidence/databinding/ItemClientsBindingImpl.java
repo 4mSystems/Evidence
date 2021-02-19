@@ -35,11 +35,11 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     private final android.widget.LinearLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback8;
+    private final android.view.View.OnClickListener mCallback17;
     @Nullable
-    private final android.view.View.OnClickListener mCallback6;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
-    private final android.view.View.OnClickListener mCallback7;
+    private final android.view.View.OnClickListener mCallback16;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -85,9 +85,9 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback17 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback16 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -206,9 +206,9 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback7);
-            this.edit.setOnClickListener(mCallback8);
-            this.permission.setOnClickListener(mCallback6);
+            this.delete.setOnClickListener(mCallback16);
+            this.edit.setOnClickListener(mCallback17);
+            this.permission.setOnClickListener(mCallback15);
         }
     }
     // Listener Stub Implementations

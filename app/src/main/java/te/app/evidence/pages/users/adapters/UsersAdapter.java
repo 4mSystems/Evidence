@@ -22,6 +22,7 @@ import te.app.evidence.databinding.ItemUserBinding;
 import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.users.AddUserFragment;
+import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.pages.users.models.SystemUserData;
 import te.app.evidence.pages.users.viewModels.UserItemViewModel;
 import te.app.evidence.utils.Constants;
@@ -60,8 +61,8 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
             lastSelected = position;
             if (o.equals(Constants.EDIT)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(user), ResourceManager.getString(R.string.edit_user), AddUserFragment.class.getName(), null);
-            } else if (o.equals(Constants.CLIENT_PROFILE)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(user), ResourceManager.getString(R.string.client_profile), ClientProfileFragment.class.getName(), null);
+            } else if (o.equals(Constants.USER_PERMISSION)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(user.getId()), ResourceManager.getString(R.string.user_permission), UserPermissionsFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {
                 actionLiveData.setValue(o);
             }

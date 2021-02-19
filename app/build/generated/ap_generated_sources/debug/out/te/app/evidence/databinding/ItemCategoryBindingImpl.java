@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
+public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -13,15 +13,16 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.cat_name, 1);
-        sViewsWithIds.put(R.id.delete, 2);
-        sViewsWithIds.put(R.id.edit, 3);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback32;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -32,20 +33,25 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
     private ItemCategoryBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             );
+        this.catName.setTag(null);
+        this.delete.setTag(null);
+        this.edit.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -73,7 +79,13 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
     }
 
     public void setItemViewModel(@Nullable te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel ItemViewModel) {
+        updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -91,6 +103,12 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.categoriesData) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -101,15 +119,84 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.categories.models.CategoriesData itemViewModelCategoriesData = null;
+        java.lang.String itemViewModelCategoriesDataName = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemViewModel != null) {
+                    // read itemViewModel.categoriesData
+                    itemViewModelCategoriesData = itemViewModel.getCategoriesData();
+                }
+
+
+                if (itemViewModelCategoriesData != null) {
+                    // read itemViewModel.categoriesData.name
+                    itemViewModelCategoriesDataName = itemViewModelCategoriesData.getName();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, itemViewModelCategoriesDataName);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.delete.setOnClickListener(mCallback32);
+            this.edit.setOnClickListener(mCallback33);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toEdit();
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemViewModel.categoriesData
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

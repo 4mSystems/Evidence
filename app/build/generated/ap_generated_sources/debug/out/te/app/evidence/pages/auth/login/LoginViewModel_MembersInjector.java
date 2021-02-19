@@ -19,7 +19,8 @@ public final class LoginViewModel_MembersInjector implements MembersInjector<Log
 
   public static MembersInjector<LoginViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new LoginViewModel_MembersInjector(repositoryProvider);}
+    return new LoginViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(LoginViewModel instance) {

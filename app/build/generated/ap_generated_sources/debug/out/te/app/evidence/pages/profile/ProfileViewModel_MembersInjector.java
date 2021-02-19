@@ -19,7 +19,8 @@ public final class ProfileViewModel_MembersInjector implements MembersInjector<P
 
   public static MembersInjector<ProfileViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new ProfileViewModel_MembersInjector(repositoryProvider);}
+    return new ProfileViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(ProfileViewModel instance) {

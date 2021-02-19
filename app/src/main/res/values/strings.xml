@@ -425,5 +425,9 @@
     <string name="admin">admin</string>
     <string name="user">User</string>
     <string name="edit_user">Edit user</string>
+    <string name="add_case">Add case</string>
+    <string name="search_case">Search case</string>
+    <string name="cat_search_hint">Looking for category ?</string>
+    <string name="edit_category">Edit category</string>
 
 </resources>

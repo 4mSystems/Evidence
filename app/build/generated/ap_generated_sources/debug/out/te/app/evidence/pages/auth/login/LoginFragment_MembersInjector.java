@@ -17,7 +17,8 @@ public final class LoginFragment_MembersInjector implements MembersInjector<Logi
   }
 
   public static MembersInjector<LoginFragment> create(Provider<LoginViewModel> viewModelProvider) {
-    return new LoginFragment_MembersInjector(viewModelProvider);}
+    return new LoginFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(LoginFragment instance) {

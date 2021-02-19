@@ -20,7 +20,8 @@ public final class MainActivity_MembersInjector implements MembersInjector<MainA
 
   public static MembersInjector<MainActivity> create(
       Provider<MutableLiveData<Mutable>> liveDataProvider) {
-    return new MainActivity_MembersInjector(liveDataProvider);}
+    return new MainActivity_MembersInjector(liveDataProvider);
+  }
 
   @Override
   public void injectMembers(MainActivity instance) {

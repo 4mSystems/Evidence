@@ -14,20 +14,18 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 7);
-        sViewsWithIds.put(R.id.icon_down_qu, 8);
-        sViewsWithIds.put(R.id.v1, 9);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 10);
-        sViewsWithIds.put(R.id.email_text, 11);
-        sViewsWithIds.put(R.id.v2, 12);
-        sViewsWithIds.put(R.id.user_type_text, 13);
-        sViewsWithIds.put(R.id.v3, 14);
-        sViewsWithIds.put(R.id.user_phone_text, 15);
-        sViewsWithIds.put(R.id.v4, 16);
-        sViewsWithIds.put(R.id.user_address_text, 17);
-        sViewsWithIds.put(R.id.v5, 18);
-        sViewsWithIds.put(R.id.permission, 19);
-        sViewsWithIds.put(R.id.delete, 20);
+        sViewsWithIds.put(R.id.layout_session_header, 9);
+        sViewsWithIds.put(R.id.icon_down_qu, 10);
+        sViewsWithIds.put(R.id.v1, 11);
+        sViewsWithIds.put(R.id.expansionLayoutSessions, 12);
+        sViewsWithIds.put(R.id.email_text, 13);
+        sViewsWithIds.put(R.id.v2, 14);
+        sViewsWithIds.put(R.id.user_type_text, 15);
+        sViewsWithIds.put(R.id.v3, 16);
+        sViewsWithIds.put(R.id.user_phone_text, 17);
+        sViewsWithIds.put(R.id.v4, 18);
+        sViewsWithIds.put(R.id.user_address_text, 19);
+        sViewsWithIds.put(R.id.v5, 20);
         sViewsWithIds.put(R.id.br5, 21);
         sViewsWithIds.put(R.id.v8, 22);
     }
@@ -36,7 +34,11 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     private final android.widget.LinearLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback43;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback42;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback44;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,39 +49,43 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     private ItemUserBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.constraintlayout.widget.Barrier) bindings[21]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[20]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[10]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
+            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[12]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
+            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[12]
+            , (android.view.View) bindings[11]
             , (android.view.View) bindings[14]
             , (android.view.View) bindings[16]
             , (android.view.View) bindings[18]
+            , (android.view.View) bindings[20]
             , (android.view.View) bindings[22]
             );
+        this.delete.setTag(null);
         this.edit.setTag(null);
         this.emailValue.setTag(null);
         this.mboundView0 = (android.widget.LinearLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.permission.setTag(null);
         this.tvUsername.setTag(null);
         this.userAddressValue.setTag(null);
         this.userPhoneValue.setTag(null);
         this.userTypeValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -189,7 +195,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.edit.setOnClickListener(mCallback28);
+            this.delete.setOnClickListener(mCallback43);
+            this.edit.setOnClickListener(mCallback44);
+            this.permission.setOnClickListener(mCallback42);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -204,19 +212,58 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // itemViewModel
-        te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
-        // itemViewModel != null
-        boolean itemViewModelJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
 
 
 
-        itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-        if (itemViewModelJavaLangObjectNull) {
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
 
 
-            itemViewModel.toEdit();
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toUserPermission();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toEdit();
+                }
+                break;
+            }
         }
     }
     // dirty flag

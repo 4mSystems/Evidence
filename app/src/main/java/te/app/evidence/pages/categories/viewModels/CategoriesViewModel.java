@@ -6,41 +6,52 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.categories.adapters.CategoriesAdapter;
+import te.app.evidence.repository.CategoriesRepository;
+import te.app.evidence.utils.Constants;
 
 public class CategoriesViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    CategoriesRepository categoriesRepository;
+    CategoriesAdapter categoriesAdapter;
 
     @Inject
-    public CategoriesViewModel() {
+    public CategoriesViewModel(CategoriesRepository categoriesRepository) {
+        this.categoriesRepository = categoriesRepository;
         this.liveData = new MutableLiveData<>();
+        categoriesRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+    public void categories() {
+        compositeDisposable.add(categoriesRepository.getCategories());
     }
 
+    public void deleteCategory() {
+        compositeDisposable.add(categoriesRepository.deleteCategory(getCategoriesAdapter().getCategoriesDataList().get(getCategoriesAdapter().lastSelected).getId()));
+    }
+
+    public void addNewCategory() {
+        liveData.setValue(new Mutable(Constants.ADD_CATEGORY));
+    }
+
+    @Bindable
+    public CategoriesAdapter getCategoriesAdapter() {
+        return this.categoriesAdapter == null ? this.categoriesAdapter = new CategoriesAdapter() : this.categoriesAdapter;
+    }
+
+    public CategoriesRepository getCategoriesRepository() {
+        return categoriesRepository;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();
         }
-    }
-
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
     }
 
     @Override
@@ -49,14 +60,4 @@ public class CategoriesViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
-    }
 }

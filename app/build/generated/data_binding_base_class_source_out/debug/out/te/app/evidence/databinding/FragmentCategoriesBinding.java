@@ -9,23 +9,23 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.pages.categories.viewModels.CategoriesViewModel;
 
 public abstract class FragmentCategoriesBinding extends ViewDataBinding {
   @NonNull
-  public final CustomEditText inputSearch;
+  public final RecyclerView rcCat;
 
   @Bindable
   protected CategoriesViewModel mViewmodel;
 
   protected FragmentCategoriesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText inputSearch) {
+      RecyclerView rcCat) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.inputSearch = inputSearch;
+    this.rcCat = rcCat;
   }
 
   public abstract void setViewmodel(@Nullable CategoriesViewModel viewmodel);

@@ -19,7 +19,8 @@ public final class ConfirmViewModel_MembersInjector implements MembersInjector<C
 
   public static MembersInjector<ConfirmViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new ConfirmViewModel_MembersInjector(repositoryProvider);}
+    return new ConfirmViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(ConfirmViewModel instance) {

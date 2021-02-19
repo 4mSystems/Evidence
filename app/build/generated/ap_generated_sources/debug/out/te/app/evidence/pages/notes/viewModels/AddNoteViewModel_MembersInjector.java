@@ -19,7 +19,8 @@ public final class AddNoteViewModel_MembersInjector implements MembersInjector<A
 
   public static MembersInjector<AddNoteViewModel> create(
       Provider<NotesRepository> notesRepositoryProvider) {
-    return new AddNoteViewModel_MembersInjector(notesRepositoryProvider);}
+    return new AddNoteViewModel_MembersInjector(notesRepositoryProvider);
+  }
 
   @Override
   public void injectMembers(AddNoteViewModel instance) {

@@ -19,7 +19,8 @@ public final class AddClientViewModel_MembersInjector implements MembersInjector
 
   public static MembersInjector<AddClientViewModel> create(
       Provider<ClientsRepository> clientsRepositoryProvider) {
-    return new AddClientViewModel_MembersInjector(clientsRepositoryProvider);}
+    return new AddClientViewModel_MembersInjector(clientsRepositoryProvider);
+  }
 
   @Override
   public void injectMembers(AddClientViewModel instance) {

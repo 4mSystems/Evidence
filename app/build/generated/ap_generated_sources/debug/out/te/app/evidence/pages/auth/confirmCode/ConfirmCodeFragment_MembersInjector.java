@@ -18,7 +18,8 @@ public final class ConfirmCodeFragment_MembersInjector implements MembersInjecto
 
   public static MembersInjector<ConfirmCodeFragment> create(
       Provider<ConfirmViewModel> viewModelProvider) {
-    return new ConfirmCodeFragment_MembersInjector(viewModelProvider);}
+    return new ConfirmCodeFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(ConfirmCodeFragment instance) {

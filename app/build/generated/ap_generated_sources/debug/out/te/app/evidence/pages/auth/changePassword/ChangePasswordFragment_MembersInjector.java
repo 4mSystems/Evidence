@@ -19,7 +19,8 @@ public final class ChangePasswordFragment_MembersInjector implements MembersInje
 
   public static MembersInjector<ChangePasswordFragment> create(
       Provider<ChangePasswordViewModel> viewModelProvider) {
-    return new ChangePasswordFragment_MembersInjector(viewModelProvider);}
+    return new ChangePasswordFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(ChangePasswordFragment instance) {

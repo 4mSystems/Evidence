@@ -19,7 +19,8 @@ public final class ForgetPasswordViewModel_MembersInjector implements MembersInj
 
   public static MembersInjector<ForgetPasswordViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new ForgetPasswordViewModel_MembersInjector(repositoryProvider);}
+    return new ForgetPasswordViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(ForgetPasswordViewModel instance) {

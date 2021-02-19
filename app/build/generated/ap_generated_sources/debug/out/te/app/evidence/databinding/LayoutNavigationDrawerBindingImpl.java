@@ -14,11 +14,22 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.dl_main_navigation_menu, 5);
-        sViewsWithIds.put(R.id.rl_navigation_drawer, 6);
-        sViewsWithIds.put(R.id.ll_base_action_bar_container, 7);
-        sViewsWithIds.put(R.id.fl_home_container, 8);
-        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 9);
+        sViewsWithIds.put(R.id.dl_main_navigation_menu, 7);
+        sViewsWithIds.put(R.id.rl_navigation_drawer, 8);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 9);
+        sViewsWithIds.put(R.id.fl_home_container, 10);
+        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 11);
+        sViewsWithIds.put(R.id.layout_cases_header, 12);
+        sViewsWithIds.put(R.id.icon_down_case, 13);
+        sViewsWithIds.put(R.id.tv_case, 14);
+        sViewsWithIds.put(R.id.expansionLayoutCases, 15);
+        sViewsWithIds.put(R.id.search_case, 16);
+        sViewsWithIds.put(R.id.layout_reports_header, 17);
+        sViewsWithIds.put(R.id.icon_down_qu, 18);
+        sViewsWithIds.put(R.id.tv_username, 19);
+        sViewsWithIds.put(R.id.expansionLayoutReports, 20);
+        sViewsWithIds.put(R.id.daily_reports, 21);
+        sViewsWithIds.put(R.id.monthly_reports, 22);
     }
     // views
     @NonNull
@@ -27,40 +38,63 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView3;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView4;
+    @NonNull
+    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
+    private final android.view.View.OnClickListener mCallback37;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback35;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback36;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback34;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public LayoutNavigationDrawerBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
     }
     private LayoutNavigationDrawerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.drawerlayout.widget.DrawerLayout) bindings[5]
-            , (android.widget.FrameLayout) bindings[8]
-            , (android.widget.LinearLayout) bindings[7]
-            , (android.widget.RelativeLayout) bindings[6]
-            , (android.widget.RelativeLayout) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
+            , (androidx.drawerlayout.widget.DrawerLayout) bindings[7]
+            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[15]
+            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[20]
+            , (android.widget.FrameLayout) bindings[10]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[18]
+            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[12]
+            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[17]
+            , (android.widget.LinearLayout) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[22]
+            , (android.widget.RelativeLayout) bindings[8]
+            , (android.widget.RelativeLayout) bindings[11]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[19]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
             );
+        this.addCase.setTag(null);
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView3 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView4 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4];
         this.mboundView4.setTag(null);
+        this.mboundView6 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6];
+        this.mboundView6.setTag(null);
         this.tvUserLogin.setTag(null);
         this.vvNavigationDrawerImage.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -130,10 +164,10 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
             mDirtyFlags = 0;
         }
         te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+        java.lang.String menuViewModelUserDataUserDataImage = null;
         te.app.evidence.pages.auth.models.UserData menuViewModelUserDataUserData = null;
         te.app.evidence.pages.auth.models.UserMainData menuViewModelUserData = null;
         java.lang.String menuViewModelUserDataUserDataName = null;
-        java.lang.String menuViewModelUserDataUserDataImage = null;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -152,18 +186,20 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                 if (menuViewModelUserDataUserData != null) {
-                    // read menuViewModel.userData.userData.name
-                    menuViewModelUserDataUserDataName = menuViewModelUserDataUserData.getName();
                     // read menuViewModel.userData.userData.image
                     menuViewModelUserDataUserDataImage = menuViewModelUserDataUserData.getImage();
+                    // read menuViewModel.userData.userData.name
+                    menuViewModelUserDataUserDataName = menuViewModelUserDataUserData.getName();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback23);
-            this.mboundView4.setOnClickListener(mCallback24);
+            this.addCase.setOnClickListener(mCallback36);
+            this.mboundView3.setOnClickListener(mCallback34);
+            this.mboundView4.setOnClickListener(mCallback35);
+            this.mboundView6.setOnClickListener(mCallback37);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -176,7 +212,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 4: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -189,7 +225,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 if (menuViewModelJavaLangObjectNull) {
 
 
-                    menuViewModel.toUsers();
+                    menuViewModel.toCategories();
                 }
                 break;
             }
@@ -207,6 +243,40 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                     menuViewModel.toClients();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.addCase();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.toUsers();
                 }
                 break;
             }

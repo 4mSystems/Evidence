@@ -72,6 +72,7 @@ animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
 animator out_animation
+array letter_tile_colors
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -130,6 +131,7 @@ attr autoSizePresetSizes
 attr autoSizeStepGranularity
 attr autoSizeTextType
 attr autoTransition
+attr avatarIcon
 attr backStrokeColor
 attr background
 attr backgroundColor
@@ -231,6 +233,15 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr chip_backgroundColor
+attr chip_deletable
+attr chip_deleteIcon
+attr chip_deleteIconColor
+attr chip_detailed_backgroundColor
+attr chip_detailed_deleteIconColor
+attr chip_detailed_textColor
+attr chip_hasAvatarIcon
+attr chip_labelColor
 attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
@@ -348,6 +359,9 @@ attr dayTodayStyle
 attr defaultDuration
 attr defaultQueryHint
 attr defaultState
+attr deletable
+attr deleteIcon
+attr deleteIconColor
 attr deltaPolarAngle
 attr deltaPolarRadius
 attr deriveConstraintsFrom
@@ -450,6 +464,8 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr filterable_list_backgroundColor
+attr filterable_list_textColor
 attr firstBaselineToTopHeight
 attr floatingActionButtonStyle
 attr flow_firstHorizontalBias
@@ -491,6 +507,7 @@ attr goIcon
 attr gravity
 attr haloColor
 attr haloRadius
+attr hasAvatarIcon
 attr headerLayout
 attr height
 attr helperText
@@ -502,7 +519,9 @@ attr hideLineWhenFilled
 attr hideMotionSpec
 attr hideOnContentScroll
 attr hideOnScroll
+attr hint
 attr hintAnimationEnabled
+attr hintColor
 attr hintEnabled
 attr hintTextAppearance
 attr hintTextColor
@@ -565,7 +584,9 @@ attr itemWidth
 attr keyPositionType
 attr keyboardIcon
 attr keylines
+attr label
 attr labelBehavior
+attr labelColor
 attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
@@ -659,6 +680,7 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr lottieAnimationViewStyle
 attr lottie_autoPlay
 attr lottie_cacheComposition
 attr lottie_colorFilter
@@ -710,6 +732,7 @@ attr maxCharacterCount
 attr maxHeight
 attr maxImageSize
 attr maxLines
+attr maxRows
 attr maxVelocity
 attr maxWidth
 attr measureWithLargestChild
@@ -882,6 +905,7 @@ attr shapeAppearanceOverlay
 attr shapeAppearanceSmallComponent
 attr showAnimationBehavior
 attr showAsAction
+attr showChipDetailed
 attr showDelay
 attr showDividers
 attr showMotionSpec
@@ -1011,6 +1035,7 @@ attr textAppearanceSearchResultTitle
 attr textAppearanceSmallPopupMenu
 attr textAppearanceSubtitle1
 attr textAppearanceSubtitle2
+attr textColor
 attr textColorAlertDialogListItem
 attr textColorSearchUrl
 attr textEndPadding
@@ -1166,8 +1191,11 @@ color cat_background
 color checkbox_color
 color checkbox_themeable_attribute_color
 color checkbox_unchecked_color
+color chips_opened_bg
 color circle_shadow
 color colorAccent
+color colorChipViewBackground
+color colorCloseChip
 color colorLight
 color colorPrimary
 color colorPrimaryDark
@@ -1384,6 +1412,7 @@ color tooltip_background_light
 color transparent_black
 color warningColor
 color white
+color white_transparency
 color zxing_transparent
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -2566,6 +2595,7 @@ dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
 dimen labels_text_size
+dimen letter_tile_size
 dimen material_clock_display_padding
 dimen material_clock_face_margin_top
 dimen material_clock_hand_center_dot_radius
@@ -2902,6 +2932,7 @@ dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
+dimen tile_letter_font_size
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2996,8 +3027,11 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable avatar
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_chip_view
+drawable bg_chip_view_opened
 drawable board
 drawable board1
 drawable board2
@@ -3063,6 +3097,8 @@ drawable ic_auth_phone
 drawable ic_back
 drawable ic_calendar
 drawable ic_camera
+drawable ic_cancel_grey_24dp
+drawable ic_cancel_white_24dp
 drawable ic_cases
 drawable ic_categories
 drawable ic_check_white_24dp
@@ -3089,6 +3125,8 @@ drawable ic_no_wifi_2
 drawable ic_pdf
 drawable ic_permission_off
 drawable ic_permission_on
+drawable ic_person_outline_white_24dp
+drawable ic_person_white_24dp
 drawable ic_play_icon
 drawable ic_reports
 drawable ic_search
@@ -3141,6 +3179,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable ripple_chip_view
 drawable round_circle
 drawable rounded_view_primary_dark
 drawable splash
@@ -3223,6 +3262,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_case
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3244,6 +3284,8 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id automatic
+id avatar
+id avatar_icon
 id back_and_forth
 id barrier
 id baseline
@@ -3261,6 +3303,7 @@ id br4
 id br5
 id btn_airplane_off
 id btn_mobile_on
+id btn_save
 id btn_wifi_on
 id buttonPanel
 id cache_measures
@@ -3279,6 +3322,9 @@ id chip1
 id chip2
 id chip3
 id chip_group
+id chips_input_clients
+id chips_input_khesm
+id chips_recycler
 id chronometer
 id circle_center
 id clear_text
@@ -3315,6 +3361,7 @@ id court_value
 id custom
 id customPanel
 id cut
+id daily_reports
 id dark
 id dataBinding
 id date_picker_actions
@@ -3323,6 +3370,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id delete
+id delete_button
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3365,7 +3413,9 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id expansionLayoutCases
 id expansionLayoutClients
+id expansionLayoutReports
 id expansionLayoutSessions
 id fab_label
 id fade
@@ -3420,6 +3470,7 @@ id honorRequest
 id horizontal
 id ib_close
 id icon
+id icon_down_case
 id icon_down_qu
 id icon_group
 id icon_only
@@ -3433,6 +3484,7 @@ id img_airplane
 id img_home_bar_menu
 id img_login_logo
 id info
+id info_layout
 id input_confirm_password
 id input_email
 id input_new_password
@@ -3446,11 +3498,14 @@ id iv_auto_image_slider
 id iv_photo
 id jumpToEnd
 id jumpToStart
+id label
 id labelGroup
 id labeled
 id largeLabel
 id layout
+id layout_cases_header
 id layout_clients_header
+id layout_reports_header
 id layout_session_header
 id left
 id leftToRight
@@ -3499,6 +3554,7 @@ id month_navigation_fragment_toggle
 id month_navigation_next
 id month_navigation_previous
 id month_title
+id monthly_reports
 id motion_base
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
@@ -3524,6 +3580,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_header_container
 id never
 id nextMohdareen
@@ -3571,12 +3628,14 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rcCat
 id rcUsers
 id rc_clients
 id rc_filter
 id rc_notes
 id rectangle
 id rectangles
+id recycler_view
 id recyclerview
 id restart
 id reverse
@@ -3607,6 +3666,7 @@ id searchContainer
 id search_badge
 id search_bar
 id search_button
+id search_case
 id search_close_btn
 id search_edit_frame
 id search_go_btn
@@ -3718,6 +3778,7 @@ id triangle
 id tv_action_bar_title
 id tv_board_desc
 id tv_board_title
+id tv_case
 id tv_change_confirm_password
 id tv_change_header_text
 id tv_change_new_password
@@ -3766,6 +3827,8 @@ id vertical
 id video_icon
 id viewPager
 id view_offset_helper
+id view_tree_saved_state_registry_owner
+id view_tree_view_model_store_owner
 id view_value
 id visible
 id visible_removing_fragment_view_tag
@@ -3844,6 +3907,8 @@ layout activity_base
 layout activity_file_picker
 layout activity_main
 layout activity_media_details
+layout chip_view
+layout chips_input
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3860,9 +3925,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout detailed_chip_view
 layout dialog_no_internet
 layout fragment_add_attachment
 layout fragment_add_bailiffs
+layout fragment_add_case
 layout fragment_add_category
 layout fragment_add_client
 layout fragment_add_note
@@ -3894,6 +3961,7 @@ layout item_category
 layout item_clients
 layout item_doc_layout
 layout item_folder_layout
+layout item_list_filterable
 layout item_mohdr
 layout item_note
 layout item_photo_layout
@@ -3902,6 +3970,7 @@ layout item_user
 layout layout_action_bar_back
 layout layout_action_bar_home
 layout layout_navigation_drawer
+layout list_filterable_view
 layout loader_animation
 layout material_chip_input_combo
 layout material_clock_display
@@ -4043,6 +4112,7 @@ string ad_last_updated
 string ad_rooms_count
 string ad_time
 string ad_views
+string add_case
 string add_info1
 string add_info2
 string add_info3
@@ -4108,6 +4178,7 @@ string car_type_hint
 string case_number
 string cash
 string cat_name
+string cat_search_hint
 string change_confirm_password
 string change_confirm_password_no_star
 string change_header
@@ -4213,6 +4284,7 @@ string done
 string donot_have_account
 string driver_location_url
 string edit
+string edit_category
 string edit_client
 string edit_details
 string edit_images
@@ -4491,6 +4563,7 @@ string samllest_area
 string save
 string save_password
 string school
+string search_case
 string search_locations
 string search_menu_title
 string seeker
@@ -5346,6 +5419,8 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_textSize android_textColor android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconTint checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipMinTouchTargetSize chipStartPadding chipStrokeColor chipStrokeWidth chipSurfaceColor closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible ensureMinTouchTargetSize hideMotionSpec iconEndPadding iconStartPadding rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical selectionRequired singleLine singleSelection
+styleable ChipView avatarIcon backgroundColor deletable deleteIcon deleteIconColor hasAvatarIcon label labelColor
+styleable ChipsInput chip_backgroundColor chip_deletable chip_deleteIcon chip_deleteIconColor chip_detailed_backgroundColor chip_detailed_deleteIconColor chip_detailed_textColor chip_hasAvatarIcon chip_labelColor filterable_list_backgroundColor filterable_list_textColor hint hintColor maxRows showChipDetailed textColor
 styleable CircleImageView civ_border_color civ_border_overlay civ_border_width civ_circle_background_color
 styleable CircularProgressIndicator indicatorDirectionCircular indicatorInset indicatorSize
 styleable ClockFaceView clockFaceBackgroundColor clockNumberTextColor
@@ -5438,6 +5513,7 @@ styleable RangeSlider minSeparation values
 styleable RecycleListView paddingBottomNoButtons paddingTopNoTitle
 styleable RecyclerView android_orientation android_clipToPadding android_descendantFocusability fastScrollEnabled fastScrollHorizontalThumbDrawable fastScrollHorizontalTrackDrawable fastScrollVerticalThumbDrawable fastScrollVerticalTrackDrawable layoutManager reverseLayout spanCount stackFromEnd
 styleable ScrimInsetsFrameLayout insetForeground
+styleable ScrollViewMaxHeight maxHeight
 styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight

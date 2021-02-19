@@ -19,7 +19,8 @@ public final class MyAccountSettingsViewModel_MembersInjector implements Members
 
   public static MembersInjector<MyAccountSettingsViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new MyAccountSettingsViewModel_MembersInjector(repositoryProvider);}
+    return new MyAccountSettingsViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(MyAccountSettingsViewModel instance) {

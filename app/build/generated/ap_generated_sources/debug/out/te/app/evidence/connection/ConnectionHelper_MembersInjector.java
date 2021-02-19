@@ -17,7 +17,8 @@ public final class ConnectionHelper_MembersInjector implements MembersInjector<C
   }
 
   public static MembersInjector<ConnectionHelper> create(Provider<Api> apiProvider) {
-    return new ConnectionHelper_MembersInjector(apiProvider);}
+    return new ConnectionHelper_MembersInjector(apiProvider);
+  }
 
   @Override
   public void injectMembers(ConnectionHelper instance) {

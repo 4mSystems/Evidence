@@ -11,17 +11,25 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
+import com.google.gson.Gson;
+
 import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentAddCategoryBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.categories.models.AddCategoryResponse;
+import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel;
+import te.app.evidence.pages.users.models.AddUserResponse;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
 
 
 public class AddCategoryFragment extends BaseFragment {
@@ -35,8 +43,13 @@ public class AddCategoryFragment extends BaseFragment {
         FragmentAddCategoryBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_category, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        viewModel.setServices();
         binding.setViewmodel(viewModel);
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            String passingObject = bundle.getString(Constants.BUNDLE);
+            viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.setCategoriesData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CategoriesData.class));
+        }
         setEvent();
         return binding.getRoot();
     }
@@ -45,13 +58,10 @@ public class AddCategoryFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-//            if (Constants.STORES.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, MarketsFragment.class.getName(), getResources().getString(R.string.market_page), null);
-//            } else if (Constants.ORDER_ANY_THING.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, PublicOrdersFragment.class.getName(), getResources().getString(R.string.public_order_bar_name), Constants.SHARE_BAR);
-//            } else if (Constants.NOTIFICATIONS.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, NotificationsFragment.class.getName(), getResources().getString(R.string.menuNotifications), null);
-//            }
+            if (Constants.ADD_CATEGORY.equals(((Mutable) o).message)) {
+                toastMessage(((AddCategoryResponse) mutable.object).mMessage);
+                MovementHelper.finishWithResult(new PassingObject(((AddCategoryResponse) mutable.object).getCategoriesData()), context);
+            }
         });
     }
 
@@ -59,6 +69,7 @@ public class AddCategoryFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
+        viewModel.getCategoriesRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

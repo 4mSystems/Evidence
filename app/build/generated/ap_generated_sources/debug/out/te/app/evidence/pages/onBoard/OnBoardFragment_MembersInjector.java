@@ -19,7 +19,8 @@ public final class OnBoardFragment_MembersInjector implements MembersInjector<On
 
   public static MembersInjector<OnBoardFragment> create(
       Provider<SplashViewModel> viewModelProvider) {
-    return new OnBoardFragment_MembersInjector(viewModelProvider);}
+    return new OnBoardFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(OnBoardFragment instance) {

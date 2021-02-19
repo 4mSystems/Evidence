@@ -18,7 +18,8 @@ public final class UsersFragment_MembersInjector implements MembersInjector<User
   }
 
   public static MembersInjector<UsersFragment> create(Provider<UsersViewModel> viewModelProvider) {
-    return new UsersFragment_MembersInjector(viewModelProvider);}
+    return new UsersFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(UsersFragment instance) {

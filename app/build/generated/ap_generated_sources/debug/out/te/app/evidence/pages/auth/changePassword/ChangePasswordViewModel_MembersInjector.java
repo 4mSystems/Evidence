@@ -19,7 +19,8 @@ public final class ChangePasswordViewModel_MembersInjector implements MembersInj
 
   public static MembersInjector<ChangePasswordViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new ChangePasswordViewModel_MembersInjector(repositoryProvider);}
+    return new ChangePasswordViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(ChangePasswordViewModel instance) {

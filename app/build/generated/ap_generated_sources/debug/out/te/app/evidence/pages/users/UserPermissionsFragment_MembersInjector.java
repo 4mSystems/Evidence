@@ -20,7 +20,8 @@ public final class UserPermissionsFragment_MembersInjector implements MembersInj
 
   public static MembersInjector<UserPermissionsFragment> create(
       Provider<UserPermissionsViewModel> viewModelProvider) {
-    return new UserPermissionsFragment_MembersInjector(viewModelProvider);}
+    return new UserPermissionsFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(UserPermissionsFragment instance) {

@@ -20,7 +20,8 @@ public final class ReportersDetailsFragment_MembersInjector implements MembersIn
 
   public static MembersInjector<ReportersDetailsFragment> create(
       Provider<ReportersDetailsViewModel> viewModelProvider) {
-    return new ReportersDetailsFragment_MembersInjector(viewModelProvider);}
+    return new ReportersDetailsFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(ReportersDetailsFragment instance) {

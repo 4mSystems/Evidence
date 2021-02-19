@@ -19,7 +19,8 @@ public final class AddCategoryFragment_MembersInjector implements MembersInjecto
 
   public static MembersInjector<AddCategoryFragment> create(
       Provider<AddCategoriesViewModel> viewModelProvider) {
-    return new AddCategoryFragment_MembersInjector(viewModelProvider);}
+    return new AddCategoryFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(AddCategoryFragment instance) {

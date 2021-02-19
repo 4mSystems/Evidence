@@ -24,7 +24,8 @@ public final class ClientsRepository_MembersInjector implements MembersInjector<
   public static MembersInjector<ClientsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new ClientsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new ClientsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(ClientsRepository instance) {

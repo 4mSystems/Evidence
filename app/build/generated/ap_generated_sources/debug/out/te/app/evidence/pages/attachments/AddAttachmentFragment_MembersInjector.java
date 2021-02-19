@@ -19,7 +19,8 @@ public final class AddAttachmentFragment_MembersInjector implements MembersInjec
 
   public static MembersInjector<AddAttachmentFragment> create(
       Provider<AddAttachmentViewModel> viewModelProvider) {
-    return new AddAttachmentFragment_MembersInjector(viewModelProvider);}
+    return new AddAttachmentFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(AddAttachmentFragment instance) {

@@ -36,7 +36,7 @@ public class ClientProfileViewModel extends BaseViewModel {
     }
 
     public void clientProfile() {
-        compositeDisposable.add(clientsRepository.getClientProfile(getClients().getId()));
+        compositeDisposable.add(clientsRepository.getClientProfile(getClients().getClientId()));
     }
 
     public void deleteNote() {

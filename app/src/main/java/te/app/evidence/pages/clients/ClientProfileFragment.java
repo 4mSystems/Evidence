@@ -81,7 +81,7 @@ public class ClientProfileFragment extends BaseFragment {
                 viewModel.notifyChange(BR.clientCasesAdapter);
             } else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
                 viewModel.getNotesAdapter().lastSelected = -1;
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getClients().getId()), getString(R.string.add_new_note), AddNoteFragment.class.getName(), null);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getClients().getClientId()), getString(R.string.add_new_note), AddNoteFragment.class.getName(), null);
             } else if (Constants.DELETE_NOTE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);

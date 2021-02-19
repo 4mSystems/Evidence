@@ -19,7 +19,8 @@ public final class SettingsViewModel_MembersInjector implements MembersInjector<
 
   public static MembersInjector<SettingsViewModel> create(
       Provider<SettingsRepository> repositoryProvider) {
-    return new SettingsViewModel_MembersInjector(repositoryProvider);}
+    return new SettingsViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(SettingsViewModel instance) {

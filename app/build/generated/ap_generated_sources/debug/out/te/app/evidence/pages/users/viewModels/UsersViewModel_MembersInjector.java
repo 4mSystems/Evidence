@@ -19,7 +19,8 @@ public final class UsersViewModel_MembersInjector implements MembersInjector<Use
 
   public static MembersInjector<UsersViewModel> create(
       Provider<SystemUsersRepository> usersRepositoryProvider) {
-    return new UsersViewModel_MembersInjector(usersRepositoryProvider);}
+    return new UsersViewModel_MembersInjector(usersRepositoryProvider);
+  }
 
   @Override
   public void injectMembers(UsersViewModel instance) {

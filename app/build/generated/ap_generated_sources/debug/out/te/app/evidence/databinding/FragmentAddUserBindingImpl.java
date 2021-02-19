@@ -46,11 +46,11 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback45;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback46;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -280,16 +280,16 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         this.userType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x100L;
+                mDirtyFlags = 0x200L;
         }
         requestRebind();
     }
@@ -418,6 +418,12 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             }
             return true;
         }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x100L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -428,170 +434,219 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.PassingObject viewmodelPassingObject = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserNameError = null;
         java.lang.String viewmodelAddUserRequestName = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestTypeError = null;
         java.lang.String viewmodelAddUserRequestEmailErrorGet = null;
-        java.lang.String viewmodelAddUserRequestCatErrorGet = null;
         java.lang.String viewmodelAddUserRequestAddress = null;
         java.lang.String viewmodelAddUserRequestPhone = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestPhoneError = null;
-        java.lang.String viewmodelAddUserRequestPasswordErrorGet = null;
         te.app.evidence.pages.users.models.AddUserRequest viewmodelAddUserRequest = null;
         java.lang.String viewmodelAddUserRequestUserNameErrorGet = null;
-        java.lang.String viewmodelAddUserRequestUserAddressErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestCatError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestPasswordError = null;
-        java.lang.String viewmodelAddUserRequestEmail = null;
         java.lang.String viewmodelAddUserRequestPhoneErrorGet = null;
-        androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestEmailError = null;
         java.lang.String viewmodelAddUserRequestTypeErrorGet = null;
+        java.lang.Object viewmodelPassingObjectObjectClass = null;
+        boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
+        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser = null;
+        int viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = 0;
+        java.lang.String viewmodelAddUserRequestCatErrorGet = null;
+        java.lang.String viewmodelAddUserRequestPasswordErrorGet = null;
+        java.lang.String viewmodelAddUserRequestUserAddressErrorGet = null;
+        java.lang.String viewmodelAddUserRequestEmail = null;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestEmailError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserAddressError = null;
+        boolean ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = false;
         java.lang.String viewmodelAddUserRequestPassword = null;
         te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x1ffL) != 0) {
+        if ((dirtyFlags & 0x3ffL) != 0) {
 
 
+            if ((dirtyFlags & 0x380L) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.addUserRequest
-                    viewmodelAddUserRequest = viewmodel.getAddUserRequest();
+                    if (viewmodel != null) {
+                        // read viewmodel.passingObject
+                        viewmodelPassingObject = viewmodel.getPassingObject();
+                    }
+
+
+                    if (viewmodelPassingObject != null) {
+                        // read viewmodel.passingObject.objectClass
+                        viewmodelPassingObjectObjectClass = viewmodelPassingObject.getObjectClass();
+                    }
+
+
+                    // read viewmodel.passingObject.objectClass == null
+                    viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
+                    // read viewmodel.passingObject.objectClass != null
+                    ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = (viewmodelPassingObjectObjectClass) != (null);
+                if((dirtyFlags & 0x380L) != 0) {
+                    if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
+                            dirtyFlags |= 0x800L;
+                    }
+                    else {
+                            dirtyFlags |= 0x400L;
+                    }
+                }
+                if((dirtyFlags & 0x380L) != 0) {
+                    if(ViewmodelPassingObjectObjectClassJavaLangObjectNull1) {
+                            dirtyFlags |= 0x2000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000L;
+                    }
                 }
 
-            if ((dirtyFlags & 0x181L) != 0) {
 
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.userNameError
-                        viewmodelAddUserRequestUserNameError = viewmodelAddUserRequest.userNameError;
-                    }
-                    updateRegistration(0, viewmodelAddUserRequestUserNameError);
-
-
-                    if (viewmodelAddUserRequestUserNameError != null) {
-                        // read viewmodel.addUserRequest.userNameError.get()
-                        viewmodelAddUserRequestUserNameErrorGet = viewmodelAddUserRequestUserNameError.get();
-                    }
+                    // read viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+                    viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (mboundView15.getResources().getString(R.string.add_new_user)) : (mboundView15.getResources().getString(R.string.edit_user)));
+                    // read viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+                    viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = ((ViewmodelPassingObjectObjectClassJavaLangObjectNull1) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
             }
-            if ((dirtyFlags & 0x180L) != 0) {
+            if ((dirtyFlags & 0x2ffL) != 0) {
 
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.name
-                        viewmodelAddUserRequestName = viewmodelAddUserRequest.getName();
-                        // read viewmodel.addUserRequest.address
-                        viewmodelAddUserRequestAddress = viewmodelAddUserRequest.getAddress();
-                        // read viewmodel.addUserRequest.phone
-                        viewmodelAddUserRequestPhone = viewmodelAddUserRequest.getPhone();
-                        // read viewmodel.addUserRequest.email
-                        viewmodelAddUserRequestEmail = viewmodelAddUserRequest.getEmail();
-                        // read viewmodel.addUserRequest.password
-                        viewmodelAddUserRequestPassword = viewmodelAddUserRequest.getPassword();
+                    if (viewmodel != null) {
+                        // read viewmodel.addUserRequest
+                        viewmodelAddUserRequest = viewmodel.getAddUserRequest();
                     }
-            }
-            if ((dirtyFlags & 0x182L) != 0) {
 
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.typeError
-                        viewmodelAddUserRequestTypeError = viewmodelAddUserRequest.typeError;
-                    }
-                    updateRegistration(1, viewmodelAddUserRequestTypeError);
+                if ((dirtyFlags & 0x281L) != 0) {
 
-
-                    if (viewmodelAddUserRequestTypeError != null) {
-                        // read viewmodel.addUserRequest.typeError.get()
-                        viewmodelAddUserRequestTypeErrorGet = viewmodelAddUserRequestTypeError.get();
-                    }
-            }
-            if ((dirtyFlags & 0x184L) != 0) {
-
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.phoneError
-                        viewmodelAddUserRequestPhoneError = viewmodelAddUserRequest.phoneError;
-                    }
-                    updateRegistration(2, viewmodelAddUserRequestPhoneError);
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.userNameError
+                            viewmodelAddUserRequestUserNameError = viewmodelAddUserRequest.userNameError;
+                        }
+                        updateRegistration(0, viewmodelAddUserRequestUserNameError);
 
 
-                    if (viewmodelAddUserRequestPhoneError != null) {
-                        // read viewmodel.addUserRequest.phoneError.get()
-                        viewmodelAddUserRequestPhoneErrorGet = viewmodelAddUserRequestPhoneError.get();
-                    }
-            }
-            if ((dirtyFlags & 0x188L) != 0) {
+                        if (viewmodelAddUserRequestUserNameError != null) {
+                            // read viewmodel.addUserRequest.userNameError.get()
+                            viewmodelAddUserRequestUserNameErrorGet = viewmodelAddUserRequestUserNameError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x280L) != 0) {
 
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.catError
-                        viewmodelAddUserRequestCatError = viewmodelAddUserRequest.catError;
-                    }
-                    updateRegistration(3, viewmodelAddUserRequestCatError);
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.name
+                            viewmodelAddUserRequestName = viewmodelAddUserRequest.getName();
+                            // read viewmodel.addUserRequest.address
+                            viewmodelAddUserRequestAddress = viewmodelAddUserRequest.getAddress();
+                            // read viewmodel.addUserRequest.phone
+                            viewmodelAddUserRequestPhone = viewmodelAddUserRequest.getPhone();
+                            // read viewmodel.addUserRequest.email
+                            viewmodelAddUserRequestEmail = viewmodelAddUserRequest.getEmail();
+                            // read viewmodel.addUserRequest.password
+                            viewmodelAddUserRequestPassword = viewmodelAddUserRequest.getPassword();
+                        }
+                }
+                if ((dirtyFlags & 0x282L) != 0) {
 
-
-                    if (viewmodelAddUserRequestCatError != null) {
-                        // read viewmodel.addUserRequest.catError.get()
-                        viewmodelAddUserRequestCatErrorGet = viewmodelAddUserRequestCatError.get();
-                    }
-            }
-            if ((dirtyFlags & 0x190L) != 0) {
-
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.passwordError
-                        viewmodelAddUserRequestPasswordError = viewmodelAddUserRequest.passwordError;
-                    }
-                    updateRegistration(4, viewmodelAddUserRequestPasswordError);
-
-
-                    if (viewmodelAddUserRequestPasswordError != null) {
-                        // read viewmodel.addUserRequest.passwordError.get()
-                        viewmodelAddUserRequestPasswordErrorGet = viewmodelAddUserRequestPasswordError.get();
-                    }
-            }
-            if ((dirtyFlags & 0x1a0L) != 0) {
-
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.emailError
-                        viewmodelAddUserRequestEmailError = viewmodelAddUserRequest.emailError;
-                    }
-                    updateRegistration(5, viewmodelAddUserRequestEmailError);
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.typeError
+                            viewmodelAddUserRequestTypeError = viewmodelAddUserRequest.typeError;
+                        }
+                        updateRegistration(1, viewmodelAddUserRequestTypeError);
 
 
-                    if (viewmodelAddUserRequestEmailError != null) {
-                        // read viewmodel.addUserRequest.emailError.get()
-                        viewmodelAddUserRequestEmailErrorGet = viewmodelAddUserRequestEmailError.get();
-                    }
-            }
-            if ((dirtyFlags & 0x1c0L) != 0) {
+                        if (viewmodelAddUserRequestTypeError != null) {
+                            // read viewmodel.addUserRequest.typeError.get()
+                            viewmodelAddUserRequestTypeErrorGet = viewmodelAddUserRequestTypeError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x284L) != 0) {
 
-                    if (viewmodelAddUserRequest != null) {
-                        // read viewmodel.addUserRequest.userAddressError
-                        viewmodelAddUserRequestUserAddressError = viewmodelAddUserRequest.userAddressError;
-                    }
-                    updateRegistration(6, viewmodelAddUserRequestUserAddressError);
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.phoneError
+                            viewmodelAddUserRequestPhoneError = viewmodelAddUserRequest.phoneError;
+                        }
+                        updateRegistration(2, viewmodelAddUserRequestPhoneError);
 
 
-                    if (viewmodelAddUserRequestUserAddressError != null) {
-                        // read viewmodel.addUserRequest.userAddressError.get()
-                        viewmodelAddUserRequestUserAddressErrorGet = viewmodelAddUserRequestUserAddressError.get();
-                    }
+                        if (viewmodelAddUserRequestPhoneError != null) {
+                            // read viewmodel.addUserRequest.phoneError.get()
+                            viewmodelAddUserRequestPhoneErrorGet = viewmodelAddUserRequestPhoneError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x288L) != 0) {
+
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.catError
+                            viewmodelAddUserRequestCatError = viewmodelAddUserRequest.catError;
+                        }
+                        updateRegistration(3, viewmodelAddUserRequestCatError);
+
+
+                        if (viewmodelAddUserRequestCatError != null) {
+                            // read viewmodel.addUserRequest.catError.get()
+                            viewmodelAddUserRequestCatErrorGet = viewmodelAddUserRequestCatError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x290L) != 0) {
+
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.passwordError
+                            viewmodelAddUserRequestPasswordError = viewmodelAddUserRequest.passwordError;
+                        }
+                        updateRegistration(4, viewmodelAddUserRequestPasswordError);
+
+
+                        if (viewmodelAddUserRequestPasswordError != null) {
+                            // read viewmodel.addUserRequest.passwordError.get()
+                            viewmodelAddUserRequestPasswordErrorGet = viewmodelAddUserRequestPasswordError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x2a0L) != 0) {
+
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.emailError
+                            viewmodelAddUserRequestEmailError = viewmodelAddUserRequest.emailError;
+                        }
+                        updateRegistration(5, viewmodelAddUserRequestEmailError);
+
+
+                        if (viewmodelAddUserRequestEmailError != null) {
+                            // read viewmodel.addUserRequest.emailError.get()
+                            viewmodelAddUserRequestEmailErrorGet = viewmodelAddUserRequestEmailError.get();
+                        }
+                }
+                if ((dirtyFlags & 0x2c0L) != 0) {
+
+                        if (viewmodelAddUserRequest != null) {
+                            // read viewmodel.addUserRequest.userAddressError
+                            viewmodelAddUserRequestUserAddressError = viewmodelAddUserRequest.userAddressError;
+                        }
+                        updateRegistration(6, viewmodelAddUserRequestUserAddressError);
+
+
+                        if (viewmodelAddUserRequestUserAddressError != null) {
+                            // read viewmodel.addUserRequest.userAddressError.get()
+                            viewmodelAddUserRequestUserAddressErrorGet = viewmodelAddUserRequestUserAddressError.get();
+                        }
+                }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x100L) != 0) {
+        if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.catName.setOnClickListener(mCallback30);
+            this.catName.setOnClickListener(mCallback46);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
-            this.mboundView15.setOnClickListener(mCallback31);
+            this.mboundView15.setOnClickListener(mCallback47);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userType.setOnClickListener(mCallback29);
+            this.userType.setOnClickListener(mCallback45);
         }
-        if ((dirtyFlags & 0x181L) != 0) {
+        if ((dirtyFlags & 0x281L) != 0) {
             // api target 1
 
             this.mboundView1.setError(viewmodelAddUserRequestUserNameErrorGet);
         }
-        if ((dirtyFlags & 0x180L) != 0) {
+        if ((dirtyFlags & 0x280L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddUserRequestAddress);
@@ -600,32 +655,38 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddUserRequestPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddUserRequestPassword);
         }
-        if ((dirtyFlags & 0x182L) != 0) {
+        if ((dirtyFlags & 0x282L) != 0) {
             // api target 1
 
             this.mboundView11.setError(viewmodelAddUserRequestTypeErrorGet);
         }
-        if ((dirtyFlags & 0x188L) != 0) {
+        if ((dirtyFlags & 0x288L) != 0) {
             // api target 1
 
             this.mboundView13.setError(viewmodelAddUserRequestCatErrorGet);
         }
-        if ((dirtyFlags & 0x1a0L) != 0) {
+        if ((dirtyFlags & 0x380L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView15, viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser);
+            this.mboundView7.setVisibility(viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE);
+        }
+        if ((dirtyFlags & 0x2a0L) != 0) {
             // api target 1
 
             this.mboundView3.setError(viewmodelAddUserRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x184L) != 0) {
+        if ((dirtyFlags & 0x284L) != 0) {
             // api target 1
 
             this.mboundView5.setError(viewmodelAddUserRequestPhoneErrorGet);
         }
-        if ((dirtyFlags & 0x190L) != 0) {
+        if ((dirtyFlags & 0x290L) != 0) {
             // api target 1
 
             this.mboundView7.setError(viewmodelAddUserRequestPasswordErrorGet);
         }
-        if ((dirtyFlags & 0x1c0L) != 0) {
+        if ((dirtyFlags & 0x2c0L) != 0) {
             // api target 1
 
             this.mboundView9.setError(viewmodelAddUserRequestUserAddressErrorGet);
@@ -635,6 +696,23 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.addNewUser();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -669,23 +747,6 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                 }
                 break;
             }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.addNewUser();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -699,7 +760,12 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         flag 5 (0x6L): viewmodel.addUserRequest.emailError
         flag 6 (0x7L): viewmodel.addUserRequest.userAddressError
         flag 7 (0x8L): viewmodel
-        flag 8 (0x9L): null
+        flag 8 (0x9L): viewmodel.passingObject
+        flag 9 (0xaL): null
+        flag 10 (0xbL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 11 (0xcL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 12 (0xdL): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 13 (0xeL): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
     flag mapping end*/
     //end
 }

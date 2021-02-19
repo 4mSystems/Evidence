@@ -24,7 +24,8 @@ public final class AttachmentsRepository_MembersInjector implements MembersInjec
   public static MembersInjector<AttachmentsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new AttachmentsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new AttachmentsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(AttachmentsRepository instance) {

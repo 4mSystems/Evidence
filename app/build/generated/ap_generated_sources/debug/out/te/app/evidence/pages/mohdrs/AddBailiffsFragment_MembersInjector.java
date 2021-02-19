@@ -19,7 +19,8 @@ public final class AddBailiffsFragment_MembersInjector implements MembersInjecto
 
   public static MembersInjector<AddBailiffsFragment> create(
       Provider<AddBailiffsViewModel> viewModelProvider) {
-    return new AddBailiffsFragment_MembersInjector(viewModelProvider);}
+    return new AddBailiffsFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(AddBailiffsFragment instance) {

@@ -24,7 +24,8 @@ public final class SystemUsersRepository_MembersInjector implements MembersInjec
   public static MembersInjector<SystemUsersRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new SystemUsersRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new SystemUsersRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(SystemUsersRepository instance) {

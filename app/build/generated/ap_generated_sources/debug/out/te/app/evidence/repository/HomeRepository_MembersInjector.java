@@ -24,7 +24,8 @@ public final class HomeRepository_MembersInjector implements MembersInjector<Hom
   public static MembersInjector<HomeRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new HomeRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new HomeRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(HomeRepository instance) {

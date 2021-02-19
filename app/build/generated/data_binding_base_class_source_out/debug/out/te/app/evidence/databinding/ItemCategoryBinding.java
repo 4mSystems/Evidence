@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -13,7 +14,6 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
-import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel;
 
 public abstract class ItemCategoryBinding extends ViewDataBinding {
@@ -21,16 +21,16 @@ public abstract class ItemCategoryBinding extends ViewDataBinding {
   public final CustomTextViewMedium catName;
 
   @NonNull
-  public final CustomTextViewRegular delete;
+  public final AppCompatImageView delete;
 
   @NonNull
-  public final CustomTextViewRegular edit;
+  public final AppCompatImageView edit;
 
   @Bindable
   protected CategoriesItemViewModel mItemViewModel;
 
   protected ItemCategoryBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium catName, CustomTextViewRegular delete, CustomTextViewRegular edit) {
+      CustomTextViewMedium catName, AppCompatImageView delete, AppCompatImageView edit) {
     super(_bindingComponent, _root, _localFieldCount);
     this.catName = catName;
     this.delete = delete;

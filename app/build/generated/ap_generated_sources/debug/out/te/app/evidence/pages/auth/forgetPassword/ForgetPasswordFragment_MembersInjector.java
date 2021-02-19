@@ -19,7 +19,8 @@ public final class ForgetPasswordFragment_MembersInjector implements MembersInje
 
   public static MembersInjector<ForgetPasswordFragment> create(
       Provider<ForgetPasswordViewModel> viewModelProvider) {
-    return new ForgetPasswordFragment_MembersInjector(viewModelProvider);}
+    return new ForgetPasswordFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(ForgetPasswordFragment instance) {

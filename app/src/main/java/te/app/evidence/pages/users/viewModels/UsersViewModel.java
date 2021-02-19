@@ -33,6 +33,9 @@ public class UsersViewModel extends BaseViewModel {
     public void toNewUser() {
         liveData.setValue(new Mutable(Constants.ADD_USER));
     }
+    public void deleteUser() {
+        compositeDisposable.add(usersRepository.deleteUser(getUsersAdapter().getSystemUserDataList().get(getUsersAdapter().lastSelected).getId()));
+    }
 
     @Bindable
     public UsersAdapter getUsersAdapter() {

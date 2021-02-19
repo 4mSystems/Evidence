@@ -35,12 +35,14 @@ public class AddNoteViewModel extends BaseViewModel {
     }
 
     public void addNewNote() {
-        getAddNoteRequest().setClient_id(getPassingObject().getId() == 0 ? getNotes().getId() : getPassingObject().getId());
         if (getAddNoteRequest().isValid())
-            if (getPassingObject().getObjectClass() == null)
+            if (getPassingObject().getObjectClass() == null) {
+                getAddNoteRequest().setClient_id(String.valueOf(getPassingObject().getId()));
                 compositeDisposable.add(notesRepository.addNewNote(getAddNoteRequest()));
-            else
+            } else {
+                getAddNoteRequest().setNote_id(String.valueOf(getNotes().getId()));
                 compositeDisposable.add(notesRepository.editNote(getAddNoteRequest()));
+            }
     }
 
 

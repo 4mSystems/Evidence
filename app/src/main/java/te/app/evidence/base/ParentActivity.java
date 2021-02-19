@@ -42,7 +42,7 @@ public class ParentActivity extends AppCompatActivity implements
         ConnectivityReceiver.ConnectivityReceiverListener {
     public NoInternetDialog noInternetDialog;
     public MutableLiveData<Boolean> ConnectionLiveData;
-    private ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
+    ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
     public MutableLiveData<Boolean> connectionMutableLiveData = new MutableLiveData<>();
 
 

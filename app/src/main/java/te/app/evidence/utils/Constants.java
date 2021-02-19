@@ -32,7 +32,7 @@ public class Constants {
 
     public final static String ADD_USER = "ADD_USER";
     public final static String SHOW_TYPE = "SHOW_TYPE";
-    public final static String SUBSCRIBE_AS_DELEGATE = "SUBSCRIBE_AS_DELEGATE";
+    public final static String DELETE_USER = "DELETE_USER";
     public final static String ERROR_TOAST = "error_toast";
 
     public final static String ERROR = "error";
@@ -40,20 +40,20 @@ public class Constants {
     public final static String HIDE_PROGRESS = "hideProgress";
     public final static String SERVER_ERROR = "serverError";
     public final static String ERROR_NOT_FOUND = "not_found";
-    public final static String FAVORITES = "FAVORITES";
+    public final static String USER_PERMISSION = "USER_PERMISSION";
     public final static String FAILURE_CONNECTION = "failure_connection";
-    public final static String AD_UPLOAD_ATTACH = "AD_UPLOAD_ATTACH";
+    public final static String USER_PERMISSIONS = "USER_PERMISSIONS";
 
     public final static String LANGUAGE = "language";
     public static final String DEFAULT_LANGUAGE = "en";
-    public static final String MENU_ACCOUNT = "MENU_ACCOUNT";
+    public static final String ADD_CATEGORY = "ADD_CATEGORY";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
-    public static final String MAP_LOCATION = "MAP_LOCATION";
+    public static final String DELETE_CATEGORY = "DELETE_CATEGORY";
     public static final String SETTINGS = "SETTINGS";
     public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
-    public static final String MY_ADS = "MY_ORDERS";
+    public static final String CASE_CLIENTS_CATEGORIES = "CASE_CLIENTS_CATEGORIES";
     public static final String SORT_DIALOG = "SORT_DIALOG";
     public static final String CATEGORIES = "CATEGORIES";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
@@ -90,8 +90,7 @@ public class Constants {
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
 
-    public static final String front_car_image = "front_car_image";
-    public static final int front_car_image_code = 380;
+    public static final String ADD_CASE = "ADD_CASE";
 
     public static final String back_car_image = "back_car_image";
     public static final int back_car_code = 381;

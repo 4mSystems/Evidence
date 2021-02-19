@@ -19,7 +19,8 @@ public final class DocumentsViewModel_MembersInjector implements MembersInjector
 
   public static MembersInjector<DocumentsViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new DocumentsViewModel_MembersInjector(repositoryProvider);}
+    return new DocumentsViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(DocumentsViewModel instance) {

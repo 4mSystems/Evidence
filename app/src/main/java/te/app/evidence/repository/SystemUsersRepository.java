@@ -15,6 +15,7 @@ import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.users.models.AddUserRequest;
 import te.app.evidence.pages.users.models.AddUserResponse;
 import te.app.evidence.pages.users.models.SystemUserResponse;
+import te.app.evidence.pages.users.models.userPermissions.UserPermissionsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -46,15 +47,19 @@ public class SystemUsersRepository extends BaseRepository {
                 Constants.ADD_USER, true);
     }
 
-    public Disposable editClient(AddClientRequest addClientRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CLIENTS, addClientRequest, AddClientResponse.class,
-                Constants.ADD_CLIENTS, true);
+    public Disposable editUser(AddUserRequest addUserRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_USER, addUserRequest, AddUserResponse.class,
+                Constants.ADD_USER, true);
     }
 
-    public Disposable deleteClient(int clientId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CLIENT + clientId, new Object(), StatusMessage.class,
-                Constants.DELETE_CLIENT, true);
+    public Disposable deleteUser(int userId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_USER + userId, new Object(), StatusMessage.class,
+                Constants.DELETE_USER, true);
     }
 
 
+    public Disposable userPermissions(int userId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.USER_PERMISSIONS + userId, new Object(), UserPermissionsResponse.class,
+                Constants.USER_PERMISSIONS, true);
+    }
 }

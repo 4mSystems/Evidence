@@ -24,7 +24,8 @@ public final class AuthRepository_MembersInjector implements MembersInjector<Aut
   public static MembersInjector<AuthRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new AuthRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new AuthRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(AuthRepository instance) {

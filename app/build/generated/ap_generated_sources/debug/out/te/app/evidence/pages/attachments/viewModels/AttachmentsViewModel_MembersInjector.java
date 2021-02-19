@@ -20,7 +20,8 @@ public final class AttachmentsViewModel_MembersInjector implements MembersInject
 
   public static MembersInjector<AttachmentsViewModel> create(
       Provider<AttachmentsRepository> attachmentsRepositoryProvider) {
-    return new AttachmentsViewModel_MembersInjector(attachmentsRepositoryProvider);}
+    return new AttachmentsViewModel_MembersInjector(attachmentsRepositoryProvider);
+  }
 
   @Override
   public void injectMembers(AttachmentsViewModel instance) {

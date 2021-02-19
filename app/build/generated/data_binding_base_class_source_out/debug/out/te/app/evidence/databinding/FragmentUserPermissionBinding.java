@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -15,12 +16,16 @@ import te.app.evidence.R;
 import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel;
 
 public abstract class FragmentUserPermissionBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton btnSave;
+
   @Bindable
   protected UserPermissionsViewModel mViewmodel;
 
   protected FragmentUserPermissionBinding(Object _bindingComponent, View _root,
-      int _localFieldCount) {
+      int _localFieldCount, AppCompatButton btnSave) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
   }
 
   public abstract void setViewmodel(@Nullable UserPermissionsViewModel viewmodel);

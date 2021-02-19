@@ -78,7 +78,7 @@ public class DocumentsViewModel extends BaseViewModel {
     }
 
     public void toFrontImage() {
-        liveData.setValue(new Mutable(Constants.front_car_image));
+        liveData.setValue(new Mutable(Constants.IMAGE));
     }
 
     public void toInsuranceImage() {

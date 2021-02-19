@@ -19,7 +19,8 @@ public final class BaseRepository_MembersInjector implements MembersInjector<Bas
 
   public static MembersInjector<BaseRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider) {
-    return new BaseRepository_MembersInjector(connectionHelperProvider);}
+    return new BaseRepository_MembersInjector(connectionHelperProvider);
+  }
 
   @Override
   public void injectMembers(BaseRepository instance) {

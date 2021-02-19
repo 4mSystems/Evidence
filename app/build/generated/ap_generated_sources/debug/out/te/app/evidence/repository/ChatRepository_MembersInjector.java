@@ -24,7 +24,8 @@ public final class ChatRepository_MembersInjector implements MembersInjector<Cha
   public static MembersInjector<ChatRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new ChatRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new ChatRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(ChatRepository instance) {

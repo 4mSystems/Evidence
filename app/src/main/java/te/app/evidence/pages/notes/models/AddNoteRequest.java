@@ -10,8 +10,11 @@ import te.app.evidence.utils.validation.Validate;
 public class AddNoteRequest {
     @SerializedName("notes")
     private String notes;
+    @SerializedName("id")
+    private String note_id;
     @SerializedName("client_id")
-    private int client_id;
+    private String client_id;
+
     public ObservableField<String> noteError = new ObservableField<>();
 
     public boolean isValid() {
@@ -32,11 +35,19 @@ public class AddNoteRequest {
         this.notes = notes;
     }
 
-    public int getClient_id() {
+    public String getNote_id() {
+        return note_id;
+    }
+
+    public void setNote_id(String note_id) {
+        this.note_id = note_id;
+    }
+
+    public String getClient_id() {
         return client_id;
     }
 
-    public void setClient_id(int client_id) {
+    public void setClient_id(String client_id) {
         this.client_id = client_id;
     }
 }

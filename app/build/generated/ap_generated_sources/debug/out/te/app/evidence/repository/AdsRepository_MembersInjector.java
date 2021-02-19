@@ -24,7 +24,8 @@ public final class AdsRepository_MembersInjector implements MembersInjector<AdsR
   public static MembersInjector<AdsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new AdsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new AdsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(AdsRepository instance) {

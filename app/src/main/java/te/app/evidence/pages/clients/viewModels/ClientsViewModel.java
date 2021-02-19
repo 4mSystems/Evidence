@@ -32,7 +32,7 @@ public class ClientsViewModel extends BaseViewModel {
     }
 
     public void deleteClient() {
-        compositeDisposable.add(clientsRepository.deleteClient(getClientsAdapter().getClientsList().get(getClientsAdapter().lastSelected).getId()));
+        compositeDisposable.add(clientsRepository.deleteClient(getClientsAdapter().getClientsList().get(getClientsAdapter().lastSelected).getClientId()));
     }
 
     @Bindable

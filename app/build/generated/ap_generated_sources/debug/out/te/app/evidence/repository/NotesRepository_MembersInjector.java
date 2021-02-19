@@ -24,7 +24,8 @@ public final class NotesRepository_MembersInjector implements MembersInjector<No
   public static MembersInjector<NotesRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new NotesRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new NotesRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(NotesRepository instance) {

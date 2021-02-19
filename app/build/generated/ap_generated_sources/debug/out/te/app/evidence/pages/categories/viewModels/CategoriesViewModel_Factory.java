@@ -2,26 +2,38 @@
 package te.app.evidence.pages.categories.viewModels;
 
 import dagger.internal.Factory;
+import javax.inject.Provider;
+import te.app.evidence.repository.CategoriesRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class CategoriesViewModel_Factory implements Factory<CategoriesViewModel> {
+  private final Provider<CategoriesRepository> categoriesRepositoryProvider;
+
+  private final Provider<CategoriesRepository> categoriesRepositoryProvider2;
+
+  public CategoriesViewModel_Factory(Provider<CategoriesRepository> categoriesRepositoryProvider,
+      Provider<CategoriesRepository> categoriesRepositoryProvider2) {
+    this.categoriesRepositoryProvider = categoriesRepositoryProvider;
+    this.categoriesRepositoryProvider2 = categoriesRepositoryProvider2;
+  }
+
   @Override
   public CategoriesViewModel get() {
-    return newInstance();
+    CategoriesViewModel instance = newInstance(categoriesRepositoryProvider.get());
+    CategoriesViewModel_MembersInjector.injectCategoriesRepository(instance, categoriesRepositoryProvider2.get());
+    return instance;
   }
 
-  public static CategoriesViewModel_Factory create() {
-    return InstanceHolder.INSTANCE;
+  public static CategoriesViewModel_Factory create(
+      Provider<CategoriesRepository> categoriesRepositoryProvider,
+      Provider<CategoriesRepository> categoriesRepositoryProvider2) {
+    return new CategoriesViewModel_Factory(categoriesRepositoryProvider, categoriesRepositoryProvider2);
   }
 
-  public static CategoriesViewModel newInstance() {
-    return new CategoriesViewModel();
-  }
-
-  private static final class InstanceHolder {
-    private static final CategoriesViewModel_Factory INSTANCE = new CategoriesViewModel_Factory();
+  public static CategoriesViewModel newInstance(CategoriesRepository categoriesRepository) {
+    return new CategoriesViewModel(categoriesRepository);
   }
 }

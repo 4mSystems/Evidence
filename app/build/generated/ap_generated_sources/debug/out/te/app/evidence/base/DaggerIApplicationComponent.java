@@ -41,12 +41,21 @@ import te.app.evidence.pages.auth.login.LoginFragment_MembersInjector;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
+import te.app.evidence.pages.cases.AddCaseFragment;
+import te.app.evidence.pages.cases.AddCaseFragment_MembersInjector;
+import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
+import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_Factory;
+import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_MembersInjector;
 import te.app.evidence.pages.categories.AddCategoryFragment;
 import te.app.evidence.pages.categories.AddCategoryFragment_MembersInjector;
 import te.app.evidence.pages.categories.CategoriesFragment;
 import te.app.evidence.pages.categories.CategoriesFragment_MembersInjector;
 import te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel;
+import te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel_Factory;
+import te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel_MembersInjector;
 import te.app.evidence.pages.categories.viewModels.CategoriesViewModel;
+import te.app.evidence.pages.categories.viewModels.CategoriesViewModel_Factory;
+import te.app.evidence.pages.categories.viewModels.CategoriesViewModel_MembersInjector;
 import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.AddClientFragment_MembersInjector;
 import te.app.evidence.pages.clients.ClientProfileFragment;
@@ -101,6 +110,8 @@ import te.app.evidence.pages.users.viewModels.AddUserViewModel;
 import te.app.evidence.pages.users.viewModels.AddUserViewModel_Factory;
 import te.app.evidence.pages.users.viewModels.AddUserViewModel_MembersInjector;
 import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel;
+import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel_Factory;
+import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel_MembersInjector;
 import te.app.evidence.pages.users.viewModels.UsersViewModel;
 import te.app.evidence.pages.users.viewModels.UsersViewModel_Factory;
 import te.app.evidence.pages.users.viewModels.UsersViewModel_MembersInjector;
@@ -108,6 +119,10 @@ import te.app.evidence.repository.AttachmentsRepository;
 import te.app.evidence.repository.AttachmentsRepository_Factory;
 import te.app.evidence.repository.AuthRepository;
 import te.app.evidence.repository.AuthRepository_Factory;
+import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.repository.CasesRepository_Factory;
+import te.app.evidence.repository.CategoriesRepository;
+import te.app.evidence.repository.CategoriesRepository_Factory;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.repository.ClientsRepository_Factory;
 import te.app.evidence.repository.NotesRepository;
@@ -134,7 +149,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<AttachmentsRepository> attachmentsRepositoryProvider;
 
+  private Provider<CategoriesRepository> categoriesRepositoryProvider;
+
   private Provider<NotesRepository> notesRepositoryProvider;
+
+  private Provider<CasesRepository> casesRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -150,44 +169,73 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return new Builder().build();
   }
 
-  private SplashViewModel getSplashViewModel() {
-    return injectSplashViewModel(SplashViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private SplashViewModel splashViewModel() {
+    return injectSplashViewModel(SplashViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private LoginViewModel getLoginViewModel() {
-    return injectLoginViewModel(LoginViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private LoginViewModel loginViewModel() {
+    return injectLoginViewModel(LoginViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private ForgetPasswordViewModel getForgetPasswordViewModel() {
-    return injectForgetPasswordViewModel(ForgetPasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private ForgetPasswordViewModel forgetPasswordViewModel() {
+    return injectForgetPasswordViewModel(ForgetPasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private ConfirmViewModel getConfirmViewModel() {
-    return injectConfirmViewModel(ConfirmViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private ConfirmViewModel confirmViewModel() {
+    return injectConfirmViewModel(ConfirmViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private ChangePasswordViewModel getChangePasswordViewModel() {
-    return injectChangePasswordViewModel(ChangePasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private ChangePasswordViewModel changePasswordViewModel() {
+    return injectChangePasswordViewModel(ChangePasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private ProfileViewModel getProfileViewModel() {
-    return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));}
+  private ProfileViewModel profileViewModel() {
+    return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
 
-  private UsersViewModel getUsersViewModel() {
-    return injectUsersViewModel(UsersViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));}
+  private UsersViewModel usersViewModel() {
+    return injectUsersViewModel(UsersViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));
+  }
 
-  private AddUserViewModel getAddUserViewModel() {
-    return injectAddUserViewModel(AddUserViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));}
+  private AddUserViewModel addUserViewModel() {
+    return injectAddUserViewModel(AddUserViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));
+  }
 
-  private ClientsViewModel getClientsViewModel() {
-    return injectClientsViewModel(ClientsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+  private UserPermissionsViewModel userPermissionsViewModel() {
+    return injectUserPermissionsViewModel(UserPermissionsViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));
+  }
 
-  private AddClientViewModel getAddClientViewModel() {
-    return injectAddClientViewModel(AddClientViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+  private ClientsViewModel clientsViewModel() {
+    return injectClientsViewModel(ClientsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));
+  }
 
-  private ClientProfileViewModel getClientProfileViewModel() {
-    return injectClientProfileViewModel(ClientProfileViewModel_Factory.newInstance(clientsRepositoryProvider.get()));}
+  private AddClientViewModel addClientViewModel() {
+    return injectAddClientViewModel(AddClientViewModel_Factory.newInstance(clientsRepositoryProvider.get()));
+  }
 
-  private AttachmentsViewModel getAttachmentsViewModel() {
-    return injectAttachmentsViewModel(AttachmentsViewModel_Factory.newInstance(attachmentsRepositoryProvider.get()));}
+  private ClientProfileViewModel clientProfileViewModel() {
+    return injectClientProfileViewModel(ClientProfileViewModel_Factory.newInstance(clientsRepositoryProvider.get()));
+  }
 
-  private AddNoteViewModel getAddNoteViewModel() {
-    return injectAddNoteViewModel(AddNoteViewModel_Factory.newInstance(notesRepositoryProvider.get()));}
+  private AttachmentsViewModel attachmentsViewModel() {
+    return injectAttachmentsViewModel(AttachmentsViewModel_Factory.newInstance(attachmentsRepositoryProvider.get()));
+  }
+
+  private CategoriesViewModel categoriesViewModel() {
+    return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(categoriesRepositoryProvider.get()));
+  }
+
+  private AddCategoriesViewModel addCategoriesViewModel() {
+    return injectAddCategoriesViewModel(AddCategoriesViewModel_Factory.newInstance(categoriesRepositoryProvider.get()));
+  }
+
+  private AddNoteViewModel addNoteViewModel() {
+    return injectAddNoteViewModel(AddNoteViewModel_Factory.newInstance(notesRepositoryProvider.get()));
+  }
+
+  private AddCaseViewModel addCaseViewModel() {
+    return injectAddCaseViewModel(AddCaseViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
 
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
@@ -199,12 +247,15 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.systemUsersRepositoryProvider = DoubleCheck.provider(SystemUsersRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.attachmentsRepositoryProvider = DoubleCheck.provider(AttachmentsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.categoriesRepositoryProvider = DoubleCheck.provider(CategoriesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.notesRepositoryProvider = DoubleCheck.provider(NotesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.casesRepositoryProvider = DoubleCheck.provider(CasesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
   public void inject(MainActivity mainActivity) {
-    injectMainActivity(mainActivity);}
+    injectMainActivity(mainActivity);
+  }
 
   @Override
   public void inject(BaseActivity tmpActivity) {
@@ -212,91 +263,118 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   @Override
   public void inject(SplashFragment splashFragment) {
-    injectSplashFragment(splashFragment);}
+    injectSplashFragment(splashFragment);
+  }
 
   @Override
   public void inject(OnBoardFragment onBoardFragment) {
-    injectOnBoardFragment(onBoardFragment);}
+    injectOnBoardFragment(onBoardFragment);
+  }
 
   @Override
   public void inject(LoginFragment loginFragment) {
-    injectLoginFragment(loginFragment);}
+    injectLoginFragment(loginFragment);
+  }
 
   @Override
   public void inject(ForgetPasswordFragment forgetPasswordFragment) {
-    injectForgetPasswordFragment(forgetPasswordFragment);}
+    injectForgetPasswordFragment(forgetPasswordFragment);
+  }
 
   @Override
   public void inject(ConfirmCodeFragment confirmCodeFragment) {
-    injectConfirmCodeFragment(confirmCodeFragment);}
+    injectConfirmCodeFragment(confirmCodeFragment);
+  }
 
   @Override
   public void inject(ChangePasswordFragment changePasswordFragment) {
-    injectChangePasswordFragment(changePasswordFragment);}
+    injectChangePasswordFragment(changePasswordFragment);
+  }
 
   @Override
   public void inject(ProfileFragment profileFragment) {
-    injectProfileFragment(profileFragment);}
+    injectProfileFragment(profileFragment);
+  }
 
   @Override
   public void inject(HomeFragment homeFragment) {
-    injectHomeFragment(homeFragment);}
+    injectHomeFragment(homeFragment);
+  }
 
   @Override
   public void inject(ReportersDetailsFragment reportersDetailsFragment) {
-    injectReportersDetailsFragment(reportersDetailsFragment);}
+    injectReportersDetailsFragment(reportersDetailsFragment);
+  }
 
   @Override
   public void inject(UsersFragment usersFragment) {
-    injectUsersFragment(usersFragment);}
+    injectUsersFragment(usersFragment);
+  }
 
   @Override
   public void inject(AddUserFragment addUserFragment) {
-    injectAddUserFragment(addUserFragment);}
+    injectAddUserFragment(addUserFragment);
+  }
 
   @Override
   public void inject(UserPermissionsFragment userPermissionsFragment) {
-    injectUserPermissionsFragment(userPermissionsFragment);}
+    injectUserPermissionsFragment(userPermissionsFragment);
+  }
 
   @Override
   public void inject(ClientsFragment clientsFragment) {
-    injectClientsFragment(clientsFragment);}
+    injectClientsFragment(clientsFragment);
+  }
 
   @Override
   public void inject(AddClientFragment addClientFragment) {
-    injectAddClientFragment(addClientFragment);}
+    injectAddClientFragment(addClientFragment);
+  }
 
   @Override
   public void inject(ClientProfileFragment clientProfileFragment) {
-    injectClientProfileFragment(clientProfileFragment);}
+    injectClientProfileFragment(clientProfileFragment);
+  }
 
   @Override
   public void inject(AttachmentsFragment attachmentsFragment) {
-    injectAttachmentsFragment(attachmentsFragment);}
+    injectAttachmentsFragment(attachmentsFragment);
+  }
 
   @Override
   public void inject(AddAttachmentFragment addAttachmentFragment) {
-    injectAddAttachmentFragment(addAttachmentFragment);}
+    injectAddAttachmentFragment(addAttachmentFragment);
+  }
 
   @Override
   public void inject(CategoriesFragment categoriesFragment) {
-    injectCategoriesFragment(categoriesFragment);}
+    injectCategoriesFragment(categoriesFragment);
+  }
 
   @Override
   public void inject(AddCategoryFragment addCategoryFragment) {
-    injectAddCategoryFragment(addCategoryFragment);}
+    injectAddCategoryFragment(addCategoryFragment);
+  }
 
   @Override
   public void inject(BailiffsFragment bailiffsFragment) {
-    injectBailiffsFragment(bailiffsFragment);}
+    injectBailiffsFragment(bailiffsFragment);
+  }
 
   @Override
   public void inject(AddBailiffsFragment addBailiffsFragment) {
-    injectAddBailiffsFragment(addBailiffsFragment);}
+    injectAddBailiffsFragment(addBailiffsFragment);
+  }
 
   @Override
   public void inject(AddNoteFragment addNoteFragment) {
-    injectAddNoteFragment(addNoteFragment);}
+    injectAddNoteFragment(addNoteFragment);
+  }
+
+  @Override
+  public void inject(AddCaseFragment addCaseFragment) {
+    injectAddCaseFragment(addCaseFragment);
+  }
 
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
@@ -309,12 +387,12 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private SplashFragment injectSplashFragment(SplashFragment instance) {
-    SplashFragment_MembersInjector.injectViewModel(instance, getSplashViewModel());
+    SplashFragment_MembersInjector.injectViewModel(instance, splashViewModel());
     return instance;
   }
 
   private OnBoardFragment injectOnBoardFragment(OnBoardFragment instance) {
-    OnBoardFragment_MembersInjector.injectViewModel(instance, getSplashViewModel());
+    OnBoardFragment_MembersInjector.injectViewModel(instance, splashViewModel());
     return instance;
   }
 
@@ -324,7 +402,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private LoginFragment injectLoginFragment(LoginFragment instance) {
-    LoginFragment_MembersInjector.injectViewModel(instance, getLoginViewModel());
+    LoginFragment_MembersInjector.injectViewModel(instance, loginViewModel());
     return instance;
   }
 
@@ -334,7 +412,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ForgetPasswordFragment injectForgetPasswordFragment(ForgetPasswordFragment instance) {
-    ForgetPasswordFragment_MembersInjector.injectViewModel(instance, getForgetPasswordViewModel());
+    ForgetPasswordFragment_MembersInjector.injectViewModel(instance, forgetPasswordViewModel());
     return instance;
   }
 
@@ -344,7 +422,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ConfirmCodeFragment injectConfirmCodeFragment(ConfirmCodeFragment instance) {
-    ConfirmCodeFragment_MembersInjector.injectViewModel(instance, getConfirmViewModel());
+    ConfirmCodeFragment_MembersInjector.injectViewModel(instance, confirmViewModel());
     return instance;
   }
 
@@ -354,7 +432,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ChangePasswordFragment injectChangePasswordFragment(ChangePasswordFragment instance) {
-    ChangePasswordFragment_MembersInjector.injectViewModel(instance, getChangePasswordViewModel());
+    ChangePasswordFragment_MembersInjector.injectViewModel(instance, changePasswordViewModel());
     return instance;
   }
 
@@ -364,7 +442,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ProfileFragment injectProfileFragment(ProfileFragment instance) {
-    ProfileFragment_MembersInjector.injectViewModel(instance, getProfileViewModel());
+    ProfileFragment_MembersInjector.injectViewModel(instance, profileViewModel());
     return instance;
   }
 
@@ -385,7 +463,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private UsersFragment injectUsersFragment(UsersFragment instance) {
-    UsersFragment_MembersInjector.injectViewModel(instance, getUsersViewModel());
+    UsersFragment_MembersInjector.injectViewModel(instance, usersViewModel());
     return instance;
   }
 
@@ -395,12 +473,18 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddUserFragment injectAddUserFragment(AddUserFragment instance) {
-    AddUserFragment_MembersInjector.injectViewModel(instance, getAddUserViewModel());
+    AddUserFragment_MembersInjector.injectViewModel(instance, addUserViewModel());
+    return instance;
+  }
+
+  private UserPermissionsViewModel injectUserPermissionsViewModel(
+      UserPermissionsViewModel instance) {
+    UserPermissionsViewModel_MembersInjector.injectUsersRepository(instance, systemUsersRepositoryProvider.get());
     return instance;
   }
 
   private UserPermissionsFragment injectUserPermissionsFragment(UserPermissionsFragment instance) {
-    UserPermissionsFragment_MembersInjector.injectViewModel(instance, new UserPermissionsViewModel());
+    UserPermissionsFragment_MembersInjector.injectViewModel(instance, userPermissionsViewModel());
     return instance;
   }
 
@@ -410,7 +494,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ClientsFragment injectClientsFragment(ClientsFragment instance) {
-    ClientsFragment_MembersInjector.injectViewModel(instance, getClientsViewModel());
+    ClientsFragment_MembersInjector.injectViewModel(instance, clientsViewModel());
     return instance;
   }
 
@@ -420,7 +504,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddClientFragment injectAddClientFragment(AddClientFragment instance) {
-    AddClientFragment_MembersInjector.injectViewModel(instance, getAddClientViewModel());
+    AddClientFragment_MembersInjector.injectViewModel(instance, addClientViewModel());
     return instance;
   }
 
@@ -430,7 +514,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ClientProfileFragment injectClientProfileFragment(ClientProfileFragment instance) {
-    ClientProfileFragment_MembersInjector.injectViewModel(instance, getClientProfileViewModel());
+    ClientProfileFragment_MembersInjector.injectViewModel(instance, clientProfileViewModel());
     return instance;
   }
 
@@ -440,7 +524,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AttachmentsFragment injectAttachmentsFragment(AttachmentsFragment instance) {
-    AttachmentsFragment_MembersInjector.injectViewModel(instance, getAttachmentsViewModel());
+    AttachmentsFragment_MembersInjector.injectViewModel(instance, attachmentsViewModel());
     return instance;
   }
 
@@ -449,13 +533,23 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private CategoriesViewModel injectCategoriesViewModel(CategoriesViewModel instance) {
+    CategoriesViewModel_MembersInjector.injectCategoriesRepository(instance, categoriesRepositoryProvider.get());
+    return instance;
+  }
+
   private CategoriesFragment injectCategoriesFragment(CategoriesFragment instance) {
-    CategoriesFragment_MembersInjector.injectViewModel(instance, new CategoriesViewModel());
+    CategoriesFragment_MembersInjector.injectViewModel(instance, categoriesViewModel());
+    return instance;
+  }
+
+  private AddCategoriesViewModel injectAddCategoriesViewModel(AddCategoriesViewModel instance) {
+    AddCategoriesViewModel_MembersInjector.injectCategoriesRepository(instance, categoriesRepositoryProvider.get());
     return instance;
   }
 
   private AddCategoryFragment injectAddCategoryFragment(AddCategoryFragment instance) {
-    AddCategoryFragment_MembersInjector.injectViewModel(instance, new AddCategoriesViewModel());
+    AddCategoryFragment_MembersInjector.injectViewModel(instance, addCategoriesViewModel());
     return instance;
   }
 
@@ -475,7 +569,17 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private AddNoteFragment injectAddNoteFragment(AddNoteFragment instance) {
-    AddNoteFragment_MembersInjector.injectViewModel(instance, getAddNoteViewModel());
+    AddNoteFragment_MembersInjector.injectViewModel(instance, addNoteViewModel());
+    return instance;
+  }
+
+  private AddCaseViewModel injectAddCaseViewModel(AddCaseViewModel instance) {
+    AddCaseViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private AddCaseFragment injectAddCaseFragment(AddCaseFragment instance) {
+    AddCaseFragment_MembersInjector.injectViewModel(instance, addCaseViewModel());
     return instance;
   }
 

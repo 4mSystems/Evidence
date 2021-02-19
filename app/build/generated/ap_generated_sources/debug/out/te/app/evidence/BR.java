@@ -9,41 +9,47 @@ public class BR {
 
   public static final int cases = 3;
 
-  public static final int clientCasesAdapter = 4;
+  public static final int categoriesAdapter = 4;
 
-  public static final int clients = 5;
+  public static final int categoriesData = 5;
 
-  public static final int clientsAdapter = 6;
+  public static final int clientCasesAdapter = 6;
 
-  public static final int itemViewModel = 7;
+  public static final int clients = 7;
 
-  public static final int loginStatus = 8;
+  public static final int clientsAdapter = 8;
 
-  public static final int menuModel = 9;
+  public static final int itemViewModel = 9;
 
-  public static final int menuViewModel = 10;
+  public static final int loginStatus = 10;
 
-  public static final int notes = 11;
+  public static final int menuModel = 11;
 
-  public static final int notesAdapter = 12;
+  public static final int menuViewModel = 12;
 
-  public static final int onBoardAdapter = 13;
+  public static final int notes = 13;
 
-  public static final int onBoardViewModels = 14;
+  public static final int notesAdapter = 14;
 
-  public static final int passingObject = 15;
+  public static final int onBoardAdapter = 15;
 
-  public static final int selectedBtn = 16;
+  public static final int onBoardViewModels = 16;
 
-  public static final int settingsData = 17;
+  public static final int passingObject = 17;
 
-  public static final int systemUserData = 18;
+  public static final int selectedBtn = 18;
 
-  public static final int type = 19;
+  public static final int settingsData = 19;
 
-  public static final int userDocuments = 20;
+  public static final int systemUserData = 20;
 
-  public static final int usersAdapter = 21;
+  public static final int type = 21;
 
-  public static final int viewmodel = 22;
+  public static final int userDocuments = 22;
+
+  public static final int userPermissionsData = 23;
+
+  public static final int usersAdapter = 24;
+
+  public static final int viewmodel = 25;
 }

@@ -11,4 +11,12 @@ public class MenuViewModel extends BaseViewModel {
     public void toUsers() {
         getLiveData().setValue(Constants.USERS);
     }
+
+    public void toCategories() {
+        getLiveData().setValue(Constants.CATEGORIES);
+    }
+
+    public void addCase() {
+        getLiveData().setValue(Constants.ADD_CASE);
+    }
 }

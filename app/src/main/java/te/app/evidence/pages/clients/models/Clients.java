@@ -1,8 +1,12 @@
 package te.app.evidence.pages.clients.models;
 
-import com.google.gson.annotations.SerializedName;
+import android.graphics.drawable.Drawable;
+import android.net.Uri;
 
-public class Clients {
+import com.google.gson.annotations.SerializedName;
+import com.pchmn.materialchips.model.ChipInterface;
+
+public class Clients implements ChipInterface {
 
 	@SerializedName("client_Address")
 	private String clientAddress;
@@ -17,7 +21,7 @@ public class Clients {
 	private String catId;
 
 	@SerializedName("id")
-	private int id;
+	private int clientId;
 
 	@SerializedName("client_Name")
 	private String clientName;
@@ -47,8 +51,8 @@ public class Clients {
 		return catId;
 	}
 
-	public int getId(){
-		return id;
+	public int getClientId(){
+		return clientId;
 	}
 
 	public String getClientName(){
@@ -66,4 +70,29 @@ public class Clients {
 	public String getClientUnit(){
 		return clientUnit;
 	}
+
+    @Override
+    public Object getId() {
+        return clientId;
+    }
+
+    @Override
+    public Uri getAvatarUri() {
+        return null;
+    }
+
+    @Override
+    public Drawable getAvatarDrawable() {
+        return null;
+    }
+
+    @Override
+    public String getLabel() {
+        return clientName;
+    }
+
+    @Override
+    public String getInfo() {
+        return clientUnit;
+    }
 }

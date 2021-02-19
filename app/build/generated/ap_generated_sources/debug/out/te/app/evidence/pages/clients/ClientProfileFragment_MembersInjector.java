@@ -19,7 +19,8 @@ public final class ClientProfileFragment_MembersInjector implements MembersInjec
 
   public static MembersInjector<ClientProfileFragment> create(
       Provider<ClientProfileViewModel> viewModelProvider) {
-    return new ClientProfileFragment_MembersInjector(viewModelProvider);}
+    return new ClientProfileFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(ClientProfileFragment instance) {

@@ -18,7 +18,8 @@ public final class HomeFragment_MembersInjector implements MembersInjector<HomeF
   }
 
   public static MembersInjector<HomeFragment> create(Provider<HomeViewModel> viewModelProvider) {
-    return new HomeFragment_MembersInjector(viewModelProvider);}
+    return new HomeFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(HomeFragment instance) {

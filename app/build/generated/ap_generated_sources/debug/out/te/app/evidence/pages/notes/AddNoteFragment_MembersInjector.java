@@ -19,7 +19,8 @@ public final class AddNoteFragment_MembersInjector implements MembersInjector<Ad
 
   public static MembersInjector<AddNoteFragment> create(
       Provider<AddNoteViewModel> viewModelProvider) {
-    return new AddNoteFragment_MembersInjector(viewModelProvider);}
+    return new AddNoteFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(AddNoteFragment instance) {

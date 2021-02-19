@@ -38,11 +38,11 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback38;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -91,9 +91,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -307,9 +307,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback26);
-            this.clientNotes.setOnClickListener(mCallback25);
-            this.mboundView10.setOnClickListener(mCallback27);
+            this.clientCases.setOnClickListener(mCallback39);
+            this.clientNotes.setOnClickListener(mCallback38);
+            this.mboundView10.setOnClickListener(mCallback40);
         }
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
@@ -326,6 +326,23 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.cases();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -357,23 +374,6 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
 
 
                     viewmodel.notes();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.cases();
                 }
                 break;
             }

@@ -25,6 +25,6 @@ public final class ConnectionModule_WebServiceFactory implements Factory<Api> {
   }
 
   public static Api webService(ConnectionModule instance) {
-    return Preconditions.checkNotNull(instance.webService(), "Cannot return null from a non-@Nullable @Provides method");
+    return Preconditions.checkNotNullFromProvides(instance.webService());
   }
 }

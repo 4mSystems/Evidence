@@ -25,24 +25,24 @@ public class URLS {
     public final static String DELETE_NOTE = "delete_clientNote/";
     public final static String USERS = "users/";
     public final static String ADD_USER = "add_users";
+    public final static String EDIT_USER = "edit_user";
     public final static String ABOUT = "settings/about-us";
     public final static String TERMS = "settings/terms";
 
 
     public static final String CONTACT_US = "settings/contact-us";
-    public static final String NOTIFICATIONS = "notifications";
-    public final static String GET_USER_DOCUMENTS = "delegate/delegate-documents";
+    public static final String ADD_CATEGORY = "add_category";
+    public final static String DELETE_CATEGORY = "delete_category/";
     public final static String REMOVE_AD = "listings/delete-listing/";
-    public final static String GET_AD_DETAILS = "listings/listing/";
     public final static String REMOVE_IMAGE = "listings/delete-img/";
 
 
-    public static final String SEND_REPORT = "listings/report";
-    public static final String GET_PROFILE_DATA = "delegate/profile-data";
+    public static final String DELETE_USER = "delete_user/";
+    public static final String USER_PERMISSIONS = "select_user_permission/";
     public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
-    public static final String UPDATE_AD_DATA = "listings/update-listing-details";
+    public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
-    public static final String UPDATE_IMAGES = "listings/update-listing-images";
+    public static final String CASE_CLIENTS_CATEGORIES = "select_clients_and_cat";
     public static final String CONVERSATIONS = "settings/messages-history";
     public static final String CHAT = "settings/messages/";
     public static final String SEND_MESSAGE = "settings/send-message";

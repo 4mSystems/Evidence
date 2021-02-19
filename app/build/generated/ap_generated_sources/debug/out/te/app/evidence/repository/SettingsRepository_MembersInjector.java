@@ -24,7 +24,8 @@ public final class SettingsRepository_MembersInjector implements MembersInjector
   public static MembersInjector<SettingsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new SettingsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);}
+    return new SettingsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+  }
 
   @Override
   public void injectMembers(SettingsRepository instance) {

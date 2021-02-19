@@ -20,7 +20,8 @@ public final class ClientProfileViewModel_MembersInjector implements MembersInje
 
   public static MembersInjector<ClientProfileViewModel> create(
       Provider<ClientsRepository> clientsRepositoryProvider) {
-    return new ClientProfileViewModel_MembersInjector(clientsRepositoryProvider);}
+    return new ClientProfileViewModel_MembersInjector(clientsRepositoryProvider);
+  }
 
   @Override
   public void injectMembers(ClientProfileViewModel instance) {

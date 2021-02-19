@@ -18,7 +18,8 @@ public final class SplashFragment_MembersInjector implements MembersInjector<Spl
 
   public static MembersInjector<SplashFragment> create(
       Provider<SplashViewModel> viewModelProvider) {
-    return new SplashFragment_MembersInjector(viewModelProvider);}
+    return new SplashFragment_MembersInjector(viewModelProvider);
+  }
 
   @Override
   public void injectMembers(SplashFragment instance) {

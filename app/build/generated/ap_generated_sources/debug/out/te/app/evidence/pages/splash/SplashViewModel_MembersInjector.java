@@ -19,7 +19,8 @@ public final class SplashViewModel_MembersInjector implements MembersInjector<Sp
 
   public static MembersInjector<SplashViewModel> create(
       Provider<AuthRepository> repositoryProvider) {
-    return new SplashViewModel_MembersInjector(repositoryProvider);}
+    return new SplashViewModel_MembersInjector(repositoryProvider);
+  }
 
   @Override
   public void injectMembers(SplashViewModel instance) {

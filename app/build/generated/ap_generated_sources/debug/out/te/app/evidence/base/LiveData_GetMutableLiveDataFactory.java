@@ -27,6 +27,6 @@ public final class LiveData_GetMutableLiveDataFactory implements Factory<Mutable
   }
 
   public static MutableLiveData<Mutable> getMutableLiveData(LiveData instance) {
-    return Preconditions.checkNotNull(instance.getMutableLiveData(), "Cannot return null from a non-@Nullable @Provides method");
+    return Preconditions.checkNotNullFromProvides(instance.getMutableLiveData());
   }
 }

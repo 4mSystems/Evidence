@@ -75,7 +75,7 @@ public class ClientsFragment extends BaseFragment {
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
-                viewModel.getClientsAdapter().notifyItemRemoved(viewModel.getClientsAdapter().lastSelected);
+                viewModel.getClientsAdapter().notifyItemRangeChanged(viewModel.getClientsAdapter().lastSelected, viewModel.getClientsAdapter().getItemCount());
                 deleteDialog.dismiss();
             }
         });

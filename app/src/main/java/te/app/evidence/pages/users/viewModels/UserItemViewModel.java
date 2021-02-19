@@ -21,4 +21,12 @@ public class UserItemViewModel extends BaseViewModel {
     public void toEdit() {
         getLiveData().setValue(Constants.EDIT);
     }
+
+    public void toDelete() {
+        getLiveData().setValue(Constants.DELETE);
+    }
+    public void toUserPermission() {
+        getLiveData().setValue(Constants.USER_PERMISSION);
+    }
+
 }

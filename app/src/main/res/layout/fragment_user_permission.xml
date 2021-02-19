@@ -13,143 +13,193 @@
             type="te.app.evidence.pages.users.viewModels.UserPermissionsViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp8h"
+            app:layout_constraintBottom_toTopOf="@id/btn_save"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.users.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/menuUsers)}"
+                    android:text="@string/menuUsers"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp20h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.clients.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/menuClients)}"
+                    android:text="@string/menuClients"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.addcases.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/add_case)}"
+                    android:text="@string/add_case"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.searchCase.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/search_case)}"
+                    android:text="@string/search_case"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.mohdreen.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/menuMohdar)}"
+                    android:text="@string/menuMohdar"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.category.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/menuCat)}"
+                    android:text="@string/menuCat"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.dailyReport.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/daily_reports)}"
+                    android:text="@string/daily_reports"
+
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:background="@color/line_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:layout_marginBottom="@dimen/dp12h"
+                    android:drawableEnd="@{viewmodel.userPermissionsData.monthlyReport.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
+                    android:drawablePadding="@dimen/dp6w"
+                    android:gravity="start|center_vertical"
+                    android:onClick="@{()-> viewmodel.changeStatus(@string/monthly_reports)}"
+                    android:text="@string/monthly_reports"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_off"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/menuUsers"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp20h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_on"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/menuClients"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_on"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/menuCases"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_off"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/menuMohdar"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_off"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/menuCat"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:drawableEnd="@drawable/ic_permission_off"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/daily_reports"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/dp10h"
-                android:background="@color/line_color" />
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp12w"
-                android:layout_marginBottom="@dimen/dp12h"
-                android:drawableEnd="@drawable/ic_permission_off"
-                android:drawablePadding="@dimen/dp6w"
-                android:gravity="start|center_vertical"
-                android:text="@string/monthly_reports"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary" />
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/save"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
