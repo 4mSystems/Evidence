@@ -12,16 +12,19 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 
 import te.app.evidence.R;
+import te.app.evidence.base.MyApplication;
 import te.app.evidence.customViews.actionbar.HomeActionBarView;
 import te.app.evidence.databinding.LayoutNavigationDrawerBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.categories.CategoriesFragment;
 import te.app.evidence.pages.clients.ClientsFragment;
+import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
+import te.app.evidence.utils.session.LanguagesHelper;
 
 
 @SuppressLint("ViewConstructor")
@@ -73,12 +76,16 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, UsersFragment.class.getName(), ResourceManager.getString(R.string.menuUsers), null);
             } else if (o.equals(Constants.CATEGORIES)) {
                 MovementHelper.startActivity(context, CategoriesFragment.class.getName(), ResourceManager.getString(R.string.menuCat), null);
-            }else if (o.equals(Constants.ADD_CASE)) {
+            } else if (o.equals(Constants.ADD_CASE)) {
                 MovementHelper.startActivity(context, AddCaseFragment.class.getName(), ResourceManager.getString(R.string.add_case), null);
+            } else if (o.equals(Constants.GET_MOHDAREEN)) {
+                MovementHelper.startActivity(context, BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
+            } else if (o.equals(Constants.LANGUAGE)) {
+                LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals("en") ? "ar" : "en");
+                MovementHelper.startActivityMain(context);
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });
 
     }
-
 }

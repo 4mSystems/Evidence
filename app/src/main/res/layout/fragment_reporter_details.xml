@@ -10,7 +10,7 @@
 
         <variable
             name="viewmodel"
-            type="te.app.evidence.pages.reporters.viewModels.ReportersDetailsViewModel" />
+            type="te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel" />
     </data>
 
     <androidx.core.widget.NestedScrollView
@@ -42,7 +42,8 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/court_mohdr"
+                android:text="@{viewmodel.reportersData.courtMohdareen}"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -67,7 +68,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/paper_type"
+                android:text="@{viewmodel.reportersData.paperType}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +95,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/paper_delivered_date"
+                android:text="@{viewmodel.reportersData.deliverData}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -117,7 +122,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/paper_number"
+                android:text="@{viewmodel.reportersData.paperNumber}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -142,7 +149,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/session_date"
+                android:text="@{viewmodel.reportersData.sessionDate}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -167,7 +176,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/clients"
+                android:text="@{viewmodel.reportersData.mokelName}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -192,7 +203,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/opponents"
+                android:text="@{viewmodel.reportersData.khesmName}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -217,7 +230,9 @@
                 android:layout_marginEnd="@dimen/dp12w"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/case_number"
+                android:text="@{viewmodel.reportersData.caseNumber}"
+
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"
@@ -243,7 +258,8 @@
                 android:layout_marginBottom="@dimen/dp10h"
                 android:background="@drawable/corner_view_primary_gray"
                 android:padding="@dimen/dp8h"
-                android:text="@string/notes"
+                android:text="@{viewmodel.reportersData.notes}"
+                android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintStart_toStartOf="parent"

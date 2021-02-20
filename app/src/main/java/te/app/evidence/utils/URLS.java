@@ -43,7 +43,8 @@ public class URLS {
     public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
     public static final String CASE_CLIENTS_CATEGORIES = "select_clients_and_cat";
-    public static final String CONVERSATIONS = "settings/messages-history";
-    public static final String CHAT = "settings/messages/";
-    public static final String SEND_MESSAGE = "settings/send-message";
+    public static final String GET_MOHDAREEN = "mohdars";
+    public static final String CHANGE_MOH_STATUS = "update_status/";
+    public static final String DELETE_MOHDR = "delete_mohdar/";
+    public static final String REPORTER_DETAILS = "mohder_by_id/";
 }

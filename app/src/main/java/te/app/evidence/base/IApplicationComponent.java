@@ -21,16 +21,15 @@ import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
-import te.app.evidence.pages.reporters.ReportersDetailsFragment;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.users.AddUserFragment;
 import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.pages.users.UsersFragment;
 
-//Component refer to an interface or waiter for make an coffee cup to me
 @Singleton
 @Component(modules = {ConnectionModule.class, LiveData.class})
 public interface IApplicationComponent {

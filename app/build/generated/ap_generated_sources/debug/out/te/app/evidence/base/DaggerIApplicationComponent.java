@@ -78,8 +78,15 @@ import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
 import te.app.evidence.pages.mohdrs.AddBailiffsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment_MembersInjector;
+import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
+import te.app.evidence.pages.mohdrs.ReportersDetailsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel_Factory;
+import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel_MembersInjector;
+import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel_Factory;
+import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel_MembersInjector;
 import te.app.evidence.pages.notes.AddNoteFragment;
 import te.app.evidence.pages.notes.AddNoteFragment_MembersInjector;
 import te.app.evidence.pages.notes.viewModels.AddNoteViewModel;
@@ -92,9 +99,6 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
-import te.app.evidence.pages.reporters.ReportersDetailsFragment;
-import te.app.evidence.pages.reporters.ReportersDetailsFragment_MembersInjector;
-import te.app.evidence.pages.reporters.viewModels.ReportersDetailsViewModel;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.splash.SplashFragment_MembersInjector;
 import te.app.evidence.pages.splash.SplashViewModel;
@@ -143,6 +147,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private Provider<AuthRepository> authRepositoryProvider;
 
+  private Provider<CasesRepository> casesRepositoryProvider;
+
   private Provider<SystemUsersRepository> systemUsersRepositoryProvider;
 
   private Provider<ClientsRepository> clientsRepositoryProvider;
@@ -152,8 +158,6 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<CategoriesRepository> categoriesRepositoryProvider;
 
   private Provider<NotesRepository> notesRepositoryProvider;
-
-  private Provider<CasesRepository> casesRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -193,6 +197,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
+  private ReportersDetailsViewModel reportersDetailsViewModel() {
+    return injectReportersDetailsViewModel(ReportersDetailsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   private UsersViewModel usersViewModel() {
     return injectUsersViewModel(UsersViewModel_Factory.newInstance(systemUsersRepositoryProvider.get()));
   }
@@ -229,6 +237,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectAddCategoriesViewModel(AddCategoriesViewModel_Factory.newInstance(categoriesRepositoryProvider.get()));
   }
 
+  private BailiffsViewModel bailiffsViewModel() {
+    return injectBailiffsViewModel(BailiffsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   private AddNoteViewModel addNoteViewModel() {
     return injectAddNoteViewModel(AddNoteViewModel_Factory.newInstance(notesRepositoryProvider.get()));
   }
@@ -244,12 +256,12 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.casesRepositoryProvider = DoubleCheck.provider(CasesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.systemUsersRepositoryProvider = DoubleCheck.provider(SystemUsersRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.attachmentsRepositoryProvider = DoubleCheck.provider(AttachmentsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.categoriesRepositoryProvider = DoubleCheck.provider(CategoriesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.notesRepositoryProvider = DoubleCheck.provider(NotesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
-    this.casesRepositoryProvider = DoubleCheck.provider(CasesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -451,9 +463,15 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private ReportersDetailsViewModel injectReportersDetailsViewModel(
+      ReportersDetailsViewModel instance) {
+    ReportersDetailsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
   private ReportersDetailsFragment injectReportersDetailsFragment(
       ReportersDetailsFragment instance) {
-    ReportersDetailsFragment_MembersInjector.injectViewModel(instance, new ReportersDetailsViewModel());
+    ReportersDetailsFragment_MembersInjector.injectViewModel(instance, reportersDetailsViewModel());
     return instance;
   }
 
@@ -553,8 +571,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private BailiffsViewModel injectBailiffsViewModel(BailiffsViewModel instance) {
+    BailiffsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
   private BailiffsFragment injectBailiffsFragment(BailiffsFragment instance) {
-    BailiffsFragment_MembersInjector.injectViewModel(instance, new BailiffsViewModel());
+    BailiffsFragment_MembersInjector.injectViewModel(instance, bailiffsViewModel());
     return instance;
   }
 

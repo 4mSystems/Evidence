@@ -46,14 +46,51 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback51;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback52;
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener catNameandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addUserRequest.catName
+            //         is viewmodel.addUserRequest.setCatName((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(catName);
+            // localize variables for thread safety
+            // viewmodel.addUserRequest.catName
+            java.lang.String viewmodelAddUserRequestCatName = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addUserRequest != null
+            boolean viewmodelAddUserRequestJavaLangObjectNull = false;
+            // viewmodel.addUserRequest
+            te.app.evidence.pages.users.models.AddUserRequest viewmodelAddUserRequest = null;
+            // viewmodel
+            te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddUserRequest = viewmodel.getAddUserRequest();
+
+                viewmodelAddUserRequestJavaLangObjectNull = (viewmodelAddUserRequest) != (null);
+                if (viewmodelAddUserRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddUserRequest.setCatName(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
     private androidx.databinding.InverseBindingListener mboundView10androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
@@ -239,6 +276,43 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             }
         }
     };
+    private androidx.databinding.InverseBindingListener userTypeandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addUserRequest.type
+            //         is viewmodel.addUserRequest.setType((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(userType);
+            // localize variables for thread safety
+            // viewmodel.addUserRequest.type
+            java.lang.String viewmodelAddUserRequestType = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addUserRequest != null
+            boolean viewmodelAddUserRequestJavaLangObjectNull = false;
+            // viewmodel.addUserRequest
+            te.app.evidence.pages.users.models.AddUserRequest viewmodelAddUserRequest = null;
+            // viewmodel
+            te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddUserRequest = viewmodel.getAddUserRequest();
+
+                viewmodelAddUserRequestJavaLangObjectNull = (viewmodelAddUserRequest) != (null);
+                if (viewmodelAddUserRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddUserRequest.setType(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentAddUserBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
@@ -280,9 +354,9 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         this.userType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -450,11 +524,13 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         java.lang.String viewmodelAddUserRequestTypeErrorGet = null;
         java.lang.Object viewmodelPassingObjectObjectClass = null;
         boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
+        java.lang.String viewmodelAddUserRequestCatName = null;
         java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser = null;
         int viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = 0;
         java.lang.String viewmodelAddUserRequestCatErrorGet = null;
         java.lang.String viewmodelAddUserRequestPasswordErrorGet = null;
         java.lang.String viewmodelAddUserRequestUserAddressErrorGet = null;
+        java.lang.String viewmodelAddUserRequestType = null;
         java.lang.String viewmodelAddUserRequestEmail = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestEmailError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserAddressError = null;
@@ -536,6 +612,10 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestAddress = viewmodelAddUserRequest.getAddress();
                             // read viewmodel.addUserRequest.phone
                             viewmodelAddUserRequestPhone = viewmodelAddUserRequest.getPhone();
+                            // read viewmodel.addUserRequest.catName
+                            viewmodelAddUserRequestCatName = viewmodelAddUserRequest.getCatName();
+                            // read viewmodel.addUserRequest.type
+                            viewmodelAddUserRequestType = viewmodelAddUserRequest.getType();
                             // read viewmodel.addUserRequest.email
                             viewmodelAddUserRequestEmail = viewmodelAddUserRequest.getEmail();
                             // read viewmodel.addUserRequest.password
@@ -629,31 +709,35 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x200L) != 0) {
-            // api target 1
-
-            this.catName.setOnClickListener(mCallback46);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
-            this.mboundView15.setOnClickListener(mCallback47);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userType.setOnClickListener(mCallback45);
-        }
-        if ((dirtyFlags & 0x281L) != 0) {
-            // api target 1
-
-            this.mboundView1.setError(viewmodelAddUserRequestUserNameErrorGet);
-        }
         if ((dirtyFlags & 0x280L) != 0) {
             // api target 1
 
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, viewmodelAddUserRequestCatName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddUserRequestAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddUserRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddUserRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddUserRequestPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddUserRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userType, viewmodelAddUserRequestType);
+        }
+        if ((dirtyFlags & 0x200L) != 0) {
+            // api target 1
+
+            this.catName.setOnClickListener(mCallback51);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
+            this.mboundView15.setOnClickListener(mCallback52);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
+            this.userType.setOnClickListener(mCallback50);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.userType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, userTypeandroidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0x281L) != 0) {
+            // api target 1
+
+            this.mboundView1.setError(viewmodelAddUserRequestUserNameErrorGet);
         }
         if ((dirtyFlags & 0x282L) != 0) {
             // api target 1
@@ -696,23 +780,6 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.addNewUser();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -744,6 +811,23 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
 
 
                     viewmodel.showCategories();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.addNewUser();
                 }
                 break;
             }

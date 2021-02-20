@@ -40,6 +40,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable-mdpi/splash.jpg"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_lang.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_lang.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_report.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-hdpi/ic_report.png"
     },

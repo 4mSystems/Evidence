@@ -361,7 +361,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/warning/baseline_warning_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/language/baseline_language_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -373,7 +373,7 @@
                           <map>
                             <entry key="autoMirrored" value="true" />
                             <entry key="color" value="94221e" />
-                            <entry key="outputName" value="ic_warning" />
+                            <entry key="outputName" value="ic_lang" />
                             <entry key="sourceFile" value="$USER_HOME$/android-files/Lawyer/cutting/cutting/svg/اضافة دعوي /calendar-interface-symbol-tool.svg" />
                           </map>
                         </option>

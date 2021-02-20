@@ -19,4 +19,12 @@ public class MenuViewModel extends BaseViewModel {
     public void addCase() {
         getLiveData().setValue(Constants.ADD_CASE);
     }
+
+    public void toReporters() {
+        getLiveData().setValue(Constants.GET_MOHDAREEN);
+    }
+
+    public void changeLanguage() {
+        getLiveData().setValue(Constants.LANGUAGE);
+    }
 }

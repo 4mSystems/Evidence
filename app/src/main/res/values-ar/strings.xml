@@ -425,5 +425,9 @@
     <string name="search_case">Search case</string>
     <string name="cat_search_hint">Looking for category ?</string>
     <string name="edit_category">Edit category</string>
+    <string name="status_done">Done</string>
+    <string name="status_waiting">Waiting</string>
+    <string name="reporter_details">Reporter details</string>
+    <string name="lang">Change language</string>
 
 </resources>

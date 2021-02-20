@@ -11,6 +11,7 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
+import te.app.evidence.R;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.categories.models.CategoriesData;
@@ -18,6 +19,7 @@ import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class AddClientViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
@@ -77,12 +79,12 @@ public class AddClientViewModel extends BaseViewModel {
     @Bindable
     public void setClients(Clients clients) {
         if (clients != null) {
-            getAddClientRequest().setCat_id(String.valueOf(clients.getCategory().getId()));
+            getAddClientRequest().setCat_id(String.valueOf(clients.getCatId()));
             getAddClientRequest().setCatName(clients.getCategory().getName());
             getAddClientRequest().setClient_Name(clients.getClientName());
             getAddClientRequest().setClient_Unit(clients.getClientUnit());
             getAddClientRequest().setClient_Address(clients.getClientAddress());
-            getAddClientRequest().setType("client");
+            getAddClientRequest().setType(clients.getType().equals(ResourceManager.getString(R.string.client)) ? "client" : "khesm");
             getAddClientRequest().setNotes(clients.getNotes());
             getAddClientRequest().setClient_id(String.valueOf(clients.getId()));
         }

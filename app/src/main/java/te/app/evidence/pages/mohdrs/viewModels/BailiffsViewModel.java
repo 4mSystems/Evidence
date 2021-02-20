@@ -6,24 +6,41 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.mohdrs.adapters.BailiffsAdapter;
+import te.app.evidence.repository.CasesRepository;
 
 public class BailiffsViewModel extends BaseViewModel {
-
+    BailiffsAdapter bailiffsAdapter;
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    CasesRepository casesRepository;
 
     @Inject
-    public BailiffsViewModel() {
+    public BailiffsViewModel(CasesRepository casesRepository) {
+        this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
+        casesRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+    public void getMohdareen() {
+        compositeDisposable.add(casesRepository.getMohdareen());
     }
 
+    public void changeStatus() {
+        compositeDisposable.add(casesRepository.ChangeStatus(getBailiffsAdapter().getBailiffsDataList().get(getBailiffsAdapter().lastSelected).getMohId()));
+    }
+
+    public void deleteMohdr() {
+        compositeDisposable.add(casesRepository.deleteMohdr(getBailiffsAdapter().getBailiffsDataList().get(getBailiffsAdapter().lastSelected).getMohId()));
+    }
+
+    @Bindable
+    public BailiffsAdapter getBailiffsAdapter() {
+        return this.bailiffsAdapter == null ? this.bailiffsAdapter = new BailiffsAdapter() : this.bailiffsAdapter;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -31,17 +48,6 @@ public class BailiffsViewModel extends BaseViewModel {
         }
     }
 
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
-    }
 
     @Override
     protected void onCleared() {
@@ -49,14 +55,4 @@ public class BailiffsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
-    }
 }

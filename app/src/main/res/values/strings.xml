@@ -414,7 +414,6 @@
     <string name="client">Client</string>
     <string name="addressed_to">Addressed to</string>
     <string name="khesm">khesm</string>
-    <string name="client_add">client</string>
     <string name="edit_client">Edit client</string>
     <string name="option_cancel">Cancel</string>
     <string name="inventation_type">Inventation type</string>
@@ -429,5 +428,9 @@
     <string name="search_case">Search case</string>
     <string name="cat_search_hint">Looking for category ?</string>
     <string name="edit_category">Edit category</string>
+    <string name="status_done">Done</string>
+    <string name="status_waiting">Waiting</string>
+    <string name="reporter_details">Reporter details</string>
+    <string name="lang">Change language</string>
 
 </resources>

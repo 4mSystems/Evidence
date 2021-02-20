@@ -88,8 +88,8 @@ public class AddUserFragment extends BaseFragment {
 
     private void showClientsType() {
         List<PopUp> typeList = new ArrayList<>();
-        typeList.add(new PopUp(getString(R.string.admin), 1));
-        typeList.add(new PopUp(getString(R.string.user), 2));
+        typeList.add(new PopUp(getString(R.string.admin), "admin"));
+        typeList.add(new PopUp(getString(R.string.user), "User"));
         PopUpMenuHelper.showPopUp(context, binding.userType, typeList).
                 setOnMenuItemClickListener(item -> {
                     binding.userType.setText(typeList.get(item.getItemId()).getName());

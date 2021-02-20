@@ -12,7 +12,7 @@ import androidx.databinding.ViewDataBinding;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.pages.reporters.viewModels.ReportersDetailsViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel;
 
 public abstract class FragmentReporterDetailsBinding extends ViewDataBinding {
   @Bindable

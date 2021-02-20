@@ -24,6 +24,7 @@ public class AddUserRequest {
     private String cat_id;
     @SerializedName("user_id")
     private String id;
+    private transient String catName;
 
     public ObservableField<String> userNameError = new ObservableField<>();
     public ObservableField<String> emailError = new ObservableField<>();
@@ -153,5 +154,13 @@ public class AddUserRequest {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCatName() {
+        return catName;
+    }
+
+    public void setCatName(String catName) {
+        this.catName = catName;
     }
 }

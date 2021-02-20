@@ -15,6 +15,7 @@ public class Constants {
     public final static String UPDATE_PAYMENT = "UPDATE_PAYMENT";
     public final static String EMAIL = "email";
     public final static String DELETE = "DELETE";
+    public final static String VIEW = "VIEW";
     public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
 
     public final static String UPDATE_PROFILE = "update_profile";
@@ -45,7 +46,7 @@ public class Constants {
     public final static String USER_PERMISSIONS = "USER_PERMISSIONS";
 
     public final static String LANGUAGE = "language";
-    public static final String DEFAULT_LANGUAGE = "en";
+    public static final String DEFAULT_LANGUAGE = "ar";
     public static final String ADD_CATEGORY = "ADD_CATEGORY";
     public static final String PAGE = "page";
     public final static String NAME_BAR = "name_bar";
@@ -54,13 +55,13 @@ public class Constants {
     public static final String SETTINGS = "SETTINGS";
     public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
     public static final String CASE_CLIENTS_CATEGORIES = "CASE_CLIENTS_CATEGORIES";
-    public static final String SORT_DIALOG = "SORT_DIALOG";
+    public static final String GET_MOHDAREEN = "GET_MOHDAREEN";
     public static final String CATEGORIES = "CATEGORIES";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
     public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
     public static final String SHARE_BAR = "SHARE_BAR";
     public static final String PROFILE = "PROFILE";
-    public static final String NEW_IMAGE = "NEW_IMAGE";
+    public static final String CHANGE_STATUS = "CHANGE_STATUS";
     public static final String REMOVE_IMAGE = "REMOVE_IMAGE";
 
 
@@ -92,8 +93,7 @@ public class Constants {
 
     public static final String ADD_CASE = "ADD_CASE";
 
-    public static final String back_car_image = "back_car_image";
-    public static final int back_car_code = 381;
+    public static final String REPOTERS = "REPOTERS";
 
     public static final String insurance_image = "insurance_image";
     public static final int insurance_image_code = 382;

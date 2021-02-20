@@ -17,7 +17,7 @@ import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
-import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel;
 
 public abstract class ItemBailiffsBinding extends ViewDataBinding {
   @NonNull
@@ -66,7 +66,7 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
   public final CustomTextViewMedium statusValue;
 
   @NonNull
-  public final CustomTextViewMedium tvQualifications;
+  public final CustomTextViewMedium tvPaperNumber;
 
   @NonNull
   public final View v1;
@@ -93,7 +93,7 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
   public final CustomTextViewRegular viewValue;
 
   @Bindable
-  protected SessionItemViewModel mItemViewModel;
+  protected BailiffsItemViewModel mItemViewModel;
 
   protected ItemBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular courtText, CustomTextViewRegular courtValue,
@@ -103,7 +103,7 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
       CustomTextViewRegular paperNumberValue, CustomTextViewRegular paperTypeText,
       CustomTextViewRegular paperTypeValue, CustomTextViewRegular sessionDateText,
       CustomTextViewRegular sessionMonthValue, CustomTextViewRegular statusText,
-      CustomTextViewMedium statusValue, CustomTextViewMedium tvQualifications, View v1, View v2,
+      CustomTextViewMedium statusValue, CustomTextViewMedium tvPaperNumber, View v1, View v2,
       View v3, View v4, View v5, View v6, View v7, CustomTextViewRegular viewValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.courtText = courtText;
@@ -121,7 +121,7 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
     this.sessionMonthValue = sessionMonthValue;
     this.statusText = statusText;
     this.statusValue = statusValue;
-    this.tvQualifications = tvQualifications;
+    this.tvPaperNumber = tvPaperNumber;
     this.v1 = v1;
     this.v2 = v2;
     this.v3 = v3;
@@ -132,10 +132,10 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
     this.viewValue = viewValue;
   }
 
-  public abstract void setItemViewModel(@Nullable SessionItemViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable BailiffsItemViewModel itemViewModel);
 
   @Nullable
-  public SessionItemViewModel getItemViewModel() {
+  public BailiffsItemViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

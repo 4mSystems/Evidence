@@ -2,6 +2,8 @@ package te.app.evidence.pages.users.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import te.app.evidence.pages.categories.models.CategoriesData;
+
 public class SystemUserData {
 
     @SerializedName("parent_id")
@@ -22,6 +24,10 @@ public class SystemUserData {
 
     @SerializedName("email")
     private String email;
+    @SerializedName("cat_id")
+    private String cat_id;
+    @SerializedName("category")
+    private CategoriesData categoriesData;
 
     public String getParentId() {
         return parentId;
@@ -49,5 +55,13 @@ public class SystemUserData {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getCat_id() {
+        return cat_id;
+    }
+
+    public CategoriesData getCategoriesData() {
+        return categoriesData;
     }
 }

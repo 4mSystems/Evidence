@@ -5,10 +5,10 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.evidence.pages.home.viewModels.SessionItemViewModel" />
+            type="te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,33 +36,33 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/dp8w"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_qualifications"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_paperNumber"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/tv_qualifications"
+                    app:layout_constraintTop_toTopOf="@+id/tv_paperNumber"
                     app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/tv_qualifications"
+                    android:id="@+id/tv_paperNumber"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/dp6h"
-                    android:text="@string/case_number"
+                    android:text="@{itemViewModel.bailiffsData.paperNumber}"
                     android:textAlignment="viewStart"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp8h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/tv_paperNumber" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </com.github.florent37.expansionpanel.ExpansionHeader>
-
-        <View
-            android:id="@+id/v1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/dp8h"
-            android:background="@color/line_color"
-            app:layout_constraintTop_toBottomOf="@id/layout_session_header" />
 
         <com.github.florent37.expansionpanel.ExpansionLayout
             android:id="@+id/expansionLayoutSessions"
@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="مدينة نصر"
+                    android:text="@{itemViewModel.bailiffsData.mokelName}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp20w"
-                    android:text="ابتهاج شفيق حنا مشرقى"
+                    android:text="@{itemViewModel.bailiffsData.khesmName}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -169,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp10w"
-                    android:text="2020-10-13"
+                    android:text="@{itemViewModel.bailiffsData.paperNumber}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -205,7 +205,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
                     android:layout_marginEnd="@dimen/dp10w"
-                    android:text="2020-10-13"
+                    android:text="@{itemViewModel.bailiffsData.sessionDate}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -240,13 +240,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10w"
-                    android:layout_marginEnd="@dimen/dp10w"
                     android:layout_marginTop="@dimen/dp10h"
-                    android:padding="@dimen/dp4h"
-                    android:background="@drawable/rounded_view_primary_dark"
-                    android:text="تم التنفيذ"
+                    android:layout_marginEnd="@dimen/dp10w"
+                    android:background="@{itemViewModel.bailiffsData.status.equals(`Finished`)?@drawable/corner_view_primary_dark:@drawable/corner_view_primary_accept}"
+                    android:onClick="@{()-> itemViewModel.changeStatus()}"
+                    android:padding="@dimen/dp10h"
+                    android:text="@{itemViewModel.bailiffsData.status}"
                     android:textAlignment="center"
-                    android:textSize="@dimen/sp10"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/status_text"
@@ -269,6 +270,7 @@
                     android:layout_marginEnd="@dimen/dp4w"
                     android:drawableTop="@drawable/ic_user_delete"
                     android:text="@string/delete"
+                    android:onClick="@{()-> itemViewModel.delete()}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
@@ -281,8 +283,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp6h"
-                    android:drawableTop="@drawable/ic_user_edit"
                     android:layout_marginEnd="@dimen/dp4w"
+                    android:drawableTop="@drawable/ic_user_edit"
                     android:text="@string/edit"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -299,6 +301,7 @@
                     android:layout_marginEnd="@dimen/dp10w"
                     android:drawableTop="@drawable/ic_view_more"
                     android:text="@string/view_more"
+                    android:onClick="@{()-> itemViewModel.view()}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/header_data_table"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -315,5 +318,5 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.github.florent37.expansionpanel.ExpansionLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

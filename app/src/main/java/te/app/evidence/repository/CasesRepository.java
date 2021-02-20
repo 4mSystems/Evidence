@@ -10,9 +10,9 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
-import te.app.evidence.pages.categories.models.AddCategoryRequest;
-import te.app.evidence.pages.categories.models.AddCategoryResponse;
-import te.app.evidence.pages.categories.models.CategoriesResponse;
+import te.app.evidence.pages.mohdrs.models.ReportersResponse;
+import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
+import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -39,13 +39,23 @@ public class CasesRepository extends BaseRepository {
                 Constants.CASE_CLIENTS_CATEGORIES, true);
     }
 
-    public Disposable addCategory(AddCategoryRequest addCategoryRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CATEGORY, addCategoryRequest, AddCategoryResponse.class,
-                Constants.ADD_CATEGORY, true);
+    public Disposable getMohdareen() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_MOHDAREEN, new Object(), ReportersResponse.class,
+                Constants.GET_MOHDAREEN, true);
     }
 
-    public Disposable deleteCategory(String catId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CATEGORY + catId, new Object(), StatusMessage.class,
-                Constants.DELETE_CATEGORY, true);
+    public Disposable ChangeStatus(int mohId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHANGE_MOH_STATUS + mohId, new Object(), ChangeStatusResponse.class,
+                Constants.CHANGE_STATUS, true);
+    }
+
+    public Disposable deleteMohdr(int mohId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_MOHDR + mohId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
+
+    public Disposable getReportersDetails(int mohId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REPORTER_DETAILS + mohId, new Object(), ReporterDetailsResponse.class,
+                Constants.REPOTERS, true);
     }
 }

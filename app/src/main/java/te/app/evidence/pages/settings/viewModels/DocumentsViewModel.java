@@ -73,24 +73,5 @@ public class DocumentsViewModel extends BaseViewModel {
         this.userDocuments = userDocuments;
     }
 
-    public void toBackImage() {
-        liveData.setValue(new Mutable(Constants.back_car_image));
-    }
-
-    public void toFrontImage() {
-        liveData.setValue(new Mutable(Constants.IMAGE));
-    }
-
-    public void toInsuranceImage() {
-        liveData.setValue(new Mutable(Constants.insurance_image));
-    }
-
-    public void toLicenseImage() {
-        liveData.setValue(new Mutable(Constants.license_image));
-    }
-
-    public void toCivilImage() {
-        liveData.setValue(new Mutable(Constants.civil_image));
-    }
 
 }

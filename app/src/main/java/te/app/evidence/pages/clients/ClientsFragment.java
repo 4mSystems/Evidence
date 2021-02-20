@@ -123,7 +123,6 @@ public class ClientsFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((BaseActivity) context).enableRefresh(true);
         viewModel.getClientsRepository().setLiveData(viewModel.liveData);
     }
 

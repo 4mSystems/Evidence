@@ -88,8 +88,8 @@ public class AddClientFragment extends BaseFragment {
 
     private void showClientsType() {
         List<PopUp> typeList = new ArrayList<>();
-        typeList.add(new PopUp(getString(R.string.client_add), 1));
-        typeList.add(new PopUp(getString(R.string.khesm), 2));
+        typeList.add(new PopUp(getString(R.string.client), "client"));
+        typeList.add(new PopUp(getString(R.string.khesm), "khesm"));
         PopUpMenuHelper.showPopUp(context, binding.clientType, typeList).
                 setOnMenuItemClickListener(item -> {
                     binding.clientType.setText(typeList.get(item.getItemId()).getName());
