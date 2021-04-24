@@ -14,26 +14,22 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 9);
-        sViewsWithIds.put(R.id.icon_down_qu, 10);
-        sViewsWithIds.put(R.id.v1, 11);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 12);
-        sViewsWithIds.put(R.id.court_text, 13);
-        sViewsWithIds.put(R.id.v2, 14);
-        sViewsWithIds.put(R.id.paper_type_text, 15);
-        sViewsWithIds.put(R.id.v3, 16);
-        sViewsWithIds.put(R.id.paper_number_text, 17);
-        sViewsWithIds.put(R.id.v6, 18);
-        sViewsWithIds.put(R.id.session_date_text, 19);
-        sViewsWithIds.put(R.id.v7, 20);
-        sViewsWithIds.put(R.id.status_text, 21);
-        sViewsWithIds.put(R.id.v4, 22);
-        sViewsWithIds.put(R.id.edit, 23);
-        sViewsWithIds.put(R.id.v5, 24);
+        sViewsWithIds.put(R.id.court_text, 8);
+        sViewsWithIds.put(R.id.v2, 9);
+        sViewsWithIds.put(R.id.paper_type_text, 10);
+        sViewsWithIds.put(R.id.v3, 11);
+        sViewsWithIds.put(R.id.paper_number_text, 12);
+        sViewsWithIds.put(R.id.v6, 13);
+        sViewsWithIds.put(R.id.session_date_text, 14);
+        sViewsWithIds.put(R.id.v7, 15);
+        sViewsWithIds.put(R.id.status_text, 16);
+        sViewsWithIds.put(R.id.v4, 17);
+        sViewsWithIds.put(R.id.edit, 18);
+        sViewsWithIds.put(R.id.v5, 19);
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback19;
@@ -46,44 +42,38 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     // Inverse Binding Event Handlers
 
     public ItemBailiffsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 25, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private ItemBailiffsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[23]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
+            , (com.google.android.material.button.MaterialButton) bindings[5]
+            , (android.view.View) bindings[9]
             , (android.view.View) bindings[11]
-            , (android.view.View) bindings[14]
-            , (android.view.View) bindings[16]
-            , (android.view.View) bindings[22]
-            , (android.view.View) bindings[24]
-            , (android.view.View) bindings[18]
-            , (android.view.View) bindings[20]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
+            , (android.view.View) bindings[17]
+            , (android.view.View) bindings[19]
+            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             );
         this.courtValue.setTag(null);
         this.delete.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.paperNumberValue.setTag(null);
         this.paperTypeValue.setTag(null);
         this.sessionMonthValue.setTag(null);
         this.statusValue.setTag(null);
-        this.tvPaperNumber.setTag(null);
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
@@ -167,12 +157,10 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         java.lang.String itemViewModelBailiffsDataPaperNumber = null;
         te.app.evidence.pages.mohdrs.models.ReportersData itemViewModelBailiffsData = null;
         java.lang.String itemViewModelBailiffsDataKhesmName = null;
-        boolean itemViewModelBailiffsDataStatusEqualsJavaLangStringFinished = false;
         java.lang.String itemViewModelBailiffsDataSessionDate = null;
         te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelBailiffsDataMokelName = null;
         java.lang.String itemViewModelBailiffsDataStatus = null;
-        android.graphics.drawable.Drawable itemViewModelBailiffsDataStatusEqualsJavaLangStringFinishedStatusValueAndroidDrawableCornerViewPrimaryDarkStatusValueAndroidDrawableCornerViewPrimaryAccept = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -196,24 +184,6 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
                     // read itemViewModel.bailiffsData.status
                     itemViewModelBailiffsDataStatus = itemViewModelBailiffsData.getStatus();
                 }
-
-
-                if (itemViewModelBailiffsDataStatus != null) {
-                    // read itemViewModel.bailiffsData.status.equals("Finished")
-                    itemViewModelBailiffsDataStatusEqualsJavaLangStringFinished = itemViewModelBailiffsDataStatus.equals("Finished");
-                }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(itemViewModelBailiffsDataStatusEqualsJavaLangStringFinished) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
-            }
-
-
-                // read itemViewModel.bailiffsData.status.equals("Finished") ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_accept
-                itemViewModelBailiffsDataStatusEqualsJavaLangStringFinishedStatusValueAndroidDrawableCornerViewPrimaryDarkStatusValueAndroidDrawableCornerViewPrimaryAccept = ((itemViewModelBailiffsDataStatusEqualsJavaLangStringFinished) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(statusValue.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(statusValue.getContext(), R.drawable.corner_view_primary_accept)));
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
@@ -223,9 +193,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperNumberValue, itemViewModelBailiffsDataPaperNumber);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperTypeValue, itemViewModelBailiffsDataKhesmName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelBailiffsDataSessionDate);
-            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.statusValue, itemViewModelBailiffsDataStatusEqualsJavaLangStringFinishedStatusValueAndroidDrawableCornerViewPrimaryDarkStatusValueAndroidDrawableCornerViewPrimaryAccept);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelBailiffsDataStatus);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPaperNumber, itemViewModelBailiffsDataPaperNumber);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
@@ -298,8 +266,6 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.bailiffsData
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemViewModel.bailiffsData.status.equals("Finished") ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_accept
-        flag 4 (0x5L): itemViewModel.bailiffsData.status.equals("Finished") ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_primary_accept
     flag mapping end*/
     //end
 }

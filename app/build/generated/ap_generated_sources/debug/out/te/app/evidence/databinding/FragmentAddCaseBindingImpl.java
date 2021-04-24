@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
+public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -13,9 +13,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.chips_input_clients, 3);
-        sViewsWithIds.put(R.id.chips_input_khesm, 4);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
@@ -24,16 +22,28 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
     private final com.google.android.material.textfield.TextInputLayout mboundView1;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputLayout mboundView3;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView4;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputLayout mboundView5;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView6;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback54;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView6androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.addCaseRequest.circle_num
             //         is viewmodel.addCaseRequest.setCircle_num((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView6);
             // localize variables for thread safety
             // viewmodel.addCaseRequest
             te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
@@ -67,12 +77,10 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
     };
 
     public FragmentAddCaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentAddCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.pchmn.materialchips.ChipsInput) bindings[3]
-            , (com.pchmn.materialchips.ChipsInput) bindings[4]
             );
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
@@ -80,8 +88,18 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
         this.mboundView1.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
+        this.mboundView3 = (com.google.android.material.textfield.TextInputLayout) bindings[3];
+        this.mboundView3.setTag(null);
+        this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
+        this.mboundView4.setTag(null);
+        this.mboundView5 = (com.google.android.material.textfield.TextInputLayout) bindings[5];
+        this.mboundView5.setTag(null);
+        this.mboundView6 = (com.google.android.material.textfield.TextInputEditText) bindings[6];
+        this.mboundView6.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -201,20 +219,66 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding  {
             // api target 1
 
             this.mboundView1.setError(viewmodelAddCaseRequestCircleNumErrorGet);
-        }
-        if ((dirtyFlags & 0x6L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddCaseRequestCircleNum);
+            this.mboundView3.setError(viewmodelAddCaseRequestCircleNumErrorGet);
+            this.mboundView5.setError(viewmodelAddCaseRequestCircleNumErrorGet);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            this.mboundView2.setOnClickListener(mCallback53);
+            this.mboundView4.setOnClickListener(mCallback54);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0x6L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddCaseRequestCircleNum);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

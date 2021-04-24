@@ -9,6 +9,8 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.categories.models.CategoriesResponse;
+import te.app.evidence.pages.home.models.HomeResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -31,9 +33,8 @@ public class HomeRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-//
-//    public Disposable subscribeAsDelegate(int shopId) {
-//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE_AS_DELEGATE + shopId, new Object(), StatusMessage.class,
-//                Constants.SUBSCRIBE_AS_DELEGATE, true);
-//    }
+    public Disposable getHome() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.HOME, new Object(), HomeResponse.class,
+                Constants.HOME, true);
+    }
 }

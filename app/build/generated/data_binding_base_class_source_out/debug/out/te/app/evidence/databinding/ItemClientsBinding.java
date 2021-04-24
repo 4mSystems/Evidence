@@ -6,13 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -28,19 +25,19 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   public final Barrier br5;
 
   @NonNull
-  public final CustomTextViewRegular clientAddressText;
+  public final CustomTextViewMedium clientAddressText;
 
   @NonNull
   public final CustomTextViewRegular clientAddressValue;
 
   @NonNull
-  public final CustomTextViewRegular clientNoteText;
+  public final CustomTextViewMedium clientNoteText;
 
   @NonNull
   public final CustomTextViewRegular clientNoteValue;
 
   @NonNull
-  public final CustomTextViewRegular clientTypeText;
+  public final CustomTextViewMedium clientTypeText;
 
   @NonNull
   public final CustomTextViewRegular clientTypeValue;
@@ -52,19 +49,13 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   public final CustomTextViewRegular edit;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutClients;
+  public final CustomTextViewMedium nameText;
 
   @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutClientsHeader;
+  public final CustomTextViewRegular nameValue;
 
   @NonNull
   public final CustomTextViewRegular permission;
-
-  @NonNull
-  public final CustomTextViewMedium tvQualifications;
 
   @NonNull
   public final CustomTextViewRegular unitText;
@@ -94,15 +85,13 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
   protected ClientsItemViewModel mItemViewModel;
 
   protected ItemClientsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular attachments, Barrier br5, CustomTextViewRegular clientAddressText,
-      CustomTextViewRegular clientAddressValue, CustomTextViewRegular clientNoteText,
-      CustomTextViewRegular clientNoteValue, CustomTextViewRegular clientTypeText,
+      CustomTextViewRegular attachments, Barrier br5, CustomTextViewMedium clientAddressText,
+      CustomTextViewRegular clientAddressValue, CustomTextViewMedium clientNoteText,
+      CustomTextViewRegular clientNoteValue, CustomTextViewMedium clientTypeText,
       CustomTextViewRegular clientTypeValue, CustomTextViewRegular delete,
-      CustomTextViewRegular edit, ExpansionLayout expansionLayoutClients,
-      AppCompatImageView iconDownQu, ExpansionHeader layoutClientsHeader,
-      CustomTextViewRegular permission, CustomTextViewMedium tvQualifications,
-      CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v1, View v2, View v3,
-      View v4, View v5, View v8) {
+      CustomTextViewRegular edit, CustomTextViewMedium nameText, CustomTextViewRegular nameValue,
+      CustomTextViewRegular permission, CustomTextViewRegular unitText,
+      CustomTextViewRegular unitValue, View v1, View v2, View v3, View v4, View v5, View v8) {
     super(_bindingComponent, _root, _localFieldCount);
     this.attachments = attachments;
     this.br5 = br5;
@@ -114,11 +103,9 @@ public abstract class ItemClientsBinding extends ViewDataBinding {
     this.clientTypeValue = clientTypeValue;
     this.delete = delete;
     this.edit = edit;
-    this.expansionLayoutClients = expansionLayoutClients;
-    this.iconDownQu = iconDownQu;
-    this.layoutClientsHeader = layoutClientsHeader;
+    this.nameText = nameText;
+    this.nameValue = nameValue;
     this.permission = permission;
-    this.tvQualifications = tvQualifications;
     this.unitText = unitText;
     this.unitValue = unitValue;
     this.v1 = v1;

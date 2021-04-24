@@ -6,6 +6,10 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.home.viewModels.HomeViewModel" />
@@ -39,14 +43,14 @@
                         android:id="@+id/home_session"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sessions"
+                        android:text="@{@string/sessions.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.sessions)?viewmodel.homeData.countData.sessions:``)}"
+                        android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
-
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -73,7 +77,8 @@
                         android:id="@+id/home_mohdrs"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuMohdar"
+                        android:text="@{@string/menuMohdar.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen)?viewmodel.homeData.countData.mohdreen:``)}"
+                        android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +118,8 @@
                         android:id="@+id/home_users"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuUsers"
+                        android:text="@{@string/menuUsers.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.users)?viewmodel.homeData.countData.users:``)}"
+                        android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -147,7 +153,8 @@
                         android:id="@+id/home_cases"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/menuCases"
+                        android:text="@{@string/menuCases.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.cases)?viewmodel.homeData.countData.cases:``)}"
+                        android:textAlignment="center"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -241,15 +248,50 @@
                 app:layout_constraintTop_toBottomOf="@+id/br3"
                 app:startIconDrawable="@drawable/ic_search" />
 
+            <ProgressBar
+                android:id="@+id/progress_bar_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/input_search" />
+
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comming_session_rc"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/dp15h"
+                android:visibility="@{viewmodel.selectedBtn==0?View.VISIBLE:View.GONE}"
+                app:adapter="@{viewmodel.sessionsAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintTop_toBottomOf="@id/input_search"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
                 tools:listitem="@layout/item_session" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/previous_session_rc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp15h"
+                android:visibility="@{viewmodel.selectedBtn==1?View.VISIBLE:View.GONE}"
+                app:adapter="@{viewmodel.sessionsAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
+                tools:listitem="@layout/item_session" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_reporters_rc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp15h"
+                android:visibility="@{viewmodel.selectedBtn==2?View.VISIBLE:View.GONE}"
+                app:adapter="@{viewmodel.homeReportersAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
+                tools:listitem="@layout/item_home_reporter" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
-
-
 </layout>

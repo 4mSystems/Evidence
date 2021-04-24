@@ -189,7 +189,6 @@ attr buttonCompat
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
-attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -242,7 +241,6 @@ attr chip_detailed_deleteIconColor
 attr chip_detailed_textColor
 attr chip_hasAvatarIcon
 attr chip_labelColor
-attr circleCrop
 attr circleRadius
 attr circularProgressIndicatorStyle
 attr civ_border_color
@@ -286,7 +284,6 @@ attr colorPrimary
 attr colorPrimaryDark
 attr colorPrimarySurface
 attr colorPrimaryVariant
-attr colorScheme
 attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
@@ -538,8 +535,6 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
-attr imageAspectRatio
-attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateAnimationType
 attr indeterminateProgressStyle
@@ -886,7 +881,6 @@ attr rippleColor
 attr round
 attr roundPercent
 attr saturation
-attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1202,17 +1196,6 @@ color colorPrimaryDark
 color colorPrimaryHolo
 color colorYellow
 color colordark
-color common_google_signin_btn_text_dark
-color common_google_signin_btn_text_dark_default
-color common_google_signin_btn_text_dark_disabled
-color common_google_signin_btn_text_dark_focused
-color common_google_signin_btn_text_dark_pressed
-color common_google_signin_btn_text_light
-color common_google_signin_btn_text_light_default
-color common_google_signin_btn_text_light_disabled
-color common_google_signin_btn_text_light_focused
-color common_google_signin_btn_text_light_pressed
-color common_google_signin_btn_tint
 color dark_grey
 color defaultTextColor
 color design_bottom_navigation_shadow_color
@@ -3044,25 +3027,6 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable common_full_open_on_phone
-drawable common_google_signin_btn_icon_dark
-drawable common_google_signin_btn_icon_dark_focused
-drawable common_google_signin_btn_icon_dark_normal
-drawable common_google_signin_btn_icon_dark_normal_background
-drawable common_google_signin_btn_icon_disabled
-drawable common_google_signin_btn_icon_light
-drawable common_google_signin_btn_icon_light_focused
-drawable common_google_signin_btn_icon_light_normal
-drawable common_google_signin_btn_icon_light_normal_background
-drawable common_google_signin_btn_text_dark
-drawable common_google_signin_btn_text_dark_focused
-drawable common_google_signin_btn_text_dark_normal
-drawable common_google_signin_btn_text_dark_normal_background
-drawable common_google_signin_btn_text_disabled
-drawable common_google_signin_btn_text_light
-drawable common_google_signin_btn_text_light_focused
-drawable common_google_signin_btn_text_light_normal
-drawable common_google_signin_btn_text_light_normal_background
 drawable corner_view_gradient
 drawable corner_view_gray_background
 drawable corner_view_gray_border
@@ -3083,8 +3047,6 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable fab_add
 drawable gallery_album_overlay
-drawable googleg_disabled_color_18
-drawable googleg_standard_color_18
 drawable home_img
 drawable ic_add_category
 drawable ic_add_user
@@ -3264,14 +3226,13 @@ id actions
 id activity_chooser_view_content
 id add
 id add_case
-id adjust_height
-id adjust_width
 id alertTitle
 id aligned
 id all
 id always
 id animateToEnd
 id animateToStart
+id appCompatButton
 id appCompatButtonNext
 id app_login_hint
 id app_login_title
@@ -3323,8 +3284,6 @@ id chip1
 id chip2
 id chip3
 id chip_group
-id chips_input_clients
-id chips_input_khesm
 id chips_recycler
 id chronometer
 id circle_center
@@ -3347,6 +3306,7 @@ id clip_vertical
 id clockwise
 id collapseActionView
 id color
+id comming_session_rc
 id confirm_button
 id container
 id content
@@ -3363,7 +3323,6 @@ id custom
 id customPanel
 id cut
 id daily_reports
-id dark
 id dataBinding
 id date_picker_actions
 id decelerate
@@ -3465,6 +3424,7 @@ id home_item2
 id home_item3
 id home_item4
 id home_mohdrs
+id home_reporters_rc
 id home_session
 id home_users
 id honorRequest
@@ -3474,7 +3434,6 @@ id icon
 id icon_down_case
 id icon_down_qu
 id icon_group
-id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3510,7 +3469,6 @@ id layout_reports_header
 id layout_session_header
 id left
 id leftToRight
-id light
 id line
 id line1
 id line3
@@ -3582,6 +3540,8 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id name_text
+id name_value
 id navigation_header_container
 id never
 id nextMohdareen
@@ -3624,7 +3584,9 @@ id pin_Validate
 id position
 id postLayout
 id previousSessions
+id previous_session_rc
 id progress_bar
+id progress_bar_home
 id progress_circular
 id progress_horizontal
 id radio
@@ -3678,6 +3640,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id session_case_number
 id session_date_text
 id session_date_value
 id session_month_text
@@ -3796,7 +3759,6 @@ id tv_login_forget
 id tv_login_header_number
 id tv_login_title
 id tv_message
-id tv_paperNumber
 id tv_please_turn_off
 id tv_please_turn_on
 id tv_qualifications
@@ -3825,6 +3787,7 @@ id v5
 id v6
 id v7
 id v8
+id v9
 id vertical
 id video_icon
 id viewPager
@@ -3835,7 +3798,6 @@ id view_value
 id visible
 id visible_removing_fragment_view_tag
 id vv_navigation_drawer_image
-id wide
 id withText
 id withinBounds
 id worm
@@ -3953,6 +3915,7 @@ layout fragment_onboard
 layout fragment_photo_picker
 layout fragment_profile
 layout fragment_reporter_details
+layout fragment_search_clients
 layout fragment_splash
 layout fragment_user_permission
 layout fragment_users
@@ -3960,9 +3923,11 @@ layout item_attachment
 layout item_bailiffs
 layout item_case
 layout item_category
+layout item_client_search
 layout item_clients
 layout item_doc_layout
 layout item_folder_layout
+layout item_home_reporter
 layout item_list_filterable
 layout item_mohdr
 layout item_note
@@ -4216,24 +4181,7 @@ string client_unit
 string clients
 string coin
 string comment
-string common_google_play_services_enable_button
-string common_google_play_services_enable_text
-string common_google_play_services_enable_title
-string common_google_play_services_install_button
-string common_google_play_services_install_text
-string common_google_play_services_install_title
-string common_google_play_services_notification_channel_name
-string common_google_play_services_notification_ticker
 string common_google_play_services_unknown_issue
-string common_google_play_services_unsupported_text
-string common_google_play_services_update_button
-string common_google_play_services_update_text
-string common_google_play_services_update_title
-string common_google_play_services_updating_text
-string common_google_play_services_wear_update_text
-string common_open_on_phone
-string common_signin_button_text
-string common_signin_button_text_long
 string confirm
 string confirm_header_text
 string confirm_header_text2
@@ -4556,6 +4504,8 @@ string rent_title
 string report
 string report_desc
 string reporter_details
+string reporter_status_done
+string reporter_status_wait
 string requested_dialog_title
 string reset
 string rest
@@ -5478,7 +5428,6 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
-styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
@@ -5523,7 +5472,6 @@ styleable ScrollingViewBehavior_Layout behavior_overlapTop
 styleable SearchView android_focusable android_maxWidth android_inputType android_imeOptions closeIcon commitIcon defaultQueryHint goIcon iconifiedByDefault layout queryBackground queryHint searchHintIcon searchIcon submitBackground suggestionRowLayout voiceIcon
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView contentPadding contentPaddingBottom contentPaddingEnd contentPaddingLeft contentPaddingRight contentPaddingStart contentPaddingTop shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
-styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius thumbStrokeColor thumbStrokeWidth tickColor tickColorActive tickColorInactive tickVisible trackColor trackColorActive trackColorInactive trackHeight
 styleable SliderView sliderAnimationDuration sliderAutoCycleDirection sliderAutoCycleEnabled sliderIndicatorAnimationDuration sliderIndicatorEnabled sliderIndicatorGravity sliderIndicatorMargin sliderIndicatorMarginBottom sliderIndicatorMarginLeft sliderIndicatorMarginRight sliderIndicatorMarginTop sliderIndicatorOrientation sliderIndicatorPadding sliderIndicatorRadius sliderIndicatorRtlMode sliderIndicatorSelectedColor sliderIndicatorUnselectedColor sliderScrollTimeInSec sliderStartAutoCycle
 styleable SmoothCheckBox color_checked color_tick color_unchecked color_unchecked_stroke duration stroke_width

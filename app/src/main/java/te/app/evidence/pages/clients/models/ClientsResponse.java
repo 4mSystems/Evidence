@@ -11,6 +11,13 @@ public class ClientsResponse extends StatusMessage {
     @SerializedName("data")
     private List<Clients> clientsList;
 
+    public ClientsResponse() {
+    }
+
+    public ClientsResponse(List<Clients> clientsList) {
+        this.clientsList = clientsList;
+    }
+
     public List<Clients> getClientsList() {
         return clientsList;
     }

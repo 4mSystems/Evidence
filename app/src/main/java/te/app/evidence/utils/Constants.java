@@ -3,6 +3,7 @@ package te.app.evidence.utils;
 public class Constants {
 
     public static final String CLIENTS = "CLIENTS";
+    public static final String KHESM = "KHESM";
     public static final String ADD_CLIENTS = "ADD_CLIENTS";
     public static final String SHOW_CATEGORIES = "SHOW_CATEGORIES";
 
@@ -85,7 +86,8 @@ public class Constants {
     public static final int SEARCH_REQUEST = 410;
 
     public static final int RESULT_CODE = 6000;
-    public final static int DEPARTMENT_3 = 3;
+    public final static int CLIENTS_CODE = 6001;
+    public final static int KHESM_CODE = 6002;
     public final static int FILE_TYPE_IMAGE = 378;
     public final static int FILE_TYPE_VIDEO = 379;
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
@@ -95,8 +97,8 @@ public class Constants {
 
     public static final String REPOTERS = "REPOTERS";
 
-    public static final String insurance_image = "insurance_image";
-    public static final int insurance_image_code = 382;
+    public static final String HOME = "HOME";
+    public static final String LOOPER = "LOOPER";
 
     public static final String license_image = "license_image";
     public static final int license_image_code = 383;

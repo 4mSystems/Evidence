@@ -4,7 +4,7 @@
             "outputFile": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/368e8697de582bb65edd1da847ebd148/appcompat-1.2.0/res/values-v26/values-v26.xml",
+                    "source": "/home/elnagar/.gradle/caches/transforms-2/files-2.1/842ab898a33c1c592c2cbb1c324a754d/appcompat-1.2.0/res/values-v26/values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

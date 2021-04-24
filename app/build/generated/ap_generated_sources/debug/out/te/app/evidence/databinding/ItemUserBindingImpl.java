@@ -14,78 +14,74 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 9);
-        sViewsWithIds.put(R.id.icon_down_qu, 10);
-        sViewsWithIds.put(R.id.v1, 11);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 12);
-        sViewsWithIds.put(R.id.email_text, 13);
-        sViewsWithIds.put(R.id.v2, 14);
-        sViewsWithIds.put(R.id.user_type_text, 15);
-        sViewsWithIds.put(R.id.v3, 16);
-        sViewsWithIds.put(R.id.user_phone_text, 17);
-        sViewsWithIds.put(R.id.v4, 18);
-        sViewsWithIds.put(R.id.user_address_text, 19);
-        sViewsWithIds.put(R.id.v5, 20);
-        sViewsWithIds.put(R.id.br5, 21);
-        sViewsWithIds.put(R.id.v8, 22);
+        sViewsWithIds.put(R.id.name_text, 9);
+        sViewsWithIds.put(R.id.v1, 10);
+        sViewsWithIds.put(R.id.email_text, 11);
+        sViewsWithIds.put(R.id.v2, 12);
+        sViewsWithIds.put(R.id.user_type_text, 13);
+        sViewsWithIds.put(R.id.v3, 14);
+        sViewsWithIds.put(R.id.user_phone_text, 15);
+        sViewsWithIds.put(R.id.v4, 16);
+        sViewsWithIds.put(R.id.user_address_text, 17);
+        sViewsWithIds.put(R.id.v5, 18);
+        sViewsWithIds.put(R.id.br5, 19);
+        sViewsWithIds.put(R.id.v8, 20);
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback52;
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemUserBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 21, sIncludes, sViewsWithIds));
     }
     private ItemUserBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[21]
+            , (androidx.constraintlayout.widget.Barrier) bindings[19]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[12]
             , (android.view.View) bindings[14]
             , (android.view.View) bindings[16]
             , (android.view.View) bindings[18]
             , (android.view.View) bindings[20]
-            , (android.view.View) bindings[22]
             );
         this.delete.setTag(null);
         this.edit.setTag(null);
         this.emailValue.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.nameValue.setTag(null);
         this.permission.setTag(null);
-        this.tvUsername.setTag(null);
         this.userAddressValue.setTag(null);
         this.userPhoneValue.setTag(null);
         this.userTypeValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -161,7 +157,6 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelSystemUserDataType = null;
-        java.lang.String itemViewModelSystemUserDataName = null;
         te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelSystemUserDataAddress = null;
         java.lang.String itemViewModelSystemUserDataPhone = null;
@@ -181,8 +176,6 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelSystemUserData != null) {
                     // read itemViewModel.systemUserData.type
                     itemViewModelSystemUserDataType = itemViewModelSystemUserData.getType();
-                    // read itemViewModel.systemUserData.name
-                    itemViewModelSystemUserDataName = itemViewModelSystemUserData.getName();
                     // read itemViewModel.systemUserData.address
                     itemViewModelSystemUserDataAddress = itemViewModelSystemUserData.getAddress();
                     // read itemViewModel.systemUserData.phone
@@ -195,15 +188,15 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback48);
-            this.edit.setOnClickListener(mCallback49);
-            this.permission.setOnClickListener(mCallback47);
+            this.delete.setOnClickListener(mCallback51);
+            this.edit.setOnClickListener(mCallback52);
+            this.permission.setOnClickListener(mCallback50);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.emailValue, itemViewModelSystemUserDataEmail);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUsername, itemViewModelSystemUserDataName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelSystemUserDataEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userAddressValue, itemViewModelSystemUserDataAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userPhoneValue, itemViewModelSystemUserDataPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userTypeValue, itemViewModelSystemUserDataType);

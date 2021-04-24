@@ -6,13 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -31,40 +28,34 @@ public abstract class ItemUserBinding extends ViewDataBinding {
   public final CustomTextViewRegular edit;
 
   @NonNull
-  public final CustomTextViewRegular emailText;
+  public final CustomTextViewMedium emailText;
 
   @NonNull
   public final CustomTextViewRegular emailValue;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutSessions;
+  public final CustomTextViewMedium nameText;
 
   @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutSessionHeader;
+  public final CustomTextViewRegular nameValue;
 
   @NonNull
   public final CustomTextViewRegular permission;
 
   @NonNull
-  public final CustomTextViewMedium tvUsername;
-
-  @NonNull
-  public final CustomTextViewRegular userAddressText;
+  public final CustomTextViewMedium userAddressText;
 
   @NonNull
   public final CustomTextViewRegular userAddressValue;
 
   @NonNull
-  public final CustomTextViewRegular userPhoneText;
+  public final CustomTextViewMedium userPhoneText;
 
   @NonNull
   public final CustomTextViewRegular userPhoneValue;
 
   @NonNull
-  public final CustomTextViewRegular userTypeText;
+  public final CustomTextViewMedium userTypeText;
 
   @NonNull
   public final CustomTextViewRegular userTypeValue;
@@ -91,13 +82,12 @@ public abstract class ItemUserBinding extends ViewDataBinding {
   protected UserItemViewModel mItemViewModel;
 
   protected ItemUserBinding(Object _bindingComponent, View _root, int _localFieldCount, Barrier br5,
-      CustomTextViewRegular delete, CustomTextViewRegular edit, CustomTextViewRegular emailText,
-      CustomTextViewRegular emailValue, ExpansionLayout expansionLayoutSessions,
-      AppCompatImageView iconDownQu, ExpansionHeader layoutSessionHeader,
-      CustomTextViewRegular permission, CustomTextViewMedium tvUsername,
-      CustomTextViewRegular userAddressText, CustomTextViewRegular userAddressValue,
-      CustomTextViewRegular userPhoneText, CustomTextViewRegular userPhoneValue,
-      CustomTextViewRegular userTypeText, CustomTextViewRegular userTypeValue, View v1, View v2,
+      CustomTextViewRegular delete, CustomTextViewRegular edit, CustomTextViewMedium emailText,
+      CustomTextViewRegular emailValue, CustomTextViewMedium nameText,
+      CustomTextViewRegular nameValue, CustomTextViewRegular permission,
+      CustomTextViewMedium userAddressText, CustomTextViewRegular userAddressValue,
+      CustomTextViewMedium userPhoneText, CustomTextViewRegular userPhoneValue,
+      CustomTextViewMedium userTypeText, CustomTextViewRegular userTypeValue, View v1, View v2,
       View v3, View v4, View v5, View v8) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br5 = br5;
@@ -105,11 +95,9 @@ public abstract class ItemUserBinding extends ViewDataBinding {
     this.edit = edit;
     this.emailText = emailText;
     this.emailValue = emailValue;
-    this.expansionLayoutSessions = expansionLayoutSessions;
-    this.iconDownQu = iconDownQu;
-    this.layoutSessionHeader = layoutSessionHeader;
+    this.nameText = nameText;
+    this.nameValue = nameValue;
     this.permission = permission;
-    this.tvUsername = tvUsername;
     this.userAddressText = userAddressText;
     this.userAddressValue = userAddressValue;
     this.userPhoneText = userPhoneText;

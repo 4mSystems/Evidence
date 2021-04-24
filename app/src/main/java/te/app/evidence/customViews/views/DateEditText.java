@@ -1,13 +1,19 @@
 package te.app.evidence.customViews.views;
 
-import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.textfield.TextInputEditText;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
+
+import te.app.evidence.R;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class DateEditText extends TextInputEditText {
     DatePickerDialog datePickerDialog;
@@ -38,29 +44,29 @@ public class DateEditText extends TextInputEditText {
             mcurrentTime.add(Calendar.YEAR, 0);
 
             int year = mcurrentTime.get(Calendar.YEAR);
-            int month = mcurrentTime.get(Calendar.MONTH) + 1;
+            int month = mcurrentTime.get(Calendar.MONTH);
+            int day = mcurrentTime.get(Calendar.DAY_OF_MONTH);
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", new Locale("en"));
             datePickerDialog
                     = new DatePickerDialog(getContext(), (datePicker, i, i1, i2) -> {
-                String selectedDate = String.format("%02d", i) + "-" + String.format("%02d", (++i1)) + "-" + i2;
-
-                setText(selectedDate);
-            }, year, month, 0);
+                Calendar calendar = Calendar.getInstance();
+                calendar.set(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
+                String strDate = format.format(calendar.getTime());
+                setText(strDate);
+            }, year, month, day);
             datePickerDialog.getDatePicker().setMinDate(mcurrentTime.getTimeInMillis());
         }
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.WRAP_CONTENT
+        datePickerDialog.show();
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(8, 0, 8, 0);
-//        Button button = datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE);
-//        button.setBackgroundResource(ResourceManager.getColor(R.color.colorPrimaryDark));
-//        button.setTextColor(ResourceManager.getColor(R.color.white));
-//        button.setLayoutParams(params);
-        datePickerDialog.show();
+        Button button = datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE);
+        button.setBackgroundColor(ResourceManager.getColor(R.color.colorPrimaryDark));
+        button.setTextColor(ResourceManager.getColor(R.color.white));
+        button.setLayoutParams(params);
 
     }
 
-    public DatePickerDialog getDatePickerDialog() {
-        return datePickerDialog;
-    }
 }

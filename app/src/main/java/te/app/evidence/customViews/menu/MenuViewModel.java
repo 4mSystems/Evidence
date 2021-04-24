@@ -8,6 +8,10 @@ public class MenuViewModel extends BaseViewModel {
         getLiveData().setValue(Constants.CLIENTS);
     }
 
+    public void toHome() {
+        getLiveData().setValue(Constants.HOME);
+    }
+
     public void toUsers() {
         getLiveData().setValue(Constants.USERS);
     }

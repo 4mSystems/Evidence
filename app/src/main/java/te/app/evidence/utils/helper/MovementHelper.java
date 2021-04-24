@@ -118,6 +118,16 @@ public class MovementHelper {
         ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
     }
 
+    public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, int request) {
+        Intent intent = new Intent(from, BaseActivity.class);
+        intent.putExtra(Constants.PAGE, page);
+        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
+        if (name != null) {
+            intent.putExtra(Constants.NAME_BAR, name);
+        }
+        ((ParentActivity) from).startActivityForResult(intent, request);
+    }
+
     public static void finishWithResult(PassingObject passingObject, Context context) {
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
@@ -211,6 +221,7 @@ public class MovementHelper {
 
         return bitmap;
     }
+
     public static void openDialNumber(String number, Context context) {
         if (ContextCompat.checkSelfPermission(context, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(((Activity) context), new String[]{Manifest.permission.CALL_PHONE}, 1);

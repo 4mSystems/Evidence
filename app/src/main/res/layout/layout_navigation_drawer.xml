@@ -99,6 +99,7 @@
                             android:drawableStart="@drawable/ic_home"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.toHome()}"
                             android:text="@string/menuHome"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />

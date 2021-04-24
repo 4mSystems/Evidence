@@ -6,52 +6,39 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
-import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
 
 public abstract class ItemSessionBinding extends ViewDataBinding {
   @NonNull
-  public final ExpansionLayout expansionLayoutSessions;
+  public final CustomTextViewMedium sessionCaseNumber;
 
   @NonNull
-  public final AppCompatImageView iconDownQu;
+  public final CustomTextViewMedium sessionDateText;
 
   @NonNull
-  public final ExpansionHeader layoutSessionHeader;
+  public final CustomTextViewMedium sessionDateValue;
 
   @NonNull
-  public final CustomTextViewRegular sessionDateText;
+  public final CustomTextViewMedium sessionMonthText;
 
   @NonNull
-  public final CustomTextViewRegular sessionDateValue;
+  public final CustomTextViewMedium sessionMonthValue;
 
   @NonNull
-  public final CustomTextViewRegular sessionMonthText;
+  public final CustomTextViewMedium sessionStatusText;
 
   @NonNull
-  public final CustomTextViewRegular sessionMonthValue;
+  public final CustomTextViewMedium sessionStatusValue;
 
   @NonNull
-  public final CustomTextViewRegular sessionStatusText;
-
-  @NonNull
-  public final CustomTextViewRegular sessionStatusValue;
-
-  @NonNull
-  public final CustomTextViewMedium tvQualifications;
-
-  @NonNull
-  public final View v1;
+  public final CustomTextViewMedium tvUsername;
 
   @NonNull
   public final View v2;
@@ -60,33 +47,29 @@ public abstract class ItemSessionBinding extends ViewDataBinding {
   public final View v3;
 
   @NonNull
-  public final View v4;
+  public final View v9;
 
   @Bindable
   protected SessionItemViewModel mItemViewModel;
 
   protected ItemSessionBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ExpansionLayout expansionLayoutSessions, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutSessionHeader, CustomTextViewRegular sessionDateText,
-      CustomTextViewRegular sessionDateValue, CustomTextViewRegular sessionMonthText,
-      CustomTextViewRegular sessionMonthValue, CustomTextViewRegular sessionStatusText,
-      CustomTextViewRegular sessionStatusValue, CustomTextViewMedium tvQualifications, View v1,
-      View v2, View v3, View v4) {
+      CustomTextViewMedium sessionCaseNumber, CustomTextViewMedium sessionDateText,
+      CustomTextViewMedium sessionDateValue, CustomTextViewMedium sessionMonthText,
+      CustomTextViewMedium sessionMonthValue, CustomTextViewMedium sessionStatusText,
+      CustomTextViewMedium sessionStatusValue, CustomTextViewMedium tvUsername, View v2, View v3,
+      View v9) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.expansionLayoutSessions = expansionLayoutSessions;
-    this.iconDownQu = iconDownQu;
-    this.layoutSessionHeader = layoutSessionHeader;
+    this.sessionCaseNumber = sessionCaseNumber;
     this.sessionDateText = sessionDateText;
     this.sessionDateValue = sessionDateValue;
     this.sessionMonthText = sessionMonthText;
     this.sessionMonthValue = sessionMonthValue;
     this.sessionStatusText = sessionStatusText;
     this.sessionStatusValue = sessionStatusValue;
-    this.tvQualifications = tvQualifications;
-    this.v1 = v1;
+    this.tvUsername = tvUsername;
     this.v2 = v2;
     this.v3 = v3;
-    this.v4 = v4;
+    this.v9 = v9;
   }
 
   public abstract void setItemViewModel(@Nullable SessionItemViewModel itemViewModel);

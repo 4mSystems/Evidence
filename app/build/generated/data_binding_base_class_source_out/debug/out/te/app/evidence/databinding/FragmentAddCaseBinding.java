@@ -9,27 +9,17 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.pchmn.materialchips.ChipsInput;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 
 public abstract class FragmentAddCaseBinding extends ViewDataBinding {
-  @NonNull
-  public final ChipsInput chipsInputClients;
-
-  @NonNull
-  public final ChipsInput chipsInputKhesm;
-
   @Bindable
   protected AddCaseViewModel mViewmodel;
 
-  protected FragmentAddCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      ChipsInput chipsInputClients, ChipsInput chipsInputKhesm) {
+  protected FragmentAddCaseBinding(Object _bindingComponent, View _root, int _localFieldCount) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.chipsInputClients = chipsInputClients;
-    this.chipsInputKhesm = chipsInputKhesm;
   }
 
   public abstract void setViewmodel(@Nullable AddCaseViewModel viewmodel);

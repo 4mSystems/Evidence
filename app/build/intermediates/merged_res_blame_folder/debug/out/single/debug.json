@@ -44,6 +44,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_lang.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_search_clients.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_search_clients.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_report.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-hdpi/ic_report.png"
     },
@@ -138,6 +142,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_refresh.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-hdpi/ic_refresh.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_item_client_search.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_client_search.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_clients.xml.flat",
@@ -466,6 +474,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_categories.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_categories.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_item_home_reporter.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_home_reporter.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_permission_off.png.flat",

@@ -14,25 +14,23 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_clients_header, 9);
-        sViewsWithIds.put(R.id.icon_down_qu, 10);
-        sViewsWithIds.put(R.id.v1, 11);
-        sViewsWithIds.put(R.id.expansionLayoutClients, 12);
-        sViewsWithIds.put(R.id.unit_text, 13);
-        sViewsWithIds.put(R.id.v2, 14);
-        sViewsWithIds.put(R.id.client_type_text, 15);
-        sViewsWithIds.put(R.id.v5, 16);
-        sViewsWithIds.put(R.id.client_address_text, 17);
-        sViewsWithIds.put(R.id.v3, 18);
-        sViewsWithIds.put(R.id.client_note_text, 19);
-        sViewsWithIds.put(R.id.v4, 20);
-        sViewsWithIds.put(R.id.attachments, 21);
-        sViewsWithIds.put(R.id.br5, 22);
-        sViewsWithIds.put(R.id.v8, 23);
+        sViewsWithIds.put(R.id.name_text, 9);
+        sViewsWithIds.put(R.id.v1, 10);
+        sViewsWithIds.put(R.id.unit_text, 11);
+        sViewsWithIds.put(R.id.v2, 12);
+        sViewsWithIds.put(R.id.client_type_text, 13);
+        sViewsWithIds.put(R.id.v5, 14);
+        sViewsWithIds.put(R.id.client_address_text, 15);
+        sViewsWithIds.put(R.id.v3, 16);
+        sViewsWithIds.put(R.id.client_note_text, 17);
+        sViewsWithIds.put(R.id.v4, 18);
+        sViewsWithIds.put(R.id.attachments, 19);
+        sViewsWithIds.put(R.id.br5, 20);
+        sViewsWithIds.put(R.id.v8, 21);
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback17;
@@ -45,43 +43,41 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     // Inverse Binding Event Handlers
 
     public ItemClientsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 22, sIncludes, sViewsWithIds));
     }
     private ItemClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
-            , (androidx.constraintlayout.widget.Barrier) bindings[22]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
+            , (androidx.constraintlayout.widget.Barrier) bindings[20]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[14]
-            , (android.view.View) bindings[18]
-            , (android.view.View) bindings[20]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[12]
             , (android.view.View) bindings[16]
-            , (android.view.View) bindings[23]
+            , (android.view.View) bindings[18]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[21]
             );
         this.clientAddressValue.setTag(null);
         this.clientNoteValue.setTag(null);
         this.clientTypeValue.setTag(null);
         this.delete.setTag(null);
         this.edit.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.nameValue.setTag(null);
         this.permission.setTag(null);
-        this.tvQualifications.setTag(null);
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
@@ -200,7 +196,7 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientAddressValue, itemViewModelClientsClientAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientNoteValue, itemViewModelClientsNotes);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientTypeValue, itemViewModelClientsType);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvQualifications, itemViewModelClientsClientName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelClientsClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.unitValue, itemViewModelClientsClientUnit);
         }
         if ((dirtyFlags & 0x4L) != 0) {

@@ -5,9 +5,7 @@
     tools:context="te.app.moon.views.fragments.SplashFragment">
 
     <data>
-
         <import type="android.view.View" />
-
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.clients.viewModels.ClientsViewModel" />

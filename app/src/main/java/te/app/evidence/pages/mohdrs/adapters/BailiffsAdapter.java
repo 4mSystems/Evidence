@@ -54,20 +54,24 @@ public class BailiffsAdapter extends RecyclerView.Adapter<BailiffsAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        ReportersData user = bailiffsDataList.get(position);
-        BailiffsItemViewModel itemMenuViewModel = new BailiffsItemViewModel(user);
+        ReportersData reportersData = bailiffsDataList.get(position);
+        BailiffsItemViewModel itemMenuViewModel = new BailiffsItemViewModel(reportersData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
             lastSelected = position;
             if (o.equals(Constants.EDIT)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(user), ResourceManager.getString(R.string.edit_user), AddUserFragment.class.getName(), null);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(reportersData), ResourceManager.getString(R.string.edit_user), AddUserFragment.class.getName(), null);
             } else if (o.equals(Constants.VIEW)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(user.getMohId()), ResourceManager.getString(R.string.reporter_details), ReportersDetailsFragment.class.getName(), null);
+                MovementHelper.startActivityWithBundle(context, new PassingObject(reportersData.getMohId()), ResourceManager.getString(R.string.reporter_details), ReportersDetailsFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {
                 actionLiveData.setValue(o);
             } else if (o.equals(Constants.CHANGE_STATUS)) {
                 actionLiveData.setValue(o);
             }
         });
+        if (reportersData.getStatus().equals(ResourceManager.getString(R.string.reporter_status_done)))
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorPrimary));
+        else
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorAccent));
         holder.setViewModel(itemMenuViewModel);
     }
 

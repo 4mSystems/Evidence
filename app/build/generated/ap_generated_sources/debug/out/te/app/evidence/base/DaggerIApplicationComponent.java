@@ -43,9 +43,14 @@ import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddCaseFragment_MembersInjector;
+import te.app.evidence.pages.cases.SearchClientsFragment;
+import te.app.evidence.pages.cases.SearchClientsFragment_MembersInjector;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_Factory;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_MembersInjector;
+import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel;
+import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel_Factory;
+import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel_MembersInjector;
 import te.app.evidence.pages.categories.AddCategoryFragment;
 import te.app.evidence.pages.categories.AddCategoryFragment_MembersInjector;
 import te.app.evidence.pages.categories.CategoriesFragment;
@@ -74,6 +79,8 @@ import te.app.evidence.pages.clients.viewModels.ClientsViewModel_MembersInjector
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.HomeFragment_MembersInjector;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
+import te.app.evidence.pages.home.viewModels.HomeViewModel_Factory;
+import te.app.evidence.pages.home.viewModels.HomeViewModel_MembersInjector;
 import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
 import te.app.evidence.pages.mohdrs.AddBailiffsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
@@ -129,6 +136,8 @@ import te.app.evidence.repository.CategoriesRepository;
 import te.app.evidence.repository.CategoriesRepository_Factory;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.repository.ClientsRepository_Factory;
+import te.app.evidence.repository.HomeRepository;
+import te.app.evidence.repository.HomeRepository_Factory;
 import te.app.evidence.repository.NotesRepository;
 import te.app.evidence.repository.NotesRepository_Factory;
 import te.app.evidence.repository.SystemUsersRepository;
@@ -146,6 +155,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<ConnectionHelper> connectionHelperProvider;
 
   private Provider<AuthRepository> authRepositoryProvider;
+
+  private Provider<HomeRepository> homeRepositoryProvider;
 
   private Provider<CasesRepository> casesRepositoryProvider;
 
@@ -195,6 +206,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ProfileViewModel profileViewModel() {
     return injectProfileViewModel(ProfileViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
+  private HomeViewModel homeViewModel() {
+    return injectHomeViewModel(HomeViewModel_Factory.newInstance(homeRepositoryProvider.get()));
   }
 
   private ReportersDetailsViewModel reportersDetailsViewModel() {
@@ -249,6 +264,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectAddCaseViewModel(AddCaseViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
+  private SearchClientsViewModel searchClientsViewModel() {
+    return injectSearchClientsViewModel(SearchClientsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -256,6 +275,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.webServiceProvider = DoubleCheck.provider(ConnectionModule_WebServiceFactory.create(connectionModuleParam));
     this.connectionHelperProvider = DoubleCheck.provider(ConnectionHelper_Factory.create(webServiceProvider, webServiceProvider));
     this.authRepositoryProvider = DoubleCheck.provider(AuthRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.homeRepositoryProvider = DoubleCheck.provider(HomeRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.casesRepositoryProvider = DoubleCheck.provider(CasesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.systemUsersRepositoryProvider = DoubleCheck.provider(SystemUsersRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.clientsRepositoryProvider = DoubleCheck.provider(ClientsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
@@ -388,6 +408,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectAddCaseFragment(addCaseFragment);
   }
 
+  @Override
+  public void inject(SearchClientsFragment searchClientsFragment) {
+    injectSearchClientsFragment(searchClientsFragment);
+  }
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
     return instance;
@@ -458,8 +483,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private HomeViewModel injectHomeViewModel(HomeViewModel instance) {
+    HomeViewModel_MembersInjector.injectHomeRepository(instance, homeRepositoryProvider.get());
+    return instance;
+  }
+
   private HomeFragment injectHomeFragment(HomeFragment instance) {
-    HomeFragment_MembersInjector.injectViewModel(instance, new HomeViewModel());
+    HomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
     return instance;
   }
 
@@ -603,6 +633,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AddCaseFragment injectAddCaseFragment(AddCaseFragment instance) {
     AddCaseFragment_MembersInjector.injectViewModel(instance, addCaseViewModel());
+    return instance;
+  }
+
+  private SearchClientsViewModel injectSearchClientsViewModel(SearchClientsViewModel instance) {
+    SearchClientsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private SearchClientsFragment injectSearchClientsFragment(SearchClientsFragment instance) {
+    SearchClientsFragment_MembersInjector.injectViewModel(instance, searchClientsViewModel());
     return instance;
   }
 

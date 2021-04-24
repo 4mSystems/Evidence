@@ -11,6 +11,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.models.AddCaseRequest;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesData;
 import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.utils.Constants;
 
 public class AddCaseViewModel extends BaseViewModel {
 
@@ -19,9 +20,11 @@ public class AddCaseViewModel extends BaseViewModel {
     @Inject
     CasesRepository casesRepository;
     AddCaseRequest addCaseRequest;
+    CaseClientsCategoriesData caseClientsCategoriesData;
 
     @Inject
     public AddCaseViewModel(CasesRepository casesRepository) {
+        caseClientsCategoriesData = new CaseClientsCategoriesData();
         addCaseRequest = new AddCaseRequest();
         this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
@@ -32,12 +35,23 @@ public class AddCaseViewModel extends BaseViewModel {
         compositeDisposable.add(casesRepository.getCasesClientsCategories());
     }
 
-    public void setAddCaseInfoSettings(CaseClientsCategoriesData caseClientsCategoriesData, FragmentAddCaseBinding binding) {
-        //Clients
-        binding.chipsInputClients.setFilterableList(caseClientsCategoriesData.getClients());
-        //Khesm
-        binding.chipsInputKhesm.setFilterableList(caseClientsCategoriesData.getKhesm());
+    public void toClients(String type) {
+        if (type.equals(Constants.CLIENTS))
+            liveData.setValue(new Mutable(Constants.CLIENTS));
+        else
+            liveData.setValue(new Mutable(Constants.KHESM));
+    }
 
+    public void setCaseClientsCategoriesData(CaseClientsCategoriesData caseClientsCategoriesData) {
+        this.caseClientsCategoriesData = caseClientsCategoriesData;
+    }
+
+    public CaseClientsCategoriesData getCaseClientsCategoriesData() {
+        return caseClientsCategoriesData;
+    }
+
+    public CasesRepository getCasesRepository() {
+        return casesRepository;
     }
 
     public AddCaseRequest getAddCaseRequest() {

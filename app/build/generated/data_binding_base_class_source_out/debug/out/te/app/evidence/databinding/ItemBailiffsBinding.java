@@ -6,12 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -21,7 +19,7 @@ import te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel;
 
 public abstract class ItemBailiffsBinding extends ViewDataBinding {
   @NonNull
-  public final CustomTextViewRegular courtText;
+  public final CustomTextViewMedium courtText;
 
   @NonNull
   public final CustomTextViewRegular courtValue;
@@ -33,43 +31,28 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
   public final CustomTextViewRegular edit;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutSessions;
-
-  @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutSessionHeader;
-
-  @NonNull
-  public final CustomTextViewRegular paperNumberText;
+  public final CustomTextViewMedium paperNumberText;
 
   @NonNull
   public final CustomTextViewRegular paperNumberValue;
 
   @NonNull
-  public final CustomTextViewRegular paperTypeText;
+  public final CustomTextViewMedium paperTypeText;
 
   @NonNull
   public final CustomTextViewRegular paperTypeValue;
 
   @NonNull
-  public final CustomTextViewRegular sessionDateText;
+  public final CustomTextViewMedium sessionDateText;
 
   @NonNull
   public final CustomTextViewRegular sessionMonthValue;
 
   @NonNull
-  public final CustomTextViewRegular statusText;
+  public final CustomTextViewMedium statusText;
 
   @NonNull
-  public final CustomTextViewMedium statusValue;
-
-  @NonNull
-  public final CustomTextViewMedium tvPaperNumber;
-
-  @NonNull
-  public final View v1;
+  public final MaterialButton statusValue;
 
   @NonNull
   public final View v2;
@@ -96,23 +79,18 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
   protected BailiffsItemViewModel mItemViewModel;
 
   protected ItemBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular courtText, CustomTextViewRegular courtValue,
+      CustomTextViewMedium courtText, CustomTextViewRegular courtValue,
       CustomTextViewRegular delete, CustomTextViewRegular edit,
-      ExpansionLayout expansionLayoutSessions, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutSessionHeader, CustomTextViewRegular paperNumberText,
-      CustomTextViewRegular paperNumberValue, CustomTextViewRegular paperTypeText,
-      CustomTextViewRegular paperTypeValue, CustomTextViewRegular sessionDateText,
-      CustomTextViewRegular sessionMonthValue, CustomTextViewRegular statusText,
-      CustomTextViewMedium statusValue, CustomTextViewMedium tvPaperNumber, View v1, View v2,
-      View v3, View v4, View v5, View v6, View v7, CustomTextViewRegular viewValue) {
+      CustomTextViewMedium paperNumberText, CustomTextViewRegular paperNumberValue,
+      CustomTextViewMedium paperTypeText, CustomTextViewRegular paperTypeValue,
+      CustomTextViewMedium sessionDateText, CustomTextViewRegular sessionMonthValue,
+      CustomTextViewMedium statusText, MaterialButton statusValue, View v2, View v3, View v4,
+      View v5, View v6, View v7, CustomTextViewRegular viewValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.courtText = courtText;
     this.courtValue = courtValue;
     this.delete = delete;
     this.edit = edit;
-    this.expansionLayoutSessions = expansionLayoutSessions;
-    this.iconDownQu = iconDownQu;
-    this.layoutSessionHeader = layoutSessionHeader;
     this.paperNumberText = paperNumberText;
     this.paperNumberValue = paperNumberValue;
     this.paperTypeText = paperTypeText;
@@ -121,8 +99,6 @@ public abstract class ItemBailiffsBinding extends ViewDataBinding {
     this.sessionMonthValue = sessionMonthValue;
     this.statusText = statusText;
     this.statusValue = statusValue;
-    this.tvPaperNumber = tvPaperNumber;
-    this.v1 = v1;
     this.v2 = v2;
     this.v3 = v3;
     this.v4 = v4;

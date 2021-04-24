@@ -8,6 +8,8 @@
 
         <import type="android.view.View" />
 
+        <import type="te.app.evidence.utils.Constants" />
+
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.cases.viewModels.AddCaseViewModel" />
@@ -33,27 +35,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.pchmn.materialchips.ChipsInput
-                android:id="@+id/chips_input_clients"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
-                app:chip_backgroundColor="@color/colorPrimaryDark"
-                app:chip_deletable="true"
-                app:chip_deleteIconColor="@color/colorAccent"
-                app:chip_detailed_backgroundColor="@color/colorPrimaryDark"
-                app:chip_detailed_deleteIconColor="@color/colorAccent"
-                app:chip_detailed_textColor="@color/white"
-                app:chip_hasAvatarIcon="true"
-                app:chip_labelColor="@color/white"
-                app:filterable_list_backgroundColor="@color/line_color"
-                app:filterable_list_textColor="@color/colorPrimaryDark"
-                app:hint="@string/clients"
-                app:hintColor="@color/medium_color"
-                app:maxRows="3"
-                app:textColor="@color/colorPrimaryDark" />
+                app:error="@{viewmodel.addCaseRequest.circleNumError}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/clients"
+                    android:inputType="text"
+                    android:onClick="@{()-> viewmodel.toClients(Constants.CLIENTS)}"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:layout_width="wrap_content"
@@ -66,27 +68,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.pchmn.materialchips.ChipsInput
-                android:id="@+id/chips_input_khesm"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
-                app:chip_backgroundColor="@color/colorPrimaryDark"
-                app:chip_deletable="true"
-                app:chip_deleteIconColor="@color/colorAccent"
-                app:chip_detailed_backgroundColor="@color/colorPrimaryDark"
-                app:chip_detailed_deleteIconColor="@color/colorAccent"
-                app:chip_detailed_textColor="@color/white"
-                app:chip_hasAvatarIcon="true"
-                app:chip_labelColor="@color/white"
-                app:filterable_list_backgroundColor="@color/line_color"
-                app:filterable_list_textColor="@color/colorPrimaryDark"
-                app:hint="@string/opponents"
-                app:hintColor="@color/medium_color"
-                app:maxRows="3"
-                app:textColor="@color/colorPrimaryDark" />
+                app:error="@{viewmodel.addCaseRequest.circleNumError}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:hint="@string/opponents"
+                    android:inputType="text"
+                    android:onClick="@{()->viewmodel.toClients(Constants.KHESM)}"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:layout_width="wrap_content"

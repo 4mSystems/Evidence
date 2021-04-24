@@ -8,68 +8,69 @@ import com.pchmn.materialchips.model.ChipInterface;
 
 public class Clients implements ChipInterface {
 
-	@SerializedName("client_Address")
-	private String clientAddress;
+    @SerializedName("client_Address")
+    private String clientAddress;
 
-	@SerializedName("notes")
-	private String notes;
+    @SerializedName("notes")
+    private String notes;
 
-	@SerializedName("parent_id")
-	private String parentId;
+    @SerializedName("parent_id")
+    private String parentId;
 
-	@SerializedName("cat_id")
-	private String catId;
+    @SerializedName("cat_id")
+    private String catId;
 
-	@SerializedName("id")
-	private int clientId;
+    @SerializedName("id")
+    private int clientId;
 
-	@SerializedName("client_Name")
-	private String clientName;
+    @SerializedName("client_Name")
+    private String clientName;
 
-	@SerializedName("type")
-	private String type;
+    @SerializedName("type")
+    private String type;
 
-	@SerializedName("category")
-	private Category category;
+    @SerializedName("category")
+    private Category category;
 
-	@SerializedName("client_Unit")
-	private String clientUnit;
+    @SerializedName("client_Unit")
+    private String clientUnit;
+    private boolean checked;
 
-	public String getClientAddress(){
-		return clientAddress;
-	}
+    public String getClientAddress() {
+        return clientAddress;
+    }
 
-	public String getNotes(){
-		return notes;
-	}
+    public String getNotes() {
+        return notes;
+    }
 
-	public String getParentId(){
-		return parentId;
-	}
+    public String getParentId() {
+        return parentId;
+    }
 
-	public String getCatId(){
-		return catId;
-	}
+    public String getCatId() {
+        return catId;
+    }
 
-	public int getClientId(){
-		return clientId;
-	}
+    public int getClientId() {
+        return clientId;
+    }
 
-	public String getClientName(){
-		return clientName;
-	}
+    public String getClientName() {
+        return clientName;
+    }
 
-	public String getType(){
-		return type;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public Category getCategory(){
-		return category;
-	}
+    public Category getCategory() {
+        return category;
+    }
 
-	public String getClientUnit(){
-		return clientUnit;
-	}
+    public String getClientUnit() {
+        return clientUnit;
+    }
 
     @Override
     public Object getId() {
@@ -94,5 +95,13 @@ public class Clients implements ChipInterface {
     @Override
     public String getInfo() {
         return clientUnit;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }

@@ -22,8 +22,16 @@ public class CaseClientsCategoriesData {
         return clients;
     }
 
+    public void setClients(List<Clients> clients) {
+        this.clients = clients;
+    }
+
     public List<Clients> getKhesm() {
         return khesm;
+    }
+
+    public void setKhesm(List<Clients> khesm) {
+        this.khesm = khesm;
     }
 
     public List<Category> getCategories() {

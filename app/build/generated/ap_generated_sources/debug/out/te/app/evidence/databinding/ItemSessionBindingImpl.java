@@ -14,51 +14,45 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 1);
-        sViewsWithIds.put(R.id.icon_down_qu, 2);
-        sViewsWithIds.put(R.id.tv_qualifications, 3);
-        sViewsWithIds.put(R.id.v1, 4);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 5);
-        sViewsWithIds.put(R.id.session_date_text, 6);
-        sViewsWithIds.put(R.id.session_date_value, 7);
+        sViewsWithIds.put(R.id.tv_username, 5);
+        sViewsWithIds.put(R.id.v9, 6);
+        sViewsWithIds.put(R.id.session_date_text, 7);
         sViewsWithIds.put(R.id.v2, 8);
         sViewsWithIds.put(R.id.session_status_text, 9);
-        sViewsWithIds.put(R.id.session_status_value, 10);
-        sViewsWithIds.put(R.id.v3, 11);
-        sViewsWithIds.put(R.id.session_month_text, 12);
-        sViewsWithIds.put(R.id.session_month_value, 13);
-        sViewsWithIds.put(R.id.v4, 14);
+        sViewsWithIds.put(R.id.v3, 10);
+        sViewsWithIds.put(R.id.session_month_text, 11);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemSessionBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private ItemSessionBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[5]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (android.view.View) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             , (android.view.View) bindings[8]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[6]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.sessionCaseNumber.setTag(null);
+        this.sessionDateValue.setTag(null);
+        this.sessionMonthValue.setTag(null);
+        this.sessionStatusValue.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -67,7 +61,7 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -95,7 +89,13 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
     }
 
     public void setItemViewModel(@Nullable te.app.evidence.pages.home.viewModels.SessionItemViewModel ItemViewModel) {
+        updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -113,6 +113,12 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.sessionItem) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -123,7 +129,40 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.pages.sessions.SessionItem itemViewModelSessionItem = null;
+        te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+        java.lang.String itemViewModelSessionItemStatus = null;
+        java.lang.String itemViewModelSessionItemSessionDate = null;
+        java.lang.String itemViewModelSessionItemMonth = null;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemViewModel != null) {
+                    // read itemViewModel.sessionItem
+                    itemViewModelSessionItem = itemViewModel.getSessionItem();
+                }
+
+
+                if (itemViewModelSessionItem != null) {
+                    // read itemViewModel.sessionItem.status
+                    itemViewModelSessionItemStatus = itemViewModelSessionItem.getStatus();
+                    // read itemViewModel.sessionItem.sessionDate
+                    itemViewModelSessionItemSessionDate = itemViewModelSessionItem.getSessionDate();
+                    // read itemViewModel.sessionItem.month
+                    itemViewModelSessionItemMonth = itemViewModelSessionItem.getMonth();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelSessionItemSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionDateValue, itemViewModelSessionItemSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelSessionItemMonth);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionStatusValue, itemViewModelSessionItemStatus);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -131,7 +170,8 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemViewModel.sessionItem
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

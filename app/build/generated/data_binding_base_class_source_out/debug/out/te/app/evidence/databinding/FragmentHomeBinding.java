@@ -4,6 +4,7 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -11,6 +12,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -28,6 +30,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
 
   @NonNull
   public final Barrier br3;
+
+  @NonNull
+  public final RecyclerView commingSessionRc;
 
   @NonNull
   public final CustomTextViewMedium homeCases;
@@ -48,6 +53,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final CustomTextViewMedium homeMohdrs;
 
   @NonNull
+  public final RecyclerView homeReportersRc;
+
+  @NonNull
   public final CustomTextViewMedium homeSession;
 
   @NonNull
@@ -63,33 +71,45 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final AppCompatButton nextSessions;
 
   @NonNull
+  public final RecyclerView previousSessionRc;
+
+  @NonNull
   public final AppCompatButton previousSessions;
+
+  @NonNull
+  public final ProgressBar progressBarHome;
 
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br1, Barrier br2, Barrier br3, CustomTextViewMedium homeCases,
-      MaterialCardView homeItem1, MaterialCardView homeItem2, MaterialCardView homeItem3,
-      MaterialCardView homeItem4, CustomTextViewMedium homeMohdrs, CustomTextViewMedium homeSession,
+      Barrier br1, Barrier br2, Barrier br3, RecyclerView commingSessionRc,
+      CustomTextViewMedium homeCases, MaterialCardView homeItem1, MaterialCardView homeItem2,
+      MaterialCardView homeItem3, MaterialCardView homeItem4, CustomTextViewMedium homeMohdrs,
+      RecyclerView homeReportersRc, CustomTextViewMedium homeSession,
       CustomTextViewMedium homeUsers, CustomEditText inputSearch, AppCompatButton nextMohdareen,
-      AppCompatButton nextSessions, AppCompatButton previousSessions) {
+      AppCompatButton nextSessions, RecyclerView previousSessionRc,
+      AppCompatButton previousSessions, ProgressBar progressBarHome) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br1 = br1;
     this.br2 = br2;
     this.br3 = br3;
+    this.commingSessionRc = commingSessionRc;
     this.homeCases = homeCases;
     this.homeItem1 = homeItem1;
     this.homeItem2 = homeItem2;
     this.homeItem3 = homeItem3;
     this.homeItem4 = homeItem4;
     this.homeMohdrs = homeMohdrs;
+    this.homeReportersRc = homeReportersRc;
     this.homeSession = homeSession;
     this.homeUsers = homeUsers;
     this.inputSearch = inputSearch;
     this.nextMohdareen = nextMohdareen;
     this.nextSessions = nextSessions;
+    this.previousSessionRc = previousSessionRc;
     this.previousSessions = previousSessions;
+    this.progressBarHome = progressBarHome;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

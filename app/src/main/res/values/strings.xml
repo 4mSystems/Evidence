@@ -432,5 +432,7 @@
     <string name="status_waiting">Waiting</string>
     <string name="reporter_details">Reporter details</string>
     <string name="lang">Change language</string>
+    <string name="reporter_status_done">تم التنفيذ</string>
+    <string name="reporter_status_wait">قيد الانتظار</string>
 
 </resources>

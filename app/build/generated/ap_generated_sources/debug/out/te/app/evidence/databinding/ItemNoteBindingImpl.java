@@ -28,9 +28,9 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     private final android.widget.LinearLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
-    @Nullable
     private final android.view.View.OnClickListener mCallback30;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,8 +63,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -190,8 +190,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback29);
-            this.edit.setOnClickListener(mCallback30);
+            this.delete.setOnClickListener(mCallback30);
+            this.edit.setOnClickListener(mCallback31);
         }
     }
     // Listener Stub Implementations

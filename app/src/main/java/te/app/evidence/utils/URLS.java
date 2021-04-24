@@ -3,6 +3,7 @@ package te.app.evidence.utils;
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
     public final static String CLIENTS = "clients";
+    public final static String HOME = "home_data";
     public final static String ADD_CLIENTS = "add_client";
 
     public final static String CATEGORIES = "categories";
@@ -42,7 +43,7 @@ public class URLS {
     public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
     public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
-    public static final String CASE_CLIENTS_CATEGORIES = "select_clients_and_cat";
+    public static final String CASE_CLIENTS_CATEGORIES = "select/data/to_add_case";
     public static final String GET_MOHDAREEN = "mohdars";
     public static final String CHANGE_MOH_STATUS = "update_status/";
     public static final String DELETE_MOHDR = "delete_mohdar/";
