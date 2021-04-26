@@ -377,7 +377,7 @@
     <string name="case_number">case number</string>
     <string name="session_date">Session date</string>
     <string name="status">Status</string>
-    <string name="court_mohdr">Court reporters</string>
+    <string name="court_mohdr">Court </string>
     <string name="paper_type">Paper type</string>
     <string name="control">Control</string>
     <string name="view_more">View more</string>

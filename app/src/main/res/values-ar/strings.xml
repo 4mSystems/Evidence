@@ -295,7 +295,7 @@
     <string name="choose_akar_locations">اختر موقع العقار</string>
     <string name="ad_fee_title">رسوم الإعلان</string>
     <string name="add_info_title">شروط إضافة إعلان</string>
-    <string name="save">Save</string>
+    <string name="save">حفظ</string>
     <string name="API_KEY">AIzaSyBnui_-Aq3WohKtd4VUahlpWv_2xEocpRg</string>
     <string name="choose_category">اختر القسم</string>
     <string name="ad_attachment_imgs">إرفاق صور</string>
@@ -375,7 +375,7 @@
     <string name="case_number">رقم الدعوى</string>
     <string name="session_date">تاريخ الجلسة</string>
     <string name="status">الحالة</string>
-    <string name="court_mohdr">Court bailiffs</string>
+    <string name="court_mohdr">المحكمة</string>
     <string name="paper_type">نوع الورقة</string>
     <string name="view_more">رؤية المزيد</string>
     <string name="court">المحكمة</string>
@@ -383,7 +383,7 @@
     <string name="paper_number">رقم الورقة</string>
     <string name="clients">الموكلين</string>
     <string name="opponents">الخصوم</string>
-    <string name="notes">Notes</string>
+    <string name="notes">الملاحظات</string>
     <string name="user_name">الإسم</string>
     <string name="user_type">نوع المستخدم</string>
     <string name="user_permission">الصلاحيات</string>
@@ -409,7 +409,7 @@
     <string name="add_new_category">Add new category</string>
     <string name="mohdr_search_hint">Looking for bailiffs</string>
     <string name="client">موكل</string>
-    <string name="addressed_to">Addressed to</string>
+    <string name="addressed_to">موجهة الى</string>
     <string name="khesm">خصم</string>
     <string name="edit_client">تعديل بيانات العميل</string>
     <string name="option_cancel">إلغاء</string>
@@ -421,7 +421,7 @@
     <string name="admin">admin</string>
     <string name="user">User</string>
     <string name="edit_user">Edit user</string>
-    <string name="add_case">Add case</string>
+    <string name="add_case">إضافة دعوى</string>
     <string name="search_case">Search case</string>
     <string name="cat_search_hint">Looking for category ?</string>
     <string name="edit_category">Edit category</string>

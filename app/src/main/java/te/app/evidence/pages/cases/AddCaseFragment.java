@@ -18,7 +18,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.inject.Inject;
 
-import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -73,13 +72,11 @@ public class AddCaseFragment extends BaseFragment {
     private void showCategories() {
         PopUpMenuHelper.showCategoriesPopUp(context, binding.inputCat, viewModel.getCaseClientsCategoriesData().getCategories()).
                 setOnMenuItemClickListener(item -> {
-                    binding.inputCat.setText(viewModel.getCategoriesDataList().get(item.getItemId()).getName());
-                    viewModel.getAddCaseRequest().setTo_whome(String.valueOf(viewModel.getCategoriesDataList().get(item.getItemId()).getId()));
+                    binding.inputCat.setText(viewModel.getCaseClientsCategoriesData().getCategories().get(item.getItemId()).getName());
+                    viewModel.getAddCaseRequest().setTo_whome(viewModel.getCaseClientsCategoriesData().getCategories().get(item.getItemId()).getId());
                     return false;
                 });
     }
-
-    private static final String TAG = "AddCaseFragment";
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

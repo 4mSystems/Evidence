@@ -129,7 +129,6 @@ public class AddCaseRequest {
     }
 
     public void setMokel_Name(List<Integer> mokel_Name) {
-        mokelError.set(null);
         this.mokel_Name = mokel_Name;
     }
 
@@ -138,7 +137,6 @@ public class AddCaseRequest {
     }
 
     public void setKhesm_Name(List<Integer> khesm_Name) {
-        khesmError.set(null);
         this.khesm_Name = khesm_Name;
     }
 
@@ -156,6 +154,7 @@ public class AddCaseRequest {
     }
 
     public void setMokelText(String mokelText) {
+        mokelError.set(null);
         this.mokelText = mokelText;
     }
 
@@ -164,6 +163,7 @@ public class AddCaseRequest {
     }
 
     public void setKhesmText(String khesmText) {
+        khesmError.set(null);
         this.khesmText = khesmText;
     }
 }
