@@ -6,6 +6,9 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.validation.Validate;
+
 public class AddCaseRequest {
     @SerializedName("invetation_num")
     private String invetation_num;
@@ -25,6 +28,8 @@ public class AddCaseRequest {
     private List<Integer> khesm_Name;
     @SerializedName("court")
     private String court;
+    private String mokelText;
+    private String khesmText;
     public ObservableField<String> invetationNumError = new ObservableField<>();
     public ObservableField<String> circleNumError = new ObservableField<>();
     public ObservableField<String> dateError = new ObservableField<>();
@@ -34,6 +39,36 @@ public class AddCaseRequest {
     public ObservableField<String> khesmError = new ObservableField<>();
     public ObservableField<String> courtError = new ObservableField<>();
     public ObservableField<String> catError = new ObservableField<>();
+
+    public boolean isValid() {
+        boolean valid = true;
+        if (!Validate.isValid(mokelText, Constants.FIELD)) {
+            mokelError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(khesmText, Constants.FIELD)) {
+            khesmError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(circle_num, Constants.FIELD)) {
+            circleNumError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(invetation_num, Constants.FIELD)) {
+            invetationNumError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(first_session_date, Constants.FIELD)) {
+            dateError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(court, Constants.FIELD)) {
+            courtError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(to_whome, Constants.FIELD)) {
+            catError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(inventation_type, Constants.FIELD)) {
+            invetationTypeError.set(Validate.error);
+            valid = false;
+        }
+        return valid;
+    }
 
     public String getInvetation_num() {
         return invetation_num;
@@ -114,5 +149,21 @@ public class AddCaseRequest {
     public void setCourt(String court) {
         courtError.set(null);
         this.court = court;
+    }
+
+    public String getMokelText() {
+        return mokelText;
+    }
+
+    public void setMokelText(String mokelText) {
+        this.mokelText = mokelText;
+    }
+
+    public String getKhesmText() {
+        return khesmText;
+    }
+
+    public void setKhesmText(String khesmText) {
+        this.khesmText = khesmText;
     }
 }

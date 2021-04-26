@@ -3066,6 +3066,7 @@ drawable ic_categories
 drawable ic_check_white_24dp
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
+drawable ic_close
 drawable ic_deselect_all
 drawable ic_email
 drawable ic_error_outline_white_24dp
@@ -3445,8 +3446,11 @@ id img_home_bar_menu
 id img_login_logo
 id info
 id info_layout
+id input_cat
+id input_clients
 id input_confirm_password
 id input_email
+id input_khesm
 id input_new_password
 id input_password
 id input_search
@@ -3924,6 +3928,7 @@ layout item_bailiffs
 layout item_case
 layout item_category
 layout item_client_search
+layout item_client_tags
 layout item_clients
 layout item_doc_layout
 layout item_folder_layout
@@ -4177,7 +4182,9 @@ string client_notes
 string client_profile
 string client_reviews
 string client_search_hint
+string client_selected
 string client_unit
+string client_unselected
 string clients
 string coin
 string comment
@@ -4313,6 +4320,8 @@ string invalidPhone
 string inventation_type
 string item_view_role_description
 string khesm
+string khesm_selected
+string khesm_unselected
 string kitchen_count
 string kitchen_count_ad
 string land

@@ -9,17 +9,31 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 
 public abstract class FragmentAddCaseBinding extends ViewDataBinding {
+  @NonNull
+  public final TextInputEditText inputCat;
+
+  @NonNull
+  public final TextInputEditText inputClients;
+
+  @NonNull
+  public final TextInputEditText inputKhesm;
+
   @Bindable
   protected AddCaseViewModel mViewmodel;
 
-  protected FragmentAddCaseBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentAddCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      TextInputEditText inputCat, TextInputEditText inputClients, TextInputEditText inputKhesm) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.inputCat = inputCat;
+    this.inputClients = inputClients;
+    this.inputKhesm = inputKhesm;
   }
 
   public abstract void setViewmodel(@Nullable AddCaseViewModel viewmodel);

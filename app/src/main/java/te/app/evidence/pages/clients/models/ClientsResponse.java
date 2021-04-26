@@ -10,6 +10,7 @@ public class ClientsResponse extends StatusMessage {
 
     @SerializedName("data")
     private List<Clients> clientsList;
+    private int counter;
 
     public ClientsResponse() {
     }
@@ -22,4 +23,15 @@ public class ClientsResponse extends StatusMessage {
         return clientsList;
     }
 
+    public void setClientsList(List<Clients> clientsList) {
+        this.clientsList = clientsList;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemViewModel"
+            type="te.app.evidence.pages.clients.viewModels.ClientsItemViewModel" />
+    </data>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{itemViewModel.clients.clientName}"
+        android:textAllCaps="false"
+        android:textSize="@dimen/sp8"
+        app:cornerRadius="@dimen/dp12h"
+        app:icon="@drawable/ic_close" />
+</layout>

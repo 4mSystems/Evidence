@@ -132,6 +132,7 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
         te.app.evidence.pages.sessions.SessionItem itemViewModelSessionItem = null;
         te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelSessionItemStatus = null;
+        java.lang.String itemViewModelSessionItemInvetationNum = null;
         java.lang.String itemViewModelSessionItemSessionDate = null;
         java.lang.String itemViewModelSessionItemMonth = null;
 
@@ -148,6 +149,8 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
                 if (itemViewModelSessionItem != null) {
                     // read itemViewModel.sessionItem.status
                     itemViewModelSessionItemStatus = itemViewModelSessionItem.getStatus();
+                    // read itemViewModel.sessionItem.invetation_num
+                    itemViewModelSessionItemInvetationNum = itemViewModelSessionItem.getInvetation_num();
                     // read itemViewModel.sessionItem.sessionDate
                     itemViewModelSessionItemSessionDate = itemViewModelSessionItem.getSessionDate();
                     // read itemViewModel.sessionItem.month
@@ -158,7 +161,7 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelSessionItemSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelSessionItemInvetationNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionDateValue, itemViewModelSessionItemSessionDate);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelSessionItemMonth);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionStatusValue, itemViewModelSessionItemStatus);

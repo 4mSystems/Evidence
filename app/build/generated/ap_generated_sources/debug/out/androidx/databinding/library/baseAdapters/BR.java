@@ -57,13 +57,15 @@ public class BR {
 
   public static final int systemUserData = 27;
 
-  public static final int type = 28;
+  public static final int tagClientsAdapter = 28;
 
-  public static final int userDocuments = 29;
+  public static final int type = 29;
 
-  public static final int userPermissionsData = 30;
+  public static final int userDocuments = 30;
 
-  public static final int usersAdapter = 31;
+  public static final int userPermissionsData = 31;
 
-  public static final int viewmodel = 32;
+  public static final int usersAdapter = 32;
+
+  public static final int viewmodel = 33;
 }

@@ -231,11 +231,9 @@ public class ParentActivity extends AppCompatActivity implements
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try {
-            if (resultCode == RESULT_OK) {
-                Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
-                assert fragment != null;
-                fragment.onActivityResult(requestCode, resultCode, data);
-            }
+            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
+            assert fragment != null;
+            fragment.onActivityResult(requestCode, resultCode, data);
         } catch (Exception ex) {
             Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
         }

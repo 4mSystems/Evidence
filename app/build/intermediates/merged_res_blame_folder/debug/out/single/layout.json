@@ -80,6 +80,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/option_dialog.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_client_tags.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_client_tags.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_case.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_case.xml"
     },

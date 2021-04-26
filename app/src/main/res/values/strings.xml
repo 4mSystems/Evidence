@@ -434,5 +434,9 @@
     <string name="lang">Change language</string>
     <string name="reporter_status_done">تم التنفيذ</string>
     <string name="reporter_status_wait">قيد الانتظار</string>
+    <string name="client_selected">تم إختيار الموكلين بنجاح, للتعديل اضغط هنا</string>
+    <string name="client_unselected">إضغط لرؤية العملاء</string>
+    <string name="khesm_selected">تم إختيار الخصوم, للتعديل اضغط هنا</string>
+    <string name="khesm_unselected">إضغط لإختيار الخصوم</string>
 
 </resources>

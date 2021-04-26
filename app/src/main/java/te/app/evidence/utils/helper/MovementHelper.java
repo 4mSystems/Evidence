@@ -136,6 +136,14 @@ public class MovementHelper {
         ((ParentActivity) context).setResult(RESULT_OK, intent);
         ((Activity) context).finish();
     }
+ public static void finishWithResultWithRequestCode(PassingObject passingObject, Context context,int request) {
+        Intent intent = new Intent();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(Constants.BUNDLE, passingObject);
+        intent.putExtra(Constants.BUNDLE, bundle);
+        ((ParentActivity) context).setResult(request, intent);
+        ((Activity) context).finish();
+    }
 
     public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject) {
 //        Intent intent = new Intent(from, MapAddressActivity.class);

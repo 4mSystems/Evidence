@@ -2,6 +2,7 @@ package te.app.evidence.pages.cases;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,8 +26,6 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentSearchClientsBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel;
-import te.app.evidence.pages.categories.models.AddCategoryResponse;
-import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -38,6 +37,7 @@ public class SearchClientsFragment extends BaseFragment {
     @Inject
     SearchClientsViewModel viewModel;
     FragmentSearchClientsBinding binding;
+    int clientCounter;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -60,7 +60,15 @@ public class SearchClientsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CONFIRM_CODE.equals(((Mutable) o).message)) {
-                MovementHelper.finishWithResult(new PassingObject(new ClientsResponse(viewModel.getClientsAdapter().getClientsList())), context);
+                for (int i = 0; i < viewModel.getClientsAdapter().getClientsList().size(); i++) {
+                    if (viewModel.getClientsAdapter().getClientsList().get(i).isChecked())
+                        clientCounter++;
+                }
+                ClientsResponse clientsResponse = new ClientsResponse();
+                clientsResponse.setClientsList(viewModel.getClientsAdapter().getClientsList());
+                clientsResponse.setCounter(clientCounter);
+                Log.e("setEvent", "setEvent: "+viewModel.getPassingObject().getId() );
+                MovementHelper.finishWithResultWithRequestCode(new PassingObject(clientsResponse), context, viewModel.getPassingObject().getId() == Constants.KHESM_CODE ? Constants.KHESM_CODE : Constants.CLIENTS_CODE);
             }
         });
     }

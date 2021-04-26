@@ -42,14 +42,15 @@
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
-                android:tag="binding_1"                               >
+                android:tag="binding_1"                           >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_clients"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:gravity="center_vertical"
-                    android:hint="@string/clients"
+                    android:hint="@string/client_unselected"
                     android:inputType="text"
                     android:tag="binding_2"                                         
                     android:textColor="@color/colorPrimaryDark"
@@ -75,14 +76,15 @@
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
-                android:tag="binding_3"                               >
+                android:tag="binding_3"                           >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_khesm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusable="false"
                     android:gravity="center_vertical"
-                    android:hint="@string/opponents"
+                    android:hint="@string/khesm_unselected"
                     android:inputType="text"
                     android:tag="binding_4"                                      
                     android:textColor="@color/colorPrimaryDark"
@@ -138,7 +140,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_7"                                   >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -146,6 +149,7 @@
                     android:gravity="center_vertical"
                     android:hint="@string/case_number"
                     android:inputType="text"
+                    android:tag="binding_8"                                   
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -167,7 +171,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_9"                          >
 
                 <te.app.evidence.customViews.views.DateEditText
                     android:layout_width="match_parent"
@@ -177,6 +182,7 @@
                     android:gravity="center_vertical"
                     android:hint="@string/session_date"
                     android:inputType="text"
+                    android:tag="binding_10"                                      
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -198,7 +204,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_11"                          >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -206,6 +213,7 @@
                     android:gravity="center_vertical"
                     android:hint="@string/court_mohdr"
                     android:inputType="text"
+                    android:tag="binding_12"                         
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -227,16 +235,20 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_13"                        >
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_arrow_down"
                     android:drawableTint="@color/medium_color"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/addressed_to"
                     android:inputType="text"
+                    android:tag="binding_14"                          
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -258,7 +270,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                android:tag="binding_15"                                   >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -266,6 +279,7 @@
                     android:gravity="center_vertical"
                     android:hint="@string/inventation_type"
                     android:inputType="text"
+                    android:tag="binding_16"                                    
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -299,15 +313,25 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp30h"
+                android:tag="binding_17"                                               />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp30h"
                 android:background="@color/colorPrimaryDark"
+                android:tag="binding_18"                        
                 android:text="@string/save"
                 android:textAllCaps="false"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                                                                                      />
+
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

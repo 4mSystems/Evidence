@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
+import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.clients.models.Category;
 import te.app.evidence.pages.clients.models.Clients;
 
@@ -12,11 +13,11 @@ public class CaseClientsCategoriesData {
     @SerializedName("clients")
     private List<Clients> clients;
 
-    @SerializedName("khesm")
+    @SerializedName("khesms")
     private List<Clients> khesm;
 
     @SerializedName("categories")
-    private List<Category> categories;
+    private List<CategoriesData> categories;
 
     public List<Clients> getClients() {
         return clients;
@@ -34,7 +35,7 @@ public class CaseClientsCategoriesData {
         this.khesm = khesm;
     }
 
-    public List<Category> getCategories() {
+    public List<CategoriesData> getCategories() {
         return categories;
     }
 }

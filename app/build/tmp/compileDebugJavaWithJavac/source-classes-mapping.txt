@@ -349,6 +349,9 @@ te/app/evidence/customViews/views/CustomTextViewRegular.java
  te.app.evidence.customViews.views.CustomTextViewRegular
 te/app/evidence/repository/SystemUsersRepository.java
  te.app.evidence.repository.SystemUsersRepository
+te/app/evidence/pages/cases/adapters/InputTagClientsAdapter.java
+ te.app.evidence.pages.cases.adapters.InputTagClientsAdapter
+ te.app.evidence.pages.cases.adapters.InputTagClientsAdapter$ViewHolder
 te/app/evidence/databinding/ItemNoteBinding.java
  te.app.evidence.databinding.ItemNoteBinding
 te/app/evidence/utils/images/PhotoFullPopupWindow.java
@@ -385,6 +388,8 @@ te/app/evidence/pages/notes/models/AddNoteResponse.java
  te.app.evidence.pages.notes.models.AddNoteResponse
 te/app/evidence/utils/resources/ResourceManager.java
  te.app.evidence.utils.resources.ResourceManager
+te/app/evidence/databinding/ItemClientTagsBinding.java
+ te.app.evidence.databinding.ItemClientTagsBinding
 te/app/evidence/pages/users/viewModels/UserPermissionsViewModel.java
  te.app.evidence.pages.users.viewModels.UserPermissionsViewModel
 te/app/evidence/pages/notes/viewModels/AddNoteViewModel.java
