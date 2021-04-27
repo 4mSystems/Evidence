@@ -75,6 +75,10 @@ public class HomeFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
+        if (Constants.DATA_CHANGED) {
+            Constants.DATA_CHANGED = false;
+            viewModel.homeResponse();
+        }
     }
 
     @Override

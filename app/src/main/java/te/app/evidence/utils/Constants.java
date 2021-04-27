@@ -100,8 +100,8 @@ public class Constants {
     public static final String HOME = "HOME";
     public static final String LOOPER = "LOOPER";
 
-    public static final String license_image = "license_image";
-    public static final int license_image_code = 383;
+    public static final String ALL_CASES = "ALL_CASES";
+    public static final String CASE_DETAILS = "CASE_DETAILS";
 
     public static final String civil_image = "civil_image";
     public static final int civil_image_code = 384;

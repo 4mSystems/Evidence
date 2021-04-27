@@ -25,6 +25,7 @@ import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentAddCaseBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 import te.app.evidence.pages.clients.models.ClientsResponse;
@@ -65,6 +66,10 @@ public class AddCaseFragment extends BaseFragment {
             } else if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getCategories().size() > 0)
                     showCategories();
+            } else if (Constants.ADD_CASE.equals(((Mutable) o).message)) {
+                Constants.DATA_CHANGED = true;
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                finishActivity();
             }
         });
     }

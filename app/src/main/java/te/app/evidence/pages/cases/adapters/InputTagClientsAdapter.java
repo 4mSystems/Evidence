@@ -57,11 +57,11 @@ public class InputTagClientsAdapter extends RecyclerView.Adapter<InputTagClients
 
     public void update(List<Clients> dataList) {
         this.clientsList.clear();
-        for (int i = 0; i < dataList.size(); i++) {
-            if (dataList.get(i).isChecked())
-                clientsList.add(dataList.get(i));
-        }
-//        clientsList.addAll(dataList);
+//        for (int i = 0; i < dataList.size(); i++) {
+//            if (dataList.get(i).isChecked())
+//                clientsList.add(dataList.get(i));
+//        }
+        clientsList.addAll(dataList);
         notifyDataSetChanged();
     }
 

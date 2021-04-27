@@ -48,4 +48,7 @@ public class URLS {
     public static final String CHANGE_MOH_STATUS = "update_status/";
     public static final String DELETE_MOHDR = "delete_mohdar/";
     public static final String REPORTER_DETAILS = "mohder_by_id/";
+    public static final String ADD_CASE = "add_Cases";
+    public static final String ALL_CASES = "Cases";
+    public static final String CASE_DETAILS = "caseData/";
 }

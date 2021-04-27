@@ -33,9 +33,11 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView16;
     @NonNull
-    private final android.widget.ProgressBar mboundView17;
+    private final com.google.android.material.textfield.TextInputEditText mboundView17;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView18;
+    private final android.widget.ProgressBar mboundView18;
+    @NonNull
+    private final androidx.appcompat.widget.AppCompatButton mboundView19;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView3;
     @NonNull
@@ -54,9 +56,9 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback57;
     @Nullable
-    private final android.view.View.OnClickListener mCallback53;
+    private final android.view.View.OnClickListener mCallback58;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -171,6 +173,43 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             }
         }
     };
+    private androidx.databinding.InverseBindingListener mboundView17androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addCaseRequest.descion
+            //         is viewmodel.addCaseRequest.setDescion((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView17);
+            // localize variables for thread safety
+            // viewmodel.addCaseRequest
+            te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addCaseRequest.descion
+            java.lang.String viewmodelAddCaseRequestDescion = null;
+            // viewmodel.addCaseRequest != null
+            boolean viewmodelAddCaseRequestJavaLangObjectNull = false;
+            // viewmodel
+            te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddCaseRequest = viewmodel.getAddCaseRequest();
+
+                viewmodelAddCaseRequestJavaLangObjectNull = (viewmodelAddCaseRequest) != (null);
+                if (viewmodelAddCaseRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddCaseRequest.setDescion(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
     private androidx.databinding.InverseBindingListener mboundView6androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
@@ -247,7 +286,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     };
 
     public FragmentAddCaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private FragmentAddCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 10
@@ -274,10 +313,12 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         this.mboundView15.setTag(null);
         this.mboundView16 = (com.google.android.material.textfield.TextInputEditText) bindings[16];
         this.mboundView16.setTag(null);
-        this.mboundView17 = (android.widget.ProgressBar) bindings[17];
+        this.mboundView17 = (com.google.android.material.textfield.TextInputEditText) bindings[17];
         this.mboundView17.setTag(null);
-        this.mboundView18 = (androidx.appcompat.widget.AppCompatButton) bindings[18];
+        this.mboundView18 = (android.widget.ProgressBar) bindings[18];
         this.mboundView18.setTag(null);
+        this.mboundView19 = (androidx.appcompat.widget.AppCompatButton) bindings[19];
+        this.mboundView19.setTag(null);
         this.mboundView3 = (com.google.android.material.textfield.TextInputLayout) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView5 = (com.google.android.material.textfield.TextInputLayout) bindings[5];
@@ -292,10 +333,10 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         this.mboundView9.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback56 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback55 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback56 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -491,6 +532,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestCatError = null;
         java.lang.String viewmodelAddCaseRequestCourtErrorGet = null;
         java.lang.String viewmodelAddCaseRequestMokelErrorGet = null;
+        java.lang.String viewmodelAddCaseRequestDescion = null;
         java.lang.String viewmodelAddCaseRequestCircleNum = null;
         te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
 
@@ -561,6 +603,8 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestInventationType = viewmodelAddCaseRequest.getInventation_type();
                             // read viewmodel.addCaseRequest.first_session_date
                             viewmodelAddCaseRequestFirstSessionDate = viewmodelAddCaseRequest.getFirst_session_date();
+                            // read viewmodel.addCaseRequest.descion
+                            viewmodelAddCaseRequestDescion = viewmodelAddCaseRequest.getDescion();
                             // read viewmodel.addCaseRequest.circle_num
                             viewmodelAddCaseRequestCircleNum = viewmodelAddCaseRequest.getCircle_num();
                         }
@@ -683,13 +727,14 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         if ((dirtyFlags & 0x400L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback55);
-            this.inputClients.setOnClickListener(mCallback53);
-            this.inputKhesm.setOnClickListener(mCallback54);
+            this.inputCat.setOnClickListener(mCallback57);
+            this.inputClients.setOnClickListener(mCallback55);
+            this.inputKhesm.setOnClickListener(mCallback56);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
-            this.mboundView18.setOnClickListener(mCallback56);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView17, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView17androidTextAttrChanged);
+            this.mboundView19.setOnClickListener(mCallback58);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
@@ -704,6 +749,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddCaseRequestFirstSessionDate);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView12, viewmodelAddCaseRequestCourt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView16, viewmodelAddCaseRequestInventationType);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView17, viewmodelAddCaseRequestDescion);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddCaseRequestCircleNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddCaseRequestInvetationNum);
         }
@@ -725,8 +771,8 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         if ((dirtyFlags & 0x601L) != 0) {
             // api target 1
 
-            this.mboundView17.setVisibility(viewmodelLoaderBooleanFalseViewGONEViewVISIBLE);
-            this.mboundView18.setVisibility(viewmodelLoaderBooleanTrueViewGONEViewVISIBLE);
+            this.mboundView18.setVisibility(viewmodelLoaderBooleanFalseViewGONEViewVISIBLE);
+            this.mboundView19.setVisibility(viewmodelLoaderBooleanTrueViewGONEViewVISIBLE);
         }
         if ((dirtyFlags & 0x608L) != 0) {
             // api target 1
@@ -753,6 +799,44 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -784,44 +868,6 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
 
 
                     viewmodel.createCase();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
                 }
                 break;
             }

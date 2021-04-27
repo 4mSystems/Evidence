@@ -43,11 +43,18 @@ import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddCaseFragment_MembersInjector;
+import te.app.evidence.pages.cases.CaseDetailsFragment;
+import te.app.evidence.pages.cases.CaseDetailsFragment_MembersInjector;
+import te.app.evidence.pages.cases.CasesFragment;
+import te.app.evidence.pages.cases.CasesFragment_MembersInjector;
 import te.app.evidence.pages.cases.SearchClientsFragment;
 import te.app.evidence.pages.cases.SearchClientsFragment_MembersInjector;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_Factory;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_MembersInjector;
+import te.app.evidence.pages.cases.viewModels.CasesViewModel;
+import te.app.evidence.pages.cases.viewModels.CasesViewModel_Factory;
+import te.app.evidence.pages.cases.viewModels.CasesViewModel_MembersInjector;
 import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel;
 import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel_Factory;
 import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel_MembersInjector;
@@ -268,6 +275,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectSearchClientsViewModel(SearchClientsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
+  private CasesViewModel casesViewModel() {
+    return injectCasesViewModel(CasesViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -411,6 +422,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(SearchClientsFragment searchClientsFragment) {
     injectSearchClientsFragment(searchClientsFragment);
+  }
+
+  @Override
+  public void inject(CasesFragment casesFragment) {
+    injectCasesFragment(casesFragment);
+  }
+
+  @Override
+  public void inject(CaseDetailsFragment caseDetailsFragment) {
+    injectCaseDetailsFragment(caseDetailsFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -643,6 +664,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private SearchClientsFragment injectSearchClientsFragment(SearchClientsFragment instance) {
     SearchClientsFragment_MembersInjector.injectViewModel(instance, searchClientsViewModel());
+    return instance;
+  }
+
+  private CasesViewModel injectCasesViewModel(CasesViewModel instance) {
+    CasesViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private CasesFragment injectCasesFragment(CasesFragment instance) {
+    CasesFragment_MembersInjector.injectViewModel(instance, casesViewModel());
+    return instance;
+  }
+
+  private CaseDetailsFragment injectCaseDetailsFragment(CaseDetailsFragment instance) {
+    CaseDetailsFragment_MembersInjector.injectViewModel(instance, casesViewModel());
     return instance;
   }
 

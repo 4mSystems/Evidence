@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,10 +77,7 @@ public class ClientProfileFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CLIENT_PROFILE.equals(((Mutable) o).message)) {
-                viewModel.getNotesAdapter().update(((ClientProfileResponse) mutable.object).getClientProfileData().getClientNotes());
-                viewModel.getClientCasesAdapter().update(((ClientProfileResponse) mutable.object).getClientProfileData().getCases());
-                viewModel.notifyChange(BR.notesAdapter);
-                viewModel.notifyChange(BR.clientCasesAdapter);
+                viewModel.setClientProfileData(((ClientProfileResponse) mutable.object).getClientProfileData());
             } else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
                 viewModel.getNotesAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getClients().getClientId()), getString(R.string.add_new_note), AddNoteFragment.class.getName(), null);
@@ -87,6 +86,17 @@ public class ClientProfileFragment extends BaseFragment {
                 viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);
                 viewModel.getNotesAdapter().notifyItemRemoved(viewModel.getNotesAdapter().lastSelected);
                 deleteDialog.dismiss();
+            } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
+                binding.progressBarHome.setVisibility(View.VISIBLE);
+                new Handler(Looper.getMainLooper()).postDelayed(() -> {
+                    binding.progressBarHome.setVisibility(View.GONE);
+                    if (viewModel.getSelectedBtn() == 0)
+                        viewModel.getNotesAdapter().update(viewModel.getClientProfileData().getClientNotes());
+                    else if (viewModel.getSelectedBtn() == 1)
+                        viewModel.getClientCasesAdapter().update(viewModel.getClientProfileData().getCases());
+                    viewModel.notifyChange(BR.notesAdapter);
+                    viewModel.notifyChange(BR.clientCasesAdapter);
+                }, 1000);
             }
 
         });

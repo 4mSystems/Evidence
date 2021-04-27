@@ -1,16 +1,20 @@
 package te.app.evidence.base;
 
+import android.annotation.TargetApi;
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,8 +52,8 @@ public class ParentActivity extends AppCompatActivity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         super.onCreate(savedInstanceState);
+        setStatusBarGradiant(this);
         ConnectionLiveData = new MutableLiveData<>();
         initializeLanguage();
         initializeToken();
@@ -57,6 +61,15 @@ public class ParentActivity extends AppCompatActivity implements
 
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void setStatusBarGradiant(Activity activity) {
+        Window window = activity.getWindow();
+        Drawable background = ResourceManager.getDrawable(R.drawable.corner_view_gradient_toolbar);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.setStatusBarColor(activity.getResources().getColor(android.R.color.transparent));
+        window.setNavigationBarColor(activity.getResources().getColor(android.R.color.transparent));
+        window.setBackgroundDrawable(background);
+    }
 
     protected boolean notification_checked = false;
 

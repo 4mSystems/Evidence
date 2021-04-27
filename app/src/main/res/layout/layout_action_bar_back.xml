@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/corner_view_gradient_toolbar"
         android:elevation="@dimen/dp8h"
         android:minHeight="?attr/actionBarSize">
 

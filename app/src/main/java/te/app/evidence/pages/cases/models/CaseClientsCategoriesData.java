@@ -1,5 +1,7 @@
 package te.app.evidence.pages.cases.models;
 
+import android.util.Log;
+
 import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
@@ -32,6 +34,8 @@ public class CaseClientsCategoriesData {
     }
 
     public void setKhesm(List<Clients> khesm) {
+        if (khesm != null)
+            Log.e("setKhesm", "setKhesm: " + khesm.size());
         this.khesm = khesm;
     }
 

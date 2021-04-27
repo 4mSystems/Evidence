@@ -22,9 +22,9 @@ public class AddCaseRequest {
     private String descion;
     @SerializedName("to_whome")
     private String to_whome;
-    @SerializedName("mokel_Name")
+    @SerializedName("mokel_Names")
     private List<Integer> mokel_Name;
-    @SerializedName("khesm_Name")
+    @SerializedName("khesm_Names")
     private List<Integer> khesm_Name;
     @SerializedName("court")
     private String court;

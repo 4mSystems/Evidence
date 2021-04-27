@@ -393,8 +393,8 @@
     <string name="client_unit">الوحدة</string>
     <string name="client_address">العنوان</string>
     <string name="client_note">الملاحظة</string>
-    <string name="client_profile">بروفايل</string>
-    <string name="attachments">الملاحقات</string>
+    <string name="client_profile"> بروفايل العميل</string>
+    <string name="attachments">الملحقات</string>
     <string name="client_search_hint">ابحث عن العميل بالإسم</string>
     <string name="client_name">إسم العميل</string>
     <string name="add_new_client">إضافة عميل</string>
@@ -422,7 +422,7 @@
     <string name="user">User</string>
     <string name="edit_user">Edit user</string>
     <string name="add_case">إضافة دعوى</string>
-    <string name="search_case">Search case</string>
+    <string name="search_case">البحث عن دعوى</string>
     <string name="cat_search_hint">Looking for category ?</string>
     <string name="edit_category">Edit category</string>
     <string name="status_done">Done</string>
@@ -435,5 +435,10 @@
     <string name="client_unselected">إضغط لرؤية العملاء</string>
     <string name="khesm_selected">تم إختيار الخصوم</string>
     <string name="khesm_unselected">إضغط لإختيار الخصوم</string>
+    <string name="descion">القرار</string>
+    <string name="public_info">نظرة عامة</string>
+    <string name="print">طباعة</string>
+    <string name="case_details">تفاصيل الدعوى</string>
+    <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
 
 </resources>

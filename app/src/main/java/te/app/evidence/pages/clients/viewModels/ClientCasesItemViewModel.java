@@ -3,8 +3,7 @@ package te.app.evidence.pages.clients.viewModels;
 import androidx.databinding.Bindable;
 
 import te.app.evidence.base.BaseViewModel;
-import te.app.evidence.pages.clients.models.Clients;
-import te.app.evidence.pages.clients.models.clientProfile.Cases;
+import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.utils.Constants;
 
 public class ClientCasesItemViewModel extends BaseViewModel {
@@ -27,8 +26,8 @@ public class ClientCasesItemViewModel extends BaseViewModel {
         getLiveData().setValue(Constants.DELETE);
     }
 
-    public void toClientProfile() {
-        getLiveData().setValue(Constants.CLIENT_PROFILE);
+    public void itemAction() {
+        getLiveData().setValue(Constants.CASE_DETAILS);
     }
 
 }

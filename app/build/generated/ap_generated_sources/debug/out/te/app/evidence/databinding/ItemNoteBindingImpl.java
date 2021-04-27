@@ -14,21 +14,17 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_clients_header, 6);
-        sViewsWithIds.put(R.id.icon_down_qu, 7);
-        sViewsWithIds.put(R.id.v1, 8);
-        sViewsWithIds.put(R.id.expansionLayoutClients, 9);
-        sViewsWithIds.put(R.id.unit_text, 10);
-        sViewsWithIds.put(R.id.v3, 11);
-        sViewsWithIds.put(R.id.client_note_text, 12);
-        sViewsWithIds.put(R.id.v4, 13);
+        sViewsWithIds.put(R.id.unit_text, 5);
+        sViewsWithIds.put(R.id.v3, 6);
+        sViewsWithIds.put(R.id.client_note_text, 7);
+        sViewsWithIds.put(R.id.v4, 8);
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
     private final android.view.View.OnClickListener mCallback31;
     // values
@@ -36,35 +32,29 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     // Inverse Binding Event Handlers
 
     public ItemNoteBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private ItemNoteBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[9]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
+            , (android.view.View) bindings[6]
             , (android.view.View) bindings[8]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[13]
             );
         this.clientNoteValue.setTag(null);
         this.delete.setTag(null);
         this.edit.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
-        this.tvEmpName.setTag(null);
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,13 +129,10 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.auth.models.UserData itemViewModelNotesUser = null;
         java.lang.String itemViewModelNotesNotes = null;
-        java.lang.String javaLangStringConcatStringValueOfItemViewModelNotesId = null;
         java.lang.String itemViewModelNotesUserName = null;
-        te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
-        java.lang.String stringValueOfItemViewModelNotesId = null;
-        int itemViewModelNotesId = 0;
         te.app.evidence.pages.notes.models.Notes itemViewModelNotes = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -163,8 +150,6 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
                     itemViewModelNotesUser = itemViewModelNotes.getUser();
                     // read itemViewModel.notes.notes
                     itemViewModelNotesNotes = itemViewModelNotes.getNotes();
-                    // read itemViewModel.notes.id
-                    itemViewModelNotesId = itemViewModelNotes.getId();
                 }
 
 
@@ -172,49 +157,25 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
                     // read itemViewModel.notes.user.name
                     itemViewModelNotesUserName = itemViewModelNotesUser.getName();
                 }
-                // read String.valueOf(itemViewModel.notes.id)
-                stringValueOfItemViewModelNotesId = java.lang.String.valueOf(itemViewModelNotesId);
-
-
-                // read "#".concat(String.valueOf(itemViewModel.notes.id))
-                javaLangStringConcatStringValueOfItemViewModelNotesId = "#".concat(stringValueOfItemViewModelNotesId);
         }
         // batch finished
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientNoteValue, itemViewModelNotesNotes);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvEmpName, javaLangStringConcatStringValueOfItemViewModelNotesId);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.unitValue, itemViewModelNotesUserName);
         }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback30);
-            this.edit.setOnClickListener(mCallback31);
+            this.delete.setOnClickListener(mCallback31);
+            this.edit.setOnClickListener(mCallback32);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toDelete();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -229,6 +190,23 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
 
 
                     itemViewModel.toEdit();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
                 }
                 break;
             }

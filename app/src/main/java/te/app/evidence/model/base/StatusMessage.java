@@ -13,6 +13,9 @@ public class StatusMessage {
     @SerializedName("status")
     @Expose
     public int code;
+    @SerializedName("code")
+    @Expose
+    public int codes;
 
 
 }

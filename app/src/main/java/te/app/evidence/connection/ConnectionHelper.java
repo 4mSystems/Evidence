@@ -202,7 +202,7 @@ public class ConnectionHelper {
                         Log.e(TAG, "onNext: " + response);
                         try {
                             StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
-                            if (statusMessage.code == Constants.RESPONSE_SUCCESS)
+                            if (statusMessage.code == Constants.RESPONSE_SUCCESS || statusMessage.codes == Constants.RESPONSE_SUCCESS)
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
                                 liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));

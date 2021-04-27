@@ -438,5 +438,10 @@
     <string name="client_unselected">إضغط لرؤية العملاء</string>
     <string name="khesm_selected">تم إختيار الخصوم, للتعديل اضغط هنا</string>
     <string name="khesm_unselected">إضغط لإختيار الخصوم</string>
+    <string name="descion">القرار</string>
+    <string name="public_info">نظرة عامة</string>
+    <string name="print">طباعة</string>
+    <string name="case_details">تفاصيل الدعوى</string>
+    <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
 
 </resources>

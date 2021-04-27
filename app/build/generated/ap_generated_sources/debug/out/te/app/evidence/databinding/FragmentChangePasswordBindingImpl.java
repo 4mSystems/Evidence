@@ -30,7 +30,7 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     private final android.widget.ImageView mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback27;
     @Nullable
     private final android.view.View.OnClickListener mCallback26;
     // values
@@ -137,8 +137,8 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -233,10 +233,10 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback26);
+            this.appCompatButtonNext.setOnClickListener(mCallback27);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
             te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
-            this.mboundView1.setOnClickListener(mCallback25);
+            this.mboundView1.setOnClickListener(mCallback26);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -249,6 +249,23 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.submit();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -264,23 +281,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
                     viewmodel.goBack(getRoot().getContext());
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.submit();
                 }
                 break;
             }

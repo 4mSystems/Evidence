@@ -289,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/notes"
+                android:text="@string/descion"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintStart_toStartOf="parent"
@@ -299,19 +299,21 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
+                android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp6w">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/dp100h"
                     android:gravity="top"
-                    android:hint="@string/notes"
-                    android:inputType="text"
+                    android:hint="@string/descion"
+                    android:inputType="textMultiLine"
+                    android:text="@={viewmodel.addCaseRequest.descion}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <ProgressBar
                 android:layout_width="wrap_content"

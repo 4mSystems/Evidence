@@ -17,6 +17,7 @@ import te.app.evidence.customViews.actionbar.HomeActionBarView;
 import te.app.evidence.databinding.LayoutNavigationDrawerBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.AddCaseFragment;
+import te.app.evidence.pages.cases.CasesFragment;
 import te.app.evidence.pages.categories.CategoriesFragment;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
@@ -82,6 +83,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, CategoriesFragment.class.getName(), ResourceManager.getString(R.string.menuCat), null);
             } else if (o.equals(Constants.ADD_CASE)) {
                 MovementHelper.startActivity(context, AddCaseFragment.class.getName(), ResourceManager.getString(R.string.add_case), null);
+            } else if (o.equals(Constants.ALL_CASES)) {
+                MovementHelper.startActivity(context, CasesFragment.class.getName(), ResourceManager.getString(R.string.search_case), null);
             } else if (o.equals(Constants.GET_MOHDAREEN)) {
                 MovementHelper.startActivity(context, BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
             } else if (o.equals(Constants.LANGUAGE)) {

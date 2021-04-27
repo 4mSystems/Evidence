@@ -20,7 +20,7 @@ public class ItemClientSearchBindingImpl extends ItemClientSearchBinding impleme
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback32;
+    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback33;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,7 +37,7 @@ public class ItemClientSearchBindingImpl extends ItemClientSearchBinding impleme
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback32 = new te.app.evidence.generated.callback.OnCheckedChangeListener(this, 1);
+        mCallback33 = new te.app.evidence.generated.callback.OnCheckedChangeListener(this, 1);
         invalidateAll();
     }
 
@@ -144,7 +144,7 @@ public class ItemClientSearchBindingImpl extends ItemClientSearchBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback32, (androidx.databinding.InverseBindingListener)null);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback33, (androidx.databinding.InverseBindingListener)null);
         }
     }
     // Listener Stub Implementations

@@ -296,6 +296,15 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/br4"
                     app:startIconDrawable="@drawable/ic_search" />
+                <ProgressBar
+                    android:id="@+id/progress_bar_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15h"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/input_search" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rc_notes"
@@ -305,7 +314,7 @@
                     android:visibility="@{viewmodel.selectedBtn==0?View.VISIBLE:View.GONE,default=gone}"
                     app:adapter="@{viewmodel.notesAdapter}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@+id/input_search"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_home"
                     app:orientation="@{`1`}"
                     app:span="@{`1`}"
                     tools:listitem="@layout/item_note" />
@@ -317,7 +326,7 @@
                     android:visibility="@{viewmodel.selectedBtn==1?View.VISIBLE:View.GONE,default=gone}"
                     app:adapter="@{viewmodel.clientCasesAdapter}"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@+id/input_search"
+                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_home"
                     app:orientation="@{`1`}"
                     app:span="@{`1`}"
                     tools:listitem="@layout/item_case" />

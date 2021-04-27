@@ -4,6 +4,7 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -65,6 +66,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
   public final TextInputEditText inputSearch;
 
   @NonNull
+  public final ProgressBar progressBarHome;
+
+  @NonNull
   public final RecyclerView rcNotes;
 
   @NonNull
@@ -98,9 +102,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
       CustomTextViewRegular clientNameText, CustomTextViewRegular clientNameValue,
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
       AppCompatButton clientNotes, CustomTextViewRegular clientTypeText,
-      CustomTextViewRegular clientTypeValue, TextInputEditText inputSearch, RecyclerView rcNotes,
-      CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v2, View v3, View v4,
-      View v5, View v6) {
+      CustomTextViewRegular clientTypeValue, TextInputEditText inputSearch,
+      ProgressBar progressBarHome, RecyclerView rcNotes, CustomTextViewRegular unitText,
+      CustomTextViewRegular unitValue, View v2, View v3, View v4, View v5, View v6) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br4 = br4;
     this.clientAddressText = clientAddressText;
@@ -116,6 +120,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
     this.clientTypeText = clientTypeText;
     this.clientTypeValue = clientTypeValue;
     this.inputSearch = inputSearch;
+    this.progressBarHome = progressBarHome;
     this.rcNotes = rcNotes;
     this.unitText = unitText;
     this.unitValue = unitValue;

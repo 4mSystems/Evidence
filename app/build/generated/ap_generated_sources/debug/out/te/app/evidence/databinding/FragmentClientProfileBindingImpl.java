@@ -28,6 +28,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         sViewsWithIds.put(R.id.v4, 22);
         sViewsWithIds.put(R.id.br4, 23);
         sViewsWithIds.put(R.id.input_search, 24);
+        sViewsWithIds.put(R.id.progress_bar_home, 25);
     }
     // views
     @NonNull
@@ -38,17 +39,17 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
     private final android.view.View.OnClickListener mCallback48;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback49;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentClientProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 25, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 26, sIncludes, sViewsWithIds));
     }
     private FragmentClientProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -66,6 +67,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
             , (com.google.android.material.textfield.TextInputEditText) bindings[24]
+            , (android.widget.ProgressBar) bindings[25]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
@@ -91,9 +93,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -307,9 +309,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback47);
-            this.clientNotes.setOnClickListener(mCallback46);
-            this.mboundView10.setOnClickListener(mCallback48);
+            this.clientCases.setOnClickListener(mCallback49);
+            this.clientNotes.setOnClickListener(mCallback48);
+            this.mboundView10.setOnClickListener(mCallback50);
         }
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
@@ -326,23 +328,6 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.cases();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -374,6 +359,23 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
 
 
                     viewmodel.notes();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.cases();
                 }
                 break;
             }

@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemCaseBindingImpl extends ItemCaseBinding  {
+public class ItemCaseBindingImpl extends ItemCaseBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,10 +14,8 @@ public class ItemCaseBindingImpl extends ItemCaseBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 6);
-        sViewsWithIds.put(R.id.icon_down_qu, 7);
-        sViewsWithIds.put(R.id.v1, 8);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 9);
+        sViewsWithIds.put(R.id.tv_invetationNum_text, 8);
+        sViewsWithIds.put(R.id.v1, 9);
         sViewsWithIds.put(R.id.court_text, 10);
         sViewsWithIds.put(R.id.v2, 11);
         sViewsWithIds.put(R.id.paper_type_text, 12);
@@ -27,56 +25,55 @@ public class ItemCaseBindingImpl extends ItemCaseBinding  {
         sViewsWithIds.put(R.id.session_date_text, 16);
         sViewsWithIds.put(R.id.v7, 17);
         sViewsWithIds.put(R.id.status_text, 18);
-        sViewsWithIds.put(R.id.status_value, 19);
-        sViewsWithIds.put(R.id.v4, 20);
-        sViewsWithIds.put(R.id.view_value, 21);
-        sViewsWithIds.put(R.id.v5, 22);
+        sViewsWithIds.put(R.id.v4, 19);
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback24;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemCaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private ItemCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[9]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[19]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (android.view.View) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (android.view.View) bindings[9]
             , (android.view.View) bindings[11]
             , (android.view.View) bindings[13]
-            , (android.view.View) bindings[20]
-            , (android.view.View) bindings[22]
+            , (android.view.View) bindings[19]
             , (android.view.View) bindings[15]
             , (android.view.View) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             );
         this.courtValue.setTag(null);
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.paperNumberValue.setTag(null);
         this.paperTypeValue.setTag(null);
         this.sessionMonthValue.setTag(null);
+        this.statusValue.setTag(null);
         this.tvInvetationNum.setTag(null);
+        this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -152,9 +149,11 @@ public class ItemCaseBindingImpl extends ItemCaseBinding  {
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelCasesCourt = null;
-        te.app.evidence.pages.clients.models.clientProfile.Cases itemViewModelCases = null;
+        te.app.evidence.pages.cases.models.cases.Cases itemViewModelCases = null;
         java.lang.String itemViewModelCasesInvetationNum = null;
         java.lang.String itemViewModelCasesCircleNum = null;
+        java.lang.String itemViewModelCasesCategoryName = null;
+        te.app.evidence.pages.clients.models.Category itemViewModelCasesCategory = null;
         te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelCasesFirstSessionDate = null;
         java.lang.String itemViewModelCasesInventationType = null;
@@ -176,10 +175,18 @@ public class ItemCaseBindingImpl extends ItemCaseBinding  {
                     itemViewModelCasesInvetationNum = itemViewModelCases.getInvetationNum();
                     // read itemViewModel.cases.circleNum
                     itemViewModelCasesCircleNum = itemViewModelCases.getCircleNum();
+                    // read itemViewModel.cases.category
+                    itemViewModelCasesCategory = itemViewModelCases.getCategory();
                     // read itemViewModel.cases.firstSessionDate
                     itemViewModelCasesFirstSessionDate = itemViewModelCases.getFirstSessionDate();
                     // read itemViewModel.cases.inventationType
                     itemViewModelCasesInventationType = itemViewModelCases.getInventationType();
+                }
+
+
+                if (itemViewModelCasesCategory != null) {
+                    // read itemViewModel.cases.category.name
+                    itemViewModelCasesCategoryName = itemViewModelCasesCategory.getName();
                 }
         }
         // batch finished
@@ -190,11 +197,33 @@ public class ItemCaseBindingImpl extends ItemCaseBinding  {
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperNumberValue, itemViewModelCasesCourt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperTypeValue, itemViewModelCasesCircleNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelCasesFirstSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelCasesCategoryName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvInvetationNum, itemViewModelCasesInvetationNum);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.viewValue.setOnClickListener(mCallback24);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // itemViewModel
+        te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
+        // itemViewModel != null
+        boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+        itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+        if (itemViewModelJavaLangObjectNull) {
+
+
+            itemViewModel.itemAction();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

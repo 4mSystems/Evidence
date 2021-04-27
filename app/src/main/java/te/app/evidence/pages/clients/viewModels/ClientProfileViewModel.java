@@ -12,6 +12,7 @@ import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.clients.adapters.ClientCasesAdapter;
 import te.app.evidence.pages.clients.models.Clients;
+import te.app.evidence.pages.clients.models.clientProfile.ClientProfileData;
 import te.app.evidence.pages.notes.NotesAdapter;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.utils.Constants;
@@ -26,9 +27,11 @@ public class ClientProfileViewModel extends BaseViewModel {
     ClientsRepository clientsRepository;
     NotesAdapter notesAdapter;
     ClientCasesAdapter clientCasesAdapter;
+    ClientProfileData clientProfileData;
 
     @Inject
     public ClientProfileViewModel(ClientsRepository clientsRepository) {
+        clientProfileData = new ClientProfileData();
         this.clientsRepository = clientsRepository;
         this.liveData = new MutableLiveData<>();
         clientsRepository.setLiveData(liveData);
@@ -75,6 +78,20 @@ public class ClientProfileViewModel extends BaseViewModel {
     public void setSelectedBtn(int selectedBtn) {
         notifyChange(BR.selectedBtn);
         this.selectedBtn = selectedBtn;
+        liveData.setValue(new Mutable(Constants.LOOPER));
+    }
+
+    @Bindable
+    public ClientProfileData getClientProfileData() {
+        return clientProfileData;
+    }
+
+    @Bindable
+    public void setClientProfileData(ClientProfileData clientProfileData) {
+        getNotesAdapter().update(clientProfileData.getClientNotes());
+        notifyChange(BR.notesAdapter);
+        notifyChange(BR.clientProfileData);
+        this.clientProfileData = clientProfileData;
     }
 
     @Bindable

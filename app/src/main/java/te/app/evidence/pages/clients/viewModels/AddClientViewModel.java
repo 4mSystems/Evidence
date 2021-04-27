@@ -86,7 +86,7 @@ public class AddClientViewModel extends BaseViewModel {
             getAddClientRequest().setClient_Address(clients.getClientAddress());
             getAddClientRequest().setType(clients.getType().equals(ResourceManager.getString(R.string.client)) ? "client" : "khesm");
             getAddClientRequest().setNotes(clients.getNotes());
-            getAddClientRequest().setClient_id(String.valueOf(clients.getId()));
+            getAddClientRequest().setClient_id(String.valueOf(clients.getClientId()));
         }
         notifyChange(BR.clients);
         this.clients = clients;

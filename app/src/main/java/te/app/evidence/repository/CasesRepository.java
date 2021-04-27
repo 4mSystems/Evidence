@@ -9,7 +9,11 @@ import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.cases.models.AddCaseRequest;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
+import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
+import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
+import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
@@ -58,4 +62,20 @@ public class CasesRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REPORTER_DETAILS + mohId, new Object(), ReporterDetailsResponse.class,
                 Constants.REPOTERS, true);
     }
+
+    public Disposable createCase(AddCaseRequest addCaseRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CASE, addCaseRequest, AddCaseResponse.class,
+                Constants.ADD_CASE, true);
+    }
+
+    public Disposable allCases() {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ALL_CASES, new Object(), AllCasesResponse.class,
+                Constants.ALL_CASES, true);
+    }
+
+    public Disposable caseDetails(int caseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_DETAILS + caseId, new Object(), CaseDetailsResponse.class,
+                Constants.CASE_DETAILS, true);
+    }
+
 }

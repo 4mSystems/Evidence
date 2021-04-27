@@ -3028,6 +3028,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable corner_view_gradient
+drawable corner_view_gradient_toolbar
 drawable corner_view_gray_background
 drawable corner_view_gray_border
 drawable corner_view_light
@@ -3038,6 +3039,7 @@ drawable corner_view_primary_dark_code
 drawable corner_view_primary_dark_home
 drawable corner_view_primary_gray
 drawable corner_view_primary_yellow
+drawable corner_view_primary_yellow_top
 drawable corner_view_top
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
@@ -3302,6 +3304,7 @@ id client_notes
 id client_type
 id client_type_text
 id client_type_value
+id clients
 id clip_horizontal
 id clip_vertical
 id clockwise
@@ -3375,7 +3378,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id expansionLayoutCases
-id expansionLayoutClients
 id expansionLayoutReports
 id expansionLayoutSessions
 id fab_label
@@ -3462,13 +3464,13 @@ id iv_auto_image_slider
 id iv_photo
 id jumpToEnd
 id jumpToStart
+id khesm
 id label
 id labelGroup
 id labeled
 id largeLabel
 id layout
 id layout_cases_header
-id layout_clients_header
 id layout_reports_header
 id layout_session_header
 id left
@@ -3753,12 +3755,12 @@ id tv_change_new_password
 id tv_change_title
 id tv_confirm_title
 id tv_confirm_title_2
-id tv_emp_name
 id tv_forget_remember
 id tv_forget_timer
 id tv_forget_title
 id tv_home_bar_text
 id tv_invetationNum
+id tv_invetationNum_text
 id tv_login_forget
 id tv_login_header_number
 id tv_login_title
@@ -3904,6 +3906,8 @@ layout fragment_add_note
 layout fragment_add_user
 layout fragment_attachments
 layout fragment_bailiffs
+layout fragment_case_details
+layout fragment_cases
 layout fragment_categories
 layout fragment_change_password
 layout fragment_client_profile
@@ -4147,6 +4151,7 @@ string car_plate_chars_hint
 string car_plate_numbers_hint
 string car_type
 string car_type_hint
+string case_details
 string case_number
 string cash
 string cat_name
@@ -4229,6 +4234,7 @@ string delete_warning
 string delivery_Cost
 string delivery_cost_send
 string delivery_vat_total_text
+string descion
 string design_program
 string dialog_upload_docs
 string diff_locations
@@ -4240,6 +4246,7 @@ string done
 string donot_have_account
 string driver_location_url
 string edit
+string edit_add_attachments
 string edit_category
 string edit_client
 string edit_details
@@ -4492,9 +4499,11 @@ string price_high_low
 string price_hint
 string price_low_high
 string price_required
+string print
 string privacy
 string profile_edit
 string project_id
+string public_info
 string rate
 string real_estate_certificate
 string realtor

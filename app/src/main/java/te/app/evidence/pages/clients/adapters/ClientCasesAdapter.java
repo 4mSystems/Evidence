@@ -19,9 +19,10 @@ import java.util.List;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemCaseBinding;
+import te.app.evidence.pages.cases.CaseDetailsFragment;
 import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
-import te.app.evidence.pages.clients.models.clientProfile.Cases;
+import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -61,6 +62,8 @@ public class ClientCasesAdapter extends RecyclerView.Adapter<ClientCasesAdapter.
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.edit_client), AddClientFragment.class.getName(), null);
             } else if (o.equals(Constants.CLIENT_PROFILE)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.client_profile), ClientProfileFragment.class.getName(), null);
+            } else if (o.equals(Constants.CASE_DETAILS)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getId()), ResourceManager.getString(R.string.case_details), CaseDetailsFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {
                 actionLiveData.setValue(o);
             }

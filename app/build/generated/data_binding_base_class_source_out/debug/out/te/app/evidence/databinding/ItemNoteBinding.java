@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -33,25 +30,10 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
   public final CustomTextViewRegular edit;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutClients;
-
-  @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutClientsHeader;
-
-  @NonNull
-  public final CustomTextViewMedium tvEmpName;
-
-  @NonNull
-  public final CustomTextViewRegular unitText;
+  public final CustomTextViewMedium unitText;
 
   @NonNull
   public final CustomTextViewRegular unitValue;
-
-  @NonNull
-  public final View v1;
 
   @NonNull
   public final View v3;
@@ -64,22 +46,15 @@ public abstract class ItemNoteBinding extends ViewDataBinding {
 
   protected ItemNoteBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
-      CustomTextViewRegular delete, CustomTextViewRegular edit,
-      ExpansionLayout expansionLayoutClients, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutClientsHeader, CustomTextViewMedium tvEmpName,
-      CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v1, View v3, View v4) {
+      CustomTextViewRegular delete, CustomTextViewRegular edit, CustomTextViewMedium unitText,
+      CustomTextViewRegular unitValue, View v3, View v4) {
     super(_bindingComponent, _root, _localFieldCount);
     this.clientNoteText = clientNoteText;
     this.clientNoteValue = clientNoteValue;
     this.delete = delete;
     this.edit = edit;
-    this.expansionLayoutClients = expansionLayoutClients;
-    this.iconDownQu = iconDownQu;
-    this.layoutClientsHeader = layoutClientsHeader;
-    this.tvEmpName = tvEmpName;
     this.unitText = unitText;
     this.unitValue = unitValue;
-    this.v1 = v1;
     this.v3 = v3;
     this.v4 = v4;
   }

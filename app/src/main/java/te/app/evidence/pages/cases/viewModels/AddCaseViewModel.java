@@ -4,6 +4,9 @@ import androidx.databinding.Bindable;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -24,7 +27,6 @@ public class AddCaseViewModel extends BaseViewModel {
     CasesRepository casesRepository;
     AddCaseRequest addCaseRequest;
     CaseClientsCategoriesData caseClientsCategoriesData;
-    InputTagClientsAdapter tagClientsAdapter;
     public ObservableField<Boolean> loader = new ObservableField<>();
 
     @Inject
@@ -41,8 +43,21 @@ public class AddCaseViewModel extends BaseViewModel {
     }
 
     public void createCase() {
+        List<Integer> clientList = new ArrayList<>();
+        List<Integer> khesmList = new ArrayList<>();
         if (getAddCaseRequest().isValid()) {
             loader.set(true);
+            for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
+                if (getCaseClientsCategoriesData().getClients().get(i).isChecked())
+                    clientList.add(getCaseClientsCategoriesData().getClients().get(i).getClientId());
+            }
+            for (int i = 0; i < getCaseClientsCategoriesData().getKhesm().size(); i++) {
+                if (getCaseClientsCategoriesData().getKhesm().get(i).isChecked())
+                    khesmList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientId());
+            }
+            getAddCaseRequest().setMokel_Name(clientList);
+            getAddCaseRequest().setKhesm_Name(khesmList);
+            compositeDisposable.add(casesRepository.createCase(getAddCaseRequest()));
         }
     }
 
@@ -65,11 +80,6 @@ public class AddCaseViewModel extends BaseViewModel {
         return caseClientsCategoriesData;
     }
 
-    @Bindable
-    public InputTagClientsAdapter getTagClientsAdapter() {
-        return this.tagClientsAdapter == null ? this.tagClientsAdapter = new InputTagClientsAdapter() : this.tagClientsAdapter;
-    }
-
     public CasesRepository getCasesRepository() {
         return casesRepository;
     }
@@ -77,6 +87,7 @@ public class AddCaseViewModel extends BaseViewModel {
     public AddCaseRequest getAddCaseRequest() {
         return addCaseRequest;
     }
+
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {

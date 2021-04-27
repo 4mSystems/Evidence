@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -21,46 +18,40 @@ import te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel;
 
 public abstract class ItemCaseBinding extends ViewDataBinding {
   @NonNull
-  public final CustomTextViewRegular courtText;
+  public final CustomTextViewMedium courtText;
 
   @NonNull
   public final CustomTextViewRegular courtValue;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutSessions;
-
-  @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutSessionHeader;
-
-  @NonNull
-  public final CustomTextViewRegular paperNumberText;
+  public final CustomTextViewMedium paperNumberText;
 
   @NonNull
   public final CustomTextViewRegular paperNumberValue;
 
   @NonNull
-  public final CustomTextViewRegular paperTypeText;
+  public final CustomTextViewMedium paperTypeText;
 
   @NonNull
   public final CustomTextViewRegular paperTypeValue;
 
   @NonNull
-  public final CustomTextViewRegular sessionDateText;
+  public final CustomTextViewMedium sessionDateText;
 
   @NonNull
   public final CustomTextViewRegular sessionMonthValue;
 
   @NonNull
-  public final CustomTextViewRegular statusText;
+  public final CustomTextViewMedium statusText;
 
   @NonNull
-  public final CustomTextViewMedium statusValue;
+  public final CustomTextViewRegular statusValue;
 
   @NonNull
-  public final CustomTextViewMedium tvInvetationNum;
+  public final CustomTextViewRegular tvInvetationNum;
+
+  @NonNull
+  public final CustomTextViewMedium tvInvetationNumText;
 
   @NonNull
   public final View v1;
@@ -75,9 +66,6 @@ public abstract class ItemCaseBinding extends ViewDataBinding {
   public final View v4;
 
   @NonNull
-  public final View v5;
-
-  @NonNull
   public final View v6;
 
   @NonNull
@@ -90,20 +78,16 @@ public abstract class ItemCaseBinding extends ViewDataBinding {
   protected ClientCasesItemViewModel mItemViewModel;
 
   protected ItemCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular courtText, CustomTextViewRegular courtValue,
-      ExpansionLayout expansionLayoutSessions, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutSessionHeader, CustomTextViewRegular paperNumberText,
-      CustomTextViewRegular paperNumberValue, CustomTextViewRegular paperTypeText,
-      CustomTextViewRegular paperTypeValue, CustomTextViewRegular sessionDateText,
-      CustomTextViewRegular sessionMonthValue, CustomTextViewRegular statusText,
-      CustomTextViewMedium statusValue, CustomTextViewMedium tvInvetationNum, View v1, View v2,
-      View v3, View v4, View v5, View v6, View v7, CustomTextViewRegular viewValue) {
+      CustomTextViewMedium courtText, CustomTextViewRegular courtValue,
+      CustomTextViewMedium paperNumberText, CustomTextViewRegular paperNumberValue,
+      CustomTextViewMedium paperTypeText, CustomTextViewRegular paperTypeValue,
+      CustomTextViewMedium sessionDateText, CustomTextViewRegular sessionMonthValue,
+      CustomTextViewMedium statusText, CustomTextViewRegular statusValue,
+      CustomTextViewRegular tvInvetationNum, CustomTextViewMedium tvInvetationNumText, View v1,
+      View v2, View v3, View v4, View v6, View v7, CustomTextViewRegular viewValue) {
     super(_bindingComponent, _root, _localFieldCount);
     this.courtText = courtText;
     this.courtValue = courtValue;
-    this.expansionLayoutSessions = expansionLayoutSessions;
-    this.iconDownQu = iconDownQu;
-    this.layoutSessionHeader = layoutSessionHeader;
     this.paperNumberText = paperNumberText;
     this.paperNumberValue = paperNumberValue;
     this.paperTypeText = paperTypeText;
@@ -113,11 +97,11 @@ public abstract class ItemCaseBinding extends ViewDataBinding {
     this.statusText = statusText;
     this.statusValue = statusValue;
     this.tvInvetationNum = tvInvetationNum;
+    this.tvInvetationNumText = tvInvetationNumText;
     this.v1 = v1;
     this.v2 = v2;
     this.v3 = v3;
     this.v4 = v4;
-    this.v5 = v5;
     this.v6 = v6;
     this.v7 = v7;
     this.viewValue = viewValue;
