@@ -443,5 +443,6 @@
     <string name="print">طباعة</string>
     <string name="case_details">تفاصيل الدعوى</string>
     <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
+    <string name="edit_case">تعديل الدعوي</string>
 
 </resources>

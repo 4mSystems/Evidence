@@ -27,6 +27,7 @@
                 android:id="@+id/home_item1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorPrimary"
                 app:cardCornerRadius="@dimen/dp4h"
                 app:cardUseCompatPadding="true"
                 app:layout_constraintEnd_toStartOf="@+id/home_item2"
@@ -36,9 +37,8 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp160h"
-                    android:background="@drawable/home_img">
-
+                    android:layout_height="@dimen/dp160h">
+                    <!--                    android:background="@drawable/home_img"-->
                     <te.app.evidence.customViews.views.CustomTextViewMedium
                         android:id="@+id/home_session"
                         android:layout_width="wrap_content"
@@ -52,6 +52,39 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <!--                    <com.brkckr.circularprogressbar.CircularProgressBar-->
+                    <!--                        android:id="@+id/circularProgressBar"-->
+                    <!--                        android:layout_width="128dp"-->
+                    <!--                        android:layout_height="128dp"-->
+                    <!--                        app:cpbBackgroundColor="@color/white"-->
+                    <!--                        app:cpbBackgroundWidth="@dimen/dp12h"-->
+                    <!--                        app:cpbProgressColor="@color/colorPrimaryDark"-->
+                    <!--                        app:cpbProgressValue="50"-->
+                    <!--                        app:cpbProgressWidth="@dimen/dp12h"-->
+                    <!--                        app:cpbState="clockwise"-->
+                    <!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+                    <!--                        app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                        app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+                    <com.ramijemli.percentagechartview.PercentageChartView
+                        android:id="@+id/view_id"
+                        android:layout_width="@dimen/dp120w"
+                        android:layout_height="@dimen/dp120h"
+                        android:layout_margin="@dimen/dp8h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:pcv_animDuration="800"
+                        app:pcv_animInterpolator="accelerate"
+                        app:pcv_backgroundBarColor="@color/white"
+                        app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                        app:pcv_gradientType="linear"
+                        app:pcv_mode="ring"
+                        app:pcv_orientation="clockwise"
+                        app:pcv_startAngle="270"
+                        app:pcv_textSize="@dimen/sp1"
+                        app:pcv_textColor="@color/colorPrimary" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                           
+
+                 
+                                
+                                                                                   
+           
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:padding="@dimen/dp6h"
+        android:tag="layout/item_client_tags_0"           
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp4h"
+        app:icon="@drawable/ic_close"
+        app:rippleColor="@color/overlayBackground"
+        app:strokeColor="@color/colorYellow"
+        app:strokeWidth="1dp"   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"/>
+         

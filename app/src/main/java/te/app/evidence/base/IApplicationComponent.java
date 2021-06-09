@@ -13,8 +13,10 @@ import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.login.LoginFragment;
 import te.app.evidence.pages.cases.AddCaseFragment;
+import te.app.evidence.pages.cases.AddClientToCaseFragment;
 import te.app.evidence.pages.cases.CaseDetailsFragment;
 import te.app.evidence.pages.cases.CasesFragment;
+import te.app.evidence.pages.cases.EditCaseFragment;
 import te.app.evidence.pages.cases.SearchClientsFragment;
 import te.app.evidence.pages.categories.AddCategoryFragment;
 import te.app.evidence.pages.categories.CategoriesFragment;
@@ -91,6 +93,10 @@ public interface IApplicationComponent {
     void inject(CasesFragment casesFragment);
 
     void inject(CaseDetailsFragment caseDetailsFragment);
+
+    void inject(AddClientToCaseFragment addClientToCaseFragment);
+
+    void inject(EditCaseFragment editCaseFragment);
 
     @Component.Builder
     interface Builder {

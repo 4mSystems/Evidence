@@ -8,6 +8,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-mdpi/ic_edit_profile.png"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_edit_case.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_edit_case.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_cases.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_cases.xml"
     },
@@ -24,12 +28,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_search_clients.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_report.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-hdpi/ic_report.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_favorite.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xxxhdpi/ic_favorite.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_report.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-hdpi/ic_report.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_item_clients.xml.flat",
@@ -124,16 +128,20 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_upload_folder.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_user_edit.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_user_edit.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_add_client_to_case.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_client_to_case.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_board1.xml.flat",
@@ -144,12 +152,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_attachments.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_send_chat.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xhdpi/ic_send_chat.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_onboard.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_onboard.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_send_chat.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xhdpi/ic_send_chat.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_loader_animation.xml.flat",
@@ -220,12 +228,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-mdpi/ic_favorite.png"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_detail_call.png.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xxxhdpi/ic_detail_call.png"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_board3.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/board3.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_detail_call.png.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xxxhdpi/ic_detail_call.png"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_item_session.xml.flat",
@@ -372,12 +380,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/layout_navigation_drawer.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_round_circle.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/round_circle.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_corner_view_gradient.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/corner_view_gradient.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_round_circle.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/round_circle.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_lang.xml.flat",

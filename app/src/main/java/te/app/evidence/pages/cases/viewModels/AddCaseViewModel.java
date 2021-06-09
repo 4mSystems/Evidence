@@ -10,12 +10,14 @@ import java.util.List;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.databinding.FragmentAddCaseBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.InputTagClientsAdapter;
 import te.app.evidence.pages.cases.models.AddCaseRequest;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesData;
+import te.app.evidence.pages.cases.models.caseDetails.CaseDetails;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 
@@ -28,9 +30,11 @@ public class AddCaseViewModel extends BaseViewModel {
     AddCaseRequest addCaseRequest;
     CaseClientsCategoriesData caseClientsCategoriesData;
     public ObservableField<Boolean> loader = new ObservableField<>();
+    CaseDetails caseDetails;
 
     @Inject
     public AddCaseViewModel(CasesRepository casesRepository) {
+        caseDetails = new CaseDetails();
         caseClientsCategoriesData = new CaseClientsCategoriesData();
         addCaseRequest = new AddCaseRequest();
         this.casesRepository = casesRepository;
@@ -61,6 +65,12 @@ public class AddCaseViewModel extends BaseViewModel {
         }
     }
 
+    public void editCase() {
+        if (getAddCaseRequest().isUpdateValid()) {
+            compositeDisposable.add(casesRepository.editCase(getAddCaseRequest()));
+        }
+    }
+
     public void toClients(String type) {
         if (type.equals(Constants.CLIENTS))
             liveData.setValue(new Mutable(Constants.CLIENTS));
@@ -78,6 +88,21 @@ public class AddCaseViewModel extends BaseViewModel {
 
     public CaseClientsCategoriesData getCaseClientsCategoriesData() {
         return caseClientsCategoriesData;
+    }
+
+    @Bindable
+    public CaseDetails getCaseDetails() {
+        return caseDetails;
+    }
+
+    public void setCaseDetails(CaseDetails caseDetails) {
+        getAddCaseRequest().setCircle_num(caseDetails.getCaseData().getCircleNum());
+        getAddCaseRequest().setInvetation_num(caseDetails.getCaseData().getInvetationNum());
+        getAddCaseRequest().setCourt(caseDetails.getCaseData().getCourt());
+        getAddCaseRequest().setCaseId(String.valueOf(caseDetails.getCaseData().getId()));
+        getAddCaseRequest().setInventation_type(caseDetails.getCaseData().getInventationType());
+        notifyChange(BR.caseDetails);
+        this.caseDetails = caseDetails;
     }
 
     public CasesRepository getCasesRepository() {

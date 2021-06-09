@@ -22,6 +22,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import java.util.Calendar;
 
@@ -33,7 +34,7 @@ import te.app.evidence.R;
  */
 
 public class AppHelper {
-    public static final String mapStyle="&zoom=11&style=feature:transit.line%7Cvisibility:simplified%7Ccolor:0xbababa&style=feature:road.highway%7Celement:labels.text.stroke%7Cvisibility:on%7Ccolor:0xb06eba&style=feature:road.highway%7Celement:labels.text.fill%7Cvisibility:on%7Ccolor:0xffffff&maptype=terrain&scale=2&size=400x400&";
+    public static final String mapStyle = "&zoom=11&style=feature:transit.line%7Cvisibility:simplified%7Ccolor:0xbababa&style=feature:road.highway%7Celement:labels.text.stroke%7Cvisibility:on%7Ccolor:0xb06eba&style=feature:road.highway%7Celement:labels.text.fill%7Cvisibility:on%7Ccolor:0xffffff&maptype=terrain&scale=2&size=400x400&";
 
     public static DatePickerDialog initCalender(Context context, boolean startFromNow, DatePickerDialog.OnDateSetListener datePickerDialog) {
         Calendar calendar = Calendar.getInstance();
@@ -98,6 +99,7 @@ public class AppHelper {
         final String appPackageName = context.getPackageName();
         return "https://play.google.com/store/apps/details?id=" + appPackageName;
     }
+
     public static void rateApp(Context context) {
         Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
         Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
@@ -172,6 +174,15 @@ public class AppHelper {
         recyclerView.setDrawingCacheEnabled(true);
         recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
         recyclerView.setLayoutManager(new GridLayoutManager(context, spanCount, LinearLayoutManager.VERTICAL, false));
+    }
+
+    @SuppressLint("WrongConstant")
+    public static void initVerticalRVST(RecyclerView recyclerView, Context context, int spanCount) {
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemViewCacheSize(30);
+        recyclerView.setDrawingCacheEnabled(true);
+        recyclerView.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(spanCount, LinearLayoutManager.VERTICAL));
     }
 
     @SuppressLint("WrongConstant")

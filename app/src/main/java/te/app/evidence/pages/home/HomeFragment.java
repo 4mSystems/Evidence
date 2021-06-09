@@ -43,6 +43,17 @@ public class HomeFragment extends BaseFragment {
         component.inject(this);
         binding.setViewmodel(viewModel);
         viewModel.homeResponse();
+//        binding.dynamicArcView.addSeries(new SeriesItem.Builder(R.color.colorPrimaryDark)
+//                .setRange(0, 100, 100)
+//                .setInitialVisibility(true)
+//                .setSpinDuration(1000)
+//                .setLineWidth(32f)
+//                .build());
+//        SeriesItem seriesItem1 = new SeriesItem.Builder(R.color.colorPrimaryDark)
+//                .setRange(0, 100, 50)
+//                .setLineWidth(32f)
+//                .build();
+//        binding.dynamicArcView.addSeries(seriesItem1);
         setEvent();
         return binding.getRoot();
     }
@@ -53,6 +64,7 @@ public class HomeFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.HOME.equals(((Mutable) o).message)) {
                 viewModel.setHomeData(((HomeResponse) mutable.object).getHomeData());
+                binding.viewId.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getSessions()), true);
             } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
                 binding.progressBarHome.setVisibility(View.VISIBLE);
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {

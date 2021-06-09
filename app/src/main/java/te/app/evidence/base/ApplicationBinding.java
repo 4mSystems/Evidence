@@ -59,6 +59,8 @@ public class ApplicationBinding {
     public static void getItemsV2Binding(RecyclerView recyclerView, RecyclerView.Adapter<?> itemsAdapter, String spanCount, String orientation) {
         if (orientation.equals("1"))
             AppHelper.initVerticalRV(recyclerView, recyclerView.getContext(), Integer.parseInt(spanCount));
+        else if (orientation.equals("3"))
+            AppHelper.initVerticalRVST(recyclerView, recyclerView.getContext(), Integer.parseInt(spanCount));
         else
             AppHelper.initHorizontalRV(recyclerView, recyclerView.getContext(), Integer.parseInt(spanCount));
         recyclerView.setAdapter(itemsAdapter);

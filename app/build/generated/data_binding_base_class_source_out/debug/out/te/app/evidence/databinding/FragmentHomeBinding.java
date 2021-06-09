@@ -14,6 +14,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.card.MaterialCardView;
+import com.ramijemli.percentagechartview.PercentageChartView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -79,6 +80,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   @NonNull
   public final ProgressBar progressBarHome;
 
+  @NonNull
+  public final PercentageChartView viewId;
+
   @Bindable
   protected HomeViewModel mViewmodel;
 
@@ -89,7 +93,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       RecyclerView homeReportersRc, CustomTextViewMedium homeSession,
       CustomTextViewMedium homeUsers, CustomEditText inputSearch, AppCompatButton nextMohdareen,
       AppCompatButton nextSessions, RecyclerView previousSessionRc,
-      AppCompatButton previousSessions, ProgressBar progressBarHome) {
+      AppCompatButton previousSessions, ProgressBar progressBarHome, PercentageChartView viewId) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br1 = br1;
     this.br2 = br2;
@@ -110,6 +114,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.previousSessionRc = previousSessionRc;
     this.previousSessions = previousSessions;
     this.progressBarHome = progressBarHome;
+    this.viewId = viewId;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

@@ -12,10 +12,10 @@ MERGED from [com.github.florent37:expansionpanel:1.2.2] /home/elnagar/.gradle/ca
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5a45c7d1c282a9d3851cf252c35edbf0/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
 MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c82cb0ccf283c15274148bc2e0d6edd7/jetified-pinview-1.4.3/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/90751eb3c67bd2906fccba59f3359dd5/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ea7db4325251e380800de0c5462ac01/jetified-Toasty-1.4.2/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3b840a547c923ff73a5ed59e216ee693/jetified-Toasty-1.4.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67813fbe0bf303f3ec7a2cd132024825/jetified-lottie-3.6.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/06240d3fd0c32e773e46c886cd512fbb/jetified-PhotoView-2.2.0/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/842ab898a33c1c592c2cbb1c324a754d/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce0cca4e913d09d90d64e87385d66c33/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/6c342284b77670273eee3bca45bba5eb/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:2:1-13:12
@@ -58,11 +58,12 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /home/elnagar/.gradle
 MERGED from [androidx.recyclerview:recyclerview:1.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/41684a2863af234f1f02486979753ef8/recyclerview-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2f1d71854e82609e73a7c0d63177c362/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5d6b3aa9ff3afd0a6d4270beb4ff88a8/jetified-circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:2:1-17:12
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:2:1-17:12
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7b02fa868b97478ce6ec91baf99ada35/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:2:1-36:12
 MERGED from [com.github.clans:fab:1.6.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8d32911717696a1ad14136ce50d0ca39/jetified-fab-1.6.4/AndroidManifest.xml:2:1-14:12
+MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ba79f54ced14fd6ba4f5eb80b6c641d5/jetified-percentagechartview-0.3.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8ee6a40855be8eb4645da446ede151e5/jetified-viewbinding-4.1.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/993f1133c1f1900eb347f54b9a2683a0/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/164aee0d85b9e17479f777a3f0ddcf1c/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
@@ -77,7 +78,7 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] /home/elnagar/.gradle/caches/tr
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f03d8d770366016b82bd4687bd419c2a/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e98fe8c673a5a44f703727b8ad86ecf8/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/30211ad544ce221a026db6c1f83aec01/jetified-core-ktx-1.1.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e91847cf2c28beabee76a38e1b95dfe9/jetified-butterknife-8.5.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/81a83db659ba0919a99a0a2543e9634b/jetified-butterknife-8.5.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f41eaa21c5bc84e95e951b25926715db/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.3.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/46e5a26d63033c43ca158222cde64448/core-1.3.2/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e82c131f8cf9b2a3f19ba20a40562995/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
@@ -101,7 +102,7 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/e
 MERGED from [androidx.print:print:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c65f75c2ee1ec3414875edafc0281fe2/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/882a3be1535de1e89870e40025ff4389/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5e63027126f8c1065c78113154db4033/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/992155c4552c43e94bef1a87402c57d1/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:2:1-12:12
+MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/27970a74a4421b17ff6cc13d21c50867/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:2:1-12:12
 INJECTED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
 INJECTED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
 INJECTED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
@@ -209,8 +210,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gr
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5a45c7d1c282a9d3851cf252c35edbf0/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67813fbe0bf303f3ec7a2cd132024825/jetified-lottie-3.6.0/AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67813fbe0bf303f3ec7a2cd132024825/jetified-lottie-3.6.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:11:5-15:19
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/6c342284b77670273eee3bca45bba5eb/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:11:5-20
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/6c342284b77670273eee3bca45bba5eb/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:11:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a76eb91669eadc0b2d5d88cd6884eaf2/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
@@ -257,10 +258,10 @@ MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/480cc64801b2b803400fecc43d48b084/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5d6b3aa9ff3afd0a6d4270beb4ff88a8/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5d6b3aa9ff3afd0a6d4270beb4ff88a8/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:15:5-34:19
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:15:5-34:19
 MERGED from [com.github.clans:fab:1.6.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8d32911717696a1ad14136ce50d0ca39/jetified-fab-1.6.4/AndroidManifest.xml:12:5-20
@@ -291,16 +292,16 @@ MERGED from [com.google.android.datatransport:transport-runtime:2.2.5] /home/eln
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:25:9-35
 	android:label
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:21:9-41
-		REJECTED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:13:9-41
-		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:13:9-41
+		REJECTED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:13:9-41
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:13:9-41
 	android:hardwareAccelerated
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:19:9-43
 	tools:targetApi
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:29:9-28
 	android:allowBackup
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:18:9-35
-		REJECTED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:12:9-35
-		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:12:9-35
+		REJECTED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:12:9-35
+		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:12:9-35
 	android:theme
 		ADDED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:26:9-40
 	tools:replace
@@ -385,14 +386,14 @@ MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transfor
 MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c82cb0ccf283c15274148bc2e0d6edd7/jetified-pinview-1.4.3/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/90751eb3c67bd2906fccba59f3359dd5/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/90751eb3c67bd2906fccba59f3359dd5/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:20:5-44
-MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ea7db4325251e380800de0c5462ac01/jetified-Toasty-1.4.2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2ea7db4325251e380800de0c5462ac01/jetified-Toasty-1.4.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3b840a547c923ff73a5ed59e216ee693/jetified-Toasty-1.4.2/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3b840a547c923ff73a5ed59e216ee693/jetified-Toasty-1.4.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67813fbe0bf303f3ec7a2cd132024825/jetified-lottie-3.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/67813fbe0bf303f3ec7a2cd132024825/jetified-lottie-3.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/06240d3fd0c32e773e46c886cd512fbb/jetified-PhotoView-2.2.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/06240d3fd0c32e773e46c886cd512fbb/jetified-PhotoView-2.2.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/431659269c3489b6c596b54889b68868/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.pchmn:MaterialChipsInput:1.0.8] /home/elnagar/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/842ab898a33c1c592c2cbb1c324a754d/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/842ab898a33c1c592c2cbb1c324a754d/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.multidex:multidex:2.0.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce0cca4e913d09d90d64e87385d66c33/multidex-2.0.1/AndroidManifest.xml:20:5-43
@@ -477,16 +478,18 @@ MERGED from [androidx.cardview:cardview:1.0.0] /home/elnagar/.gradle/caches/tran
 MERGED from [androidx.cardview:cardview:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2f1d71854e82609e73a7c0d63177c362/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5d6b3aa9ff3afd0a6d4270beb4ff88a8/jetified-circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5d6b3aa9ff3afd0a6d4270beb4ff88a8/jetified-circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/15273d03a1c3801668bdc027cd5a20b0/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:7:5-9:41
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/75eefd501959f1f82131dd2dee7e14a1/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:7:5-9:41
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:5:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7b02fa868b97478ce6ec91baf99ada35/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7b02fa868b97478ce6ec91baf99ada35/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.clans:fab:1.6.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8d32911717696a1ad14136ce50d0ca39/jetified-fab-1.6.4/AndroidManifest.xml:8:5-10:41
 MERGED from [com.github.clans:fab:1.6.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8d32911717696a1ad14136ce50d0ca39/jetified-fab-1.6.4/AndroidManifest.xml:8:5-10:41
+MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ba79f54ced14fd6ba4f5eb80b6c641d5/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ba79f54ced14fd6ba4f5eb80b6c641d5/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8ee6a40855be8eb4645da446ede151e5/jetified-viewbinding-4.1.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8ee6a40855be8eb4645da446ede151e5/jetified-viewbinding-4.1.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/993f1133c1f1900eb347f54b9a2683a0/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
@@ -515,8 +518,8 @@ MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/.gradle/caches/
 MERGED from [androidx.customview:customview:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e98fe8c673a5a44f703727b8ad86ecf8/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/30211ad544ce221a026db6c1f83aec01/jetified-core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/30211ad544ce221a026db6c1f83aec01/jetified-core-ktx-1.1.0/AndroidManifest.xml:5:5-7:41
-MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e91847cf2c28beabee76a38e1b95dfe9/jetified-butterknife-8.5.1/AndroidManifest.xml:5:5-43
-MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e91847cf2c28beabee76a38e1b95dfe9/jetified-butterknife-8.5.1/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/81a83db659ba0919a99a0a2543e9634b/jetified-butterknife-8.5.1/AndroidManifest.xml:5:5-43
+MERGED from [com.jakewharton:butterknife:8.5.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/81a83db659ba0919a99a0a2543e9634b/jetified-butterknife-8.5.1/AndroidManifest.xml:5:5-43
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f41eaa21c5bc84e95e951b25926715db/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f41eaa21c5bc84e95e951b25926715db/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.3.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/46e5a26d63033c43ca158222cde64448/core-1.3.2/AndroidManifest.xml:20:5-22:41
@@ -563,8 +566,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.g
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/882a3be1535de1e89870e40025ff4389/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5e63027126f8c1065c78113154db4033/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:18:3-42
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/5e63027126f8c1065c78113154db4033/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:18:3-42
-MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/992155c4552c43e94bef1a87402c57d1/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:8:5-10:41
-MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/992155c4552c43e94bef1a87402c57d1/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:8:5-10:41
+MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/27970a74a4421b17ff6cc13d21c50867/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:8:5-10:41
+MERGED from [com.beloo.widget:ChipsLayoutManager:0.3.7] /home/elnagar/.gradle/caches/transforms-2/files-2.1/27970a74a4421b17ff6cc13d21c50867/jetified-ChipsLayoutManager-0.3.7/AndroidManifest.xml:8:5-10:41
 INJECTED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
 INJECTED from /home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -736,13 +739,13 @@ ADDED from [com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/ca
 	android:name
 		ADDED from [com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/324b1d8671660e6449107b30bc2d5ab5/jetified-firebase-common-19.5.0/AndroidManifest.xml:44:17-121
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3c1f47411fb3cb3e301fb66ad190c3c8/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 activity#droidninja.filepicker.FilePickerActivity
 ADDED from [com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:18:9-20:62
 	android:configChanges

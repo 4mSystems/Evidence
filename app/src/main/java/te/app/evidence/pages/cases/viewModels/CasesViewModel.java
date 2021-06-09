@@ -51,6 +51,10 @@ public class CasesViewModel extends BaseViewModel {
         setSelectedBtn(1);
     }
 
+    public void buttonActions(String action) {
+        liveData.setValue(new Mutable(action));
+    }
+
     @Bindable
     public ClientCasesAdapter getCasesAdapter() {
         return this.casesAdapter == null ? this.casesAdapter = new ClientCasesAdapter() : this.casesAdapter;

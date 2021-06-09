@@ -12,12 +12,19 @@
     </data>
 
     <com.google.android.material.button.MaterialButton
-        style="@style/Widget.MaterialComponents.Button.Icon"
-        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4h"
+        android:padding="@dimen/dp6h"
         android:text="@{itemViewModel.clients.clientName}"
         android:textAllCaps="false"
-        android:textSize="@dimen/sp8"
-        app:cornerRadius="@dimen/dp12h"
-        app:icon="@drawable/ic_close" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorPrimaryDark"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/dp4h"
+        app:icon="@drawable/ic_close"
+        app:rippleColor="@color/overlayBackground"
+        app:strokeColor="@color/colorYellow"
+        app:strokeWidth="1dp" />
 </layout>

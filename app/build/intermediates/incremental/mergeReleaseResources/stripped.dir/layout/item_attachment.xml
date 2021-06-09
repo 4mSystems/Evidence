@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                 
+                                
+                                                                                           
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:tag="layout/item_attachment_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.github.florent37.expansionpanel.ExpansionHeader
+            android:id="@+id/layout_session_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_headerIndicator="@id/icon_down_qu"
+            app:expansion_layout="@id/expansionLayoutSessions"
+            app:expansion_toggleOnClick="true"
+            app:layout_constraintTop_toTopOf="parent">
+            <!-- HEADER INDICATOR -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp3h">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icon_down_qu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_qualifications"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tv_qualifications"
+                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_qualifications"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp6h"
+                    android:text="#124214"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.github.florent37.expansionpanel.ExpansionHeader>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/dp8h"
+            android:background="@color/line_color"
+            app:layout_constraintTop_toBottomOf="@id/layout_session_header" />
+
+        <com.github.florent37.expansionpanel.ExpansionLayout
+            android:id="@+id/expansionLayoutSessions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp6h"
+            android:layout_marginBottom="@dimen/dp6h"
+            app:expansion_expanded="false"
+            app:layout_constraintTop_toBottomOf="@id/v1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/file_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/file"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/file_value"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/file_value" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/file_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:src="@drawable/ic_pdf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/file_text"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/file_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/file_desc_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/user_type"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/file_desc_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10w"
+                    android:layout_marginEnd="@dimen/dp20w"
+                    android:text="eslam@golden.com"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/file_desc_text"
+                    app:layout_constraintTop_toTopOf="@+id/file_desc_text" />
+
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/dp12h"
+                    android:background="@color/line_color"
+                    app:layout_constraintTop_toBottomOf="@id/file_desc_value" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/control_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp25w"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:text="@string/control"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/delete"
+                    app:layout_constraintEnd_toStartOf="@+id/edit"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/delete" />
+
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp4w"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:drawableTop="@drawable/ic_user_delete"
+                    android:text="@string/delete"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/edit"
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:drawableTop="@drawable/ic_user_edit"
+                    android:text="@string/edit"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/header_data_table"
+                    app:layout_constraintEnd_toStartOf="@+id/delete"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/control_text"
+                    app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.github.florent37.expansionpanel.ExpansionLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -71,17 +73,14 @@ public class CaseDetailsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.CASE_DETAILS.equals(((Mutable) o).message)) {
                 viewModel.setCaseDetails(((CaseDetailsResponse) mutable.object).getCaseDetails());
-            }
-//            else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
-//                viewModel.getNotesAdapter().lastSelected = -1;
-//                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getClients().getClientId()), getString(R.string.add_new_note), AddNoteFragment.class.getName(), null);
-//            } else if (Constants.DELETE_NOTE.equals(((Mutable) o).message)) {
-//                toastMessage(((StatusMessage) mutable.object).mMessage);
-//                viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);
-//                viewModel.getNotesAdapter().notifyItemRemoved(viewModel.getNotesAdapter().lastSelected);
-//                deleteDialog.dismiss();
-//            }
-            else if (Constants.LOOPER.equals(((Mutable) o).message)) {
+            } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
+                //TODO Add client or khesm no api allowed and delete client
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getSelectedBtn()), getString(R.string.add_new_client), AddClientToCaseFragment.class.getName(), Constants.ADD_CLIENT_REQUEST);
+            } else if (Constants.EDIT_CASE.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails()), getString(R.string.edit_case), EditCaseFragment.class.getName(), Constants.EDIT_CASE_REQUEST);
+            } else if (Constants.CASE_SESSIONS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails()), getString(R.string.edit_case), EditCaseFragment.class.getName(), Constants.EDIT_CASE_REQUEST);
+            } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
                 binding.progressBarHome.setVisibility(View.VISIBLE);
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {
                     binding.progressBarHome.setVisibility(View.GONE);

@@ -22,6 +22,8 @@ public class AddCaseRequest {
     private String descion;
     @SerializedName("to_whome")
     private String to_whome;
+    @SerializedName("case_id")
+    private String caseId;
     @SerializedName("mokel_Names")
     private List<Integer> mokel_Name;
     @SerializedName("khesm_Names")
@@ -56,6 +58,27 @@ public class AddCaseRequest {
             valid = false;
         } else if (!Validate.isValid(first_session_date, Constants.FIELD)) {
             dateError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(court, Constants.FIELD)) {
+            courtError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(to_whome, Constants.FIELD)) {
+            catError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(inventation_type, Constants.FIELD)) {
+            invetationTypeError.set(Validate.error);
+            valid = false;
+        }
+        return valid;
+    }
+
+    public boolean isUpdateValid() {
+        boolean valid = true;
+        if (!Validate.isValid(circle_num, Constants.FIELD)) {
+            circleNumError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(invetation_num, Constants.FIELD)) {
+            invetationNumError.set(Validate.error);
             valid = false;
         } else if (!Validate.isValid(court, Constants.FIELD)) {
             courtError.set(Validate.error);
@@ -165,5 +188,13 @@ public class AddCaseRequest {
     public void setKhesmText(String khesmText) {
         khesmError.set(null);
         this.khesmText = khesmText;
+    }
+
+    public String getCaseId() {
+        return caseId;
+    }
+
+    public void setCaseId(String caseId) {
+        this.caseId = caseId;
     }
 }

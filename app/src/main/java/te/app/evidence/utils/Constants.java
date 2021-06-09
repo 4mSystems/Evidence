@@ -73,8 +73,8 @@ public class Constants {
 
     //RESPONSES
     public static final int RESPONSE_SUCCESS = 200;
-    public final static int RESPONSE_ERROR = 203;
-    public static final int RESPONSE_TRIP_FAILED = 401;
+    public final static int ADD_CLIENT_REQUEST = 6003;
+    public static final String CASE_SESSIONS = "CASE_SESSIONS";
     public static final int PAYMENT_REQUIRED_CODE = 402;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
@@ -103,8 +103,8 @@ public class Constants {
     public static final String ALL_CASES = "ALL_CASES";
     public static final String CASE_DETAILS = "CASE_DETAILS";
 
-    public static final String civil_image = "civil_image";
-    public static final int civil_image_code = 384;
+    public static final String EDIT_CASE = "EDIT_CASE";
+    public static final int EDIT_CASE_REQUEST = 6004;
     public static final String RATE_APP = "RATE_APP";
     public static final String ABOUT = "about";
     public static final String TERMS = "terms";

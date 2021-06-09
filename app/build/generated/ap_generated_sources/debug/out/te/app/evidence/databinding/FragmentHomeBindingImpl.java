@@ -15,14 +15,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.home_item1, 11);
-        sViewsWithIds.put(R.id.home_item2, 12);
-        sViewsWithIds.put(R.id.br1, 13);
-        sViewsWithIds.put(R.id.home_item3, 14);
-        sViewsWithIds.put(R.id.home_item4, 15);
-        sViewsWithIds.put(R.id.br2, 16);
-        sViewsWithIds.put(R.id.br3, 17);
-        sViewsWithIds.put(R.id.input_search, 18);
-        sViewsWithIds.put(R.id.progress_bar_home, 19);
+        sViewsWithIds.put(R.id.view_id, 12);
+        sViewsWithIds.put(R.id.home_item2, 13);
+        sViewsWithIds.put(R.id.br1, 14);
+        sViewsWithIds.put(R.id.home_item3, 15);
+        sViewsWithIds.put(R.id.home_item4, 16);
+        sViewsWithIds.put(R.id.br2, 17);
+        sViewsWithIds.put(R.id.br3, 18);
+        sViewsWithIds.put(R.id.input_search, 19);
+        sViewsWithIds.put(R.id.progress_bar_home, 20);
     }
     // views
     @NonNull
@@ -31,37 +32,38 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback30;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 21, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[13]
-            , (androidx.constraintlayout.widget.Barrier) bindings[16]
+            , (androidx.constraintlayout.widget.Barrier) bindings[14]
             , (androidx.constraintlayout.widget.Barrier) bindings[17]
+            , (androidx.constraintlayout.widget.Barrier) bindings[18]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
             , (com.google.android.material.card.MaterialCardView) bindings[11]
-            , (com.google.android.material.card.MaterialCardView) bindings[12]
-            , (com.google.android.material.card.MaterialCardView) bindings[14]
+            , (com.google.android.material.card.MaterialCardView) bindings[13]
             , (com.google.android.material.card.MaterialCardView) bindings[15]
+            , (com.google.android.material.card.MaterialCardView) bindings[16]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[18]
+            , (te.app.evidence.customViews.views.CustomEditText) bindings[19]
             , (androidx.appcompat.widget.AppCompatButton) bindings[7]
             , (androidx.appcompat.widget.AppCompatButton) bindings[5]
             , (androidx.recyclerview.widget.RecyclerView) bindings[9]
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
-            , (android.widget.ProgressBar) bindings[19]
+            , (android.widget.ProgressBar) bindings[20]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[12]
             );
         this.commingSessionRc.setTag(null);
         this.homeCases.setTag(null);
@@ -77,9 +79,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.previousSessions.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -418,32 +420,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.nextMohdareen.setOnClickListener(mCallback30);
-            this.nextSessions.setOnClickListener(mCallback28);
-            this.previousSessions.setOnClickListener(mCallback29);
+            this.nextMohdareen.setOnClickListener(mCallback32);
+            this.nextSessions.setOnClickListener(mCallback30);
+            this.previousSessions.setOnClickListener(mCallback31);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextMohdars();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -458,6 +443,23 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.nextSessions();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextMohdars();
                 }
                 break;
             }

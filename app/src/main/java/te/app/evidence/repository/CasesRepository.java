@@ -68,6 +68,11 @@ public class CasesRepository extends BaseRepository {
                 Constants.ADD_CASE, true);
     }
 
+    public Disposable editCase(AddCaseRequest addCaseRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CASE, addCaseRequest, AddCaseResponse.class,
+                Constants.EDIT_CASE, true);
+    }
+
     public Disposable allCases() {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ALL_CASES, new Object(), AllCasesResponse.class,
                 Constants.ALL_CASES, true);
