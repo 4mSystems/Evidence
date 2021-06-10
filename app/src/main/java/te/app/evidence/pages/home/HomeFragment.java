@@ -65,6 +65,9 @@ public class HomeFragment extends BaseFragment {
             if (Constants.HOME.equals(((Mutable) o).message)) {
                 viewModel.setHomeData(((HomeResponse) mutable.object).getHomeData());
                 binding.viewId.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getSessions()), true);
+                binding.viewMohdr.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getMohdreen()), true);
+                binding.viewCasee.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getCases()), true);
+                binding.viewUsers.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getUsers()), true);
             } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
                 binding.progressBarHome.setVisibility(View.VISIBLE);
                 new Handler(Looper.getMainLooper()).postDelayed(() -> {

@@ -3055,6 +3055,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable corner_view_gradient
+drawable corner_view_gradient_statistics
 drawable corner_view_gradient_toolbar
 drawable corner_view_gray_background
 drawable corner_view_gray_border
@@ -3109,6 +3110,8 @@ drawable ic_launcher_foreground
 drawable ic_logout
 drawable ic_menu
 drawable ic_mohdars
+drawable ic_more
+drawable ic_move
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -3292,8 +3295,6 @@ id bold
 id bottom
 id bottomOverlay
 id bounce
-id br1
-id br2
 id br3
 id br4
 id br5
@@ -3433,6 +3434,7 @@ id fixed
 id fl_home_container
 id flip
 id floating
+id flow
 id folder_count
 id folder_title
 id forever
@@ -3460,6 +3462,8 @@ id home_item1
 id home_item2
 id home_item3
 id home_item4
+id home_item5
+id home_khems
 id home_mohdrs
 id home_reporters_rc
 id home_session
@@ -3499,7 +3503,6 @@ id iv_auto_image_slider
 id iv_photo
 id jumpToEnd
 id jumpToStart
-id khesm
 id label
 id labelGroup
 id labeled
@@ -3841,10 +3844,15 @@ id v9
 id vertical
 id video_icon
 id viewPager
+id view_casee
+id view_clients
 id view_id
+id view_khesm
+id view_mohdr
 id view_offset_helper
 id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
+id view_users
 id view_value
 id visible
 id visible_removing_fragment_view_tag

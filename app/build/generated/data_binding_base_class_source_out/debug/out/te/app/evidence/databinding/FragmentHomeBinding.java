@@ -8,12 +8,13 @@ import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.constraintlayout.helper.widget.Flow;
 import androidx.constraintlayout.widget.Barrier;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.card.MaterialCardView;
 import com.ramijemli.percentagechartview.PercentageChartView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -24,31 +25,28 @@ import te.app.evidence.pages.home.viewModels.HomeViewModel;
 
 public abstract class FragmentHomeBinding extends ViewDataBinding {
   @NonNull
-  public final Barrier br1;
-
-  @NonNull
-  public final Barrier br2;
-
-  @NonNull
   public final Barrier br3;
 
   @NonNull
   public final RecyclerView commingSessionRc;
 
   @NonNull
+  public final Flow flow;
+
+  @NonNull
   public final CustomTextViewMedium homeCases;
 
   @NonNull
-  public final MaterialCardView homeItem1;
+  public final ConstraintLayout homeItem1;
 
   @NonNull
-  public final MaterialCardView homeItem2;
+  public final ConstraintLayout homeItem2;
 
   @NonNull
-  public final MaterialCardView homeItem3;
+  public final ConstraintLayout homeItem3;
 
   @NonNull
-  public final MaterialCardView homeItem4;
+  public final ConstraintLayout homeItem4;
 
   @NonNull
   public final CustomTextViewMedium homeMohdrs;
@@ -81,24 +79,32 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final ProgressBar progressBarHome;
 
   @NonNull
+  public final PercentageChartView viewCasee;
+
+  @NonNull
   public final PercentageChartView viewId;
+
+  @NonNull
+  public final PercentageChartView viewMohdr;
+
+  @NonNull
+  public final PercentageChartView viewUsers;
 
   @Bindable
   protected HomeViewModel mViewmodel;
 
   protected FragmentHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br1, Barrier br2, Barrier br3, RecyclerView commingSessionRc,
-      CustomTextViewMedium homeCases, MaterialCardView homeItem1, MaterialCardView homeItem2,
-      MaterialCardView homeItem3, MaterialCardView homeItem4, CustomTextViewMedium homeMohdrs,
-      RecyclerView homeReportersRc, CustomTextViewMedium homeSession,
-      CustomTextViewMedium homeUsers, CustomEditText inputSearch, AppCompatButton nextMohdareen,
-      AppCompatButton nextSessions, RecyclerView previousSessionRc,
-      AppCompatButton previousSessions, ProgressBar progressBarHome, PercentageChartView viewId) {
+      Barrier br3, RecyclerView commingSessionRc, Flow flow, CustomTextViewMedium homeCases,
+      ConstraintLayout homeItem1, ConstraintLayout homeItem2, ConstraintLayout homeItem3,
+      ConstraintLayout homeItem4, CustomTextViewMedium homeMohdrs, RecyclerView homeReportersRc,
+      CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers, CustomEditText inputSearch,
+      AppCompatButton nextMohdareen, AppCompatButton nextSessions, RecyclerView previousSessionRc,
+      AppCompatButton previousSessions, ProgressBar progressBarHome, PercentageChartView viewCasee,
+      PercentageChartView viewId, PercentageChartView viewMohdr, PercentageChartView viewUsers) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.br1 = br1;
-    this.br2 = br2;
     this.br3 = br3;
     this.commingSessionRc = commingSessionRc;
+    this.flow = flow;
     this.homeCases = homeCases;
     this.homeItem1 = homeItem1;
     this.homeItem2 = homeItem2;
@@ -114,7 +120,10 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.previousSessionRc = previousSessionRc;
     this.previousSessions = previousSessions;
     this.progressBarHome = progressBarHome;
+    this.viewCasee = viewCasee;
     this.viewId = viewId;
+    this.viewMohdr = viewMohdr;
+    this.viewUsers = viewUsers;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

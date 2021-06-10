@@ -26,7 +26,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
     private final androidx.appcompat.widget.AppCompatButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback73;
+    private final android.view.View.OnClickListener mCallback69;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -84,7 +84,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback73 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -255,7 +255,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback73);
+            this.mboundView3.setOnClickListener(mCallback69);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1

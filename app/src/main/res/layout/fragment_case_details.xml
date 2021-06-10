@@ -17,501 +17,642 @@
             type="te.app.evidence.pages.cases.viewModels.CasesViewModel" />
     </data>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.core.widget.NestedScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/client_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp10h"
+                android:text="@string/public_info"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/client_data"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/client_data_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="6dp"
+                app:layout_constraintTop_toBottomOf="@id/client_data">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp15h">
+
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_invetationNum_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/case_number"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/tv_invetationNum"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.invetationNum}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/header_data_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv_invetationNum_text"
+                        app:layout_constraintTop_toTopOf="@+id/tv_invetationNum_text" />
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/tv_invetationNum" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/court_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/inventation_type"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/court_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.inventationType}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/header_data_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/court_text"
+                        app:layout_constraintTop_toTopOf="@+id/court_text" />
+
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/court_value" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/paper_type_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/circle_num"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/paper_type_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.circleNum}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/header_data_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/paper_type_text"
+                        app:layout_constraintTop_toTopOf="@+id/paper_type_text" />
+
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/paper_type_value" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/paper_number_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/court"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v3" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/paper_number_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.court}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/header_data_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/paper_type_text"
+                        app:layout_constraintTop_toTopOf="@+id/paper_number_text" />
+
+                    <View
+                        android:id="@+id/v6"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/paper_number_value" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/session_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/session_date"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v6" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/session_month_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.firstSessionDate}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/header_data_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/session_date_text"
+                        app:layout_constraintTop_toTopOf="@+id/session_date_text" />
+
+                    <View
+                        android:id="@+id/v7"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:background="@color/line_color"
+                        app:layout_constraintTop_toBottomOf="@id/session_month_value" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/status_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp15w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:text="@string/addressed_to"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/v7" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:id="@+id/status_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp10w"
+                        android:layout_marginEnd="@dimen/dp10w"
+                        android:text="@{viewmodel.caseDetails.caseData.category.name}"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/sp10"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/status_text"
+                        app:layout_constraintTop_toTopOf="@+id/status_text" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/client_notes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        android:onClick="@{()-> viewmodel.buttonActions(Constants.EDIT_CASE)}"
+                        android:text="@string/edit"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/colorPrimaryDark"
+                        app:cornerRadius="@dimen/dp30h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/client_cases"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/status_value"
+                        app:rippleColor="@color/colorYellow" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/client_cases"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp6w"
+                        android:layout_marginTop="@dimen/dp12h"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:layout_marginBottom="@dimen/dp12h"
+                        android:text="@string/print"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/white"
+                        app:backgroundTint="@color/colorYellow"
+                        app:cornerRadius="@dimen/dp30h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/client_notes"
+                        app:layout_constraintTop_toBottomOf="@id/status_value"
+                        app:rippleColor="@color/colorPrimaryDark" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_item1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_gradient_statistics">
+
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginTop="@dimen/dp10h"
-                    android:text="@string/public_info"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_margin="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/client_data_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginTop="@dimen/dp8h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    app:cardCornerRadius="@dimen/dp8h"
-                    app:cardElevation="6dp"
-                    app:layout_constraintTop_toBottomOf="@id/client_data">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp15h">
-
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/tv_invetationNum_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/case_number"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/tv_invetationNum"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.invetationNum}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/header_data_table"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/tv_invetationNum_text"
-                            app:layout_constraintTop_toTopOf="@+id/tv_invetationNum_text" />
-
-                        <View
-                            android:id="@+id/v1"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp8h"
-                            android:background="@color/line_color"
-                            app:layout_constraintTop_toBottomOf="@id/tv_invetationNum" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/court_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/inventation_type"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/v1" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/court_value"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.inventationType}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/header_data_table"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/court_text"
-                            app:layout_constraintTop_toTopOf="@+id/court_text" />
-
-                        <View
-                            android:id="@+id/v2"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:background="@color/line_color"
-                            app:layout_constraintTop_toBottomOf="@id/court_value" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/paper_type_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/circle_num"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/v2" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/paper_type_value"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.circleNum}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/header_data_table"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/paper_type_text"
-                            app:layout_constraintTop_toTopOf="@+id/paper_type_text" />
-
-                        <View
-                            android:id="@+id/v3"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:background="@color/line_color"
-                            app:layout_constraintTop_toBottomOf="@id/paper_type_value" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/paper_number_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/court"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/v3" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/paper_number_value"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.court}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/header_data_table"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/paper_type_text"
-                            app:layout_constraintTop_toTopOf="@+id/paper_number_text" />
-
-                        <View
-                            android:id="@+id/v6"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:background="@color/line_color"
-                            app:layout_constraintTop_toBottomOf="@id/paper_number_value" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/session_date_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/session_date"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/v6" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/session_month_value"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.firstSessionDate}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/header_data_table"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/session_date_text"
-                            app:layout_constraintTop_toTopOf="@+id/session_date_text" />
-
-                        <View
-                            android:id="@+id/v7"
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:background="@color/line_color"
-                            app:layout_constraintTop_toBottomOf="@id/session_month_value" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/status_text"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp15w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp4w"
-                            android:text="@string/addressed_to"
-                            android:textAlignment="viewStart"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimary"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/v7" />
-
-                        <te.app.evidence.customViews.views.CustomTextViewRegular
-                            android:id="@+id/status_value"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp10w"
-                            android:layout_marginEnd="@dimen/dp10w"
-                            android:text="@{viewmodel.caseDetails.caseData.category.name}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="@dimen/sp10"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/status_text"
-                            app:layout_constraintTop_toTopOf="@+id/status_text" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/client_notes"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp6w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginBottom="@dimen/dp12h"
-                            android:onClick="@{()-> viewmodel.buttonActions(Constants.EDIT_CASE)}"
-                            android:text="@string/edit"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white"
-                            app:backgroundTint="@color/colorPrimaryDark"
-                            app:cornerRadius="@dimen/dp30h"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/client_cases"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/status_value"
-                            app:rippleColor="@color/colorYellow" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/client_cases"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp6w"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:layout_marginEnd="@dimen/dp8w"
-                            android:layout_marginBottom="@dimen/dp12h"
-                            android:text="@string/print"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white"
-                            app:backgroundTint="@color/colorYellow"
-                            app:cornerRadius="@dimen/dp30h"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.5"
-                            app:layout_constraintStart_toEndOf="@+id/client_notes"
-                            app:layout_constraintTop_toBottomOf="@id/status_value"
-                            app:rippleColor="@color/colorPrimaryDark" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/home_item1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp4h"
-                    app:cardCornerRadius="@dimen/dp4h"
-                    app:cardUseCompatPadding="true"
-                    app:layout_constraintEnd_toStartOf="@+id/home_item2"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/client_data_container">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp160h"
-                        android:background="@drawable/home_img">
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/home_session"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@{@string/sessions.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber)?viewmodel.caseDetails.numbers.sessionsNumber:``)}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/home_item2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp4h"
-                    android:backgroundTint="@color/colorPrimaryDark"
-                    app:cardCornerRadius="@dimen/dp4h"
-                    app:cardUseCompatPadding="true"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/home_item1"
-                    app:layout_constraintTop_toBottomOf="@+id/client_data_container">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp160h"
-                        android:onClick="@{()-> viewmodel.buttonActions(Constants.CASE_SESSIONS)}"
-                        android:background="@drawable/home_img">
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/home_mohdrs"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@{@string/notes.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber)?viewmodel.caseDetails.numbers.notesNumber:``)}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <androidx.constraintlayout.widget.Barrier
-                    android:id="@+id/br1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:barrierDirection="bottom"
-                    app:constraint_referenced_ids="home_item1,home_item2" />
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/home_item3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp4h"
-                    android:backgroundTint="@color/colorPrimaryDark"
-                    app:cardCornerRadius="@dimen/dp4h"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/br1">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp160h"
-                        android:background="@drawable/home_img">
-
-                        <te.app.evidence.customViews.views.CustomTextViewMedium
-                            android:id="@+id/home_users"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@{@string/attachments.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/white"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <androidx.appcompat.widget.AppCompatButton
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp12h"
-                            android:background="@drawable/corner_view_primary_yellow_top"
-                            android:text="@string/edit_add_attachments"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white"
-                            app:cornerRadius="@dimen/dp30h"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:rippleColor="@color/colorYellow" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </com.google.android.material.card.MaterialCardView>
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/clients"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp6w"
-                    android:layout_marginTop="@dimen/dp12h"
-                    android:background="@{viewmodel.selectedBtn==0?@drawable/corner_view_primary_yellow:@drawable/corner_view_primary_dark_home}"
-                    android:onClick="@{()->viewmodel.clients()}"
-                    android:text="@string/clients"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toStartOf="@+id/khesm"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/home_item3" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/khesm"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp6w"
-                    android:layout_marginTop="@dimen/dp12h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    android:background="@{viewmodel.selectedBtn==1?@drawable/corner_view_primary_yellow:@drawable/corner_view_primary_dark_home}"
-                    android:onClick="@{()->viewmodel.khesm()}"
-                    android:text="@string/opponents"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/white"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toEndOf="@+id/clients"
-                    app:layout_constraintTop_toBottomOf="@id/home_item3" />
-
-                <androidx.constraintlayout.widget.Barrier
-                    android:id="@+id/br4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:barrierDirection="bottom"
-                    app:constraint_referenced_ids="clients,khesm" />
-
-                <ProgressBar
-                    android:id="@+id/progress_bar_home"
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp15h"
-                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginBottom="@dimen/dp18h"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/home_session"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/sessions.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber)?viewmodel.caseDetails.numbers.sessionsNumber:``)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/br4" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rc_notes"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp6w"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:layout_marginEnd="@dimen/dp6w"
-                    app:adapter="@{viewmodel.clientsAdapter}"
-                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                    app:layout_constraintTop_toBottomOf="@+id/progress_bar_home"
-                    app:orientation="@{`3`}"
-                    app:span="@{`2`}"
-                    tools:listitem="@layout/item_client_tags" />
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:id="@+id/view_id"
+                    android:layout_width="@dimen/dp120w"
+                    android:layout_height="@dimen/dp120h"
+                    android:layout_margin="@dimen/dp8h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="accelerate"
+                    app:pcv_backgroundBarColor="@color/white"
+                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                    app:pcv_gradientType="linear"
+                    app:pcv_mode="ring"
+                    app:pcv_orientation="clockwise"
+                    app:pcv_startAngle="270"
+                    app:pcv_textColor="@color/colorPrimary"
+                    app:pcv_textSize="@dimen/sp1" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.core.widget.NestedScrollView>
 
-        <com.github.clans.fab.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_margin="@dimen/dp16h"
-            android:onClick="@{()-> viewmodel.buttonActions(Constants.ADD_CLIENTS)}"
-            android:src="@drawable/ic_add_user"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/header_data_table"
-            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_item2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_gradient_statistics">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/home_mohdrs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/notes.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber)?viewmodel.caseDetails.numbers.notesNumber:``)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginBottom="@dimen/dp18h"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:id="@+id/view_mohdr"
+                    android:layout_width="@dimen/dp120w"
+                    android:layout_height="@dimen/dp120h"
+                    android:layout_margin="@dimen/dp8h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="accelerate"
+                    app:pcv_backgroundBarColor="@color/white"
+                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                    app:pcv_gradientType="linear"
+                    app:pcv_mode="ring"
+                    app:pcv_orientation="clockwise"
+                    app:pcv_startAngle="270"
+                    app:pcv_textColor="@color/colorPrimary"
+                    app:pcv_textSize="@dimen/sp1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_item3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_gradient_statistics">
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/home_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/attachments.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginBottom="@dimen/dp18h"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:id="@+id/view_users"
+                    android:layout_width="@dimen/dp120w"
+                    android:layout_height="@dimen/dp120h"
+                    android:layout_margin="@dimen/dp8h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="accelerate"
+                    app:pcv_backgroundBarColor="@color/white"
+                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                    app:pcv_gradientType="linear"
+                    app:pcv_mode="ring"
+                    app:pcv_orientation="clockwise"
+                    app:pcv_startAngle="270"
+                    app:pcv_textColor="@color/colorPrimary"
+                    app:pcv_textSize="@dimen/sp1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_item4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_gradient_statistics">
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/home_cases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/clients.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginBottom="@dimen/dp18h"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:id="@+id/view_clients"
+                    android:layout_width="@dimen/dp120w"
+                    android:layout_height="@dimen/dp120h"
+                    android:layout_margin="@dimen/dp8h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="accelerate"
+                    app:pcv_backgroundBarColor="@color/white"
+                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                    app:pcv_gradientType="linear"
+                    app:pcv_mode="ring"
+                    app:pcv_orientation="clockwise"
+                    app:pcv_startAngle="270"
+                    app:pcv_textColor="@color/colorPrimary"
+                    app:pcv_textSize="@dimen/sp1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/home_item5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_gradient_statistics">
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/home_khems"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{@string/opponents.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:src="@drawable/ic_move"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginBottom="@dimen/dp18h"
+                    android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.ramijemli.percentagechartview.PercentageChartView
+                    android:id="@+id/view_khesm"
+                    android:layout_width="@dimen/dp120w"
+                    android:layout_height="@dimen/dp120h"
+                    android:layout_margin="@dimen/dp8h"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:pcv_animDuration="800"
+                    app:pcv_animInterpolator="accelerate"
+                    app:pcv_backgroundBarColor="@color/white"
+                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                    app:pcv_gradientType="linear"
+                    app:pcv_mode="ring"
+                    app:pcv_orientation="clockwise"
+                    app:pcv_startAngle="270"
+                    app:pcv_textColor="@color/colorPrimary"
+                    app:pcv_textSize="@dimen/sp1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                app:constraint_referenced_ids="home_item1,home_item2,home_item3,home_item4,home_item5"
+                app:flow_horizontalGap="@dimen/dp4h"
+                app:flow_horizontalStyle="spread"
+                app:flow_maxElementsWrap="2"
+                app:flow_verticalGap="@dimen/dp4h"
+                app:flow_wrapMode="chain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/client_data_container" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

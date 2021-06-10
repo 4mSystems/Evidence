@@ -73,6 +73,11 @@ public class CaseDetailsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.CASE_DETAILS.equals(((Mutable) o).message)) {
                 viewModel.setCaseDetails(((CaseDetailsResponse) mutable.object).getCaseDetails());
+                binding.viewId.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getSessionsNumber()), true);
+                binding.viewMohdr.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getNotesNumber()), true);
+                binding.viewClients.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getAttachmentsNumber()), true);
+                binding.viewKhesm.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getAttachmentsNumber()), true);
+                binding.viewUsers.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getAttachmentsNumber()), true);
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 //TODO Add client or khesm no api allowed and delete client
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getSelectedBtn()), getString(R.string.add_new_client), AddClientToCaseFragment.class.getName(), Constants.ADD_CLIENT_REQUEST);
@@ -81,15 +86,15 @@ public class CaseDetailsFragment extends BaseFragment {
             } else if (Constants.CASE_SESSIONS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails()), getString(R.string.edit_case), EditCaseFragment.class.getName(), Constants.EDIT_CASE_REQUEST);
             } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
-                binding.progressBarHome.setVisibility(View.VISIBLE);
-                new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                    binding.progressBarHome.setVisibility(View.GONE);
-                    if (viewModel.getSelectedBtn() == 0)
-                        viewModel.getClientsAdapter().update(viewModel.getCaseDetails().getClients());
-                    else if (viewModel.getSelectedBtn() == 1)
-                        viewModel.getClientsAdapter().update(viewModel.getCaseDetails().getKhesm());
-                    viewModel.notifyChange(BR.clientsAdapter);
-                }, 1000);
+//                binding.progressBarHome.setVisibility(View.VISIBLE);
+//                new Handler(Looper.getMainLooper()).postDelayed(() -> {
+//                    binding.progressBarHome.setVisibility(View.GONE);
+//                    if (viewModel.getSelectedBtn() == 0)
+//                        viewModel.getClientsAdapter().update(viewModel.getCaseDetails().getClients());
+//                    else if (viewModel.getSelectedBtn() == 1)
+//                        viewModel.getClientsAdapter().update(viewModel.getCaseDetails().getKhesm());
+//                    viewModel.notifyChange(BR.clientsAdapter);
+//                }, 1000);
             }
 
         });

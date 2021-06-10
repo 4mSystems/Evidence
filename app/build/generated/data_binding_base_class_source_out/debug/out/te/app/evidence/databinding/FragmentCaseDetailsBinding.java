@@ -4,18 +4,16 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.Barrier;
+import androidx.constraintlayout.helper.widget.Flow;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.card.MaterialCardView;
+import com.ramijemli.percentagechartview.PercentageChartView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -24,12 +22,6 @@ import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
 
 public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
-  @NonNull
-  public final Barrier br1;
-
-  @NonNull
-  public final Barrier br4;
-
   @NonNull
   public final MaterialButton clientCases;
 
@@ -43,22 +35,34 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
   public final MaterialButton clientNotes;
 
   @NonNull
-  public final AppCompatButton clients;
-
-  @NonNull
   public final CustomTextViewMedium courtText;
 
   @NonNull
   public final CustomTextViewRegular courtValue;
 
   @NonNull
-  public final MaterialCardView homeItem1;
+  public final Flow flow;
 
   @NonNull
-  public final MaterialCardView homeItem2;
+  public final CustomTextViewMedium homeCases;
 
   @NonNull
-  public final MaterialCardView homeItem3;
+  public final ConstraintLayout homeItem1;
+
+  @NonNull
+  public final ConstraintLayout homeItem2;
+
+  @NonNull
+  public final ConstraintLayout homeItem3;
+
+  @NonNull
+  public final ConstraintLayout homeItem4;
+
+  @NonNull
+  public final ConstraintLayout homeItem5;
+
+  @NonNull
+  public final CustomTextViewMedium homeKhems;
 
   @NonNull
   public final CustomTextViewMedium homeMohdrs;
@@ -68,9 +72,6 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewMedium homeUsers;
-
-  @NonNull
-  public final AppCompatButton khesm;
 
   @NonNull
   public final CustomTextViewMedium paperNumberText;
@@ -83,12 +84,6 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewRegular paperTypeValue;
-
-  @NonNull
-  public final ProgressBar progressBarHome;
-
-  @NonNull
-  public final RecyclerView rcNotes;
 
   @NonNull
   public final CustomTextViewMedium sessionDateText;
@@ -123,44 +118,61 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
   @NonNull
   public final View v7;
 
+  @NonNull
+  public final PercentageChartView viewClients;
+
+  @NonNull
+  public final PercentageChartView viewId;
+
+  @NonNull
+  public final PercentageChartView viewKhesm;
+
+  @NonNull
+  public final PercentageChartView viewMohdr;
+
+  @NonNull
+  public final PercentageChartView viewUsers;
+
   @Bindable
   protected CasesViewModel mViewmodel;
 
   protected FragmentCaseDetailsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br1, Barrier br4, MaterialButton clientCases, CustomTextViewMedium clientData,
-      CardView clientDataContainer, MaterialButton clientNotes, AppCompatButton clients,
-      CustomTextViewMedium courtText, CustomTextViewRegular courtValue, MaterialCardView homeItem1,
-      MaterialCardView homeItem2, MaterialCardView homeItem3, CustomTextViewMedium homeMohdrs,
-      CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers, AppCompatButton khesm,
+      MaterialButton clientCases, CustomTextViewMedium clientData, CardView clientDataContainer,
+      MaterialButton clientNotes, CustomTextViewMedium courtText, CustomTextViewRegular courtValue,
+      Flow flow, CustomTextViewMedium homeCases, ConstraintLayout homeItem1,
+      ConstraintLayout homeItem2, ConstraintLayout homeItem3, ConstraintLayout homeItem4,
+      ConstraintLayout homeItem5, CustomTextViewMedium homeKhems, CustomTextViewMedium homeMohdrs,
+      CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers,
       CustomTextViewMedium paperNumberText, CustomTextViewRegular paperNumberValue,
       CustomTextViewMedium paperTypeText, CustomTextViewRegular paperTypeValue,
-      ProgressBar progressBarHome, RecyclerView rcNotes, CustomTextViewMedium sessionDateText,
-      CustomTextViewRegular sessionMonthValue, CustomTextViewMedium statusText,
-      CustomTextViewRegular statusValue, CustomTextViewRegular tvInvetationNum,
-      CustomTextViewMedium tvInvetationNumText, View v1, View v2, View v3, View v6, View v7) {
+      CustomTextViewMedium sessionDateText, CustomTextViewRegular sessionMonthValue,
+      CustomTextViewMedium statusText, CustomTextViewRegular statusValue,
+      CustomTextViewRegular tvInvetationNum, CustomTextViewMedium tvInvetationNumText, View v1,
+      View v2, View v3, View v6, View v7, PercentageChartView viewClients,
+      PercentageChartView viewId, PercentageChartView viewKhesm, PercentageChartView viewMohdr,
+      PercentageChartView viewUsers) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.br1 = br1;
-    this.br4 = br4;
     this.clientCases = clientCases;
     this.clientData = clientData;
     this.clientDataContainer = clientDataContainer;
     this.clientNotes = clientNotes;
-    this.clients = clients;
     this.courtText = courtText;
     this.courtValue = courtValue;
+    this.flow = flow;
+    this.homeCases = homeCases;
     this.homeItem1 = homeItem1;
     this.homeItem2 = homeItem2;
     this.homeItem3 = homeItem3;
+    this.homeItem4 = homeItem4;
+    this.homeItem5 = homeItem5;
+    this.homeKhems = homeKhems;
     this.homeMohdrs = homeMohdrs;
     this.homeSession = homeSession;
     this.homeUsers = homeUsers;
-    this.khesm = khesm;
     this.paperNumberText = paperNumberText;
     this.paperNumberValue = paperNumberValue;
     this.paperTypeText = paperTypeText;
     this.paperTypeValue = paperTypeValue;
-    this.progressBarHome = progressBarHome;
-    this.rcNotes = rcNotes;
     this.sessionDateText = sessionDateText;
     this.sessionMonthValue = sessionMonthValue;
     this.statusText = statusText;
@@ -172,6 +184,11 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
     this.v3 = v3;
     this.v6 = v6;
     this.v7 = v7;
+    this.viewClients = viewClients;
+    this.viewId = viewId;
+    this.viewKhesm = viewKhesm;
+    this.viewMohdr = viewMohdr;
+    this.viewUsers = viewUsers;
   }
 
   public abstract void setViewmodel(@Nullable CasesViewModel viewmodel);

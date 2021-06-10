@@ -17,13 +17,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         sViewsWithIds.put(R.id.home_item1, 11);
         sViewsWithIds.put(R.id.view_id, 12);
         sViewsWithIds.put(R.id.home_item2, 13);
-        sViewsWithIds.put(R.id.br1, 14);
+        sViewsWithIds.put(R.id.view_mohdr, 14);
         sViewsWithIds.put(R.id.home_item3, 15);
-        sViewsWithIds.put(R.id.home_item4, 16);
-        sViewsWithIds.put(R.id.br2, 17);
-        sViewsWithIds.put(R.id.br3, 18);
-        sViewsWithIds.put(R.id.input_search, 19);
-        sViewsWithIds.put(R.id.progress_bar_home, 20);
+        sViewsWithIds.put(R.id.view_users, 16);
+        sViewsWithIds.put(R.id.home_item4, 17);
+        sViewsWithIds.put(R.id.view_casee, 18);
+        sViewsWithIds.put(R.id.flow, 19);
+        sViewsWithIds.put(R.id.br3, 20);
+        sViewsWithIds.put(R.id.input_search, 21);
+        sViewsWithIds.put(R.id.progress_bar_home, 22);
     }
     // views
     @NonNull
@@ -40,30 +42,32 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 21, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.constraintlayout.widget.Barrier) bindings[14]
-            , (androidx.constraintlayout.widget.Barrier) bindings[17]
-            , (androidx.constraintlayout.widget.Barrier) bindings[18]
+            , (androidx.constraintlayout.widget.Barrier) bindings[20]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[19]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
-            , (com.google.android.material.card.MaterialCardView) bindings[11]
-            , (com.google.android.material.card.MaterialCardView) bindings[13]
-            , (com.google.android.material.card.MaterialCardView) bindings[15]
-            , (com.google.android.material.card.MaterialCardView) bindings[16]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[11]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[13]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[15]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[19]
+            , (te.app.evidence.customViews.views.CustomEditText) bindings[21]
             , (androidx.appcompat.widget.AppCompatButton) bindings[7]
             , (androidx.appcompat.widget.AppCompatButton) bindings[5]
             , (androidx.recyclerview.widget.RecyclerView) bindings[9]
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
-            , (android.widget.ProgressBar) bindings[20]
+            , (android.widget.ProgressBar) bindings[22]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[18]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[12]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[14]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[16]
             );
         this.commingSessionRc.setTag(null);
         this.homeCases.setTag(null);
