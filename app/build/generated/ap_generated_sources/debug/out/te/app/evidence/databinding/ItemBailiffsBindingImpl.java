@@ -32,11 +32,11 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback19;
+    private final android.view.View.OnClickListener mCallback8;
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback10;
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback9;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -77,9 +77,9 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback19 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback18 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -198,16 +198,16 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback19);
-            this.statusValue.setOnClickListener(mCallback18);
-            this.viewValue.setOnClickListener(mCallback20);
+            this.delete.setOnClickListener(mCallback9);
+            this.statusValue.setOnClickListener(mCallback8);
+            this.viewValue.setOnClickListener(mCallback10);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
@@ -220,7 +220,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.delete();
+                    itemViewModel.changeStatus();
                 }
                 break;
             }
@@ -241,7 +241,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
                 }
                 break;
             }
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
@@ -254,7 +254,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.changeStatus();
+                    itemViewModel.delete();
                 }
                 break;
             }

@@ -14,6 +14,7 @@ import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.login.LoginFragment;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddClientToCaseFragment;
+import te.app.evidence.pages.cases.CaseClientsFragment;
 import te.app.evidence.pages.cases.CaseDetailsFragment;
 import te.app.evidence.pages.cases.CasesFragment;
 import te.app.evidence.pages.cases.EditCaseFragment;
@@ -30,6 +31,7 @@ import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
+import te.app.evidence.pages.sessions.SessionsFragment;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.users.AddUserFragment;
 import te.app.evidence.pages.users.UserPermissionsFragment;
@@ -97,6 +99,10 @@ public interface IApplicationComponent {
     void inject(AddClientToCaseFragment addClientToCaseFragment);
 
     void inject(EditCaseFragment editCaseFragment);
+
+    void inject(CaseClientsFragment caseClientsFragment);
+
+    void inject(SessionsFragment sessionsFragment);
 
     @Component.Builder
     interface Builder {

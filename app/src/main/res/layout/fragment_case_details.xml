@@ -311,7 +311,8 @@
                 android:id="@+id/home_item1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics">
+                android:background="@drawable/corner_view_gradient_statistics"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.CASE_SESSIONS)}">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
@@ -443,13 +444,14 @@
                 android:id="@+id/home_item3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics">
+                android:background="@drawable/corner_view_gradient_statistics"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.KHESM)}">
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
                     android:id="@+id/home_users"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/attachments.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:text="@{@string/opponents.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm)?viewmodel.caseDetails.numbers.khesm:``)}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
@@ -485,7 +487,7 @@
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_users"
+                    android:id="@+id/view_khesm"
                     android:layout_width="@dimen/dp120w"
                     android:layout_height="@dimen/dp120h"
                     android:layout_margin="@dimen/dp8h"
@@ -509,13 +511,14 @@
                 android:id="@+id/home_item4"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics">
+                android:background="@drawable/corner_view_gradient_statistics"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.CLIENTS)}">
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
                     android:id="@+id/home_cases"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/clients.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:text="@{@string/clients.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients)?viewmodel.caseDetails.numbers.clients:``)}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
@@ -581,7 +584,7 @@
                     android:id="@+id/home_khems"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{@string/opponents.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
+                    android:text="@{@string/attachments.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber)?viewmodel.caseDetails.numbers.attachmentsNumber:``)}"
                     android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/white"
@@ -610,14 +613,25 @@
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
+                    android:layout_marginEnd="@dimen/dp8w"
                     android:layout_marginBottom="@dimen/dp18h"
                     android:src="@drawable/ic_more"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/corner_view_primary_yellow_top"
+                    android:padding="@dimen/dp6h"
+                    android:text="@string/edit_add_attachments"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
                 <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_khesm"
+                    android:id="@+id/view_attachments"
                     android:layout_width="@dimen/dp120w"
                     android:layout_height="@dimen/dp120h"
                     android:layout_margin="@dimen/dp8h"
@@ -648,9 +662,9 @@
                 app:flow_maxElementsWrap="2"
                 app:flow_verticalGap="@dimen/dp4h"
                 app:flow_wrapMode="chain"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/client_data_container" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

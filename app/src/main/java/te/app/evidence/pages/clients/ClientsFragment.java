@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,7 @@ import te.app.evidence.databinding.FragmentClientsBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.cases.AddClientToCaseFragment;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
@@ -79,11 +81,11 @@ public class ClientsFragment extends BaseFragment {
                 deleteDialog.dismiss();
             }
         });
-        ((BaseActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
+        baseActivity().getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
             viewModel.clients();
             ((BaseActivity) context).stopRefresh(false);
         });
-        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
+
     }
 
     private void showDeleteDialog() {
@@ -97,6 +99,7 @@ public class ClientsFragment extends BaseFragment {
         binding.optionDone.setOnClickListener(v -> viewModel.deleteClient());
         deleteDialog.show();
     }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -131,4 +134,5 @@ public class ClientsFragment extends BaseFragment {
         super.onAttach(context);
         this.context = context;
     }
+
 }

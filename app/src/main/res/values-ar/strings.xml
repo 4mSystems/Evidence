@@ -98,7 +98,7 @@
     <string name="account_verified">حساب موثق</string>
     <string name="account_my_ads">إعلاناتي</string>
     <string name="my_fund_ads">إعلاناتي المميزة</string>
-    <string name="account_balance">رصيد الحساب</string>
+    <string name="client_warning">عفوا لايمكن اتمام العملية, الدعوى لابد من وجود عميل واحد على الاقل</string>
     <string name="delivery_vat_total_text">إجمالى رسوم التوصيل</string>
     <string name="tv_account_billing_total_text">إجمالى الفواتير المدفوعة</string>
     <string name="tv_account_order_num_text">عدد الطلبات</string>
@@ -281,7 +281,7 @@
     <string name="seeker">باحث عن عقار</string>
     <string name="payment_title">الدفع</string>
     <string name="annual_register">قيمة الإشتراك السنوي</string>
-    <string name="option_dialog_delete">هل أنت متأكد ان الإعلان مخالف ؟</string>
+    <string name="option_dialog_delete">هل أنت متأكد ؟</string>
     <string name="option_dialog_title">تحذير</string>
     <string name="no">لا</string>
     <string name="report">إبلاغ</string>
@@ -441,5 +441,7 @@
     <string name="case_details">تفاصيل الدعوى</string>
     <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
     <string name="edit_case">تعديل الدعوي</string>
+    <string name="add_new_khesm">إضافة خصم</string>
+    <string name="session_search_hint">Looking for a session</string>
 
 </resources>

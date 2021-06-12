@@ -14,9 +14,12 @@ import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
+import te.app.evidence.pages.clients.models.AddClientRequest;
+import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
+import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -83,4 +86,28 @@ public class CasesRepository extends BaseRepository {
                 Constants.CASE_DETAILS, true);
     }
 
+    public Disposable getCaseClients(int caseId, String type) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_CLIENTS + caseId + "/" + type, new Object(), ClientsResponse.class,
+                Constants.CLIENTS, true);
+    }
+
+    public Disposable deleteClientFromCase(AddClientRequest addClientRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.DELETE_CLIENT_FROM_CASE, addClientRequest, StatusMessage.class,
+                Constants.DELETE_CLIENT, true);
+    }
+
+    public Disposable getCaseSessions(int caseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSIONS + caseId, new Object(), CaseSessionsResponse.class,
+                Constants.CASE_SESSIONS, true);
+    }
+
+    public Disposable ChangeSessionStatus(int sessionId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHANGE_SESSION_STATUS + sessionId, new Object(), ChangeStatusResponse.class,
+                Constants.CHANGE_STATUS, true);
+    }
+
+    public Disposable deleteSession(int sessionId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_SESSION + sessionId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
 }

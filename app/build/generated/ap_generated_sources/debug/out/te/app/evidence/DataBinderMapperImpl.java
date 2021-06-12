@@ -27,6 +27,7 @@ import te.app.evidence.databinding.FragmentAddNoteBindingImpl;
 import te.app.evidence.databinding.FragmentAddUserBindingImpl;
 import te.app.evidence.databinding.FragmentAttachmentsBindingImpl;
 import te.app.evidence.databinding.FragmentBailiffsBindingImpl;
+import te.app.evidence.databinding.FragmentCaseClientsBindingImpl;
 import te.app.evidence.databinding.FragmentCaseDetailsBindingImpl;
 import te.app.evidence.databinding.FragmentCasesBindingImpl;
 import te.app.evidence.databinding.FragmentCategoriesBindingImpl;
@@ -42,9 +43,11 @@ import te.app.evidence.databinding.FragmentOnboardBindingImpl;
 import te.app.evidence.databinding.FragmentProfileBindingImpl;
 import te.app.evidence.databinding.FragmentReporterDetailsBindingImpl;
 import te.app.evidence.databinding.FragmentSearchClientsBindingImpl;
+import te.app.evidence.databinding.FragmentSessionsBindingImpl;
 import te.app.evidence.databinding.FragmentSplashBindingImpl;
 import te.app.evidence.databinding.FragmentUserPermissionBindingImpl;
 import te.app.evidence.databinding.FragmentUsersBindingImpl;
+import te.app.evidence.databinding.ItemAllCaseBindingImpl;
 import te.app.evidence.databinding.ItemAttachmentBindingImpl;
 import te.app.evidence.databinding.ItemBailiffsBindingImpl;
 import te.app.evidence.databinding.ItemCaseBindingImpl;
@@ -87,75 +90,81 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTBAILIFFS = 12;
 
-  private static final int LAYOUT_FRAGMENTCASEDETAILS = 13;
+  private static final int LAYOUT_FRAGMENTCASECLIENTS = 13;
 
-  private static final int LAYOUT_FRAGMENTCASES = 14;
+  private static final int LAYOUT_FRAGMENTCASEDETAILS = 14;
 
-  private static final int LAYOUT_FRAGMENTCATEGORIES = 15;
+  private static final int LAYOUT_FRAGMENTCASES = 15;
 
-  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 16;
+  private static final int LAYOUT_FRAGMENTCATEGORIES = 16;
 
-  private static final int LAYOUT_FRAGMENTCLIENTPROFILE = 17;
+  private static final int LAYOUT_FRAGMENTCHANGEPASSWORD = 17;
 
-  private static final int LAYOUT_FRAGMENTCLIENTS = 18;
+  private static final int LAYOUT_FRAGMENTCLIENTPROFILE = 18;
 
-  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 19;
+  private static final int LAYOUT_FRAGMENTCLIENTS = 19;
 
-  private static final int LAYOUT_FRAGMENTEDITCASE = 20;
+  private static final int LAYOUT_FRAGMENTCONFIRMCODE = 20;
 
-  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 21;
+  private static final int LAYOUT_FRAGMENTEDITCASE = 21;
 
-  private static final int LAYOUT_FRAGMENTHOME = 22;
+  private static final int LAYOUT_FRAGMENTFORGETPASSWORD = 22;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 23;
+  private static final int LAYOUT_FRAGMENTHOME = 23;
 
-  private static final int LAYOUT_FRAGMENTONBOARD = 24;
+  private static final int LAYOUT_FRAGMENTLOGIN = 24;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 25;
+  private static final int LAYOUT_FRAGMENTONBOARD = 25;
 
-  private static final int LAYOUT_FRAGMENTREPORTERDETAILS = 26;
+  private static final int LAYOUT_FRAGMENTPROFILE = 26;
 
-  private static final int LAYOUT_FRAGMENTSEARCHCLIENTS = 27;
+  private static final int LAYOUT_FRAGMENTREPORTERDETAILS = 27;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 28;
+  private static final int LAYOUT_FRAGMENTSEARCHCLIENTS = 28;
 
-  private static final int LAYOUT_FRAGMENTUSERPERMISSION = 29;
+  private static final int LAYOUT_FRAGMENTSESSIONS = 29;
 
-  private static final int LAYOUT_FRAGMENTUSERS = 30;
+  private static final int LAYOUT_FRAGMENTSPLASH = 30;
 
-  private static final int LAYOUT_ITEMATTACHMENT = 31;
+  private static final int LAYOUT_FRAGMENTUSERPERMISSION = 31;
 
-  private static final int LAYOUT_ITEMBAILIFFS = 32;
+  private static final int LAYOUT_FRAGMENTUSERS = 32;
 
-  private static final int LAYOUT_ITEMCASE = 33;
+  private static final int LAYOUT_ITEMALLCASE = 33;
 
-  private static final int LAYOUT_ITEMCATEGORY = 34;
+  private static final int LAYOUT_ITEMATTACHMENT = 34;
 
-  private static final int LAYOUT_ITEMCLIENTSEARCH = 35;
+  private static final int LAYOUT_ITEMBAILIFFS = 35;
 
-  private static final int LAYOUT_ITEMCLIENTTAGS = 36;
+  private static final int LAYOUT_ITEMCASE = 36;
 
-  private static final int LAYOUT_ITEMCLIENTS = 37;
+  private static final int LAYOUT_ITEMCATEGORY = 37;
 
-  private static final int LAYOUT_ITEMHOMEREPORTER = 38;
+  private static final int LAYOUT_ITEMCLIENTSEARCH = 38;
 
-  private static final int LAYOUT_ITEMMOHDR = 39;
+  private static final int LAYOUT_ITEMCLIENTTAGS = 39;
 
-  private static final int LAYOUT_ITEMNOTE = 40;
+  private static final int LAYOUT_ITEMCLIENTS = 40;
 
-  private static final int LAYOUT_ITEMSESSION = 41;
+  private static final int LAYOUT_ITEMHOMEREPORTER = 41;
 
-  private static final int LAYOUT_ITEMUSER = 42;
+  private static final int LAYOUT_ITEMMOHDR = 42;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 43;
+  private static final int LAYOUT_ITEMNOTE = 43;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 44;
+  private static final int LAYOUT_ITEMSESSION = 44;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 45;
+  private static final int LAYOUT_ITEMUSER = 45;
 
-  private static final int LAYOUT_OPTIONDIALOG = 46;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 46;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(46);
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 47;
+
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 48;
+
+  private static final int LAYOUT_OPTIONDIALOG = 49;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(49);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -170,6 +179,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_add_user, LAYOUT_FRAGMENTADDUSER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_attachments, LAYOUT_FRAGMENTATTACHMENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_bailiffs, LAYOUT_FRAGMENTBAILIFFS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_case_clients, LAYOUT_FRAGMENTCASECLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_case_details, LAYOUT_FRAGMENTCASEDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_cases, LAYOUT_FRAGMENTCASES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_categories, LAYOUT_FRAGMENTCATEGORIES);
@@ -185,9 +195,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_reporter_details, LAYOUT_FRAGMENTREPORTERDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_search_clients, LAYOUT_FRAGMENTSEARCHCLIENTS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_sessions, LAYOUT_FRAGMENTSESSIONS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_splash, LAYOUT_FRAGMENTSPLASH);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_user_permission, LAYOUT_FRAGMENTUSERPERMISSION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_users, LAYOUT_FRAGMENTUSERS);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_all_case, LAYOUT_ITEMALLCASE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_attachment, LAYOUT_ITEMATTACHMENT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_bailiffs, LAYOUT_ITEMBAILIFFS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_case, LAYOUT_ITEMCASE);
@@ -287,6 +299,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_bailiffs is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTCASECLIENTS: {
+          if ("layout/fragment_case_clients_0".equals(tag)) {
+            return new FragmentCaseClientsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_case_clients is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTCASEDETAILS: {
           if ("layout/fragment_case_details_0".equals(tag)) {
             return new FragmentCaseDetailsBindingImpl(component, view);
@@ -377,6 +395,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           }
           throw new IllegalArgumentException("The tag for fragment_search_clients is invalid. Received: " + tag);
         }
+        case  LAYOUT_FRAGMENTSESSIONS: {
+          if ("layout/fragment_sessions_0".equals(tag)) {
+            return new FragmentSessionsBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_sessions is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTSPLASH: {
           if ("layout/fragment_splash_0".equals(tag)) {
             return new FragmentSplashBindingImpl(component, view);
@@ -394,6 +418,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentUsersBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_users is invalid. Received: " + tag);
+        }
+        case  LAYOUT_ITEMALLCASE: {
+          if ("layout/item_all_case_0".equals(tag)) {
+            return new ItemAllCaseBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for item_all_case is invalid. Received: " + tag);
         }
         case  LAYOUT_ITEMATTACHMENT: {
           if ("layout/item_attachment_0".equals(tag)) {
@@ -579,7 +609,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(46);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(49);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -594,6 +624,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_add_user_0", te.app.evidence.R.layout.fragment_add_user);
       sKeys.put("layout/fragment_attachments_0", te.app.evidence.R.layout.fragment_attachments);
       sKeys.put("layout/fragment_bailiffs_0", te.app.evidence.R.layout.fragment_bailiffs);
+      sKeys.put("layout/fragment_case_clients_0", te.app.evidence.R.layout.fragment_case_clients);
       sKeys.put("layout/fragment_case_details_0", te.app.evidence.R.layout.fragment_case_details);
       sKeys.put("layout/fragment_cases_0", te.app.evidence.R.layout.fragment_cases);
       sKeys.put("layout/fragment_categories_0", te.app.evidence.R.layout.fragment_categories);
@@ -609,9 +640,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_profile_0", te.app.evidence.R.layout.fragment_profile);
       sKeys.put("layout/fragment_reporter_details_0", te.app.evidence.R.layout.fragment_reporter_details);
       sKeys.put("layout/fragment_search_clients_0", te.app.evidence.R.layout.fragment_search_clients);
+      sKeys.put("layout/fragment_sessions_0", te.app.evidence.R.layout.fragment_sessions);
       sKeys.put("layout/fragment_splash_0", te.app.evidence.R.layout.fragment_splash);
       sKeys.put("layout/fragment_user_permission_0", te.app.evidence.R.layout.fragment_user_permission);
       sKeys.put("layout/fragment_users_0", te.app.evidence.R.layout.fragment_users);
+      sKeys.put("layout/item_all_case_0", te.app.evidence.R.layout.item_all_case);
       sKeys.put("layout/item_attachment_0", te.app.evidence.R.layout.item_attachment);
       sKeys.put("layout/item_bailiffs_0", te.app.evidence.R.layout.item_bailiffs);
       sKeys.put("layout/item_case_0", te.app.evidence.R.layout.item_case);

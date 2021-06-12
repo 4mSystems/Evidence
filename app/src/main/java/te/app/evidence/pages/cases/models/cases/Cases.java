@@ -20,6 +20,10 @@ public class Cases {
 
     @SerializedName("court")
     private String court;
+    @SerializedName("clients")
+    private String clients;
+    @SerializedName("khesms")
+    private String khesms;
 
     @SerializedName("invetation_num")
     private String invetationNum;
@@ -52,5 +56,13 @@ public class Cases {
 
     public Category getCategory() {
         return category;
+    }
+
+    public String getClients() {
+        return clients;
+    }
+
+    public String getKhesms() {
+        return khesms;
     }
 }

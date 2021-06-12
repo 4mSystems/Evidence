@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemSessionBindingImpl extends ItemSessionBinding  {
+public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,47 +14,70 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_username, 5);
-        sViewsWithIds.put(R.id.v9, 6);
-        sViewsWithIds.put(R.id.session_date_text, 7);
-        sViewsWithIds.put(R.id.v2, 8);
-        sViewsWithIds.put(R.id.session_status_text, 9);
-        sViewsWithIds.put(R.id.v3, 10);
-        sViewsWithIds.put(R.id.session_month_text, 11);
+        sViewsWithIds.put(R.id.session_date_text, 13);
+        sViewsWithIds.put(R.id.v2, 14);
+        sViewsWithIds.put(R.id.session_status_text, 15);
+        sViewsWithIds.put(R.id.br_status, 16);
+        sViewsWithIds.put(R.id.v3, 17);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
+    @NonNull
+    private final androidx.constraintlayout.helper.widget.Flow mboundView12;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback49;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback50;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback48;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemSessionBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
     }
     private ItemSessionBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
+            , (androidx.constraintlayout.widget.Barrier) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
-            , (android.view.View) bindings[8]
-            , (android.view.View) bindings[10]
-            , (android.view.View) bindings[6]
+            , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[17]
+            , (android.view.View) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
             );
+        this.delete.setTag(null);
+        this.edit.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView12 = (androidx.constraintlayout.helper.widget.Flow) bindings[12];
+        this.mboundView12.setTag(null);
         this.sessionCaseNumber.setTag(null);
         this.sessionDateValue.setTag(null);
+        this.sessionMonthText.setTag(null);
         this.sessionMonthValue.setTag(null);
         this.sessionStatusValue.setTag(null);
+        this.statusValue.setTag(null);
+        this.tvUsername.setTag(null);
+        this.v9.setTag(null);
+        this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -129,12 +152,16 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.sessions.SessionItem itemViewModelSessionItem = null;
+        te.app.evidence.pages.sessions.models.SessionItem itemViewModelSessionItem = null;
+        boolean textUtilsIsEmptyItemViewModelSessionItemInvetationNum = false;
+        int textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE = 0;
+        java.lang.String itemViewModelSessionItemSessionDate = null;
+        int TextUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE1 = 0;
+        java.lang.String itemViewModelSessionItemMonth = null;
         te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelSessionItemStatus = null;
         java.lang.String itemViewModelSessionItemInvetationNum = null;
-        java.lang.String itemViewModelSessionItemSessionDate = null;
-        java.lang.String itemViewModelSessionItemMonth = null;
+        boolean TextUtilsIsEmptyItemViewModelSessionItemInvetationNum1 = false;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -147,34 +174,145 @@ public class ItemSessionBindingImpl extends ItemSessionBinding  {
 
 
                 if (itemViewModelSessionItem != null) {
-                    // read itemViewModel.sessionItem.status
-                    itemViewModelSessionItemStatus = itemViewModelSessionItem.getStatus();
-                    // read itemViewModel.sessionItem.invetation_num
-                    itemViewModelSessionItemInvetationNum = itemViewModelSessionItem.getInvetation_num();
                     // read itemViewModel.sessionItem.sessionDate
                     itemViewModelSessionItemSessionDate = itemViewModelSessionItem.getSessionDate();
                     // read itemViewModel.sessionItem.month
                     itemViewModelSessionItemMonth = itemViewModelSessionItem.getMonth();
+                    // read itemViewModel.sessionItem.status
+                    itemViewModelSessionItemStatus = itemViewModelSessionItem.getStatus();
+                    // read itemViewModel.sessionItem.invetation_num
+                    itemViewModelSessionItemInvetationNum = itemViewModelSessionItem.getInvetation_num();
                 }
+
+
+                // read TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)
+                textUtilsIsEmptyItemViewModelSessionItemInvetationNum = android.text.TextUtils.isEmpty(itemViewModelSessionItemInvetationNum);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyItemViewModelSessionItemInvetationNum) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
+                TextUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE1 = ((textUtilsIsEmptyItemViewModelSessionItemInvetationNum) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read !TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)
+                TextUtilsIsEmptyItemViewModelSessionItemInvetationNum1 = !textUtilsIsEmptyItemViewModelSessionItemInvetationNum;
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyItemViewModelSessionItemInvetationNum1) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read !TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE = ((TextUtilsIsEmptyItemViewModelSessionItemInvetationNum1) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.delete.setOnClickListener(mCallback48);
+            this.edit.setOnClickListener(mCallback49);
+            this.viewValue.setOnClickListener(mCallback50);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
+            this.mboundView12.setVisibility(TextUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE1);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelSessionItemInvetationNum);
+            this.sessionCaseNumber.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionDateValue, itemViewModelSessionItemSessionDate);
+            this.sessionMonthText.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelSessionItemMonth);
+            this.sessionMonthValue.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionStatusValue, itemViewModelSessionItemStatus);
+            this.sessionStatusValue.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelSessionItemStatus);
+            this.statusValue.setVisibility(TextUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE1);
+            this.tvUsername.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
+            this.v9.setVisibility(textUtilsIsEmptyItemViewModelSessionItemInvetationNumViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.NOTES);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.sessionItem
         flag 2 (0x3L): null
+        flag 3 (0x4L): !TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): !TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num) ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

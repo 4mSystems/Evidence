@@ -61,6 +61,9 @@ public class BaseFragment extends Fragment {
     public void toastMessage(String message) {
         ((ParentActivity) context).toastMessage(message, R.drawable.ic_check_white_24dp, R.color.successColor);
     }
+ public void toastErrorMessage(String message) {
+        ((ParentActivity) context).toastError(message);
+    }
 
 
     protected void finishActivity() {

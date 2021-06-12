@@ -6,16 +6,28 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
 
 public abstract class ItemSessionBinding extends ViewDataBinding {
+  @NonNull
+  public final Barrier brStatus;
+
+  @NonNull
+  public final CustomTextViewRegular delete;
+
+  @NonNull
+  public final CustomTextViewRegular edit;
+
   @NonNull
   public final CustomTextViewMedium sessionCaseNumber;
 
@@ -38,6 +50,9 @@ public abstract class ItemSessionBinding extends ViewDataBinding {
   public final CustomTextViewMedium sessionStatusValue;
 
   @NonNull
+  public final MaterialButton statusValue;
+
+  @NonNull
   public final CustomTextViewMedium tvUsername;
 
   @NonNull
@@ -49,16 +64,23 @@ public abstract class ItemSessionBinding extends ViewDataBinding {
   @NonNull
   public final View v9;
 
+  @NonNull
+  public final CustomTextViewRegular viewValue;
+
   @Bindable
   protected SessionItemViewModel mItemViewModel;
 
   protected ItemSessionBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      Barrier brStatus, CustomTextViewRegular delete, CustomTextViewRegular edit,
       CustomTextViewMedium sessionCaseNumber, CustomTextViewMedium sessionDateText,
       CustomTextViewMedium sessionDateValue, CustomTextViewMedium sessionMonthText,
       CustomTextViewMedium sessionMonthValue, CustomTextViewMedium sessionStatusText,
-      CustomTextViewMedium sessionStatusValue, CustomTextViewMedium tvUsername, View v2, View v3,
-      View v9) {
+      CustomTextViewMedium sessionStatusValue, MaterialButton statusValue,
+      CustomTextViewMedium tvUsername, View v2, View v3, View v9, CustomTextViewRegular viewValue) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.brStatus = brStatus;
+    this.delete = delete;
+    this.edit = edit;
     this.sessionCaseNumber = sessionCaseNumber;
     this.sessionDateText = sessionDateText;
     this.sessionDateValue = sessionDateValue;
@@ -66,10 +88,12 @@ public abstract class ItemSessionBinding extends ViewDataBinding {
     this.sessionMonthValue = sessionMonthValue;
     this.sessionStatusText = sessionStatusText;
     this.sessionStatusValue = sessionStatusValue;
+    this.statusValue = statusValue;
     this.tvUsername = tvUsername;
     this.v2 = v2;
     this.v3 = v3;
     this.v9 = v9;
+    this.viewValue = viewValue;
   }
 
   public abstract void setItemViewModel(@Nullable SessionItemViewModel itemViewModel);

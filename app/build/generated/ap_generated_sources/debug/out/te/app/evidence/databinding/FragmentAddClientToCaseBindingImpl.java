@@ -24,11 +24,11 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     private final androidx.appcompat.widget.AppCompatButton mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback77;
     @Nullable
-    private final android.view.View.OnClickListener mCallback63;
+    private final android.view.View.OnClickListener mCallback76;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback75;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -59,9 +59,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         this.tvKhesm.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback63 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback77 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback76 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback75 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -174,17 +174,17 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
         androidx.databinding.ObservableField<java.lang.Boolean> viewmodelLoader = null;
         boolean androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet = false;
-        int viewmodelPassingObjectIdInt0ViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelAddCaseRequestKhesmErrorGet = null;
+        boolean viewmodelPassingObjectObjectEqualsConstantsKhesm = false;
         boolean viewmodelLoaderBooleanFalse = false;
-        int ViewmodelPassingObjectIdInt0ViewVISIBLEViewGONE1 = 0;
         java.lang.Boolean viewmodelLoaderGet = null;
-        boolean viewmodelPassingObjectIdInt0 = false;
+        java.lang.String viewmodelPassingObjectObject = null;
+        boolean viewmodelPassingObjectObjectEqualsConstantsClient = false;
         boolean viewmodelLoaderBooleanTrue = false;
-        int viewmodelPassingObjectId = 0;
+        int viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestKhesmError = null;
+        int viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE = 0;
         int viewmodelLoaderBooleanFalseViewGONEViewVISIBLE = 0;
-        boolean ViewmodelPassingObjectIdInt01 = false;
         java.lang.String viewmodelAddCaseRequestMokelErrorGet = null;
         int viewmodelLoaderBooleanTrueViewGONEViewVISIBLE = 0;
         te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
@@ -201,37 +201,39 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
 
 
                     if (viewmodelPassingObject != null) {
-                        // read viewmodel.passingObject.id
-                        viewmodelPassingObjectId = viewmodelPassingObject.getId();
+                        // read viewmodel.passingObject.object
+                        viewmodelPassingObjectObject = viewmodelPassingObject.getObject();
                     }
 
 
-                    // read viewmodel.passingObject.id != 0
-                    viewmodelPassingObjectIdInt0 = (viewmodelPassingObjectId) != (0);
-                    // read viewmodel.passingObject.id == 0
-                    ViewmodelPassingObjectIdInt01 = (viewmodelPassingObjectId) == (0);
-                if((dirtyFlags & 0x38L) != 0) {
-                    if(viewmodelPassingObjectIdInt0) {
-                            dirtyFlags |= 0x200L;
+                    if (viewmodelPassingObjectObject != null) {
+                        // read viewmodel.passingObject.object.equals(Constants.khesm)
+                        viewmodelPassingObjectObjectEqualsConstantsKhesm = viewmodelPassingObjectObject.equals(te.app.evidence.utils.Constants.khesm);
+                        // read viewmodel.passingObject.object.equals(Constants.client)
+                        viewmodelPassingObjectObjectEqualsConstantsClient = viewmodelPassingObjectObject.equals(te.app.evidence.utils.Constants.client);
                     }
-                    else {
-                            dirtyFlags |= 0x100L;
-                    }
-                }
                 if((dirtyFlags & 0x38L) != 0) {
-                    if(ViewmodelPassingObjectIdInt01) {
+                    if(viewmodelPassingObjectObjectEqualsConstantsKhesm) {
                             dirtyFlags |= 0x80L;
                     }
                     else {
                             dirtyFlags |= 0x40L;
                     }
                 }
+                if((dirtyFlags & 0x38L) != 0) {
+                    if(viewmodelPassingObjectObjectEqualsConstantsClient) {
+                            dirtyFlags |= 0x200L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100L;
+                    }
+                }
 
 
-                    // read viewmodel.passingObject.id != 0 ? View.VISIBLE : View.GONE
-                    ViewmodelPassingObjectIdInt0ViewVISIBLEViewGONE1 = ((viewmodelPassingObjectIdInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
-                    // read viewmodel.passingObject.id == 0 ? View.VISIBLE : View.GONE
-                    viewmodelPassingObjectIdInt0ViewVISIBLEViewGONE = ((ViewmodelPassingObjectIdInt01) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
+                    viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsConstantsKhesm) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
+                    viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsConstantsClient) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0x2dL) != 0) {
 
@@ -320,10 +322,10 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         if ((dirtyFlags & 0x38L) != 0) {
             // api target 1
 
-            this.clients.setVisibility(viewmodelPassingObjectIdInt0ViewVISIBLEViewGONE);
-            this.inputKhesms.setVisibility(ViewmodelPassingObjectIdInt0ViewVISIBLEViewGONE1);
-            this.tvClients.setVisibility(viewmodelPassingObjectIdInt0ViewVISIBLEViewGONE);
-            this.tvKhesm.setVisibility(ViewmodelPassingObjectIdInt0ViewVISIBLEViewGONE1);
+            this.clients.setVisibility(viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE);
+            this.inputKhesms.setVisibility(viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE);
+            this.tvClients.setVisibility(viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE);
+            this.tvKhesm.setVisibility(viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x29L) != 0) {
             // api target 1
@@ -333,9 +335,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.inputClients.setOnClickListener(mCallback61);
-            this.inputKhesm.setOnClickListener(mCallback62);
-            this.mboundView8.setOnClickListener(mCallback63);
+            this.inputClients.setOnClickListener(mCallback75);
+            this.inputKhesm.setOnClickListener(mCallback76);
+            this.mboundView8.setOnClickListener(mCallback77);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -353,6 +355,23 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createCase();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -369,23 +388,6 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
 
 
                     viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createCase();
                 }
                 break;
             }
@@ -419,10 +421,10 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         flag 3 (0x4L): viewmodel
         flag 4 (0x5L): viewmodel.passingObject
         flag 5 (0x6L): null
-        flag 6 (0x7L): viewmodel.passingObject.id == 0 ? View.VISIBLE : View.GONE
-        flag 7 (0x8L): viewmodel.passingObject.id == 0 ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): viewmodel.passingObject.id != 0 ? View.VISIBLE : View.GONE
-        flag 9 (0xaL): viewmodel.passingObject.id != 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
         flag 10 (0xbL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
         flag 11 (0xcL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
         flag 12 (0xdL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE

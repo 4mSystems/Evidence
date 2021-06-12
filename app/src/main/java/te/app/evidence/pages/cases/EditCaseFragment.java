@@ -1,7 +1,6 @@
 package te.app.evidence.pages.cases;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,8 +29,6 @@ import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetails;
 import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
-import te.app.evidence.pages.clients.models.Clients;
-import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -54,6 +51,7 @@ public class EditCaseFragment extends BaseFragment {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
             viewModel.setCaseDetails(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), CaseDetails.class));
+            binding.inputCat.setText(viewModel.getCaseDetails().getCaseData().getCategory().getName());
         }
         viewModel.getCasesClientsCategories();
         setEvent();
@@ -71,7 +69,7 @@ public class EditCaseFragment extends BaseFragment {
                     showCategories();
             } else if (Constants.EDIT_CASE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                //TODO Update case not working and want to make category return from backend
+                //TODO Update case not working
                 MovementHelper.finishWithResult(new PassingObject(((AddCaseResponse) mutable.object).getData()), context, Constants.EDIT_CASE_REQUEST);
             }
         });

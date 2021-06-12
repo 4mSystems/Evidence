@@ -111,7 +111,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.clients.adapters.ClientCasesAdapter viewmodelCasesAdapter = null;
+        te.app.evidence.pages.cases.adapters.AllCasesAdapter viewmodelCasesAdapter = null;
         te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x7L) != 0) {

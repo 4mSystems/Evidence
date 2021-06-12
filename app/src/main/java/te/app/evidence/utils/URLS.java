@@ -52,4 +52,9 @@ public class URLS {
     public static final String EDIT_CASE = "edit_Case";
     public static final String ALL_CASES = "Cases";
     public static final String CASE_DETAILS = "caseData/";
+    public static final String CASE_CLIENTS = "caseClients/data_by_id/";
+    public static final String DELETE_CLIENT_FROM_CASE = "caseClients/destroy";
+    public static final String CASE_SESSIONS = "case/sessions/";
+    public static final String CHANGE_SESSION_STATUS = "changeSessionStatus/";
+    public static final String DELETE_SESSION = "deleteSession/";
 }

@@ -9,10 +9,9 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.cases.adapters.AllCasesAdapter;
 import te.app.evidence.pages.cases.adapters.InputTagClientsAdapter;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetails;
-import te.app.evidence.pages.cases.models.cases.Cases;
-import te.app.evidence.pages.clients.adapters.ClientCasesAdapter;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 
@@ -22,7 +21,7 @@ public class CasesViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     CasesRepository casesRepository;
-    ClientCasesAdapter casesAdapter;
+    AllCasesAdapter casesAdapter;
     CaseDetails caseDetails;
     private int selectedBtn = 0;
     InputTagClientsAdapter clientsAdapter;
@@ -56,8 +55,8 @@ public class CasesViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public ClientCasesAdapter getCasesAdapter() {
-        return this.casesAdapter == null ? this.casesAdapter = new ClientCasesAdapter() : this.casesAdapter;
+    public AllCasesAdapter getCasesAdapter() {
+        return this.casesAdapter == null ? this.casesAdapter = new AllCasesAdapter() : this.casesAdapter;
     }
 
     @Bindable
@@ -72,7 +71,7 @@ public class CasesViewModel extends BaseViewModel {
 
     @Bindable
     public void setCaseDetails(CaseDetails caseDetails) {
-        getClientsAdapter().update(caseDetails.getClients());
+//        getClientsAdapter().update(caseDetails.getClients());
         notifyChange(BR.caseDetails);
         this.caseDetails = caseDetails;
     }

@@ -4,6 +4,8 @@ public class Constants {
 
     public static final String CLIENTS = "CLIENTS";
     public static final String KHESM = "KHESM";
+    public static final String client = "client";
+    public static final String khesm = "khesm";
     public static final String ADD_CLIENTS = "ADD_CLIENTS";
     public static final String SHOW_CATEGORIES = "SHOW_CATEGORIES";
 
@@ -110,7 +112,7 @@ public class Constants {
     public static final String TERMS = "terms";
     public static final String FIELD = "FIELD";
     public static final String LOGIN = "login";
-    public static final String REMOVE_VIDEO = "REMOVE_VIDEO";
+    public static final String NOTES = "NOTES";
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String WARNING = "WARNING";
     public static final String PROFILE_DATA = "PROFILE_DATA";

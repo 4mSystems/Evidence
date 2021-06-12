@@ -100,6 +100,7 @@ public class AddCaseViewModel extends BaseViewModel {
         getAddCaseRequest().setInvetation_num(caseDetails.getCaseData().getInvetationNum());
         getAddCaseRequest().setCourt(caseDetails.getCaseData().getCourt());
         getAddCaseRequest().setCaseId(String.valueOf(caseDetails.getCaseData().getId()));
+        getAddCaseRequest().setTo_whome(String.valueOf(caseDetails.getCaseData().getCategory().getId()));
         getAddCaseRequest().setInventation_type(caseDetails.getCaseData().getInventationType());
         notifyChange(BR.caseDetails);
         this.caseDetails = caseDetails;

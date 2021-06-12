@@ -4,7 +4,7 @@ import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 import te.app.evidence.pages.mohdrs.models.ReportersData;
-import te.app.evidence.pages.sessions.SessionItem;
+import te.app.evidence.pages.sessions.models.SessionItem;
 
 public class HomeData {
 

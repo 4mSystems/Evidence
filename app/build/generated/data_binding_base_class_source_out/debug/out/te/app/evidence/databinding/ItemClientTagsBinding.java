@@ -6,20 +6,58 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
+import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
 
 public abstract class ItemClientTagsBinding extends ViewDataBinding {
+  @NonNull
+  public final CustomTextViewRegular attachments;
+
+  @NonNull
+  public final Barrier br5;
+
+  @NonNull
+  public final CustomTextViewRegular delete;
+
+  @NonNull
+  public final CustomTextViewMedium nameText;
+
+  @NonNull
+  public final CustomTextViewRegular nameValue;
+
+  @NonNull
+  public final CustomTextViewRegular permission;
+
+  @NonNull
+  public final View v1;
+
+  @NonNull
+  public final View v8;
+
   @Bindable
   protected ClientsItemViewModel mItemViewModel;
 
-  protected ItemClientTagsBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected ItemClientTagsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      CustomTextViewRegular attachments, Barrier br5, CustomTextViewRegular delete,
+      CustomTextViewMedium nameText, CustomTextViewRegular nameValue,
+      CustomTextViewRegular permission, View v1, View v8) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.attachments = attachments;
+    this.br5 = br5;
+    this.delete = delete;
+    this.nameText = nameText;
+    this.nameValue = nameValue;
+    this.permission = permission;
+    this.v1 = v1;
+    this.v8 = v8;
   }
 
   public abstract void setItemViewModel(@Nullable ClientsItemViewModel itemViewModel);

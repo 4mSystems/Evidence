@@ -3127,6 +3127,7 @@ drawable ic_play_icon
 drawable ic_reports
 drawable ic_search
 drawable ic_select_all
+drawable ic_session_notes
 drawable ic_swap_vert_24dp
 drawable ic_upload_folder
 drawable ic_user_delete
@@ -3298,6 +3299,7 @@ id bounce
 id br3
 id br4
 id br5
+id br_status
 id btn_airplane_off
 id btn_mobile_on
 id btn_save
@@ -3844,6 +3846,7 @@ id v9
 id vertical
 id video_icon
 id viewPager
+id view_attachments
 id view_casee
 id view_clients
 id view_id
@@ -3960,6 +3963,7 @@ layout fragment_add_note
 layout fragment_add_user
 layout fragment_attachments
 layout fragment_bailiffs
+layout fragment_case_clients
 layout fragment_case_details
 layout fragment_cases
 layout fragment_categories
@@ -3979,9 +3983,11 @@ layout fragment_photo_picker
 layout fragment_profile
 layout fragment_reporter_details
 layout fragment_search_clients
+layout fragment_sessions
 layout fragment_splash
 layout fragment_user_permission
 layout fragment_users
+layout item_all_case
 layout item_attachment
 layout item_bailiffs
 layout item_case
@@ -4128,7 +4134,6 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about
 string about_title
-string account_balance
 string account_my_ads
 string account_verified
 string action_settings
@@ -4154,6 +4159,7 @@ string add_info_title
 string add_new_attach
 string add_new_category
 string add_new_client
+string add_new_khesm
 string add_new_note
 string add_new_user
 string add_success_added
@@ -4245,6 +4251,7 @@ string client_search_hint
 string client_selected
 string client_unit
 string client_unselected
+string client_warning
 string clients
 string coin
 string comment
@@ -4607,6 +4614,7 @@ string send_offer_warning_waiting
 string send_order
 string services
 string session_date
+string session_search_hint
 string sessions
 string settings
 string share

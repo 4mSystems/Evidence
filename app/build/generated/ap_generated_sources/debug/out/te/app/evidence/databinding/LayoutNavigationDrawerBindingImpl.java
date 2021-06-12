@@ -47,21 +47,21 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback49;
+    private final android.view.View.OnClickListener mCallback69;
     @Nullable
-    private final android.view.View.OnClickListener mCallback47;
+    private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback45;
+    private final android.view.View.OnClickListener mCallback72;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback70;
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback48;
+    private final android.view.View.OnClickListener mCallback66;
     @Nullable
-    private final android.view.View.OnClickListener mCallback46;
+    private final android.view.View.OnClickListener mCallback73;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback71;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -111,14 +111,14 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         this.vvNavigationDrawerImage.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback72 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback70 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback73 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
+        mCallback71 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
@@ -220,14 +220,14 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.addCase.setOnClickListener(mCallback45);
-            this.mboundView10.setOnClickListener(mCallback49);
-            this.mboundView3.setOnClickListener(mCallback42);
-            this.mboundView4.setOnClickListener(mCallback43);
-            this.mboundView5.setOnClickListener(mCallback44);
-            this.mboundView8.setOnClickListener(mCallback47);
-            this.mboundView9.setOnClickListener(mCallback48);
-            this.searchCase.setOnClickListener(mCallback46);
+            this.addCase.setOnClickListener(mCallback69);
+            this.mboundView10.setOnClickListener(mCallback73);
+            this.mboundView3.setOnClickListener(mCallback66);
+            this.mboundView4.setOnClickListener(mCallback67);
+            this.mboundView5.setOnClickListener(mCallback68);
+            this.mboundView8.setOnClickListener(mCallback71);
+            this.mboundView9.setOnClickListener(mCallback72);
+            this.searchCase.setOnClickListener(mCallback70);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -240,40 +240,6 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 8: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-                    menuViewModel.changeLanguage();
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-                    menuViewModel.toReporters();
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // menuViewModel
@@ -305,23 +271,6 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                     menuViewModel.toUsers();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-                    menuViewModel.toHome();
                 }
                 break;
             }
@@ -373,6 +322,57 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                     menuViewModel.toClients();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.toHome();
+                }
+                break;
+            }
+            case 8: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.changeLanguage();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.toReporters();
                 }
                 break;
             }

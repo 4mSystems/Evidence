@@ -119,6 +119,9 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
   public final View v7;
 
   @NonNull
+  public final PercentageChartView viewAttachments;
+
+  @NonNull
   public final PercentageChartView viewClients;
 
   @NonNull
@@ -129,9 +132,6 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
 
   @NonNull
   public final PercentageChartView viewMohdr;
-
-  @NonNull
-  public final PercentageChartView viewUsers;
 
   @Bindable
   protected CasesViewModel mViewmodel;
@@ -148,9 +148,9 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
       CustomTextViewMedium sessionDateText, CustomTextViewRegular sessionMonthValue,
       CustomTextViewMedium statusText, CustomTextViewRegular statusValue,
       CustomTextViewRegular tvInvetationNum, CustomTextViewMedium tvInvetationNumText, View v1,
-      View v2, View v3, View v6, View v7, PercentageChartView viewClients,
-      PercentageChartView viewId, PercentageChartView viewKhesm, PercentageChartView viewMohdr,
-      PercentageChartView viewUsers) {
+      View v2, View v3, View v6, View v7, PercentageChartView viewAttachments,
+      PercentageChartView viewClients, PercentageChartView viewId, PercentageChartView viewKhesm,
+      PercentageChartView viewMohdr) {
     super(_bindingComponent, _root, _localFieldCount);
     this.clientCases = clientCases;
     this.clientData = clientData;
@@ -184,11 +184,11 @@ public abstract class FragmentCaseDetailsBinding extends ViewDataBinding {
     this.v3 = v3;
     this.v6 = v6;
     this.v7 = v7;
+    this.viewAttachments = viewAttachments;
     this.viewClients = viewClients;
     this.viewId = viewId;
     this.viewKhesm = viewKhesm;
     this.viewMohdr = viewMohdr;
-    this.viewUsers = viewUsers;
   }
 
   public abstract void setViewmodel(@Nullable CasesViewModel viewmodel);

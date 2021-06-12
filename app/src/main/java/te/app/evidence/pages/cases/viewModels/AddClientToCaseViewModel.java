@@ -40,6 +40,7 @@ public class AddClientToCaseViewModel extends BaseViewModel {
     }
 
     public void createCase() {
+        //TODO return object of added data
         List<Integer> clientList = new ArrayList<>();
         List<Integer> khesmList = new ArrayList<>();
         if (getAddCaseRequest().isValid()) {

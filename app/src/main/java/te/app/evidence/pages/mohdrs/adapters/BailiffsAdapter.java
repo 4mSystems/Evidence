@@ -23,7 +23,6 @@ import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.mohdrs.models.ReportersData;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel;
 import te.app.evidence.pages.users.AddUserFragment;
-import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;

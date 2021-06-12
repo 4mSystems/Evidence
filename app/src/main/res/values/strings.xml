@@ -98,7 +98,7 @@
     <string name="account_verified">حساب موثق</string>
     <string name="account_my_ads">إعلاناتي</string>
     <string name="my_fund_ads">إعلاناتي المميزة</string>
-    <string name="account_balance">رصيد الحساب</string>
+    <string name="client_warning">Cant not be done</string>
     <string name="delivery_vat_total_text">إجمالى رسوم التوصيل</string>
     <string name="tv_account_billing_total_text">إجمالى الفواتير المدفوعة</string>
     <string name="tv_account_order_num_text">عدد الطلبات</string>
@@ -444,5 +444,7 @@
     <string name="case_details">تفاصيل الدعوى</string>
     <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
     <string name="edit_case">تعديل الدعوي</string>
+    <string name="add_new_khesm">إضافة خصم</string>
+    <string name="session_search_hint">Looking for a session</string>
 
 </resources>

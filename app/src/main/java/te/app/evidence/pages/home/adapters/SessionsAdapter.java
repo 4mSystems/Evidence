@@ -1,7 +1,6 @@
 package te.app.evidence.pages.home.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -16,15 +16,22 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemSessionBinding;
 import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
-import te.app.evidence.pages.sessions.SessionItem;
+import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
+import te.app.evidence.pages.sessions.models.SessionItem;
+import te.app.evidence.pages.users.AddUserFragment;
+import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHolder> {
     List<SessionItem> sessionItemList;
     Context context;
+    public MutableLiveData<Object> actionLiveData = new MutableLiveData<>();
+    public int lastSelected = -1;
 
     public SessionsAdapter() {
         this.sessionItemList = new ArrayList<>();
@@ -49,17 +56,29 @@ public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHo
         SessionItem sessionItem = sessionItemList.get(position);
         SessionItemViewModel itemMenuViewModel = new SessionItemViewModel(sessionItem);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
-
+            lastSelected = position;
+            if (o.equals(Constants.EDIT)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(sessionItem), ResourceManager.getString(R.string.edit_user), AddUserFragment.class.getName(), null);
+            } else if (o.equals(Constants.NOTES)) {
+                MovementHelper.startActivityWithBundle(context, new PassingObject(sessionItem.getId()), ResourceManager.getString(R.string.reporter_details), ReportersDetailsFragment.class.getName(), null);
+            } else if (o.equals(Constants.DELETE)) {
+                actionLiveData.setValue(o);
+            } else if (o.equals(Constants.CHANGE_STATUS)) {
+                //TODO object of change status of session remove data
+                actionLiveData.setValue(o);
+            }
         });
+        if (sessionItem.getStatus().equals(ResourceManager.getString(R.string.reporter_status_done)))
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.successColor));
+        else
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorAccent));
         holder.setViewModel(itemMenuViewModel);
     }
 
 
     public void update(List<SessionItem> dataList) {
-        Log.e("update", "update: " + dataList.size());
         this.sessionItemList.clear();
         sessionItemList.addAll(dataList);
-        Log.e("update", "update: " + sessionItemList.size());
         notifyDataSetChanged();
     }
 

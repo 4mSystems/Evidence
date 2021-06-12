@@ -45,6 +45,8 @@ import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddCaseFragment_MembersInjector;
 import te.app.evidence.pages.cases.AddClientToCaseFragment;
 import te.app.evidence.pages.cases.AddClientToCaseFragment_MembersInjector;
+import te.app.evidence.pages.cases.CaseClientsFragment;
+import te.app.evidence.pages.cases.CaseClientsFragment_MembersInjector;
 import te.app.evidence.pages.cases.CaseDetailsFragment;
 import te.app.evidence.pages.cases.CaseDetailsFragment_MembersInjector;
 import te.app.evidence.pages.cases.CasesFragment;
@@ -59,6 +61,9 @@ import te.app.evidence.pages.cases.viewModels.AddCaseViewModel_MembersInjector;
 import te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel;
 import te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel_Factory;
 import te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel_MembersInjector;
+import te.app.evidence.pages.cases.viewModels.CaseClientsViewModel;
+import te.app.evidence.pages.cases.viewModels.CaseClientsViewModel_Factory;
+import te.app.evidence.pages.cases.viewModels.CaseClientsViewModel_MembersInjector;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel_Factory;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel_MembersInjector;
@@ -120,6 +125,11 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
+import te.app.evidence.pages.sessions.SessionsFragment;
+import te.app.evidence.pages.sessions.SessionsFragment_MembersInjector;
+import te.app.evidence.pages.sessions.viewModels.SessionsViewModel;
+import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_Factory;
+import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_MembersInjector;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.splash.SplashFragment_MembersInjector;
 import te.app.evidence.pages.splash.SplashViewModel;
@@ -290,6 +300,14 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectAddClientToCaseViewModel(AddClientToCaseViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
+  private CaseClientsViewModel caseClientsViewModel() {
+    return injectCaseClientsViewModel(CaseClientsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
+  private SessionsViewModel sessionsViewModel() {
+    return injectSessionsViewModel(SessionsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -453,6 +471,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(EditCaseFragment editCaseFragment) {
     injectEditCaseFragment(editCaseFragment);
+  }
+
+  @Override
+  public void inject(CaseClientsFragment caseClientsFragment) {
+    injectCaseClientsFragment(caseClientsFragment);
+  }
+
+  @Override
+  public void inject(SessionsFragment sessionsFragment) {
+    injectSessionsFragment(sessionsFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -716,6 +744,26 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private EditCaseFragment injectEditCaseFragment(EditCaseFragment instance) {
     EditCaseFragment_MembersInjector.injectViewModel(instance, addCaseViewModel());
+    return instance;
+  }
+
+  private CaseClientsViewModel injectCaseClientsViewModel(CaseClientsViewModel instance) {
+    CaseClientsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private CaseClientsFragment injectCaseClientsFragment(CaseClientsFragment instance) {
+    CaseClientsFragment_MembersInjector.injectViewModel(instance, caseClientsViewModel());
+    return instance;
+  }
+
+  private SessionsViewModel injectSessionsViewModel(SessionsViewModel instance) {
+    SessionsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private SessionsFragment injectSessionsFragment(SessionsFragment instance) {
+    SessionsFragment_MembersInjector.injectViewModel(instance, sessionsViewModel());
     return instance;
   }
 

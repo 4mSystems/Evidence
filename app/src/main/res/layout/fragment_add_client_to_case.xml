@@ -28,7 +28,7 @@
             android:text="@string/clients"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimary"
-            android:visibility="@{viewmodel.passingObject.id==0?View.VISIBLE:View.GONE,default=gone}"
+            android:visibility="@{viewmodel.passingObject.object.equals(Constants.client)?View.VISIBLE:View.GONE,default=gone}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +40,7 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp10h"
             android:layout_marginEnd="@dimen/dp12w"
-            android:visibility="@{viewmodel.passingObject.id==0?View.VISIBLE:View.GONE,default=gone}"
+            android:visibility="@{viewmodel.passingObject.object.equals(Constants.client)?View.VISIBLE:View.GONE,default=gone}"
             app:error="@{viewmodel.addCaseRequest.mokelError}"
             app:layout_constraintTop_toBottomOf="@+id/tv_clients">
 
@@ -65,7 +65,7 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp10h"
             android:text="@string/opponents"
-            android:visibility="@{viewmodel.passingObject.id!=0?View.VISIBLE:View.GONE,default=gone}"
+            android:visibility="@{viewmodel.passingObject.object.equals(Constants.khesm)?View.VISIBLE:View.GONE,default=gone}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimary"
             app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +79,7 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp10h"
             android:layout_marginEnd="@dimen/dp12w"
-            android:visibility="@{viewmodel.passingObject.id!=0?View.VISIBLE:View.GONE,default=gone}"
+            android:visibility="@{viewmodel.passingObject.object.equals(Constants.khesm)?View.VISIBLE:View.GONE,default=gone}"
             app:error="@{viewmodel.addCaseRequest.khesmError}"
             app:layout_constraintTop_toBottomOf="@+id/tv_khesm">
 

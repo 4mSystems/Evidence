@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemClientTagsBindingImpl extends ItemClientTagsBinding  {
+public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -13,26 +13,48 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.name_text, 4);
+        sViewsWithIds.put(R.id.v1, 5);
+        sViewsWithIds.put(R.id.attachments, 6);
+        sViewsWithIds.put(R.id.br5, 7);
+        sViewsWithIds.put(R.id.v8, 8);
     }
     // views
     @NonNull
-    private final com.google.android.material.button.MaterialButton mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback1;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback2;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemClientTagsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 1, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private ItemClientTagsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
+            , (androidx.constraintlayout.widget.Barrier) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
+            , (android.view.View) bindings[5]
+            , (android.view.View) bindings[8]
             );
-        this.mboundView0 = (com.google.android.material.button.MaterialButton) bindings[0];
+        this.delete.setTag(null);
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.nameValue.setTag(null);
+        this.permission.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback1 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -127,14 +149,58 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding  {
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.delete.setOnClickListener(mCallback2);
+            this.permission.setOnClickListener(mCallback1);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView0, itemViewModelClientsClientName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelClientsClientName);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toClientProfile();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

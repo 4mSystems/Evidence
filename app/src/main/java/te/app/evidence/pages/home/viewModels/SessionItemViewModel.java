@@ -3,7 +3,7 @@ package te.app.evidence.pages.home.viewModels;
 import androidx.databinding.Bindable;
 
 import te.app.evidence.base.BaseViewModel;
-import te.app.evidence.pages.sessions.SessionItem;
+import te.app.evidence.pages.sessions.models.SessionItem;
 
 public class SessionItemViewModel extends BaseViewModel {
     public SessionItem sessionItem;
@@ -17,8 +17,8 @@ public class SessionItemViewModel extends BaseViewModel {
         return sessionItem;
     }
 
-    public void itemAction() {
-//        getLiveData().setValue(Constants.DELETE);
+    public void buttonAction(String action) {
+        getLiveData().setValue(action);
     }
 
 }
