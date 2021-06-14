@@ -18,7 +18,7 @@ public class SessionItem {
 
     @SerializedName("parent_id")
     private String parentId;
-
+    //TODO return this field in session list
     @SerializedName("case_Id")
     private String caseId;
 

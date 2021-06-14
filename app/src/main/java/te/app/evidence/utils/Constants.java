@@ -114,7 +114,7 @@ public class Constants {
     public static final String LOGIN = "login";
     public static final String NOTES = "NOTES";
     public static final String FORGET_PASSWORD = "forget_password";
-    public static final String WARNING = "WARNING";
+    public static final String NEW_SESSION = "NEW_SESSION";
     public static final String PROFILE_DATA = "PROFILE_DATA";
     public static final String RESET = "RESET";
     public static final String MAP_STYLE = "MAP_STYLE";

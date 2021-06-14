@@ -21,8 +21,8 @@ import te.app.evidence.R;
 import te.app.evidence.databinding.ItemSessionBinding;
 import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
 import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
+import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.models.SessionItem;
-import te.app.evidence.pages.users.AddUserFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -58,7 +58,7 @@ public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHo
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
             lastSelected = position;
             if (o.equals(Constants.EDIT)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(sessionItem), ResourceManager.getString(R.string.edit_user), AddUserFragment.class.getName(), null);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(sessionItem), ResourceManager.getString(R.string.edit_session), AddSessionFragment.class.getName(), null);
             } else if (o.equals(Constants.NOTES)) {
                 MovementHelper.startActivityWithBundle(context, new PassingObject(sessionItem.getId()), ResourceManager.getString(R.string.reporter_details), ReportersDetailsFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {

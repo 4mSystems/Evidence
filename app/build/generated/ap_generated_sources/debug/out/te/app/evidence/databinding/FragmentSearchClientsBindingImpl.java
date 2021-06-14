@@ -20,7 +20,7 @@ public class FragmentSearchClientsBindingImpl extends FragmentSearchClientsBindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -39,7 +39,7 @@ public class FragmentSearchClientsBindingImpl extends FragmentSearchClientsBindi
         this.rcUsers.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -130,7 +130,7 @@ public class FragmentSearchClientsBindingImpl extends FragmentSearchClientsBindi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.appCompatButton.setOnClickListener(mCallback51);
+            this.appCompatButton.setOnClickListener(mCallback53);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

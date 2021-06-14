@@ -32,11 +32,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback55;
-    @Nullable
     private final android.view.View.OnClickListener mCallback56;
     @Nullable
-    private final android.view.View.OnClickListener mCallback54;
+    private final android.view.View.OnClickListener mCallback57;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback58;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -83,9 +83,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.previousSessions.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback55 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback56 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback56 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -424,15 +424,32 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.nextMohdareen.setOnClickListener(mCallback56);
-            this.nextSessions.setOnClickListener(mCallback54);
-            this.previousSessions.setOnClickListener(mCallback55);
+            this.nextMohdareen.setOnClickListener(mCallback58);
+            this.nextSessions.setOnClickListener(mCallback56);
+            this.previousSessions.setOnClickListener(mCallback57);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextSessions();
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -464,23 +481,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.nextMohdars();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextSessions();
                 }
                 break;
             }

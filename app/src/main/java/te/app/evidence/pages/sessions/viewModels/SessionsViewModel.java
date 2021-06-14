@@ -11,6 +11,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.AllCasesAdapter;
 import te.app.evidence.pages.home.adapters.SessionsAdapter;
 import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.utils.Constants;
 
 public class SessionsViewModel extends BaseViewModel {
 
@@ -44,6 +45,9 @@ public class SessionsViewModel extends BaseViewModel {
         return this.sessionsAdapter == null ? this.sessionsAdapter = new SessionsAdapter() : this.sessionsAdapter;
     }
 
+    public void toAddSession() {
+        liveData.setValue(new Mutable(Constants.NEW_SESSION));
+    }
 
     public CasesRepository getCasesRepository() {
         return casesRepository;

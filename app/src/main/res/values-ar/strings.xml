@@ -443,5 +443,7 @@
     <string name="edit_case">تعديل الدعوي</string>
     <string name="add_new_khesm">إضافة خصم</string>
     <string name="session_search_hint">Looking for a session</string>
+    <string name="add_new_session">إضافة جلسة</string>
+    <string name="edit_session">تعديل تاريخ الجلسة</string>
 
 </resources>

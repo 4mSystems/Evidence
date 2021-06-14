@@ -20,12 +20,12 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_attachment.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_case.xml",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_edit_case.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_bailiffs.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_bailiffs.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_case.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_edit_case.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
@@ -130,6 +130,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_navigation_drawer.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/layout_navigation_drawer.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_session.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_session.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_bailiffs.xml",

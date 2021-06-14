@@ -125,8 +125,13 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
+import te.app.evidence.pages.sessions.AddSessionFragment;
+import te.app.evidence.pages.sessions.AddSessionFragment_MembersInjector;
 import te.app.evidence.pages.sessions.SessionsFragment;
 import te.app.evidence.pages.sessions.SessionsFragment_MembersInjector;
+import te.app.evidence.pages.sessions.viewModels.AddSessionViewModel;
+import te.app.evidence.pages.sessions.viewModels.AddSessionViewModel_Factory;
+import te.app.evidence.pages.sessions.viewModels.AddSessionViewModel_MembersInjector;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_Factory;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_MembersInjector;
@@ -308,6 +313,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectSessionsViewModel(SessionsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
+  private AddSessionViewModel addSessionViewModel() {
+    return injectAddSessionViewModel(AddSessionViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -481,6 +490,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(SessionsFragment sessionsFragment) {
     injectSessionsFragment(sessionsFragment);
+  }
+
+  @Override
+  public void inject(AddSessionFragment addSessionFragment) {
+    injectAddSessionFragment(addSessionFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -764,6 +778,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private SessionsFragment injectSessionsFragment(SessionsFragment instance) {
     SessionsFragment_MembersInjector.injectViewModel(instance, sessionsViewModel());
+    return instance;
+  }
+
+  private AddSessionViewModel injectAddSessionViewModel(AddSessionViewModel instance) {
+    AddSessionViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
+  private AddSessionFragment injectAddSessionFragment(AddSessionFragment instance) {
+    AddSessionFragment_MembersInjector.injectViewModel(instance, addSessionViewModel());
     return instance;
   }
 

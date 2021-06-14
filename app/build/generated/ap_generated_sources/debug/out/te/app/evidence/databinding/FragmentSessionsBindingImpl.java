@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentSessionsBindingImpl extends FragmentSessionsBinding  {
+public class FragmentSessionsBindingImpl extends FragmentSessionsBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,29 +14,36 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 2);
+        sViewsWithIds.put(R.id.input_search, 3);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final com.github.clans.fab.FloatingActionButton mboundView2;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback51;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentSessionsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentSessionsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
+        this.mboundView2.setTag(null);
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -124,6 +131,11 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding  {
                 }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView2.setOnClickListener(mCallback51);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
@@ -132,6 +144,22 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding  {
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.evidence.pages.sessions.viewModels.SessionsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.toAddSession();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

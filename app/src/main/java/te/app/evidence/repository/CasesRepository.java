@@ -19,6 +19,8 @@ import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
+import te.app.evidence.pages.sessions.models.AddSessionRequest;
+import te.app.evidence.pages.sessions.models.AddSessionResponse;
 import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
@@ -109,5 +111,15 @@ public class CasesRepository extends BaseRepository {
     public Disposable deleteSession(int sessionId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_SESSION + sessionId, new Object(), StatusMessage.class,
                 Constants.DELETE, true);
+    }
+
+    public Disposable addNewSession(AddSessionRequest addSessionRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_NEW_SESSION, addSessionRequest, AddSessionResponse.class,
+                Constants.NEW_SESSION, true);
+    }
+
+    public Disposable editNewSession(AddSessionRequest addSessionRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_SESSION, addSessionRequest, AddSessionResponse.class,
+                Constants.NEW_SESSION, true);
     }
 }

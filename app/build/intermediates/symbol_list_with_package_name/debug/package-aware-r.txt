@@ -3079,6 +3079,7 @@ drawable fab_add
 drawable gallery_album_overlay
 drawable home_img
 drawable ic_add_category
+drawable ic_add_session
 drawable ic_add_user
 drawable ic_airplane
 drawable ic_airplanemode_inactive_24dp
@@ -3364,6 +3365,7 @@ id cut
 id daily_reports
 id dataBinding
 id date_picker_actions
+id date_v
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3960,6 +3962,7 @@ layout fragment_add_category
 layout fragment_add_client
 layout fragment_add_client_to_case
 layout fragment_add_note
+layout fragment_add_session
 layout fragment_add_user
 layout fragment_attachments
 layout fragment_bailiffs
@@ -4161,6 +4164,7 @@ string add_new_category
 string add_new_client
 string add_new_khesm
 string add_new_note
+string add_new_session
 string add_new_user
 string add_success_added
 string address_hint
@@ -4316,6 +4320,7 @@ string edit_details
 string edit_images
 string edit_location
 string edit_note
+string edit_session
 string edit_user
 string elevator
 string email

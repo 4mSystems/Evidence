@@ -28,7 +28,7 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback74;
+    private final android.view.View.OnClickListener mCallback76;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -61,7 +61,7 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback74 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback76 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -176,7 +176,7 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.viewValue.setOnClickListener(mCallback74);
+            this.viewValue.setOnClickListener(mCallback76);
         }
     }
     // Listener Stub Implementations

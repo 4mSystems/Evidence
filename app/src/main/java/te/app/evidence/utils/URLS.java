@@ -57,4 +57,6 @@ public class URLS {
     public static final String CASE_SESSIONS = "case/sessions/";
     public static final String CHANGE_SESSION_STATUS = "changeSessionStatus/";
     public static final String DELETE_SESSION = "deleteSession/";
+    public static final String ADD_NEW_SESSION = "addSession";
+    public static final String EDIT_SESSION = "editSession";
 }
