@@ -15,6 +15,7 @@ import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
+import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
@@ -75,7 +76,12 @@ public class CasesRepository extends BaseRepository {
 
     public Disposable editCase(AddCaseRequest addCaseRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CASE, addCaseRequest, AddCaseResponse.class,
-                Constants.EDIT_CASE, true);
+                Constants.EDIT_CASE, false);
+    }
+
+    public Disposable addClientToCase(AddCaseRequest addCaseRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENT_CASE, addCaseRequest, AddClientResponse.class,
+                Constants.ADD_CLIENTS, false);
     }
 
     public Disposable allCases() {
@@ -115,11 +121,11 @@ public class CasesRepository extends BaseRepository {
 
     public Disposable addNewSession(AddSessionRequest addSessionRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_NEW_SESSION, addSessionRequest, AddSessionResponse.class,
-                Constants.NEW_SESSION, true);
+                Constants.NEW_SESSION, false);
     }
 
     public Disposable editNewSession(AddSessionRequest addSessionRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_SESSION, addSessionRequest, AddSessionResponse.class,
-                Constants.NEW_SESSION, true);
+                Constants.NEW_SESSION, false);
     }
 }

@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -17,15 +19,23 @@ import te.app.evidence.pages.sessions.viewModels.AddSessionViewModel;
 
 public abstract class FragmentAddSessionBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatButton btnSave;
+
+  @NonNull
   public final CustomTextViewMedium dateV;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
 
   @Bindable
   protected AddSessionViewModel mViewmodel;
 
   protected FragmentAddSessionBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium dateV) {
+      AppCompatButton btnSave, CustomTextViewMedium dateV, CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
     this.dateV = dateV;
+    this.progress = progress;
   }
 
   public abstract void setViewmodel(@Nullable AddSessionViewModel viewmodel);

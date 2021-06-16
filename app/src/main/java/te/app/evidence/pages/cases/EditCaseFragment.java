@@ -62,6 +62,7 @@ public class EditCaseFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.CASE_CLIENTS_CATEGORIES.equals(((Mutable) o).message)) {
                 viewModel.setCaseClientsCategoriesData(((CaseClientsCategoriesResponse) mutable.object).getData());
             } else if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
@@ -69,7 +70,6 @@ public class EditCaseFragment extends BaseFragment {
                     showCategories();
             } else if (Constants.EDIT_CASE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                //TODO Update case not working
                 MovementHelper.finishWithResult(new PassingObject(((AddCaseResponse) mutable.object).getData()), context, Constants.EDIT_CASE_REQUEST);
             }
         });

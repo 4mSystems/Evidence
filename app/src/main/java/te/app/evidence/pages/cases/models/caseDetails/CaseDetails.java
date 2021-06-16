@@ -16,6 +16,10 @@ public class CaseDetails {
 		return caseData;
 	}
 
+	public void setCaseData(Cases caseData) {
+		this.caseData = caseData;
+	}
+
 	public CaseStatistics getNumbers(){
 		return numbers;
 	}

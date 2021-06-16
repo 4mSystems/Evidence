@@ -6,26 +6,82 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
+import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 
 public abstract class FragmentEditCaseBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatButton btnSave;
+
+  @NonNull
+  public final TextInputLayout inputCase;
+
+  @NonNull
   public final TextInputEditText inputCat;
+
+  @NonNull
+  public final TextInputLayout inputCircle;
+
+  @NonNull
+  public final TextInputLayout inputCourt;
+
+  @NonNull
+  public final TextInputLayout inputInviteType;
+
+  @NonNull
+  public final TextInputLayout inputWhom;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final CustomTextViewMedium tvCase;
+
+  @NonNull
+  public final CustomTextViewMedium tvCircle;
+
+  @NonNull
+  public final CustomTextViewMedium tvCourt;
+
+  @NonNull
+  public final CustomTextViewMedium tvInviteType;
+
+  @NonNull
+  public final CustomTextViewMedium tvWhom;
 
   @Bindable
   protected AddCaseViewModel mViewmodel;
 
   protected FragmentEditCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputCat) {
+      AppCompatButton btnSave, TextInputLayout inputCase, TextInputEditText inputCat,
+      TextInputLayout inputCircle, TextInputLayout inputCourt, TextInputLayout inputInviteType,
+      TextInputLayout inputWhom, CircularProgressIndicator progress, CustomTextViewMedium tvCase,
+      CustomTextViewMedium tvCircle, CustomTextViewMedium tvCourt,
+      CustomTextViewMedium tvInviteType, CustomTextViewMedium tvWhom) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
+    this.inputCase = inputCase;
     this.inputCat = inputCat;
+    this.inputCircle = inputCircle;
+    this.inputCourt = inputCourt;
+    this.inputInviteType = inputInviteType;
+    this.inputWhom = inputWhom;
+    this.progress = progress;
+    this.tvCase = tvCase;
+    this.tvCircle = tvCircle;
+    this.tvCourt = tvCourt;
+    this.tvInviteType = tvInviteType;
+    this.tvWhom = tvWhom;
   }
 
   public abstract void setViewmodel(@Nullable AddCaseViewModel viewmodel);

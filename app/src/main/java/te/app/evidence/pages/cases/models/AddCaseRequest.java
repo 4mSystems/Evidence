@@ -32,15 +32,15 @@ public class AddCaseRequest {
     private String court;
     private String mokelText;
     private String khesmText;
-    public ObservableField<String> invetationNumError = new ObservableField<>();
-    public ObservableField<String> circleNumError = new ObservableField<>();
-    public ObservableField<String> dateError = new ObservableField<>();
-    public ObservableField<String> invetationTypeError = new ObservableField<>();
-    public ObservableField<String> descionError = new ObservableField<>();
-    public ObservableField<String> mokelError = new ObservableField<>();
-    public ObservableField<String> khesmError = new ObservableField<>();
-    public ObservableField<String> courtError = new ObservableField<>();
-    public ObservableField<String> catError = new ObservableField<>();
+    public transient ObservableField<String> invetationNumError = new ObservableField<>();
+    public transient ObservableField<String> circleNumError = new ObservableField<>();
+    public transient ObservableField<String> dateError = new ObservableField<>();
+    public transient ObservableField<String> invetationTypeError = new ObservableField<>();
+    public transient ObservableField<String> descionError = new ObservableField<>();
+    public transient ObservableField<String> mokelError = new ObservableField<>();
+    public transient ObservableField<String> khesmError = new ObservableField<>();
+    public transient ObservableField<String> courtError = new ObservableField<>();
+    public transient ObservableField<String> catError = new ObservableField<>();
 
     public boolean isValid() {
         boolean valid = true;

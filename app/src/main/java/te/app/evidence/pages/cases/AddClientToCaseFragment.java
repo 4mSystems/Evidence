@@ -59,6 +59,7 @@ public class AddClientToCaseFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.CASE_CLIENTS_CATEGORIES.equals(((Mutable) o).message)) {
                 viewModel.setCaseClientsCategoriesData(((CaseClientsCategoriesResponse) mutable.object).getData());
             } else if (Constants.CLIENTS.equals(((Mutable) o).message)) {
@@ -67,7 +68,7 @@ public class AddClientToCaseFragment extends BaseFragment {
             } else if (Constants.KHESM.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getKhesm().size() > 0)
                     MovementHelper.startActivityForResultWithBundle(context, new PassingObject(Constants.KHESM_CODE, new ClientsResponse(viewModel.getCaseClientsCategoriesData().getKhesm())), getResources().getString(R.string.opponents), SearchClientsFragment.class.getName(), Constants.KHESM_CODE);
-            } else if (Constants.ADD_CASE.equals(((Mutable) o).message)) {
+            } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 Constants.DATA_CHANGED = true;
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 finishActivity();

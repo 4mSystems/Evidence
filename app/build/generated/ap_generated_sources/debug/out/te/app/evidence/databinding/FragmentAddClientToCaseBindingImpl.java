@@ -18,10 +18,6 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
-    @NonNull
-    private final android.widget.ProgressBar mboundView7;
-    @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView8;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback79;
@@ -37,24 +33,24 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         this(bindingComponent, root, mapBindings(bindingComponent, root, 9, sIncludes, sViewsWithIds));
     }
     private FragmentAddClientToCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 4
+        super(bindingComponent, root, 3
+            , (androidx.appcompat.widget.AppCompatButton) bindings[7]
             , (com.google.android.material.textfield.TextInputLayout) bindings[2]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (com.google.android.material.textfield.TextInputEditText) bindings[6]
             , (com.google.android.material.textfield.TextInputLayout) bindings[5]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
             );
+        this.btnSave.setTag(null);
         this.clients.setTag(null);
         this.inputClients.setTag(null);
         this.inputKhesm.setTag(null);
         this.inputKhesms.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView7 = (android.widget.ProgressBar) bindings[7];
-        this.mboundView7.setTag(null);
-        this.mboundView8 = (androidx.appcompat.widget.AppCompatButton) bindings[8];
-        this.mboundView8.setTag(null);
+        this.progress.setTag(null);
         this.tvClients.setTag(null);
         this.tvKhesm.setTag(null);
         setRootTag(root);
@@ -96,10 +92,10 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel Viewmodel) {
-        updateRegistration(3, Viewmodel);
+        updateRegistration(2, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x8L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -111,10 +107,8 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
             case 0 :
                 return onChangeViewmodelAddCaseRequestMokelError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewmodelLoader((androidx.databinding.ObservableField<java.lang.Boolean>) object, fieldId);
-            case 2 :
                 return onChangeViewmodelAddCaseRequestKhesmError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 3 :
+            case 2 :
                 return onChangeViewmodel((te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel) object, fieldId);
         }
         return false;
@@ -128,7 +122,7 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         }
         return false;
     }
-    private boolean onChangeViewmodelLoader(androidx.databinding.ObservableField<java.lang.Boolean> ViewmodelLoader, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestKhesmError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestKhesmError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -137,23 +131,20 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestKhesmError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestKhesmError, int fieldId) {
+    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
             }
             return true;
         }
-        return false;
-    }
-    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel Viewmodel, int fieldId) {
-        if (fieldId == BR._all) {
+        else if (fieldId == BR.passingObject) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
             }
             return true;
         }
-        else if (fieldId == BR.passingObject) {
+        else if (fieldId == BR.message) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
             }
@@ -171,28 +162,31 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         }
         te.app.evidence.PassingObject viewmodelPassingObject = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestMokelError = null;
+        boolean textUtilsIsEmptyViewmodelMessage = false;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
+        boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
-        androidx.databinding.ObservableField<java.lang.Boolean> viewmodelLoader = null;
-        boolean androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet = false;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        int textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = 0;
         java.lang.String viewmodelAddCaseRequestKhesmErrorGet = null;
         boolean viewmodelPassingObjectObjectEqualsConstantsKhesm = false;
-        boolean viewmodelLoaderBooleanFalse = false;
-        java.lang.Boolean viewmodelLoaderGet = null;
+        java.lang.String viewmodelMessage = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelPassingObjectObject = null;
         boolean viewmodelPassingObjectObjectEqualsConstantsClient = false;
-        boolean viewmodelLoaderBooleanTrue = false;
+        boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         int viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestKhesmError = null;
         int viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE = 0;
-        int viewmodelLoaderBooleanFalseViewGONEViewVISIBLE = 0;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelAddCaseRequestMokelErrorGet = null;
-        int viewmodelLoaderBooleanTrueViewGONEViewVISIBLE = 0;
         te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
+        boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
         if ((dirtyFlags & 0x3fL) != 0) {
 
 
-            if ((dirtyFlags & 0x38L) != 0) {
+            if ((dirtyFlags & 0x2cL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.passingObject
@@ -212,20 +206,20 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
                         // read viewmodel.passingObject.object.equals(Constants.client)
                         viewmodelPassingObjectObjectEqualsConstantsClient = viewmodelPassingObjectObject.equals(te.app.evidence.utils.Constants.client);
                     }
-                if((dirtyFlags & 0x38L) != 0) {
+                if((dirtyFlags & 0x2cL) != 0) {
                     if(viewmodelPassingObjectObjectEqualsConstantsKhesm) {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x2000L;
                     }
                     else {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x1000L;
                     }
                 }
-                if((dirtyFlags & 0x38L) != 0) {
+                if((dirtyFlags & 0x2cL) != 0) {
                     if(viewmodelPassingObjectObjectEqualsConstantsClient) {
-                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x8000L;
                     }
                     else {
-                            dirtyFlags |= 0x100L;
+                            dirtyFlags |= 0x4000L;
                     }
                 }
 
@@ -235,14 +229,14 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
                     // read viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
                     viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE = ((viewmodelPassingObjectObjectEqualsConstantsClient) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
-            if ((dirtyFlags & 0x2dL) != 0) {
+            if ((dirtyFlags & 0x27L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.addCaseRequest
                         viewmodelAddCaseRequest = viewmodel.getAddCaseRequest();
                     }
 
-                if ((dirtyFlags & 0x29L) != 0) {
+                if ((dirtyFlags & 0x25L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.mokelError
@@ -256,13 +250,13 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
                             viewmodelAddCaseRequestMokelErrorGet = viewmodelAddCaseRequestMokelError.get();
                         }
                 }
-                if ((dirtyFlags & 0x2cL) != 0) {
+                if ((dirtyFlags & 0x26L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.khesmError
                             viewmodelAddCaseRequestKhesmError = viewmodelAddCaseRequest.khesmError;
                         }
-                        updateRegistration(2, viewmodelAddCaseRequestKhesmError);
+                        updateRegistration(1, viewmodelAddCaseRequestKhesmError);
 
 
                         if (viewmodelAddCaseRequestKhesmError != null) {
@@ -271,55 +265,104 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
                         }
                 }
             }
-            if ((dirtyFlags & 0x2aL) != 0) {
+            if ((dirtyFlags & 0x34L) != 0) {
 
                     if (viewmodel != null) {
-                        // read viewmodel.loader
-                        viewmodelLoader = viewmodel.loader;
-                    }
-                    updateRegistration(1, viewmodelLoader);
-
-
-                    if (viewmodelLoader != null) {
-                        // read viewmodel.loader.get()
-                        viewmodelLoaderGet = viewmodelLoader.get();
+                        // read viewmodel.message
+                        viewmodelMessage = viewmodel.getMessage();
                     }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get())
-                    androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet = androidx.databinding.ViewDataBinding.safeUnbox(viewmodelLoaderGet);
-
-
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false
-                    viewmodelLoaderBooleanFalse = (androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet) == (false);
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true
-                    viewmodelLoaderBooleanTrue = (androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet) == (true);
-                if((dirtyFlags & 0x2aL) != 0) {
-                    if(viewmodelLoaderBooleanFalse) {
-                            dirtyFlags |= 0x800L;
+                    // read TextUtils.isEmpty(viewmodel.message)
+                    textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+                if((dirtyFlags & 0x34L) != 0) {
+                    if(textUtilsIsEmptyViewmodelMessage) {
+                            dirtyFlags |= 0x20000L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
-                    }
-                }
-                if((dirtyFlags & 0x2aL) != 0) {
-                    if(viewmodelLoaderBooleanTrue) {
-                            dirtyFlags |= 0x2000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x10000L;
                     }
                 }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-                    viewmodelLoaderBooleanFalseViewGONEViewVISIBLE = ((viewmodelLoaderBooleanFalse) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
-                    viewmodelLoaderBooleanTrueViewGONEViewVISIBLE = ((viewmodelLoaderBooleanTrue) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+                    // read !TextUtils.isEmpty(viewmodel.message)
+                    TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+                if((dirtyFlags & 0x34L) != 0) {
+                    if(TextUtilsIsEmptyViewmodelMessage1) {
+                            dirtyFlags |= 0x80000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40000L;
+                    }
+                }
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x38L) != 0) {
+
+        if ((dirtyFlags & 0x80000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
+                    viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x10000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x34L) != 0) {
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
+            if((dirtyFlags & 0x34L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x200L;
+                }
+                else {
+                        dirtyFlags |= 0x40L;
+                        dirtyFlags |= 0x100L;
+                }
+            }
+            if((dirtyFlags & 0x34L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x800L;
+                }
+                else {
+                        dirtyFlags |= 0x400L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (getColorFromResource(btnSave, R.color.colorPrimaryDark)) : (getColorFromResource(btnSave, R.color.medium_color)));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x34L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, androidx.databinding.adapters.Converters.convertColorToDrawable(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor));
+            this.btnSave.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0x20L) != 0) {
+            // api target 1
+
+            this.btnSave.setOnClickListener(mCallback79);
+            this.inputClients.setOnClickListener(mCallback77);
+            this.inputKhesm.setOnClickListener(mCallback78);
+        }
+        if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
 
             this.clients.setVisibility(viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE);
@@ -327,28 +370,15 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
             this.tvClients.setVisibility(viewmodelPassingObjectObjectEqualsConstantsClientViewVISIBLEViewGONE);
             this.tvKhesm.setVisibility(viewmodelPassingObjectObjectEqualsConstantsKhesmViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x29L) != 0) {
+        if ((dirtyFlags & 0x25L) != 0) {
             // api target 1
 
             this.clients.setError(viewmodelAddCaseRequestMokelErrorGet);
         }
-        if ((dirtyFlags & 0x20L) != 0) {
-            // api target 1
-
-            this.inputClients.setOnClickListener(mCallback77);
-            this.inputKhesm.setOnClickListener(mCallback78);
-            this.mboundView8.setOnClickListener(mCallback79);
-        }
-        if ((dirtyFlags & 0x2cL) != 0) {
+        if ((dirtyFlags & 0x26L) != 0) {
             // api target 1
 
             this.inputKhesms.setError(viewmodelAddCaseRequestKhesmErrorGet);
-        }
-        if ((dirtyFlags & 0x2aL) != 0) {
-            // api target 1
-
-            this.mboundView7.setVisibility(viewmodelLoaderBooleanFalseViewGONEViewVISIBLE);
-            this.mboundView8.setVisibility(viewmodelLoaderBooleanTrueViewGONEViewVISIBLE);
         }
     }
     // Listener Stub Implementations
@@ -368,7 +398,7 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createCase();
+                    viewmodel.addClientToCase();
                 }
                 break;
             }
@@ -416,19 +446,25 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel.addCaseRequest.mokelError
-        flag 1 (0x2L): viewmodel.loader
-        flag 2 (0x3L): viewmodel.addCaseRequest.khesmError
-        flag 3 (0x4L): viewmodel
-        flag 4 (0x5L): viewmodel.passingObject
+        flag 1 (0x2L): viewmodel.addCaseRequest.khesmError
+        flag 2 (0x3L): viewmodel
+        flag 3 (0x4L): viewmodel.passingObject
+        flag 4 (0x5L): viewmodel.message
         flag 5 (0x6L): null
-        flag 6 (0x7L): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
-        flag 7 (0x8L): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
-        flag 9 (0xaL): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
-        flag 10 (0xbL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-        flag 11 (0xcL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-        flag 12 (0xdL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
-        flag 13 (0xeL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
+        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.passingObject.object.equals(Constants.khesm) ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): viewmodel.passingObject.object.equals(Constants.client) ? View.VISIBLE : View.GONE
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

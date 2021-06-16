@@ -29,12 +29,12 @@ import te.app.evidence.utils.session.UserHelper;
 
 public class BaseViewModel extends ViewModel implements Observable {
     private MutableLiveData<Object> mutableLiveData = new MutableLiveData<>();
-    private ObservableField<String> message = new ObservableField<>();
-    private PropertyChangeRegistry mCallBacks;
+    private String message;
+    PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
     private String countryCurrency;
     public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
-    List<CategoriesData> categoriesDataList= new ArrayList<>();
+    List<CategoriesData> categoriesDataList = new ArrayList<>();
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();
@@ -44,16 +44,15 @@ public class BaseViewModel extends ViewModel implements Observable {
         return mutableLiveData == null ? mutableLiveData = new MutableLiveData<>() : mutableLiveData;
     }
 
+    @Bindable
     public String getMessage() {
-        return message.get();
+        return message;
     }
 
-    public void setMessage(Object message) {
-        this.message.set(message.toString());
-    }
-
-    public void setMessageFromRes(int stringRes) {
-        this.message.set(getString(stringRes));
+    @Bindable
+    public void setMessage(String message) {
+        notifyChange(BR.message);
+        this.message = message;
     }
 
 
@@ -110,6 +109,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     public void showImage(String imgUrl, View imageView) {
         new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, imageView, imgUrl, null);
     }
+
     public List<CategoriesData> getCategoriesDataList() {
         return categoriesDataList;
     }

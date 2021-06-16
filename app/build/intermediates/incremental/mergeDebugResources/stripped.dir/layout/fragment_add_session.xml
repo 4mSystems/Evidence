@@ -8,6 +8,8 @@
 
                                            
 
+                                                
+
                                                          
 
                  
@@ -57,16 +59,31 @@
 
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp30h"
-                android:background="@color/colorPrimaryDark"
-                android:tag="binding_3"                            
+                android:background="@color/colorPrimaryDark"                                                                                                                                               
+                android:tag="binding_3"                                                                                                
+                                                                   
                 android:text="@string/save"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:tag="binding_4"                                                                                                                        
+                app:layout_constraintBottom_toBottomOf="@id/btnSave"
+                app:layout_constraintStart_toStartOf="@id/btnSave"
+                app:layout_constraintTop_toTopOf="@id/btnSave"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

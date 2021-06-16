@@ -59,4 +59,5 @@ public class URLS {
     public static final String DELETE_SESSION = "deleteSession/";
     public static final String ADD_NEW_SESSION = "addSession";
     public static final String EDIT_SESSION = "editSession";
+    public static final String ADD_CLIENT_CASE = "caseClients/store";
 }

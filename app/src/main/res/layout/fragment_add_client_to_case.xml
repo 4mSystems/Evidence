@@ -8,6 +8,8 @@
 
         <import type="android.view.View" />
 
+        <import type="android.text.TextUtils" />
+
         <import type="te.app.evidence.utils.Constants" />
 
         <variable
@@ -65,9 +67,9 @@
             android:layout_marginStart="@dimen/dp12w"
             android:layout_marginTop="@dimen/dp10h"
             android:text="@string/opponents"
-            android:visibility="@{viewmodel.passingObject.object.equals(Constants.khesm)?View.VISIBLE:View.GONE,default=gone}"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/colorPrimary"
+            android:visibility="@{viewmodel.passingObject.object.equals(Constants.khesm)?View.VISIBLE:View.GONE,default=gone}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/clients" />
 
@@ -97,28 +99,32 @@
         </com.google.android.material.textfield.TextInputLayout>
 
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/dp30h"
-            android:visibility="@{viewmodel.loader==false?View.GONE:View.VISIBLE}"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/input_khesms" />
-
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp30h"
-            android:background="@color/colorPrimaryDark"
-            android:onClick="@{()-> viewmodel.createCase()}"
+            android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
+            android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+            android:onClick="@{()-> viewmodel.addClientToCase()}"
             android:text="@string/save"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
-            android:visibility="@{viewmodel.loader==true?View.GONE:View.VISIBLE}"
             app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+            app:layout_constraintBottom_toBottomOf="@id/btnSave"
+            app:layout_constraintStart_toStartOf="@id/btnSave"
+            app:layout_constraintTop_toTopOf="@id/btnSave"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

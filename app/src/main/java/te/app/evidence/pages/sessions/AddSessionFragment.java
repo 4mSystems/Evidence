@@ -58,6 +58,7 @@ public class AddSessionFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.NEW_SESSION.equals(((Mutable) o).message)) {
                 toastMessage(((AddSessionResponse) mutable.object).mMessage);
                 MovementHelper.finishWithResult(new PassingObject(((AddSessionResponse) mutable.object).getSessionItem()), context);

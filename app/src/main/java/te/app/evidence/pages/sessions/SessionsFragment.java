@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +64,8 @@ public class SessionsFragment extends BaseFragment {
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
             viewModel.sessions();
         }
+        onBackPressed();
+
         setEvent();
         return binding.getRoot();
     }
@@ -76,6 +78,7 @@ public class SessionsFragment extends BaseFragment {
                 viewModel.getSessionsAdapter().update(((CaseSessionsResponse) mutable.object).getSessionItem());
                 viewModel.notifyChange(BR.casesAdapter);
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
+                //TODO Response of status is a;ways true
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getSessionsAdapter().getSessionItemList().get(viewModel.getSessionsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
                 viewModel.getSessionsAdapter().notifyItemChanged(viewModel.getSessionsAdapter().lastSelected);
@@ -96,6 +99,7 @@ public class SessionsFragment extends BaseFragment {
             viewModel.sessions();
             ((BaseActivity) context).stopRefresh(false);
         });
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> onBackPressed());
         viewModel.getSessionsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
             if (o.equals(Constants.CHANGE_STATUS))
                 viewModel.changeStatus();
@@ -137,6 +141,20 @@ public class SessionsFragment extends BaseFragment {
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void onBackPressed() {
+        binding.getRoot().setFocusableInTouchMode(true);
+        binding.getRoot().requestFocus();
+        binding.getRoot().setOnKeyListener((v, keyCode, event) -> {
+            //This is the filter
+            if (event.getAction() != KeyEvent.ACTION_DOWN) {
+                MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), context, Constants.SESSION_CODE);
+                return true;
+            }
+            return false;
+        });
+
     }
 
     @Override

@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
@@ -18,6 +20,9 @@ import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel;
 
 public abstract class FragmentAddClientToCaseBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton btnSave;
+
   @NonNull
   public final TextInputLayout clients;
 
@@ -31,6 +36,9 @@ public abstract class FragmentAddClientToCaseBinding extends ViewDataBinding {
   public final TextInputLayout inputKhesms;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final CustomTextViewMedium tvClients;
 
   @NonNull
@@ -40,14 +48,17 @@ public abstract class FragmentAddClientToCaseBinding extends ViewDataBinding {
   protected AddClientToCaseViewModel mViewmodel;
 
   protected FragmentAddClientToCaseBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, TextInputLayout clients, TextInputEditText inputClients,
-      TextInputEditText inputKhesm, TextInputLayout inputKhesms, CustomTextViewMedium tvClients,
+      int _localFieldCount, AppCompatButton btnSave, TextInputLayout clients,
+      TextInputEditText inputClients, TextInputEditText inputKhesm, TextInputLayout inputKhesms,
+      CircularProgressIndicator progress, CustomTextViewMedium tvClients,
       CustomTextViewMedium tvKhesm) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
     this.clients = clients;
     this.inputClients = inputClients;
     this.inputKhesm = inputKhesm;
     this.inputKhesms = inputKhesms;
+    this.progress = progress;
     this.tvClients = tvClients;
     this.tvKhesm = tvKhesm;
   }

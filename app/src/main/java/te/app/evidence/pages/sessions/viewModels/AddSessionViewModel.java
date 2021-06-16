@@ -12,6 +12,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.sessions.models.AddSessionRequest;
 import te.app.evidence.pages.sessions.models.SessionItem;
 import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.utils.Constants;
 
 public class AddSessionViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
@@ -31,13 +32,13 @@ public class AddSessionViewModel extends BaseViewModel {
     }
 
     public void addNewSession() {
-        //TODO when edit Session and not sending sessionId return 403 and this wrong should return 401
-        // also return updated object
-        if (getAddSessionRequest().isValid())
+        if (getAddSessionRequest().isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
             if (getPassingObject().getObjectClass() == null)
                 compositeDisposable.add(casesRepository.addNewSession(getAddSessionRequest()));
             else
                 compositeDisposable.add(casesRepository.editNewSession(getAddSessionRequest()));
+        }
     }
 
     public AddSessionRequest getAddSessionRequest() {

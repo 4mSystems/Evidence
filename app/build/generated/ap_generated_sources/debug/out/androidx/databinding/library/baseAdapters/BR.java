@@ -41,35 +41,37 @@ public class BR {
 
   public static final int menuViewModel = 19;
 
-  public static final int notes = 20;
+  public static final int message = 20;
 
-  public static final int notesAdapter = 21;
+  public static final int notes = 21;
 
-  public static final int onBoardAdapter = 22;
+  public static final int notesAdapter = 22;
 
-  public static final int onBoardViewModels = 23;
+  public static final int onBoardAdapter = 23;
 
-  public static final int passingObject = 24;
+  public static final int onBoardViewModels = 24;
 
-  public static final int reportersData = 25;
+  public static final int passingObject = 25;
 
-  public static final int selectedBtn = 26;
+  public static final int reportersData = 26;
 
-  public static final int sessionItem = 27;
+  public static final int selectedBtn = 27;
 
-  public static final int sessionsAdapter = 28;
+  public static final int sessionItem = 28;
 
-  public static final int settingsData = 29;
+  public static final int sessionsAdapter = 29;
 
-  public static final int systemUserData = 30;
+  public static final int settingsData = 30;
 
-  public static final int type = 31;
+  public static final int systemUserData = 31;
 
-  public static final int userDocuments = 32;
+  public static final int type = 32;
 
-  public static final int userPermissionsData = 33;
+  public static final int userDocuments = 33;
 
-  public static final int usersAdapter = 34;
+  public static final int userPermissionsData = 34;
 
-  public static final int viewmodel = 35;
+  public static final int usersAdapter = 35;
+
+  public static final int viewmodel = 36;
 }

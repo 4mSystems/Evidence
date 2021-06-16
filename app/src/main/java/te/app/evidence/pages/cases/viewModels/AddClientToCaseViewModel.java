@@ -1,5 +1,7 @@
 package te.app.evidence.pages.cases.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
@@ -39,12 +41,12 @@ public class AddClientToCaseViewModel extends BaseViewModel {
         compositeDisposable.add(casesRepository.getCasesClientsCategories());
     }
 
-    public void createCase() {
+    public void addClientToCase() {
         //TODO return object of added data
         List<Integer> clientList = new ArrayList<>();
         List<Integer> khesmList = new ArrayList<>();
-        if (getAddCaseRequest().isValid()) {
-            loader.set(true);
+        if (!TextUtils.isEmpty(getAddCaseRequest().getMokelText()) || !TextUtils.isEmpty(getAddCaseRequest().getKhesmText())) {
+            setMessage(Constants.SHOW_PROGRESS);
             for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
                 if (getCaseClientsCategoriesData().getClients().get(i).isChecked())
                     clientList.add(getCaseClientsCategoriesData().getClients().get(i).getClientId());
@@ -55,7 +57,8 @@ public class AddClientToCaseViewModel extends BaseViewModel {
             }
             getAddCaseRequest().setMokel_Name(clientList);
             getAddCaseRequest().setKhesm_Name(khesmList);
-            compositeDisposable.add(casesRepository.createCase(getAddCaseRequest()));
+            getAddCaseRequest().setCaseId(String.valueOf(getPassingObject().getId()));
+            compositeDisposable.add(casesRepository.addClientToCase(getAddCaseRequest()));
         }
     }
 

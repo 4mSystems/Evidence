@@ -54,7 +54,7 @@ public class DateEditText extends TextInputEditText {
                 String strDate = format.format(calendar.getTime());
                 setText(strDate);
             }, year, month, day);
-            datePickerDialog.getDatePicker().setMinDate(mcurrentTime.getTimeInMillis());
+//            datePickerDialog.getDatePicker().setMinDate(mcurrentTime.getTimeInMillis());
         }
         datePickerDialog.show();
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(

@@ -89,6 +89,7 @@ public class Constants {
 
     public static final int RESULT_CODE = 6000;
     public final static int CLIENTS_CODE = 6001;
+    public final static int SESSION_CODE = 6005;
     public final static int KHESM_CODE = 6002;
     public final static int FILE_TYPE_IMAGE = 378;
     public final static int FILE_TYPE_VIDEO = 379;
