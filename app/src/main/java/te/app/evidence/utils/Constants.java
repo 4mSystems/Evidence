@@ -108,7 +108,7 @@ public class Constants {
 
     public static final String EDIT_CASE = "EDIT_CASE";
     public static final int EDIT_CASE_REQUEST = 6004;
-    public static final String RATE_APP = "RATE_APP";
+    public static final String CASE_ATTACHMENTS = "CASE_ATTACHMENTS";
     public static final String ABOUT = "about";
     public static final String TERMS = "terms";
     public static final String FIELD = "FIELD";
@@ -116,7 +116,7 @@ public class Constants {
     public static final String NOTES = "NOTES";
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String NEW_SESSION = "NEW_SESSION";
-    public static final String PROFILE_DATA = "PROFILE_DATA";
+    public static final String SESSION_NOTES = "SESSION_NOTES";
     public static final String RESET = "RESET";
     public static final String MAP_STYLE = "MAP_STYLE";
 

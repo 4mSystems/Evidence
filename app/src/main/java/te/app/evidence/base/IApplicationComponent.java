@@ -6,7 +6,6 @@ import dagger.Component;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
 import te.app.evidence.connection.ConnectionModule;
-import te.app.evidence.pages.attachments.AddAttachmentFragment;
 import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
@@ -28,10 +27,11 @@ import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.mohdrs.AddBailiffsFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
-import te.app.evidence.pages.notes.AddNoteFragment;
+import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment;
+import te.app.evidence.pages.sessions.SessionNotesFragment;
 import te.app.evidence.pages.sessions.SessionsFragment;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.users.AddUserFragment;
@@ -77,8 +77,6 @@ public interface IApplicationComponent {
 
     void inject(AttachmentsFragment attachmentsFragment);
 
-    void inject(AddAttachmentFragment addAttachmentFragment);
-
     void inject(CategoriesFragment categoriesFragment);
 
     void inject(AddCategoryFragment addCategoryFragment);
@@ -106,6 +104,8 @@ public interface IApplicationComponent {
     void inject(SessionsFragment sessionsFragment);
 
     void inject(AddSessionFragment addSessionFragment);
+
+    void inject(SessionNotesFragment sessionNotesFragment);
 
     @Component.Builder
     interface Builder {

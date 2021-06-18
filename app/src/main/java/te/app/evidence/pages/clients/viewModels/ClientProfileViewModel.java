@@ -13,7 +13,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.clients.adapters.ClientCasesAdapter;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileData;
-import te.app.evidence.pages.notes.NotesAdapter;
+import te.app.evidence.pages.clients.notes.NotesAdapter;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.utils.Constants;
 

@@ -119,7 +119,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableEnd="@drawable/ic_upload_folder"
-                    android:inputType="text"
+                    android:inputType="textEmailAddress"
                     android:text="@={viewmodel.loginRequest.email}"
                     android:textAlignment="viewStart"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"

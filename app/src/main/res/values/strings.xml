@@ -448,5 +448,6 @@
     <string name="session_search_hint">Looking for a session</string>
     <string name="add_new_session">إضافة جلسة</string>
     <string name="edit_session">تعديل تاريخ الجلسة</string>
+    <string name="attach_desc">الوصف</string>
 
 </resources>

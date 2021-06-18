@@ -14,7 +14,7 @@ import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
-import te.app.evidence.pages.notes.viewModels.NotesItemViewModel;
+import te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel;
 
 public abstract class ItemNoteBinding extends ViewDataBinding {
   @NonNull

@@ -148,6 +148,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_all_case.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_session_note.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_session_note.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_login.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_login.xml"
     },
@@ -174,6 +178,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_clients.xml",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_clients.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_session_notes.xml",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_session_notes.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_action_bar_back.xml",

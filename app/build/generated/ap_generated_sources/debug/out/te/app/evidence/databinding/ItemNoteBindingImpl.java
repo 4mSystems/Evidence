@@ -24,9 +24,9 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback63;
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback64;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,8 +53,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback63 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -80,7 +80,7 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.itemViewModel == variableId) {
-            setItemViewModel((te.app.evidence.pages.notes.viewModels.NotesItemViewModel) variable);
+            setItemViewModel((te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel) variable);
         }
         else {
             variableSet = false;
@@ -88,7 +88,7 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
             return variableSet;
     }
 
-    public void setItemViewModel(@Nullable te.app.evidence.pages.notes.viewModels.NotesItemViewModel ItemViewModel) {
+    public void setItemViewModel(@Nullable te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel ItemViewModel) {
         updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
         synchronized(this) {
@@ -102,11 +102,11 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeItemViewModel((te.app.evidence.pages.notes.viewModels.NotesItemViewModel) object, fieldId);
+                return onChangeItemViewModel((te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeItemViewModel(te.app.evidence.pages.notes.viewModels.NotesItemViewModel ItemViewModel, int fieldId) {
+    private boolean onChangeItemViewModel(te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel ItemViewModel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -129,11 +129,11 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.auth.models.UserData itemViewModelNotesUser = null;
         java.lang.String itemViewModelNotesNotes = null;
         java.lang.String itemViewModelNotesUserName = null;
-        te.app.evidence.pages.notes.models.Notes itemViewModelNotes = null;
+        te.app.evidence.pages.clients.notes.models.Notes itemViewModelNotes = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -168,8 +168,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback59);
-            this.edit.setOnClickListener(mCallback60);
+            this.delete.setOnClickListener(mCallback63);
+            this.edit.setOnClickListener(mCallback64);
         }
     }
     // Listener Stub Implementations
@@ -179,7 +179,7 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
-                te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
                 // itemViewModel != null
                 boolean itemViewModelJavaLangObjectNull = false;
 
@@ -196,7 +196,7 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
-                te.app.evidence.pages.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
                 // itemViewModel != null
                 boolean itemViewModelJavaLangObjectNull = false;
 

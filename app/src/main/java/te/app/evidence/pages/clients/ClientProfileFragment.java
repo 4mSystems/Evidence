@@ -39,8 +39,8 @@ import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
-import te.app.evidence.pages.notes.AddNoteFragment;
-import te.app.evidence.pages.notes.models.Notes;
+import te.app.evidence.pages.clients.notes.AddNoteFragment;
+import te.app.evidence.pages.clients.notes.models.Notes;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 

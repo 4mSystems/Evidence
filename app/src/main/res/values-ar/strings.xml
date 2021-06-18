@@ -402,7 +402,7 @@
     <string name="client_notes">الملاحظات</string>
     <string name="emp_name">إسم الموظف</string>
     <string name="note_search_hint">Looking for note ?</string>
-    <string name="file">File</string>
+    <string name="file">الملف</string>
     <string name="attach_search_hint">Looking for file ?</string>
     <string name="add_new_attach">Add new attachment</string>
     <string name="cat_name">Category name</string>
@@ -416,8 +416,8 @@
     <string name="inventation_type">نوع الدعوى</string>
     <string name="circle_num">رقم الدائرة</string>
     <string name="view_case">View case</string>
-    <string name="add_new_note">New note</string>
-    <string name="edit_note">Edit note</string>
+    <string name="add_new_note">إضافة الملاحظة</string>
+    <string name="edit_note">تعديل الملاحظة</string>
     <string name="admin">admin</string>
     <string name="user">User</string>
     <string name="edit_user">Edit user</string>
@@ -445,5 +445,6 @@
     <string name="session_search_hint">Looking for a session</string>
     <string name="add_new_session">إضافة جلسة</string>
     <string name="edit_session">تعديل تاريخ الجلسة</string>
+    <string name="attach_desc">الوصف</string>
 
 </resources>

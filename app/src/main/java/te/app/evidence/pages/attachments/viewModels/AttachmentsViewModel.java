@@ -1,5 +1,6 @@
 package te.app.evidence.pages.attachments.viewModels;
 
+import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
@@ -7,6 +8,7 @@ import javax.inject.Inject;
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.attachments.adapters.AttachmentsAdapter;
 import te.app.evidence.repository.AttachmentsRepository;
 
 public class AttachmentsViewModel extends BaseViewModel {
@@ -15,6 +17,7 @@ public class AttachmentsViewModel extends BaseViewModel {
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     AttachmentsRepository attachmentsRepository;
+    AttachmentsAdapter attachmentsAdapter;
 
     @Inject
     public AttachmentsViewModel(AttachmentsRepository attachmentsRepository) {
@@ -24,7 +27,12 @@ public class AttachmentsViewModel extends BaseViewModel {
     }
 
     public void attachments() {
-        compositeDisposable.add(attachmentsRepository.getAttachments());
+        compositeDisposable.add(attachmentsRepository.getAttachments(getPassingObject().getObject(), getPassingObject().getId()));
+    }
+
+    @Bindable
+    public AttachmentsAdapter getAttachmentsAdapter() {
+        return this.attachmentsAdapter == null ? this.attachmentsAdapter = new AttachmentsAdapter() : this.attachmentsAdapter;
     }
 
     public AttachmentsRepository getAttachmentsRepository() {

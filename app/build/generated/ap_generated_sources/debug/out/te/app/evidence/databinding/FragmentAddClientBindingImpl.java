@@ -42,11 +42,11 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback39;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -309,9 +309,9 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.mboundView9.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -623,12 +623,12 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         if ((dirtyFlags & 0x100L) != 0) {
             // api target 1
 
-            this.catName.setOnClickListener(mCallback38);
+            this.catName.setOnClickListener(mCallback42);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
-            this.clientType.setOnClickListener(mCallback37);
+            this.clientType.setOnClickListener(mCallback41);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.clientType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, clientTypeandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
-            this.mboundView13.setOnClickListener(mCallback39);
+            this.mboundView13.setOnClickListener(mCallback43);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
@@ -700,23 +700,6 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 }
                 break;
             }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.showClientType();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -731,6 +714,23 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
 
 
                     viewmodel.showCategories();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.showClientType();
                 }
                 break;
             }

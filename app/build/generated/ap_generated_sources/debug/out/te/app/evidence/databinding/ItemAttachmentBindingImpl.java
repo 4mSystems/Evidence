@@ -14,51 +14,33 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.layout_session_header, 1);
-        sViewsWithIds.put(R.id.icon_down_qu, 2);
-        sViewsWithIds.put(R.id.tv_qualifications, 3);
-        sViewsWithIds.put(R.id.v1, 4);
-        sViewsWithIds.put(R.id.expansionLayoutSessions, 5);
-        sViewsWithIds.put(R.id.file_text, 6);
-        sViewsWithIds.put(R.id.file_value, 7);
-        sViewsWithIds.put(R.id.v2, 8);
-        sViewsWithIds.put(R.id.file_desc_text, 9);
-        sViewsWithIds.put(R.id.file_desc_value, 10);
-        sViewsWithIds.put(R.id.v3, 11);
-        sViewsWithIds.put(R.id.control_text, 12);
-        sViewsWithIds.put(R.id.delete, 13);
-        sViewsWithIds.put(R.id.edit, 14);
+        sViewsWithIds.put(R.id.tv_username, 2);
+        sViewsWithIds.put(R.id.v9, 3);
+        sViewsWithIds.put(R.id.session_date_text, 4);
+        sViewsWithIds.put(R.id.file_value, 5);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.cardview.widget.CardView mboundView0;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemAttachmentBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private ItemAttachmentBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[14]
-            , (com.github.florent37.expansionpanel.ExpansionLayout) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
-            , (com.github.florent37.expansionpanel.ExpansionHeader) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (android.view.View) bindings[4]
-            , (android.view.View) bindings[8]
-            , (android.view.View) bindings[11]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
+            , (android.view.View) bindings[3]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.sessionCaseNumber.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -67,7 +49,7 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -95,7 +77,13 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
     }
 
     public void setItemViewModel(@Nullable te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel ItemViewModel) {
+        updateRegistration(0, ItemViewModel);
         this.mItemViewModel = ItemViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.itemViewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -113,6 +101,12 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.attachment) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -123,7 +117,31 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String itemViewModelAttachmentImgDescription = null;
+        te.app.evidence.pages.attachments.models.Attachment itemViewModelAttachment = null;
+        te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel itemViewModel = mItemViewModel;
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+
+
+                if (itemViewModel != null) {
+                    // read itemViewModel.attachment
+                    itemViewModelAttachment = itemViewModel.getAttachment();
+                }
+
+
+                if (itemViewModelAttachment != null) {
+                    // read itemViewModel.attachment.imgDescription
+                    itemViewModelAttachmentImgDescription = itemViewModelAttachment.getImgDescription();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelAttachmentImgDescription);
+        }
     }
     // Listener Stub Implementations
     // callback impls
@@ -131,7 +149,8 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): itemViewModel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): itemViewModel.attachment
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

@@ -14,26 +14,25 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.client_data, 16);
-        sViewsWithIds.put(R.id.client_data_container, 17);
-        sViewsWithIds.put(R.id.tv_invetationNum_text, 18);
-        sViewsWithIds.put(R.id.v1, 19);
-        sViewsWithIds.put(R.id.court_text, 20);
-        sViewsWithIds.put(R.id.v2, 21);
-        sViewsWithIds.put(R.id.paper_type_text, 22);
-        sViewsWithIds.put(R.id.v3, 23);
-        sViewsWithIds.put(R.id.paper_number_text, 24);
-        sViewsWithIds.put(R.id.v6, 25);
-        sViewsWithIds.put(R.id.session_date_text, 26);
-        sViewsWithIds.put(R.id.v7, 27);
-        sViewsWithIds.put(R.id.status_text, 28);
-        sViewsWithIds.put(R.id.client_cases, 29);
-        sViewsWithIds.put(R.id.view_id, 30);
-        sViewsWithIds.put(R.id.home_item2, 31);
-        sViewsWithIds.put(R.id.view_mohdr, 32);
-        sViewsWithIds.put(R.id.view_khesm, 33);
-        sViewsWithIds.put(R.id.view_clients, 34);
-        sViewsWithIds.put(R.id.home_item5, 35);
+        sViewsWithIds.put(R.id.client_data, 17);
+        sViewsWithIds.put(R.id.client_data_container, 18);
+        sViewsWithIds.put(R.id.tv_invetationNum_text, 19);
+        sViewsWithIds.put(R.id.v1, 20);
+        sViewsWithIds.put(R.id.court_text, 21);
+        sViewsWithIds.put(R.id.v2, 22);
+        sViewsWithIds.put(R.id.paper_type_text, 23);
+        sViewsWithIds.put(R.id.v3, 24);
+        sViewsWithIds.put(R.id.paper_number_text, 25);
+        sViewsWithIds.put(R.id.v6, 26);
+        sViewsWithIds.put(R.id.session_date_text, 27);
+        sViewsWithIds.put(R.id.v7, 28);
+        sViewsWithIds.put(R.id.status_text, 29);
+        sViewsWithIds.put(R.id.client_cases, 30);
+        sViewsWithIds.put(R.id.view_id, 31);
+        sViewsWithIds.put(R.id.home_item2, 32);
+        sViewsWithIds.put(R.id.view_mohdr, 33);
+        sViewsWithIds.put(R.id.view_khesm, 34);
+        sViewsWithIds.put(R.id.view_clients, 35);
         sViewsWithIds.put(R.id.view_attachments, 36);
         sViewsWithIds.put(R.id.flow, 37);
     }
@@ -42,13 +41,15 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback32;
+    private final android.view.View.OnClickListener mCallback39;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback37;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback38;
     @Nullable
     private final android.view.View.OnClickListener mCallback35;
     @Nullable
-    private final android.view.View.OnClickListener mCallback33;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback34;
+    private final android.view.View.OnClickListener mCallback36;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -58,43 +59,43 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     }
     private FragmentCaseDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.button.MaterialButton) bindings[29]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
-            , (androidx.cardview.widget.CardView) bindings[17]
+            , (com.google.android.material.button.MaterialButton) bindings[30]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
+            , (androidx.cardview.widget.CardView) bindings[18]
             , (com.google.android.material.button.MaterialButton) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[20]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[21]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
             , (androidx.constraintlayout.helper.widget.Flow) bindings[37]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[8]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[31]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[32]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[11]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[13]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[35]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[24]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[25]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[22]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[23]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[26]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[27]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[28]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[29]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
-            , (android.view.View) bindings[19]
-            , (android.view.View) bindings[21]
-            , (android.view.View) bindings[23]
-            , (android.view.View) bindings[25]
-            , (android.view.View) bindings[27]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[19]
+            , (android.view.View) bindings[20]
+            , (android.view.View) bindings[22]
+            , (android.view.View) bindings[24]
+            , (android.view.View) bindings[26]
+            , (android.view.View) bindings[28]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[36]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[35]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[31]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[34]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[30]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[33]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[32]
             );
         this.clientNotes.setTag(null);
         this.courtValue.setTag(null);
@@ -102,6 +103,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         this.homeItem1.setTag(null);
         this.homeItem3.setTag(null);
         this.homeItem4.setTag(null);
+        this.homeItem5.setTag(null);
         this.homeKhems.setTag(null);
         this.homeMohdrs.setTag(null);
         this.homeSession.setTag(null);
@@ -115,10 +117,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         this.tvInvetationNum.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -374,10 +377,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.clientNotes.setOnClickListener(mCallback32);
-            this.homeItem1.setOnClickListener(mCallback33);
-            this.homeItem3.setOnClickListener(mCallback34);
-            this.homeItem4.setOnClickListener(mCallback35);
+            this.clientNotes.setOnClickListener(mCallback35);
+            this.homeItem1.setOnClickListener(mCallback36);
+            this.homeItem3.setOnClickListener(mCallback37);
+            this.homeItem4.setOnClickListener(mCallback38);
+            this.homeItem5.setOnClickListener(mCallback39);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -399,7 +403,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -414,7 +418,26 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
 
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.EDIT_CASE);
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_ATTACHMENTS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.KHESM);
                 }
                 break;
             }
@@ -437,6 +460,25 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
                 break;
             }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.EDIT_CASE);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -453,25 +495,6 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
                     viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_SESSIONS);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.KHESM);
                 }
                 break;
             }

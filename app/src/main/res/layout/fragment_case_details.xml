@@ -578,7 +578,8 @@
                 android:id="@+id/home_item5"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics">
+                android:background="@drawable/corner_view_gradient_statistics"
+                android:onClick="@{()-> viewmodel.buttonActions(Constants.CASE_ATTACHMENTS)}">
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
                     android:id="@+id/home_khems"

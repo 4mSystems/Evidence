@@ -6,7 +6,7 @@
 
         <variable
             name="itemViewModel"
-            type="te.app.evidence.pages.notes.viewModels.NotesItemViewModel" />
+            type="te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

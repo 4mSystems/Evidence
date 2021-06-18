@@ -39,19 +39,19 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
     @Nullable
     private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback48;
     @Nullable
     private final android.view.View.OnClickListener mCallback44;
     @Nullable
+    private final android.view.View.OnClickListener mCallback51;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback49;
+    @Nullable
     private final android.view.View.OnClickListener mCallback45;
     @Nullable
-    private final android.view.View.OnClickListener mCallback40;
-    @Nullable
     private final android.view.View.OnClickListener mCallback46;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -83,14 +83,14 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         this.mboundView8.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
-        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
+        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -353,38 +353,20 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView1.setOnClickListener(mCallback40);
-            this.mboundView2.setOnClickListener(mCallback41);
-            this.mboundView3.setOnClickListener(mCallback42);
-            this.mboundView4.setOnClickListener(mCallback43);
-            this.mboundView5.setOnClickListener(mCallback44);
-            this.mboundView6.setOnClickListener(mCallback45);
-            this.mboundView7.setOnClickListener(mCallback46);
-            this.mboundView8.setOnClickListener(mCallback47);
+            this.mboundView1.setOnClickListener(mCallback44);
+            this.mboundView2.setOnClickListener(mCallback45);
+            this.mboundView3.setOnClickListener(mCallback46);
+            this.mboundView4.setOnClickListener(mCallback47);
+            this.mboundView5.setOnClickListener(mCallback48);
+            this.mboundView6.setOnClickListener(mCallback49);
+            this.mboundView7.setOnClickListener(mCallback50);
+            this.mboundView8.setOnClickListener(mCallback51);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 8: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeStatus(mboundView8.getResources().getString(R.string.monthly_reports));
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -400,78 +382,6 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
 
 
                     viewmodel.changeStatus(mboundView4.getResources().getString(R.string.search_case));
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeStatus(mboundView3.getResources().getString(R.string.add_case));
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeStatus(mboundView5.getResources().getString(R.string.menuMohdar));
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeStatus(mboundView6.getResources().getString(R.string.menuCat));
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.changeStatus(mboundView1.getResources().getString(R.string.menuUsers));
                 }
                 break;
             }
@@ -493,6 +403,78 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                 }
                 break;
             }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeStatus(mboundView5.getResources().getString(R.string.menuMohdar));
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeStatus(mboundView1.getResources().getString(R.string.menuUsers));
+                }
+                break;
+            }
+            case 8: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeStatus(mboundView8.getResources().getString(R.string.monthly_reports));
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeStatus(mboundView6.getResources().getString(R.string.menuCat));
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -508,6 +490,24 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
 
 
                     viewmodel.changeStatus(mboundView2.getResources().getString(R.string.menuClients));
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.changeStatus(mboundView3.getResources().getString(R.string.add_case));
                 }
                 break;
             }

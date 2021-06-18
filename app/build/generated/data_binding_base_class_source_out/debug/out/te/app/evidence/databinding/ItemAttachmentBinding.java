@@ -10,83 +10,40 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
-import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel;
 
 public abstract class ItemAttachmentBinding extends ViewDataBinding {
   @NonNull
-  public final CustomTextViewRegular controlText;
-
-  @NonNull
-  public final CustomTextViewRegular delete;
-
-  @NonNull
-  public final CustomTextViewRegular edit;
-
-  @NonNull
-  public final ExpansionLayout expansionLayoutSessions;
-
-  @NonNull
-  public final CustomTextViewRegular fileDescText;
-
-  @NonNull
-  public final CustomTextViewRegular fileDescValue;
-
-  @NonNull
-  public final CustomTextViewRegular fileText;
-
-  @NonNull
   public final AppCompatImageView fileValue;
 
   @NonNull
-  public final AppCompatImageView iconDownQu;
+  public final CustomTextViewMedium sessionCaseNumber;
 
   @NonNull
-  public final ExpansionHeader layoutSessionHeader;
+  public final CustomTextViewMedium sessionDateText;
 
   @NonNull
-  public final CustomTextViewMedium tvQualifications;
+  public final CustomTextViewMedium tvUsername;
 
   @NonNull
-  public final View v1;
-
-  @NonNull
-  public final View v2;
-
-  @NonNull
-  public final View v3;
+  public final View v9;
 
   @Bindable
   protected AttachmentsItemViewModel mItemViewModel;
 
   protected ItemAttachmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewRegular controlText, CustomTextViewRegular delete, CustomTextViewRegular edit,
-      ExpansionLayout expansionLayoutSessions, CustomTextViewRegular fileDescText,
-      CustomTextViewRegular fileDescValue, CustomTextViewRegular fileText,
-      AppCompatImageView fileValue, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutSessionHeader, CustomTextViewMedium tvQualifications, View v1, View v2,
-      View v3) {
+      AppCompatImageView fileValue, CustomTextViewMedium sessionCaseNumber,
+      CustomTextViewMedium sessionDateText, CustomTextViewMedium tvUsername, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.controlText = controlText;
-    this.delete = delete;
-    this.edit = edit;
-    this.expansionLayoutSessions = expansionLayoutSessions;
-    this.fileDescText = fileDescText;
-    this.fileDescValue = fileDescValue;
-    this.fileText = fileText;
     this.fileValue = fileValue;
-    this.iconDownQu = iconDownQu;
-    this.layoutSessionHeader = layoutSessionHeader;
-    this.tvQualifications = tvQualifications;
-    this.v1 = v1;
-    this.v2 = v2;
-    this.v3 = v3;
+    this.sessionCaseNumber = sessionCaseNumber;
+    this.sessionDateText = sessionDateText;
+    this.tvUsername = tvUsername;
+    this.v9 = v9;
   }
 
   public abstract void setItemViewModel(@Nullable AttachmentsItemViewModel itemViewModel);

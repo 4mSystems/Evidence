@@ -33,7 +33,7 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     private final com.google.android.material.textfield.TextInputEditText mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
     // values
@@ -227,8 +227,8 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -572,8 +572,8 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback14);
-            this.inputCat.setOnClickListener(mCallback13);
+            this.btnSave.setOnClickListener(mCallback15);
+            this.inputCat.setOnClickListener(mCallback14);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
@@ -617,23 +617,6 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toCategories();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -648,6 +631,23 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
 
 
                     viewmodel.editCase();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toCategories();
                 }
                 break;
             }

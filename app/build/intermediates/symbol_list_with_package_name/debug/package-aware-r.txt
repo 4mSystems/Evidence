@@ -3423,12 +3423,9 @@ id fab_label
 id fade
 id fast_out_linear_in
 id fast_out_slow_in
-id file_desc_text
-id file_desc_value
 id file_iv
 id file_name_tv
 id file_size_tv
-id file_text
 id file_type_tv
 id file_value
 id fill
@@ -3441,6 +3438,7 @@ id fl_home_container
 id flip
 id floating
 id flow
+id flow2
 id folder_count
 id folder_title
 id forever
@@ -3967,7 +3965,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detailed_chip_view
 layout dialog_no_internet
-layout fragment_add_attachment
 layout fragment_add_bailiffs
 layout fragment_add_case
 layout fragment_add_category
@@ -3998,6 +3995,7 @@ layout fragment_photo_picker
 layout fragment_profile
 layout fragment_reporter_details
 layout fragment_search_clients
+layout fragment_session_notes
 layout fragment_sessions
 layout fragment_splash
 layout fragment_user_permission
@@ -4018,6 +4016,7 @@ layout item_mohdr
 layout item_note
 layout item_photo_layout
 layout item_session
+layout item_session_note
 layout item_user
 layout layout_action_bar_back
 layout layout_action_bar_home
@@ -4193,6 +4192,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string area
 string area_tatal_ad
+string attach_desc
 string attach_search_hint
 string attachment_images
 string attachment_video

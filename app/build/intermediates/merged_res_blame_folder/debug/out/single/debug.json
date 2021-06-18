@@ -200,6 +200,10 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_permission_off.xml"
     },
     {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_session_notes.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_session_notes.xml"
+    },
+    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_report.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/mipmap-xxxhdpi/ic_report.png"
     },
@@ -584,10 +588,6 @@
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_users.xml"
     },
     {
-        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_add_attachment.xml.flat",
-        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/fragment_add_attachment.xml"
-    },
-    {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable-xhdpi_logo.png.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/generated/res/pngs/debug/drawable-xhdpi/logo.png"
     },
@@ -626,6 +626,10 @@
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_reports.xml.flat",
         "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/drawable/ic_reports.xml"
+    },
+    {
+        "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/layout_item_session_note.xml.flat",
+        "source": "/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/res/layout/item_session_note.xml"
     },
     {
         "merged": "/home/elnagar/AndroidStudioProjects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_more.xml.flat",

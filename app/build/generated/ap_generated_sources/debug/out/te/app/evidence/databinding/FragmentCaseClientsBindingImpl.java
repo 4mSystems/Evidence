@@ -23,7 +23,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
     private final com.github.clans.fab.FloatingActionButton mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback18;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback18 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -134,7 +134,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback17);
+            this.mboundView2.setOnClickListener(mCallback18);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

@@ -23,6 +23,7 @@ import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
 import te.app.evidence.pages.sessions.models.AddSessionRequest;
 import te.app.evidence.pages.sessions.models.AddSessionResponse;
 import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
+import te.app.evidence.pages.sessions.models.SessionNotesResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -128,4 +129,14 @@ public class CasesRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_SESSION, addSessionRequest, AddSessionResponse.class,
                 Constants.NEW_SESSION, false);
     }
+
+    public Disposable getSessionNotes(int sessionId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSION_NOTES + sessionId, new Object(), SessionNotesResponse.class,
+                Constants.SESSION_NOTES, true);
+    }
+    public Disposable deleteSessionNote(int noteId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_SESSION_NOTE + noteId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
+
 }

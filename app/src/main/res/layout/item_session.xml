@@ -246,7 +246,6 @@
                 android:layout_marginTop="@dimen/dp6h"
                 android:layout_marginBottom="@dimen/dp6h"
                 android:layout_marginEnd="@dimen/dp4w"
-
                 android:visibility="@{TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)?View.VISIBLE:View.GONE}"
                 app:constraint_referenced_ids="edit,delete,view_value"
                 app:layout_constraintBottom_toBottomOf="parent"

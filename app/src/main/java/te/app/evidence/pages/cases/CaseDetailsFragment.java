@@ -25,11 +25,10 @@ import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentCaseDetailsBinding;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.pages.cases.models.caseDetails.CaseDetails;
+import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
-import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.sessions.SessionsFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -77,6 +76,8 @@ public class CaseDetailsFragment extends BaseFragment {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId(), Constants.client), getString(R.string.clients), CaseClientsFragment.class.getName(), Constants.CLIENTS_CODE);
             } else if (Constants.CASE_SESSIONS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId()), getString(R.string.sessions), SessionsFragment.class.getName(), Constants.SESSION_CODE);
+            } else if (Constants.CASE_ATTACHMENTS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId(), Constants.CASE_ATTACHMENTS), getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
             }
 
         });

@@ -21,6 +21,7 @@ public class URLS {
     public final static String UPDATE_PAYMENT = "user/update-payment";
     public final static String CLIENT_PROFILE = "client_Profile/";
     public final static String ADD_NOTE = "add_clientNote";
+    public final static String ADD_SESSION_NOTE = "addSessionNote";
     public final static String EDIT_NOTE = "edit_clientNote";
 
     public final static String DELETE_NOTE = "delete_clientNote/";
@@ -60,4 +61,8 @@ public class URLS {
     public static final String ADD_NEW_SESSION = "addSession";
     public static final String EDIT_SESSION = "editSession";
     public static final String ADD_CLIENT_CASE = "caseClients/store";
+    public static final String CASE_SESSION_NOTES = "sessionsNote/";
+    public static final String DELETE_SESSION_NOTE = "removeNoteStatus/";
+    public static final String EDIT_SESSION_NOTE = "removeNoteStatus/";
+    public static final String CASE_ATTACHMENTS = "caseAttachment/";
 }

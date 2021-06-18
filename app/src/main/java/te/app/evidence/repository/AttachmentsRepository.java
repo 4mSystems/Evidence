@@ -9,6 +9,7 @@ import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.attachments.models.AttachmentsResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
@@ -34,24 +35,12 @@ public class AttachmentsRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getAttachments() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS, new Object(), ClientsResponse.class,
-                Constants.CLIENTS, true);
-    }
-
-    public Disposable addNewClient(AddClientRequest addClientRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENTS, addClientRequest, AddClientResponse.class,
-                Constants.ADD_CLIENTS, true);
-    }
-
-    public Disposable editClient(AddClientRequest addClientRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CLIENTS, addClientRequest, AddClientResponse.class,
-                Constants.ADD_CLIENTS, true);
-    }
-
-    public Disposable deleteClient(int clientId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CLIENT + clientId, new Object(), StatusMessage.class,
-                Constants.DELETE_CLIENT, true);
+    public Disposable getAttachments(String type, int id) {
+        if (type.equals(Constants.CASE_ATTACHMENTS))
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_ATTACHMENTS + id, new Object(), AttachmentsResponse.class,
+                    Constants.CASE_ATTACHMENTS, true);
+        else
+            return null;
     }
 
 
