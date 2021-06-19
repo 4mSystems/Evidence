@@ -10,6 +10,8 @@
 
         <import type="te.app.evidence.utils.Constants" />
 
+        <import type="android.text.TextUtils" />
+
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.cases.viewModels.AddCaseViewModel" />
@@ -314,26 +316,38 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <ProgressBar
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/dp30h"
-                android:visibility="@{viewmodel.loader==false?View.GONE:View.VISIBLE}" />
-
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp30h"
-                android:background="@color/colorPrimaryDark"
-                android:onClick="@{()-> viewmodel.createCase()}"
-                android:text="@string/save"
-                android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white"
-                android:visibility="@{viewmodel.loader==true?View.GONE:View.VISIBLE}" />
+                android:layout_marginTop="@dimen/dp30h">
 
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
+                    android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+                    android:onClick="@{()-> viewmodel.createCase()}"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progress"
+                    style="Widget.MaterialComponents.LinearProgressIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/btnSave"
+                    app:layout_constraintStart_toStartOf="@id/btnSave"
+                    app:layout_constraintTop_toTopOf="@id/btnSave"
+                    app:trackColor="@color/white"
+                    app:trackThickness="@dimen/dp4h" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -57,7 +57,7 @@ public class AuthRepository extends BaseRepository {
 
     public Disposable login(LoginRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.LOGIN, request, UsersResponse.class,
-                Constants.LOGIN, true);
+                Constants.LOGIN, false);
     }
 
     public Disposable register(RegisterRequest request, List<FileObject> fileObjects) {

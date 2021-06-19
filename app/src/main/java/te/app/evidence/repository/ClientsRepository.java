@@ -41,12 +41,12 @@ public class ClientsRepository extends BaseRepository {
 
     public Disposable addNewClient(AddClientRequest addClientRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENTS, addClientRequest, AddClientResponse.class,
-                Constants.ADD_CLIENTS, true);
+                Constants.ADD_CLIENTS, false);
     }
 
     public Disposable editClient(AddClientRequest addClientRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CLIENTS, addClientRequest, AddClientResponse.class,
-                Constants.ADD_CLIENTS, true);
+                Constants.ADD_CLIENTS, false);
     }
 
     public Disposable deleteClient(int clientId) {

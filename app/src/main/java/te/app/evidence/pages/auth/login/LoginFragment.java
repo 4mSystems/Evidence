@@ -47,6 +47,7 @@ public class LoginFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             switch (((Mutable) o).message) {
                 case Constants.LOGIN:
                     toastMessage(((UsersResponse) mutable.object).mMessage);
@@ -56,6 +57,8 @@ public class LoginFragment extends BaseFragment {
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);
                     break;
+
+
             }
         });
     }

@@ -25,8 +25,6 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView12;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView13;
-    @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView3;
@@ -274,13 +272,16 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     };
 
     public FragmentAddClientBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private FragmentAddClientBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 7
+            , (androidx.appcompat.widget.AppCompatButton) bindings[13]
             , (com.google.android.material.textfield.TextInputEditText) bindings[10]
             , (com.google.android.material.textfield.TextInputEditText) bindings[8]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[14]
             );
+        this.btnSave.setTag(null);
         this.catName.setTag(null);
         this.clientType.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
@@ -291,8 +292,6 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.mboundView11.setTag(null);
         this.mboundView12 = (com.google.android.material.textfield.TextInputEditText) bindings[12];
         this.mboundView12.setTag(null);
-        this.mboundView13 = (androidx.appcompat.widget.AppCompatButton) bindings[13];
-        this.mboundView13.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView3 = (com.google.android.material.textfield.TextInputLayout) bindings[3];
@@ -307,6 +306,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.mboundView7.setTag(null);
         this.mboundView9 = (com.google.android.material.textfield.TextInputLayout) bindings[9];
         this.mboundView9.setTag(null);
+        this.progress.setTag(null);
         setRootTag(root);
         // listeners
         mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
@@ -318,7 +318,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x100L;
+                mDirtyFlags = 0x200L;
         }
         requestRebind();
     }
@@ -436,9 +436,15 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             }
             return true;
         }
-        else if (fieldId == BR.passingObject) {
+        else if (fieldId == BR.message) {
             synchronized(this) {
                     mDirtyFlags |= 0x80L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.passingObject) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x100L;
             }
             return true;
         }
@@ -452,35 +458,45 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientUnitError = null;
+        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = null;
         java.lang.String viewmodelAddClientRequestClientTypeErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnitErrorGet = null;
         te.app.evidence.PassingObject viewmodelPassingObject = null;
-        java.lang.String viewmodelAddClientRequestClientAddressErrorGet = null;
         java.lang.String viewmodelAddClientRequestType = null;
-        java.lang.String viewmodelAddClientRequestClientNameErrorGet = null;
+        boolean textUtilsIsEmptyViewmodelMessage = false;
         java.lang.String viewmodelAddClientRequestClientUnit = null;
-        java.lang.String viewmodelAddClientRequestNotes = null;
-        androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNoteError = null;
-        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = null;
+        boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelAddClientRequestClientCatErrorGet = null;
+        java.lang.String viewmodelMessage = null;
+        java.lang.String viewmodelAddClientRequestClientNoteErrorGet = null;
+        boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
+        java.lang.String viewmodelAddClientRequestCatName = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
+        java.lang.Object viewmodelPassingObjectObjectClass = null;
+        boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientUnitError = null;
+        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewClientBtnSaveAndroidStringEditClient = null;
+        java.lang.String viewmodelAddClientRequestClientAddressErrorGet = null;
+        java.lang.String viewmodelAddClientRequestClientNameErrorGet = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
+        java.lang.String viewmodelAddClientRequestNotes = null;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNoteError = null;
         java.lang.String viewmodelAddClientRequestClientName = null;
         te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
-        java.lang.String viewmodelAddClientRequestClientNoteErrorGet = null;
-        java.lang.String viewmodelAddClientRequestCatName = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientCatError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientTypeError = null;
-        java.lang.Object viewmodelPassingObjectObjectClass = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNameError = null;
         java.lang.String viewmodelAddClientRequestClientAddress = null;
-        boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientAddressError = null;
         te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
+        boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0x1ffL) != 0) {
+        if ((dirtyFlags & 0x3ffL) != 0) {
 
 
-            if ((dirtyFlags & 0x1c0L) != 0) {
+            if ((dirtyFlags & 0x340L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.passingObject
@@ -496,27 +512,75 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
 
                     // read viewmodel.passingObject.objectClass == null
                     viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
-                if((dirtyFlags & 0x1c0L) != 0) {
+                if((dirtyFlags & 0x340L) != 0) {
                     if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
-                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x8000L;
                     }
                     else {
-                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x4000L;
                     }
                 }
 
 
                     // read viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-                    viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (mboundView13.getResources().getString(R.string.add_new_client)) : (mboundView13.getResources().getString(R.string.edit_client)));
+                    viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewClientBtnSaveAndroidStringEditClient = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (btnSave.getResources().getString(R.string.add_new_client)) : (btnSave.getResources().getString(R.string.edit_client)));
             }
-            if ((dirtyFlags & 0x17fL) != 0) {
+            if ((dirtyFlags & 0x2c0L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.message
+                        viewmodelMessage = viewmodel.getMessage();
+                    }
+
+
+                    // read TextUtils.isEmpty(viewmodel.message)
+                    textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+                if((dirtyFlags & 0x2c0L) != 0) {
+                    if(textUtilsIsEmptyViewmodelMessage) {
+                            dirtyFlags |= 0x2000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000L;
+                    }
+                }
+
+
+                    // read !TextUtils.isEmpty(viewmodel.message)
+                    TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+                if((dirtyFlags & 0x2c0L) != 0) {
+                    if(TextUtilsIsEmptyViewmodelMessage1) {
+                            dirtyFlags |= 0x200000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100000L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0x27fL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.addClientRequest
                         viewmodelAddClientRequest = viewmodel.getAddClientRequest();
                     }
 
-                if ((dirtyFlags & 0x141L) != 0) {
+                if ((dirtyFlags & 0x240L) != 0) {
+
+                        if (viewmodelAddClientRequest != null) {
+                            // read viewmodel.addClientRequest.type
+                            viewmodelAddClientRequestType = viewmodelAddClientRequest.getType();
+                            // read viewmodel.addClientRequest.client_Unit
+                            viewmodelAddClientRequestClientUnit = viewmodelAddClientRequest.getClient_Unit();
+                            // read viewmodel.addClientRequest.catName
+                            viewmodelAddClientRequestCatName = viewmodelAddClientRequest.getCatName();
+                            // read viewmodel.addClientRequest.notes
+                            viewmodelAddClientRequestNotes = viewmodelAddClientRequest.getNotes();
+                            // read viewmodel.addClientRequest.client_Name
+                            viewmodelAddClientRequestClientName = viewmodelAddClientRequest.getClient_Name();
+                            // read viewmodel.addClientRequest.client_Address
+                            viewmodelAddClientRequestClientAddress = viewmodelAddClientRequest.getClient_Address();
+                        }
+                }
+                if ((dirtyFlags & 0x241L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientUnitError
@@ -530,24 +594,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                             viewmodelAddClientRequestClientUnitErrorGet = viewmodelAddClientRequestClientUnitError.get();
                         }
                 }
-                if ((dirtyFlags & 0x140L) != 0) {
-
-                        if (viewmodelAddClientRequest != null) {
-                            // read viewmodel.addClientRequest.type
-                            viewmodelAddClientRequestType = viewmodelAddClientRequest.getType();
-                            // read viewmodel.addClientRequest.client_Unit
-                            viewmodelAddClientRequestClientUnit = viewmodelAddClientRequest.getClient_Unit();
-                            // read viewmodel.addClientRequest.notes
-                            viewmodelAddClientRequestNotes = viewmodelAddClientRequest.getNotes();
-                            // read viewmodel.addClientRequest.client_Name
-                            viewmodelAddClientRequestClientName = viewmodelAddClientRequest.getClient_Name();
-                            // read viewmodel.addClientRequest.catName
-                            viewmodelAddClientRequestCatName = viewmodelAddClientRequest.getCatName();
-                            // read viewmodel.addClientRequest.client_Address
-                            viewmodelAddClientRequestClientAddress = viewmodelAddClientRequest.getClient_Address();
-                        }
-                }
-                if ((dirtyFlags & 0x142L) != 0) {
+                if ((dirtyFlags & 0x242L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientNoteError
@@ -561,7 +608,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                             viewmodelAddClientRequestClientNoteErrorGet = viewmodelAddClientRequestClientNoteError.get();
                         }
                 }
-                if ((dirtyFlags & 0x144L) != 0) {
+                if ((dirtyFlags & 0x244L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientCatError
@@ -575,7 +622,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                             viewmodelAddClientRequestClientCatErrorGet = viewmodelAddClientRequestClientCatError.get();
                         }
                 }
-                if ((dirtyFlags & 0x148L) != 0) {
+                if ((dirtyFlags & 0x248L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientTypeError
@@ -589,7 +636,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                             viewmodelAddClientRequestClientTypeErrorGet = viewmodelAddClientRequestClientTypeError.get();
                         }
                 }
-                if ((dirtyFlags & 0x150L) != 0) {
+                if ((dirtyFlags & 0x250L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientNameError
@@ -603,7 +650,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                             viewmodelAddClientRequestClientNameErrorGet = viewmodelAddClientRequestClientNameError.get();
                         }
                 }
-                if ((dirtyFlags & 0x160L) != 0) {
+                if ((dirtyFlags & 0x260L) != 0) {
 
                         if (viewmodelAddClientRequest != null) {
                             // read viewmodel.addClientRequest.clientAddressError
@@ -620,20 +667,82 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             }
         }
         // batch finished
-        if ((dirtyFlags & 0x100L) != 0) {
+
+        if ((dirtyFlags & 0x1000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x200000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
+                    viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x2c0L) != 0) {
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
+            if((dirtyFlags & 0x2c0L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x800L;
+                        dirtyFlags |= 0x20000L;
+                }
+                else {
+                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x10000L;
+                }
+            }
+            if((dirtyFlags & 0x2c0L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x80000L;
+                }
+                else {
+                        dirtyFlags |= 0x40000L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_medium)));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x2c0L) != 0) {
             // api target 1
 
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium);
+            this.btnSave.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0x200L) != 0) {
+            // api target 1
+
+            this.btnSave.setOnClickListener(mCallback43);
             this.catName.setOnClickListener(mCallback42);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
             this.clientType.setOnClickListener(mCallback41);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.clientType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, clientTypeandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
-            this.mboundView13.setOnClickListener(mCallback43);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x140L) != 0) {
+        if ((dirtyFlags & 0x340L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnSave, viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewClientBtnSaveAndroidStringEditClient);
+        }
+        if ((dirtyFlags & 0x240L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, viewmodelAddClientRequestCatName);
@@ -643,37 +752,32 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddClientRequestClientUnit);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddClientRequestClientAddress);
         }
-        if ((dirtyFlags & 0x150L) != 0) {
+        if ((dirtyFlags & 0x250L) != 0) {
             // api target 1
 
             this.mboundView1.setError(viewmodelAddClientRequestClientNameErrorGet);
         }
-        if ((dirtyFlags & 0x142L) != 0) {
+        if ((dirtyFlags & 0x242L) != 0) {
             // api target 1
 
             this.mboundView11.setError(viewmodelAddClientRequestClientNoteErrorGet);
         }
-        if ((dirtyFlags & 0x1c0L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView13, viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView13AndroidStringAddNewClientMboundView13AndroidStringEditClient);
-        }
-        if ((dirtyFlags & 0x141L) != 0) {
+        if ((dirtyFlags & 0x241L) != 0) {
             // api target 1
 
             this.mboundView3.setError(viewmodelAddClientRequestClientUnitErrorGet);
         }
-        if ((dirtyFlags & 0x160L) != 0) {
+        if ((dirtyFlags & 0x260L) != 0) {
             // api target 1
 
             this.mboundView5.setError(viewmodelAddClientRequestClientAddressErrorGet);
         }
-        if ((dirtyFlags & 0x148L) != 0) {
+        if ((dirtyFlags & 0x248L) != 0) {
             // api target 1
 
             this.mboundView7.setError(viewmodelAddClientRequestClientTypeErrorGet);
         }
-        if ((dirtyFlags & 0x144L) != 0) {
+        if ((dirtyFlags & 0x244L) != 0) {
             // api target 1
 
             this.mboundView9.setError(viewmodelAddClientRequestClientCatErrorGet);
@@ -746,10 +850,21 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         flag 4 (0x5L): viewmodel.addClientRequest.clientNameError
         flag 5 (0x6L): viewmodel.addClientRequest.clientAddressError
         flag 6 (0x7L): viewmodel
-        flag 7 (0x8L): viewmodel.passingObject
-        flag 8 (0x9L): null
-        flag 9 (0xaL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 10 (0xbL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 7 (0x8L): viewmodel.message
+        flag 8 (0x9L): viewmodel.passingObject
+        flag 9 (0xaL): null
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 14 (0xfL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 15 (0x10L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

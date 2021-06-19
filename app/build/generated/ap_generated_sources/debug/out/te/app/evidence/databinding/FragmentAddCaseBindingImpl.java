@@ -35,10 +35,6 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView17;
     @NonNull
-    private final android.widget.ProgressBar mboundView18;
-    @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView19;
-    @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView3;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView5;
@@ -289,11 +285,14 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private FragmentAddCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 10
+        super(bindingComponent, root, 9
+            , (androidx.appcompat.widget.AppCompatButton) bindings[18]
             , (com.google.android.material.textfield.TextInputEditText) bindings[14]
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             , (com.google.android.material.textfield.TextInputEditText) bindings[4]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[19]
             );
+        this.btnSave.setTag(null);
         this.inputCat.setTag(null);
         this.inputClients.setTag(null);
         this.inputKhesm.setTag(null);
@@ -315,10 +314,6 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         this.mboundView16.setTag(null);
         this.mboundView17 = (com.google.android.material.textfield.TextInputEditText) bindings[17];
         this.mboundView17.setTag(null);
-        this.mboundView18 = (android.widget.ProgressBar) bindings[18];
-        this.mboundView18.setTag(null);
-        this.mboundView19 = (androidx.appcompat.widget.AppCompatButton) bindings[19];
-        this.mboundView19.setTag(null);
         this.mboundView3 = (com.google.android.material.textfield.TextInputLayout) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView5 = (com.google.android.material.textfield.TextInputLayout) bindings[5];
@@ -331,6 +326,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         this.mboundView8.setTag(null);
         this.mboundView9 = (com.google.android.material.textfield.TextInputLayout) bindings[9];
         this.mboundView9.setTag(null);
+        this.progress.setTag(null);
         setRootTag(root);
         // listeners
         mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
@@ -371,10 +367,10 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.cases.viewModels.AddCaseViewModel Viewmodel) {
-        updateRegistration(9, Viewmodel);
+        updateRegistration(8, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x200L;
+            mDirtyFlags |= 0x100L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -384,29 +380,27 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
-                return onChangeViewmodelLoader((androidx.databinding.ObservableField<java.lang.Boolean>) object, fieldId);
-            case 1 :
                 return onChangeViewmodelAddCaseRequestInvetationNumError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 2 :
+            case 1 :
                 return onChangeViewmodelAddCaseRequestDateError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 3 :
+            case 2 :
                 return onChangeViewmodelAddCaseRequestKhesmError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 4 :
+            case 3 :
                 return onChangeViewmodelAddCaseRequestCourtError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 5 :
+            case 4 :
                 return onChangeViewmodelAddCaseRequestCircleNumError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 6 :
+            case 5 :
                 return onChangeViewmodelAddCaseRequestMokelError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 7 :
+            case 6 :
                 return onChangeViewmodelAddCaseRequestInvetationTypeError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 8 :
+            case 7 :
                 return onChangeViewmodelAddCaseRequestCatError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
-            case 9 :
+            case 8 :
                 return onChangeViewmodel((te.app.evidence.pages.cases.viewModels.AddCaseViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodelLoader(androidx.databinding.ObservableField<java.lang.Boolean> ViewmodelLoader, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestInvetationNumError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestInvetationNumError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
@@ -415,7 +409,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestInvetationNumError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestInvetationNumError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestDateError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestDateError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
@@ -424,7 +418,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestDateError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestDateError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestKhesmError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestKhesmError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
@@ -433,7 +427,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestKhesmError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestKhesmError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestCourtError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCourtError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x8L;
@@ -442,7 +436,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestCourtError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCourtError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestCircleNumError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCircleNumError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x10L;
@@ -451,7 +445,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestCircleNumError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCircleNumError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestMokelError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestMokelError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x20L;
@@ -460,7 +454,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestMokelError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestMokelError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestInvetationTypeError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestInvetationTypeError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x40L;
@@ -469,7 +463,7 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestInvetationTypeError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestInvetationTypeError, int fieldId) {
+    private boolean onChangeViewmodelAddCaseRequestCatError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCatError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x80L;
@@ -478,17 +472,14 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
         }
         return false;
     }
-    private boolean onChangeViewmodelAddCaseRequestCatError(androidx.databinding.ObservableField<java.lang.String> ViewmodelAddCaseRequestCatError, int fieldId) {
+    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.AddCaseViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x100L;
             }
             return true;
         }
-        return false;
-    }
-    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.AddCaseViewModel Viewmodel, int fieldId) {
-        if (fieldId == BR._all) {
+        else if (fieldId == BR.message) {
             synchronized(this) {
                     mDirtyFlags |= 0x200L;
             }
@@ -504,74 +495,56 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean textUtilsIsEmptyViewmodelMessage = false;
         java.lang.String viewmodelAddCaseRequestCourt = null;
+        boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelAddCaseRequestInvetationNum = null;
-        androidx.databinding.ObservableField<java.lang.Boolean> viewmodelLoader = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestInvetationNumError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestDateError = null;
-        boolean androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet = false;
+        java.lang.String viewmodelMessage = null;
         java.lang.String viewmodelAddCaseRequestInventationType = null;
-        boolean viewmodelLoaderBooleanTrue = false;
+        boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelAddCaseRequestInvetationTypeErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestKhesmError = null;
-        int viewmodelLoaderBooleanFalseViewGONEViewVISIBLE = 0;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestCourtError = null;
-        int viewmodelLoaderBooleanTrueViewGONEViewVISIBLE = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestCircleNumError = null;
         java.lang.String viewmodelAddCaseRequestDateErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestMokelError = null;
         java.lang.String viewmodelAddCaseRequestFirstSessionDate = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        int textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = 0;
         java.lang.String viewmodelAddCaseRequestCircleNumErrorGet = null;
         java.lang.String viewmodelAddCaseRequestInvetationNumErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestInvetationTypeError = null;
         java.lang.String viewmodelAddCaseRequestKhesmErrorGet = null;
         java.lang.String viewmodelAddCaseRequestCatErrorGet = null;
-        boolean viewmodelLoaderBooleanFalse = false;
-        java.lang.Boolean viewmodelLoaderGet = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddCaseRequestCatError = null;
         java.lang.String viewmodelAddCaseRequestCourtErrorGet = null;
         java.lang.String viewmodelAddCaseRequestMokelErrorGet = null;
         java.lang.String viewmodelAddCaseRequestDescion = null;
         java.lang.String viewmodelAddCaseRequestCircleNum = null;
         te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+        boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
         if ((dirtyFlags & 0x7ffL) != 0) {
 
 
-            if ((dirtyFlags & 0x601L) != 0) {
+            if ((dirtyFlags & 0x700L) != 0) {
 
                     if (viewmodel != null) {
-                        // read viewmodel.loader
-                        viewmodelLoader = viewmodel.loader;
-                    }
-                    updateRegistration(0, viewmodelLoader);
-
-
-                    if (viewmodelLoader != null) {
-                        // read viewmodel.loader.get()
-                        viewmodelLoaderGet = viewmodelLoader.get();
+                        // read viewmodel.message
+                        viewmodelMessage = viewmodel.getMessage();
                     }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get())
-                    androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet = androidx.databinding.ViewDataBinding.safeUnbox(viewmodelLoaderGet);
-
-
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true
-                    viewmodelLoaderBooleanTrue = (androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet) == (true);
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false
-                    viewmodelLoaderBooleanFalse = (androidxDatabindingViewDataBindingSafeUnboxViewmodelLoaderGet) == (false);
-                if((dirtyFlags & 0x601L) != 0) {
-                    if(viewmodelLoaderBooleanTrue) {
-                            dirtyFlags |= 0x4000L;
-                    }
-                    else {
-                            dirtyFlags |= 0x2000L;
-                    }
-                }
-                if((dirtyFlags & 0x601L) != 0) {
-                    if(viewmodelLoaderBooleanFalse) {
+                    // read TextUtils.isEmpty(viewmodel.message)
+                    textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+                if((dirtyFlags & 0x700L) != 0) {
+                    if(textUtilsIsEmptyViewmodelMessage) {
                             dirtyFlags |= 0x1000L;
                     }
                     else {
@@ -580,19 +553,25 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                 }
 
 
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
-                    viewmodelLoaderBooleanTrueViewGONEViewVISIBLE = ((viewmodelLoaderBooleanTrue) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
-                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-                    viewmodelLoaderBooleanFalseViewGONEViewVISIBLE = ((viewmodelLoaderBooleanFalse) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
+                    // read !TextUtils.isEmpty(viewmodel.message)
+                    TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+                if((dirtyFlags & 0x700L) != 0) {
+                    if(TextUtilsIsEmptyViewmodelMessage1) {
+                            dirtyFlags |= 0x100000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x80000L;
+                    }
+                }
             }
-            if ((dirtyFlags & 0x7feL) != 0) {
+            if ((dirtyFlags & 0x5ffL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.addCaseRequest
                         viewmodelAddCaseRequest = viewmodel.getAddCaseRequest();
                     }
 
-                if ((dirtyFlags & 0x600L) != 0) {
+                if ((dirtyFlags & 0x500L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.court
@@ -609,13 +588,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestCircleNum = viewmodelAddCaseRequest.getCircle_num();
                         }
                 }
-                if ((dirtyFlags & 0x602L) != 0) {
+                if ((dirtyFlags & 0x501L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.invetationNumError
                             viewmodelAddCaseRequestInvetationNumError = viewmodelAddCaseRequest.invetationNumError;
                         }
-                        updateRegistration(1, viewmodelAddCaseRequestInvetationNumError);
+                        updateRegistration(0, viewmodelAddCaseRequestInvetationNumError);
 
 
                         if (viewmodelAddCaseRequestInvetationNumError != null) {
@@ -623,13 +602,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestInvetationNumErrorGet = viewmodelAddCaseRequestInvetationNumError.get();
                         }
                 }
-                if ((dirtyFlags & 0x604L) != 0) {
+                if ((dirtyFlags & 0x502L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.dateError
                             viewmodelAddCaseRequestDateError = viewmodelAddCaseRequest.dateError;
                         }
-                        updateRegistration(2, viewmodelAddCaseRequestDateError);
+                        updateRegistration(1, viewmodelAddCaseRequestDateError);
 
 
                         if (viewmodelAddCaseRequestDateError != null) {
@@ -637,13 +616,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestDateErrorGet = viewmodelAddCaseRequestDateError.get();
                         }
                 }
-                if ((dirtyFlags & 0x608L) != 0) {
+                if ((dirtyFlags & 0x504L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.khesmError
                             viewmodelAddCaseRequestKhesmError = viewmodelAddCaseRequest.khesmError;
                         }
-                        updateRegistration(3, viewmodelAddCaseRequestKhesmError);
+                        updateRegistration(2, viewmodelAddCaseRequestKhesmError);
 
 
                         if (viewmodelAddCaseRequestKhesmError != null) {
@@ -651,13 +630,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestKhesmErrorGet = viewmodelAddCaseRequestKhesmError.get();
                         }
                 }
-                if ((dirtyFlags & 0x610L) != 0) {
+                if ((dirtyFlags & 0x508L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.courtError
                             viewmodelAddCaseRequestCourtError = viewmodelAddCaseRequest.courtError;
                         }
-                        updateRegistration(4, viewmodelAddCaseRequestCourtError);
+                        updateRegistration(3, viewmodelAddCaseRequestCourtError);
 
 
                         if (viewmodelAddCaseRequestCourtError != null) {
@@ -665,13 +644,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestCourtErrorGet = viewmodelAddCaseRequestCourtError.get();
                         }
                 }
-                if ((dirtyFlags & 0x620L) != 0) {
+                if ((dirtyFlags & 0x510L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.circleNumError
                             viewmodelAddCaseRequestCircleNumError = viewmodelAddCaseRequest.circleNumError;
                         }
-                        updateRegistration(5, viewmodelAddCaseRequestCircleNumError);
+                        updateRegistration(4, viewmodelAddCaseRequestCircleNumError);
 
 
                         if (viewmodelAddCaseRequestCircleNumError != null) {
@@ -679,13 +658,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestCircleNumErrorGet = viewmodelAddCaseRequestCircleNumError.get();
                         }
                 }
-                if ((dirtyFlags & 0x640L) != 0) {
+                if ((dirtyFlags & 0x520L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.mokelError
                             viewmodelAddCaseRequestMokelError = viewmodelAddCaseRequest.mokelError;
                         }
-                        updateRegistration(6, viewmodelAddCaseRequestMokelError);
+                        updateRegistration(5, viewmodelAddCaseRequestMokelError);
 
 
                         if (viewmodelAddCaseRequestMokelError != null) {
@@ -693,13 +672,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestMokelErrorGet = viewmodelAddCaseRequestMokelError.get();
                         }
                 }
-                if ((dirtyFlags & 0x680L) != 0) {
+                if ((dirtyFlags & 0x540L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.invetationTypeError
                             viewmodelAddCaseRequestInvetationTypeError = viewmodelAddCaseRequest.invetationTypeError;
                         }
-                        updateRegistration(7, viewmodelAddCaseRequestInvetationTypeError);
+                        updateRegistration(6, viewmodelAddCaseRequestInvetationTypeError);
 
 
                         if (viewmodelAddCaseRequestInvetationTypeError != null) {
@@ -707,13 +686,13 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
                             viewmodelAddCaseRequestInvetationTypeErrorGet = viewmodelAddCaseRequestInvetationTypeError.get();
                         }
                 }
-                if ((dirtyFlags & 0x700L) != 0) {
+                if ((dirtyFlags & 0x580L) != 0) {
 
                         if (viewmodelAddCaseRequest != null) {
                             // read viewmodel.addCaseRequest.catError
                             viewmodelAddCaseRequestCatError = viewmodelAddCaseRequest.catError;
                         }
-                        updateRegistration(8, viewmodelAddCaseRequestCatError);
+                        updateRegistration(7, viewmodelAddCaseRequestCatError);
 
 
                         if (viewmodelAddCaseRequestCatError != null) {
@@ -724,9 +703,67 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             }
         }
         // batch finished
+
+        if ((dirtyFlags & 0x800L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x100000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
+                    viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x700L) != 0) {
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
+            if((dirtyFlags & 0x700L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x4000L;
+                        dirtyFlags |= 0x10000L;
+                }
+                else {
+                        dirtyFlags |= 0x2000L;
+                        dirtyFlags |= 0x8000L;
+                }
+            }
+            if((dirtyFlags & 0x700L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x40000L;
+                }
+                else {
+                        dirtyFlags |= 0x20000L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (getColorFromResource(btnSave, R.color.colorPrimaryDark)) : (getColorFromResource(btnSave, R.color.medium_color)));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x700L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, androidx.databinding.adapters.Converters.convertColorToDrawable(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor));
+            this.btnSave.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
+        }
         if ((dirtyFlags & 0x400L) != 0) {
             // api target 1
 
+            this.btnSave.setOnClickListener(mCallback29);
             this.inputCat.setOnClickListener(mCallback28);
             this.inputClients.setOnClickListener(mCallback26);
             this.inputKhesm.setOnClickListener(mCallback27);
@@ -734,16 +771,15 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView17, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView17androidTextAttrChanged);
-            this.mboundView19.setOnClickListener(mCallback29);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x640L) != 0) {
+        if ((dirtyFlags & 0x520L) != 0) {
             // api target 1
 
             this.mboundView1.setError(viewmodelAddCaseRequestMokelErrorGet);
         }
-        if ((dirtyFlags & 0x600L) != 0) {
+        if ((dirtyFlags & 0x500L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddCaseRequestFirstSessionDate);
@@ -753,43 +789,37 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddCaseRequestCircleNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddCaseRequestInvetationNum);
         }
-        if ((dirtyFlags & 0x610L) != 0) {
+        if ((dirtyFlags & 0x508L) != 0) {
             // api target 1
 
             this.mboundView11.setError(viewmodelAddCaseRequestCourtErrorGet);
         }
-        if ((dirtyFlags & 0x700L) != 0) {
+        if ((dirtyFlags & 0x580L) != 0) {
             // api target 1
 
             this.mboundView13.setError(viewmodelAddCaseRequestCatErrorGet);
         }
-        if ((dirtyFlags & 0x680L) != 0) {
+        if ((dirtyFlags & 0x540L) != 0) {
             // api target 1
 
             this.mboundView15.setError(viewmodelAddCaseRequestInvetationTypeErrorGet);
         }
-        if ((dirtyFlags & 0x601L) != 0) {
-            // api target 1
-
-            this.mboundView18.setVisibility(viewmodelLoaderBooleanFalseViewGONEViewVISIBLE);
-            this.mboundView19.setVisibility(viewmodelLoaderBooleanTrueViewGONEViewVISIBLE);
-        }
-        if ((dirtyFlags & 0x608L) != 0) {
+        if ((dirtyFlags & 0x504L) != 0) {
             // api target 1
 
             this.mboundView3.setError(viewmodelAddCaseRequestKhesmErrorGet);
         }
-        if ((dirtyFlags & 0x620L) != 0) {
+        if ((dirtyFlags & 0x510L) != 0) {
             // api target 1
 
             this.mboundView5.setError(viewmodelAddCaseRequestCircleNumErrorGet);
         }
-        if ((dirtyFlags & 0x602L) != 0) {
+        if ((dirtyFlags & 0x501L) != 0) {
             // api target 1
 
             this.mboundView7.setError(viewmodelAddCaseRequestInvetationNumErrorGet);
         }
-        if ((dirtyFlags & 0x604L) != 0) {
+        if ((dirtyFlags & 0x502L) != 0) {
             // api target 1
 
             this.mboundView9.setError(viewmodelAddCaseRequestDateErrorGet);
@@ -876,21 +906,27 @@ public class FragmentAddCaseBindingImpl extends FragmentAddCaseBinding implement
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel.loader
-        flag 1 (0x2L): viewmodel.addCaseRequest.invetationNumError
-        flag 2 (0x3L): viewmodel.addCaseRequest.dateError
-        flag 3 (0x4L): viewmodel.addCaseRequest.khesmError
-        flag 4 (0x5L): viewmodel.addCaseRequest.courtError
-        flag 5 (0x6L): viewmodel.addCaseRequest.circleNumError
-        flag 6 (0x7L): viewmodel.addCaseRequest.mokelError
-        flag 7 (0x8L): viewmodel.addCaseRequest.invetationTypeError
-        flag 8 (0x9L): viewmodel.addCaseRequest.catError
-        flag 9 (0xaL): viewmodel
+        flag 0 (0x1L): viewmodel.addCaseRequest.invetationNumError
+        flag 1 (0x2L): viewmodel.addCaseRequest.dateError
+        flag 2 (0x3L): viewmodel.addCaseRequest.khesmError
+        flag 3 (0x4L): viewmodel.addCaseRequest.courtError
+        flag 4 (0x5L): viewmodel.addCaseRequest.circleNumError
+        flag 5 (0x6L): viewmodel.addCaseRequest.mokelError
+        flag 6 (0x7L): viewmodel.addCaseRequest.invetationTypeError
+        flag 7 (0x8L): viewmodel.addCaseRequest.catError
+        flag 8 (0x9L): viewmodel
+        flag 9 (0xaL): viewmodel.message
         flag 10 (0xbL): null
-        flag 11 (0xcL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-        flag 12 (0xdL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == false ? View.GONE : View.VISIBLE
-        flag 13 (0xeL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
-        flag 14 (0xfL): androidx.databinding.ViewDataBinding.safeUnbox(viewmodel.loader.get()) == true ? View.GONE : View.VISIBLE
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

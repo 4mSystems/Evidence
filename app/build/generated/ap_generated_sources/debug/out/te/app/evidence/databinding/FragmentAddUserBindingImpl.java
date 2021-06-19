@@ -27,8 +27,6 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView13;
     @NonNull
-    private final androidx.appcompat.widget.AppCompatButton mboundView15;
-    @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView3;
@@ -315,13 +313,16 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     };
 
     public FragmentAddUserBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 17, sIncludes, sViewsWithIds));
     }
     private FragmentAddUserBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 8
+            , (androidx.appcompat.widget.AppCompatButton) bindings[15]
             , (com.google.android.material.textfield.TextInputEditText) bindings[14]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[16]
             , (com.google.android.material.textfield.TextInputEditText) bindings[12]
             );
+        this.btnSave.setTag(null);
         this.catName.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
@@ -333,8 +334,6 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         this.mboundView11.setTag(null);
         this.mboundView13 = (com.google.android.material.textfield.TextInputLayout) bindings[13];
         this.mboundView13.setTag(null);
-        this.mboundView15 = (androidx.appcompat.widget.AppCompatButton) bindings[15];
-        this.mboundView15.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView3 = (com.google.android.material.textfield.TextInputLayout) bindings[3];
@@ -351,6 +350,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         this.mboundView8.setTag(null);
         this.mboundView9 = (com.google.android.material.textfield.TextInputLayout) bindings[9];
         this.mboundView9.setTag(null);
+        this.progress.setTag(null);
         this.userType.setTag(null);
         setRootTag(root);
         // listeners
@@ -363,7 +363,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x200L;
+                mDirtyFlags = 0x400L;
         }
         requestRebind();
     }
@@ -498,6 +498,12 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             }
             return true;
         }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x200L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -508,28 +514,37 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = null;
         te.app.evidence.PassingObject viewmodelPassingObject = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserNameError = null;
         java.lang.String viewmodelAddUserRequestName = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestTypeError = null;
+        boolean textUtilsIsEmptyViewmodelMessage = false;
         java.lang.String viewmodelAddUserRequestEmailErrorGet = null;
         java.lang.String viewmodelAddUserRequestAddress = null;
+        boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelAddUserRequestPhone = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestPhoneError = null;
         te.app.evidence.pages.users.models.AddUserRequest viewmodelAddUserRequest = null;
         java.lang.String viewmodelAddUserRequestUserNameErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestCatError = null;
+        java.lang.String viewmodelMessage = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestPasswordError = null;
+        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewUserBtnSaveAndroidStringEditUser = null;
+        boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelAddUserRequestPhoneErrorGet = null;
         java.lang.String viewmodelAddUserRequestTypeErrorGet = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.Object viewmodelPassingObjectObjectClass = null;
         boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
         java.lang.String viewmodelAddUserRequestCatName = null;
-        java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         int viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = 0;
         java.lang.String viewmodelAddUserRequestCatErrorGet = null;
         java.lang.String viewmodelAddUserRequestPasswordErrorGet = null;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         java.lang.String viewmodelAddUserRequestUserAddressErrorGet = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelAddUserRequestType = null;
         java.lang.String viewmodelAddUserRequestEmail = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestEmailError = null;
@@ -537,11 +552,12 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         boolean ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = false;
         java.lang.String viewmodelAddUserRequestPassword = null;
         te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+        boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0x3ffL) != 0) {
+        if ((dirtyFlags & 0x7ffL) != 0) {
 
 
-            if ((dirtyFlags & 0x380L) != 0) {
+            if ((dirtyFlags & 0x580L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.passingObject
@@ -559,37 +575,37 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                     viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
                     // read viewmodel.passingObject.objectClass != null
                     ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = (viewmodelPassingObjectObjectClass) != (null);
-                if((dirtyFlags & 0x380L) != 0) {
+                if((dirtyFlags & 0x580L) != 0) {
                     if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
-                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x4000L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
-                    }
-                }
-                if((dirtyFlags & 0x380L) != 0) {
-                    if(ViewmodelPassingObjectObjectClassJavaLangObjectNull1) {
                             dirtyFlags |= 0x2000L;
                     }
+                }
+                if((dirtyFlags & 0x580L) != 0) {
+                    if(ViewmodelPassingObjectObjectClassJavaLangObjectNull1) {
+                            dirtyFlags |= 0x100000L;
+                    }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x80000L;
                     }
                 }
 
 
                     // read viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
-                    viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (mboundView15.getResources().getString(R.string.add_new_user)) : (mboundView15.getResources().getString(R.string.edit_user)));
+                    viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewUserBtnSaveAndroidStringEditUser = ((viewmodelPassingObjectObjectClassJavaLangObjectNull) ? (btnSave.getResources().getString(R.string.add_new_user)) : (btnSave.getResources().getString(R.string.edit_user)));
                     // read viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
                     viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = ((ViewmodelPassingObjectObjectClassJavaLangObjectNull1) ? (android.view.View.GONE) : (android.view.View.VISIBLE));
             }
-            if ((dirtyFlags & 0x2ffL) != 0) {
+            if ((dirtyFlags & 0x4ffL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.addUserRequest
                         viewmodelAddUserRequest = viewmodel.getAddUserRequest();
                     }
 
-                if ((dirtyFlags & 0x281L) != 0) {
+                if ((dirtyFlags & 0x481L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.userNameError
@@ -603,7 +619,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestUserNameErrorGet = viewmodelAddUserRequestUserNameError.get();
                         }
                 }
-                if ((dirtyFlags & 0x280L) != 0) {
+                if ((dirtyFlags & 0x480L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.name
@@ -622,7 +638,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestPassword = viewmodelAddUserRequest.getPassword();
                         }
                 }
-                if ((dirtyFlags & 0x282L) != 0) {
+                if ((dirtyFlags & 0x482L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.typeError
@@ -636,7 +652,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestTypeErrorGet = viewmodelAddUserRequestTypeError.get();
                         }
                 }
-                if ((dirtyFlags & 0x284L) != 0) {
+                if ((dirtyFlags & 0x484L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.phoneError
@@ -650,7 +666,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestPhoneErrorGet = viewmodelAddUserRequestPhoneError.get();
                         }
                 }
-                if ((dirtyFlags & 0x288L) != 0) {
+                if ((dirtyFlags & 0x488L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.catError
@@ -664,7 +680,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestCatErrorGet = viewmodelAddUserRequestCatError.get();
                         }
                 }
-                if ((dirtyFlags & 0x290L) != 0) {
+                if ((dirtyFlags & 0x490L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.passwordError
@@ -678,7 +694,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestPasswordErrorGet = viewmodelAddUserRequestPasswordError.get();
                         }
                 }
-                if ((dirtyFlags & 0x2a0L) != 0) {
+                if ((dirtyFlags & 0x4a0L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.emailError
@@ -692,7 +708,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                             viewmodelAddUserRequestEmailErrorGet = viewmodelAddUserRequestEmailError.get();
                         }
                 }
-                if ((dirtyFlags & 0x2c0L) != 0) {
+                if ((dirtyFlags & 0x4c0L) != 0) {
 
                         if (viewmodelAddUserRequest != null) {
                             // read viewmodel.addUserRequest.userAddressError
@@ -707,9 +723,117 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                         }
                 }
             }
+            if ((dirtyFlags & 0x680L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.message
+                        viewmodelMessage = viewmodel.getMessage();
+                    }
+
+
+                    // read TextUtils.isEmpty(viewmodel.message)
+                    textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+                if((dirtyFlags & 0x680L) != 0) {
+                    if(textUtilsIsEmptyViewmodelMessage) {
+                            dirtyFlags |= 0x10000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8000L;
+                    }
+                }
+
+
+                    // read !TextUtils.isEmpty(viewmodel.message)
+                    TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+                if((dirtyFlags & 0x680L) != 0) {
+                    if(TextUtilsIsEmptyViewmodelMessage1) {
+                            dirtyFlags |= 0x1000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x800000L;
+                    }
+                }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x280L) != 0) {
+
+        if ((dirtyFlags & 0x8000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x1000000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
+                    viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x680L) != 0) {
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
+            if((dirtyFlags & 0x680L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x1000L;
+                        dirtyFlags |= 0x40000L;
+                }
+                else {
+                        dirtyFlags |= 0x800L;
+                        dirtyFlags |= 0x20000L;
+                }
+            }
+            if((dirtyFlags & 0x680L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x400000L;
+                }
+                else {
+                        dirtyFlags |= 0x200000L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_medium)));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x680L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium);
+            this.btnSave.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0x400L) != 0) {
+            // api target 1
+
+            this.btnSave.setOnClickListener(mCallback34);
+            this.catName.setOnClickListener(mCallback33);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
+            this.userType.setOnClickListener(mCallback32);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.userType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, userTypeandroidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0x580L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnSave, viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewUserBtnSaveAndroidStringEditUser);
+            this.mboundView7.setVisibility(viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE);
+        }
+        if ((dirtyFlags & 0x480L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, viewmodelAddUserRequestCatName);
@@ -720,57 +844,37 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddUserRequestPassword);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userType, viewmodelAddUserRequestType);
         }
-        if ((dirtyFlags & 0x200L) != 0) {
-            // api target 1
-
-            this.catName.setOnClickListener(mCallback33);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
-            this.mboundView15.setOnClickListener(mCallback34);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userType.setOnClickListener(mCallback32);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.userType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, userTypeandroidTextAttrChanged);
-        }
-        if ((dirtyFlags & 0x281L) != 0) {
+        if ((dirtyFlags & 0x481L) != 0) {
             // api target 1
 
             this.mboundView1.setError(viewmodelAddUserRequestUserNameErrorGet);
         }
-        if ((dirtyFlags & 0x282L) != 0) {
+        if ((dirtyFlags & 0x482L) != 0) {
             // api target 1
 
             this.mboundView11.setError(viewmodelAddUserRequestTypeErrorGet);
         }
-        if ((dirtyFlags & 0x288L) != 0) {
+        if ((dirtyFlags & 0x488L) != 0) {
             // api target 1
 
             this.mboundView13.setError(viewmodelAddUserRequestCatErrorGet);
         }
-        if ((dirtyFlags & 0x380L) != 0) {
-            // api target 1
-
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView15, viewmodelPassingObjectObjectClassJavaLangObjectNullMboundView15AndroidStringAddNewUserMboundView15AndroidStringEditUser);
-            this.mboundView7.setVisibility(viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE);
-        }
-        if ((dirtyFlags & 0x2a0L) != 0) {
+        if ((dirtyFlags & 0x4a0L) != 0) {
             // api target 1
 
             this.mboundView3.setError(viewmodelAddUserRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x284L) != 0) {
+        if ((dirtyFlags & 0x484L) != 0) {
             // api target 1
 
             this.mboundView5.setError(viewmodelAddUserRequestPhoneErrorGet);
         }
-        if ((dirtyFlags & 0x290L) != 0) {
+        if ((dirtyFlags & 0x490L) != 0) {
             // api target 1
 
             this.mboundView7.setError(viewmodelAddUserRequestPasswordErrorGet);
         }
-        if ((dirtyFlags & 0x2c0L) != 0) {
+        if ((dirtyFlags & 0x4c0L) != 0) {
             // api target 1
 
             this.mboundView9.setError(viewmodelAddUserRequestUserAddressErrorGet);
@@ -845,11 +949,22 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         flag 6 (0x7L): viewmodel.addUserRequest.userAddressError
         flag 7 (0x8L): viewmodel
         flag 8 (0x9L): viewmodel.passingObject
-        flag 9 (0xaL): null
-        flag 10 (0xbL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
-        flag 11 (0xcL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
-        flag 12 (0xdL): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
-        flag 13 (0xeL): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 9 (0xaL): viewmodel.message
+        flag 10 (0xbL): null
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 13 (0xeL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 14 (0xfL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 19 (0x14L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 20 (0x15L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

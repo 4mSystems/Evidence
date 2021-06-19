@@ -15,7 +15,6 @@ import te.app.evidence.utils.helper.MovementHelper;
 public class LanguagesHelper {
 
     public static void changeLanguage(Context context, String languageToLoad) {
-        Log.e("changeLanguage", "changeLanguage: "+languageToLoad );
         Locale locale = new Locale(languageToLoad);
         Locale.setDefault(locale);
         Configuration config = new Configuration();
@@ -27,7 +26,6 @@ public class LanguagesHelper {
     }
 
     public static void setLanguage(String language) {
-        Log.e("setLanguage", "setLanguage: "+language );
         SharedPreferences userDetails = MyApplication.getInstance().getSharedPreferences(Constants.LANGUAGE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = userDetails.edit();
         editor.putString(Constants.LANGUAGE, language);

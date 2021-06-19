@@ -44,11 +44,13 @@ public class AddClientViewModel extends BaseViewModel {
     }
 
     public void addNewClient() {
-        if (getAddClientRequest().isValid())
+        if (getAddClientRequest().isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
             if (getPassingObject().getObjectClass() == null)
                 compositeDisposable.add(clientsRepository.addNewClient(getAddClientRequest()));
             else
                 compositeDisposable.add(clientsRepository.editClient(getAddClientRequest()));
+        }
     }
 
     public void getCategories() {

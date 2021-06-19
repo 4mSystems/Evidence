@@ -39,43 +39,41 @@ public class BR {
 
   public static final int itemViewModel = 18;
 
-  public static final int loginStatus = 19;
+  public static final int menuModel = 19;
 
-  public static final int menuModel = 20;
+  public static final int menuViewModel = 20;
 
-  public static final int menuViewModel = 21;
+  public static final int message = 21;
 
-  public static final int message = 22;
+  public static final int notes = 22;
 
-  public static final int notes = 23;
+  public static final int notesAdapter = 23;
 
-  public static final int notesAdapter = 24;
+  public static final int onBoardAdapter = 24;
 
-  public static final int onBoardAdapter = 25;
+  public static final int onBoardViewModels = 25;
 
-  public static final int onBoardViewModels = 26;
+  public static final int passingObject = 26;
 
-  public static final int passingObject = 27;
+  public static final int reportersData = 27;
 
-  public static final int reportersData = 28;
+  public static final int selectedBtn = 28;
 
-  public static final int selectedBtn = 29;
+  public static final int sessionItem = 29;
 
-  public static final int sessionItem = 30;
+  public static final int sessionsAdapter = 30;
 
-  public static final int sessionsAdapter = 31;
+  public static final int settingsData = 31;
 
-  public static final int settingsData = 32;
+  public static final int systemUserData = 32;
 
-  public static final int systemUserData = 33;
+  public static final int type = 33;
 
-  public static final int type = 34;
+  public static final int userDocuments = 34;
 
-  public static final int userDocuments = 35;
+  public static final int userPermissionsData = 35;
 
-  public static final int userPermissionsData = 36;
+  public static final int usersAdapter = 36;
 
-  public static final int usersAdapter = 37;
-
-  public static final int viewmodel = 38;
+  public static final int viewmodel = 37;
 }

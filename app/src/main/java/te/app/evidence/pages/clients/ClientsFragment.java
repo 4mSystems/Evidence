@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +35,6 @@ import te.app.evidence.databinding.FragmentClientsBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
-import te.app.evidence.pages.cases.AddClientToCaseFragment;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel;
@@ -77,7 +75,7 @@ public class ClientsFragment extends BaseFragment {
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
-                viewModel.getClientsAdapter().notifyItemRangeChanged(viewModel.getClientsAdapter().lastSelected, viewModel.getClientsAdapter().getItemCount());
+                viewModel.getClientsAdapter().notifyDataSetChanged();
                 deleteDialog.dismiss();
             }
         });
@@ -85,6 +83,7 @@ public class ClientsFragment extends BaseFragment {
             viewModel.clients();
             ((BaseActivity) context).stopRefresh(false);
         });
+        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
 
     }
 

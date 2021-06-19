@@ -157,6 +157,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelSystemUserDataType = null;
+        java.lang.String itemViewModelSystemUserDataName = null;
         te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelSystemUserDataAddress = null;
         java.lang.String itemViewModelSystemUserDataPhone = null;
@@ -176,6 +177,8 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelSystemUserData != null) {
                     // read itemViewModel.systemUserData.type
                     itemViewModelSystemUserDataType = itemViewModelSystemUserData.getType();
+                    // read itemViewModel.systemUserData.name
+                    itemViewModelSystemUserDataName = itemViewModelSystemUserData.getName();
                     // read itemViewModel.systemUserData.address
                     itemViewModelSystemUserDataAddress = itemViewModelSystemUserData.getAddress();
                     // read itemViewModel.systemUserData.phone
@@ -196,7 +199,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.emailValue, itemViewModelSystemUserDataEmail);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelSystemUserDataEmail);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelSystemUserDataName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userAddressValue, itemViewModelSystemUserDataAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userPhoneValue, itemViewModelSystemUserDataPhone);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userTypeValue, itemViewModelSystemUserDataType);

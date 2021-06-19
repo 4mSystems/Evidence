@@ -64,6 +64,7 @@ public class AddClientFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
                 viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getCategoriesDataList());
             } else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {

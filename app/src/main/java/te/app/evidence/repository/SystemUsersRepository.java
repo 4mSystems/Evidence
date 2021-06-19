@@ -44,12 +44,12 @@ public class SystemUsersRepository extends BaseRepository {
 
     public Disposable addNewUser(AddUserRequest addUserRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_USER, addUserRequest, AddUserResponse.class,
-                Constants.ADD_USER, true);
+                Constants.ADD_USER, false);
     }
 
     public Disposable editUser(AddUserRequest addUserRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_USER, addUserRequest, AddUserResponse.class,
-                Constants.ADD_USER, true);
+                Constants.ADD_USER, false);
     }
 
     public Disposable deleteUser(int userId) {

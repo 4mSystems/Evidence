@@ -35,22 +35,13 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final DrawerLayout dlMainNavigationMenu;
 
   @NonNull
-  public final ExpansionLayout expansionLayoutCases;
-
-  @NonNull
   public final ExpansionLayout expansionLayoutReports;
 
   @NonNull
   public final FrameLayout flHomeContainer;
 
   @NonNull
-  public final AppCompatImageView iconDownCase;
-
-  @NonNull
   public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutCasesHeader;
 
   @NonNull
   public final ExpansionHeader layoutReportsHeader;
@@ -71,9 +62,6 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final CustomTextViewRegular searchCase;
 
   @NonNull
-  public final CustomTextViewMedium tvCase;
-
-  @NonNull
   public final CustomTextViewMedium tvUserLogin;
 
   @NonNull
@@ -87,32 +75,26 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
 
   protected LayoutNavigationDrawerBinding(Object _bindingComponent, View _root,
       int _localFieldCount, CustomTextViewRegular addCase, CustomTextViewRegular dailyReports,
-      DrawerLayout dlMainNavigationMenu, ExpansionLayout expansionLayoutCases,
-      ExpansionLayout expansionLayoutReports, FrameLayout flHomeContainer,
-      AppCompatImageView iconDownCase, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutCasesHeader, ExpansionHeader layoutReportsHeader,
-      LinearLayout llBaseActionBarContainer, CustomTextViewRegular monthlyReports,
-      RelativeLayout rlNavigationDrawer, RelativeLayout rlNavigationDrawerHeader,
-      CustomTextViewRegular searchCase, CustomTextViewMedium tvCase,
+      DrawerLayout dlMainNavigationMenu, ExpansionLayout expansionLayoutReports,
+      FrameLayout flHomeContainer, AppCompatImageView iconDownQu,
+      ExpansionHeader layoutReportsHeader, LinearLayout llBaseActionBarContainer,
+      CustomTextViewRegular monthlyReports, RelativeLayout rlNavigationDrawer,
+      RelativeLayout rlNavigationDrawerHeader, CustomTextViewRegular searchCase,
       CustomTextViewMedium tvUserLogin, CustomTextViewMedium tvUsername,
       CircleImageView vvNavigationDrawerImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addCase = addCase;
     this.dailyReports = dailyReports;
     this.dlMainNavigationMenu = dlMainNavigationMenu;
-    this.expansionLayoutCases = expansionLayoutCases;
     this.expansionLayoutReports = expansionLayoutReports;
     this.flHomeContainer = flHomeContainer;
-    this.iconDownCase = iconDownCase;
     this.iconDownQu = iconDownQu;
-    this.layoutCasesHeader = layoutCasesHeader;
     this.layoutReportsHeader = layoutReportsHeader;
     this.llBaseActionBarContainer = llBaseActionBarContainer;
     this.monthlyReports = monthlyReports;
     this.rlNavigationDrawer = rlNavigationDrawer;
     this.rlNavigationDrawerHeader = rlNavigationDrawerHeader;
     this.searchCase = searchCase;
-    this.tvCase = tvCase;
     this.tvUserLogin = tvUserLogin;
     this.tvUsername = tvUsername;
     this.vvNavigationDrawerImage = vvNavigationDrawerImage;

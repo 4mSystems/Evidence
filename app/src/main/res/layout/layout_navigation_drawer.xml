@@ -130,106 +130,47 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 
-                        <com.github.florent37.expansionpanel.ExpansionHeader
-                            android:id="@+id/layout_cases_header"
+                        <te.app.evidence.customViews.views.CustomTextViewRegular
+                            android:id="@+id/add_case"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp6w"
-                            android:layout_marginTop="@dimen/dp10h"
-                            android:layout_marginEnd="@dimen/dp12w"
-                            android:layout_marginBottom="@dimen/dp6h"
-                            app:expansion_headerIndicator="@id/icon_down_case"
-                            app:expansion_layout="@id/expansionLayoutCases"
-                            app:expansion_toggleOnClick="true"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:layout_marginEnd="@dimen/dp4w"
+                            android:drawableStart="@drawable/ic_cases"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:onClick="@{()-> menuViewModel.addCase()}"
+                            android:text="@string/add_case"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            app:layout_constraintTop_toTopOf="parent">
-                            <!-- HEADER INDICATOR -->
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/dp3h">
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/icon_down_case"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="@dimen/dp8w"
-                                    app:layout_constraintBottom_toBottomOf="@+id/tv_case"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="@+id/tv_case"
-                                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
-
-                                <te.app.evidence.customViews.views.CustomTextViewMedium
-                                    android:id="@+id/tv_case"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:drawableStart="@drawable/ic_cases"
-                                    android:drawablePadding="@dimen/dp6w"
-                                    android:padding="@dimen/dp6h"
-                                    android:text="@string/menuCases"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintEnd_toStartOf="@+id/icon_down_case"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        </com.github.florent37.expansionpanel.ExpansionHeader>
-
-                        <com.github.florent37.expansionpanel.ExpansionLayout
-                            android:id="@+id/expansionLayoutCases"
+                        <te.app.evidence.customViews.views.CustomTextViewRegular
+                            android:id="@+id/search_case"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="@dimen/dp6h"
-                            app:expansion_expanded="false"
-                            app:layout_constraintTop_toBottomOf="@id/v1">
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:layout_marginEnd="@dimen/dp4w"
+                            android:drawableStart="@drawable/ic_cases"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:onClick="@{()-> menuViewModel.searchCase()}"
+                            android:text="@string/search_case"
+                            android:textAlignment="viewStart"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/add_case"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <te.app.evidence.customViews.views.CustomTextViewRegular
-                                    android:id="@+id/add_case"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/dp25w"
-                                    android:layout_marginTop="@dimen/dp12h"
-                                    android:layout_marginEnd="@dimen/dp4w"
-                                    android:onClick="@{()-> menuViewModel.addCase()}"
-                                    android:text="@string/add_case"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <te.app.evidence.customViews.views.CustomTextViewRegular
-                                    android:id="@+id/search_case"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/dp25w"
-                                    android:layout_marginTop="@dimen/dp12h"
-                                    android:layout_marginEnd="@dimen/dp4w"
-                                    android:onClick="@{()-> menuViewModel.searchCase()}"
-                                    android:text="@string/search_case"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/add_case"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            </LinearLayout>
-                        </com.github.florent37.expansionpanel.ExpansionLayout>
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp12w"
-                            android:layout_marginTop="@dimen/dp4h"
+                            android:layout_marginTop="@dimen/dp20h"
                             android:drawableStart="@drawable/ic_mohdars"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
@@ -259,6 +200,7 @@
                             android:layout_marginTop="@dimen/dp10h"
                             android:layout_marginEnd="@dimen/dp12w"
                             android:layout_marginBottom="@dimen/dp6h"
+                            android:visibility="gone"
                             app:expansion_headerIndicator="@id/icon_down_qu"
                             app:expansion_layout="@id/expansionLayoutReports"
                             app:expansion_toggleOnClick="true"
@@ -303,6 +245,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="@dimen/dp6h"
+                            android:visibility="gone"
                             app:expansion_expanded="false"
                             app:layout_constraintTop_toBottomOf="@id/v1">
 
@@ -356,17 +299,19 @@
                             android:onClick="@{()-> menuViewModel.changeLanguage()}"
                             android:text="@string/lang"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp12w"
-                            android:layout_marginTop="@dimen/dp4h"
+                            android:layout_marginTop="@dimen/dp20h"
                             android:layout_marginBottom="@dimen/dp8h"
                             android:drawableStart="@drawable/ic_logout"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.logout()}"
                             android:text="@string/logout"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />

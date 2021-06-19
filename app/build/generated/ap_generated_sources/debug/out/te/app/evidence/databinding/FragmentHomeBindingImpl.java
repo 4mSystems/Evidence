@@ -14,13 +14,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.home_item1, 11);
-        sViewsWithIds.put(R.id.view_id, 12);
-        sViewsWithIds.put(R.id.home_item2, 13);
-        sViewsWithIds.put(R.id.view_mohdr, 14);
-        sViewsWithIds.put(R.id.home_item3, 15);
-        sViewsWithIds.put(R.id.view_users, 16);
-        sViewsWithIds.put(R.id.home_item4, 17);
+        sViewsWithIds.put(R.id.home_item1, 14);
+        sViewsWithIds.put(R.id.view_id, 15);
+        sViewsWithIds.put(R.id.view_mohdr, 16);
+        sViewsWithIds.put(R.id.view_users, 17);
         sViewsWithIds.put(R.id.view_casee, 18);
         sViewsWithIds.put(R.id.flow, 19);
         sViewsWithIds.put(R.id.br3, 20);
@@ -32,11 +29,17 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback60;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
+    private final android.view.View.OnClickListener mCallback69;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback65;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback64;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback66;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,30 +50,33 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.constraintlayout.widget.Barrier) bindings[20]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[8]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[11]
             , (androidx.constraintlayout.helper.widget.Flow) bindings[19]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[11]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[13]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[15]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[10]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[14]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[4]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             , (te.app.evidence.customViews.views.CustomEditText) bindings[21]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[7]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[5]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
-            , (androidx.appcompat.widget.AppCompatButton) bindings[6]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[10]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[8]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[12]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[9]
             , (android.widget.ProgressBar) bindings[22]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[18]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[12]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[14]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[15]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[16]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[17]
             );
         this.commingSessionRc.setTag(null);
         this.homeCases.setTag(null);
+        this.homeItem2.setTag(null);
+        this.homeItem3.setTag(null);
+        this.homeItem4.setTag(null);
         this.homeMohdrs.setTag(null);
         this.homeReportersRc.setTag(null);
         this.homeSession.setTag(null);
@@ -83,9 +89,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.previousSessions.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -416,41 +425,27 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.homeSession, homeSessionAndroidStringSessionsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataSessionsViewmodelHomeDataCountDataSessionsJavaLangString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.homeUsers, homeUsersAndroidStringMenuUsersConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataUsersViewmodelHomeDataCountDataUsersJavaLangString);
         }
+        if ((dirtyFlags & 0x20L) != 0) {
+            // api target 1
+
+            this.homeItem2.setOnClickListener(mCallback64);
+            this.homeItem3.setOnClickListener(mCallback65);
+            this.homeItem4.setOnClickListener(mCallback66);
+            this.nextMohdareen.setOnClickListener(mCallback69);
+            this.nextSessions.setOnClickListener(mCallback67);
+            this.previousSessions.setOnClickListener(mCallback68);
+        }
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
 
             this.homeReportersRc.setAdapter(viewmodelHomeReportersAdapter);
-        }
-        if ((dirtyFlags & 0x20L) != 0) {
-            // api target 1
-
-            this.nextMohdareen.setOnClickListener(mCallback62);
-            this.nextSessions.setOnClickListener(mCallback60);
-            this.previousSessions.setOnClickListener(mCallback61);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextMohdars();
-                }
-                break;
-            }
-            case 1: {
+            case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -467,7 +462,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
-            case 2: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -481,6 +476,80 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.previousSessions();
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextMohdars();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.USERS);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.GET_MOHDAREEN);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.ALL_CASES);
                 }
                 break;
             }

@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -17,19 +19,28 @@ import te.app.evidence.pages.clients.viewModels.AddClientViewModel;
 
 public abstract class FragmentAddClientBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatButton btnSave;
+
+  @NonNull
   public final TextInputEditText catName;
 
   @NonNull
   public final TextInputEditText clientType;
 
+  @NonNull
+  public final CircularProgressIndicator progress;
+
   @Bindable
   protected AddClientViewModel mViewmodel;
 
   protected FragmentAddClientBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText catName, TextInputEditText clientType) {
+      AppCompatButton btnSave, TextInputEditText catName, TextInputEditText clientType,
+      CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
     this.catName = catName;
     this.clientType = clientType;
+    this.progress = progress;
   }
 
   public abstract void setViewmodel(@Nullable AddClientViewModel viewmodel);

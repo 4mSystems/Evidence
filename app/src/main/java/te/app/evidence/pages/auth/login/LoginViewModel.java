@@ -1,13 +1,9 @@
 package te.app.evidence.pages.auth.login;
 
-import android.view.View;
-
-import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.model.base.Mutable;
@@ -23,7 +19,6 @@ public class LoginViewModel extends BaseViewModel {
     AuthRepository repository;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     LoginRequest loginRequest;
-    private int loginStatus = View.VISIBLE;
 
     @Inject
     public LoginViewModel(AuthRepository repository) {
@@ -33,26 +28,21 @@ public class LoginViewModel extends BaseViewModel {
         loginRequest = new LoginRequest();
     }
 
-    public void register() {
-        liveData.setValue(new Mutable(Constants.REGISTER));
-    }
-
-    private static final String TAG = "LoginViewModel";
-
-    public void forgetPassword() {
-        liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
-    }
-
     public void login() {
         getLoginRequest().setToken(UserHelper.getInstance(MyApplication.getInstance()).getToken());
         if (getLoginRequest().isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
             repository.login(loginRequest);
         } else
             liveData.setValue(new Mutable(Constants.EMPTY_WARNING));
     }
 
-    public void toRegister() {
-        liveData.setValue(new Mutable(Constants.REGISTER));
+    public void forgetPassword() {
+        liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
+    }
+
+    public LoginRequest getLoginRequest() {
+        return loginRequest;
     }
 
     private void unSubscribeFromObservable() {
@@ -67,18 +57,5 @@ public class LoginViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    public LoginRequest getLoginRequest() {
-        return loginRequest;
-    }
 
-    @Bindable
-    public int getLoginStatus() {
-        return loginStatus;
-    }
-
-    @Bindable
-    public void setLoginStatus(int loginStatus) {
-        notifyChange(BR.loginStatus);
-        this.loginStatus = loginStatus;
-    }
 }

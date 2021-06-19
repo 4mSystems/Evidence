@@ -2,8 +2,12 @@ package te.app.evidence.customViews.menu;
 
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.Window;
 import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,9 +15,13 @@ import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.Objects;
+
 import te.app.evidence.R;
 import te.app.evidence.base.MyApplication;
+import te.app.evidence.base.ParentActivity;
 import te.app.evidence.customViews.actionbar.HomeActionBarView;
+import te.app.evidence.databinding.ExitLayoutBinding;
 import te.app.evidence.databinding.LayoutNavigationDrawerBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.AddCaseFragment;
@@ -90,9 +98,27 @@ public class NavigationDrawerView extends RelativeLayout {
             } else if (o.equals(Constants.LANGUAGE)) {
                 LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals("en") ? "ar" : "en");
                 MovementHelper.startActivityMain(context);
+            } else if (o.equals(Constants.REMOVE_DIALOG)) {
+                exitDialog(ResourceManager.getString(R.string.logout_text));
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });
 
+    }
+
+    public void exitDialog(String text) {
+        Dialog dialog = new Dialog(context, R.style.PauseDialog);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(dialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        ExitLayoutBinding binding = DataBindingUtil.inflate(LayoutInflater.from(dialog.getContext()), R.layout.exit_layout, null, false);
+        dialog.setContentView(binding.getRoot());
+        binding.logoutTxt.setText(text);
+        binding.agree.setOnClickListener(v -> {
+            dialog.dismiss();
+            ((ParentActivity) context).handleActions(new Mutable(Constants.LOGOUT));
+        });
+        binding.decline.setOnClickListener(v -> dialog.dismiss());
+        dialog.show();
     }
 }

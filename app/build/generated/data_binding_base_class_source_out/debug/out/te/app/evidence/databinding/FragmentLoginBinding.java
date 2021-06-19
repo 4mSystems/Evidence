@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -47,6 +48,9 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final AppCompatImageView logo;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final AppCompatButton startApp;
 
   @Bindable
@@ -56,7 +60,8 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
       CustomTextViewMedium appLoginHint, CustomTextViewMedium appLoginTitle,
       CustomTextViewMedium appName, CustomTextViewMedium forgetPassword, TextInputLayout inputEmail,
       TextInputLayout inputPassword, AppCompatImageView loginBackground,
-      CustomTextViewMedium loginHeader, AppCompatImageView logo, AppCompatButton startApp) {
+      CustomTextViewMedium loginHeader, AppCompatImageView logo, CircularProgressIndicator progress,
+      AppCompatButton startApp) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appLoginHint = appLoginHint;
     this.appLoginTitle = appLoginTitle;
@@ -67,6 +72,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
     this.loginBackground = loginBackground;
     this.loginHeader = loginHeader;
     this.logo = logo;
+    this.progress = progress;
     this.startApp = startApp;
   }
 

@@ -8,6 +8,10 @@
 
         <import type="android.view.View" />
 
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.evidence.utils.Constants" />
+
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.auth.login.LoginViewModel" />
@@ -177,7 +181,8 @@
                 android:layout_marginTop="@dimen/dp20h"
                 android:layout_marginEnd="@dimen/dp12w"
                 android:layout_marginBottom="@dimen/dp40h"
-                android:background="@drawable/corner_view_primary_dark"
+                android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@drawable/corner_view_primary_dark:@drawable/corner_view_medium,default=@drawable/corner_view_primary_dark}"
+                android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
                 android:onClick="@{()-> viewmodel.login()}"
                 android:text="@string/login"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -186,6 +191,18 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/forget_password" />
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@id/start_app"
+                app:layout_constraintStart_toStartOf="@id/start_app"
+                app:layout_constraintTop_toTopOf="@id/start_app"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

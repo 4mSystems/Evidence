@@ -20,14 +20,12 @@ import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 
 public class AddCaseViewModel extends BaseViewModel {
-
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     CasesRepository casesRepository;
     AddCaseRequest addCaseRequest;
     CaseClientsCategoriesData caseClientsCategoriesData;
-    public ObservableField<Boolean> loader = new ObservableField<>();
     CaseDetails caseDetails;
 
     @Inject
@@ -48,7 +46,7 @@ public class AddCaseViewModel extends BaseViewModel {
         List<Integer> clientList = new ArrayList<>();
         List<Integer> khesmList = new ArrayList<>();
         if (getAddCaseRequest().isValid()) {
-            loader.set(true);
+            setMessage(Constants.SHOW_PROGRESS);
             for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
                 if (getCaseClientsCategoriesData().getClients().get(i).isChecked())
                     clientList.add(getCaseClientsCategoriesData().getClients().get(i).getClientId());

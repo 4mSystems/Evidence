@@ -121,6 +121,7 @@ public class MovementHelper {
     public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, int request) {
         Intent intent = new Intent(from, BaseActivity.class);
         intent.putExtra(Constants.PAGE, page);
+        intent.putExtra(Constants.REQUEST_RESULT, request);
         intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
         if (name != null) {
             intent.putExtra(Constants.NAME_BAR, name);

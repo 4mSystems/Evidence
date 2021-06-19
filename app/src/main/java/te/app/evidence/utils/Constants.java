@@ -52,6 +52,7 @@ public class Constants {
     public static final String DEFAULT_LANGUAGE = "ar";
     public static final String ADD_CATEGORY = "ADD_CATEGORY";
     public static final String PAGE = "page";
+    public static final String REQUEST_RESULT = "REQUEST_RESULT";
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
     public static final String DELETE_CATEGORY = "DELETE_CATEGORY";
@@ -117,7 +118,7 @@ public class Constants {
     public static final String FORGET_PASSWORD = "forget_password";
     public static final String NEW_SESSION = "NEW_SESSION";
     public static final String SESSION_NOTES = "SESSION_NOTES";
-    public static final String RESET = "RESET";
+    public static final String ADD_MOHDR = "ADD_MOHDR";
     public static final String MAP_STYLE = "MAP_STYLE";
 
 

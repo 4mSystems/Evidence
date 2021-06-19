@@ -3060,6 +3060,7 @@ drawable corner_view_gradient_toolbar
 drawable corner_view_gray_background
 drawable corner_view_gray_border
 drawable corner_view_light
+drawable corner_view_medium
 drawable corner_view_points
 drawable corner_view_primary_accept
 drawable corner_view_primary_dark
@@ -3263,6 +3264,7 @@ id actions
 id activity_chooser_view_content
 id add
 id add_case
+id agree
 id alertTitle
 id aligned
 id all
@@ -3370,6 +3372,7 @@ id date_picker_actions
 id date_v
 id decelerate
 id decelerateAndComplete
+id decline
 id decor_content_parent
 id default_activity_button
 id delete
@@ -3416,7 +3419,6 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id expansionLayoutCases
 id expansionLayoutReports
 id expansionLayoutSessions
 id fab_label
@@ -3476,7 +3478,6 @@ id honorRequest
 id horizontal
 id ib_close
 id icon
-id icon_down_case
 id icon_down_qu
 id icon_group
 id ifRoom
@@ -3509,6 +3510,7 @@ id inward
 id italic
 id item_touch_helper_previous_elevation
 id iv_auto_image_slider
+id iv_logout_dialog_icon
 id iv_photo
 id jumpToEnd
 id jumpToStart
@@ -3517,7 +3519,6 @@ id labelGroup
 id labeled
 id largeLabel
 id layout
-id layout_cases_header
 id layout_reports_header
 id layout_session_header
 id left
@@ -3535,6 +3536,7 @@ id loading
 id login_background
 id login_header
 id logo
+id logout_txt
 id lottie_layer_name
 id marquee
 id masked
@@ -3965,6 +3967,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detailed_chip_view
 layout dialog_no_internet
+layout exit_layout
 layout fragment_add_bailiffs
 layout fragment_add_case
 layout fragment_add_category
@@ -4174,6 +4177,7 @@ string add_new_attach
 string add_new_category
 string add_new_client
 string add_new_khesm
+string add_new_mohdr
 string add_new_note
 string add_new_session
 string add_new_user
@@ -4431,6 +4435,7 @@ string login_forget
 string login_header
 string login_header_number
 string logout
+string logout_text
 string manage_building
 string map_text
 string market

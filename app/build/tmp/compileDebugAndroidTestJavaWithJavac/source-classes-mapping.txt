@@ -1,4 +1,0 @@
-te/app/structure/ExampleInstrumentedTest.java
- te.app.structure.ExampleInstrumentedTest
-te/app/evidence/test/BuildConfig.java
- te.app.evidence.test.BuildConfig

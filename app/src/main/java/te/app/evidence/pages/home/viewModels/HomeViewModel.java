@@ -73,6 +73,10 @@ public class HomeViewModel extends BaseViewModel {
         setSelectedBtn(2);
     }
 
+    public void buttonAction(String action) {
+        liveData.setValue(new Mutable(action));
+    }
+
     @Bindable
     public int getSelectedBtn() {
         return selectedBtn;

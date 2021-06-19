@@ -20,11 +20,11 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback82;
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
-    private final android.view.View.OnClickListener mCallback83;
+    private final android.view.View.OnClickListener mCallback90;
     @Nullable
-    private final android.view.View.OnClickListener mCallback81;
+    private final android.view.View.OnClickListener mCallback91;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,9 +55,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         this.tvKhesm.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback81 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -358,9 +358,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback83);
-            this.inputClients.setOnClickListener(mCallback81);
-            this.inputKhesm.setOnClickListener(mCallback82);
+            this.btnSave.setOnClickListener(mCallback91);
+            this.inputClients.setOnClickListener(mCallback89);
+            this.inputKhesm.setOnClickListener(mCallback90);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -385,6 +385,25 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -418,25 +437,6 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
 
 
                     viewmodel.addClientToCase();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
                 }
                 break;
             }

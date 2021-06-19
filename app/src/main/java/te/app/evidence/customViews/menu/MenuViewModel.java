@@ -28,6 +28,10 @@ public class MenuViewModel extends BaseViewModel {
         getLiveData().setValue(Constants.ALL_CASES);
     }
 
+    public void logout() {
+        getLiveData().setValue(Constants.REMOVE_DIALOG);
+    }
+
     public void toReporters() {
         getLiveData().setValue(Constants.GET_MOHDAREEN);
     }

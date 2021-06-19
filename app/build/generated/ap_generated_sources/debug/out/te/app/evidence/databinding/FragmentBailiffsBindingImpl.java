@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding  {
+public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,31 +14,38 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 2);
+        sViewsWithIds.put(R.id.input_search, 3);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView1;
+    @NonNull
+    private final com.github.clans.fab.FloatingActionButton mboundView2;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback94;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentBailiffsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentBailiffsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[2]
+            , (te.app.evidence.customViews.views.CustomEditText) bindings[3]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
         this.mboundView1.setTag(null);
+        this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
+        this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback94 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -131,9 +138,30 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding  {
 
             te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelBailiffsAdapter, "1", "1");
         }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView2.setOnClickListener(mCallback94);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+            viewmodel.toAddMohdr();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

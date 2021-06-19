@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -16,6 +18,9 @@ import te.app.evidence.R;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 
 public abstract class FragmentAddCaseBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton btnSave;
+
   @NonNull
   public final TextInputEditText inputCat;
 
@@ -25,15 +30,21 @@ public abstract class FragmentAddCaseBinding extends ViewDataBinding {
   @NonNull
   public final TextInputEditText inputKhesm;
 
+  @NonNull
+  public final CircularProgressIndicator progress;
+
   @Bindable
   protected AddCaseViewModel mViewmodel;
 
   protected FragmentAddCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputCat, TextInputEditText inputClients, TextInputEditText inputKhesm) {
+      AppCompatButton btnSave, TextInputEditText inputCat, TextInputEditText inputClients,
+      TextInputEditText inputKhesm, CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
     this.inputCat = inputCat;
     this.inputClients = inputClients;
     this.inputKhesm = inputKhesm;
+    this.progress = progress;
   }
 
   public abstract void setViewmodel(@Nullable AddCaseViewModel viewmodel);

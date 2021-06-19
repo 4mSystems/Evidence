@@ -10,6 +10,7 @@ import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.mohdrs.adapters.BailiffsAdapter;
 import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.utils.Constants;
 
 public class BailiffsViewModel extends BaseViewModel {
     BailiffsAdapter bailiffsAdapter;
@@ -40,6 +41,11 @@ public class BailiffsViewModel extends BaseViewModel {
     @Bindable
     public BailiffsAdapter getBailiffsAdapter() {
         return this.bailiffsAdapter == null ? this.bailiffsAdapter = new BailiffsAdapter() : this.bailiffsAdapter;
+    }
+
+    public void toAddMohdr() {
+        liveData.setValue(new Mutable(Constants.ADD_MOHDR));
+
     }
 
     protected void unSubscribeFromObservable() {

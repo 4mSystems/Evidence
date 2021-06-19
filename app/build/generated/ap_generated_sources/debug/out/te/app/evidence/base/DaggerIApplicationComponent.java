@@ -109,6 +109,8 @@ import te.app.evidence.pages.mohdrs.BailiffsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.mohdrs.ReportersDetailsFragment_MembersInjector;
 import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel;
+import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel_Factory;
+import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel_MembersInjector;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel_Factory;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel_MembersInjector;
@@ -285,6 +287,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private BailiffsViewModel bailiffsViewModel() {
     return injectBailiffsViewModel(BailiffsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
+  }
+
+  private AddBailiffsViewModel addBailiffsViewModel() {
+    return injectAddBailiffsViewModel(AddBailiffsViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
   private AddNoteViewModel addNoteViewModel() {
@@ -696,8 +702,13 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return instance;
   }
 
+  private AddBailiffsViewModel injectAddBailiffsViewModel(AddBailiffsViewModel instance) {
+    AddBailiffsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider.get());
+    return instance;
+  }
+
   private AddBailiffsFragment injectAddBailiffsFragment(AddBailiffsFragment instance) {
-    AddBailiffsFragment_MembersInjector.injectViewModel(instance, new AddBailiffsViewModel());
+    AddBailiffsFragment_MembersInjector.injectViewModel(instance, addBailiffsViewModel());
     return instance;
   }
 

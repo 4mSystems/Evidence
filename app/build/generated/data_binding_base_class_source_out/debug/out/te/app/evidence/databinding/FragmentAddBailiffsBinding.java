@@ -6,20 +6,45 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel;
 
 public abstract class FragmentAddBailiffsBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton btnSave;
+
+  @NonNull
+  public final TextInputEditText inputCat;
+
+  @NonNull
+  public final TextInputEditText inputClients;
+
+  @NonNull
+  public final TextInputEditText inputKhesm;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
+
   @Bindable
   protected AddBailiffsViewModel mViewmodel;
 
-  protected FragmentAddBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentAddBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      AppCompatButton btnSave, TextInputEditText inputCat, TextInputEditText inputClients,
+      TextInputEditText inputKhesm, CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
+    this.inputCat = inputCat;
+    this.inputClients = inputClients;
+    this.inputKhesm = inputKhesm;
+    this.progress = progress;
   }
 
   public abstract void setViewmodel(@Nullable AddBailiffsViewModel viewmodel);

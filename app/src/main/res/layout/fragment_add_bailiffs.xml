@@ -8,6 +8,10 @@
 
         <import type="android.view.View" />
 
+        <import type="te.app.evidence.utils.Constants" />
+
+        <import type="android.text.TextUtils" />
+
         <variable
             name="viewmodel"
             type="te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel" />
@@ -22,16 +26,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/court_mohdr"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -39,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.courtError}">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -47,20 +42,11 @@
                     android:gravity="center_vertical"
                     android:hint="@string/court_mohdr"
                     android:inputType="text"
+                    android:text="@={viewmodel.addMohdrRequest.courtMohdareen}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/paper_type"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -68,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.paperTypeError}">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -76,20 +63,10 @@
                     android:gravity="center_vertical"
                     android:hint="@string/paper_type"
                     android:inputType="text"
+                    android:text="@={viewmodel.addMohdrRequest.paperType}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/paper_delivered_date"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -97,29 +74,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.deliverDateError}">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <te.app.evidence.customViews.views.DateEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/paper_delivered_date"
                     android:inputType="text"
-                    android:drawableEnd="@drawable/ic_calendar"
+                    android:text="@={viewmodel.addMohdrRequest.deliverData}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/paper_number"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -127,7 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.paperNumberError}">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -135,20 +105,10 @@
                     android:gravity="center_vertical"
                     android:hint="@string/paper_number"
                     android:inputType="text"
+                    android:text="@={viewmodel.addMohdrRequest.paperNumber}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/session_date"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -156,30 +116,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.dateError}">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <te.app.evidence.customViews.views.DateEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/session_date"
                     android:inputType="text"
-                    android:drawableEnd="@drawable/ic_calendar"
+                    android:text="@={viewmodel.addMohdrRequest.sessionDate}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/clients"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -187,28 +138,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.mokelError}">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_clients"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/clients"
                     android:inputType="text"
+                    android:onClick="@{()-> viewmodel.toClients(Constants.CLIENTS)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/opponents"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -216,28 +160,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.khesmError}">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_khesm"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/opponents"
                     android:inputType="text"
+                    android:onClick="@{()->viewmodel.toClients(Constants.KHESM)}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/case_number"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -245,7 +182,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.invetationNumError}">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -253,20 +191,10 @@
                     android:gravity="center_vertical"
                     android:hint="@string/case_number"
                     android:inputType="text"
+                    android:text="@={viewmodel.addMohdrRequest.casenumber}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
-
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/addressed_to"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -274,30 +202,24 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w">
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addMohdrRequest.catError}">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_cat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:drawableTint="@color/medium_color"
+                    android:focusable="false"
                     android:gravity="center_vertical"
                     android:hint="@string/addressed_to"
                     android:inputType="text"
-                    android:drawableTint="@color/medium_color"
-                    android:drawableEnd="@drawable/ic_arrow_down"
+                    android:onClick="@{()->viewmodel.toCategories()}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/notes"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.textfield.TextInputLayout
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -313,23 +235,42 @@
                     android:gravity="top"
                     android:hint="@string/notes"
                     android:inputType="text"
+                    android:text="@={viewmodel.addMohdrRequest.notes}"
                     android:textColor="@color/colorPrimaryDark"
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <androidx.appcompat.widget.AppCompatButton
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
-                android:layout_marginTop="@dimen/dp30h"
-                android:layout_marginEnd="@dimen/dp6w"
-                android:layout_marginBottom="@dimen/dp8h"
-                android:background="@drawable/corner_view_primary_dark"
-                android:text="@string/save"
-                android:textAllCaps="false"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/white" />
+                android:layout_marginTop="@dimen/dp30h">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
+                    android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
+                    android:onClick="@{()-> viewmodel.createMohdr()}"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progress"
+                    style="Widget.MaterialComponents.LinearProgressIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+                    app:layout_constraintBottom_toBottomOf="@id/btnSave"
+                    app:layout_constraintStart_toStartOf="@id/btnSave"
+                    app:layout_constraintTop_toTopOf="@id/btnSave"
+                    app:trackColor="@color/white"
+                    app:trackThickness="@dimen/dp4h" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

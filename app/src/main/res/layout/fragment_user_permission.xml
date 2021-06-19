@@ -29,14 +29,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp15h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.users.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:checked="@{viewmodel.userPermissionsData.users.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
                     android:onClick="@{()-> viewmodel.changeStatus(@string/menuUsers)}"
                     android:text="@string/menuUsers"
@@ -49,14 +48,13 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@color/line_color" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp20h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.clients.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:checked="@{viewmodel.userPermissionsData.clients.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
                     android:onClick="@{()-> viewmodel.changeStatus(@string/menuClients)}"
                     android:text="@string/menuClients"
@@ -69,16 +67,14 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@color/line_color" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp15h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.addcases.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:checked="@{viewmodel.userPermissionsData.addcases.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
-
                     android:onClick="@{()-> viewmodel.changeStatus(@string/add_case)}"
                     android:text="@string/add_case"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -90,14 +86,13 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@color/line_color" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp15h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.searchCase.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:checked="@{viewmodel.userPermissionsData.searchCase.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
 
                     android:onClick="@{()-> viewmodel.changeStatus(@string/search_case)}"
@@ -111,14 +106,13 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@color/line_color" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp15h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.mohdreen.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:checked="@{viewmodel.userPermissionsData.mohdreen.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
 
                     android:onClick="@{()-> viewmodel.changeStatus(@string/menuMohdar)}"
@@ -132,16 +126,15 @@
                     android:layout_marginTop="@dimen/dp10h"
                     android:background="@color/line_color" />
 
-                <te.app.evidence.customViews.views.CustomTextViewMedium
+                <com.google.android.material.switchmaterial.SwitchMaterial
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp12w"
                     android:layout_marginTop="@dimen/dp15h"
                     android:layout_marginEnd="@dimen/dp12w"
-                    android:drawableEnd="@{viewmodel.userPermissionsData.category.equals(`yes`)?@drawable/ic_permission_on:@drawable/ic_permission_off}"
-                    android:drawablePadding="@dimen/dp6w"
+                    android:layout_marginBottom="@dimen/dp15h"
+                    android:checked="@{viewmodel.userPermissionsData.category.equals(`yes`)?true:false}"
                     android:gravity="start|center_vertical"
-
                     android:onClick="@{()-> viewmodel.changeStatus(@string/menuCat)}"
                     android:text="@string/menuCat"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -151,7 +144,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/dp10h"
-                    android:background="@color/line_color" />
+                    android:background="@color/line_color"
+                    android:visibility="gone" />
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
                     android:layout_width="match_parent"
@@ -164,15 +158,16 @@
                     android:gravity="start|center_vertical"
                     android:onClick="@{()-> viewmodel.changeStatus(@string/daily_reports)}"
                     android:text="@string/daily_reports"
-
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="@dimen/dp10h"
-                    android:background="@color/line_color" />
+                    android:background="@color/line_color"
+                    android:visibility="gone" />
 
                 <te.app.evidence.customViews.views.CustomTextViewMedium
                     android:layout_width="match_parent"
@@ -187,7 +182,8 @@
                     android:onClick="@{()-> viewmodel.changeStatus(@string/monthly_reports)}"
                     android:text="@string/monthly_reports"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/colorPrimary" />
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone" />
 
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>

@@ -17,6 +17,8 @@ import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
+import te.app.evidence.pages.mohdrs.models.AddMohdrRequest;
+import te.app.evidence.pages.mohdrs.models.AddMohdrResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.models.details.ReporterDetailsResponse;
@@ -72,7 +74,7 @@ public class CasesRepository extends BaseRepository {
 
     public Disposable createCase(AddCaseRequest addCaseRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CASE, addCaseRequest, AddCaseResponse.class,
-                Constants.ADD_CASE, true);
+                Constants.ADD_CASE, false);
     }
 
     public Disposable editCase(AddCaseRequest addCaseRequest) {
@@ -134,9 +136,14 @@ public class CasesRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSION_NOTES + sessionId, new Object(), SessionNotesResponse.class,
                 Constants.SESSION_NOTES, true);
     }
+
     public Disposable deleteSessionNote(int noteId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_SESSION_NOTE + noteId, new Object(), StatusMessage.class,
                 Constants.DELETE, true);
     }
 
+    public Disposable createMohdr(AddMohdrRequest addMohdrRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CASE, addMohdrRequest, AddMohdrResponse.class,
+                Constants.ADD_MOHDR, false);
+    }
 }

@@ -379,7 +379,7 @@
     <string name="paper_type">نوع الورقة</string>
     <string name="view_more">رؤية المزيد</string>
     <string name="court">المحكمة</string>
-    <string name="paper_delivered_date">Paper submitted date</string>
+    <string name="paper_delivered_date">تاريخ تسليم الورقة</string>
     <string name="paper_number">رقم الورقة</string>
     <string name="clients">الموكلين</string>
     <string name="opponents">الخصوم</string>
@@ -422,7 +422,7 @@
     <string name="user">User</string>
     <string name="edit_user">Edit user</string>
     <string name="add_case">إضافة دعوى</string>
-    <string name="search_case">البحث عن دعوى</string>
+    <string name="search_case">الدعاوى</string>
     <string name="cat_search_hint">Looking for category ?</string>
     <string name="edit_category">Edit category</string>
     <string name="status_done">Done</string>
@@ -433,7 +433,7 @@
     <string name="reporter_status_wait">قيد الانتظار</string>
     <string name="client_selected">تم إختيار الموكلين بنجاح, للتعديل اضغط هنا</string>
     <string name="client_unselected">إضغط لرؤية العملاء</string>
-    <string name="khesm_selected">تم إختيار الخصوم</string>
+    <string name="khesm_selected">تم إختيار الخصوم بنجاح, للتعديل اضغط هنا</string>
     <string name="khesm_unselected">إضغط لإختيار الخصوم</string>
     <string name="descion">القرار</string>
     <string name="public_info">نظرة عامة</string>
@@ -446,5 +446,7 @@
     <string name="add_new_session">إضافة جلسة</string>
     <string name="edit_session">تعديل تاريخ الجلسة</string>
     <string name="attach_desc">الوصف</string>
+    <string name="logout_text">هل تريد الخروج ؟</string>
+    <string name="add_new_mohdr">إضافة محضر جديد</string>
 
 </resources>

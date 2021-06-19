@@ -52,7 +52,7 @@
     <string name="change_header_text">من فضلك قم بإدخال كلمة المرور</string>
     <string name="change_new_password">كلمة المرور الجديدة</string>
     <string name="change_confirm_password">تأكيد كلمة المرور<font fgcolor='#E80101'>*</font></string>
-    <string name="password_hint">Enter password</string>
+    <string name="password_hint">قم بإدخال كلمة المرور</string>
     <string name="register_header">إنشاء حساب جديد</string>
     <string name="register_name">الإسم <font fgcolor='#E80101'>*</font></string>
     <string name="name_hint">اكتب الاسم بالكامل</string>
@@ -449,5 +449,7 @@
     <string name="add_new_session">إضافة جلسة</string>
     <string name="edit_session">تعديل تاريخ الجلسة</string>
     <string name="attach_desc">الوصف</string>
+    <string name="logout_text">هل تريد الخروج ؟</string>
+    <string name="add_new_mohdr">إضافة محضر جديد</string>
 
 </resources>

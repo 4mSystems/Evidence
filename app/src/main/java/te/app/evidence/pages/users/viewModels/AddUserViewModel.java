@@ -37,10 +37,12 @@ public class AddUserViewModel extends BaseViewModel {
     public void addNewUser() {
         if (getPassingObject().getObjectClass() != null) {
             if (getAddUserRequest().isUpdateValid()) {
+                setMessage(Constants.SHOW_PROGRESS);
                 compositeDisposable.add(usersRepository.editUser(getAddUserRequest()));
             }
         } else {
             if (getAddUserRequest().isValid()) {
+                setMessage(Constants.SHOW_PROGRESS);
                 compositeDisposable.add(usersRepository.addNewUser(getAddUserRequest()));
             }
         }
@@ -48,11 +50,6 @@ public class AddUserViewModel extends BaseViewModel {
 
     public void getCategories() {
         compositeDisposable.add(usersRepository.getCategories());
-    }
-
-    @Bindable
-    public SystemUserData getSystemUserData() {
-        return systemUserData;
     }
 
     @Bindable

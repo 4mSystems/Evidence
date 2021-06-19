@@ -22,6 +22,7 @@ import java.util.Objects;
 import javax.inject.Inject;
 
 import te.app.evidence.BR;
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
@@ -30,10 +31,12 @@ import te.app.evidence.databinding.FragmentBailiffsBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
 
 
 public class BailiffsFragment extends BaseFragment {
@@ -62,6 +65,7 @@ public class BailiffsFragment extends BaseFragment {
                 viewModel.getBailiffsAdapter().update(((ReportersResponse) mutable.object).getBailiffsDataList());
                 viewModel.notifyChange(BR.bailiffsAdapter);
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
+                //TODO نرجع الحالة الجديده الل اتغيرت جوة الداتا
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getBailiffsAdapter().getBailiffsDataList().get(viewModel.getBailiffsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
                 viewModel.getBailiffsAdapter().notifyItemChanged(viewModel.getBailiffsAdapter().lastSelected);
@@ -71,6 +75,9 @@ public class BailiffsFragment extends BaseFragment {
                 viewModel.getBailiffsAdapter().notifyItemRangeChanged(viewModel.getBailiffsAdapter().lastSelected, viewModel.getBailiffsAdapter().getItemCount());
                 deleteDialog.dismiss();
 
+            } else if (Constants.ADD_MOHDR.equals(((Mutable) o).message)) {
+                viewModel.getBailiffsAdapter().lastSelected = -1;
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_mohdr), AddBailiffsFragment.class.getName(), null);
             }
         });
         viewModel.getBailiffsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {

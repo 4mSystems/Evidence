@@ -74,7 +74,7 @@ public class UsersFragment extends BaseFragment {
             } else if (Constants.DELETE_USER.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getUsersAdapter().getSystemUserDataList().remove(viewModel.getUsersAdapter().lastSelected);
-                viewModel.getUsersAdapter().notifyItemRangeChanged(viewModel.getUsersAdapter().lastSelected, viewModel.getUsersAdapter().getItemCount());
+                viewModel.getUsersAdapter().notifyDataSetChanged();
                 deleteDialog.dismiss();
             }
         });

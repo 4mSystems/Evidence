@@ -1,29 +1,88 @@
 package te.app.evidence.pages.mohdrs.viewModels;
 
-import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.cases.models.CaseClientsCategoriesData;
+import te.app.evidence.pages.mohdrs.models.AddMohdrRequest;
+import te.app.evidence.repository.CasesRepository;
+import te.app.evidence.utils.Constants;
 
 public class AddBailiffsViewModel extends BaseViewModel {
-
-    public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private int selectedBtn = 0;
+    @Inject
+    CasesRepository casesRepository;
+    CaseClientsCategoriesData caseClientsCategoriesData;
+    public MutableLiveData<Mutable> liveData;
+    AddMohdrRequest addMohdrRequest;
 
     @Inject
-    public AddBailiffsViewModel() {
+    public AddBailiffsViewModel(CasesRepository casesRepository) {
+        addMohdrRequest = new AddMohdrRequest();
+        caseClientsCategoriesData = new CaseClientsCategoriesData();
+        this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
+        casesRepository.setLiveData(liveData);
     }
 
-    public void setServices() {
+
+    public void getCasesClientsCategories() {
+        compositeDisposable.add(casesRepository.getCasesClientsCategories());
     }
 
+    public void createMohdr() {
+        List<String> clientList = new ArrayList<>();
+        List<String> khesmList = new ArrayList<>();
+        if (getAddMohdrRequest().isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
+            for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
+                if (getCaseClientsCategoriesData().getClients().get(i).isChecked())
+                    clientList.add(getCaseClientsCategoriesData().getClients().get(i).getClientName());
+            }
+            for (int i = 0; i < getCaseClientsCategoriesData().getKhesm().size(); i++) {
+                if (getCaseClientsCategoriesData().getKhesm().get(i).isChecked())
+                    khesmList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientName());
+            }
+            //TODO CHANGE Mokel and khesm to accept list of names
+            getAddMohdrRequest().setMokelName(clientList);
+            getAddMohdrRequest().setKhesmName(khesmList);
+            compositeDisposable.add(casesRepository.createMohdr(getAddMohdrRequest()));
+        }
+    }
+
+    public void toClients(String type) {
+        if (type.equals(Constants.CLIENTS))
+            liveData.setValue(new Mutable(Constants.CLIENTS));
+        else
+            liveData.setValue(new Mutable(Constants.KHESM));
+    }
+
+    public void toCategories() {
+        liveData.setValue(new Mutable(Constants.CATEGORIES));
+    }
+
+    public void setCaseClientsCategoriesData(CaseClientsCategoriesData caseClientsCategoriesData) {
+        this.caseClientsCategoriesData = caseClientsCategoriesData;
+    }
+
+    public CaseClientsCategoriesData getCaseClientsCategoriesData() {
+        return caseClientsCategoriesData;
+    }
+
+    public AddMohdrRequest getAddMohdrRequest() {
+        return addMohdrRequest;
+    }
+
+    public CasesRepository getCasesRepository() {
+        return casesRepository;
+    }
 
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
@@ -31,17 +90,6 @@ public class AddBailiffsViewModel extends BaseViewModel {
         }
     }
 
-    public void nextSessions() {
-        setSelectedBtn(0);
-    }
-
-    public void previousSessions() {
-        setSelectedBtn(1);
-    }
-
-    public void nextMohdars() {
-        setSelectedBtn(2);
-    }
 
     @Override
     protected void onCleared() {
@@ -49,14 +97,4 @@ public class AddBailiffsViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-    @Bindable
-    public int getSelectedBtn() {
-        return selectedBtn;
-    }
-
-    @Bindable
-    public void setSelectedBtn(int selectedBtn) {
-        notifyChange(BR.selectedBtn);
-        this.selectedBtn = selectedBtn;
-    }
 }

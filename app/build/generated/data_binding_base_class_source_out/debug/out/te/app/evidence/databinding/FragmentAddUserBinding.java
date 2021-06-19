@@ -6,9 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -17,7 +19,13 @@ import te.app.evidence.pages.users.viewModels.AddUserViewModel;
 
 public abstract class FragmentAddUserBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatButton btnSave;
+
+  @NonNull
   public final TextInputEditText catName;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
 
   @NonNull
   public final TextInputEditText userType;
@@ -26,9 +34,12 @@ public abstract class FragmentAddUserBinding extends ViewDataBinding {
   protected AddUserViewModel mViewmodel;
 
   protected FragmentAddUserBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText catName, TextInputEditText userType) {
+      AppCompatButton btnSave, TextInputEditText catName, CircularProgressIndicator progress,
+      TextInputEditText userType) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.btnSave = btnSave;
     this.catName = catName;
+    this.progress = progress;
     this.userType = userType;
   }
 

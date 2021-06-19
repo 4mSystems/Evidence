@@ -24,9 +24,14 @@ import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentHomeBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.cases.CasesFragment;
 import te.app.evidence.pages.home.models.HomeResponse;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
+import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 
 public class HomeFragment extends BaseFragment {
@@ -43,17 +48,6 @@ public class HomeFragment extends BaseFragment {
         component.inject(this);
         binding.setViewmodel(viewModel);
         viewModel.homeResponse();
-//        binding.dynamicArcView.addSeries(new SeriesItem.Builder(R.color.colorPrimaryDark)
-//                .setRange(0, 100, 100)
-//                .setInitialVisibility(true)
-//                .setSpinDuration(1000)
-//                .setLineWidth(32f)
-//                .build());
-//        SeriesItem seriesItem1 = new SeriesItem.Builder(R.color.colorPrimaryDark)
-//                .setRange(0, 100, 50)
-//                .setLineWidth(32f)
-//                .build();
-//        binding.dynamicArcView.addSeries(seriesItem1);
         setEvent();
         return binding.getRoot();
     }
@@ -81,6 +75,12 @@ public class HomeFragment extends BaseFragment {
                     viewModel.notifyChange(BR.sessionsAdapter);
                     viewModel.notifyChange(BR.homeReportersAdapter);
                 }, 1000);
+            } else if (Constants.ALL_CASES.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, CasesFragment.class.getName(), ResourceManager.getString(R.string.search_case), null);
+            } else if (Constants.GET_MOHDAREEN.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
+            } else if (Constants.USERS.equals(((Mutable) o).message)) {
+                MovementHelper.startActivity(context, UsersFragment.class.getName(), ResourceManager.getString(R.string.menuUsers), null);
             }
         });
     }

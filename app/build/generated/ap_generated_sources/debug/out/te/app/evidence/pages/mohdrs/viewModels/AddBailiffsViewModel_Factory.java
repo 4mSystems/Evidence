@@ -2,26 +2,38 @@
 package te.app.evidence.pages.mohdrs.viewModels;
 
 import dagger.internal.Factory;
+import javax.inject.Provider;
+import te.app.evidence.repository.CasesRepository;
 
 @SuppressWarnings({
     "unchecked",
     "rawtypes"
 })
 public final class AddBailiffsViewModel_Factory implements Factory<AddBailiffsViewModel> {
+  private final Provider<CasesRepository> casesRepositoryProvider;
+
+  private final Provider<CasesRepository> casesRepositoryProvider2;
+
+  public AddBailiffsViewModel_Factory(Provider<CasesRepository> casesRepositoryProvider,
+      Provider<CasesRepository> casesRepositoryProvider2) {
+    this.casesRepositoryProvider = casesRepositoryProvider;
+    this.casesRepositoryProvider2 = casesRepositoryProvider2;
+  }
+
   @Override
   public AddBailiffsViewModel get() {
-    return newInstance();
+    AddBailiffsViewModel instance = newInstance(casesRepositoryProvider.get());
+    AddBailiffsViewModel_MembersInjector.injectCasesRepository(instance, casesRepositoryProvider2.get());
+    return instance;
   }
 
-  public static AddBailiffsViewModel_Factory create() {
-    return InstanceHolder.INSTANCE;
+  public static AddBailiffsViewModel_Factory create(
+      Provider<CasesRepository> casesRepositoryProvider,
+      Provider<CasesRepository> casesRepositoryProvider2) {
+    return new AddBailiffsViewModel_Factory(casesRepositoryProvider, casesRepositoryProvider2);
   }
 
-  public static AddBailiffsViewModel newInstance() {
-    return new AddBailiffsViewModel();
-  }
-
-  private static final class InstanceHolder {
-    private static final AddBailiffsViewModel_Factory INSTANCE = new AddBailiffsViewModel_Factory();
+  public static AddBailiffsViewModel newInstance(CasesRepository casesRepository) {
+    return new AddBailiffsViewModel(casesRepository);
   }
 }

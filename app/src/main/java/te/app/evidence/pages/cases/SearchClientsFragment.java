@@ -49,6 +49,7 @@ public class SearchClientsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            Log.e("onCreateView", "onCreateView: " + baseActivity().getIntent().getExtras().getInt(Constants.REQUEST_RESULT));
             viewModel.setClientsResponse(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), ClientsResponse.class));
         }
         setEvent();
@@ -67,8 +68,7 @@ public class SearchClientsFragment extends BaseFragment {
                 ClientsResponse clientsResponse = new ClientsResponse();
                 clientsResponse.setClientsList(viewModel.getClientsAdapter().getClientsList());
                 clientsResponse.setCounter(clientCounter);
-                Log.e("setEvent", "setEvent: "+viewModel.getPassingObject().getId() );
-                MovementHelper.finishWithResultWithRequestCode(new PassingObject(clientsResponse), context, viewModel.getPassingObject().getId() == Constants.KHESM_CODE ? Constants.KHESM_CODE : Constants.CLIENTS_CODE);
+                MovementHelper.finishWithResultWithRequestCode(new PassingObject(clientsResponse), context, baseActivity().getIntent().getExtras().getInt(Constants.REQUEST_RESULT) == Constants.KHESM_CODE ? Constants.KHESM_CODE : Constants.CLIENTS_CODE);
             }
         });
     }

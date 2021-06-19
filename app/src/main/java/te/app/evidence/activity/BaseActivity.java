@@ -23,7 +23,7 @@ public class BaseActivity extends ParentActivity {
     private static final String TAG = "BaseActivity";
     ActivityBaseBinding activityBaseBinding;
     public BackActionBarView backActionBarView;
-    private MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
+     MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +48,6 @@ public class BaseActivity extends ParentActivity {
                 MovementHelper.replaceFragment(this, new SplashFragment(), "");
         }
         enableRefresh(false);
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1001);
-        }
         activityBaseBinding.swipeContainer.setOnRefreshListener(() -> {
             refreshingLiveData.setValue(true);
         });

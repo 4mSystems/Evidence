@@ -1,2 +1,0 @@
-te/app/structure/ExampleUnitTest.java
- te.app.structure.ExampleUnitTest
