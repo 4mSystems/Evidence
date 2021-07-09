@@ -1,5 +1,6 @@
 package te.app.evidence.pages.cases.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,8 +47,9 @@ public class AllCasesAdapter extends RecyclerView.Adapter<AllCasesAdapter.ViewHo
     }
 
 
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
         Cases client = casesList.get(position);
         ClientCasesItemViewModel itemMenuViewModel = new ClientCasesItemViewModel(client);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
