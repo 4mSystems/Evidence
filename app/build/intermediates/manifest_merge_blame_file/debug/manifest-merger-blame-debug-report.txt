@@ -6,31 +6,31 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="23"
-8-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
+8-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml
+9-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-11-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:6:5-75
-11-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:6:22-72
+11-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:6:5-75
+11-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:6:22-72
 12    <uses-permission android:name="android.permission.CALL_PHONE" />
-12-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:7:5-69
-12-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:7:22-66
+12-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:7:5-69
+12-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:7:22-66
 13    <uses-permission android:name="android.permission.CAMERA" />
-13-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:8:5-65
-13-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:8:22-62
+13-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:8:5-65
+13-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:8:22-62
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:9:5-80
-14-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:9:22-77
+14-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:9:5-80
+14-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:9:22-77
 15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-15-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:10:5-11:40
-15-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:10:22-78
+15-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:10:5-11:40
+15-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:10:22-78
 16    <uses-permission android:name="android.permission.INTERNET" />
-16-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:12:5-67
-16-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:12:22-64
+16-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:12:5-67
+16-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:12:22-64
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:13:5-79
-17-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:13:22-76
+17-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:5-79
+17-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:22-76
 18    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
 18-->[com.google.firebase:firebase-messaging:21.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce2bc622ffe4ee563fa8ee1eee5773cb/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:23:5-68
 18-->[com.google.firebase:firebase-messaging:21.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ce2bc622ffe4ee563fa8ee1eee5773cb/jetified-firebase-messaging-21.1.0/AndroidManifest.xml:23:22-65
@@ -42,87 +42,87 @@
 20-->[com.google.android.gms:play-services-measurement:18.0.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/dd7fd32ca2291ab16676db54b1a22f5e/jetified-play-services-measurement-18.0.3/AndroidManifest.xml:26:22-107
 21
 22    <application
-22-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:15:5-59:19
+22-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:15:5-59:19
 23        android:name="te.app.evidence.base.MyApplication"
-23-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:16:9-58
+23-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:9-58
 24        android:allowBackup="false"
-24-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:17:9-36
+24-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:17:9-36
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.3.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/46e5a26d63033c43ca158222cde64448/core-1.3.2/AndroidManifest.xml:24:18-86
+25-->[androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/8d6b4deed7fb515c729cbfd5dc4ff500/core-1.5.0/AndroidManifest.xml:24:18-86
 26        android:debuggable="true"
 27        android:extractNativeLibs="false"
 28        android:hardwareAccelerated="true"
-28-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:18:9-43
+28-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:9-43
 29        android:icon="@mipmap/ic_launcher"
-29-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:19:9-43
+29-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:19:9-43
 30        android:label="@string/app_name"
-30-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:20:9-41
+30-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:20:9-41
 31        android:largeHeap="true"
-31-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:21:9-33
+31-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:21:9-33
 32        android:launchMode="singleTask"
-32-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:22:9-40
+32-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:22:9-40
 33        android:requestLegacyExternalStorage="true"
-33-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:23:9-52
+33-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:23:9-52
 34        android:supportsRtl="true"
-34-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:24:9-35
+34-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:24:9-35
 35        android:testOnly="true"
 36        android:theme="@style/AppTheme"
-36-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:25:9-40
+36-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:25:9-40
 37        android:usesCleartextTraffic="true" >
-37-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:26:9-44
+37-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-44
 38        <meta-data
-38-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:30:9-32:69
+38-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:30:9-32:69
 39            android:name="com.google.android.gms.version"
-39-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:31:13-58
+39-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:31:13-58
 40            android:value="@integer/google_play_services_version" />
-40-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:32:13-66
+40-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:32:13-66
 41        <meta-data
-41-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:33:9-35:54
+41-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:33:9-35:54
 42            android:name="com.google.firebase.messaging.default_notification_icon"
-42-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:34:13-83
+42-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:34:13-83
 43            android:resource="@mipmap/ic_launcher" />
-43-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:35:13-51
+43-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:35:13-51
 44        <meta-data
-44-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:36:9-38:54
+44-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:36:9-38:54
 45            android:name="com.google.firebase.messaging.default_notification_color"
-45-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:37:13-84
+45-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:37:13-84
 46            android:resource="@color/colorPrimary" />
-46-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:38:13-51
+46-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:38:13-51
 47        <meta-data
-47-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:39:9-41:50
+47-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:39:9-41:50
 48            android:name="com.google.android.geo.API_KEY"
-48-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:40:13-58
+48-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:40:13-58
 49            android:value="@string/google_map" />
-49-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:41:13-47
+49-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:41:13-47
 50
 51        <activity
-51-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:43:9-46:69
+51-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:43:9-46:69
 52            android:name="te.app.evidence.activity.MainActivity"
-52-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:44:13-65
+52-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:44:13-65
 53            android:configChanges="orientation|keyboardHidden|screenSize"
-53-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:45:13-74
+53-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:45:13-74
 54            android:windowSoftInputMode="stateHidden|adjustResize" />
-54-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:46:13-67
+54-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:46:13-67
 55        <activity
-55-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:48:9-58:20
+55-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:9-58:20
 56            android:name="te.app.evidence.activity.BaseActivity"
-56-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:49:13-65
+56-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:49:13-65
 57            android:configChanges="orientation|keyboardHidden|screenSize"
-57-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:50:13-74
+57-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:13-74
 58            android:windowSoftInputMode="stateHidden|adjustResize" >
-58-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:51:13-67
+58-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:13-67
 59            <intent-filter>
-59-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:52:13-57:29
+59-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-57:29
 60                <action android:name="android.intent.action.MAIN" />
-60-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:53:17-69
-60-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:53:25-66
+60-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:17-69
+60-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:25-66
 61                <action android:name="android.intent.action.VIEW" />
-61-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:54:17-69
-61-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:54:25-66
+61-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:17-69
+61-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:25-66
 62
 63                <category android:name="android.intent.category.LAUNCHER" />
-63-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:56:17-77
-63-->/home/elnagar/AndroidStudioProjects/Evidence/app/src/main/AndroidManifest.xml:56:27-74
+63-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:17-77
+63-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:27-74
 64            </intent-filter>
 65        </activity>
 66
@@ -260,13 +260,13 @@
 140            android:initOrder="100" />
 140-->[com.google.firebase:firebase-common:19.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/324b1d8671660e6449107b30bc2d5ab5/jetified-firebase-common-19.5.0/AndroidManifest.xml:31:13-36
 141        <provider
-141-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+141-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4ec688c40df652bf95b965663e719cfd/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 142            android:name="com.squareup.picasso.PicassoProvider"
-142-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+142-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4ec688c40df652bf95b965663e719cfd/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 143            android:authorities="te.app.evidence.com.squareup.picasso"
-143-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+143-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4ec688c40df652bf95b965663e719cfd/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 144            android:exported="false" />
-144-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/2d211f7bd5d8e6140ad70bc5c4ec39d0/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+144-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4ec688c40df652bf95b965663e719cfd/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 145
 146        <activity
 146-->[com.droidninja:filepicker:2.2.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/4175a8f89f07ce3b1cb706c1aac12f87/jetified-filepicker-2.2.4/AndroidManifest.xml:18:9-20:62

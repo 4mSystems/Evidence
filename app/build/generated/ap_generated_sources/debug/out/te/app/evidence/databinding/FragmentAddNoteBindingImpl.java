@@ -24,7 +24,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback93;
+    private final android.view.View.OnClickListener mCallback96;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -84,7 +84,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback93 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback96 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -348,7 +348,7 @@ public class FragmentAddNoteBindingImpl extends FragmentAddNoteBinding implement
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback93);
+            this.btnSave.setOnClickListener(mCallback96);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x1aL) != 0) {

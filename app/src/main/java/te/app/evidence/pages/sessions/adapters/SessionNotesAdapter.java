@@ -1,5 +1,6 @@
 package te.app.evidence.pages.sessions.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,17 +52,24 @@ public class SessionNotesAdapter extends RecyclerView.Adapter<SessionNotesAdapte
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Notes notes = notesList.get(position);
         NotesItemViewModel itemMenuViewModel = new NotesItemViewModel(notes);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
             lastSelected = position;
             if (o.equals(Constants.EDIT)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(Constants.SESSION_NOTES, notes), ResourceManager.getString(R.string.edit_note), AddNoteFragment.class.getName(), null);
+                notes.setWhoNotes(Constants.SESSION_NOTES);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(notes), ResourceManager.getString(R.string.edit_note), AddNoteFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {
+                actionLiveData.setValue(o);
+            } else if (o.equals(Constants.CHANGE_STATUS)) {
                 actionLiveData.setValue(o);
             }
         });
+        if (notes.getStatus().equals(ResourceManager.getString(R.string.reporter_status_done)))
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.successColor));
+        else
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorAccent));
         holder.setViewModel(itemMenuViewModel);
     }
 

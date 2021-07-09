@@ -235,6 +235,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
+                android:visibility="gone"
                 app:layout_constraintEnd_toStartOf="@+id/delete"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintTop_toBottomOf="@+id/v4" />

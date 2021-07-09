@@ -13,6 +13,7 @@ import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.users.models.userPermissions.UserPermissionsData;
 import te.app.evidence.repository.SystemUsersRepository;
+import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.resources.ResourceManager;
 
 public class UserPermissionsViewModel extends BaseViewModel {
@@ -35,8 +36,13 @@ public class UserPermissionsViewModel extends BaseViewModel {
         compositeDisposable.add(usersRepository.userPermissions(getPassingObject().getId()));
     }
 
-    public void changeStatus(String viewText) {
+    public void updatePermission() {
+        setMessage(Constants.SHOW_PROGRESS);
+        getUserPermissionsData().setUserId(String.valueOf(getPassingObject().getId()));
+        compositeDisposable.add(usersRepository.updateUserPermissions(getUserPermissionsData()));
+    }
 
+    public void changeStatus(String viewText) {
         if (viewText.equals(ResourceManager.getString(R.string.menuUsers))) {
             getUserPermissionsData().setUsers(getUserPermissionsData().getUsers().equals("yes") ? "no" : "yes");
         }

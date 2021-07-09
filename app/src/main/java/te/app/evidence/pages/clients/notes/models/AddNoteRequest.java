@@ -8,7 +8,7 @@ import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.validation.Validate;
 
 public class AddNoteRequest {
-    @SerializedName("note") //TODO change in add_clientNote from notes to note
+    @SerializedName("note")
     private String notes;
     @SerializedName("id")
     private String note_id;

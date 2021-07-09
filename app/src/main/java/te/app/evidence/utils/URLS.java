@@ -41,6 +41,7 @@ public class URLS {
 
     public static final String DELETE_USER = "delete_user/";
     public static final String USER_PERMISSIONS = "select_user_permission/";
+    public static final String UPDATE_USER_PERMISSIONS = "update_permission";
     public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
     public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
@@ -60,9 +61,11 @@ public class URLS {
     public static final String DELETE_SESSION = "deleteSession/";
     public static final String ADD_NEW_SESSION = "addSession";
     public static final String EDIT_SESSION = "editSession";
+    public static final String CHANGE_SESSION_NOTE_STATUS = "changeNoteStatus/";
     public static final String ADD_CLIENT_CASE = "caseClients/store";
     public static final String CASE_SESSION_NOTES = "sessionsNote/";
     public static final String DELETE_SESSION_NOTE = "removeNoteStatus/";
-    public static final String EDIT_SESSION_NOTE = "removeNoteStatus/";
+    public static final String EDIT_SESSION_NOTE = "editSessionNote";
     public static final String CASE_ATTACHMENTS = "caseAttachment/";
+    public static final String ADD_MOHDR = "add_mohdars";
 }

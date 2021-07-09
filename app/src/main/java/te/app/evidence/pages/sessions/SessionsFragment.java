@@ -78,12 +78,10 @@ public class SessionsFragment extends BaseFragment {
                 viewModel.getSessionsAdapter().update(((CaseSessionsResponse) mutable.object).getSessionItem());
                 viewModel.notifyChange(BR.casesAdapter);
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
-                //TODO Response of status is a;ways true
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getSessionsAdapter().getSessionItemList().get(viewModel.getSessionsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
                 viewModel.getSessionsAdapter().notifyItemChanged(viewModel.getSessionsAdapter().lastSelected);
             } else if (Constants.DELETE.equals(((Mutable) o).message)) {
-                //TODO Response empty
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getSessionsAdapter().getSessionItemList().remove(viewModel.getSessionsAdapter().lastSelected);
                 viewModel.getSessionsAdapter().notifyItemRangeChanged(viewModel.getSessionsAdapter().lastSelected, viewModel.getSessionsAdapter().getItemCount());

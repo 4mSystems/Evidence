@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -19,13 +20,17 @@ public abstract class FragmentBailiffsBinding extends ViewDataBinding {
   @NonNull
   public final CustomEditText inputSearch;
 
+  @NonNull
+  public final RecyclerView rcMohdrs;
+
   @Bindable
   protected BailiffsViewModel mViewmodel;
 
   protected FragmentBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText inputSearch) {
+      CustomEditText inputSearch, RecyclerView rcMohdrs) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
+    this.rcMohdrs = rcMohdrs;
   }
 
   public abstract void setViewmodel(@Nullable BailiffsViewModel viewmodel);

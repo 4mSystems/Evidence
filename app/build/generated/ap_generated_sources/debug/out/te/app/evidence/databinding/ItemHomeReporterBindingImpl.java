@@ -29,7 +29,7 @@ public class ItemHomeReporterBindingImpl extends ItemHomeReporterBinding impleme
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback92;
+    private final android.view.View.OnClickListener mCallback95;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,7 +63,7 @@ public class ItemHomeReporterBindingImpl extends ItemHomeReporterBinding impleme
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback92 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback95 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -178,7 +178,7 @@ public class ItemHomeReporterBindingImpl extends ItemHomeReporterBinding impleme
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.viewValue.setOnClickListener(mCallback92);
+            this.viewValue.setOnClickListener(mCallback95);
         }
     }
     // Listener Stub Implementations

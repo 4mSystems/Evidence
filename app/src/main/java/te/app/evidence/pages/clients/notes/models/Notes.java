@@ -5,7 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import te.app.evidence.pages.auth.models.UserData;
 
 public class Notes {
-//TODO نوحد الاسم الل راجع
     @SerializedName("note")
     private String notes;
 
@@ -23,6 +22,7 @@ public class Notes {
 
     @SerializedName("client_id")
     private String clientId;
+    private String whoNotes;
 
     public String getNotes() {
         return notes;
@@ -50,5 +50,13 @@ public class Notes {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getWhoNotes() {
+        return whoNotes;
+    }
+
+    public void setWhoNotes(String whoNotes) {
+        this.whoNotes = whoNotes;
     }
 }

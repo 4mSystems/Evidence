@@ -13,6 +13,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/302e8700c83d3fec9b55f1b885f41d9f/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/01c6a0cc8364f2227230fac7e0b60f0a/jetified-MaterialChipsInput-1.0.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/01c6a0cc8364f2227230fac7e0b60f0a/jetified-MaterialChipsInput-1.0.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/01c6a0cc8364f2227230fac7e0b60f0a/jetified-MaterialChipsInput-1.0.8/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

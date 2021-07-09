@@ -20,12 +20,10 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView1;
-    @NonNull
     private final com.github.clans.fab.FloatingActionButton mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback94;
+    private final android.view.View.OnClickListener mCallback97;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -36,16 +34,16 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     private FragmentBailiffsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (te.app.evidence.customViews.views.CustomEditText) bindings[3]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (androidx.recyclerview.widget.RecyclerView) bindings[1];
-        this.mboundView1.setTag(null);
         this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
         this.mboundView2.setTag(null);
+        this.rcMohdrs.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback94 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback97 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -133,15 +131,15 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
                 }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.mboundView1, viewmodelBailiffsAdapter, "1", "1");
-        }
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback94);
+            this.mboundView2.setOnClickListener(mCallback97);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcMohdrs, viewmodelBailiffsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations

@@ -2,7 +2,6 @@ package te.app.evidence.pages.cases.viewModels;
 
 import android.text.TextUtils;
 
-import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
@@ -26,7 +25,6 @@ public class AddClientToCaseViewModel extends BaseViewModel {
     CasesRepository casesRepository;
     AddCaseRequest addCaseRequest;
     CaseClientsCategoriesData caseClientsCategoriesData;
-    public ObservableField<Boolean> loader = new ObservableField<>();
 
     @Inject
     public AddClientToCaseViewModel(CasesRepository casesRepository) {
@@ -42,9 +40,7 @@ public class AddClientToCaseViewModel extends BaseViewModel {
     }
 
     public void addClientToCase() {
-        //TODO return object of added data
         List<Integer> clientList = new ArrayList<>();
-        List<Integer> khesmList = new ArrayList<>();
         if (!TextUtils.isEmpty(getAddCaseRequest().getMokelText()) || !TextUtils.isEmpty(getAddCaseRequest().getKhesmText())) {
             setMessage(Constants.SHOW_PROGRESS);
             for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
@@ -53,10 +49,9 @@ public class AddClientToCaseViewModel extends BaseViewModel {
             }
             for (int i = 0; i < getCaseClientsCategoriesData().getKhesm().size(); i++) {
                 if (getCaseClientsCategoriesData().getKhesm().get(i).isChecked())
-                    khesmList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientId());
+                    clientList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientId());
             }
-            getAddCaseRequest().setMokel_Name(clientList);
-            getAddCaseRequest().setKhesm_Name(khesmList);
+            getAddCaseRequest().setCaseClientId(clientList);
             getAddCaseRequest().setCaseId(String.valueOf(getPassingObject().getId()));
             compositeDisposable.add(casesRepository.addClientToCase(getAddCaseRequest()));
         }

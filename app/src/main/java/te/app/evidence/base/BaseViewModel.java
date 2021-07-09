@@ -3,12 +3,10 @@ package te.app.evidence.base;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.View;
 
 import androidx.databinding.Bindable;
 import androidx.databinding.Observable;
-import androidx.databinding.ObservableField;
 import androidx.databinding.PropertyChangeRegistry;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -19,7 +17,6 @@ import java.util.List;
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
-import te.app.evidence.pages.auth.models.UserData;
 import te.app.evidence.pages.auth.models.UserMainData;
 import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.utils.images.PhotoFullPopupWindow;
@@ -32,7 +29,6 @@ public class BaseViewModel extends ViewModel implements Observable {
     private String message;
     PropertyChangeRegistry mCallBacks;
     private PassingObject passingObject = new PassingObject();
-    private String countryCurrency;
     public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
     List<CategoriesData> categoriesDataList = new ArrayList<>();
 
@@ -62,11 +58,6 @@ public class BaseViewModel extends ViewModel implements Observable {
 
     public Drawable getDrawable(int drawable) {
         return ResourceManager.getDrawable(drawable);
-    }
-
-
-    public String[] getStringArray(int resArray) {
-        return MyApplication.getInstance().getResources().getStringArray(resArray);
     }
 
     @Override
@@ -100,14 +91,6 @@ public class BaseViewModel extends ViewModel implements Observable {
     public void setPassingObject(PassingObject passingObject) {
         notifyChange(BR.passingObject);
         this.passingObject = passingObject;
-    }
-
-    public String getCountryCurrency() {
-        return UserHelper.getInstance(MyApplication.getInstance()).getCountryCurrency();
-    }
-
-    public void showImage(String imgUrl, View imageView) {
-        new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, imageView, imgUrl, null);
     }
 
     public List<CategoriesData> getCategoriesDataList() {

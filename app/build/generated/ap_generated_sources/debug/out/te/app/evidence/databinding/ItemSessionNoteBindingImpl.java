@@ -14,8 +14,7 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_username, 5);
-        sViewsWithIds.put(R.id.session_case_number, 6);
+        sViewsWithIds.put(R.id.tv_username, 6);
         sViewsWithIds.put(R.id.v9, 7);
         sViewsWithIds.put(R.id.session_date_text, 8);
         sViewsWithIds.put(R.id.v2, 9);
@@ -30,6 +29,8 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback30;
     @Nullable
+    private final android.view.View.OnClickListener mCallback32;
+    @Nullable
     private final android.view.View.OnClickListener mCallback31;
     // values
     // listeners
@@ -40,15 +41,15 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     }
     private ItemSessionNoteBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
             , (androidx.constraintlayout.helper.widget.Flow) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
-            , (com.google.android.material.button.MaterialButton) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
+            , (com.google.android.material.button.MaterialButton) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
             , (android.view.View) bindings[9]
             , (android.view.View) bindings[11]
             , (android.view.View) bindings[7]
@@ -57,11 +58,13 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         this.edit.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
+        this.sessionCaseNumber.setTag(null);
         this.sessionDateValue.setTag(null);
         this.statusValue.setTag(null);
         setRootTag(root);
         // listeners
         mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
@@ -137,9 +140,11 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.auth.models.UserData itemViewModelNotesUser = null;
         java.lang.String itemViewModelNotesNotes = null;
+        java.lang.String itemViewModelNotesUserName = null;
         java.lang.String itemViewModelNotesStatus = null;
+        te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.clients.notes.models.Notes itemViewModelNotes = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
@@ -153,22 +158,32 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
 
 
                 if (itemViewModelNotes != null) {
+                    // read itemViewModel.notes.user
+                    itemViewModelNotesUser = itemViewModelNotes.getUser();
                     // read itemViewModel.notes.notes
                     itemViewModelNotesNotes = itemViewModelNotes.getNotes();
                     // read itemViewModel.notes.status
                     itemViewModelNotesStatus = itemViewModelNotes.getStatus();
+                }
+
+
+                if (itemViewModelNotesUser != null) {
+                    // read itemViewModel.notes.user.name
+                    itemViewModelNotesUserName = itemViewModelNotesUser.getName();
                 }
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback30);
-            this.edit.setOnClickListener(mCallback31);
+            this.delete.setOnClickListener(mCallback31);
+            this.edit.setOnClickListener(mCallback32);
+            this.statusValue.setOnClickListener(mCallback30);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionCaseNumber, itemViewModelNotesUserName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionDateValue, itemViewModelNotesNotes);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelNotesStatus);
         }
@@ -192,7 +207,26 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
 
 
 
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
                 }
                 break;
             }
@@ -211,7 +245,7 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
 
 
 
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
                 }
                 break;
             }

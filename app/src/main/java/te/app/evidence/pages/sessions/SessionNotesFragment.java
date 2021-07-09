@@ -37,6 +37,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.clients.notes.models.Notes;
+import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.sessions.models.SessionNotesResponse;
 import te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel;
 import te.app.evidence.utils.Constants;
@@ -75,12 +76,10 @@ public class SessionNotesFragment extends BaseFragment {
                 viewModel.getNotesAdapter().update(((SessionNotesResponse) mutable.object).getNotes());
                 viewModel.notifyChange(BR.casesAdapter);
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
-                //TODO Response of status is a;ways true
-//                toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
-//                viewModel.getNotesAdapter().getSessionItemList().get(viewModel.getNotesAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
-//                viewModel.getNotesAdapter().notifyItemChanged(viewModel.getNotesAdapter().lastSelected);
+                toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
+                viewModel.getNotesAdapter().getNotesList().get(viewModel.getNotesAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
+                viewModel.getNotesAdapter().notifyItemChanged(viewModel.getNotesAdapter().lastSelected);
             } else if (Constants.DELETE.equals(((Mutable) o).message)) {
-                //TODO Response empty
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);
                 viewModel.getNotesAdapter().notifyDataSetChanged();

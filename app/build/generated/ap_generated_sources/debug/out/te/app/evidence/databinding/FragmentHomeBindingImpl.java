@@ -31,15 +31,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback67;
     @Nullable
+    private final android.view.View.OnClickListener mCallback70;
+    @Nullable
     private final android.view.View.OnClickListener mCallback68;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback71;
     @Nullable
     private final android.view.View.OnClickListener mCallback69;
     @Nullable
-    private final android.view.View.OnClickListener mCallback65;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback64;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback66;
+    private final android.view.View.OnClickListener mCallback72;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -89,12 +89,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.previousSessions.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback70 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback71 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback72 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
         invalidateAll();
     }
 
@@ -428,12 +428,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.homeItem2.setOnClickListener(mCallback64);
-            this.homeItem3.setOnClickListener(mCallback65);
-            this.homeItem4.setOnClickListener(mCallback66);
-            this.nextMohdareen.setOnClickListener(mCallback69);
-            this.nextSessions.setOnClickListener(mCallback67);
-            this.previousSessions.setOnClickListener(mCallback68);
+            this.homeItem2.setOnClickListener(mCallback67);
+            this.homeItem3.setOnClickListener(mCallback68);
+            this.homeItem4.setOnClickListener(mCallback69);
+            this.nextMohdareen.setOnClickListener(mCallback72);
+            this.nextSessions.setOnClickListener(mCallback70);
+            this.previousSessions.setOnClickListener(mCallback71);
         }
         if ((dirtyFlags & 0x31L) != 0) {
             // api target 1
@@ -445,6 +445,25 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.GET_MOHDAREEN);
+                }
+                break;
+            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -459,40 +478,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.nextSessions();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.previousSessions();
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextMohdars();
                 }
                 break;
             }
@@ -515,7 +500,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
-            case 1: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -528,9 +513,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.GET_MOHDAREEN);
+                    viewmodel.previousSessions();
                 }
                 break;
             }
@@ -550,6 +533,23 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.buttonAction(te.app.evidence.utils.Constants.ALL_CASES);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextMohdars();
                 }
                 break;
             }

@@ -43,7 +43,7 @@
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-            <!--TODO return user object who create this note-->
+
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/session_case_number"
                 android:layout_width="0dp"
@@ -51,13 +51,13 @@
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp12h"
                 android:layout_marginEnd="@dimen/dp20w"
+                android:text="@{itemViewModel.notes.user.name}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/tv_username"
                 app:layout_constraintTop_toTopOf="parent" />
-            <!--            android:text="@{itemViewModel.notes.user.name}"-->
 
             <View
                 android:id="@+id/v9"
@@ -127,6 +127,7 @@
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp10w"
+                android:onClick="@{()-> itemViewModel.buttonAction(Constants.CHANGE_STATUS)}"
                 android:text="@{itemViewModel.notes.status}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"

@@ -54,11 +54,11 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback56;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -374,10 +374,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback56 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -838,10 +838,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         if ((dirtyFlags & 0x800L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback59);
-            this.inputCat.setOnClickListener(mCallback58);
-            this.inputClients.setOnClickListener(mCallback56);
-            this.inputKhesm.setOnClickListener(mCallback57);
+            this.btnSave.setOnClickListener(mCallback62);
+            this.inputCat.setOnClickListener(mCallback61);
+            this.inputClients.setOnClickListener(mCallback59);
+            this.inputKhesm.setOnClickListener(mCallback60);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView19, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView19androidTextAttrChanged);
@@ -911,23 +911,6 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createMohdr();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -944,6 +927,23 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
 
 
                     viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createMohdr();
                 }
                 break;
             }

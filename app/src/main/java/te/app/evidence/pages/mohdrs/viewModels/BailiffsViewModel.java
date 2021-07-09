@@ -48,6 +48,10 @@ public class BailiffsViewModel extends BaseViewModel {
 
     }
 
+    public CasesRepository getCasesRepository() {
+        return casesRepository;
+    }
+
     protected void unSubscribeFromObservable() {
         if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
             compositeDisposable.dispose();

@@ -32,7 +32,7 @@ public class SessionNotesViewModel extends BaseViewModel {
     }
 
     public void changeStatus() {
-//        compositeDisposable.add(casesRepository.ChangeSessionStatus(getNotesAdapter().getSessionItemList().get(getNotesAdapter().lastSelected).getId()));
+        compositeDisposable.add(casesRepository.changeNoteSessionStatus(getNotesAdapter().getNotesList().get(getNotesAdapter().lastSelected).getId()));
     }
 
     public void deleteSessionNote() {

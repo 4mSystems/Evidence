@@ -28,6 +28,8 @@ public class AddCaseRequest {
     private List<Integer> mokel_Name;
     @SerializedName("khesm_Names")
     private List<Integer> khesm_Name;
+    @SerializedName("client_id")
+    private List<Integer> caseClientId;
     @SerializedName("court")
     private String court;
     private String mokelText;
@@ -196,5 +198,13 @@ public class AddCaseRequest {
 
     public void setCaseId(String caseId) {
         this.caseId = caseId;
+    }
+
+    public List<Integer> getCaseClientId() {
+        return caseClientId;
+    }
+
+    public void setCaseClientId(List<Integer> caseClientId) {
+        this.caseClientId = caseClientId;
     }
 }

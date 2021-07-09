@@ -15,6 +15,7 @@ import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.users.models.AddUserRequest;
 import te.app.evidence.pages.users.models.AddUserResponse;
 import te.app.evidence.pages.users.models.SystemUserResponse;
+import te.app.evidence.pages.users.models.userPermissions.UserPermissionsData;
 import te.app.evidence.pages.users.models.userPermissions.UserPermissionsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
@@ -62,4 +63,10 @@ public class SystemUsersRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.USER_PERMISSIONS + userId, new Object(), UserPermissionsResponse.class,
                 Constants.USER_PERMISSIONS, true);
     }
+
+    public Disposable updateUserPermissions(UserPermissionsData userPermissionsData) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_USER_PERMISSIONS, userPermissionsData, StatusMessage.class,
+                Constants.UPDATE_USER_PERMISSIONS, false);
+    }
+
 }

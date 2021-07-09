@@ -67,7 +67,7 @@ public class AddClientToCaseFragment extends BaseFragment {
                     MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsResponse(viewModel.getCaseClientsCategoriesData().getClients())), getResources().getString(R.string.clients), SearchClientsFragment.class.getName(), Constants.CLIENTS_CODE);
             } else if (Constants.KHESM.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getKhesm().size() > 0)
-                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(Constants.KHESM_CODE, new ClientsResponse(viewModel.getCaseClientsCategoriesData().getKhesm())), getResources().getString(R.string.opponents), SearchClientsFragment.class.getName(), Constants.KHESM_CODE);
+                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsResponse(viewModel.getCaseClientsCategoriesData().getKhesm())), getResources().getString(R.string.opponents), SearchClientsFragment.class.getName(), Constants.KHESM_CODE);
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 Constants.DATA_CHANGED = true;
                 toastMessage(((StatusMessage) mutable.object).mMessage);

@@ -50,9 +50,8 @@ public class AddBailiffsViewModel extends BaseViewModel {
                 if (getCaseClientsCategoriesData().getKhesm().get(i).isChecked())
                     khesmList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientName());
             }
-            //TODO CHANGE Mokel and khesm to accept list of names
-            getAddMohdrRequest().setMokelName(clientList);
-            getAddMohdrRequest().setKhesmName(khesmList);
+            getAddMohdrRequest().setMokelName(clientList.toString().replace("]", "").replace("[", "").replace(", ",","));
+            getAddMohdrRequest().setKhesmName(khesmList.toString().replace("]", "").replace("[", "").replace(", ",","));
             compositeDisposable.add(casesRepository.createMohdr(getAddMohdrRequest()));
         }
     }

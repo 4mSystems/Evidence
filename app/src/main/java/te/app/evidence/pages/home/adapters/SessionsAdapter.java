@@ -1,5 +1,6 @@
 package te.app.evidence.pages.home.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +53,7 @@ public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHo
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         SessionItem sessionItem = sessionItemList.get(position);
         SessionItemViewModel itemMenuViewModel = new SessionItemViewModel(sessionItem);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -64,7 +65,6 @@ public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHo
             } else if (o.equals(Constants.DELETE)) {
                 actionLiveData.setValue(o);
             } else if (o.equals(Constants.CHANGE_STATUS)) {
-                //TODO object of change status of session remove data
                 actionLiveData.setValue(o);
             }
         });

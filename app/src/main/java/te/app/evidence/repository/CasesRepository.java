@@ -83,7 +83,7 @@ public class CasesRepository extends BaseRepository {
     }
 
     public Disposable addClientToCase(AddCaseRequest addCaseRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENT_CASE, addCaseRequest, AddClientResponse.class,
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CLIENT_CASE, addCaseRequest, StatusMessage.class,
                 Constants.ADD_CLIENTS, false);
     }
 
@@ -142,8 +142,13 @@ public class CasesRepository extends BaseRepository {
                 Constants.DELETE, true);
     }
 
+    public Disposable changeNoteSessionStatus(int noteId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHANGE_SESSION_NOTE_STATUS + noteId, new Object(), ChangeStatusResponse.class,
+                Constants.CHANGE_STATUS, true);
+    }
+
     public Disposable createMohdr(AddMohdrRequest addMohdrRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CASE, addMohdrRequest, AddMohdrResponse.class,
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_MOHDR, addMohdrRequest, AddMohdrResponse.class,
                 Constants.ADD_MOHDR, false);
     }
 }

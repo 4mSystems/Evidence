@@ -21,9 +21,9 @@ public class AddMohdrRequest {
     @SerializedName("session_Date")
     private String sessionDate;
     @SerializedName("mokel_Name")
-    private List<String> mokelName;
+    private String mokelName;
     @SerializedName("khesm_Name")
-    private List<String> khesmName;
+    private String khesmName;
     @SerializedName("case_number")
     private String casenumber;
     @SerializedName("cat_id")
@@ -122,19 +122,19 @@ public class AddMohdrRequest {
         this.sessionDate = sessionDate;
     }
 
-    public List<String> getMokelName() {
+    public String getMokelName() {
         return mokelName;
     }
 
-    public void setMokelName(List<String> mokelName) {
+    public void setMokelName(String mokelName) {
         this.mokelName = mokelName;
     }
 
-    public List<String> getKhesmName() {
+    public String getKhesmName() {
         return khesmName;
     }
 
-    public void setKhesmName(List<String> khesmName) {
+    public void setKhesmName(String khesmName) {
         this.khesmName = khesmName;
     }
 

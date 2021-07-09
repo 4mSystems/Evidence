@@ -65,7 +65,6 @@ public class CaseClientsFragment extends BaseFragment {
             viewModel.clients();
         }
         onBackPressed();
-
         setEvent();
         return binding.getRoot();
     }
@@ -150,6 +149,9 @@ public class CaseClientsFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getCasesRepository().setLiveData(viewModel.liveData);
+        if (Constants.DATA_CHANGED)
+            viewModel.clients();
+
     }
 
     @Override

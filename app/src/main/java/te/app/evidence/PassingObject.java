@@ -26,7 +26,7 @@ public class PassingObject implements Serializable {
         this.object2 = object2;
     }
 
-    public PassingObject(String object, Object objectClass) {
+    public PassingObject(Object objectClass, String object) {
         this.objectClass = objectClass;
         this.object = object;
     }

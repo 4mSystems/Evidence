@@ -38,7 +38,7 @@ public class AddNoteViewModel extends BaseViewModel {
         if (getAddNoteRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             if (getPassingObject().getObjectClass() == null) {
-                if (getPassingObject().getObject().equals(Constants.SESSION_NOTES)) {
+                if (getNotes().getWhoNotes().equals(Constants.SESSION_NOTES)) {
                     getAddNoteRequest().setSessionId(String.valueOf(getPassingObject().getId()));
                     compositeDisposable.add(notesRepository.addNewSessionNote(getAddNoteRequest()));
                 } else {
@@ -47,8 +47,7 @@ public class AddNoteViewModel extends BaseViewModel {
                 }
             } else {
                 getAddNoteRequest().setNote_id(String.valueOf(getNotes().getId()));
-                if (getPassingObject().getObject().equals(Constants.SESSION_NOTES)) {
-                    // TODO edit session note should return edited object
+                if (getNotes().getWhoNotes().equals(Constants.SESSION_NOTES)) {
                     compositeDisposable.add(notesRepository.editSessionNote(getAddNoteRequest()));
                 } else
                     compositeDisposable.add(notesRepository.editNote(getAddNoteRequest()));

@@ -27,7 +27,7 @@ public class ApplicationBinding {
                     .load((String) image)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .centerCrop()
-                    .placeholder(R.color.overlayBackground)
+                    .placeholder(R.drawable.logo)
                     .into(imageView);
         } else if (image instanceof Integer) {
             imageView.setImageResource((Integer) image);

@@ -24,6 +24,7 @@ import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentUserPermissionBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.users.models.userPermissions.UserPermissionsResponse;
 import te.app.evidence.pages.users.viewModels.UserPermissionsViewModel;
 import te.app.evidence.utils.Constants;
@@ -55,14 +56,13 @@ public class UserPermissionsFragment extends BaseFragment {
         viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.USER_PERMISSIONS.equals(((Mutable) o).message)) {
                 viewModel.setUserPermissionsData(((UserPermissionsResponse) mutable.object).getPermissionsData());
+            } else if (Constants.UPDATE_USER_PERMISSIONS.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                finishActivity();
             }
-//            else if (Constants.ORDER_ANY_THING.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, PublicOrdersFragment.class.getName(), getResources().getString(R.string.public_order_bar_name), Constants.SHARE_BAR);
-//            } else if (Constants.NOTIFICATIONS.equals(((Mutable) o).message)) {
-//                MovementHelper.startActivity(context, NotificationsFragment.class.getName(), getResources().getString(R.string.menuNotifications), null);
-//            }
         });
     }
 

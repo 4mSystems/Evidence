@@ -1,7 +1,10 @@
 package te.app.evidence.pages.mohdrs;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,6 +17,8 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+
+import com.google.gson.Gson;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -32,9 +37,11 @@ import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.AddClientFragment;
+import te.app.evidence.pages.mohdrs.models.ReportersData;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.mohdrs.models.ChangeStatusResponse;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
+import te.app.evidence.pages.sessions.models.SessionItem;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 
@@ -45,10 +52,11 @@ public class BailiffsFragment extends BaseFragment {
     @Inject
     BailiffsViewModel viewModel;
     Dialog deleteDialog;
+    FragmentBailiffsBinding binding;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentBailiffsBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_bailiffs, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_bailiffs, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
@@ -65,7 +73,6 @@ public class BailiffsFragment extends BaseFragment {
                 viewModel.getBailiffsAdapter().update(((ReportersResponse) mutable.object).getBailiffsDataList());
                 viewModel.notifyChange(BR.bailiffsAdapter);
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
-                //TODO نرجع الحالة الجديده الل اتغيرت جوة الداتا
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getBailiffsAdapter().getBailiffsDataList().get(viewModel.getBailiffsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
                 viewModel.getBailiffsAdapter().notifyItemChanged(viewModel.getBailiffsAdapter().lastSelected);
@@ -74,7 +81,6 @@ public class BailiffsFragment extends BaseFragment {
                 viewModel.getBailiffsAdapter().getBailiffsDataList().remove(viewModel.getBailiffsAdapter().lastSelected);
                 viewModel.getBailiffsAdapter().notifyItemRangeChanged(viewModel.getBailiffsAdapter().lastSelected, viewModel.getBailiffsAdapter().getItemCount());
                 deleteDialog.dismiss();
-
             } else if (Constants.ADD_MOHDR.equals(((Mutable) o).message)) {
                 viewModel.getBailiffsAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_mohdr), AddBailiffsFragment.class.getName(), null);
@@ -102,8 +108,30 @@ public class BailiffsFragment extends BaseFragment {
     }
 
     @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (data != null) {
+            if (resultCode == RESULT_OK) {
+                Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
+                if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
+                    PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
+                    if (viewModel.getBailiffsAdapter().lastSelected == -1) {
+                        viewModel.getBailiffsAdapter().getBailiffsDataList().add(0, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ReportersData.class));
+                        viewModel.getBailiffsAdapter().notifyDataSetChanged();
+                    } else {
+                        viewModel.getBailiffsAdapter().getBailiffsDataList().set(viewModel.getBailiffsAdapter().lastSelected, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ReportersData.class));
+                        viewModel.getBailiffsAdapter().notifyItemChanged(viewModel.getBailiffsAdapter().lastSelected);
+                        binding.rcMohdrs.scrollToPosition(viewModel.getBailiffsAdapter().lastSelected);
+                    }
+                }
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
+        viewModel.getCasesRepository().setLiveData(viewModel.liveData);
     }
 
     @Override

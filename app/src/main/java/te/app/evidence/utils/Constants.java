@@ -119,7 +119,7 @@ public class Constants {
     public static final String NEW_SESSION = "NEW_SESSION";
     public static final String SESSION_NOTES = "SESSION_NOTES";
     public static final String ADD_MOHDR = "ADD_MOHDR";
-    public static final String MAP_STYLE = "MAP_STYLE";
+    public static final String UPDATE_USER_PERMISSIONS = "UPDATE_USER_PERMISSIONS";
 
 
     public static final String REGISTER = "register";

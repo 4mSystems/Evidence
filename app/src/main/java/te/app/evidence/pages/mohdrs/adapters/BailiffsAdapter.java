@@ -52,7 +52,7 @@ public class BailiffsAdapter extends RecyclerView.Adapter<BailiffsAdapter.ViewHo
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
         ReportersData reportersData = bailiffsDataList.get(position);
         BailiffsItemViewModel itemMenuViewModel = new BailiffsItemViewModel(reportersData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {

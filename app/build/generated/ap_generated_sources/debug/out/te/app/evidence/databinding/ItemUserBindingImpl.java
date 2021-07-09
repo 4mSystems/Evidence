@@ -157,16 +157,58 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelSystemUserDataType = null;
+        int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String itemViewModelSystemUserDataName = null;
         te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String itemViewModelSystemUserDataAddress = null;
         java.lang.String itemViewModelSystemUserDataPhone = null;
+        te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
         java.lang.String itemViewModelSystemUserDataEmail = null;
         te.app.evidence.pages.users.models.SystemUserData itemViewModelSystemUserData = null;
+        java.lang.String itemViewModelUserDataUserDataType = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemViewModel != null) {
+                        // read itemViewModel.userData
+                        itemViewModelUserData = itemViewModel.userData;
+                    }
+
+
+                    if (itemViewModelUserData != null) {
+                        // read itemViewModel.userData.userData
+                        itemViewModelUserDataUserData = itemViewModelUserData.getUserData();
+                    }
+
+
+                    if (itemViewModelUserDataUserData != null) {
+                        // read itemViewModel.userData.userData.type
+                        itemViewModelUserDataUserDataType = itemViewModelUserDataUserData.getType();
+                    }
+
+
+                    if (itemViewModelUserDataUserDataType != null) {
+                        // read itemViewModel.userData.userData.type.equals("admin")
+                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
 
                 if (itemViewModel != null) {
                     // read itemViewModel.systemUserData
@@ -194,6 +236,13 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             this.delete.setOnClickListener(mCallback24);
             this.edit.setOnClickListener(mCallback25);
             this.permission.setOnClickListener(mCallback23);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            this.delete.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.edit.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.permission.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -268,6 +317,8 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.systemUserData
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

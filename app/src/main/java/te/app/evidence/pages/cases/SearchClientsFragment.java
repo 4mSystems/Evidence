@@ -49,7 +49,6 @@ public class SearchClientsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            Log.e("onCreateView", "onCreateView: " + baseActivity().getIntent().getExtras().getInt(Constants.REQUEST_RESULT));
             viewModel.setClientsResponse(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), ClientsResponse.class));
         }
         setEvent();
