@@ -4,6 +4,10 @@
 
     <data>
 
+        <import type="te.app.evidence.utils.Constants" />
+
+        <import type="android.view.View" />
+
         <variable
             name="menuViewModel"
             type="te.app.evidence.customViews.menu.MenuViewModel" />
@@ -99,7 +103,7 @@
                             android:drawableStart="@drawable/ic_home"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:onClick="@{()-> menuViewModel.toHome()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.HOME)}"
                             android:text="@string/menuHome"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
@@ -112,7 +116,7 @@
                             android:drawableStart="@drawable/ic_users"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:onClick="@{()-> menuViewModel.toUsers()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.users.equals(`yes`)?Constants.USERS:Constants.ERROR_TOAST)}"
                             android:text="@string/menuUsers"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
@@ -125,7 +129,7 @@
                             android:drawableStart="@drawable/ic_users"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:onClick="@{()-> menuViewModel.toClients()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.clients.equals(`yes`)?Constants.CLIENTS:Constants.ERROR_TOAST)}"
                             android:text="@string/menuClients"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
@@ -139,7 +143,7 @@
                             android:layout_marginEnd="@dimen/dp4w"
                             android:drawableStart="@drawable/ic_cases"
                             android:drawablePadding="@dimen/dp6w"
-                            android:onClick="@{()-> menuViewModel.addCase()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.addcases.equals(`yes`)?Constants.ADD_CASE:Constants.ERROR_TOAST)}"
                             android:text="@string/add_case"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -156,7 +160,7 @@
                             android:layout_marginEnd="@dimen/dp4w"
                             android:drawableStart="@drawable/ic_cases"
                             android:drawablePadding="@dimen/dp6w"
-                            android:onClick="@{()-> menuViewModel.searchCase()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.searchCase.equals(`yes`)?Constants.ALL_CASES:Constants.ERROR_TOAST)}"
                             android:text="@string/search_case"
                             android:textAlignment="viewStart"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -174,7 +178,7 @@
                             android:drawableStart="@drawable/ic_mohdars"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:onClick="@{()-> menuViewModel.toReporters()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.mohdreen.equals(`yes`)?Constants.GET_MOHDAREEN:Constants.ERROR_TOAST)}"
                             android:text="@string/menuMohdar"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
@@ -187,10 +191,11 @@
                             android:drawableStart="@drawable/ic_categories"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"
-                            android:onClick="@{()-> menuViewModel.toCategories()}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.category.equals(`yes`)?Constants.CATEGORIES:Constants.ERROR_TOAST)}"
                             android:text="@string/menuCat"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:visibility="@{menuViewModel.userData.userData.equals(`admin`)?View.VISIBLE:View.GONE}" />
 
                         <com.github.florent37.expansionpanel.ExpansionHeader
                             android:id="@+id/layout_reports_header"

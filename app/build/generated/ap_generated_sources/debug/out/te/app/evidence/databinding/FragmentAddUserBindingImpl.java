@@ -519,6 +519,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserNameError = null;
         java.lang.String viewmodelAddUserRequestName = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestTypeError = null;
+        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         java.lang.String viewmodelAddUserRequestEmailErrorGet = null;
         java.lang.String viewmodelAddUserRequestAddress = null;
@@ -528,6 +529,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         te.app.evidence.pages.users.models.AddUserRequest viewmodelAddUserRequest = null;
         java.lang.String viewmodelAddUserRequestUserNameErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestCatError = null;
+        te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         java.lang.String viewmodelMessage = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestPasswordError = null;
         java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewUserBtnSaveAndroidStringEditUser = null;
@@ -537,6 +539,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.Object viewmodelPassingObjectObjectClass = null;
         boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String viewmodelAddUserRequestCatName = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         int viewmodelPassingObjectObjectClassJavaLangObjectNullViewGONEViewVISIBLE = 0;
@@ -546,8 +549,10 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         java.lang.String viewmodelAddUserRequestUserAddressErrorGet = null;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelAddUserRequestType = null;
+        te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         java.lang.String viewmodelAddUserRequestEmail = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestEmailError = null;
+        java.lang.String viewmodelUserDataUserDataType = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddUserRequestUserAddressError = null;
         boolean ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = false;
         java.lang.String viewmodelAddUserRequestPassword = null;
@@ -577,18 +582,18 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                     ViewmodelPassingObjectObjectClassJavaLangObjectNull1 = (viewmodelPassingObjectObjectClass) != (null);
                 if((dirtyFlags & 0x580L) != 0) {
                     if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x10000L;
                     }
                     else {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x8000L;
                     }
                 }
                 if((dirtyFlags & 0x580L) != 0) {
                     if(ViewmodelPassingObjectObjectClassJavaLangObjectNull1) {
-                            dirtyFlags |= 0x100000L;
+                            dirtyFlags |= 0x400000L;
                     }
                     else {
-                            dirtyFlags |= 0x80000L;
+                            dirtyFlags |= 0x200000L;
                     }
                 }
 
@@ -735,10 +740,10 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0x680L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x10000L;
+                            dirtyFlags |= 0x40000L;
                     }
                     else {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x20000L;
                     }
                 }
 
@@ -747,24 +752,61 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
                 if((dirtyFlags & 0x680L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x1000000L;
+                            dirtyFlags |= 0x4000000L;
                     }
                     else {
-                            dirtyFlags |= 0x800000L;
+                            dirtyFlags |= 0x2000000L;
                     }
                 }
+            }
+            if ((dirtyFlags & 0x480L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.userData
+                        viewmodelUserData = viewmodel.userData;
+                    }
+
+
+                    if (viewmodelUserData != null) {
+                        // read viewmodel.userData.userData
+                        viewmodelUserDataUserData = viewmodelUserData.getUserData();
+                    }
+
+
+                    if (viewmodelUserDataUserData != null) {
+                        // read viewmodel.userData.userData.type
+                        viewmodelUserDataUserDataType = viewmodelUserDataUserData.getType();
+                    }
+
+
+                    if (viewmodelUserDataUserDataType != null) {
+                        // read viewmodel.userData.userData.type.equals("admin")
+                        viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x480L) != 0) {
+                    if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x4000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x2000L;
+                    }
+                }
+
+
+                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x8000L) != 0) {
+        if ((dirtyFlags & 0x20000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
                     viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x1000000L) != 0) {
+        if ((dirtyFlags & 0x4000000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
@@ -781,19 +823,19 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
             if((dirtyFlags & 0x680L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
                         dirtyFlags |= 0x1000L;
-                        dirtyFlags |= 0x40000L;
+                        dirtyFlags |= 0x100000L;
                 }
                 else {
                         dirtyFlags |= 0x800L;
-                        dirtyFlags |= 0x20000L;
+                        dirtyFlags |= 0x80000L;
                 }
             }
             if((dirtyFlags & 0x680L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x400000L;
+                        dirtyFlags |= 0x1000000L;
                 }
                 else {
-                        dirtyFlags |= 0x200000L;
+                        dirtyFlags |= 0x800000L;
                 }
             }
 
@@ -838,6 +880,7 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.catName, viewmodelAddUserRequestCatName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddUserRequestAddress);
+            this.mboundView13.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddUserRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddUserRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddUserRequestPhone);
@@ -953,18 +996,20 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         flag 10 (0xbL): null
         flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
         flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 13 (0xeL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
-        flag 14 (0xfL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
-        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 19 (0x14L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
-        flag 20 (0x15L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
-        flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 13 (0xeL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 16 (0x11L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_user : @android:string/edit_user
+        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 20 (0x15L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 21 (0x16L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 22 (0x17L): viewmodel.passingObject.objectClass != null ? View.GONE : View.VISIBLE
+        flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 25 (0x1aL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 26 (0x1bL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

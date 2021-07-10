@@ -451,5 +451,6 @@
     <string name="attach_desc">الوصف</string>
     <string name="logout_text">هل تريد الخروج ؟</string>
     <string name="add_new_mohdr">إضافة محضر جديد</string>
+    <string name="no_permission">عفوا لا يوجد لديك صلاحيات للدخول لهذه الصفحه</string>
 
 </resources>

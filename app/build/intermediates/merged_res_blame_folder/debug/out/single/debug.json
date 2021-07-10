@@ -36,10 +36,6 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/activity_base.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_mohdars.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_mohdars.xml"
     },
@@ -86,14 +82,6 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_home.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_home.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-mdpi_home_img.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-mdpi/home_img.png"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_home_img.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxxhdpi/home_img.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_detail_call.png.flat",
@@ -164,12 +152,12 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_share.png"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_detail_call.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-hdpi/ic_detail_call.png"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_email.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_email.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_detail_call.png.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-hdpi/ic_detail_call.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_categories.xml.flat",
@@ -266,10 +254,6 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_auth_phone.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_auth_phone.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-xhdpi_home_img.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xhdpi/home_img.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_close.png.flat",
@@ -388,20 +372,16 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_round_circle.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/round_circle.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_client_tags.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_client_tags.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_note.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_note.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_round_circle.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/round_circle.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_note.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_note.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_permission_off.png.flat",
@@ -556,16 +536,8 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/exit_layout.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_edit_profile.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-hdpi/ic_edit_profile.png"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-hdpi_home_img.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-hdpi/home_img.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_layout_navigation_drawer.xml.flat",
@@ -622,10 +594,6 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_corner_view_points.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/corner_view_points.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_launcher_background.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_menu.xml.flat",
@@ -706,10 +674,6 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/color_navigation_selection.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/color/navigation_selection.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-xxhdpi_home_img.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxhdpi/home_img.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_share.png.flat",
@@ -794,6 +758,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_add_client.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_client.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_logout_warning.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_logout_warning.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_confirm_code.xml.flat",

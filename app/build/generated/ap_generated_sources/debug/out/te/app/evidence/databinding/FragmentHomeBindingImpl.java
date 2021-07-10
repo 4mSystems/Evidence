@@ -447,8 +447,24 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         switch(sourceId) {
             case 1: {
                 // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.mohdreen
+                java.lang.String viewmodelUserDataPermissionMohdreen = null;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.mohdreen.equals("yes") ? Constants.GET_MOHDAREEN : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = null;
+                // viewmodel.userData.permission.mohdreen.equals("yes")
+                boolean viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = false;
+                // viewmodel.userData.permission.mohdreen != null
+                boolean viewmodelUserDataPermissionMohdreenJavaLangObjectNull = false;
                 // viewmodel
                 te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
@@ -460,7 +476,47 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
 
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.GET_MOHDAREEN);
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionMohdreen = viewmodelUserDataPermission.getMohdreen();
+
+                            viewmodelUserDataPermissionMohdreenJavaLangObjectNull = (viewmodelUserDataPermissionMohdreen) != (null);
+                            if (viewmodelUserDataPermissionMohdreenJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = viewmodelUserDataPermissionMohdreen.equals("yes");
+                                if (viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.GET_MOHDAREEN;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             }
@@ -483,8 +539,24 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             }
             case 2: {
                 // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
+                // viewmodel.userData.permission.users.equals("yes")
+                boolean viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = false;
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.users != null
+                boolean viewmodelUserDataPermissionUsersJavaLangObjectNull = false;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.users
+                java.lang.String viewmodelUserDataPermissionUsers = null;
+                // viewmodel.userData.permission.users.equals("yes") ? Constants.USERS : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = null;
                 // viewmodel
                 te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
@@ -496,7 +568,47 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
 
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.USERS);
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionUsers = viewmodelUserDataPermission.getUsers();
+
+                            viewmodelUserDataPermissionUsersJavaLangObjectNull = (viewmodelUserDataPermissionUsers) != (null);
+                            if (viewmodelUserDataPermissionUsersJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = viewmodelUserDataPermissionUsers.equals("yes");
+                                if (viewmodelUserDataPermissionUsersEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.USERS;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             }
@@ -519,8 +631,24 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             }
             case 3: {
                 // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.searchCase.equals("yes") ? Constants.ALL_CASES : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = null;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.searchCase.equals("yes")
+                boolean viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYes = false;
+                // viewmodel.userData.permission.searchCase
+                java.lang.String viewmodelUserDataPermissionSearchCase = null;
+                // viewmodel.userData.permission.searchCase != null
+                boolean viewmodelUserDataPermissionSearchCaseJavaLangObjectNull = false;
                 // viewmodel
                 te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
@@ -532,7 +660,47 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
 
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.ALL_CASES);
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionSearchCase = viewmodelUserDataPermission.getSearchCase();
+
+                            viewmodelUserDataPermissionSearchCaseJavaLangObjectNull = (viewmodelUserDataPermissionSearchCase) != (null);
+                            if (viewmodelUserDataPermissionSearchCaseJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYes = viewmodelUserDataPermissionSearchCase.equals("yes");
+                                if (viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ALL_CASES;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
                 }
                 break;
             }

@@ -1,5 +1,6 @@
 package te.app.evidence.pages.home.viewModels;
 
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -7,6 +8,7 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
+import te.app.evidence.R;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.home.adapters.HomeReportersAdapter;
@@ -14,6 +16,7 @@ import te.app.evidence.pages.home.adapters.SessionsAdapter;
 import te.app.evidence.pages.home.models.HomeData;
 import te.app.evidence.repository.HomeRepository;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class HomeViewModel extends BaseViewModel {
 
@@ -74,7 +77,10 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void buttonAction(String action) {
-        liveData.setValue(new Mutable(action));
+        if (!action.equals(Constants.ERROR_TOAST))
+            liveData.setValue(new Mutable(action));
+        else
+            liveData.setValue(new Mutable(action, ResourceManager.getString(R.string.no_permission)));
     }
 
     @Bindable

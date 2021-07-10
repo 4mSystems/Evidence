@@ -1,5 +1,6 @@
 package te.app.evidence.pages.users.viewModels;
 
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -41,6 +42,8 @@ public class AddUserViewModel extends BaseViewModel {
                 compositeDisposable.add(usersRepository.editUser(getAddUserRequest()));
             }
         } else {
+            if (userData.getUserData().getType().equals("User"))
+                getAddUserRequest().setCat_id(userData.getUserData().getCatId());
             if (getAddUserRequest().isValid()) {
                 setMessage(Constants.SHOW_PROGRESS);
                 compositeDisposable.add(usersRepository.addNewUser(getAddUserRequest()));
@@ -49,7 +52,8 @@ public class AddUserViewModel extends BaseViewModel {
     }
 
     public void getCategories() {
-        compositeDisposable.add(usersRepository.getCategories());
+        if (userData.getUserData().getType().equals("admin"))
+            compositeDisposable.add(usersRepository.getCategories());
     }
 
     @Bindable

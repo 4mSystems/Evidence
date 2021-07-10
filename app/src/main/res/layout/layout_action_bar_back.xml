@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -13,7 +11,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/corner_view_gradient_toolbar"
         android:elevation="@dimen/dp8h"
-        android:minHeight="?attr/actionBarSize">
+        android:minHeight="?attr/actionBarSize"
+        android:padding="@dimen/dp10h">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/img_action_bar_cancel"

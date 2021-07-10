@@ -18,7 +18,6 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.Objects;
 
 import te.app.evidence.R;
-import te.app.evidence.base.MyApplication;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.customViews.actionbar.HomeActionBarView;
 import te.app.evidence.databinding.ExitLayoutBinding;
@@ -95,6 +94,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, CasesFragment.class.getName(), ResourceManager.getString(R.string.search_case), null);
             } else if (o.equals(Constants.GET_MOHDAREEN)) {
                 MovementHelper.startActivity(context, BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
+            } else if (o.equals(Constants.ERROR_TOAST)) {
+                ((ParentActivity) context).toastError(ResourceManager.getString(R.string.no_permission));
             } else if (o.equals(Constants.LANGUAGE)) {
                 LanguagesHelper.setLanguage(LanguagesHelper.getCurrentLanguage().equals("en") ? "ar" : "en");
                 MovementHelper.startActivityMain(context);

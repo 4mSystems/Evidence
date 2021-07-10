@@ -4,6 +4,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel" />
@@ -220,6 +222,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`Admin`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@+id/view_value"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintTop_toBottomOf="@+id/v4" />

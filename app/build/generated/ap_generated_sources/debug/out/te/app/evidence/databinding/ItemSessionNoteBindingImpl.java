@@ -14,13 +14,12 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_username, 6);
-        sViewsWithIds.put(R.id.v9, 7);
-        sViewsWithIds.put(R.id.session_date_text, 8);
-        sViewsWithIds.put(R.id.v2, 9);
-        sViewsWithIds.put(R.id.session_status_text, 10);
-        sViewsWithIds.put(R.id.v3, 11);
-        sViewsWithIds.put(R.id.flow2, 12);
+        sViewsWithIds.put(R.id.tv_username, 7);
+        sViewsWithIds.put(R.id.v9, 8);
+        sViewsWithIds.put(R.id.session_date_text, 9);
+        sViewsWithIds.put(R.id.v2, 10);
+        sViewsWithIds.put(R.id.session_status_text, 11);
+        sViewsWithIds.put(R.id.v3, 12);
     }
     // views
     @NonNull
@@ -43,19 +42,20 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         super(bindingComponent, root, 1
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[12]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (com.google.android.material.button.MaterialButton) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[11]
-            , (android.view.View) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[12]
+            , (android.view.View) bindings[8]
             );
         this.delete.setTag(null);
         this.edit.setTag(null);
+        this.flow2.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.sessionCaseNumber.setTag(null);
@@ -142,14 +142,56 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         }
         te.app.evidence.pages.auth.models.UserData itemViewModelNotesUser = null;
         java.lang.String itemViewModelNotesNotes = null;
+        int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String itemViewModelNotesUserName = null;
         java.lang.String itemViewModelNotesStatus = null;
         te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
+        te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
         te.app.evidence.pages.clients.notes.models.Notes itemViewModelNotes = null;
+        java.lang.String itemViewModelUserDataUserDataType = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemViewModel != null) {
+                        // read itemViewModel.userData
+                        itemViewModelUserData = itemViewModel.userData;
+                    }
+
+
+                    if (itemViewModelUserData != null) {
+                        // read itemViewModel.userData.userData
+                        itemViewModelUserDataUserData = itemViewModelUserData.getUserData();
+                    }
+
+
+                    if (itemViewModelUserDataUserData != null) {
+                        // read itemViewModel.userData.userData.type
+                        itemViewModelUserDataUserDataType = itemViewModelUserDataUserData.getType();
+                    }
+
+
+                    if (itemViewModelUserDataUserDataType != null) {
+                        // read itemViewModel.userData.userData.type.equals("admin")
+                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
 
                 if (itemViewModel != null) {
                     // read itemViewModel.notes
@@ -179,6 +221,11 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
             this.delete.setOnClickListener(mCallback31);
             this.edit.setOnClickListener(mCallback32);
             this.statusValue.setOnClickListener(mCallback30);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            this.flow2.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -257,6 +304,8 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.notes
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

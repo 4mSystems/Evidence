@@ -58,8 +58,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/email"
                     android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ @0123456789."
+                    android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:text="@={viewmodel.addUserRequest.email}"
                     android:textAlignment="viewStart"
@@ -162,6 +162,7 @@
                 android:layout_marginStart="@dimen/dp6w"
                 android:layout_marginTop="@dimen/dp4h"
                 android:layout_marginEnd="@dimen/dp6w"
+                android:visibility="@{viewmodel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:endIconDrawable="@drawable/ic_arrow_down"
                 app:endIconMode="custom"
                 app:error="@{viewmodel.addUserRequest.catError}">

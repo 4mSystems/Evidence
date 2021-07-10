@@ -28,7 +28,7 @@
     <string name="invalidEmail">بريد إلكتروني غير صالح ، Evidence@example.com</string>
     <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف مع أرقام وأحرف</string>
     <string name="invalidPhone">Invalid phone</string>
-    <string name="fieldRequired">This field is required</string>
+    <string name="fieldRequired">هذا الحقل مطلوب</string>
     <string name="next">التالى</string>
     <string name="slider_title1">أفتح التطبيق لطلب الخدمة</string>
     <string name="slider_desc1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت</string>
@@ -418,8 +418,8 @@
     <string name="view_case">View case</string>
     <string name="add_new_note">إضافة الملاحظة</string>
     <string name="edit_note">تعديل الملاحظة</string>
-    <string name="admin">admin</string>
-    <string name="user">User</string>
+    <string name="admin">أدمن</string>
+    <string name="user">مستخدم</string>
     <string name="edit_user">Edit user</string>
     <string name="add_case">إضافة دعوى</string>
     <string name="search_case">الدعاوى</string>
@@ -448,5 +448,6 @@
     <string name="attach_desc">الوصف</string>
     <string name="logout_text">هل تريد الخروج ؟</string>
     <string name="add_new_mohdr">إضافة محضر جديد</string>
+    <string name="no_permission">عفوا لا يوجد لديك صلاحيات للدخول لهذه الصفحه</string>
 
 </resources>

@@ -38,7 +38,7 @@ public class AddNoteViewModel extends BaseViewModel {
         if (getAddNoteRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             if (getPassingObject().getObjectClass() == null) {
-                if (getNotes().getWhoNotes().equals(Constants.SESSION_NOTES)) {
+                if (getPassingObject().getObject() != null && getPassingObject().getObject().equals(Constants.SESSION_NOTES)) {
                     getAddNoteRequest().setSessionId(String.valueOf(getPassingObject().getId()));
                     compositeDisposable.add(notesRepository.addNewSessionNote(getAddNoteRequest()));
                 } else {

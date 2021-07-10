@@ -180,6 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp6h"
                 android:layout_marginBottom="@dimen/dp6h"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:constraint_referenced_ids="edit,delete"
                 app:flow_horizontalGap="@dimen/dp8w"
                 app:flow_horizontalStyle="packed"

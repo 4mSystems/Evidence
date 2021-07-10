@@ -3125,7 +3125,6 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable fab_add
 drawable gallery_album_overlay
-drawable home_img
 drawable ic_add_category
 drawable ic_add_session
 drawable ic_add_user
@@ -3154,9 +3153,8 @@ drawable ic_home
 drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_lang
-drawable ic_launcher_background
-drawable ic_launcher_foreground
 drawable ic_logout
+drawable ic_logout_warning
 drawable ic_menu
 drawable ic_mohdars
 drawable ic_more
@@ -4595,6 +4593,7 @@ string nextSessions
 string no
 string no_camera_exists
 string no_files_found
+string no_permission
 string normal_orders
 string note_search_hint
 string notes

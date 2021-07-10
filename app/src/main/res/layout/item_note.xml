@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+        <import type="android.view.View" />
 
         <variable
             name="itemViewModel"
@@ -105,6 +106,7 @@
                 android:drawableTop="@drawable/ic_user_delete"
                 android:onClick="@{()-> itemViewModel.toDelete()}"
                 android:text="@string/delete"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
@@ -121,6 +123,7 @@
                 android:drawableTop="@drawable/ic_user_edit"
                 android:onClick="@{()-> itemViewModel.toEdit()}"
                 android:text="@string/edit"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"

@@ -197,6 +197,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
             mDirtyFlags = 0;
         }
         java.lang.String viewmodelCaseDetailsNumbersKhesm = null;
+        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumberViewmodelCaseDetailsNumbersSessionsNumberJavaLangString = null;
         java.lang.String homeMohdrsAndroidStringNotesConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumberViewmodelCaseDetailsNumbersNotesNumberJavaLangString = null;
         boolean textUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber = false;
@@ -209,6 +210,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         te.app.evidence.pages.cases.models.cases.Cases viewmodelCaseDetailsCaseData = null;
         java.lang.String viewmodelCaseDetailsNumbersNotesNumber = null;
         te.app.evidence.pages.cases.models.caseDetails.CaseDetails viewmodelCaseDetails = null;
+        java.lang.String viewmodelUserDataUserDataType = null;
         boolean TextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber1 = false;
         te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
         java.lang.String homeSessionAndroidStringSessionsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumberViewmodelCaseDetailsNumbersSessionsNumberJavaLangString = null;
@@ -216,11 +218,13 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         boolean textUtilsIsEmptyViewmodelCaseDetailsNumbersClients = false;
         java.lang.String viewmodelCaseDetailsCaseDataInvetationNum = null;
         java.lang.String viewmodelCaseDetailsCaseDataCircleNum = null;
+        te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         java.lang.String viewmodelCaseDetailsCaseDataInventationType = null;
         java.lang.String textUtilsIsEmptyViewmodelCaseDetailsNumbersKhesmViewmodelCaseDetailsNumbersKhesmJavaLangString = null;
         boolean TextUtilsIsEmptyViewmodelCaseDetailsNumbersClients1 = false;
         boolean TextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber1 = false;
         te.app.evidence.pages.clients.models.Category viewmodelCaseDetailsCaseDataCategory = null;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String textUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumberViewmodelCaseDetailsNumbersAttachmentsNumberJavaLangString = null;
         java.lang.String viewmodelCaseDetailsCaseDataCourt = null;
         boolean textUtilsIsEmptyViewmodelCaseDetailsNumbersKhesm = false;
@@ -230,6 +234,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         java.lang.String homeKhemsAndroidStringAttachmentsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumberViewmodelCaseDetailsNumbersAttachmentsNumberJavaLangString = null;
         java.lang.String viewmodelCaseDetailsNumbersAttachmentsNumber = null;
         java.lang.String viewmodelCaseDetailsCaseDataFirstSessionDate = null;
+        te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         te.app.evidence.pages.cases.models.caseDetails.CaseStatistics viewmodelCaseDetailsNumbers = null;
         java.lang.String viewmodelCaseDetailsNumbersSessionsNumber = null;
 
@@ -307,30 +312,6 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 TextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber1 = !textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber;
             if((dirtyFlags & 0x7L) != 0) {
                 if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersKhesm1) {
-                        dirtyFlags |= 0x400L;
-                }
-                else {
-                        dirtyFlags |= 0x200L;
-                }
-            }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber1) {
-                        dirtyFlags |= 0x100L;
-                }
-                else {
-                        dirtyFlags |= 0x80L;
-                }
-            }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersClients1) {
-                        dirtyFlags |= 0x40L;
-                }
-                else {
-                        dirtyFlags |= 0x20L;
-                }
-            }
-            if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumber1) {
                         dirtyFlags |= 0x1000L;
                 }
                 else {
@@ -338,12 +319,73 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber1) {
-                        dirtyFlags |= 0x10L;
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber1) {
+                        dirtyFlags |= 0x400L;
                 }
                 else {
-                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x200L;
                 }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersClients1) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumber1) {
+                        dirtyFlags |= 0x4000L;
+                }
+                else {
+                        dirtyFlags |= 0x2000L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber1) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.userData
+                        viewmodelUserData = viewmodel.userData;
+                    }
+
+
+                    if (viewmodelUserData != null) {
+                        // read viewmodel.userData.userData
+                        viewmodelUserDataUserData = viewmodelUserData.getUserData();
+                    }
+
+
+                    if (viewmodelUserDataUserData != null) {
+                        // read viewmodel.userData.userData.type
+                        viewmodelUserDataUserDataType = viewmodelUserDataUserData.getType();
+                    }
+
+
+                    if (viewmodelUserDataUserDataType != null) {
+                        // read viewmodel.userData.userData.type.equals("admin")
+                        viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
@@ -382,6 +424,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
             this.homeItem3.setOnClickListener(mCallback38);
             this.homeItem4.setOnClickListener(mCallback39);
             this.homeItem5.setOnClickListener(mCallback40);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            this.clientNotes.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -506,16 +553,18 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         flag 0 (0x1L): viewmodel
         flag 1 (0x2L): viewmodel.caseDetails
         flag 2 (0x3L): null
-        flag 3 (0x4L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
-        flag 4 (0x5L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
-        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
-        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
-        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
-        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
-        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
-        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
-        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
-        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
+        flag 3 (0x4L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
+        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
+        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
+        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
+        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
+        flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
+        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
     flag mapping end*/
     //end
 }

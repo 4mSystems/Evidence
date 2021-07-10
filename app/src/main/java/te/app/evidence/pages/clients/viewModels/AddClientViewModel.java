@@ -4,9 +4,6 @@ package te.app.evidence.pages.clients.viewModels;
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
@@ -14,7 +11,6 @@ import te.app.evidence.BR;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.repository.ClientsRepository;
@@ -45,6 +41,8 @@ public class AddClientViewModel extends BaseViewModel {
 
     public void addNewClient() {
         if (getAddClientRequest().isValid()) {
+            if (userData.getUserData().getType().equals("user"))
+                getAddClientRequest().setCat_id(userData.getUserData().getCatId());
             setMessage(Constants.SHOW_PROGRESS);
             if (getPassingObject().getObjectClass() == null)
                 compositeDisposable.add(clientsRepository.addNewClient(getAddClientRequest()));
@@ -54,7 +52,8 @@ public class AddClientViewModel extends BaseViewModel {
     }
 
     public void getCategories() {
-        compositeDisposable.add(clientsRepository.getCategories());
+        if (userData.getUserData().getType().equals("admin"))
+            compositeDisposable.add(clientsRepository.getCategories());
     }
 
     public void showCategories() {

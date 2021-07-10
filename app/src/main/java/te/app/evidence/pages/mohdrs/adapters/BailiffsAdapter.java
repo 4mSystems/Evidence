@@ -1,5 +1,6 @@
 package te.app.evidence.pages.mohdrs.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -52,7 +53,7 @@ public class BailiffsAdapter extends RecyclerView.Adapter<BailiffsAdapter.ViewHo
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         ReportersData reportersData = bailiffsDataList.get(position);
         BailiffsItemViewModel itemMenuViewModel = new BailiffsItemViewModel(reportersData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {

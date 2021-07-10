@@ -40,6 +40,8 @@ public class AddBailiffsViewModel extends BaseViewModel {
     public void createMohdr() {
         List<String> clientList = new ArrayList<>();
         List<String> khesmList = new ArrayList<>();
+        if (userData.getUserData().getType().equals("User"))
+            getAddMohdrRequest().setCatid(userData.getUserData().getCatId());
         if (getAddMohdrRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
             for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
@@ -50,8 +52,8 @@ public class AddBailiffsViewModel extends BaseViewModel {
                 if (getCaseClientsCategoriesData().getKhesm().get(i).isChecked())
                     khesmList.add(getCaseClientsCategoriesData().getKhesm().get(i).getClientName());
             }
-            getAddMohdrRequest().setMokelName(clientList.toString().replace("]", "").replace("[", "").replace(", ",","));
-            getAddMohdrRequest().setKhesmName(khesmList.toString().replace("]", "").replace("[", "").replace(", ",","));
+            getAddMohdrRequest().setMokelName(clientList.toString().replace("]", "").replace("[", "").replace(", ", ","));
+            getAddMohdrRequest().setKhesmName(khesmList.toString().replace("]", "").replace("[", "").replace(", ", ","));
             compositeDisposable.add(casesRepository.createMohdr(getAddMohdrRequest()));
         }
     }

@@ -65,7 +65,6 @@ public class SessionsFragment extends BaseFragment {
             viewModel.sessions();
         }
         onBackPressed();
-
         setEvent();
         return binding.getRoot();
     }
@@ -97,7 +96,7 @@ public class SessionsFragment extends BaseFragment {
             viewModel.sessions();
             ((BaseActivity) context).stopRefresh(false);
         });
-        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> onBackPressed());
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), context, Constants.SESSION_CODE));
         viewModel.getSessionsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
             if (o.equals(Constants.CHANGE_STATUS))
                 viewModel.changeStatus();

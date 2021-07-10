@@ -90,7 +90,7 @@ public class CaseClientsFragment extends BaseFragment {
             viewModel.clients();
             ((BaseActivity) context).stopRefresh(false);
         });
-        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> onBackPressed());
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getClientsAdapter().getClientsList().size()), context, Constants.CLIENTS_CODE));
         viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
     }
 

@@ -4,18 +4,33 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_permission_on.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/exit_layout.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_add_bailiffs.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_add_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_client_to_case.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_add_user.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_bailiffs.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_case_clients.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_case_details.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_client_profile.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_bailiffs.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_case.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_client_tags.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_clients.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_session.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_session_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/layout_action_bar_back.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/layout_navigation_drawer.xml" value="0.19322916666666667" />
       </map>
     </option>

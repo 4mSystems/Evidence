@@ -132,6 +132,10 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         te.app.evidence.pages.clients.models.Clients itemViewModelClients = null;
         java.lang.String itemViewModelClientsClientName = null;
         te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
+        boolean itemViewModelUserDataUserDataEqualsJavaLangStringAdmin = false;
+        int itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -147,6 +151,37 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
                     // read itemViewModel.clients.clientName
                     itemViewModelClientsClientName = itemViewModelClients.getClientName();
                 }
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemViewModel != null) {
+                        // read itemViewModel.userData
+                        itemViewModelUserData = itemViewModel.userData;
+                    }
+
+
+                    if (itemViewModelUserData != null) {
+                        // read itemViewModel.userData.userData
+                        itemViewModelUserDataUserData = itemViewModelUserData.getUserData();
+                    }
+
+
+                    if (itemViewModelUserDataUserData != null) {
+                        // read itemViewModel.userData.userData.equals("admin")
+                        itemViewModelUserDataUserDataEqualsJavaLangStringAdmin = itemViewModelUserDataUserData.equals("admin");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(itemViewModelUserDataUserDataEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
+                    itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
@@ -154,6 +189,11 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
 
             this.delete.setOnClickListener(mCallback3);
             this.permission.setOnClickListener(mCallback2);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            this.delete.setVisibility(itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -207,6 +247,8 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.clients
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

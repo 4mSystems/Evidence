@@ -1,5 +1,6 @@
 package te.app.evidence.pages.cases.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -52,8 +53,9 @@ public class InputTagClientsAdapter extends RecyclerView.Adapter<InputTagClients
     }
 
 
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
         Clients client = clientsList.get(position);
         ClientsItemViewModel itemMenuViewModel = new ClientsItemViewModel(client);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {

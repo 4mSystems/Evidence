@@ -81,7 +81,6 @@ public class CaseDetailsFragment extends BaseFragment {
             }
 
         });
-//        viewModel.getNotesAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
     }
 
 

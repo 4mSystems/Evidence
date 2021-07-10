@@ -4,6 +4,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.clients.viewModels.ClientsItemViewModel" />
@@ -251,6 +253,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@+id/permission"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/edit"
@@ -267,6 +270,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@+id/delete"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
