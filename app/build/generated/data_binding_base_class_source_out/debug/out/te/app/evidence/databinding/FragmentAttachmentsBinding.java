@@ -9,21 +9,21 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel;
 
 public abstract class FragmentAttachmentsBinding extends ViewDataBinding {
   @NonNull
-  public final CustomEditText inputSearch;
+  public final TextInputEditText inputSearch;
 
   @Bindable
   protected AttachmentsViewModel mViewmodel;
 
   protected FragmentAttachmentsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText inputSearch) {
+      TextInputEditText inputSearch) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
   }

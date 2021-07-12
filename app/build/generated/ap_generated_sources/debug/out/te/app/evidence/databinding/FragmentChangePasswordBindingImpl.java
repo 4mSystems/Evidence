@@ -20,14 +20,18 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         sViewsWithIds.put(R.id.app_login_title, 8);
         sViewsWithIds.put(R.id.tv_change_title, 9);
         sViewsWithIds.put(R.id.tv_change_header_text, 10);
-        sViewsWithIds.put(R.id.tv_change_new_password, 11);
-        sViewsWithIds.put(R.id.tv_change_confirm_password, 12);
+        sViewsWithIds.put(R.id.input_new_password, 11);
+        sViewsWithIds.put(R.id.input_confirm_password, 12);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final android.widget.ImageView mboundView1;
+    private final androidx.appcompat.widget.AppCompatImageView mboundView1;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView2;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback16;
@@ -36,19 +40,19 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener inputConfirmPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewmodel.request.confirmPassword
-            //         is viewmodel.request.setConfirmPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = te.app.evidence.customViews.views.CustomEditText.setText(inputConfirmPassword);
+            // Inverse of viewmodel.request.password
+            //         is viewmodel.request.setPassword((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
             // viewmodel.request
             te.app.evidence.pages.auth.models.RegisterRequest viewmodelRequest = null;
-            // viewmodel.request.confirmPassword
-            java.lang.String viewmodelRequestConfirmPassword = null;
+            // viewmodel.request.password
+            java.lang.String viewmodelRequestPassword = null;
             // viewmodel
             te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
             // viewmodel.request != null
@@ -68,17 +72,17 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
 
 
 
-                    viewmodelRequest.setConfirmPassword(((java.lang.String) (callbackArg_0)));
+                    viewmodelRequest.setPassword(((java.lang.String) (callbackArg_0)));
                 }
             }
         }
     };
-    private androidx.databinding.InverseBindingListener inputNewPasswordtextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.request.password
             //         is viewmodel.request.setPassword((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = te.app.evidence.customViews.views.CustomEditText.setText(inputNewPassword);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
             // localize variables for thread safety
             // viewmodel != null
             boolean viewmodelJavaLangObjectNull = false;
@@ -119,22 +123,22 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             , (androidx.appcompat.widget.AppCompatButton) bindings[4]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
-            , (android.widget.ImageView) bindings[6]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[3]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[12]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[11]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             );
         this.appCompatButtonNext.setTag(null);
-        this.inputConfirmPassword.setTag(null);
-        this.inputNewPassword.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView1 = (android.widget.ImageView) bindings[1];
+        this.mboundView1 = (androidx.appcompat.widget.AppCompatImageView) bindings[1];
         this.mboundView1.setTag(null);
+        this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
+        this.mboundView2.setTag(null);
+        this.mboundView3 = (com.google.android.material.textfield.TextInputEditText) bindings[3];
+        this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
         mCallback16 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
@@ -209,7 +213,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
         }
         te.app.evidence.pages.auth.models.RegisterRequest viewmodelRequest = null;
         java.lang.String viewmodelRequestPassword = null;
-        java.lang.String viewmodelRequestConfirmPassword = null;
         te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0x3L) != 0) {
@@ -225,8 +228,6 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
                 if (viewmodelRequest != null) {
                     // read viewmodel.request.password
                     viewmodelRequestPassword = viewmodelRequest.getPassword();
-                    // read viewmodel.request.confirmPassword
-                    viewmodelRequestConfirmPassword = viewmodelRequest.getConfirmPassword();
                 }
         }
         // batch finished
@@ -234,15 +235,15 @@ public class FragmentChangePasswordBindingImpl extends FragmentChangePasswordBin
             // api target 1
 
             this.appCompatButtonNext.setOnClickListener(mCallback17);
-            te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputConfirmPassword, inputConfirmPasswordtextAttrChanged);
-            te.app.evidence.customViews.views.CustomEditText.setTextListner(this.inputNewPassword, inputNewPasswordtextAttrChanged);
             this.mboundView1.setOnClickListener(mCallback16);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            te.app.evidence.customViews.views.CustomEditText.getText(this.inputConfirmPassword, viewmodelRequestConfirmPassword);
-            te.app.evidence.customViews.views.CustomEditText.getText(this.inputNewPassword, viewmodelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelRequestPassword);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelRequestPassword);
         }
     }
     // Listener Stub Implementations

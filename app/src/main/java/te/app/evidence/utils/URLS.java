@@ -34,6 +34,7 @@ public class URLS {
 
     public static final String CONTACT_US = "settings/contact-us";
     public static final String ADD_CATEGORY = "add_category";
+    public static final String EDIT_CATEGORY = "edit_category";
     public final static String DELETE_CATEGORY = "delete_category/";
     public final static String REMOVE_AD = "listings/delete-listing/";
     public final static String REMOVE_IMAGE = "listings/delete-img/";

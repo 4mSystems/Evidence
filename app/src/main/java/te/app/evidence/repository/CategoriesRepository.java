@@ -45,6 +45,11 @@ public class CategoriesRepository extends BaseRepository {
                 Constants.ADD_CATEGORY, true);
     }
 
+    public Disposable editCategory(AddCategoryRequest addCategoryRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_CATEGORY, addCategoryRequest, AddCategoryResponse.class,
+                Constants.ADD_CATEGORY, true);
+    }
+
     public Disposable deleteCategory(String catId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CATEGORY + catId, new Object(), StatusMessage.class,
                 Constants.DELETE_CATEGORY, true);

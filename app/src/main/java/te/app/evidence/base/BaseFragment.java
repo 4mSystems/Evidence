@@ -1,6 +1,7 @@
 package te.app.evidence.base;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,7 +62,8 @@ public class BaseFragment extends Fragment {
     public void toastMessage(String message) {
         ((ParentActivity) context).toastMessage(message, R.drawable.ic_check_white_24dp, R.color.successColor);
     }
- public void toastErrorMessage(String message) {
+
+    public void toastErrorMessage(String message) {
         ((ParentActivity) context).toastError(message);
     }
 
@@ -79,12 +81,12 @@ public class BaseFragment extends Fragment {
         super.onDestroy();
     }
 
-    private static final String TAG = "BaseFragment";
-
     @Override
     public void onAttach(@NotNull Context context) {
         super.onAttach(context);
         this.context = context;
     }
 
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+    }
 }

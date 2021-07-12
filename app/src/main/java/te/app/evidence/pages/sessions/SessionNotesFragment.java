@@ -118,8 +118,8 @@ public class SessionNotesFragment extends BaseFragment {
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);
         if (data != null) {
             if (resultCode == RESULT_OK) {
                 Bundle bundle = data.getBundleExtra(Constants.BUNDLE);

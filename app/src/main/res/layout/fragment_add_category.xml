@@ -13,15 +13,16 @@
             type="te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel" />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
             app:error="@{viewmodel.addCategoryRequest.userNameError}"
             android:layout_marginStart="@dimen/dp6w"
             android:layout_marginTop="@dimen/dp10h"
@@ -41,16 +42,14 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp6w"
             android:layout_marginTop="@dimen/dp30h"
-            android:layout_marginEnd="@dimen/dp6w"
-            android:layout_marginBottom="@dimen/dp30h"
-            android:background="@drawable/corner_view_primary_dark"
+            android:background="@color/colorPrimaryDark"
             android:text="@{viewmodel.passingObject.objectClass==null?@string/add_new_category:@string/edit_category}"
             android:textAllCaps="false"
             android:onClick="@{()-> viewmodel.addNewCategory()}"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white" />
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

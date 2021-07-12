@@ -361,26 +361,6 @@
                 app:barrierDirection="bottom"
                 app:constraint_referenced_ids="nextMohdareen,nextSessions,previousSessions" />
 
-            <te.app.evidence.customViews.views.CustomEditText
-                android:id="@+id/input_search"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp14w"
-                android:layout_marginTop="@dimen/dp15h"
-                android:layout_marginEnd="@dimen/dp14w"
-                android:hint="@string/home_search_hint"
-                android:visibility="gone"
-                android:inputType="text"
-                android:textAlignment="viewStart"
-                android:textColorHint="@color/medium_color"
-                app:helperTextTextColor="@color/black"
-                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/br3"
-                app:startIconDrawable="@drawable/ic_search" />
-
             <ProgressBar
                 android:id="@+id/progress_bar_home"
                 android:layout_width="wrap_content"
@@ -389,7 +369,7 @@
                 android:visibility="gone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_search" />
+                app:layout_constraintTop_toBottomOf="@+id/br3" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/comming_session_rc"

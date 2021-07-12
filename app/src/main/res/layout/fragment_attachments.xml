@@ -17,9 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <te.app.evidence.customViews.views.CustomEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/input_search"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp14w"
@@ -27,14 +26,16 @@
             android:layout_marginEnd="@dimen/dp14w"
             android:hint="@string/attach_search_hint"
             android:inputType="text"
+            android:background="@drawable/corner_view_gray_border"
             android:textAlignment="viewStart"
             android:textColorHint="@color/medium_color"
+            android:padding="@dimen/dp10h"
             app:helperTextTextColor="@color/black"
             app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:startIconDrawable="@drawable/ic_search" />
+            android:drawableStart="@drawable/ic_search" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -48,14 +49,12 @@
             app:span="@{`1`}"
             tools:listitem="@layout/item_attachment" />
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/dp16h"
             android:src="@drawable/ic_attachments"
             android:visibility="gone"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/header_data_table"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

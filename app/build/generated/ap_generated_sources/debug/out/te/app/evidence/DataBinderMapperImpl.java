@@ -58,7 +58,6 @@ import te.app.evidence.databinding.ItemClientSearchBindingImpl;
 import te.app.evidence.databinding.ItemClientTagsBindingImpl;
 import te.app.evidence.databinding.ItemClientsBindingImpl;
 import te.app.evidence.databinding.ItemHomeReporterBindingImpl;
-import te.app.evidence.databinding.ItemMohdrBindingImpl;
 import te.app.evidence.databinding.ItemNoteBindingImpl;
 import te.app.evidence.databinding.ItemSessionBindingImpl;
 import te.app.evidence.databinding.ItemSessionNoteBindingImpl;
@@ -155,25 +154,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMHOMEREPORTER = 43;
 
-  private static final int LAYOUT_ITEMMOHDR = 44;
+  private static final int LAYOUT_ITEMNOTE = 44;
 
-  private static final int LAYOUT_ITEMNOTE = 45;
+  private static final int LAYOUT_ITEMSESSION = 45;
 
-  private static final int LAYOUT_ITEMSESSION = 46;
+  private static final int LAYOUT_ITEMSESSIONNOTE = 46;
 
-  private static final int LAYOUT_ITEMSESSIONNOTE = 47;
+  private static final int LAYOUT_ITEMUSER = 47;
 
-  private static final int LAYOUT_ITEMUSER = 48;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 48;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 49;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 49;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 50;
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 50;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 51;
+  private static final int LAYOUT_OPTIONDIALOG = 51;
 
-  private static final int LAYOUT_OPTIONDIALOG = 52;
-
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(52);
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(51);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -219,7 +216,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_client_tags, LAYOUT_ITEMCLIENTTAGS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_reporter, LAYOUT_ITEMHOMEREPORTER);
-    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_mohdr, LAYOUT_ITEMMOHDR);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_note, LAYOUT_ITEMNOTE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_session, LAYOUT_ITEMSESSION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_session_note, LAYOUT_ITEMSESSIONNOTE);
@@ -491,12 +487,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_home_reporter is invalid. Received: " + tag);
       }
-      case  LAYOUT_ITEMMOHDR: {
-        if ("layout/item_mohdr_0".equals(tag)) {
-          return new ItemMohdrBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for item_mohdr is invalid. Received: " + tag);
-      }
       case  LAYOUT_ITEMNOTE: {
         if ("layout/item_note_0".equals(tag)) {
           return new ItemNoteBindingImpl(component, view);
@@ -533,6 +523,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_action_bar_home is invalid. Received: " + tag);
       }
+      case  LAYOUT_LAYOUTNAVIGATIONDRAWER: {
+        if ("layout/layout_navigation_drawer_0".equals(tag)) {
+          return new LayoutNavigationDrawerBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_navigation_drawer is invalid. Received: " + tag);
+      }
     }
     return null;
   }
@@ -540,12 +536,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
-      case  LAYOUT_LAYOUTNAVIGATIONDRAWER: {
-        if ("layout/layout_navigation_drawer_0".equals(tag)) {
-          return new LayoutNavigationDrawerBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for layout_navigation_drawer is invalid. Received: " + tag);
-      }
       case  LAYOUT_OPTIONDIALOG: {
         if ("layout/option_dialog_0".equals(tag)) {
           return new OptionDialogBindingImpl(component, view);
@@ -663,7 +653,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(52);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(51);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -709,7 +699,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_client_tags_0", te.app.evidence.R.layout.item_client_tags);
       sKeys.put("layout/item_clients_0", te.app.evidence.R.layout.item_clients);
       sKeys.put("layout/item_home_reporter_0", te.app.evidence.R.layout.item_home_reporter);
-      sKeys.put("layout/item_mohdr_0", te.app.evidence.R.layout.item_mohdr);
       sKeys.put("layout/item_note_0", te.app.evidence.R.layout.item_note);
       sKeys.put("layout/item_session_0", te.app.evidence.R.layout.item_session);
       sKeys.put("layout/item_session_note_0", te.app.evidence.R.layout.item_session_note);

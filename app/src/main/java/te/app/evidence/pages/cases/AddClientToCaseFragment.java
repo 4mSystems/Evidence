@@ -78,7 +78,8 @@ public class AddClientToCaseFragment extends BaseFragment {
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);
         if (data != null) {
             Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
             ClientsResponse clientsResponse;
@@ -108,7 +109,6 @@ public class AddClientToCaseFragment extends BaseFragment {
                 }
             }
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -93,12 +94,13 @@ public class UsersFragment extends BaseFragment {
         deleteDialog.show();
     }
 
+
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (data != null) {
+    public void launchActivityResult(int request, int resultCode, Intent result) {
+        super.launchActivityResult(request, resultCode, result);
+        if (result != null) {
             if (resultCode == RESULT_OK) {
-                Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
+                Bundle bundle = result.getBundleExtra(Constants.BUNDLE);
                 if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
                     PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
                     if (viewModel.getUsersAdapter().lastSelected == -1) {

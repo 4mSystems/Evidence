@@ -120,8 +120,8 @@ public class SessionsFragment extends BaseFragment {
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (data != null) {
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);        if (data != null) {
             if (resultCode == RESULT_OK) {
                 Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
                 if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
@@ -137,7 +137,6 @@ public class SessionsFragment extends BaseFragment {
                 }
             }
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void onBackPressed() {

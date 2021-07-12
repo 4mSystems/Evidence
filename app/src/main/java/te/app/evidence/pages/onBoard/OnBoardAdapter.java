@@ -1,5 +1,6 @@
 package te.app.evidence.pages.onBoard;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,10 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 
-import com.bumptech.glide.Glide;
 import com.smarteist.autoimageslider.SliderViewAdapter;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,12 +22,13 @@ import te.app.evidence.pages.onBoard.models.OnBoard;
 
 public class OnBoardAdapter extends SliderViewAdapter<OnBoardAdapter.SliderAdapterVH> {
     public List<OnBoard> pagerList;
-    private Context context;
+    Context context;
 
     public OnBoardAdapter() {
         pagerList = new ArrayList<>();
     }
 
+    @SuppressLint("InflateParams")
     @Override
     public SliderAdapterVH onCreateViewHolder(ViewGroup parent) {
         View inflate = LayoutInflater.from(parent.getContext()).inflate(R.layout.onboard_slider_item, null);
@@ -37,7 +39,7 @@ public class OnBoardAdapter extends SliderViewAdapter<OnBoardAdapter.SliderAdapt
     @Override
     public void onBindViewHolder(SliderAdapterVH viewHolder, int position) {
         OnBoard introItem = pagerList.get(position);
-        Glide.with(context).load(introItem.getImage()).placeholder(R.drawable.splash).into(viewHolder.imageViewBackground);
+        Picasso.get().load(introItem.getImage()).placeholder(R.drawable.splash).into(viewHolder.imageViewBackground);
         viewHolder.title.setText(introItem.getTitle());
         viewHolder.desc.setText(introItem.getDesc());
     }
@@ -48,7 +50,7 @@ public class OnBoardAdapter extends SliderViewAdapter<OnBoardAdapter.SliderAdapt
         return pagerList.size();
     }
 
-    public void updateData(@Nullable List<OnBoard> data) {
+    public void updateData(@NonNull List<OnBoard> data) {
         this.pagerList.clear();
         this.pagerList.addAll(data);
         notifyDataSetChanged();

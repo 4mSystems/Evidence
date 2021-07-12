@@ -10,15 +10,15 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel;
 
 public abstract class FragmentBailiffsBinding extends ViewDataBinding {
   @NonNull
-  public final CustomEditText inputSearch;
+  public final TextInputEditText inputSearch;
 
   @NonNull
   public final RecyclerView rcMohdrs;
@@ -27,7 +27,7 @@ public abstract class FragmentBailiffsBinding extends ViewDataBinding {
   protected BailiffsViewModel mViewmodel;
 
   protected FragmentBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomEditText inputSearch, RecyclerView rcMohdrs) {
+      TextInputEditText inputSearch, RecyclerView rcMohdrs) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.rcMohdrs = rcMohdrs;

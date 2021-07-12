@@ -17,7 +17,7 @@ public class FragmentAddCategoryBindingImpl extends FragmentAddCategoryBinding i
     }
     // views
     @NonNull
-    private final android.widget.LinearLayout mboundView0;
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView1;
     @NonNull
@@ -74,7 +74,7 @@ public class FragmentAddCategoryBindingImpl extends FragmentAddCategoryBinding i
     private FragmentAddCategoryBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
             );
-        this.mboundView0 = (android.widget.LinearLayout) bindings[0];
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (com.google.android.material.textfield.TextInputLayout) bindings[1];
         this.mboundView1.setTag(null);

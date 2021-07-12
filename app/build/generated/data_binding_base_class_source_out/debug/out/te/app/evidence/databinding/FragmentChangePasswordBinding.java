@@ -4,7 +4,6 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -12,10 +11,10 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordViewModel;
@@ -31,25 +30,19 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
   public final CustomTextViewMedium appName;
 
   @NonNull
-  public final ImageView imgLoginLogo;
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
-  public final CustomEditText inputConfirmPassword;
+  public final TextInputLayout inputConfirmPassword;
 
   @NonNull
-  public final CustomEditText inputNewPassword;
+  public final TextInputLayout inputNewPassword;
 
   @NonNull
   public final AppCompatImageView loginBackground;
 
   @NonNull
-  public final CustomTextViewMedium tvChangeConfirmPassword;
-
-  @NonNull
   public final CustomTextViewRegular tvChangeHeaderText;
-
-  @NonNull
-  public final CustomTextViewMedium tvChangeNewPassword;
 
   @NonNull
   public final CustomTextViewMedium tvChangeTitle;
@@ -59,10 +52,10 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
 
   protected FragmentChangePasswordBinding(Object _bindingComponent, View _root,
       int _localFieldCount, AppCompatButton appCompatButtonNext, CustomTextViewMedium appLoginTitle,
-      CustomTextViewMedium appName, ImageView imgLoginLogo, CustomEditText inputConfirmPassword,
-      CustomEditText inputNewPassword, AppCompatImageView loginBackground,
-      CustomTextViewMedium tvChangeConfirmPassword, CustomTextViewRegular tvChangeHeaderText,
-      CustomTextViewMedium tvChangeNewPassword, CustomTextViewMedium tvChangeTitle) {
+      CustomTextViewMedium appName, AppCompatImageView imgLoginLogo,
+      TextInputLayout inputConfirmPassword, TextInputLayout inputNewPassword,
+      AppCompatImageView loginBackground, CustomTextViewRegular tvChangeHeaderText,
+      CustomTextViewMedium tvChangeTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.appLoginTitle = appLoginTitle;
@@ -71,9 +64,7 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
     this.inputConfirmPassword = inputConfirmPassword;
     this.inputNewPassword = inputNewPassword;
     this.loginBackground = loginBackground;
-    this.tvChangeConfirmPassword = tvChangeConfirmPassword;
     this.tvChangeHeaderText = tvChangeHeaderText;
-    this.tvChangeNewPassword = tvChangeNewPassword;
     this.tvChangeTitle = tvChangeTitle;
   }
 

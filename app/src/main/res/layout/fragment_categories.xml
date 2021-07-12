@@ -30,17 +30,19 @@
             app:span="@{`1`}"
             tools:listitem="@layout/item_category" />
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/dp16h"
+            android:contentDescription="@string/app_name"
             android:onClick="@{()-> viewmodel.addNewCategory()}"
-            android:src="@drawable/ic_add_category"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/header_data_table"
+            app:backgroundTint="@color/colorPrimary"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/header_data_table"
+            app:srcCompat="@drawable/ic_add_category"
+            app:tint="@color/white" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -2,22 +2,17 @@ package te.app.evidence.pages.profile;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 
 import org.jetbrains.annotations.NotNull;
-
-import java.io.File;
 
 import javax.inject.Inject;
 
@@ -31,15 +26,14 @@ import te.app.evidence.databinding.FragmentProfileBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.utils.Constants;
-import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.UserHelper;
 import te.app.evidence.utils.upload.FileOperations;
 
 public class ProfileFragment extends BaseFragment {
 
-    private Context context;
-    private FragmentProfileBinding binding;
+    Context context;
+    FragmentProfileBinding binding;
     @Inject
     ProfileViewModel viewModel;
 
@@ -88,15 +82,14 @@ public class ProfileFragment extends BaseFragment {
     }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == Constants.FILE_TYPE_IMAGE) {
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);
+        if (request == Constants.FILE_TYPE_IMAGE) {
             FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
             viewModel.getFileObject().add(fileObject);
 //            binding.imgLoginLogo.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
         }
-        super.onActivityResult(requestCode, resultCode, data);
     }
 
 

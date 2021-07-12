@@ -9,13 +9,10 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.drawerlayout.widget.DrawerLayout;
-import com.github.florent37.expansionpanel.ExpansionHeader;
-import com.github.florent37.expansionpanel.ExpansionLayout;
 import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -29,28 +26,13 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final CustomTextViewRegular addCase;
 
   @NonNull
-  public final CustomTextViewRegular dailyReports;
-
-  @NonNull
   public final DrawerLayout dlMainNavigationMenu;
-
-  @NonNull
-  public final ExpansionLayout expansionLayoutReports;
 
   @NonNull
   public final FrameLayout flHomeContainer;
 
   @NonNull
-  public final AppCompatImageView iconDownQu;
-
-  @NonNull
-  public final ExpansionHeader layoutReportsHeader;
-
-  @NonNull
   public final LinearLayout llBaseActionBarContainer;
-
-  @NonNull
-  public final CustomTextViewRegular monthlyReports;
 
   @NonNull
   public final RelativeLayout rlNavigationDrawer;
@@ -65,38 +47,26 @@ public abstract class LayoutNavigationDrawerBinding extends ViewDataBinding {
   public final CustomTextViewMedium tvUserLogin;
 
   @NonNull
-  public final CustomTextViewMedium tvUsername;
-
-  @NonNull
   public final CircleImageView vvNavigationDrawerImage;
 
   @Bindable
   protected MenuViewModel mMenuViewModel;
 
   protected LayoutNavigationDrawerBinding(Object _bindingComponent, View _root,
-      int _localFieldCount, CustomTextViewRegular addCase, CustomTextViewRegular dailyReports,
-      DrawerLayout dlMainNavigationMenu, ExpansionLayout expansionLayoutReports,
-      FrameLayout flHomeContainer, AppCompatImageView iconDownQu,
-      ExpansionHeader layoutReportsHeader, LinearLayout llBaseActionBarContainer,
-      CustomTextViewRegular monthlyReports, RelativeLayout rlNavigationDrawer,
-      RelativeLayout rlNavigationDrawerHeader, CustomTextViewRegular searchCase,
-      CustomTextViewMedium tvUserLogin, CustomTextViewMedium tvUsername,
+      int _localFieldCount, CustomTextViewRegular addCase, DrawerLayout dlMainNavigationMenu,
+      FrameLayout flHomeContainer, LinearLayout llBaseActionBarContainer,
+      RelativeLayout rlNavigationDrawer, RelativeLayout rlNavigationDrawerHeader,
+      CustomTextViewRegular searchCase, CustomTextViewMedium tvUserLogin,
       CircleImageView vvNavigationDrawerImage) {
     super(_bindingComponent, _root, _localFieldCount);
     this.addCase = addCase;
-    this.dailyReports = dailyReports;
     this.dlMainNavigationMenu = dlMainNavigationMenu;
-    this.expansionLayoutReports = expansionLayoutReports;
     this.flHomeContainer = flHomeContainer;
-    this.iconDownQu = iconDownQu;
-    this.layoutReportsHeader = layoutReportsHeader;
     this.llBaseActionBarContainer = llBaseActionBarContainer;
-    this.monthlyReports = monthlyReports;
     this.rlNavigationDrawer = rlNavigationDrawer;
     this.rlNavigationDrawerHeader = rlNavigationDrawerHeader;
     this.searchCase = searchCase;
     this.tvUserLogin = tvUserLogin;
-    this.tvUsername = tvUsername;
     this.vvNavigationDrawerImage = vvNavigationDrawerImage;
   }
 

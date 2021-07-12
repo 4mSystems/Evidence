@@ -463,10 +463,12 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.String viewmodelAddClientRequestClientUnitErrorGet = null;
         te.app.evidence.PassingObject viewmodelPassingObject = null;
         java.lang.String viewmodelAddClientRequestType = null;
+        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         java.lang.String viewmodelAddClientRequestClientUnit = null;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelAddClientRequestClientCatErrorGet = null;
+        te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         java.lang.String viewmodelMessage = null;
         java.lang.String viewmodelAddClientRequestClientNoteErrorGet = null;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
@@ -475,6 +477,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.Object viewmodelPassingObjectObjectClass = null;
         boolean viewmodelPassingObjectObjectClassJavaLangObjectNull = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientUnitError = null;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String viewmodelPassingObjectObjectClassJavaLangObjectNullBtnSaveAndroidStringAddNewClientBtnSaveAndroidStringEditClient = null;
         java.lang.String viewmodelAddClientRequestClientAddressErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientNameErrorGet = null;
@@ -485,6 +488,8 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         java.lang.String viewmodelAddClientRequestClientName = null;
         te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
         int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
+        te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+        java.lang.String viewmodelUserDataUserDataType = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientCatError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientTypeError = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNameError = null;
@@ -514,10 +519,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
                 if((dirtyFlags & 0x340L) != 0) {
                     if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x20000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x10000L;
                     }
                 }
 
@@ -537,10 +542,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0x2c0L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x8000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x4000L;
                     }
                 }
 
@@ -549,10 +554,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
                 if((dirtyFlags & 0x2c0L) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
-                            dirtyFlags |= 0x200000L;
+                            dirtyFlags |= 0x800000L;
                     }
                     else {
-                            dirtyFlags |= 0x100000L;
+                            dirtyFlags |= 0x400000L;
                     }
                 }
             }
@@ -665,17 +670,54 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                         }
                 }
             }
+            if ((dirtyFlags & 0x240L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.userData
+                        viewmodelUserData = viewmodel.userData;
+                    }
+
+
+                    if (viewmodelUserData != null) {
+                        // read viewmodel.userData.userData
+                        viewmodelUserDataUserData = viewmodelUserData.getUserData();
+                    }
+
+
+                    if (viewmodelUserDataUserData != null) {
+                        // read viewmodel.userData.userData.type
+                        viewmodelUserDataUserDataType = viewmodelUserDataUserData.getType();
+                    }
+
+
+                    if (viewmodelUserDataUserDataType != null) {
+                        // read viewmodel.userData.userData.type.equals("admin")
+                        viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x240L) != 0) {
+                    if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x2000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000L;
+                    }
+                }
+
+
+                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
 
-        if ((dirtyFlags & 0x1000L) != 0) {
+        if ((dirtyFlags & 0x4000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
                     viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x200000L) != 0) {
+        if ((dirtyFlags & 0x800000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
@@ -692,19 +734,19 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             if((dirtyFlags & 0x2c0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
                         dirtyFlags |= 0x800L;
-                        dirtyFlags |= 0x20000L;
+                        dirtyFlags |= 0x80000L;
                 }
                 else {
                         dirtyFlags |= 0x400L;
-                        dirtyFlags |= 0x10000L;
+                        dirtyFlags |= 0x40000L;
                 }
             }
             if((dirtyFlags & 0x2c0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x80000L;
+                        dirtyFlags |= 0x200000L;
                 }
                 else {
-                        dirtyFlags |= 0x40000L;
+                        dirtyFlags |= 0x100000L;
                 }
             }
 
@@ -751,6 +793,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddClientRequestClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddClientRequestClientUnit);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddClientRequestClientAddress);
+            this.mboundView9.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x250L) != 0) {
             // api target 1
@@ -855,16 +898,18 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         flag 9 (0xaL): null
         flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
         flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 14 (0xfL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 15 (0x10L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
-        flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 12 (0xdL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 16 (0x11L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 17 (0x12L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

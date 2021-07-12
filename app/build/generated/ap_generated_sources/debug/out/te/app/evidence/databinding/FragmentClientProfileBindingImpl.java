@@ -34,7 +34,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final com.github.clans.fab.FloatingActionButton mboundView10;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView10;
     @NonNull
     private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
@@ -85,7 +85,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.clientTypeValue.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView10 = (com.github.clans.fab.FloatingActionButton) bindings[10];
+        this.mboundView10 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[10];
         this.mboundView10.setTag(null);
         this.mboundView9 = (androidx.recyclerview.widget.RecyclerView) bindings[9];
         this.mboundView9.setTag(null);

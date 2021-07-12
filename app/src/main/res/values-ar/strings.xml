@@ -406,7 +406,7 @@
     <string name="attach_search_hint">Looking for file ?</string>
     <string name="add_new_attach">Add new attachment</string>
     <string name="cat_name">Category name</string>
-    <string name="add_new_category">Add new category</string>
+    <string name="add_new_category">إضافة تصنيف جديد</string>
     <string name="mohdr_search_hint">Looking for bailiffs</string>
     <string name="client">موكل</string>
     <string name="addressed_to">موجهة الى</string>
@@ -424,7 +424,7 @@
     <string name="add_case">إضافة دعوى</string>
     <string name="search_case">الدعاوى</string>
     <string name="cat_search_hint">Looking for category ?</string>
-    <string name="edit_category">Edit category</string>
+    <string name="edit_category">تعديل التصنيف</string>
     <string name="status_done">Done</string>
     <string name="status_waiting">Waiting</string>
     <string name="reporter_details">Reporter details</string>

@@ -9,7 +9,7 @@ public class OnBoard {
 
     @SerializedName("img")
     @Expose
-    private Drawable image;
+    private int image;
 
     @SerializedName("title")
     @Expose
@@ -22,14 +22,14 @@ public class OnBoard {
     @Expose
     private int id;
 
-    public OnBoard(Drawable image, String title, String desc, int id) {
+    public OnBoard(int image, String title, String desc, int id) {
         this.image = image;
         this.title = title;
         this.desc = desc;
         this.id = id;
     }
 
-    public void setImage(Drawable image) {
+    public void setImage(int image) {
         this.image = image;
     }
 
@@ -45,7 +45,7 @@ public class OnBoard {
         this.id = id;
     }
 
-    public Drawable getImage() {
+    public int getImage() {
         return image;
     }
 

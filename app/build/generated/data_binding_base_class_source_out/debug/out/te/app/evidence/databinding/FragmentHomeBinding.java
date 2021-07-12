@@ -19,7 +19,6 @@ import com.ramijemli.percentagechartview.PercentageChartView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomEditText;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
 
@@ -61,9 +60,6 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final CustomTextViewMedium homeUsers;
 
   @NonNull
-  public final CustomEditText inputSearch;
-
-  @NonNull
   public final AppCompatButton nextMohdareen;
 
   @NonNull
@@ -97,7 +93,7 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       Barrier br3, RecyclerView commingSessionRc, Flow flow, CustomTextViewMedium homeCases,
       ConstraintLayout homeItem1, ConstraintLayout homeItem2, ConstraintLayout homeItem3,
       ConstraintLayout homeItem4, CustomTextViewMedium homeMohdrs, RecyclerView homeReportersRc,
-      CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers, CustomEditText inputSearch,
+      CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers,
       AppCompatButton nextMohdareen, AppCompatButton nextSessions, RecyclerView previousSessionRc,
       AppCompatButton previousSessions, ProgressBar progressBarHome, PercentageChartView viewCasee,
       PercentageChartView viewId, PercentageChartView viewMohdr, PercentageChartView viewUsers) {
@@ -114,7 +110,6 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.homeReportersRc = homeReportersRc;
     this.homeSession = homeSession;
     this.homeUsers = homeUsers;
-    this.inputSearch = inputSearch;
     this.nextMohdareen = nextMohdareen;
     this.nextSessions = nextSessions;
     this.previousSessionRc = previousSessionRc;

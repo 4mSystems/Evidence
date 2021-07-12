@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,6 +37,7 @@ import te.app.evidence.R;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.login.LoginFragment;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.LauncherHelper;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.LanguagesHelper;
@@ -48,6 +50,7 @@ public class ParentActivity extends AppCompatActivity implements
     public MutableLiveData<Boolean> ConnectionLiveData;
     ConnectivityReceiver connectivityReceiver = new ConnectivityReceiver();
     public MutableLiveData<Boolean> connectionMutableLiveData = new MutableLiveData<>();
+    public ActivityResultLauncher<Intent> someActivityResultLauncher;
 
 
     @Override
@@ -58,6 +61,7 @@ public class ParentActivity extends AppCompatActivity implements
         initializeLanguage();
         initializeToken();
         initializeProgress();
+        launchActivityResult();
 
     }
 
@@ -66,8 +70,8 @@ public class ParentActivity extends AppCompatActivity implements
         Window window = activity.getWindow();
         Drawable background = ResourceManager.getDrawable(R.drawable.corner_view_gradient_toolbar);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(activity.getResources().getColor(android.R.color.transparent));
-        window.setNavigationBarColor(activity.getResources().getColor(android.R.color.transparent));
+        window.setStatusBarColor(activity.getResources().getColor(android.R.color.transparent, null));
+        window.setNavigationBarColor(activity.getResources().getColor(android.R.color.transparent, null));
         window.setBackgroundDrawable(background);
     }
 
@@ -128,9 +132,7 @@ public class ParentActivity extends AppCompatActivity implements
         final AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.customDialog);
         builder.setView(view);
         dialogLoader = builder.create();
-        dialogLoader.setOnCancelListener(dialogInterface -> {
-            dialogLoader.dismiss();
-        });
+        dialogLoader.setOnCancelListener(dialogInterface -> dialogLoader.dismiss());
     }
 
     public void showProgress() {
@@ -240,17 +242,29 @@ public class ParentActivity extends AppCompatActivity implements
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        try {
-            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
-            assert fragment != null;
-            fragment.onActivityResult(requestCode, resultCode, data);
-        } catch (Exception ex) {
-            Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
-        }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        try {
+//            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
+//            assert fragment != null;
+//            fragment.onActivityResult(requestCode, resultCode, data);
+//        } catch (Exception ex) {
+//            Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
+//        }
+//    }
+
+    private void launchActivityResult() {
+        LauncherHelper.onActivityResult(this, (request, resultCode, result) -> {
+            try {
+                Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
+                assert fragment != null;
+                if (fragment instanceof BaseFragment)
+                    ((BaseFragment) fragment).launchActivityResult(request, resultCode, result);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                Toast.makeText(this, ResourceManager.getString(R.string.please_select_another_file), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-
-
 }

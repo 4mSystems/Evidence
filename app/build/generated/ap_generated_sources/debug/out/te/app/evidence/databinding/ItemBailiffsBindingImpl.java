@@ -155,13 +155,13 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelBailiffsDataPaperNumber = null;
-        te.app.evidence.pages.mohdrs.models.ReportersData itemViewModelBailiffsData = null;
-        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        te.app.evidence.pages.mohdrs.models.ReportersData itemViewModelBailiffsData = null;
         java.lang.String itemViewModelBailiffsDataKhesmName = null;
         java.lang.String itemViewModelBailiffsDataSessionDate = null;
         te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
         java.lang.String itemViewModelBailiffsDataMokelName = null;
         java.lang.String itemViewModelBailiffsDataStatus = null;
@@ -210,8 +210,8 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
 
 
                     if (itemViewModelUserDataUserDataType != null) {
-                        // read itemViewModel.userData.userData.type.equals("Admin")
-                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("Admin");
+                        // read itemViewModel.userData.userData.type.equals("admin")
+                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("admin");
                     }
                 if((dirtyFlags & 0x5L) != 0) {
                     if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
@@ -223,7 +223,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
                 }
 
 
-                    // read itemViewModel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
                     itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
@@ -313,8 +313,8 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.bailiffsData
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

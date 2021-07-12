@@ -1,52 +1,15 @@
 package te.app.evidence.base;
 
 import android.graphics.Color;
-import android.text.TextUtils;
-import android.util.Log;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-
-import te.app.evidence.R;
 import te.app.evidence.utils.helper.AppHelper;
 
 public class ApplicationBinding {
-    private static final String TAG = "ApplicationBinding";
 
-    @BindingAdapter("imageUrl")
-    public static void loadImage(ImageView imageView, Object image) {
-        if (image instanceof String && !TextUtils.isEmpty((String) image)) {
-            Log.e(TAG, "loadImage: " + image);
-            Glide
-                    .with(imageView.getContext())
-                    .load((String) image)
-                    .transition(DrawableTransitionOptions.withCrossFade())
-                    .centerCrop()
-                    .placeholder(R.drawable.logo)
-                    .into(imageView);
-        } else if (image instanceof Integer) {
-            imageView.setImageResource((Integer) image);
-        } else if (TextUtils.isEmpty((String) image)) {
-            imageView.setImageResource(R.drawable.logo);
-        }
-    }
-
-
-    @BindingAdapter("imageZoomUrl")
-    public static void loadZoomImage(ImageView imageView, String image) {
-        Glide
-                .with(imageView.getContext())
-                .load(image)
-                .fitCenter()
-//                .placeholder(R.drawable.progress_animation)
-                .into(imageView);
-//        imageView.setOnTouchListener(new ImageMatrixTouchHandler(MyApplication.getInstance()));
-    }
 
     @BindingAdapter("color")
     public static void color(ImageView imageView, String color) {
@@ -66,11 +29,5 @@ public class ApplicationBinding {
         recyclerView.setAdapter(itemsAdapter);
     }
 
-
-    @BindingAdapter("rate")
-    public static void setRate(final RatingBar ratingBar, String rate) {
-        if (!TextUtils.isEmpty(rate))
-            ratingBar.setRating(Float.parseFloat(rate));
-    }
 
 }

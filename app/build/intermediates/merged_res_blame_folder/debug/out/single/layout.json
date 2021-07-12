@@ -56,10 +56,6 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_all_case.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_mohdr.xml",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_mohdr.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_splash.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_splash.xml"
     },

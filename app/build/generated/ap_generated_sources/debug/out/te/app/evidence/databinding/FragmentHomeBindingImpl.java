@@ -21,8 +21,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         sViewsWithIds.put(R.id.view_casee, 18);
         sViewsWithIds.put(R.id.flow, 19);
         sViewsWithIds.put(R.id.br3, 20);
-        sViewsWithIds.put(R.id.input_search, 21);
-        sViewsWithIds.put(R.id.progress_bar_home, 22);
+        sViewsWithIds.put(R.id.progress_bar_home, 21);
     }
     // views
     @NonNull
@@ -45,7 +44,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 23, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 22, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -61,12 +60,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             , (androidx.recyclerview.widget.RecyclerView) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[21]
             , (androidx.appcompat.widget.AppCompatButton) bindings[10]
             , (androidx.appcompat.widget.AppCompatButton) bindings[8]
             , (androidx.recyclerview.widget.RecyclerView) bindings[12]
             , (androidx.appcompat.widget.AppCompatButton) bindings[9]
-            , (android.widget.ProgressBar) bindings[22]
+            , (android.widget.ProgressBar) bindings[21]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[18]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[15]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[16]

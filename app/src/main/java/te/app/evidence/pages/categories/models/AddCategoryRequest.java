@@ -10,6 +10,8 @@ import te.app.evidence.utils.validation.Validate;
 public class AddCategoryRequest {
     @SerializedName("name")
     private String name;
+    @SerializedName("id")
+    private String id;
     public ObservableField<String> userNameError = new ObservableField<>();
 
     public boolean isValid() {
@@ -28,5 +30,13 @@ public class AddCategoryRequest {
     public void setName(String name) {
         userNameError.set(null);
         this.name = name;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

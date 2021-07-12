@@ -82,8 +82,7 @@
                             android:layout_marginTop="@dimen/dp25h"
                             android:src="@drawable/logo"
                             app:civ_border_color="@color/white"
-                            app:civ_border_width="4dp"
-                            app:imageUrl="@{menuViewModel.userData.userData.image}" />
+                            app:civ_border_width="4dp" />
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:id="@+id/tv_user_login"
@@ -195,101 +194,7 @@
                             android:text="@string/menuCat"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
-                            android:visibility="@{menuViewModel.userData.userData.equals(`admin`)?View.VISIBLE:View.GONE}" />
-
-                        <com.github.florent37.expansionpanel.ExpansionHeader
-                            android:id="@+id/layout_reports_header"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp6w"
-                            android:layout_marginTop="@dimen/dp10h"
-                            android:layout_marginEnd="@dimen/dp12w"
-                            android:layout_marginBottom="@dimen/dp6h"
-                            android:visibility="gone"
-                            app:expansion_headerIndicator="@id/icon_down_qu"
-                            app:expansion_layout="@id/expansionLayoutReports"
-                            app:expansion_toggleOnClick="true"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/dp3h">
-
-                                <androidx.appcompat.widget.AppCompatImageView
-                                    android:id="@+id/icon_down_qu"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginEnd="@dimen/dp8w"
-                                    app:layout_constraintBottom_toBottomOf="@+id/tv_username"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="@+id/tv_username"
-                                    app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
-
-                                <te.app.evidence.customViews.views.CustomTextViewMedium
-                                    android:id="@+id/tv_username"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:drawableStart="@drawable/ic_reports"
-                                    android:drawablePadding="@dimen/dp6w"
-                                    android:padding="@dimen/dp6h"
-                                    android:text="@string/menuReports"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintEnd_toStartOf="@+id/icon_down_qu"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        </com.github.florent37.expansionpanel.ExpansionHeader>
-
-                        <com.github.florent37.expansionpanel.ExpansionLayout
-                            android:id="@+id/expansionLayoutReports"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginBottom="@dimen/dp6h"
-                            android:visibility="gone"
-                            app:expansion_expanded="false"
-                            app:layout_constraintTop_toBottomOf="@id/v1">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical">
-
-                                <te.app.evidence.customViews.views.CustomTextViewRegular
-                                    android:id="@+id/daily_reports"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/dp25w"
-                                    android:layout_marginTop="@dimen/dp12h"
-                                    android:layout_marginEnd="@dimen/dp4w"
-                                    android:text="@string/daily_reports"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                                <te.app.evidence.customViews.views.CustomTextViewRegular
-                                    android:id="@+id/monthly_reports"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginStart="@dimen/dp25w"
-                                    android:layout_marginTop="@dimen/dp12h"
-                                    android:layout_marginEnd="@dimen/dp4w"
-                                    android:text="@string/monthly_reports"
-                                    android:textAlignment="viewStart"
-                                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                                    android:textColor="@color/white"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toEndOf="@+id/add_case"
-                                    app:layout_constraintTop_toTopOf="parent" />
-
-                            </LinearLayout>
-                        </com.github.florent37.expansionpanel.ExpansionLayout>
+                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
 
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium

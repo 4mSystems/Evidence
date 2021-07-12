@@ -19,7 +19,7 @@ public class FragmentCategoriesBindingImpl extends FragmentCategoriesBinding imp
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final com.github.clans.fab.FloatingActionButton mboundView2;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView2;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback41;
@@ -36,7 +36,7 @@ public class FragmentCategoriesBindingImpl extends FragmentCategoriesBinding imp
             );
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
+        this.mboundView2 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2];
         this.mboundView2.setTag(null);
         this.rcCat.setTag(null);
         setRootTag(root);

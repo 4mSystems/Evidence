@@ -20,7 +20,7 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final com.github.clans.fab.FloatingActionButton mboundView2;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView2;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback97;
@@ -33,12 +33,12 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     }
     private FragmentBailiffsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[3]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (com.github.clans.fab.FloatingActionButton) bindings[2];
+        this.mboundView2 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2];
         this.mboundView2.setTag(null);
         this.rcMohdrs.setTag(null);
         setRootTag(root);

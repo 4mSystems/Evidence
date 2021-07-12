@@ -71,9 +71,9 @@ public class SplashViewModel extends BaseViewModel {
 
     public void setupSlider(SliderView sliderView) {
         List<OnBoard> onBoardList = new ArrayList<>();
-        onBoardList.add(new OnBoard(ResourceManager.getDrawable(R.drawable.board1), ResourceManager.getString(R.string.slider_title1), ResourceManager.getString(R.string.slider_desc1), 1));
-        onBoardList.add(new OnBoard(ResourceManager.getDrawable(R.drawable.board2), ResourceManager.getString(R.string.slider_title2), ResourceManager.getString(R.string.slider_desc2), 1));
-        onBoardList.add(new OnBoard(ResourceManager.getDrawable(R.drawable.board3), ResourceManager.getString(R.string.slider_title3), ResourceManager.getString(R.string.slider_desc3), 1));
+        onBoardList.add(new OnBoard(R.drawable.board1, ResourceManager.getString(R.string.slider_title1), ResourceManager.getString(R.string.slider_desc1), 1));
+        onBoardList.add(new OnBoard(R.drawable.board2, ResourceManager.getString(R.string.slider_title2), ResourceManager.getString(R.string.slider_desc2), 1));
+        onBoardList.add(new OnBoard(R.drawable.board3, ResourceManager.getString(R.string.slider_title3), ResourceManager.getString(R.string.slider_desc3), 1));
         getOnBoardAdapter().updateData(onBoardList);
         sliderView.setSliderAdapter(onBoardAdapter);
     }

@@ -16,10 +16,8 @@ import java.util.List;
 
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
-import te.app.evidence.R;
 import te.app.evidence.pages.auth.models.UserMainData;
 import te.app.evidence.pages.categories.models.CategoriesData;
-import te.app.evidence.utils.images.PhotoFullPopupWindow;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.UserHelper;
 

@@ -31,7 +31,7 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding  
     }
     private FragmentAttachmentsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomEditText) bindings[2]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);

@@ -31,8 +31,12 @@ public class AddCategoriesViewModel extends BaseViewModel {
     }
 
     public void addNewCategory() {
-        if (getAddCategoryRequest().isValid())
-            compositeDisposable.add(categoriesRepository.addCategory(getAddCategoryRequest()));
+        if (getAddCategoryRequest().isValid()) {
+            if (getPassingObject().getObjectClass() == null)
+                compositeDisposable.add(categoriesRepository.addCategory(getAddCategoryRequest()));
+            else
+                compositeDisposable.add(categoriesRepository.editCategory(getAddCategoryRequest()));
+        }
     }
 
     @Bindable
@@ -42,9 +46,9 @@ public class AddCategoriesViewModel extends BaseViewModel {
 
     @Bindable
     public void setCategoriesData(CategoriesData categoriesData) {
-        if (categoriesData!=null){
+        if (categoriesData != null) {
             getAddCategoryRequest().setName(categoriesData.getName());
-
+            getAddCategoryRequest().setId(categoriesData.getId());
         }
         notifyChange(BR.categoriesData);
         this.categoriesData = categoriesData;

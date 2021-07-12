@@ -69,7 +69,7 @@ public class BailiffsAdapter extends RecyclerView.Adapter<BailiffsAdapter.ViewHo
             }
         });
         if (reportersData.getStatus().equals(ResourceManager.getString(R.string.reporter_status_done)))
-            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorPrimary));
+            holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.successColor));
         else
             holder.itemMenuBinding.statusValue.setBackgroundColor(ResourceManager.getColor(R.color.colorAccent));
         holder.setViewModel(itemMenuViewModel);

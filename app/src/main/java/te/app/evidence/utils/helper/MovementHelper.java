@@ -115,7 +115,8 @@ public class MovementHelper {
         if (shareBar != null) {
             intent.putExtra(Constants.SHARE_BAR, shareBar);
         }
-        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
+//        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
+        LauncherHelper.execute(intent, Constants.RESULT_CODE, from);
     }
 
     public static void startActivityForResultWithBundle(Context from, PassingObject passingObject, String name, String page, int request) {
@@ -126,7 +127,7 @@ public class MovementHelper {
         if (name != null) {
             intent.putExtra(Constants.NAME_BAR, name);
         }
-        ((ParentActivity) from).startActivityForResult(intent, request);
+        LauncherHelper.execute(intent, request, from);
     }
 
     public static void finishWithResult(PassingObject passingObject, Context context) {

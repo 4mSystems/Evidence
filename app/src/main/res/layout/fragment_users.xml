@@ -28,15 +28,17 @@
             app:span="@{`1`}"
             tools:listitem="@layout/item_user" />
 
-        <com.github.clans.fab.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/dp16h"
             android:onClick="@{()-> viewmodel.toNewUser()}"
-            android:src="@drawable/ic_add_user"
-            app:fab_colorNormal="@color/colorPrimary"
-            app:fab_colorPressed="@color/header_data_table"
-            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+            app:backgroundTint="@color/colorPrimary"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:rippleColor="@color/header_data_table"
+            app:srcCompat="@drawable/ic_add_user"
+            app:tint="@color/white"
+            android:contentDescription="@string/app_name" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

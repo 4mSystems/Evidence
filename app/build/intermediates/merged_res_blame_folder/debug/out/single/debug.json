@@ -208,6 +208,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_warning.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_add_client.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_add_client.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_edit_profile.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_edit_profile.png"
     },
@@ -424,6 +428,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_refresh.png"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_search.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_search.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_permission_on.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/build/generated/res/pngs/debug/drawable-hdpi/ic_permission_on.png"
     },
@@ -500,6 +508,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xhdpi/ic_edit_profile.png"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_note_add.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_note_add.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable-hdpi_logo.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/build/generated/res/pngs/debug/drawable-hdpi/logo.png"
     },
@@ -546,10 +558,6 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_attachments.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_attachments.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_mohdr.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_mohdr.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_report.png.flat",

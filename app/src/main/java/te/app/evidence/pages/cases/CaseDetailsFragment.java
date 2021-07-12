@@ -85,22 +85,22 @@ public class CaseDetailsFragment extends BaseFragment {
 
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    public void launchActivityResult(int request, int resultCode, Intent data) {
+        super.launchActivityResult(request, resultCode, data);
         if (data != null) {
             Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
             if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
                 PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
-                if (requestCode == Constants.CLIENTS_CODE) {
+                if (request == Constants.CLIENTS_CODE) {
                     viewModel.getCaseDetails().getNumbers().setClients(String.valueOf(passingObject.getId()));
                     binding.viewClients.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getClients()), true);
-                } else if (requestCode == Constants.KHESM_CODE) {
+                } else if (request == Constants.KHESM_CODE) {
                     viewModel.getCaseDetails().getNumbers().setKhesm(String.valueOf(passingObject.getId()));
                     binding.viewKhesm.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getClients()), true);
-                } else if (requestCode == Constants.SESSION_CODE) {
+                } else if (request == Constants.SESSION_CODE) {
                     viewModel.getCaseDetails().getNumbers().setSessionsNumber(String.valueOf(passingObject.getId()));
                     binding.viewId.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getSessionsNumber()), true);
-                } else if (requestCode == Constants.EDIT_CASE_REQUEST) {
+                } else if (request == Constants.EDIT_CASE_REQUEST) {
                     viewModel.getCaseDetails().setCaseData(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Cases.class));
                 }
                 viewModel.setCaseDetails(viewModel.getCaseDetails());
