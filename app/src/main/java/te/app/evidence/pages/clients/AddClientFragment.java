@@ -66,7 +66,7 @@ public class AddClientFragment extends BaseFragment {
             handleActions(mutable);
             viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
-                viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getCategoriesDataList());
+                viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getMainData().getCategoriesDataList());
             } else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
                 showCategories();
             } else if (Constants.SHOW_CLIENT_TYPE.equals(((Mutable) o).message)) {

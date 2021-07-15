@@ -6,16 +6,20 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
@@ -35,6 +39,7 @@ import te.app.evidence.databinding.FragmentUsersBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.users.models.SystemUserData;
 import te.app.evidence.pages.users.models.SystemUserResponse;
 import te.app.evidence.pages.users.viewModels.UsersViewModel;
@@ -56,7 +61,7 @@ public class UsersFragment extends BaseFragment {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_users, container, false);
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
-        viewModel.systemUsers();
+        viewModel.systemUsers(1, true);
         binding.setViewmodel(viewModel);
         setEvent();
         return binding.getRoot();
@@ -67,8 +72,7 @@ public class UsersFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.USERS.equals(((Mutable) o).message)) {
-                viewModel.getUsersAdapter().update(((SystemUserResponse) mutable.object).getSystemUserDataList());
-                viewModel.notifyChange(BR.usersAdapter);
+                viewModel.setUsersMainData(((SystemUserResponse) mutable.object).getUsersMainData());
             } else if (Constants.ADD_USER.equals(((Mutable) o).message)) {
                 viewModel.getUsersAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_user), AddUserFragment.class.getName(), null);
@@ -80,6 +84,24 @@ public class UsersFragment extends BaseFragment {
             }
         });
         viewModel.getUsersAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
+        binding.rcUsers.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getUsersMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getUsersAdapter().getSystemUserDataList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.systemUsers((viewModel.getUsersMainData().getCurrentPage() + 1), false);
+                    }
+                }
+            }
+        });
     }
 
     private void showDeleteDialog() {

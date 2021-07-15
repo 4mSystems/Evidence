@@ -59,7 +59,7 @@ public class ProfileFragment extends BaseFragment {
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
                     break;
                 case Constants.UPDATE_PROFILE:
-                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+//                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
                     toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
                     viewModel.goBack(context);
                     break;

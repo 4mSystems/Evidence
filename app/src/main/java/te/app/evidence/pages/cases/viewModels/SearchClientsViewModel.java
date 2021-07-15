@@ -10,6 +10,7 @@ import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.SearchClientsAdapter;
+import te.app.evidence.pages.clients.models.ClientsMainData;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
@@ -21,11 +22,11 @@ public class SearchClientsViewModel extends BaseViewModel {
     @Inject
     CasesRepository casesRepository;
     SearchClientsAdapter clientsAdapter;
-    ClientsResponse clientsResponse;
+    ClientsMainData clientsResponse;
 
     @Inject
     public SearchClientsViewModel(CasesRepository casesRepository) {
-        clientsResponse = new ClientsResponse();
+        clientsResponse = new ClientsMainData();
         this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
         casesRepository.setLiveData(liveData);
@@ -35,7 +36,7 @@ public class SearchClientsViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.CONFIRM_CODE));
     }
 
-    public void setClientsResponse(ClientsResponse clientsResponse) {
+    public void setClientsResponse(ClientsMainData clientsResponse) {
         getClientsAdapter().update(clientsResponse.getClientsList());
         notifyChange(BR.clientsAdapter);
         this.clientsResponse = clientsResponse;

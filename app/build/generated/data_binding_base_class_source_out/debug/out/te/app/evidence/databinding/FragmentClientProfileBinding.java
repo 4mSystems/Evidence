@@ -14,6 +14,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -66,6 +67,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
   public final TextInputEditText inputSearch;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final ProgressBar progressBarHome;
 
   @NonNull
@@ -103,8 +107,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
       AppCompatButton clientNotes, CustomTextViewRegular clientTypeText,
       CustomTextViewRegular clientTypeValue, TextInputEditText inputSearch,
-      ProgressBar progressBarHome, RecyclerView rcNotes, CustomTextViewRegular unitText,
-      CustomTextViewRegular unitValue, View v2, View v3, View v4, View v5, View v6) {
+      CircularProgressIndicator progress, ProgressBar progressBarHome, RecyclerView rcNotes,
+      CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v2, View v3, View v4,
+      View v5, View v6) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br4 = br4;
     this.clientAddressText = clientAddressText;
@@ -120,6 +125,7 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
     this.clientTypeText = clientTypeText;
     this.clientTypeValue = clientTypeValue;
     this.inputSearch = inputSearch;
+    this.progress = progress;
     this.progressBarHome = progressBarHome;
     this.rcNotes = rcNotes;
     this.unitText = unitText;

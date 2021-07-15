@@ -2,11 +2,11 @@ package te.app.evidence.utils;
 
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
-    public final static String CLIENTS = "clients";
+    public final static String CLIENTS = "clients?page=";
     public final static String HOME = "home_data";
     public final static String ADD_CLIENTS = "add_client";
 
-    public final static String CATEGORIES = "categories";
+    public final static String CATEGORIES = "categories?page=";
     public final static String LOGIN = "login";
     public final static String SETTINGS = "settings/settings";
     public final static String REGISTER = "user/register";
@@ -20,12 +20,13 @@ public class URLS {
     public final static String DELETE_CLIENT = "delete_client/";
     public final static String UPDATE_PAYMENT = "user/update-payment";
     public final static String CLIENT_PROFILE = "client_Profile/";
+    public final static String CLIENT_NOTES = "client_Profile/notes/pagination/";
     public final static String ADD_NOTE = "add_clientNote";
     public final static String ADD_SESSION_NOTE = "addSessionNote";
     public final static String EDIT_NOTE = "edit_clientNote";
 
     public final static String DELETE_NOTE = "delete_clientNote/";
-    public final static String USERS = "users/";
+    public final static String USERS = "users?page=";
     public final static String ADD_USER = "add_users";
     public final static String EDIT_USER = "edit_user";
     public final static String ABOUT = "settings/about-us";

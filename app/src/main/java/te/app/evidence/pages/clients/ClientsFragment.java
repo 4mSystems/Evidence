@@ -6,15 +6,19 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
@@ -27,7 +31,6 @@ import javax.inject.Inject;
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
-import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -57,7 +60,7 @@ public class ClientsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.clients();
+        viewModel.clients(1, true);
         setEvent();
         return binding.getRoot();
     }
@@ -67,8 +70,7 @@ public class ClientsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getClientsList());
-                viewModel.notifyChange(BR.clientsAdapter);
+                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.getClientsAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
@@ -79,12 +81,26 @@ public class ClientsFragment extends BaseFragment {
                 deleteDialog.dismiss();
             }
         });
-        baseActivity().getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
-            viewModel.clients();
-            ((BaseActivity) context).stopRefresh(false);
-        });
-        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
 
+        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
+        binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getClientsMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getClientsAdapter().getClientsList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
+                    }
+                }
+            }
+        });
     }
 
     private void showDeleteDialog() {
@@ -98,7 +114,6 @@ public class ClientsFragment extends BaseFragment {
         binding.optionDone.setOnClickListener(v -> viewModel.deleteClient());
         deleteDialog.show();
     }
-
 
 
     @Override

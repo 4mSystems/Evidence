@@ -1,5 +1,6 @@
 package te.app.evidence.pages.categories.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ import te.app.evidence.databinding.ItemCategoryBinding;
 import te.app.evidence.pages.categories.AddCategoryFragment;
 import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel;
+import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.users.AddUserFragment;
 import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.utils.Constants;
@@ -53,7 +55,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         CategoriesData categoriesData = categoriesDataList.get(position);
         CategoriesItemViewModel itemMenuViewModel = new CategoriesItemViewModel(categoriesData);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -72,6 +74,12 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
         this.categoriesDataList.clear();
         categoriesDataList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<CategoriesData> dataList) {
+        int start = categoriesDataList.size();
+        categoriesDataList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

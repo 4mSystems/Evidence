@@ -14,6 +14,7 @@ import te.app.evidence.pages.clients.adapters.ClientCasesAdapter;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileData;
 import te.app.evidence.pages.clients.notes.NotesAdapter;
+import te.app.evidence.pages.clients.notes.models.NotesMainData;
 import te.app.evidence.repository.ClientsRepository;
 import te.app.evidence.utils.Constants;
 
@@ -28,6 +29,7 @@ public class ClientProfileViewModel extends BaseViewModel {
     NotesAdapter notesAdapter;
     ClientCasesAdapter clientCasesAdapter;
     ClientProfileData clientProfileData;
+    NotesMainData notesMainData;
 
     @Inject
     public ClientProfileViewModel(ClientsRepository clientsRepository) {
@@ -36,10 +38,15 @@ public class ClientProfileViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         clientsRepository.setLiveData(liveData);
         clients = new Clients();
+        notesMainData = new NotesMainData();
     }
 
     public void clientProfile() {
         compositeDisposable.add(clientsRepository.getClientProfile(getClients().getClientId()));
+    }
+
+    public void getClientNotes(int page) {
+        compositeDisposable.add(clientsRepository.getClientNotes(getClients().getClientId(), page));
     }
 
     public void deleteNote() {
@@ -58,6 +65,7 @@ public class ClientProfileViewModel extends BaseViewModel {
     public void toNewNote() {
         liveData.setValue(new Mutable(Constants.ADD_NOTE));
     }
+
 
     @Bindable
     public NotesAdapter getNotesAdapter() {
@@ -92,6 +100,18 @@ public class ClientProfileViewModel extends BaseViewModel {
         notifyChange(BR.notesAdapter);
         notifyChange(BR.clientProfileData);
         this.clientProfileData = clientProfileData;
+    }
+
+    @Bindable
+    public NotesMainData getNotesMainData() {
+        return notesMainData;
+    }
+
+    public void setNotesMainData(NotesMainData notesMainData) {
+        getNotesAdapter().loadMore(notesMainData.getClientNotes());
+        notifyChange(BR.mainData);
+        searchProgressVisible.set(false);
+        this.notesMainData = notesMainData;
     }
 
     @Bindable

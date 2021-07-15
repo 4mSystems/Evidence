@@ -30,6 +30,18 @@
             app:span="@{`1`}"
             tools:listitem="@layout/item_category" />
 
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

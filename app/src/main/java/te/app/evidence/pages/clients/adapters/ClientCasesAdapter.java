@@ -1,5 +1,6 @@
 package te.app.evidence.pages.clients.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel;
+import te.app.evidence.pages.users.models.SystemUserData;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -52,8 +54,9 @@ public class ClientCasesAdapter extends RecyclerView.Adapter<ClientCasesAdapter.
     }
 
 
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
         Cases client = casesList.get(position);
         ClientCasesItemViewModel itemMenuViewModel = new ClientCasesItemViewModel(client);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -76,6 +79,12 @@ public class ClientCasesAdapter extends RecyclerView.Adapter<ClientCasesAdapter.
         this.casesList.clear();
         casesList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<Cases> dataList) {
+        int start = casesList.size();
+        casesList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

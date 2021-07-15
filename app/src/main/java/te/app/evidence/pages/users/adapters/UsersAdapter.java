@@ -1,5 +1,6 @@
 package te.app.evidence.pages.users.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,8 +20,6 @@ import java.util.List;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemUserBinding;
-import te.app.evidence.pages.clients.AddClientFragment;
-import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.users.AddUserFragment;
 import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.pages.users.models.SystemUserData;
@@ -54,7 +53,7 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         SystemUserData user = systemUserDataList.get(position);
         UserItemViewModel itemMenuViewModel = new UserItemViewModel(user);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -75,6 +74,12 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         this.systemUserDataList.clear();
         systemUserDataList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<SystemUserData> dataList) {
+        int start = systemUserDataList.size();
+        systemUserDataList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

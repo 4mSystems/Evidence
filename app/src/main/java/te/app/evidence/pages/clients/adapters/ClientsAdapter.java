@@ -2,6 +2,7 @@ package te.app.evidence.pages.clients.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
+import te.app.evidence.pages.users.models.SystemUserData;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -74,6 +76,12 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
         this.clientsList.clear();
         clientsList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<Clients> dataList) {
+        int start = clientsList.size();
+        clientsList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

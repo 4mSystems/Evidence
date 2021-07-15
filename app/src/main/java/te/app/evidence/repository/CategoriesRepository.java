@@ -40,6 +40,11 @@ public class CategoriesRepository extends BaseRepository {
                 Constants.CATEGORIES, true);
     }
 
+    public Disposable getCategoriesPage(int page,boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CATEGORIES+page, new Object(), CategoriesResponse.class,
+                Constants.CATEGORIES, showProgress);
+    }
+
     public Disposable addCategory(AddCategoryRequest addCategoryRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_CATEGORY, addCategoryRequest, AddCategoryResponse.class,
                 Constants.ADD_CATEGORY, true);

@@ -26,6 +26,7 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentSearchClientsBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.viewModels.SearchClientsViewModel;
+import te.app.evidence.pages.clients.models.ClientsMainData;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -49,7 +50,7 @@ public class SearchClientsFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.setClientsResponse(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), ClientsResponse.class));
+            viewModel.setClientsResponse(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), ClientsMainData.class));
         }
         setEvent();
         return binding.getRoot();
@@ -64,7 +65,7 @@ public class SearchClientsFragment extends BaseFragment {
                     if (viewModel.getClientsAdapter().getClientsList().get(i).isChecked())
                         clientCounter++;
                 }
-                ClientsResponse clientsResponse = new ClientsResponse();
+                ClientsMainData clientsResponse = new ClientsMainData();
                 clientsResponse.setClientsList(viewModel.getClientsAdapter().getClientsList());
                 clientsResponse.setCounter(clientCounter);
                 MovementHelper.finishWithResultWithRequestCode(new PassingObject(clientsResponse), context, baseActivity().getIntent().getExtras().getInt(Constants.REQUEST_RESULT) == Constants.KHESM_CODE ? Constants.KHESM_CODE : Constants.CLIENTS_CODE);

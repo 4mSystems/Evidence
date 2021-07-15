@@ -7,6 +7,7 @@ import android.view.View;
 
 import androidx.databinding.Bindable;
 import androidx.databinding.Observable;
+import androidx.databinding.ObservableBoolean;
 import androidx.databinding.PropertyChangeRegistry;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -29,6 +30,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     private PassingObject passingObject = new PassingObject();
     public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
     List<CategoriesData> categoriesDataList = new ArrayList<>();
+    public ObservableBoolean searchProgressVisible = new ObservableBoolean();
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();

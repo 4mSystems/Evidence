@@ -33,47 +33,55 @@ public class BR {
 
   public static final int clientsAdapter = 15;
 
-  public static final int homeData = 16;
+  public static final int clientsMainData = 16;
 
-  public static final int homeReportersAdapter = 17;
+  public static final int homeData = 17;
 
-  public static final int itemViewModel = 18;
+  public static final int homeReportersAdapter = 18;
 
-  public static final int menuModel = 19;
+  public static final int itemViewModel = 19;
 
-  public static final int menuViewModel = 20;
+  public static final int mainData = 20;
 
-  public static final int message = 21;
+  public static final int menuModel = 21;
 
-  public static final int notes = 22;
+  public static final int menuViewModel = 22;
 
-  public static final int notesAdapter = 23;
+  public static final int message = 23;
 
-  public static final int onBoardAdapter = 24;
+  public static final int notes = 24;
 
-  public static final int onBoardViewModels = 25;
+  public static final int notesAdapter = 25;
 
-  public static final int passingObject = 26;
+  public static final int notesMainData = 26;
 
-  public static final int reportersData = 27;
+  public static final int onBoardAdapter = 27;
 
-  public static final int selectedBtn = 28;
+  public static final int onBoardViewModels = 28;
 
-  public static final int sessionItem = 29;
+  public static final int passingObject = 29;
 
-  public static final int sessionsAdapter = 30;
+  public static final int reportersData = 30;
 
-  public static final int settingsData = 31;
+  public static final int selectedBtn = 31;
 
-  public static final int systemUserData = 32;
+  public static final int sessionItem = 32;
 
-  public static final int type = 33;
+  public static final int sessionsAdapter = 33;
 
-  public static final int userDocuments = 34;
+  public static final int settingsData = 34;
 
-  public static final int userPermissionsData = 35;
+  public static final int systemUserData = 35;
 
-  public static final int usersAdapter = 36;
+  public static final int type = 36;
 
-  public static final int viewmodel = 37;
+  public static final int userDocuments = 37;
+
+  public static final int userPermissionsData = 38;
+
+  public static final int usersAdapter = 39;
+
+  public static final int usersMainData = 40;
+
+  public static final int viewmodel = 41;
 }

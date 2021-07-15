@@ -38,9 +38,9 @@ public class SystemUsersRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getUsers() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.USERS, new Object(), SystemUserResponse.class,
-                Constants.USERS, true);
+    public Disposable getUsers(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.USERS + page, new Object(), SystemUserResponse.class,
+                Constants.USERS, showProgress);
     }
 
     public Disposable addNewUser(AddUserRequest addUserRequest) {

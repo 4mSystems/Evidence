@@ -17,28 +17,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rcUsers"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dp6h"
-            app:adapter="@{viewmodel.usersAdapter}"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:orientation="@{`1`}"
-            app:span="@{`1`}"
-            tools:listitem="@layout/item_user" />
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcUsers"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dp6h"
+                app:adapter="@{viewmodel.usersAdapter}"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/progress"
+                app:layout_constraintTop_toTopOf="parent"
+                app:orientation="@{`1`}"
+                app:span="@{`1`}"
+                tools:listitem="@layout/item_user" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4h"
+                android:indeterminate="true"
+                android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/dp16h"
+            android:contentDescription="@string/app_name"
             android:onClick="@{()-> viewmodel.toNewUser()}"
             app:backgroundTint="@color/colorPrimary"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:rippleColor="@color/header_data_table"
             app:srcCompat="@drawable/ic_add_user"
-            app:tint="@color/white"
-            android:contentDescription="@string/app_name" />
+            app:tint="@color/white" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

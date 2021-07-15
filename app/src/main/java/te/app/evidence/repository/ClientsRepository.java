@@ -12,6 +12,7 @@ import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
+import te.app.evidence.pages.clients.notes.models.NotesResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -34,9 +35,9 @@ public class ClientsRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getClients() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS, new Object(), ClientsResponse.class,
-                Constants.CLIENTS, true);
+    public Disposable getClients(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS + page, new Object(), ClientsResponse.class,
+                Constants.CLIENTS, showProgress);
     }
 
     public Disposable addNewClient(AddClientRequest addClientRequest) {
@@ -57,6 +58,11 @@ public class ClientsRepository extends BaseRepository {
     public Disposable getClientProfile(int clientId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_PROFILE + clientId, new Object(), ClientProfileResponse.class,
                 Constants.CLIENT_PROFILE, true);
+    }
+
+    public Disposable getClientNotes(int clientId, int page) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_NOTES + clientId + "&page=" + page, new Object(), NotesResponse.class,
+                Constants.NOTES, false);
     }
 
     public Disposable deleteNote(int noteId) {

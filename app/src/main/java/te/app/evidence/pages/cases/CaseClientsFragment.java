@@ -74,7 +74,8 @@ public class CaseClientsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getClientsList());
+                //TODO
+//                viewModel.getClientsAdapter().update(((ClientsResponse) mutable.object).getClientsList());
                 viewModel.notifyChange(BR.clientsAdapter);
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);

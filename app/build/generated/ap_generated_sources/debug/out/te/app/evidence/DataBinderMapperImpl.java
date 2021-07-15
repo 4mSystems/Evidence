@@ -608,7 +608,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(38);
+    static final SparseArray<String> sKeys = new SparseArray<String>(42);
 
     static {
       sKeys.put(0, "_all");
@@ -627,28 +627,32 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(13, "clientProfileData");
       sKeys.put(14, "clients");
       sKeys.put(15, "clientsAdapter");
-      sKeys.put(16, "homeData");
-      sKeys.put(17, "homeReportersAdapter");
-      sKeys.put(18, "itemViewModel");
-      sKeys.put(19, "menuModel");
-      sKeys.put(20, "menuViewModel");
-      sKeys.put(21, "message");
-      sKeys.put(22, "notes");
-      sKeys.put(23, "notesAdapter");
-      sKeys.put(24, "onBoardAdapter");
-      sKeys.put(25, "onBoardViewModels");
-      sKeys.put(26, "passingObject");
-      sKeys.put(27, "reportersData");
-      sKeys.put(28, "selectedBtn");
-      sKeys.put(29, "sessionItem");
-      sKeys.put(30, "sessionsAdapter");
-      sKeys.put(31, "settingsData");
-      sKeys.put(32, "systemUserData");
-      sKeys.put(33, "type");
-      sKeys.put(34, "userDocuments");
-      sKeys.put(35, "userPermissionsData");
-      sKeys.put(36, "usersAdapter");
-      sKeys.put(37, "viewmodel");
+      sKeys.put(16, "clientsMainData");
+      sKeys.put(17, "homeData");
+      sKeys.put(18, "homeReportersAdapter");
+      sKeys.put(19, "itemViewModel");
+      sKeys.put(20, "mainData");
+      sKeys.put(21, "menuModel");
+      sKeys.put(22, "menuViewModel");
+      sKeys.put(23, "message");
+      sKeys.put(24, "notes");
+      sKeys.put(25, "notesAdapter");
+      sKeys.put(26, "notesMainData");
+      sKeys.put(27, "onBoardAdapter");
+      sKeys.put(28, "onBoardViewModels");
+      sKeys.put(29, "passingObject");
+      sKeys.put(30, "reportersData");
+      sKeys.put(31, "selectedBtn");
+      sKeys.put(32, "sessionItem");
+      sKeys.put(33, "sessionsAdapter");
+      sKeys.put(34, "settingsData");
+      sKeys.put(35, "systemUserData");
+      sKeys.put(36, "type");
+      sKeys.put(37, "userDocuments");
+      sKeys.put(38, "userPermissionsData");
+      sKeys.put(39, "usersAdapter");
+      sKeys.put(40, "usersMainData");
+      sKeys.put(41, "viewmodel");
     }
   }
 

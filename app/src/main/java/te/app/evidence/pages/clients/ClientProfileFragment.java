@@ -8,15 +8,20 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
@@ -38,6 +43,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
+import te.app.evidence.pages.clients.notes.models.NotesResponse;
 import te.app.evidence.pages.clients.viewModels.ClientProfileViewModel;
 import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.clients.notes.models.Notes;
@@ -81,6 +87,8 @@ public class ClientProfileFragment extends BaseFragment {
             } else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
                 viewModel.getNotesAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getClients().getClientId()), getString(R.string.add_new_note), AddNoteFragment.class.getName(), null);
+            } else if (Constants.NOTES.equals(((Mutable) o).message)) {
+                viewModel.setNotesMainData(((NotesResponse) mutable.object).getMainData());
             } else if (Constants.DELETE_NOTE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);
@@ -101,6 +109,43 @@ public class ClientProfileFragment extends BaseFragment {
 
         });
         viewModel.getNotesAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
+        binding.rcNotes.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (!recyclerView.canScrollVertically(1) && newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    Log.e("onScrolled", "onScrolled: ");
+                    if (!viewModel.searchProgressVisible.get()) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.getClientNotes(viewModel.getNotesMainData().getCurrentPage() != 0 ? (viewModel.getNotesMainData().getCurrentPage() + 1) : 2);
+                    }
+                }
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+//                int visibleItemCount = linearLayoutManager.getChildCount();
+//                int totalItemCount = linearLayoutManager.getItemCount();
+//                int pastVisibleItems = linearLayoutManager.findFirstVisibleItemPosition();
+//                if (pastVisibleItems + visibleItemCount >= totalItemCount) {
+//                    //End of list
+//                    Log.e("onScrolled", "onScrolled: ");
+//                    viewModel.searchProgressVisible.set(true);
+//                    viewModel.getClientNotes(viewModel.getNotesMainData().getCurrentPage() != 0 ? (viewModel.getNotesMainData().getCurrentPage() + 1) : 2);
+//
+//                }
+//                if (!viewModel.searchProgressVisible.get() && !recyclerView.canScrollVertically(1)) {
+//                    Log.e("onScrolled", "onScrolled: ");
+//                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getNotesAdapter().getNotesList().size() - 1) {
+//                        Log.e("onScrolled", "onScrolled: " + linearLayoutManager.findLastCompletelyVisibleItemPosition());
+//                        viewModel.searchProgressVisible.set(true);
+//                        viewModel.getClientNotes(viewModel.getNotesMainData().getCurrentPage() != 0 ? (viewModel.getNotesMainData().getCurrentPage() + 1) : 2);
+//                    }
+//                }
+            }
+        });
     }
 
     private void showDeleteDialog() {

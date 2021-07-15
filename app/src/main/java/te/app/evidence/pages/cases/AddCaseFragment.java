@@ -28,7 +28,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
-import te.app.evidence.pages.clients.models.ClientsResponse;
+import te.app.evidence.pages.clients.models.ClientsMainData;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -60,10 +60,10 @@ public class AddCaseFragment extends BaseFragment {
                 viewModel.setCaseClientsCategoriesData(((CaseClientsCategoriesResponse) mutable.object).getData());
             } else if (Constants.CLIENTS.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getClients().size() > 0)
-                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsResponse(viewModel.getCaseClientsCategoriesData().getClients())), getResources().getString(R.string.clients), SearchClientsFragment.class.getName(), Constants.CLIENTS_CODE);
+                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsMainData(viewModel.getCaseClientsCategoriesData().getClients())), getResources().getString(R.string.clients), SearchClientsFragment.class.getName(), Constants.CLIENTS_CODE);
             } else if (Constants.KHESM.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getKhesm().size() > 0)
-                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsResponse(viewModel.getCaseClientsCategoriesData().getKhesm())), getResources().getString(R.string.opponents), SearchClientsFragment.class.getName(), Constants.KHESM_CODE);
+                    MovementHelper.startActivityForResultWithBundle(context, new PassingObject(new ClientsMainData(viewModel.getCaseClientsCategoriesData().getKhesm())), getResources().getString(R.string.opponents), SearchClientsFragment.class.getName(), Constants.KHESM_CODE);
             } else if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
                 if (viewModel.getCaseClientsCategoriesData().getCategories().size() > 0)
                     showCategories();
@@ -89,10 +89,10 @@ public class AddCaseFragment extends BaseFragment {
         super.launchActivityResult(request, resultCode, data);
         if (data != null) {
             Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
-            ClientsResponse clientsResponse;
+            ClientsMainData clientsResponse;
             if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
                 PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
-                clientsResponse = new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ClientsResponse.class);
+                clientsResponse = new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ClientsMainData.class);
                 if (resultCode == Constants.CLIENTS_CODE) {
                     viewModel.getCaseClientsCategoriesData().getClients().clear();
                     viewModel.getCaseClientsCategoriesData().setClients(clientsResponse.getClientsList());

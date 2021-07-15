@@ -19,7 +19,7 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView2;
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback5;
@@ -28,16 +28,18 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     // Inverse Binding Event Handlers
 
     public FragmentUsersBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentUsersBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView2 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[2];
-        this.mboundView2.setTag(null);
+        this.mboundView3 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3];
+        this.mboundView3.setTag(null);
+        this.progress.setTag(null);
         this.rcUsers.setTag(null);
         setRootTag(root);
         // listeners
@@ -48,7 +50,7 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -76,10 +78,10 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.users.viewModels.UsersViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
+        updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -89,20 +91,31 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewmodelSearchProgressVisible((androidx.databinding.ObservableBoolean) object, fieldId);
+            case 1 :
                 return onChangeViewmodel((te.app.evidence.pages.users.viewModels.UsersViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.evidence.pages.users.viewModels.UsersViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelSearchProgressVisible(androidx.databinding.ObservableBoolean ViewmodelSearchProgressVisible, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.usersAdapter) {
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.evidence.pages.users.viewModels.UsersViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.usersAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -116,25 +129,61 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean viewmodelSearchProgressVisibleGet = false;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.users.adapters.UsersAdapter viewmodelUsersAdapter = null;
         te.app.evidence.pages.users.viewModels.UsersViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xbL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.usersAdapter
-                    viewmodelUsersAdapter = viewmodel.getUsersAdapter();
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.searchProgressVisible;
+                    }
+                    updateRegistration(0, viewmodelSearchProgressVisible);
+
+
+                    if (viewmodelSearchProgressVisible != null) {
+                        // read viewmodel.searchProgressVisible.get()
+                        viewmodelSearchProgressVisibleGet = viewmodelSearchProgressVisible.get();
+                    }
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelSearchProgressVisibleGet) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
+
+
+                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.usersAdapter
+                        viewmodelUsersAdapter = viewmodel.getUsersAdapter();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback5);
+            this.mboundView3.setOnClickListener(mCallback5);
         }
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcUsers, viewmodelUsersAdapter, "1", "1");
@@ -161,9 +210,12 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.usersAdapter
-        flag 2 (0x3L): null
+        flag 0 (0x1L): viewmodel.searchProgressVisible
+        flag 1 (0x2L): viewmodel
+        flag 2 (0x3L): viewmodel.usersAdapter
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

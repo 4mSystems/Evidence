@@ -10,6 +10,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -17,14 +18,18 @@ import te.app.evidence.pages.users.viewModels.UsersViewModel;
 
 public abstract class FragmentUsersBinding extends ViewDataBinding {
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final RecyclerView rcUsers;
 
   @Bindable
   protected UsersViewModel mViewmodel;
 
   protected FragmentUsersBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView rcUsers) {
+      CircularProgressIndicator progress, RecyclerView rcUsers) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.progress = progress;
     this.rcUsers = rcUsers;
   }
 

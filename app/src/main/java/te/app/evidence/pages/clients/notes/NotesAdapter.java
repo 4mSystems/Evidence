@@ -1,5 +1,6 @@
 package te.app.evidence.pages.clients.notes;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,7 +52,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Notes notes = notesList.get(position);
         NotesItemViewModel itemMenuViewModel = new NotesItemViewModel(notes);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -72,6 +73,11 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         this.notesList.clear();
         notesList.addAll(dataList);
         notifyDataSetChanged();
+    }
+    public void loadMore(@NotNull List<Notes> dataList) {
+        int start = notesList.size();
+        notesList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override
