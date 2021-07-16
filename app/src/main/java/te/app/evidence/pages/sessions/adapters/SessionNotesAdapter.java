@@ -23,6 +23,7 @@ import te.app.evidence.databinding.ItemSessionNoteBinding;
 import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.clients.notes.models.Notes;
 import te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel;
+import te.app.evidence.pages.sessions.models.SessionItem;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -78,6 +79,12 @@ public class SessionNotesAdapter extends RecyclerView.Adapter<SessionNotesAdapte
         this.notesList.clear();
         notesList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<Notes> dataList) {
+        int start = notesList.size();
+        notesList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

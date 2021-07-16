@@ -74,6 +74,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.ViewHolder> 
         notesList.addAll(dataList);
         notifyDataSetChanged();
     }
+
     public void loadMore(@NotNull List<Notes> dataList) {
         int start = notesList.size();
         notesList.addAll(dataList);

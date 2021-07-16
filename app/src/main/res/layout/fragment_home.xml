@@ -17,293 +17,318 @@
             type="te.app.evidence.pages.home.viewModels.HomeViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:toolbarId="@+id/toolbar">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/home_item1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/corner_view_gradient_statistics">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp18h"
+                            android:layout_marginEnd="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginBottom="@dimen/dp18h"
+                            android:src="@drawable/ic_more"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/home_session"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/sessions.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.sessions)?viewmodel.homeData.countData.sessions:``)}"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.ramijemli.percentagechartview.PercentageChartView
+                            android:id="@+id/view_id"
+                            android:layout_width="@dimen/dp120w"
+                            android:layout_height="@dimen/dp120h"
+                            android:layout_margin="@dimen/dp8h"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:pcv_animDuration="800"
+                            app:pcv_animInterpolator="accelerate"
+                            app:pcv_backgroundBarColor="@color/white"
+                            app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                            app:pcv_gradientType="linear"
+                            app:pcv_mode="ring"
+                            app:pcv_orientation="clockwise"
+                            app:pcv_startAngle="270"
+                            app:pcv_textColor="@color/colorPrimary"
+                            app:pcv_textSize="@dimen/sp1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/home_item2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/corner_view_gradient_statistics"
+                        android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.mohdreen.equals(`yes`)?Constants.GET_MOHDAREEN:Constants.ERROR_TOAST)}">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp18h"
+                            android:layout_marginEnd="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/home_mohdrs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/menuMohdar.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen)?viewmodel.homeData.countData.mohdreen:``)}"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginBottom="@dimen/dp18h"
+                            android:src="@drawable/ic_more"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.ramijemli.percentagechartview.PercentageChartView
+                            android:id="@+id/view_mohdr"
+                            android:layout_width="@dimen/dp120w"
+                            android:layout_height="@dimen/dp120h"
+                            android:layout_margin="@dimen/dp8h"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:pcv_animDuration="800"
+                            app:pcv_animInterpolator="accelerate"
+                            app:pcv_backgroundBarColor="@color/white"
+                            app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                            app:pcv_gradientType="linear"
+                            app:pcv_mode="ring"
+                            app:pcv_orientation="clockwise"
+                            app:pcv_startAngle="270"
+                            app:pcv_textColor="@color/colorPrimary"
+                            app:pcv_textSize="@dimen/sp1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/home_item3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/corner_view_gradient_statistics"
+                        android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.users.equals(`yes`)?Constants.USERS:Constants.ERROR_TOAST)}">
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/home_users"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/menuUsers.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.users)?viewmodel.homeData.countData.users:``)}"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp18h"
+                            android:layout_marginEnd="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginBottom="@dimen/dp18h"
+                            android:src="@drawable/ic_more"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.ramijemli.percentagechartview.PercentageChartView
+                            android:id="@+id/view_users"
+                            android:layout_width="@dimen/dp120w"
+                            android:layout_height="@dimen/dp120h"
+                            android:layout_margin="@dimen/dp8h"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:pcv_animDuration="800"
+                            app:pcv_animInterpolator="accelerate"
+                            app:pcv_backgroundBarColor="@color/white"
+                            app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                            app:pcv_gradientType="linear"
+                            app:pcv_mode="ring"
+                            app:pcv_orientation="clockwise"
+                            app:pcv_startAngle="270"
+                            app:pcv_textColor="@color/colorPrimary"
+                            app:pcv_textSize="@dimen/sp1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/home_item4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/corner_view_gradient_statistics"
+                        android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.searchCase.equals(`yes`)?Constants.ALL_CASES:Constants.ERROR_TOAST)}">
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/home_cases"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{@string/menuCases.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.cases)?viewmodel.homeData.countData.cases:``)}"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp18h"
+                            android:layout_marginEnd="@dimen/dp8w"
+                            android:src="@drawable/ic_move"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp8w"
+                            android:layout_marginBottom="@dimen/dp18h"
+                            android:src="@drawable/ic_more"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                        <com.ramijemli.percentagechartview.PercentageChartView
+                            android:id="@+id/view_casee"
+                            android:layout_width="@dimen/dp120w"
+                            android:layout_height="@dimen/dp120h"
+                            android:layout_margin="@dimen/dp8h"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:pcv_animDuration="800"
+                            app:pcv_animInterpolator="accelerate"
+                            app:pcv_backgroundBarColor="@color/white"
+                            app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
+                            app:pcv_gradientType="linear"
+                            app:pcv_mode="ring"
+                            app:pcv_orientation="clockwise"
+                            app:pcv_startAngle="270"
+                            app:pcv_textColor="@color/colorPrimary"
+                            app:pcv_textSize="@dimen/sp1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.helper.widget.Flow
+                        android:id="@+id/flow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp6h"
+                        app:constraint_referenced_ids="home_item1,home_item2,home_item3,home_item4"
+                        app:flow_horizontalGap="@dimen/dp4h"
+                        app:flow_horizontalStyle="spread"
+                        app:flow_maxElementsWrap="2"
+                        app:flow_verticalGap="@dimen/dp4h"
+                        app:flow_wrapMode="chain"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_item1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginBottom="@dimen/dp18h"
-                    android:src="@drawable/ic_more"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/home_session"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{@string/sessions.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.sessions)?viewmodel.homeData.countData.sessions:``)}"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_id"
-                    android:layout_width="@dimen/dp120w"
-                    android:layout_height="@dimen/dp120h"
-                    android:layout_margin="@dimen/dp8h"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:pcv_animDuration="800"
-                    app:pcv_animInterpolator="accelerate"
-                    app:pcv_backgroundBarColor="@color/white"
-                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
-                    app:pcv_gradientType="linear"
-                    app:pcv_mode="ring"
-                    app:pcv_orientation="clockwise"
-                    app:pcv_startAngle="270"
-                    app:pcv_textColor="@color/colorPrimary"
-                    app:pcv_textSize="@dimen/sp1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_item2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics"
-                android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.mohdreen.equals(`yes`)?Constants.GET_MOHDAREEN:Constants.ERROR_TOAST)}">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/home_mohdrs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{@string/menuMohdar.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen)?viewmodel.homeData.countData.mohdreen:``)}"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginBottom="@dimen/dp18h"
-                    android:src="@drawable/ic_more"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_mohdr"
-                    android:layout_width="@dimen/dp120w"
-                    android:layout_height="@dimen/dp120h"
-                    android:layout_margin="@dimen/dp8h"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:pcv_animDuration="800"
-                    app:pcv_animInterpolator="accelerate"
-                    app:pcv_backgroundBarColor="@color/white"
-                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
-                    app:pcv_gradientType="linear"
-                    app:pcv_mode="ring"
-                    app:pcv_orientation="clockwise"
-                    app:pcv_startAngle="270"
-                    app:pcv_textColor="@color/colorPrimary"
-                    app:pcv_textSize="@dimen/sp1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_item3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics"
-                android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.users.equals(`yes`)?Constants.USERS:Constants.ERROR_TOAST)}">
-
-                <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/home_users"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{@string/menuUsers.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.users)?viewmodel.homeData.countData.users:``)}"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginBottom="@dimen/dp18h"
-                    android:src="@drawable/ic_more"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_users"
-                    android:layout_width="@dimen/dp120w"
-                    android:layout_height="@dimen/dp120h"
-                    android:layout_margin="@dimen/dp8h"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:pcv_animDuration="800"
-                    app:pcv_animInterpolator="accelerate"
-                    app:pcv_backgroundBarColor="@color/white"
-                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
-                    app:pcv_gradientType="linear"
-                    app:pcv_mode="ring"
-                    app:pcv_orientation="clockwise"
-                    app:pcv_startAngle="270"
-                    app:pcv_textColor="@color/colorPrimary"
-                    app:pcv_textSize="@dimen/sp1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/home_item4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/corner_view_gradient_statistics"
-                android:onClick="@{()-> viewmodel.buttonAction(viewmodel.userData.permission.searchCase.equals(`yes`)?Constants.ALL_CASES:Constants.ERROR_TOAST)}">
-
-                <te.app.evidence.customViews.views.CustomTextViewMedium
-                    android:id="@+id/home_cases"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@{@string/menuCases.concat(`\n`).concat(`#`).concat(!TextUtils.isEmpty(viewmodel.homeData.countData.cases)?viewmodel.homeData.countData.cases:``)}"
-                    android:textAlignment="center"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp18h"
-                    android:layout_marginEnd="@dimen/dp8w"
-                    android:src="@drawable/ic_move"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp8w"
-                    android:layout_marginBottom="@dimen/dp18h"
-                    android:src="@drawable/ic_more"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <com.ramijemli.percentagechartview.PercentageChartView
-                    android:id="@+id/view_casee"
-                    android:layout_width="@dimen/dp120w"
-                    android:layout_height="@dimen/dp120h"
-                    android:layout_margin="@dimen/dp8h"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:pcv_animDuration="800"
-                    app:pcv_animInterpolator="accelerate"
-                    app:pcv_backgroundBarColor="@color/white"
-                    app:pcv_gradientColors="#033354,#0B3857,#134265,#174B72"
-                    app:pcv_gradientType="linear"
-                    app:pcv_mode="ring"
-                    app:pcv_orientation="clockwise"
-                    app:pcv_startAngle="270"
-                    app:pcv_textColor="@color/colorPrimary"
-                    app:pcv_textSize="@dimen/sp1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.helper.widget.Flow
-                android:id="@+id/flow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp6h"
-                app:constraint_referenced_ids="home_item1,home_item2,home_item3,home_item4"
-                app:flow_horizontalGap="@dimen/dp4h"
-                app:flow_horizontalStyle="spread"
-                app:flow_maxElementsWrap="2"
-                app:flow_verticalGap="@dimen/dp4h"
-                app:flow_wrapMode="chain"
-                app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?attr/actionBarSize"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nextSessions"
@@ -314,12 +339,13 @@
                 android:background="@{viewmodel.selectedBtn==0?@drawable/corner_view_primary_yellow:@drawable/corner_view_primary_dark_home}"
                 android:onClick="@{()->viewmodel.nextSessions()}"
                 android:text="@string/nextSessions"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/previousSessions"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/flow" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/previousSessions"
@@ -335,7 +361,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/nextMohdareen"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/nextSessions"
-                app:layout_constraintTop_toBottomOf="@id/flow" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nextMohdareen"
@@ -352,7 +378,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/previousSessions"
-                app:layout_constraintTop_toBottomOf="@id/flow" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/br3"
@@ -374,37 +400,52 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/comming_session_rc"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/dp15h"
                 android:visibility="@{viewmodel.selectedBtn==0?View.VISIBLE:View.GONE}"
                 app:adapter="@{viewmodel.sessionsAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/progress"
                 app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
                 tools:listitem="@layout/item_session" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/previous_session_rc"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/dp15h"
                 android:visibility="@{viewmodel.selectedBtn==1?View.VISIBLE:View.GONE}"
                 app:adapter="@{viewmodel.sessionsAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/progress"
                 app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
                 tools:listitem="@layout/item_session" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/home_reporters_rc"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_marginTop="@dimen/dp15h"
                 android:visibility="@{viewmodel.selectedBtn==2?View.VISIBLE:View.GONE}"
                 app:adapter="@{viewmodel.homeReportersAdapter}"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/progress"
                 app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
                 tools:listitem="@layout/item_home_reporter" />
 
-
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/progress"
+                style="Widget.MaterialComponents.LinearProgressIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp4h"
+                android:indeterminate="true"
+                android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:trackColor="@color/white"
+                app:trackThickness="@dimen/dp4h" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

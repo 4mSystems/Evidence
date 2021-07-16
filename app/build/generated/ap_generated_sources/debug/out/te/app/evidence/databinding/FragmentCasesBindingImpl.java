@@ -14,7 +14,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 2);
+        sViewsWithIds.put(R.id.input_search, 3);
     }
     // views
     @NonNull
@@ -25,15 +25,17 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentCasesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentCasesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
-            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
+        super(bindingComponent, root, 2
+            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progress.setTag(null);
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
@@ -43,7 +45,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -71,10 +73,10 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.cases.viewModels.CasesViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
+        updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -84,20 +86,31 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewmodelSearchProgressVisible((androidx.databinding.ObservableBoolean) object, fieldId);
+            case 1 :
                 return onChangeViewmodel((te.app.evidence.pages.cases.viewModels.CasesViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.CasesViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelSearchProgressVisible(androidx.databinding.ObservableBoolean ViewmodelSearchProgressVisible, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.casesAdapter) {
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.evidence.pages.cases.viewModels.CasesViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.casesAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -111,20 +124,56 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        boolean viewmodelSearchProgressVisibleGet = false;
         te.app.evidence.pages.cases.adapters.AllCasesAdapter viewmodelCasesAdapter = null;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xeL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.casesAdapter
-                    viewmodelCasesAdapter = viewmodel.getCasesAdapter();
+                    if (viewmodel != null) {
+                        // read viewmodel.casesAdapter
+                        viewmodelCasesAdapter = viewmodel.getCasesAdapter();
+                    }
+            }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.searchProgressVisible;
+                    }
+                    updateRegistration(0, viewmodelSearchProgressVisible);
+
+
+                    if (viewmodelSearchProgressVisible != null) {
+                        // read viewmodel.searchProgressVisible.get()
+                        viewmodelSearchProgressVisibleGet = viewmodelSearchProgressVisible.get();
+                    }
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelSearchProgressVisibleGet) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
+
+
+                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
 
             te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelCasesAdapter, "1", "1");
@@ -135,9 +184,12 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.casesAdapter
-        flag 2 (0x3L): null
+        flag 0 (0x1L): viewmodel.searchProgressVisible
+        flag 1 (0x2L): viewmodel
+        flag 2 (0x3L): viewmodel.casesAdapter
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

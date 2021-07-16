@@ -48,8 +48,12 @@ public class HomeViewModel extends BaseViewModel {
 
     @Bindable
     public void setHomeData(HomeData homeData) {
-        getSessionsAdapter().update(homeData.getComingSession());
-        notifyChange(BR.sessionsAdapter);
+        if (getSessionsAdapter().getSessionItemList().size() > 0) {
+            getSessionsAdapter().loadMore(homeData.getComingSession().getSessionItem());
+        } else {
+            getSessionsAdapter().update(homeData.getPreviousSession().getSessionItem());
+            notifyChange(BR.sessionsAdapter);
+        }
         notifyChange(BR.homeData);
         this.homeData = homeData;
     }

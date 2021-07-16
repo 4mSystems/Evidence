@@ -35,10 +35,10 @@ public class AttachmentsRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getAttachments(String type, int id) {
+    public Disposable getAttachments(String type, int id,int page, boolean showProgress) {
         if (type.equals(Constants.CASE_ATTACHMENTS))
-            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_ATTACHMENTS + id, new Object(), AttachmentsResponse.class,
-                    Constants.CASE_ATTACHMENTS, true);
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_ATTACHMENTS + id+"?page="+page, new Object(), AttachmentsResponse.class,
+                    Constants.CASE_ATTACHMENTS, showProgress);
         else
             return null;
     }

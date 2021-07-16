@@ -14,29 +14,28 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.client_data, 12);
-        sViewsWithIds.put(R.id.client_data_container, 13);
-        sViewsWithIds.put(R.id.client_name_text, 14);
-        sViewsWithIds.put(R.id.v6, 15);
-        sViewsWithIds.put(R.id.unit_text, 16);
-        sViewsWithIds.put(R.id.v2, 17);
-        sViewsWithIds.put(R.id.client_type_text, 18);
-        sViewsWithIds.put(R.id.v5, 19);
-        sViewsWithIds.put(R.id.client_address_text, 20);
-        sViewsWithIds.put(R.id.v3, 21);
-        sViewsWithIds.put(R.id.client_note_text, 22);
-        sViewsWithIds.put(R.id.v4, 23);
-        sViewsWithIds.put(R.id.br4, 24);
-        sViewsWithIds.put(R.id.input_search, 25);
-        sViewsWithIds.put(R.id.progress_bar_home, 26);
+        sViewsWithIds.put(R.id.toolbar_layout, 12);
+        sViewsWithIds.put(R.id.client_data, 13);
+        sViewsWithIds.put(R.id.client_data_container, 14);
+        sViewsWithIds.put(R.id.client_name_text, 15);
+        sViewsWithIds.put(R.id.v6, 16);
+        sViewsWithIds.put(R.id.unit_text, 17);
+        sViewsWithIds.put(R.id.v2, 18);
+        sViewsWithIds.put(R.id.client_type_text, 19);
+        sViewsWithIds.put(R.id.v5, 20);
+        sViewsWithIds.put(R.id.client_address_text, 21);
+        sViewsWithIds.put(R.id.v3, 22);
+        sViewsWithIds.put(R.id.client_note_text, 23);
+        sViewsWithIds.put(R.id.v4, 24);
+        sViewsWithIds.put(R.id.br4, 25);
+        sViewsWithIds.put(R.id.input_search, 26);
+        sViewsWithIds.put(R.id.progress_bar_home, 27);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView11;
-    @NonNull
-    private final androidx.recyclerview.widget.RecyclerView mboundView9;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback19;
@@ -49,34 +48,36 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     // Inverse Binding Event Handlers
 
     public FragmentClientProfileBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 27, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 28, sIncludes, sViewsWithIds));
     }
     private FragmentClientProfileBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (androidx.constraintlayout.widget.Barrier) bindings[24]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[20]
+            , (androidx.constraintlayout.widget.Barrier) bindings[25]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[21]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
             , (androidx.appcompat.widget.AppCompatButton) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
-            , (androidx.cardview.widget.CardView) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
+            , (androidx.cardview.widget.CardView) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[22]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[23]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[25]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[26]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[10]
-            , (android.widget.ProgressBar) bindings[26]
+            , (android.widget.ProgressBar) bindings[27]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[9]
             , (androidx.recyclerview.widget.RecyclerView) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[16]
+            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[12]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[17]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (android.view.View) bindings[17]
-            , (android.view.View) bindings[21]
-            , (android.view.View) bindings[23]
-            , (android.view.View) bindings[19]
-            , (android.view.View) bindings[15]
+            , (android.view.View) bindings[18]
+            , (android.view.View) bindings[22]
+            , (android.view.View) bindings[24]
+            , (android.view.View) bindings[20]
+            , (android.view.View) bindings[16]
             );
         this.clientAddressValue.setTag(null);
         this.clientCases.setTag(null);
@@ -88,10 +89,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.mboundView0.setTag(null);
         this.mboundView11 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[11];
         this.mboundView11.setTag(null);
-        this.mboundView9 = (androidx.recyclerview.widget.RecyclerView) bindings[9];
-        this.mboundView9.setTag(null);
         this.progress.setTag(null);
-        this.rcNotes.setTag(null);
+        this.rcClientCases.setTag(null);
+        this.rcClientNotes.setTag(null);
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
@@ -345,8 +345,8 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.clientCases, viewmodelSelectedBtnInt1ClientCasesAndroidDrawableCornerViewPrimaryYellowClientCasesAndroidDrawableCornerViewPrimaryDarkHome);
             androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.clientNotes, viewmodelSelectedBtnInt0ClientNotesAndroidDrawableCornerViewPrimaryYellowClientNotesAndroidDrawableCornerViewPrimaryDarkHome);
             this.mboundView11.setVisibility(viewmodelSelectedBtnInt0ViewVISIBLEViewGONE);
-            this.mboundView9.setVisibility(viewmodelSelectedBtnInt1ViewVISIBLEViewGONE);
-            this.rcNotes.setVisibility(viewmodelSelectedBtnInt0ViewVISIBLEViewGONE);
+            this.rcClientCases.setVisibility(viewmodelSelectedBtnInt1ViewVISIBLEViewGONE);
+            this.rcClientNotes.setVisibility(viewmodelSelectedBtnInt0ViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
@@ -355,20 +355,20 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
             this.clientNotes.setOnClickListener(mCallback19);
             this.mboundView11.setOnClickListener(mCallback21);
         }
-        if ((dirtyFlags & 0x62L) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.mboundView9, viewmodelClientCasesAdapter, "1", "1");
-        }
         if ((dirtyFlags & 0x43L) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
         }
+        if ((dirtyFlags & 0x62L) != 0) {
+            // api target 1
+
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClientCases, viewmodelClientCasesAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0x52L) != 0) {
             // api target 1
 
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcNotes, viewmodelNotesAdapter, "1", "1");
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClientNotes, viewmodelNotesAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations

@@ -6,10 +6,12 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.InputTagClientsAdapter;
 import te.app.evidence.pages.clients.models.AddClientRequest;
+import te.app.evidence.pages.clients.models.ClientsMainData;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 
@@ -21,6 +23,7 @@ public class CaseClientsViewModel extends BaseViewModel {
     CasesRepository casesRepository;
     InputTagClientsAdapter clientsAdapter;
     AddClientRequest clientRequest;
+    ClientsMainData clientsMainData;
 
     @Inject
     public CaseClientsViewModel(CasesRepository casesRepository) {
@@ -28,10 +31,11 @@ public class CaseClientsViewModel extends BaseViewModel {
         this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
         casesRepository.setLiveData(liveData);
+        clientsMainData = new ClientsMainData();
     }
 
-    public void clients() {
-        compositeDisposable.add(casesRepository.getCaseClients(getPassingObject().getId(), getPassingObject().getObject()));
+    public void clients(int page, boolean showProgress) {
+        compositeDisposable.add(casesRepository.getCaseClients(getPassingObject().getId(), getPassingObject().getObject(), page, showProgress));
     }
 
     public void deleteClient() {
@@ -42,6 +46,23 @@ public class CaseClientsViewModel extends BaseViewModel {
 
     public void toNewClient() {
         liveData.setValue(new Mutable(Constants.ADD_CLIENTS));
+    }
+
+    @Bindable
+    public ClientsMainData getClientsMainData() {
+        return clientsMainData;
+    }
+
+    @Bindable
+    public void setClientsMainData(ClientsMainData clientsMainData) {
+        if (getClientsAdapter().getClientsList().size() > 0) {
+            getClientsAdapter().loadMore(clientsMainData.getClientsList());
+        } else {
+            getClientsAdapter().update(clientsMainData.getClientsList());
+            notifyChange(BR.clientsAdapter);
+        }
+        searchProgressVisible.set(false);
+        this.clientsMainData = clientsMainData;
     }
 
     @Bindable

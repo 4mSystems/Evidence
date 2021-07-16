@@ -18,6 +18,7 @@ import te.app.evidence.R;
 import te.app.evidence.databinding.ItemAttachmentBinding;
 import te.app.evidence.pages.attachments.models.Attachment;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel;
+import te.app.evidence.pages.clients.models.Clients;
 
 public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.ViewHolder> {
     List<Attachment> attachmentList;
@@ -53,6 +54,11 @@ public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.
         this.attachmentList.clear();
         attachmentList.addAll(dataList);
         notifyDataSetChanged();
+    }
+    public void loadMore(@NotNull List<Attachment> dataList) {
+        int start = attachmentList.size();
+        attachmentList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

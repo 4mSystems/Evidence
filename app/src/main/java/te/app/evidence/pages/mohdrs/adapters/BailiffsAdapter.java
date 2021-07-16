@@ -81,7 +81,11 @@ public class BailiffsAdapter extends RecyclerView.Adapter<BailiffsAdapter.ViewHo
         bailiffsDataList.addAll(dataList);
         notifyDataSetChanged();
     }
-
+    public void loadMore(@NotNull List<ReportersData> dataList) {
+        int start = bailiffsDataList.size();
+        bailiffsDataList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
+    }
     @Override
     public void onViewAttachedToWindow(@NotNull ViewHolder holder) {
         super.onViewAttachedToWindow(holder);

@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -19,13 +21,22 @@ public abstract class FragmentAttachmentsBinding extends ViewDataBinding {
   @NonNull
   public final TextInputEditText inputSearch;
 
+  @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcAttachments;
+
   @Bindable
   protected AttachmentsViewModel mViewmodel;
 
   protected FragmentAttachmentsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress,
+      RecyclerView rcAttachments) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
+    this.progress = progress;
+    this.rcAttachments = rcAttachments;
   }
 
   public abstract void setViewmodel(@Nullable AttachmentsViewModel viewmodel);

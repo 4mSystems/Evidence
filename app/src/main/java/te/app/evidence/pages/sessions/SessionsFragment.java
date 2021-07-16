@@ -1,25 +1,25 @@
 package te.app.evidence.pages.sessions;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
-
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -28,7 +28,6 @@ import javax.inject.Inject;
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
-import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -47,7 +46,6 @@ import static android.app.Activity.RESULT_OK;
 
 public class SessionsFragment extends BaseFragment {
     FragmentSessionsBinding binding;
-    private Context context;
     @Inject
     SessionsViewModel viewModel;
     Dialog deleteDialog;
@@ -55,14 +53,14 @@ public class SessionsFragment extends BaseFragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sessions, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.sessions();
+            viewModel.sessions(1, true);
         }
         onBackPressed();
         setEvent();
@@ -70,12 +68,11 @@ public class SessionsFragment extends BaseFragment {
     }
 
     private void setEvent() {
-        viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CASE_SESSIONS.equals(((Mutable) o).message)) {
-                viewModel.getSessionsAdapter().update(((CaseSessionsResponse) mutable.object).getSessionItem());
-                viewModel.notifyChange(BR.casesAdapter);
+                viewModel.setSessionMainData(((CaseSessionsResponse) mutable.object).getSessionMainData());
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getSessionsAdapter().getSessionItemList().get(viewModel.getSessionsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
@@ -87,27 +84,42 @@ public class SessionsFragment extends BaseFragment {
                 deleteDialog.dismiss();
 
             } else if (Constants.NEW_SESSION.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getPassingObject().getId()),
+                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId()),
                         getString(R.string.add_new_session),
                         AddSessionFragment.class.getName(), null);
             }
         });
-        ((BaseActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
-            viewModel.sessions();
-            ((BaseActivity) context).stopRefresh(false);
-        });
-        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), context, Constants.SESSION_CODE));
-        viewModel.getSessionsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
+
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), requireActivity(), Constants.SESSION_CODE));
+        viewModel.getSessionsAdapter().actionLiveData.observe(requireActivity(), o -> {
             if (o.equals(Constants.CHANGE_STATUS))
                 viewModel.changeStatus();
             else if (o.equals(Constants.DELETE))
                 showDeleteDialog();
 
         });
+        binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getSessionMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getSessionsAdapter().getSessionItemList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.sessions((viewModel.getSessionMainData().getCurrentPage() + 1), false);
+                    }
+                }
+            }
+        });
     }
 
     private void showDeleteDialog() {
-        deleteDialog = new Dialog(context, R.style.PauseDialog);
+        deleteDialog = new Dialog(requireActivity(), R.style.PauseDialog);
         deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
         deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -121,7 +133,8 @@ public class SessionsFragment extends BaseFragment {
 
     @Override
     public void launchActivityResult(int request, int resultCode, Intent data) {
-        super.launchActivityResult(request, resultCode, data);        if (data != null) {
+        super.launchActivityResult(request, resultCode, data);
+        if (data != null) {
             if (resultCode == RESULT_OK) {
                 Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
                 if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
@@ -145,7 +158,7 @@ public class SessionsFragment extends BaseFragment {
         binding.getRoot().setOnKeyListener((v, keyCode, event) -> {
             //This is the filter
             if (event.getAction() != KeyEvent.ACTION_DOWN) {
-                MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), context, Constants.SESSION_CODE);
+                MovementHelper.finishWithResult(new PassingObject(viewModel.getSessionsAdapter().getSessionItemList().size()), requireActivity(), Constants.SESSION_CODE);
                 return true;
             }
             return false;
@@ -159,9 +172,5 @@ public class SessionsFragment extends BaseFragment {
         viewModel.getCasesRepository().setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
-    }
+
 }

@@ -14,6 +14,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
@@ -73,7 +74,13 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
   public final ProgressBar progressBarHome;
 
   @NonNull
-  public final RecyclerView rcNotes;
+  public final RecyclerView rcClientCases;
+
+  @NonNull
+  public final RecyclerView rcClientNotes;
+
+  @NonNull
+  public final CollapsingToolbarLayout toolbarLayout;
 
   @NonNull
   public final CustomTextViewRegular unitText;
@@ -107,7 +114,8 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
       CustomTextViewRegular clientNoteText, CustomTextViewRegular clientNoteValue,
       AppCompatButton clientNotes, CustomTextViewRegular clientTypeText,
       CustomTextViewRegular clientTypeValue, TextInputEditText inputSearch,
-      CircularProgressIndicator progress, ProgressBar progressBarHome, RecyclerView rcNotes,
+      CircularProgressIndicator progress, ProgressBar progressBarHome, RecyclerView rcClientCases,
+      RecyclerView rcClientNotes, CollapsingToolbarLayout toolbarLayout,
       CustomTextViewRegular unitText, CustomTextViewRegular unitValue, View v2, View v3, View v4,
       View v5, View v6) {
     super(_bindingComponent, _root, _localFieldCount);
@@ -127,7 +135,9 @@ public abstract class FragmentClientProfileBinding extends ViewDataBinding {
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.progressBarHome = progressBarHome;
-    this.rcNotes = rcNotes;
+    this.rcClientCases = rcClientCases;
+    this.rcClientNotes = rcClientNotes;
+    this.toolbarLayout = toolbarLayout;
     this.unitText = unitText;
     this.unitValue = unitValue;
     this.v2 = v2;

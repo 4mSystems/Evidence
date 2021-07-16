@@ -1,32 +1,30 @@
 package te.app.evidence.pages.clients.models.clientProfile;
 
-import java.util.List;
 
 import com.google.gson.annotations.SerializedName;
 
-import te.app.evidence.pages.cases.models.cases.Cases;
-import te.app.evidence.pages.clients.notes.models.Notes;
+import te.app.evidence.pages.cases.models.cases.CasesMainData;
+import te.app.evidence.pages.clients.notes.models.NotesMainData;
 
 public class ClientProfileData {
 
     @SerializedName("cases")
-    private List<Cases> cases;
-
+    private CasesMainData casesMainData;
     @SerializedName("id")
     private int id;
 
     @SerializedName("client_notes_api")
-    private List<Notes> clientNotes;
+    private NotesMainData notesMainData;
 
-    public List<Cases> getCases() {
-        return cases;
+    public CasesMainData getCasesMainData() {
+        return casesMainData;
     }
 
     public int getId() {
         return id;
     }
 
-    public List<Notes> getClientNotes() {
-        return clientNotes;
+    public NotesMainData getNotesMainData() {
+        return notesMainData;
     }
 }

@@ -1,17 +1,15 @@
 package te.app.evidence.pages.mohdrs.models;
 
-import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 import te.app.evidence.model.base.StatusMessage;
 
 public class ReportersResponse extends StatusMessage {
 
-	@SerializedName("data")
-	private List<ReportersData> bailiffsDataList;
+    @SerializedName("data")
+    private ReportersMainData mainData;
 
-	public List<ReportersData> getBailiffsDataList(){
-		return bailiffsDataList;
-	}
-
+    public ReportersMainData getMainData() {
+        return mainData;
+    }
 }

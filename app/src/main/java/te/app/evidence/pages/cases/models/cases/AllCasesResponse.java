@@ -9,9 +9,9 @@ import te.app.evidence.model.base.StatusMessage;
 public class AllCasesResponse extends StatusMessage {
 
     @SerializedName("data")
-    private List<Cases> data;
+    private CasesMainData data;
 
-    public List<Cases> getData() {
+    public CasesMainData getData() {
         return data;
     }
 }

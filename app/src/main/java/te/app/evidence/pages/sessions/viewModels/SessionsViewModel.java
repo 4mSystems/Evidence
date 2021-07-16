@@ -6,10 +6,12 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.AllCasesAdapter;
 import te.app.evidence.pages.home.adapters.SessionsAdapter;
+import te.app.evidence.pages.sessions.models.SessionMainData;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 
@@ -20,16 +22,18 @@ public class SessionsViewModel extends BaseViewModel {
     @Inject
     CasesRepository casesRepository;
     SessionsAdapter sessionsAdapter;
+    SessionMainData sessionMainData;
 
     @Inject
     public SessionsViewModel(CasesRepository casesRepository) {
         this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
         casesRepository.setLiveData(liveData);
+        sessionMainData = new SessionMainData();
     }
 
-    public void sessions() {
-        compositeDisposable.add(casesRepository.getCaseSessions(getPassingObject().getId()));
+    public void sessions(int page, boolean showProgress) {
+        compositeDisposable.add(casesRepository.getCaseSessions(getPassingObject().getId(),page,showProgress));
     }
 
     public void changeStatus() {
@@ -47,6 +51,21 @@ public class SessionsViewModel extends BaseViewModel {
 
     public void toAddSession() {
         liveData.setValue(new Mutable(Constants.NEW_SESSION));
+    }
+
+    public SessionMainData getSessionMainData() {
+        return sessionMainData;
+    }
+
+    public void setSessionMainData(SessionMainData sessionMainData) {
+        if (getSessionsAdapter().getSessionItemList().size() > 0) {
+            getSessionsAdapter().loadMore(sessionMainData.getSessionItem());
+        } else {
+            getSessionsAdapter().update(sessionMainData.getSessionItem());
+            notifyChange(BR.sessionsAdapter);
+        }
+        searchProgressVisible.set(false);
+        this.sessionMainData = sessionMainData;
     }
 
     public CasesRepository getCasesRepository() {

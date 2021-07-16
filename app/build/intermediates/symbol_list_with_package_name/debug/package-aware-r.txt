@@ -3527,6 +3527,9 @@ id ratio
 id rcCat
 id rcMohdrs
 id rcUsers
+id rc_attachments
+id rc_client_cases
+id rc_client_notes
 id rc_clients
 id rc_filter
 id rc_notes
@@ -3664,6 +3667,8 @@ id toast_icon
 id toast_root
 id toast_text
 id toggle
+id toolbar
+id toolbar_layout
 id top
 id topPanel
 id touch_outside
@@ -4279,6 +4284,7 @@ string license_civil_image
 string license_civil_image_hint
 string license_image
 string license_image_hint
+string load_more
 string login
 string login_forget
 string login_header

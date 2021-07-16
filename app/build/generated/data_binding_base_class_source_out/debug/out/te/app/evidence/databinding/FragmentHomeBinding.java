@@ -15,6 +15,8 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.ramijemli.percentagechartview.PercentageChartView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -72,7 +74,13 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final AppCompatButton previousSessions;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final ProgressBar progressBarHome;
+
+  @NonNull
+  public final CollapsingToolbarLayout toolbarLayout;
 
   @NonNull
   public final PercentageChartView viewCasee;
@@ -95,8 +103,10 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       ConstraintLayout homeItem4, CustomTextViewMedium homeMohdrs, RecyclerView homeReportersRc,
       CustomTextViewMedium homeSession, CustomTextViewMedium homeUsers,
       AppCompatButton nextMohdareen, AppCompatButton nextSessions, RecyclerView previousSessionRc,
-      AppCompatButton previousSessions, ProgressBar progressBarHome, PercentageChartView viewCasee,
-      PercentageChartView viewId, PercentageChartView viewMohdr, PercentageChartView viewUsers) {
+      AppCompatButton previousSessions, CircularProgressIndicator progress,
+      ProgressBar progressBarHome, CollapsingToolbarLayout toolbarLayout,
+      PercentageChartView viewCasee, PercentageChartView viewId, PercentageChartView viewMohdr,
+      PercentageChartView viewUsers) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br3 = br3;
     this.commingSessionRc = commingSessionRc;
@@ -114,7 +124,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.nextSessions = nextSessions;
     this.previousSessionRc = previousSessionRc;
     this.previousSessions = previousSessions;
+    this.progress = progress;
     this.progressBarHome = progressBarHome;
+    this.toolbarLayout = toolbarLayout;
     this.viewCasee = viewCasee;
     this.viewId = viewId;
     this.viewMohdr = viewMohdr;

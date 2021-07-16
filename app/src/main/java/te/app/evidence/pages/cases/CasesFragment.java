@@ -1,24 +1,18 @@
 package te.app.evidence.pages.cases;
-
-import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-
-
-import org.jetbrains.annotations.NotNull;
-
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import javax.inject.Inject;
-
-import te.app.evidence.BR;
 import te.app.evidence.R;
-import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -30,33 +24,45 @@ import te.app.evidence.utils.Constants;
 
 public class CasesFragment extends BaseFragment {
     FragmentCasesBinding binding;
-    private Context context;
     @Inject
     CasesViewModel viewModel;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_cases, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        viewModel.cases();
+        viewModel.cases(1, true);
         setEvent();
         return binding.getRoot();
     }
 
     private void setEvent() {
-        viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.ALL_CASES.equals(((Mutable) o).message)) {
-                viewModel.getCasesAdapter().update(((AllCasesResponse) mutable.object).getData());
-                viewModel.notifyChange(BR.casesAdapter);
+                viewModel.setCasesMainData(((AllCasesResponse) mutable.object).getData());
             }
         });
-        ((BaseActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
-            viewModel.cases();
-            ((BaseActivity) context).stopRefresh(false);
+        binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getCasesMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getCasesAdapter().getCasesList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.cases((viewModel.getCasesMainData().getCurrentPage() + 1), false);
+                    }
+                }
+            }
         });
     }
 
@@ -67,9 +73,4 @@ public class CasesFragment extends BaseFragment {
         viewModel.getCasesRepository().setLiveData(viewModel.liveData);
     }
 
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
-    }
 }

@@ -10,6 +10,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -21,15 +22,19 @@ public abstract class FragmentSessionNotesBinding extends ViewDataBinding {
   public final TextInputEditText inputSearch;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final RecyclerView rcNotes;
 
   @Bindable
   protected SessionNotesViewModel mViewmodel;
 
   protected FragmentSessionNotesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, RecyclerView rcNotes) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcNotes) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
+    this.progress = progress;
     this.rcNotes = rcNotes;
   }
 

@@ -6,15 +6,19 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
@@ -47,7 +51,6 @@ import static android.app.Activity.RESULT_OK;
 
 public class SessionNotesFragment extends BaseFragment {
     FragmentSessionNotesBinding binding;
-    private Context context;
     @Inject
     SessionNotesViewModel viewModel;
     Dialog deleteDialog;
@@ -55,26 +58,25 @@ public class SessionNotesFragment extends BaseFragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_session_notes, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
         Bundle bundle = this.getArguments();
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-            viewModel.sessionNotes();
+            viewModel.sessionNotes(1, true);
         }
         setEvent();
         return binding.getRoot();
     }
 
     private void setEvent() {
-        viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.SESSION_NOTES.equals(((Mutable) o).message)) {
-                viewModel.getNotesAdapter().update(((SessionNotesResponse) mutable.object).getNotes());
-                viewModel.notifyChange(BR.casesAdapter);
+                viewModel.setNotesMainData(((SessionNotesResponse) mutable.object).getNotesMainData());
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getNotesAdapter().getNotesList().get(viewModel.getNotesAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
@@ -86,26 +88,41 @@ public class SessionNotesFragment extends BaseFragment {
                 deleteDialog.dismiss();
 
             } else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getPassingObject().getId(), Constants.SESSION_NOTES),
+                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId(), Constants.SESSION_NOTES),
                         getString(R.string.add_new_note),
                         AddNoteFragment.class.getName(), null);
             }
         });
-        ((BaseActivity) context).getRefreshingLiveData().observe(((LifecycleOwner) context), aBoolean -> {
-            viewModel.sessionNotes();
-            ((BaseActivity) context).stopRefresh(false);
-        });
-        viewModel.getNotesAdapter().actionLiveData.observe((LifecycleOwner) context, o -> {
+
+        viewModel.getNotesAdapter().actionLiveData.observe(requireActivity(), o -> {
             if (o.equals(Constants.CHANGE_STATUS))
                 viewModel.changeStatus();
             else if (o.equals(Constants.DELETE))
                 showDeleteDialog();
 
         });
+        binding.rcNotes.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getNotesMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getNotesAdapter().getNotesList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.sessionNotes((viewModel.getNotesMainData().getCurrentPage() + 1), false);
+                    }
+                }
+            }
+        });
     }
 
     private void showDeleteDialog() {
-        deleteDialog = new Dialog(context, R.style.PauseDialog);
+        deleteDialog = new Dialog(requireActivity(), R.style.PauseDialog);
         deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
         deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -143,11 +160,5 @@ public class SessionNotesFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getCasesRepository().setLiveData(viewModel.liveData);
-    }
-
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 }

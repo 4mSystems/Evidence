@@ -2,7 +2,6 @@ package te.app.evidence.pages.cases.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +54,7 @@ public class InputTagClientsAdapter extends RecyclerView.Adapter<InputTagClients
 
     @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Clients client = clientsList.get(position);
         ClientsItemViewModel itemMenuViewModel = new ClientsItemViewModel(client);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -74,12 +73,14 @@ public class InputTagClientsAdapter extends RecyclerView.Adapter<InputTagClients
 
     public void update(List<Clients> dataList) {
         this.clientsList.clear();
-//        for (int i = 0; i < dataList.size(); i++) {
-//            if (dataList.get(i).isChecked())
-//                clientsList.add(dataList.get(i));
-//        }
         clientsList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<Clients> dataList) {
+        int start = clientsList.size();
+        clientsList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

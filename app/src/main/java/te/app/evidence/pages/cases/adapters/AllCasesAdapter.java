@@ -37,6 +37,10 @@ public class AllCasesAdapter extends RecyclerView.Adapter<AllCasesAdapter.ViewHo
         this.casesList = new ArrayList<>();
     }
 
+    public List<Cases> getCasesList() {
+        return casesList;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
@@ -49,7 +53,7 @@ public class AllCasesAdapter extends RecyclerView.Adapter<AllCasesAdapter.ViewHo
 
     @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Cases client = casesList.get(position);
         ClientCasesItemViewModel itemMenuViewModel = new ClientCasesItemViewModel(client);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
@@ -66,6 +70,12 @@ public class AllCasesAdapter extends RecyclerView.Adapter<AllCasesAdapter.ViewHo
         this.casesList.clear();
         casesList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<Cases> dataList) {
+        int start = casesList.size();
+        casesList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
 import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
@@ -61,8 +62,13 @@ public class ClientsRepository extends BaseRepository {
     }
 
     public Disposable getClientNotes(int clientId, int page) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_NOTES + clientId + "&page=" + page, new Object(), NotesResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_NOTES + clientId + "?page=" + page, new Object(), NotesResponse.class,
                 Constants.NOTES, false);
+    }
+
+    public Disposable getClientCases(int clientId, int page) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_CASES + clientId + "?page=" + page, new Object(), AllCasesResponse.class,
+                Constants.ALL_CASES, false);
     }
 
     public Disposable deleteNote(int noteId) {

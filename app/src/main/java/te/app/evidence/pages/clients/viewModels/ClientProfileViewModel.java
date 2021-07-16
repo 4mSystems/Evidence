@@ -10,6 +10,7 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.cases.models.cases.CasesMainData;
 import te.app.evidence.pages.clients.adapters.ClientCasesAdapter;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.models.clientProfile.ClientProfileData;
@@ -30,6 +31,7 @@ public class ClientProfileViewModel extends BaseViewModel {
     ClientCasesAdapter clientCasesAdapter;
     ClientProfileData clientProfileData;
     NotesMainData notesMainData;
+    CasesMainData casesMainData;
 
     @Inject
     public ClientProfileViewModel(ClientsRepository clientsRepository) {
@@ -39,6 +41,7 @@ public class ClientProfileViewModel extends BaseViewModel {
         clientsRepository.setLiveData(liveData);
         clients = new Clients();
         notesMainData = new NotesMainData();
+        casesMainData = new CasesMainData();
     }
 
     public void clientProfile() {
@@ -47,6 +50,10 @@ public class ClientProfileViewModel extends BaseViewModel {
 
     public void getClientNotes(int page) {
         compositeDisposable.add(clientsRepository.getClientNotes(getClients().getClientId(), page));
+    }
+
+    public void getClientCases(int page) {
+        compositeDisposable.add(clientsRepository.getClientCases(getClients().getClientId(), page));
     }
 
     public void deleteNote() {
@@ -96,22 +103,39 @@ public class ClientProfileViewModel extends BaseViewModel {
 
     @Bindable
     public void setClientProfileData(ClientProfileData clientProfileData) {
-        getNotesAdapter().update(clientProfileData.getClientNotes());
-        notifyChange(BR.notesAdapter);
+        setNotesMainData(clientProfileData.getNotesMainData());
         notifyChange(BR.clientProfileData);
         this.clientProfileData = clientProfileData;
     }
 
-    @Bindable
     public NotesMainData getNotesMainData() {
         return notesMainData;
     }
 
     public void setNotesMainData(NotesMainData notesMainData) {
-        getNotesAdapter().loadMore(notesMainData.getClientNotes());
-        notifyChange(BR.mainData);
+        if (getNotesAdapter().getNotesList().size() > 0) {
+            getNotesAdapter().loadMore(notesMainData.getClientNotes());
+        } else {
+            getNotesAdapter().update(notesMainData.getClientNotes());
+            notifyChange(BR.notesAdapter);
+        }
         searchProgressVisible.set(false);
         this.notesMainData = notesMainData;
+    }
+
+    public CasesMainData getCasesMainData() {
+        return casesMainData;
+    }
+
+    public void setCasesMainData(CasesMainData casesMainData) {
+        if (getClientCasesAdapter().getCasesList().size() > 0) {
+            getClientCasesAdapter().loadMore(casesMainData.getCases());
+        } else {
+            getClientCasesAdapter().update(casesMainData.getCases());
+            notifyChange(BR.clientCasesAdapter);
+        }
+        searchProgressVisible.set(false);
+        this.casesMainData = casesMainData;
     }
 
     @Bindable

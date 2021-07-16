@@ -10,6 +10,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -21,15 +22,19 @@ public abstract class FragmentCasesBinding extends ViewDataBinding {
   public final TextInputEditText inputSearch;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final RecyclerView rcClients;
 
   @Bindable
   protected CasesViewModel mViewmodel;
 
   protected FragmentCasesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, RecyclerView rcClients) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcClients) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
+    this.progress = progress;
     this.rcClients = rcClients;
   }
 

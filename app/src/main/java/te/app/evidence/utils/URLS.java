@@ -21,6 +21,7 @@ public class URLS {
     public final static String UPDATE_PAYMENT = "user/update-payment";
     public final static String CLIENT_PROFILE = "client_Profile/";
     public final static String CLIENT_NOTES = "client_Profile/notes/pagination/";
+    public final static String CLIENT_CASES = "client_Profile/cases/pagination/";
     public final static String ADD_NOTE = "add_clientNote";
     public final static String ADD_SESSION_NOTE = "addSessionNote";
     public final static String EDIT_NOTE = "edit_clientNote";
@@ -48,13 +49,13 @@ public class URLS {
     public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
     public static final String CASE_CLIENTS_CATEGORIES = "select/data/to_add_case";
-    public static final String GET_MOHDAREEN = "mohdars";
+    public static final String GET_MOHDAREEN = "mohdars?page=";
     public static final String CHANGE_MOH_STATUS = "update_status/";
     public static final String DELETE_MOHDR = "delete_mohdar/";
     public static final String REPORTER_DETAILS = "mohder_by_id/";
     public static final String ADD_CASE = "add_Cases";
     public static final String EDIT_CASE = "edit_Case";
-    public static final String ALL_CASES = "Cases";
+    public static final String ALL_CASES = "Cases?page=";
     public static final String CASE_DETAILS = "caseData/";
     public static final String CASE_CLIENTS = "caseClients/data_by_id/";
     public static final String DELETE_CLIENT_FROM_CASE = "caseClients/destroy";

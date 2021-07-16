@@ -52,9 +52,9 @@ public class CasesRepository extends BaseRepository {
                 Constants.CASE_CLIENTS_CATEGORIES, true);
     }
 
-    public Disposable getMohdareen() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_MOHDAREEN, new Object(), ReportersResponse.class,
-                Constants.GET_MOHDAREEN, true);
+    public Disposable getMohdareen(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_MOHDAREEN + page, new Object(), ReportersResponse.class,
+                Constants.GET_MOHDAREEN, showProgress);
     }
 
     public Disposable ChangeStatus(int mohId) {
@@ -87,9 +87,9 @@ public class CasesRepository extends BaseRepository {
                 Constants.ADD_CLIENTS, false);
     }
 
-    public Disposable allCases() {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ALL_CASES, new Object(), AllCasesResponse.class,
-                Constants.ALL_CASES, true);
+    public Disposable allCases(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ALL_CASES + page, new Object(), AllCasesResponse.class,
+                Constants.ALL_CASES, showProgress);
     }
 
     public Disposable caseDetails(int caseId) {
@@ -97,9 +97,9 @@ public class CasesRepository extends BaseRepository {
                 Constants.CASE_DETAILS, true);
     }
 
-    public Disposable getCaseClients(int caseId, String type) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_CLIENTS + caseId + "/" + type, new Object(), ClientsResponse.class,
-                Constants.CLIENTS, true);
+    public Disposable getCaseClients(int caseId, String type, int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_CLIENTS + caseId + "/" + type + "?page=" + page, new Object(), ClientsResponse.class,
+                Constants.CLIENTS, showProgress);
     }
 
     public Disposable deleteClientFromCase(AddClientRequest addClientRequest) {
@@ -107,9 +107,9 @@ public class CasesRepository extends BaseRepository {
                 Constants.DELETE_CLIENT, true);
     }
 
-    public Disposable getCaseSessions(int caseId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSIONS + caseId, new Object(), CaseSessionsResponse.class,
-                Constants.CASE_SESSIONS, true);
+    public Disposable getCaseSessions(int caseId, int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSIONS + caseId + "&page=" + page, new Object(), CaseSessionsResponse.class,
+                Constants.CASE_SESSIONS, showProgress);
     }
 
     public Disposable ChangeSessionStatus(int sessionId) {
@@ -132,9 +132,9 @@ public class CasesRepository extends BaseRepository {
                 Constants.NEW_SESSION, false);
     }
 
-    public Disposable getSessionNotes(int sessionId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSION_NOTES + sessionId, new Object(), SessionNotesResponse.class,
-                Constants.SESSION_NOTES, true);
+    public Disposable getSessionNotes(int sessionId, int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSION_NOTES + sessionId + "?page=" + page, new Object(), SessionNotesResponse.class,
+                Constants.SESSION_NOTES, showProgress);
     }
 
     public Disposable deleteSessionNote(int noteId) {

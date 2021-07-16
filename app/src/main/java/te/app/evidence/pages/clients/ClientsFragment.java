@@ -1,7 +1,6 @@
 package te.app.evidence.pages.clients;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,20 +14,16 @@ import android.view.Window;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 import javax.inject.Inject;
-
-import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -49,7 +44,6 @@ import static android.app.Activity.RESULT_OK;
 
 public class ClientsFragment extends BaseFragment {
     FragmentClientsBinding binding;
-    private Context context;
     @Inject
     ClientsViewModel viewModel;
     Dialog deleteDialog;
@@ -57,7 +51,7 @@ public class ClientsFragment extends BaseFragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_clients, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
         viewModel.clients(1, true);
@@ -66,14 +60,14 @@ public class ClientsFragment extends BaseFragment {
     }
 
     private void setEvent() {
-        viewModel.liveData.observe(((LifecycleOwner) context), (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.getClientsAdapter().lastSelected = -1;
-                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
+                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
@@ -82,7 +76,7 @@ public class ClientsFragment extends BaseFragment {
             }
         });
 
-        viewModel.getClientsAdapter().actionLiveData.observe((LifecycleOwner) context, o -> showDeleteDialog());
+        viewModel.getClientsAdapter().actionLiveData.observe(requireActivity(), o -> showDeleteDialog());
         binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
@@ -104,7 +98,7 @@ public class ClientsFragment extends BaseFragment {
     }
 
     private void showDeleteDialog() {
-        deleteDialog = new Dialog(context, R.style.PauseDialog);
+        deleteDialog = new Dialog(requireActivity(), R.style.PauseDialog);
         deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
         deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -142,12 +136,6 @@ public class ClientsFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getClientsRepository().setLiveData(viewModel.liveData);
-    }
-
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 
 }

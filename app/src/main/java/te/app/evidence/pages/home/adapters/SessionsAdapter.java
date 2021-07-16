@@ -20,6 +20,7 @@ import java.util.List;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemSessionBinding;
+import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.pages.home.viewModels.SessionItemViewModel;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
@@ -80,6 +81,12 @@ public class SessionsAdapter extends RecyclerView.Adapter<SessionsAdapter.ViewHo
         this.sessionItemList.clear();
         sessionItemList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<SessionItem> dataList) {
+        int start = sessionItemList.size();
+        sessionItemList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

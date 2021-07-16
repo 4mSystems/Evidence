@@ -63,18 +63,18 @@ public class HomeFragment extends BaseFragment {
                 binding.viewCasee.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getCases()), true);
                 binding.viewUsers.setProgress(Integer.parseInt(viewModel.getHomeData().getCountData().getUsers()), true);
             } else if (Constants.LOOPER.equals(((Mutable) o).message)) {
-                binding.progressBarHome.setVisibility(View.VISIBLE);
-                new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                    binding.progressBarHome.setVisibility(View.GONE);
-                    if (viewModel.getSelectedBtn() == 0)
-                        viewModel.getSessionsAdapter().update(viewModel.getHomeData().getComingSession());
-                    else if (viewModel.getSelectedBtn() == 1)
-                        viewModel.getSessionsAdapter().update(viewModel.getHomeData().getPreviousSession());
-                    else if (viewModel.getSelectedBtn() == 2)
-                        viewModel.getHomeReportersAdapter().update(viewModel.getHomeData().getMohder());
-                    viewModel.notifyChange(BR.sessionsAdapter);
-                    viewModel.notifyChange(BR.homeReportersAdapter);
-                }, 1000);
+//                binding.progressBarHome.setVisibility(View.VISIBLE);
+//                new Handler(Looper.getMainLooper()).postDelayed(() -> {
+//                    binding.progressBarHome.setVisibility(View.GONE);
+//                    if (viewModel.getSelectedBtn() == 0)
+//                        viewModel.getSessionsAdapter().update(viewModel.getHomeData().getComingSession());
+//                    else if (viewModel.getSelectedBtn() == 1)
+//                        viewModel.getSessionsAdapter().update(viewModel.getHomeData().getPreviousSession());
+//                    else if (viewModel.getSelectedBtn() == 2)
+//                        viewModel.getHomeReportersAdapter().update(viewModel.getHomeData().getMohder());
+//                    viewModel.notifyChange(BR.sessionsAdapter);
+//                    viewModel.notifyChange(BR.homeReportersAdapter);
+//                }, 1000);
             } else if (Constants.ALL_CASES.equals(((Mutable) o).message)) {
                 MovementHelper.startActivity(context, CasesFragment.class.getName(), ResourceManager.getString(R.string.search_case), null);
             } else if (Constants.GET_MOHDAREEN.equals(((Mutable) o).message)) {

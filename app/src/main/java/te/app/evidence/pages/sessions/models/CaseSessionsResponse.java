@@ -8,9 +8,9 @@ import te.app.evidence.model.base.StatusMessage;
 
 public class CaseSessionsResponse extends StatusMessage {
     @SerializedName("data")
-    private List<SessionItem> sessionItem;
+    private SessionMainData sessionMainData;
 
-    public List<SessionItem> getSessionItem() {
-        return sessionItem;
+    public SessionMainData getSessionMainData() {
+        return sessionMainData;
     }
 }
