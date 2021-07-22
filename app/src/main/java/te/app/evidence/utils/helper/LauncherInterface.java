@@ -7,4 +7,8 @@ public interface LauncherInterface {
         void result(int request, int resultCode, Intent result);
     }
 
+    interface permissionInterface {
+        void result(int request, boolean result);
+    }
+
 }

@@ -22,6 +22,8 @@ import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.onBoard.models.BoardResponse;
 import te.app.evidence.pages.settings.models.UserDocumentsResponse;
 import te.app.evidence.pages.settings.models.settings.SettingsResponse;
+import te.app.evidence.pages.users.models.AddUserRequest;
+import te.app.evidence.pages.users.models.AddUserResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -60,13 +62,9 @@ public class AuthRepository extends BaseRepository {
                 Constants.LOGIN, false);
     }
 
-    public Disposable register(RegisterRequest request, List<FileObject> fileObjects) {
-        if (fileObjects != null && fileObjects.size() > 0)
-            return connectionHelper.requestApi(URLS.REGISTER, request, fileObjects, StatusMessage.class,
-                    Constants.REGISTER, true);
-        else
-            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
-                    Constants.REGISTER, true);
+    public Disposable register(RegisterRequest request) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
+                Constants.REGISTER, false);
     }
 
     public Disposable confirmCode(ConfirmCodeRequest request) {
@@ -74,19 +72,14 @@ public class AuthRepository extends BaseRepository {
                 Constants.CONFIRM_CODE, true);
     }
 
-    public Disposable updatePayment() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.UPDATE_PAYMENT, new Object(), UsersResponse.class,
-                Constants.UPDATE_PAYMENT, true);
-    }
 
-
-    public Disposable updateProfile(RegisterRequest request, ArrayList<FileObject> fileObjects) {
+    public Disposable updateProfile(AddUserRequest request, ArrayList<FileObject> fileObjects) {
         if (fileObjects == null) {
             return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_PROFILE, request, UsersResponse.class,
-                    Constants.UPDATE_PROFILE, true);
+                    Constants.UPDATE_PROFILE, false);
         } else {
             return connectionHelper.requestApi(URLS.UPDATE_PROFILE, request, fileObjects, UsersResponse.class,
-                    Constants.UPDATE_PROFILE, true);
+                    Constants.UPDATE_PROFILE, false);
         }
 
     }

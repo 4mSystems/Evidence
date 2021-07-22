@@ -104,4 +104,5 @@ dependencies {
 
     implementation 'androidx.palette:palette:1.0.0'
     implementation 'com.ramijemli.percentagechartview:percentagechartview:0.3.1'
+    implementation 'com.github.delight-im:Android-AdvancedWebView:v3.2.1'
 }

@@ -1,5 +1,7 @@
 package te.app.evidence.pages.sessions.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -21,7 +23,7 @@ public class SessionNotesViewModel extends BaseViewModel {
     @Inject
     CasesRepository casesRepository;
     SessionNotesAdapter notesAdapter;
-    NotesMainData notesMainData;
+    NotesMainData notesMainData, oldNotesMainData;
 
     @Inject
     public SessionNotesViewModel(CasesRepository casesRepository) {
@@ -29,10 +31,18 @@ public class SessionNotesViewModel extends BaseViewModel {
         this.liveData = new MutableLiveData<>();
         casesRepository.setLiveData(liveData);
         notesMainData = new NotesMainData();
+        oldNotesMainData = new NotesMainData();
     }
 
     public void sessionNotes(int page, boolean showProgress) {
-        compositeDisposable.add(casesRepository.getSessionNotes(getPassingObject().getId(),page,showProgress));
+        compositeDisposable.add(casesRepository.getSessionNotes(getPassingObject().getId(), page, showProgress));
+    }
+
+    public void search(int page, boolean showProgress) {
+        searchRequest.setSessionId(String.valueOf(getPassingObject().getId()));
+        if (!TextUtils.isEmpty(searchRequest.getNote()))
+            compositeDisposable.add(casesRepository.searchNotes(page, showProgress, searchRequest));
+
     }
 
     public void changeStatus() {
@@ -53,11 +63,21 @@ public class SessionNotesViewModel extends BaseViewModel {
     }
 
     public void setNotesMainData(NotesMainData notesMainData) {
-        if (getNotesAdapter().getNotesList().size() > 0) {
-            getNotesAdapter().loadMore(notesMainData.getClientNotes());
+        if (!TextUtils.isEmpty(searchRequest.getNote())) {
+            if (notesMainData.getCurrentPage() > 1) {
+                getNotesAdapter().loadMore(notesMainData.getClientNotes());
+            } else {
+                getNotesAdapter().update(notesMainData.getClientNotes());
+                notifyChange(BR.notesAdapter);
+            }
         } else {
-            getNotesAdapter().update(notesMainData.getClientNotes());
-            notifyChange(BR.notesAdapter);
+            if (getNotesAdapter().getNotesList().size() > 0) {
+                getNotesAdapter().loadMore(notesMainData.getClientNotes());
+            } else {
+                oldNotesMainData = notesMainData;
+                getNotesAdapter().update(notesMainData.getClientNotes());
+                notifyChange(BR.notesAdapter);
+            }
         }
         searchProgressVisible.set(false);
         this.notesMainData = notesMainData;
@@ -65,6 +85,13 @@ public class SessionNotesViewModel extends BaseViewModel {
 
     public void toAddNote() {
         liveData.setValue(new Mutable(Constants.ADD_NOTE));
+    }
+
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(s)) {
+            getNotesAdapter().getNotesList().clear();
+            setNotesMainData(oldNotesMainData);
+        }
     }
 
     public CasesRepository getCasesRepository() {

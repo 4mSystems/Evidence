@@ -85,6 +85,21 @@ public class AddUserRequest {
         return valid;
     }
 
+    public boolean isUpdateProfileValid() {
+        boolean valid = true;
+        if (!Validate.isValid(name, Constants.FIELD)) {
+            userNameError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+            phoneError.set(Validate.error);
+            valid = false;
+        }
+        return valid;
+    }
+
     public String getName() {
         return name;
     }

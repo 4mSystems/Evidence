@@ -14,12 +14,13 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.login_background, 8);
-        sViewsWithIds.put(R.id.logo, 9);
-        sViewsWithIds.put(R.id.app_name, 10);
-        sViewsWithIds.put(R.id.app_login_title, 11);
-        sViewsWithIds.put(R.id.login_header, 12);
-        sViewsWithIds.put(R.id.app_login_hint, 13);
+        sViewsWithIds.put(R.id.login_background, 9);
+        sViewsWithIds.put(R.id.logo, 10);
+        sViewsWithIds.put(R.id.app_name, 11);
+        sViewsWithIds.put(R.id.app_login_title, 12);
+        sViewsWithIds.put(R.id.login_header, 13);
+        sViewsWithIds.put(R.id.app_login_hint, 14);
+        sViewsWithIds.put(R.id.tv_forget_timer, 15);
     }
     // views
     @NonNull
@@ -28,11 +29,15 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView4;
+    @NonNull
+    private final android.widget.LinearLayout mboundView8;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback15;
     @Nullable
     private final android.view.View.OnClickListener mCallback13;
     @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -112,21 +117,22 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     };
 
     public FragmentLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 3
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             , (com.google.android.material.textfield.TextInputLayout) bindings[1]
             , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (androidx.appcompat.widget.AppCompatImageView) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[7]
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             );
         this.forgetPassword.setTag(null);
         this.inputEmail.setTag(null);
@@ -137,12 +143,15 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         this.mboundView2.setTag(null);
         this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
         this.mboundView4.setTag(null);
+        this.mboundView8 = (android.widget.LinearLayout) bindings[8];
+        this.mboundView8.setTag(null);
         this.progress.setTag(null);
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -177,10 +186,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.auth.login.LoginViewModel Viewmodel) {
-        updateRegistration(1, Viewmodel);
+        updateRegistration(2, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -192,9 +201,9 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             case 0 :
                 return onChangeViewmodelLoginRequestPasswordError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
             case 1 :
-                return onChangeViewmodel((te.app.evidence.pages.auth.login.LoginViewModel) object, fieldId);
-            case 2 :
                 return onChangeViewmodelLoginRequestEmailError((androidx.databinding.ObservableField<java.lang.String>) object, fieldId);
+            case 2 :
+                return onChangeViewmodel((te.app.evidence.pages.auth.login.LoginViewModel) object, fieldId);
         }
         return false;
     }
@@ -207,25 +216,25 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.evidence.pages.auth.login.LoginViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelLoginRequestEmailError(androidx.databinding.ObservableField<java.lang.String> ViewmodelLoginRequestEmailError, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
             }
             return true;
         }
-        else if (fieldId == BR.message) {
-            synchronized(this) {
-                    mDirtyFlags |= 0x8L;
-            }
-            return true;
-        }
         return false;
     }
-    private boolean onChangeViewmodelLoginRequestEmailError(androidx.databinding.ObservableField<java.lang.String> ViewmodelLoginRequestEmailError, int fieldId) {
+    private boolean onChangeViewmodel(te.app.evidence.pages.auth.login.LoginViewModel Viewmodel, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
             }
             return true;
         }
@@ -240,22 +249,22 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             mDirtyFlags = 0;
         }
         boolean textUtilsIsEmptyViewmodelMessage = false;
-        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
-        java.lang.String viewmodelLoginRequestPassword = null;
-        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         te.app.evidence.pages.auth.models.LoginRequest viewmodelLoginRequest = null;
-        java.lang.String viewmodelLoginRequestEmail = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelLoginRequestPasswordError = null;
         java.lang.String viewmodelMessage = null;
-        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
-        java.lang.String viewmodelLoginRequestPasswordErrorGet = null;
-        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSStartAppAndroidDrawableCornerViewPrimaryDarkStartAppAndroidDrawableCornerViewMedium = null;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelLoginRequestEmailErrorGet = null;
-        te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
         androidx.databinding.ObservableField<java.lang.String> viewmodelLoginRequestEmailError = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
+        java.lang.String viewmodelLoginRequestPassword = null;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        java.lang.String viewmodelLoginRequestEmail = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
+        java.lang.String viewmodelLoginRequestPasswordErrorGet = null;
+        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSStartAppAndroidDrawableCornerViewPrimaryDarkStartAppAndroidDrawableCornerViewMedium = null;
+        te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
         if ((dirtyFlags & 0x1fL) != 0) {
@@ -268,16 +277,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                         viewmodelLoginRequest = viewmodel.getLoginRequest();
                     }
 
-                if ((dirtyFlags & 0x12L) != 0) {
-
-                        if (viewmodelLoginRequest != null) {
-                            // read viewmodel.loginRequest.password
-                            viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
-                            // read viewmodel.loginRequest.email
-                            viewmodelLoginRequestEmail = viewmodelLoginRequest.getEmail();
-                        }
-                }
-                if ((dirtyFlags & 0x13L) != 0) {
+                if ((dirtyFlags & 0x15L) != 0) {
 
                         if (viewmodelLoginRequest != null) {
                             // read viewmodel.loginRequest.passwordError
@@ -297,7 +297,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                             // read viewmodel.loginRequest.emailError
                             viewmodelLoginRequestEmailError = viewmodelLoginRequest.emailError;
                         }
-                        updateRegistration(2, viewmodelLoginRequestEmailError);
+                        updateRegistration(1, viewmodelLoginRequestEmailError);
 
 
                         if (viewmodelLoginRequestEmailError != null) {
@@ -305,8 +305,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                             viewmodelLoginRequestEmailErrorGet = viewmodelLoginRequestEmailError.get();
                         }
                 }
+                if ((dirtyFlags & 0x14L) != 0) {
+
+                        if (viewmodelLoginRequest != null) {
+                            // read viewmodel.loginRequest.password
+                            viewmodelLoginRequestPassword = viewmodelLoginRequest.getPassword();
+                            // read viewmodel.loginRequest.email
+                            viewmodelLoginRequestEmail = viewmodelLoginRequest.getEmail();
+                        }
+                }
             }
-            if ((dirtyFlags & 0x1aL) != 0) {
+            if ((dirtyFlags & 0x1cL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.message
@@ -316,19 +325,19 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
 
                     // read TextUtils.isEmpty(viewmodel.message)
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
-                if((dirtyFlags & 0x1aL) != 0) {
+                if((dirtyFlags & 0x1cL) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x40L;
                     }
                     else {
-                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x20L;
                     }
                 }
 
 
                     // read !TextUtils.isEmpty(viewmodel.message)
                     TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
-                if((dirtyFlags & 0x1aL) != 0) {
+                if((dirtyFlags & 0x1cL) != 0) {
                     if(TextUtilsIsEmptyViewmodelMessage1) {
                             dirtyFlags |= 0x4000L;
                     }
@@ -340,6 +349,13 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         }
         // batch finished
 
+        if ((dirtyFlags & 0x20L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
         if ((dirtyFlags & 0x4000L) != 0) {
 
                 if (viewmodelMessage != null) {
@@ -347,36 +363,29 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                     viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
                 }
         }
-        if ((dirtyFlags & 0x800L) != 0) {
 
-                if (viewmodelMessage != null) {
-                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
-                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
-                }
-        }
-
-        if ((dirtyFlags & 0x1aL) != 0) {
+        if ((dirtyFlags & 0x1cL) != 0) {
 
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
-            if((dirtyFlags & 0x1aL) != 0) {
+            if((dirtyFlags & 0x1cL) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
-                        dirtyFlags |= 0x40L;
-                        dirtyFlags |= 0x400L;
-                }
-                else {
-                        dirtyFlags |= 0x20L;
-                        dirtyFlags |= 0x200L;
-                }
-            }
-            if((dirtyFlags & 0x1aL) != 0) {
-                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
                         dirtyFlags |= 0x100L;
+                        dirtyFlags |= 0x1000L;
                 }
                 else {
                         dirtyFlags |= 0x80L;
+                        dirtyFlags |= 0x800L;
+                }
+            }
+            if((dirtyFlags & 0x1cL) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x400L;
+                }
+                else {
+                        dirtyFlags |= 0x200L;
                 }
             }
 
@@ -392,28 +401,29 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.forgetPassword.setOnClickListener(mCallback12);
+            this.forgetPassword.setOnClickListener(mCallback13);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            this.startApp.setOnClickListener(mCallback13);
+            this.mboundView8.setOnClickListener(mCallback15);
+            this.startApp.setOnClickListener(mCallback14);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
 
             this.inputEmail.setError(viewmodelLoginRequestEmailErrorGet);
         }
-        if ((dirtyFlags & 0x13L) != 0) {
+        if ((dirtyFlags & 0x15L) != 0) {
             // api target 1
 
             this.inputPassword.setError(viewmodelLoginRequestPasswordErrorGet);
         }
-        if ((dirtyFlags & 0x12L) != 0) {
+        if ((dirtyFlags & 0x14L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelLoginRequestEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelLoginRequestPassword);
         }
-        if ((dirtyFlags & 0x1aL) != 0) {
+        if ((dirtyFlags & 0x1cL) != 0) {
             // api target 1
 
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
@@ -425,7 +435,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -438,7 +448,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.login();
+                    viewmodel.register();
                 }
                 break;
             }
@@ -459,24 +469,41 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                 }
                 break;
             }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.login();
+                }
+                break;
+            }
         }
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel.loginRequest.passwordError
-        flag 1 (0x2L): viewmodel
-        flag 2 (0x3L): viewmodel.loginRequest.emailError
+        flag 1 (0x2L): viewmodel.loginRequest.emailError
+        flag 2 (0x3L): viewmodel
         flag 3 (0x4L): viewmodel.message
         flag 4 (0x5L): null
-        flag 5 (0x6L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 5 (0x6L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 6 (0x7L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
         flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
         flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/

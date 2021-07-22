@@ -203,6 +203,38 @@
                 app:layout_constraintTop_toTopOf="@id/start_app"
                 app:trackColor="@color/white"
                 app:trackThickness="@dimen/dp4h" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15h"
+                android:layout_marginBottom="@dimen/dp15h"
+                android:gravity="center_horizontal"
+                android:onClick="@{()-> viewmodel.register()}"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_app">
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:id="@+id/tv_forget_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp4w"
+                    android:text="@string/donot_have_account"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/medium_color" />
+
+                <te.app.evidence.customViews.views.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp4w"
+                    android:layout_marginEnd="@dimen/dp8w"
+                    android:text="@string/register_login"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

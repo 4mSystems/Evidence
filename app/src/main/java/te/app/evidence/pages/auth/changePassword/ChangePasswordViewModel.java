@@ -30,12 +30,12 @@ public class ChangePasswordViewModel extends BaseViewModel {
     }
 
     public void submit() {
-        if (request.isPasswordsValid()) {
-            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword()))
-                compositeDisposable.add(repository.updateProfile(getRequest(), null));
-            else
-                liveData.setValue(new Mutable(Constants.NOT_MATCH_PASSWORD));
-        }
+//        if (request.isPasswordsValid()) {
+//            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword()))
+//                compositeDisposable.add(repository.updateProfile(getRequest(), null));
+//            else
+//                liveData.setValue(new Mutable(Constants.NOT_MATCH_PASSWORD));
+//        }
     }
 
     private void unSubscribeFromObservable() {

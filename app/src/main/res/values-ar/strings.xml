@@ -22,7 +22,7 @@
     <string name="google_map">AIzaSyCjsvKLJRP5P00s2xMRbJKWIQ2bCifh9bs</string>
     <string name="email_hint">من فضلك ادخل البريد الالكترونى</string>
     <string name="email"> البريد الالكترونى</string>
-    <string name="password">كلمة المرور<font fgcolor='#E80101'>*</font></string>
+    <string name="password">كلمة المرور</string>
     <string name="login">تسجيل الدخول</string>
     <string name="phone">رقم الهاتف</string>
     <string name="invalidEmail">بريد إلكتروني غير صالح ، Evidence@example.com</string>
@@ -55,7 +55,7 @@
     <string name="password_hint">قم بإدخال كلمة المرور</string>
     <string name="register_header">إنشاء حساب جديد</string>
     <string name="register_name">الإسم <font fgcolor='#E80101'>*</font></string>
-    <string name="name_hint">اكتب الاسم بالكامل</string>
+    <string name="name_hint">إسم المستخدم</string>
     <string name="register_phone"> رقم الجوال<font fgcolor='#E80101'>*</font></string>
     <string name="register_password">كلمة المرور</string>
     <string name="register">إنشاء حساب جديد</string>
@@ -401,7 +401,7 @@
     <string name="client_data">بيانات العميل</string>
     <string name="client_notes">الملاحظات</string>
     <string name="emp_name">إسم الموظف</string>
-    <string name="note_search_hint">Looking for note ?</string>
+    <string name="note_search_hint">ابحث بالملاحظة</string>
     <string name="file">الملف</string>
     <string name="attach_search_hint">Looking for file ?</string>
     <string name="add_new_attach">Add new attachment</string>
@@ -442,7 +442,7 @@
     <string name="edit_add_attachments">إضافة وتعديل الملحقات</string>
     <string name="edit_case">تعديل الدعوي</string>
     <string name="add_new_khesm">إضافة خصم</string>
-    <string name="session_search_hint">Looking for a session</string>
+    <string name="session_search_hint">ابحث بتاريخ الجلسة</string>
     <string name="add_new_session">إضافة جلسة</string>
     <string name="edit_session">تعديل تاريخ الجلسة</string>
     <string name="attach_desc">الوصف</string>
@@ -450,5 +450,7 @@
     <string name="add_new_mohdr">إضافة محضر جديد</string>
     <string name="no_permission">عفوا لا يوجد لديك صلاحيات للدخول لهذه الصفحه</string>
     <string name="load_more">رؤية المزيد</string>
+    <string name="register_login">إنشاء حساب جديد</string>
+    <string name="download_success">تم تحميل الملف بنجاح</string>
 
 </resources>

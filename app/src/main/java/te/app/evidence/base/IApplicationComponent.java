@@ -11,6 +11,7 @@ import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.login.LoginFragment;
+import te.app.evidence.pages.auth.register.RegisterFragment;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddClientToCaseFragment;
 import te.app.evidence.pages.cases.CaseClientsFragment;
@@ -50,6 +51,8 @@ public interface IApplicationComponent {
     void inject(OnBoardFragment onBoardFragment);
 
     void inject(LoginFragment loginFragment);
+
+    void inject(RegisterFragment registerFragment);
 
     void inject(ForgetPasswordFragment forgetPasswordFragment);
 

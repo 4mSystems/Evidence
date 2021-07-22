@@ -1,5 +1,7 @@
 package te.app.evidence.pages.clients.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -21,22 +23,29 @@ public class ClientsViewModel extends BaseViewModel {
     @Inject
     ClientsRepository clientsRepository;
     ClientsAdapter clientsAdapter;
-    ClientsMainData clientsMainData;
+    ClientsMainData clientsMainData, oldClientsMainData;
 
     @Inject
     public ClientsViewModel(ClientsRepository clientsRepository) {
         clientsMainData = new ClientsMainData();
+        oldClientsMainData = new ClientsMainData();
         this.clientsRepository = clientsRepository;
         this.liveData = new MutableLiveData<>();
         clientsRepository.setLiveData(liveData);
     }
 
     public void clients(int page, boolean showProgress) {
-        compositeDisposable.add(clientsRepository.getClients(page,showProgress));
+        compositeDisposable.add(clientsRepository.getClients(page, showProgress));
     }
 
     public void deleteClient() {
         compositeDisposable.add(clientsRepository.deleteClient(getClientsAdapter().getClientsList().get(getClientsAdapter().lastSelected).getClientId()));
+    }
+
+    public void search(int page, boolean showProgress) {
+        if (!TextUtils.isEmpty(searchRequest.getName()))
+            compositeDisposable.add(clientsRepository.search(page, showProgress, searchRequest));
+
     }
 
     @Bindable
@@ -46,11 +55,21 @@ public class ClientsViewModel extends BaseViewModel {
 
     @Bindable
     public void setClientsMainData(ClientsMainData clientsMainData) {
-        if (getClientsAdapter().getClientsList().size() > 0) {
-            getClientsAdapter().loadMore(clientsMainData.getClientsList());
+        if (!TextUtils.isEmpty(searchRequest.getName())) { // if search required
+            if (clientsMainData.getCurrentPage() > 1) {
+                getClientsAdapter().loadMore(clientsMainData.getClientsList());
+            } else {
+                getClientsAdapter().update(clientsMainData.getClientsList());
+                notifyChange(BR.clientsAdapter);
+            }
         } else {
-            getClientsAdapter().update(clientsMainData.getClientsList());
-            notifyChange(BR.clientsAdapter);
+            if (getClientsAdapter().getClientsList().size() > 0) {
+                getClientsAdapter().loadMore(clientsMainData.getClientsList());
+            } else {
+                oldClientsMainData = clientsMainData;
+                getClientsAdapter().update(clientsMainData.getClientsList());
+                notifyChange(BR.clientsAdapter);
+            }
         }
         searchProgressVisible.set(false);
         this.clientsMainData = clientsMainData;
@@ -63,6 +82,13 @@ public class ClientsViewModel extends BaseViewModel {
 
     public void toNewClient() {
         liveData.setValue(new Mutable(Constants.ADD_CLIENTS));
+    }
+
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(s)) {
+            getClientsAdapter().getClientsList().clear();
+            setClientsMainData(oldClientsMainData);
+        }
     }
 
     public ClientsRepository getClientsRepository() {

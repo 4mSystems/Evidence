@@ -6,20 +6,55 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.textfield.TextInputLayout;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.pages.profile.ProfileViewModel;
 
 public abstract class FragmentProfileBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatButton appCompatButtonNext;
+
+  @NonNull
+  public final TextInputLayout inputEmail;
+
+  @NonNull
+  public final TextInputLayout inputName;
+
+  @NonNull
+  public final TextInputLayout inputNewPassword;
+
+  @NonNull
+  public final TextInputLayout inputPhone;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final CircleImageView userImg;
+
   @Bindable
   protected ProfileViewModel mViewmodel;
 
-  protected FragmentProfileBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  protected FragmentProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      AppCompatButton appCompatButtonNext, TextInputLayout inputEmail, TextInputLayout inputName,
+      TextInputLayout inputNewPassword, TextInputLayout inputPhone,
+      CircularProgressIndicator progress, CircleImageView userImg) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.appCompatButtonNext = appCompatButtonNext;
+    this.inputEmail = inputEmail;
+    this.inputName = inputName;
+    this.inputNewPassword = inputNewPassword;
+    this.inputPhone = inputPhone;
+    this.progress = progress;
+    this.userImg = userImg;
   }
 
   public abstract void setViewmodel(@Nullable ProfileViewModel viewmodel);

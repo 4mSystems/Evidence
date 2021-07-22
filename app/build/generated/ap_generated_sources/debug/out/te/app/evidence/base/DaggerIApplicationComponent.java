@@ -38,6 +38,11 @@ import te.app.evidence.pages.auth.login.LoginFragment_MembersInjector;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 import te.app.evidence.pages.auth.login.LoginViewModel_Factory;
 import te.app.evidence.pages.auth.login.LoginViewModel_MembersInjector;
+import te.app.evidence.pages.auth.register.RegisterFragment;
+import te.app.evidence.pages.auth.register.RegisterFragment_MembersInjector;
+import te.app.evidence.pages.auth.register.RegisterViewModel;
+import te.app.evidence.pages.auth.register.RegisterViewModel_Factory;
+import te.app.evidence.pages.auth.register.RegisterViewModel_MembersInjector;
 import te.app.evidence.pages.cases.AddCaseFragment;
 import te.app.evidence.pages.cases.AddCaseFragment_MembersInjector;
 import te.app.evidence.pages.cases.AddClientToCaseFragment;
@@ -225,6 +230,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectLoginViewModel(LoginViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
 
+  private RegisterViewModel registerViewModel() {
+    return injectRegisterViewModel(RegisterViewModel_Factory.newInstance(authRepositoryProvider.get()));
+  }
+
   private ForgetPasswordViewModel forgetPasswordViewModel() {
     return injectForgetPasswordViewModel(ForgetPasswordViewModel_Factory.newInstance(authRepositoryProvider.get()));
   }
@@ -367,6 +376,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(LoginFragment loginFragment) {
     injectLoginFragment(loginFragment);
+  }
+
+  @Override
+  public void inject(RegisterFragment registerFragment) {
+    injectRegisterFragment(registerFragment);
   }
 
   @Override
@@ -536,6 +550,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private LoginFragment injectLoginFragment(LoginFragment instance) {
     LoginFragment_MembersInjector.injectViewModel(instance, loginViewModel());
+    return instance;
+  }
+
+  private RegisterViewModel injectRegisterViewModel(RegisterViewModel instance) {
+    RegisterViewModel_MembersInjector.injectRepository(instance, authRepositoryProvider.get());
+    return instance;
+  }
+
+  private RegisterFragment injectRegisterFragment(RegisterFragment instance) {
+    RegisterFragment_MembersInjector.injectViewModel(instance, registerViewModel());
     return instance;
   }
 

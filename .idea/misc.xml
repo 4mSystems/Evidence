@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.22135416666666666" />
+        <entry key="app/src/main/res/drawable/back_curve_profile.xml" value="0.371875" />
+        <entry key="app/src/main/res/drawable/corner_view_gradient.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_add_category.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_session.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_user.xml" value="0.209375" />
@@ -11,16 +13,19 @@
         <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_pdf.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_permission_on.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_profile_camera.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.209375" />
+        <entry key="app/src/main/res/layout/activity_pdf_downloader.xml" value="0.29483695652173914" />
+        <entry key="app/src/main/res/layout/download_dialog.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/exit_layout.xml" value="0.12681159420289856" />
         <entry key="app/src/main/res/layout/fragment_add_bailiffs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_category.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_client.xml" value="0.17028985507246377" />
         <entry key="app/src/main/res/layout/fragment_add_client_to_case.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_add_user.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_add_user.xml" value="0.531104199066874" />
         <entry key="app/src/main/res/layout/fragment_attachments.xml" value="0.23045822102425875" />
         <entry key="app/src/main/res/layout/fragment_bailiffs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_case_clients.xml" value="0.19322916666666667" />
@@ -29,12 +34,13 @@
         <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_client_profile.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_clients.xml" value="0.17028985507246377" />
+        <entry key="app/src/main/res/layout/fragment_clients.xml" value="0.47463516330785266" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.10388821385176185" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_session_notes.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.6001757469244289" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.531104199066874" />
+        <entry key="app/src/main/res/layout/fragment_session_notes.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.531104199066874" />
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
@@ -49,6 +55,9 @@
         <entry key="app/src/main/res/layout/item_user.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/layout_action_bar_back.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/layout_navigation_drawer.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/loader_animation.xml" value="0.26992753623188404" />
+        <entry key="app/src/main/res/layout/option_dialog.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/xml/provider_paths.xml" value="0.29483695652173914" />
       </map>
     </option>
   </component>

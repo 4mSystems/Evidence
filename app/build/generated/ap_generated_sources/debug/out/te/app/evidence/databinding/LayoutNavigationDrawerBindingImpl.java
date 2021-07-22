@@ -14,12 +14,11 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.dl_main_navigation_menu, 11);
-        sViewsWithIds.put(R.id.rl_navigation_drawer, 12);
-        sViewsWithIds.put(R.id.ll_base_action_bar_container, 13);
-        sViewsWithIds.put(R.id.fl_home_container, 14);
-        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 15);
-        sViewsWithIds.put(R.id.vv_navigation_drawer_image, 16);
+        sViewsWithIds.put(R.id.dl_main_navigation_menu, 12);
+        sViewsWithIds.put(R.id.rl_navigation_drawer, 13);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 14);
+        sViewsWithIds.put(R.id.fl_home_container, 15);
+        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 16);
     }
     // views
     @NonNull
@@ -27,36 +26,40 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView10;
     @NonNull
-    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView2;
+    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView11;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView3;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView4;
     @NonNull
-    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView7;
+    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView5;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView8;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback89;
+    private final android.view.View.OnClickListener mCallback102;
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback100;
     @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback99;
     @Nullable
-    private final android.view.View.OnClickListener mCallback84;
+    private final android.view.View.OnClickListener mCallback96;
     @Nullable
-    private final android.view.View.OnClickListener mCallback82;
+    private final android.view.View.OnClickListener mCallback94;
     @Nullable
-    private final android.view.View.OnClickListener mCallback90;
+    private final android.view.View.OnClickListener mCallback92;
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback98;
     @Nullable
-    private final android.view.View.OnClickListener mCallback85;
+    private final android.view.View.OnClickListener mCallback101;
     @Nullable
-    private final android.view.View.OnClickListener mCallback83;
+    private final android.view.View.OnClickListener mCallback97;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback95;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback93;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -66,46 +69,49 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     }
     private LayoutNavigationDrawerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (androidx.drawerlayout.widget.DrawerLayout) bindings[11]
-            , (android.widget.FrameLayout) bindings[14]
-            , (android.widget.LinearLayout) bindings[13]
-            , (android.widget.RelativeLayout) bindings[12]
-            , (android.widget.RelativeLayout) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[16]
+            , (androidx.drawerlayout.widget.DrawerLayout) bindings[12]
+            , (android.widget.FrameLayout) bindings[15]
+            , (android.widget.LinearLayout) bindings[14]
+            , (android.widget.RelativeLayout) bindings[13]
+            , (android.widget.RelativeLayout) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
             );
         this.addCase.setTag(null);
         this.mboundView0 = (android.widget.RelativeLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView10 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10];
         this.mboundView10.setTag(null);
-        this.mboundView2 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2];
-        this.mboundView2.setTag(null);
+        this.mboundView11 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11];
+        this.mboundView11.setTag(null);
         this.mboundView3 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView4 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4];
         this.mboundView4.setTag(null);
-        this.mboundView7 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7];
-        this.mboundView7.setTag(null);
+        this.mboundView5 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5];
+        this.mboundView5.setTag(null);
         this.mboundView8 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8];
         this.mboundView8.setTag(null);
         this.mboundView9 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9];
         this.mboundView9.setTag(null);
         this.searchCase.setTag(null);
         this.tvUserLogin.setTag(null);
+        this.vvNavigationDrawerImage.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 9);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback102 = new te.app.evidence.generated.callback.OnClickListener(this, 11);
+        mCallback100 = new te.app.evidence.generated.callback.OnClickListener(this, 9);
+        mCallback99 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
+        mCallback96 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback94 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback92 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback98 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback101 = new te.app.evidence.generated.callback.OnClickListener(this, 10);
+        mCallback97 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback95 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback93 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -227,20 +233,22 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.addCase.setOnClickListener(mCallback85);
-            this.mboundView10.setOnClickListener(mCallback90);
-            this.mboundView2.setOnClickListener(mCallback82);
-            this.mboundView3.setOnClickListener(mCallback83);
-            this.mboundView4.setOnClickListener(mCallback84);
-            this.mboundView7.setOnClickListener(mCallback87);
-            this.mboundView8.setOnClickListener(mCallback88);
-            this.mboundView9.setOnClickListener(mCallback89);
-            this.searchCase.setOnClickListener(mCallback86);
+            this.addCase.setOnClickListener(mCallback97);
+            this.mboundView10.setOnClickListener(mCallback101);
+            this.mboundView11.setOnClickListener(mCallback102);
+            this.mboundView3.setOnClickListener(mCallback94);
+            this.mboundView4.setOnClickListener(mCallback95);
+            this.mboundView5.setOnClickListener(mCallback96);
+            this.mboundView8.setOnClickListener(mCallback99);
+            this.mboundView9.setOnClickListener(mCallback100);
+            this.searchCase.setOnClickListener(mCallback98);
+            this.tvUserLogin.setOnClickListener(mCallback93);
+            this.vvNavigationDrawerImage.setOnClickListener(mCallback92);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            this.mboundView8.setVisibility(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.mboundView9.setVisibility(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserLogin, menuViewModelUserDataUserDataName);
         }
     }
@@ -248,7 +256,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 8: {
+            case 11: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -261,11 +269,86 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 if (menuViewModelJavaLangObjectNull) {
 
 
-                    menuViewModel.changeLanguage();
+                    menuViewModel.logout();
                 }
                 break;
             }
-            case 6: {
+            case 9: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+                // menuViewModel.userData.permission.category != null
+                boolean menuViewModelUserDataPermissionCategoryJavaLangObjectNull = false;
+                // menuViewModel.userData.permission
+                te.app.evidence.pages.auth.models.Permission menuViewModelUserDataPermission = null;
+                // menuViewModel.userData.permission != null
+                boolean menuViewModelUserDataPermissionJavaLangObjectNull = false;
+                // menuViewModel.userData.permission.category.equals("yes")
+                boolean menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes = false;
+                // menuViewModel.userData.permission.category.equals("yes") ? Constants.CATEGORIES : Constants.ERROR_TOAST
+                java.lang.String menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = null;
+                // menuViewModel.userData != null
+                boolean menuViewModelUserDataJavaLangObjectNull = false;
+                // menuViewModel.userData
+                te.app.evidence.pages.auth.models.UserMainData menuViewModelUserData = null;
+                // menuViewModel.userData.permission.category
+                java.lang.String menuViewModelUserDataPermissionCategory = null;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModelUserData = menuViewModel.userData;
+
+                    menuViewModelUserDataJavaLangObjectNull = (menuViewModelUserData) != (null);
+                    if (menuViewModelUserDataJavaLangObjectNull) {
+
+
+                        menuViewModelUserDataPermission = menuViewModelUserData.getPermission();
+
+                        menuViewModelUserDataPermissionJavaLangObjectNull = (menuViewModelUserDataPermission) != (null);
+                        if (menuViewModelUserDataPermissionJavaLangObjectNull) {
+
+
+                            menuViewModelUserDataPermissionCategory = menuViewModelUserDataPermission.getCategory();
+
+                            menuViewModelUserDataPermissionCategoryJavaLangObjectNull = (menuViewModelUserDataPermissionCategory) != (null);
+                            if (menuViewModelUserDataPermissionCategoryJavaLangObjectNull) {
+
+
+
+                                menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes = menuViewModelUserDataPermissionCategory.equals("yes");
+                                if (menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes) {
+
+
+
+
+                                    menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = te.app.evidence.utils.Constants.CATEGORIES;
+
+                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+            case 8: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -344,81 +427,6 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
-                // menuViewModel.userData.permission.searchCase
-                java.lang.String menuViewModelUserDataPermissionSearchCase = null;
-                // menuViewModel.userData.permission.searchCase.equals("yes") ? Constants.ALL_CASES : Constants.ERROR_TOAST
-                java.lang.String menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = null;
-                // menuViewModel != null
-                boolean menuViewModelJavaLangObjectNull = false;
-                // menuViewModel.userData.permission
-                te.app.evidence.pages.auth.models.Permission menuViewModelUserDataPermission = null;
-                // menuViewModel.userData.permission != null
-                boolean menuViewModelUserDataPermissionJavaLangObjectNull = false;
-                // menuViewModel.userData != null
-                boolean menuViewModelUserDataJavaLangObjectNull = false;
-                // menuViewModel.userData.permission.searchCase != null
-                boolean menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull = false;
-                // menuViewModel.userData
-                te.app.evidence.pages.auth.models.UserMainData menuViewModelUserData = null;
-                // menuViewModel.userData.permission.searchCase.equals("yes")
-                boolean menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes = false;
-
-
-
-                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
-                if (menuViewModelJavaLangObjectNull) {
-
-
-
-
-                    menuViewModelUserData = menuViewModel.userData;
-
-                    menuViewModelUserDataJavaLangObjectNull = (menuViewModelUserData) != (null);
-                    if (menuViewModelUserDataJavaLangObjectNull) {
-
-
-                        menuViewModelUserDataPermission = menuViewModelUserData.getPermission();
-
-                        menuViewModelUserDataPermissionJavaLangObjectNull = (menuViewModelUserDataPermission) != (null);
-                        if (menuViewModelUserDataPermissionJavaLangObjectNull) {
-
-
-                            menuViewModelUserDataPermissionSearchCase = menuViewModelUserDataPermission.getSearchCase();
-
-                            menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull = (menuViewModelUserDataPermissionSearchCase) != (null);
-                            if (menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull) {
-
-
-
-                                menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes = menuViewModelUserDataPermissionSearchCase.equals("yes");
-                                if (menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes) {
-
-
-
-
-                                    menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ALL_CASES;
-
-                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
-                                }
-                                else {
-
-
-
-
-                                    menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
-
-                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
-                                }
-                            }
-                        }
-                    }
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // menuViewModel
-                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
                 // menuViewModel.userData.permission.clients.equals("yes") ? Constants.CLIENTS : Constants.ERROR_TOAST
                 java.lang.String menuViewModelUserDataPermissionClientsEqualsJavaLangStringYesConstantsCLIENTSConstantsERRORTOAST = null;
                 // menuViewModel != null
@@ -490,7 +498,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
-            case 1: {
+            case 3: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -509,7 +517,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
-            case 9: {
+            case 1: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -522,7 +530,9 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 if (menuViewModelJavaLangObjectNull) {
 
 
-                    menuViewModel.logout();
+
+
+                    menuViewModel.buttonAction(te.app.evidence.utils.Constants.PROFILE);
                 }
                 break;
             }
@@ -530,24 +540,24 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel.userData.permission.searchCase
+                java.lang.String menuViewModelUserDataPermissionSearchCase = null;
+                // menuViewModel.userData.permission.searchCase.equals("yes") ? Constants.ALL_CASES : Constants.ERROR_TOAST
+                java.lang.String menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = null;
                 // menuViewModel != null
                 boolean menuViewModelJavaLangObjectNull = false;
-                // menuViewModel.userData.permission.category != null
-                boolean menuViewModelUserDataPermissionCategoryJavaLangObjectNull = false;
                 // menuViewModel.userData.permission
                 te.app.evidence.pages.auth.models.Permission menuViewModelUserDataPermission = null;
                 // menuViewModel.userData.permission != null
                 boolean menuViewModelUserDataPermissionJavaLangObjectNull = false;
-                // menuViewModel.userData.permission.category.equals("yes")
-                boolean menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes = false;
-                // menuViewModel.userData.permission.category.equals("yes") ? Constants.CATEGORIES : Constants.ERROR_TOAST
-                java.lang.String menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = null;
                 // menuViewModel.userData != null
                 boolean menuViewModelUserDataJavaLangObjectNull = false;
+                // menuViewModel.userData.permission.searchCase != null
+                boolean menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull = false;
                 // menuViewModel.userData
                 te.app.evidence.pages.auth.models.UserMainData menuViewModelUserData = null;
-                // menuViewModel.userData.permission.category
-                java.lang.String menuViewModelUserDataPermissionCategory = null;
+                // menuViewModel.userData.permission.searchCase.equals("yes")
+                boolean menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes = false;
 
 
 
@@ -569,31 +579,31 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                         if (menuViewModelUserDataPermissionJavaLangObjectNull) {
 
 
-                            menuViewModelUserDataPermissionCategory = menuViewModelUserDataPermission.getCategory();
+                            menuViewModelUserDataPermissionSearchCase = menuViewModelUserDataPermission.getSearchCase();
 
-                            menuViewModelUserDataPermissionCategoryJavaLangObjectNull = (menuViewModelUserDataPermissionCategory) != (null);
-                            if (menuViewModelUserDataPermissionCategoryJavaLangObjectNull) {
-
-
-
-                                menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes = menuViewModelUserDataPermissionCategory.equals("yes");
-                                if (menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYes) {
+                            menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull = (menuViewModelUserDataPermissionSearchCase) != (null);
+                            if (menuViewModelUserDataPermissionSearchCaseJavaLangObjectNull) {
 
 
 
+                                menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes = menuViewModelUserDataPermissionSearchCase.equals("yes");
+                                if (menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYes) {
 
-                                    menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = te.app.evidence.utils.Constants.CATEGORIES;
 
-                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST);
+
+
+                                    menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ALL_CASES;
+
+                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
                                 }
                                 else {
 
 
 
 
-                                    menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+                                    menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
 
-                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionCategoryEqualsJavaLangStringYesConstantsCATEGORIESConstantsERRORTOAST);
+                                    menuViewModel.buttonAction(menuViewModelUserDataPermissionSearchCaseEqualsJavaLangStringYesConstantsALLCASESConstantsERRORTOAST);
                                 }
                             }
                         }
@@ -601,7 +611,24 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
-            case 4: {
+            case 10: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.changeLanguage();
+                }
+                break;
+            }
+            case 6: {
                 // localize variables for thread safety
                 // menuViewModel.userData.permission.addcases.equals("yes") ? Constants.ADD_CASE : Constants.ERROR_TOAST
                 java.lang.String menuViewModelUserDataPermissionAddcasesEqualsJavaLangStringYesConstantsADDCASEConstantsERRORTOAST = null;
@@ -676,7 +703,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
-            case 2: {
+            case 4: {
                 // localize variables for thread safety
                 // menuViewModel
                 te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
@@ -748,6 +775,25 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                             }
                         }
                     }
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+
+
+                    menuViewModel.buttonAction(te.app.evidence.utils.Constants.PROFILE);
                 }
                 break;
             }

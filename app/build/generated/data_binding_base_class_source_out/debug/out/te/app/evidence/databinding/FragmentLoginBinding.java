@@ -17,6 +17,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.auth.login.LoginViewModel;
 
 public abstract class FragmentLoginBinding extends ViewDataBinding {
@@ -53,6 +54,9 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   @NonNull
   public final AppCompatButton startApp;
 
+  @NonNull
+  public final CustomTextViewRegular tvForgetTimer;
+
   @Bindable
   protected LoginViewModel mViewmodel;
 
@@ -61,7 +65,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
       CustomTextViewMedium appName, CustomTextViewMedium forgetPassword, TextInputLayout inputEmail,
       TextInputLayout inputPassword, AppCompatImageView loginBackground,
       CustomTextViewMedium loginHeader, AppCompatImageView logo, CircularProgressIndicator progress,
-      AppCompatButton startApp) {
+      AppCompatButton startApp, CustomTextViewRegular tvForgetTimer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appLoginHint = appLoginHint;
     this.appLoginTitle = appLoginTitle;
@@ -74,6 +78,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
     this.logo = logo;
     this.progress = progress;
     this.startApp = startApp;
+    this.tvForgetTimer = tvForgetTimer;
   }
 
   public abstract void setViewmodel(@Nullable LoginViewModel viewmodel);

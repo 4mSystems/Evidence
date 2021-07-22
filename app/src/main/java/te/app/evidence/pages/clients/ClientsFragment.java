@@ -24,6 +24,7 @@ import com.google.gson.Gson;
 import java.util.Objects;
 
 import javax.inject.Inject;
+
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -65,6 +66,8 @@ public class ClientsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
+            } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
+                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
             } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
                 viewModel.getClientsAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
@@ -90,7 +93,10 @@ public class ClientsFragment extends BaseFragment {
                 if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getClientsMainData().getNextPageUrl())) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getClientsAdapter().getClientsList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
+                        if (TextUtils.isEmpty(viewModel.searchRequest.getName()))
+                            viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
+                        else
+                            viewModel.search((viewModel.getClientsMainData().getCurrentPage() + 1), false);
                     }
                 }
             }

@@ -17,6 +17,7 @@ import java.util.List;
 
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
+import te.app.evidence.model.base.SearchRequest;
 import te.app.evidence.pages.auth.models.UserMainData;
 import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -31,6 +32,7 @@ public class BaseViewModel extends ViewModel implements Observable {
     public UserMainData userData = UserHelper.getInstance(MyApplication.getInstance()).getUserData();
     List<CategoriesData> categoriesDataList = new ArrayList<>();
     public ObservableBoolean searchProgressVisible = new ObservableBoolean();
+    public SearchRequest searchRequest = new SearchRequest();
 
     public BaseViewModel() {
         mCallBacks = new PropertyChangeRegistry();

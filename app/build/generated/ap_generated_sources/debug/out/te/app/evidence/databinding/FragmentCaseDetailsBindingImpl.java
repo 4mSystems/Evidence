@@ -14,20 +14,19 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.client_data, 17);
-        sViewsWithIds.put(R.id.client_data_container, 18);
-        sViewsWithIds.put(R.id.tv_invetationNum_text, 19);
-        sViewsWithIds.put(R.id.v1, 20);
-        sViewsWithIds.put(R.id.court_text, 21);
-        sViewsWithIds.put(R.id.v2, 22);
-        sViewsWithIds.put(R.id.paper_type_text, 23);
-        sViewsWithIds.put(R.id.v3, 24);
-        sViewsWithIds.put(R.id.paper_number_text, 25);
-        sViewsWithIds.put(R.id.v6, 26);
-        sViewsWithIds.put(R.id.session_date_text, 27);
-        sViewsWithIds.put(R.id.v7, 28);
-        sViewsWithIds.put(R.id.status_text, 29);
-        sViewsWithIds.put(R.id.client_cases, 30);
+        sViewsWithIds.put(R.id.client_data, 18);
+        sViewsWithIds.put(R.id.client_data_container, 19);
+        sViewsWithIds.put(R.id.tv_invetationNum_text, 20);
+        sViewsWithIds.put(R.id.v1, 21);
+        sViewsWithIds.put(R.id.court_text, 22);
+        sViewsWithIds.put(R.id.v2, 23);
+        sViewsWithIds.put(R.id.paper_type_text, 24);
+        sViewsWithIds.put(R.id.v3, 25);
+        sViewsWithIds.put(R.id.paper_number_text, 26);
+        sViewsWithIds.put(R.id.v6, 27);
+        sViewsWithIds.put(R.id.session_date_text, 28);
+        sViewsWithIds.put(R.id.v7, 29);
+        sViewsWithIds.put(R.id.status_text, 30);
         sViewsWithIds.put(R.id.view_id, 31);
         sViewsWithIds.put(R.id.home_item2, 32);
         sViewsWithIds.put(R.id.view_mohdr, 33);
@@ -43,13 +42,15 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback43;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
     private final android.view.View.OnClickListener mCallback40;
     @Nullable
     private final android.view.View.OnClickListener mCallback38;
     @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -59,44 +60,45 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     }
     private FragmentCaseDetailsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.button.MaterialButton) bindings[30]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
-            , (androidx.cardview.widget.CardView) bindings[18]
+            , (com.google.android.material.button.MaterialButton) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
+            , (androidx.cardview.widget.CardView) bindings[19]
             , (com.google.android.material.button.MaterialButton) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[21]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[22]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
             , (androidx.constraintlayout.helper.widget.Flow) bindings[37]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[9]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[32]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[11]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[13]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[15]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[12]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[14]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[25]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[26]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[23]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[24]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[27]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[28]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[29]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[30]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[19]
-            , (android.view.View) bindings[20]
-            , (android.view.View) bindings[22]
-            , (android.view.View) bindings[24]
-            , (android.view.View) bindings[26]
-            , (android.view.View) bindings[28]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[20]
+            , (android.view.View) bindings[21]
+            , (android.view.View) bindings[23]
+            , (android.view.View) bindings[25]
+            , (android.view.View) bindings[27]
+            , (android.view.View) bindings[29]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[36]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[35]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[31]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[34]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[33]
             );
+        this.clientCases.setTag(null);
         this.clientNotes.setTag(null);
         this.courtValue.setTag(null);
         this.homeCases.setTag(null);
@@ -117,11 +119,12 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         this.tvInvetationNum.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -197,6 +200,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
             mDirtyFlags = 0;
         }
         java.lang.String viewmodelCaseDetailsNumbersKhesm = null;
+        boolean viewmodelCaseDetailsCaseDataJavaLangObjectNull = false;
         int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumberViewmodelCaseDetailsNumbersSessionsNumberJavaLangString = null;
         java.lang.String homeMohdrsAndroidStringNotesConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumberViewmodelCaseDetailsNumbersNotesNumberJavaLangString = null;
@@ -205,6 +209,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         java.lang.String homeCasesAndroidStringClientsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersClientsViewmodelCaseDetailsNumbersClientsJavaLangString = null;
         boolean TextUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumber1 = false;
         boolean textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber = false;
+        int viewmodelCaseDetailsCaseDataJavaLangObjectNullViewVISIBLEViewGONE = 0;
         java.lang.String textUtilsIsEmptyViewmodelCaseDetailsNumbersClientsViewmodelCaseDetailsNumbersClientsJavaLangString = null;
         java.lang.String homeUsersAndroidStringOpponentsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersKhesmViewmodelCaseDetailsNumbersKhesmJavaLangString = null;
         te.app.evidence.pages.cases.models.cases.Cases viewmodelCaseDetailsCaseData = null;
@@ -256,6 +261,16 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
 
 
+                // read viewmodel.caseDetails.caseData != null
+                viewmodelCaseDetailsCaseDataJavaLangObjectNull = (viewmodelCaseDetailsCaseData) != (null);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(viewmodelCaseDetailsCaseDataJavaLangObjectNull) {
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x80L;
+                }
+            }
                 if (viewmodelCaseDetailsCaseData != null) {
                     // read viewmodel.caseDetails.caseData.invetationNum
                     viewmodelCaseDetailsCaseDataInvetationNum = viewmodelCaseDetailsCaseData.getInvetationNum();
@@ -284,10 +299,8 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
 
 
-                if (viewmodelCaseDetailsCaseDataCategory != null) {
-                    // read viewmodel.caseDetails.caseData.category.name
-                    viewmodelCaseDetailsCaseDataCategoryName = viewmodelCaseDetailsCaseDataCategory.getName();
-                }
+                // read viewmodel.caseDetails.caseData != null ? View.VISIBLE : View.GONE
+                viewmodelCaseDetailsCaseDataJavaLangObjectNullViewVISIBLEViewGONE = ((viewmodelCaseDetailsCaseDataJavaLangObjectNull) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 // read TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm)
                 textUtilsIsEmptyViewmodelCaseDetailsNumbersKhesm = android.text.TextUtils.isEmpty(viewmodelCaseDetailsNumbersKhesm);
                 // read TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber)
@@ -298,6 +311,10 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 textUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumber = android.text.TextUtils.isEmpty(viewmodelCaseDetailsNumbersAttachmentsNumber);
                 // read TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber)
                 textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber = android.text.TextUtils.isEmpty(viewmodelCaseDetailsNumbersSessionsNumber);
+                if (viewmodelCaseDetailsCaseDataCategory != null) {
+                    // read viewmodel.caseDetails.caseData.category.name
+                    viewmodelCaseDetailsCaseDataCategoryName = viewmodelCaseDetailsCaseDataCategory.getName();
+                }
 
 
                 // read !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm)
@@ -312,6 +329,14 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 TextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber1 = !textUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumber;
             if((dirtyFlags & 0x7L) != 0) {
                 if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersKhesm1) {
+                        dirtyFlags |= 0x4000L;
+                }
+                else {
+                        dirtyFlags |= 0x2000L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber1) {
                         dirtyFlags |= 0x1000L;
                 }
                 else {
@@ -319,7 +344,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumber1) {
+                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersClients1) {
                         dirtyFlags |= 0x400L;
                 }
                 else {
@@ -327,19 +352,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
-                if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersClients1) {
-                        dirtyFlags |= 0x100L;
-                }
-                else {
-                        dirtyFlags |= 0x80L;
-                }
-            }
-            if((dirtyFlags & 0x7L) != 0) {
                 if(TextUtilsIsEmptyViewmodelCaseDetailsNumbersAttachmentsNumber1) {
-                        dirtyFlags |= 0x4000L;
+                        dirtyFlags |= 0x10000L;
                 }
                 else {
-                        dirtyFlags |= 0x2000L;
+                        dirtyFlags |= 0x8000L;
                 }
             }
             if((dirtyFlags & 0x7L) != 0) {
@@ -419,11 +436,12 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.clientNotes.setOnClickListener(mCallback36);
-            this.homeItem1.setOnClickListener(mCallback37);
-            this.homeItem3.setOnClickListener(mCallback38);
-            this.homeItem4.setOnClickListener(mCallback39);
-            this.homeItem5.setOnClickListener(mCallback40);
+            this.clientCases.setOnClickListener(mCallback39);
+            this.clientNotes.setOnClickListener(mCallback38);
+            this.homeItem1.setOnClickListener(mCallback40);
+            this.homeItem3.setOnClickListener(mCallback41);
+            this.homeItem4.setOnClickListener(mCallback42);
+            this.homeItem5.setOnClickListener(mCallback43);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -439,6 +457,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.homeMohdrs, homeMohdrsAndroidStringNotesConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersNotesNumberViewmodelCaseDetailsNumbersNotesNumberJavaLangString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.homeSession, homeSessionAndroidStringSessionsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersSessionsNumberViewmodelCaseDetailsNumbersSessionsNumberJavaLangString);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.homeUsers, homeUsersAndroidStringOpponentsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelCaseDetailsNumbersKhesmViewmodelCaseDetailsNumbersKhesmJavaLangString);
+            this.mboundView0.setVisibility(viewmodelCaseDetailsCaseDataJavaLangObjectNullViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperNumberValue, viewmodelCaseDetailsCaseDataCourt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperTypeValue, viewmodelCaseDetailsCaseDataCircleNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, viewmodelCaseDetailsCaseDataFirstSessionDate);
@@ -450,25 +469,6 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CLIENTS);
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -484,11 +484,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
 
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_SESSIONS);
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.PDF);
                 }
                 break;
             }
-            case 5: {
+            case 6: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -507,6 +507,25 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
                 break;
             }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -522,7 +541,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
 
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.KHESM);
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_SESSIONS);
                 }
                 break;
             }
@@ -545,6 +564,25 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
                 break;
             }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.KHESM);
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -557,14 +595,16 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         flag 4 (0x5L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
         flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
         flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.sessionsNumber) ? viewmodel.caseDetails.numbers.sessionsNumber : ""
-        flag 7 (0x8L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
-        flag 8 (0x9L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
-        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
-        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
-        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
-        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
-        flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
-        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
+        flag 7 (0x8L): viewmodel.caseDetails.caseData != null ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewmodel.caseDetails.caseData != null ? View.VISIBLE : View.GONE
+        flag 9 (0xaL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
+        flag 10 (0xbL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.clients) ? viewmodel.caseDetails.numbers.clients : ""
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
+        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.notesNumber) ? viewmodel.caseDetails.numbers.notesNumber : ""
+        flag 13 (0xeL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
+        flag 14 (0xfL): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.khesm) ? viewmodel.caseDetails.numbers.khesm : ""
+        flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
+        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.caseDetails.numbers.attachmentsNumber) ? viewmodel.caseDetails.numbers.attachmentsNumber : ""
     flag mapping end*/
     //end
 }

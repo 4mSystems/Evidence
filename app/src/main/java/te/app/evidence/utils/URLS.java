@@ -3,6 +3,7 @@ package te.app.evidence.utils;
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
     public final static String CLIENTS = "clients?page=";
+    public final static String SEARCH_CLIENTS = "search-clients?page=";
     public final static String HOME = "home_data";
     public final static String ADD_CLIENTS = "add_client";
 
@@ -12,7 +13,7 @@ public class URLS {
     public final static String REGISTER = "user/register";
     public final static String BOARD = "settings/sliders";
     public final static String CONFIRM_CODE = "user/verify-code";
-    public final static String UPDATE_PROFILE = "user/update-profile";
+    public final static String UPDATE_PROFILE = "update_profile";
     public static final String FORGET_PASSWORD = "user/send-code";
     public static final String CHANGE_PASSWORD = "forget-password";
 
@@ -60,6 +61,7 @@ public class URLS {
     public static final String CASE_CLIENTS = "caseClients/data_by_id/";
     public static final String DELETE_CLIENT_FROM_CASE = "caseClients/destroy";
     public static final String CASE_SESSIONS = "case/sessions/";
+    public static final String SEARCH_SESSIONS = "search-session?page=";
     public static final String CHANGE_SESSION_STATUS = "changeSessionStatus/";
     public static final String DELETE_SESSION = "deleteSession/";
     public static final String ADD_NEW_SESSION = "addSession";
@@ -67,6 +69,7 @@ public class URLS {
     public static final String CHANGE_SESSION_NOTE_STATUS = "changeNoteStatus/";
     public static final String ADD_CLIENT_CASE = "caseClients/store";
     public static final String CASE_SESSION_NOTES = "sessionsNote/";
+    public static final String CASE_SESSION_NOTES_SEARCH = "search-note?page=";
     public static final String DELETE_SESSION_NOTE = "removeNoteStatus/";
     public static final String EDIT_SESSION_NOTE = "editSessionNote";
     public static final String CASE_ATTACHMENTS = "caseAttachment/";

@@ -1,7 +1,6 @@
 package te.app.evidence.pages.sessions;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -15,23 +14,19 @@ import android.view.Window;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
 import javax.inject.Inject;
 
-import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
-import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -114,7 +109,10 @@ public class SessionNotesFragment extends BaseFragment {
                 if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getNotesMainData().getNextPageUrl())) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getNotesAdapter().getNotesList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.sessionNotes((viewModel.getNotesMainData().getCurrentPage() + 1), false);
+                        if (TextUtils.isEmpty(viewModel.searchRequest.getNote()))
+                            viewModel.sessionNotes((viewModel.getNotesMainData().getCurrentPage() + 1), false);
+                        else
+                            viewModel.search((viewModel.getNotesMainData().getCurrentPage() + 1), false);
                     }
                 }
             }

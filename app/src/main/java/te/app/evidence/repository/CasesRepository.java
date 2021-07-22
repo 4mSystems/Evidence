@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.SearchRequest;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.AddCaseRequest;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
@@ -112,6 +113,11 @@ public class CasesRepository extends BaseRepository {
                 Constants.CASE_SESSIONS, showProgress);
     }
 
+    public Disposable searchSessions(int page, boolean showProgress, SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEARCH_SESSIONS + page, searchRequest, CaseSessionsResponse.class,
+                Constants.CASE_SESSIONS, showProgress);
+    }
+
     public Disposable ChangeSessionStatus(int sessionId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHANGE_SESSION_STATUS + sessionId, new Object(), ChangeStatusResponse.class,
                 Constants.CHANGE_STATUS, true);
@@ -134,6 +140,11 @@ public class CasesRepository extends BaseRepository {
 
     public Disposable getSessionNotes(int sessionId, int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_SESSION_NOTES + sessionId + "?page=" + page, new Object(), SessionNotesResponse.class,
+                Constants.SESSION_NOTES, showProgress);
+    }
+
+    public Disposable searchNotes(int page, boolean showProgress, SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CASE_SESSION_NOTES_SEARCH + page, searchRequest, SessionNotesResponse.class,
                 Constants.SESSION_NOTES, showProgress);
     }
 

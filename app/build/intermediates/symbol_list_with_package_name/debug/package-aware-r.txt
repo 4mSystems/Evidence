@@ -3002,6 +3002,7 @@ drawable ic_add_category
 drawable ic_add_client
 drawable ic_add_session
 drawable ic_add_user
+drawable ic_address
 drawable ic_airplane
 drawable ic_airplanemode_inactive_24dp
 drawable ic_arrow_down
@@ -3038,6 +3039,7 @@ drawable ic_note_add
 drawable ic_pdf
 drawable ic_permission_off
 drawable ic_permission_on
+drawable ic_profile_camera
 drawable ic_reports
 drawable ic_search
 drawable ic_session_notes
@@ -3370,6 +3372,7 @@ id img_airplane
 id img_home_bar_menu
 id img_login_logo
 id info
+id input_address
 id input_case
 id input_cat
 id input_circle
@@ -3380,8 +3383,12 @@ id input_email
 id input_invite_type
 id input_khesm
 id input_khesms
+id input_name
 id input_new_password
 id input_password
+id input_password_confirm
+id input_phone
+id input_register_email
 id input_search
 id input_whom
 id invisible
@@ -3406,6 +3413,7 @@ id list_item
 id ll_base_action_bar_container
 id ll_base_container
 id loading
+id login
 id login_background
 id login_header
 id logo
@@ -3561,6 +3569,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id search
 id searchContainer
 id search_badge
 id search_bar
@@ -3718,6 +3727,7 @@ id up
 id useLogo
 id user_address_text
 id user_address_value
+id user_img
 id user_phone_text
 id user_phone_value
 id user_type
@@ -3748,6 +3758,7 @@ id view_value
 id visible
 id visible_removing_fragment_view_tag
 id vv_navigation_drawer_image
+id webview
 id withText
 id withinBounds
 id worm
@@ -3826,6 +3837,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_base
 layout activity_main
+layout activity_pdf_downloader
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3843,6 +3855,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_no_internet
+layout download_dialog
 layout exit_layout
 layout fragment_add_bailiffs
 layout fragment_add_case
@@ -3868,6 +3881,7 @@ layout fragment_home
 layout fragment_login
 layout fragment_onboard
 layout fragment_profile
+layout fragment_register
 layout fragment_reporter_details
 layout fragment_search_clients
 layout fragment_session_notes
@@ -4182,6 +4196,8 @@ string doc_type
 string doc_type_ad
 string document
 string donot_have_account
+string download_in_progress
+string download_success
 string driver_location_url
 string edit
 string edit_add_attachments
@@ -4454,6 +4470,7 @@ string register_city
 string register_city_hint
 string register_header
 string register_last_name
+string register_login
 string register_name
 string register_password
 string register_phone
@@ -5448,6 +5465,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

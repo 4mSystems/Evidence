@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -27,15 +28,20 @@ public abstract class FragmentSessionNotesBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView rcNotes;
 
+  @NonNull
+  public final AppCompatImageButton search;
+
   @Bindable
   protected SessionNotesViewModel mViewmodel;
 
   protected FragmentSessionNotesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcNotes) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcNotes,
+      AppCompatImageButton search) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.rcNotes = rcNotes;
+    this.search = search;
   }
 
   public abstract void setViewmodel(@Nullable SessionNotesViewModel viewmodel);

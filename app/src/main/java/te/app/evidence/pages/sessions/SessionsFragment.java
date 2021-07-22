@@ -111,7 +111,10 @@ public class SessionsFragment extends BaseFragment {
                 if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getSessionMainData().getNextPageUrl())) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getSessionsAdapter().getSessionItemList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.sessions((viewModel.getSessionMainData().getCurrentPage() + 1), false);
+                        if (TextUtils.isEmpty(viewModel.searchRequest.getSessionDate()))
+                            viewModel.sessions((viewModel.getSessionMainData().getCurrentPage() + 1), false);
+                        else
+                            viewModel.search((viewModel.getSessionMainData().getCurrentPage() + 1), false);
                     }
                 }
             }

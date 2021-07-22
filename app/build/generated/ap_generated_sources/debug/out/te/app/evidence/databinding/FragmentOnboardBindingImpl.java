@@ -19,7 +19,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
     // views
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback4;
+    private final android.view.View.OnClickListener mCallback5;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -37,7 +37,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback5 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -111,7 +111,7 @@ public class FragmentOnboardBindingImpl extends FragmentOnboardBinding implement
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.startApp.setOnClickListener(mCallback4);
+            this.startApp.setOnClickListener(mCallback5);
         }
     }
     // Listener Stub Implementations

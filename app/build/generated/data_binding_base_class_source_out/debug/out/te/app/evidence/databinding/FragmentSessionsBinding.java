@@ -6,20 +6,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
-import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
+import te.app.evidence.customViews.views.DateEditText;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel;
 
 public abstract class FragmentSessionsBinding extends ViewDataBinding {
   @NonNull
-  public final TextInputEditText inputSearch;
+  public final DateEditText inputSearch;
 
   @NonNull
   public final CircularProgressIndicator progress;
@@ -27,15 +28,20 @@ public abstract class FragmentSessionsBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView rcClients;
 
+  @NonNull
+  public final AppCompatImageButton search;
+
   @Bindable
   protected SessionsViewModel mViewmodel;
 
   protected FragmentSessionsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcClients) {
+      DateEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcClients,
+      AppCompatImageButton search) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.rcClients = rcClients;
+    this.search = search;
   }
 
   public abstract void setViewmodel(@Nullable SessionsViewModel viewmodel);

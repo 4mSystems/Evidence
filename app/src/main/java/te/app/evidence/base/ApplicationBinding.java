@@ -6,6 +6,9 @@ import android.widget.ImageView;
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
+import te.app.evidence.R;
 import te.app.evidence.utils.helper.AppHelper;
 
 public class ApplicationBinding {
@@ -15,6 +18,12 @@ public class ApplicationBinding {
     public static void color(ImageView imageView, String color) {
         if (color != null && !color.equals("") && color.charAt(0) == '#') {
             imageView.setBackgroundColor(Color.parseColor(color));
+        }
+    }
+    @BindingAdapter("imageMarketUrl")
+    public static void loadMarketImage(ImageView imageView, Object image) {
+        if (image instanceof String) {
+            Picasso.get().load((String) image).placeholder(R.mipmap.ic_launcher_round).into(imageView);
         }
     }
 

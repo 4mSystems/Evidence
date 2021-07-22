@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [androidx.databinding:databinding-adapters:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/653c0f946c5315008bbf10455b56778e/databinding-adapters-4.1.3/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/718c4683e1aa43a9f8d30ed4fc22f412/databinding-runtime-4.1.3/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:2:1-14:12
@@ -56,6 +56,7 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9a1aefd7a6b2e42e44add4b02e6a2d0c/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ff18b858c20b71a11feaedffcb96ee4b/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7597f5fec237d87aa33af9076b050b3b/jetified-percentagechartview-0.3.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3808c758a3525ae49908c10928c8c363/jetified-viewbinding-4.1.3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a160a7b8c789b3a5e3a9351e6acde76d/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ea948e6e5b4433111748f9f65d62cb38/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -93,22 +94,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/e
 MERGED from [androidx.print:print:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/324a36e40540efe354b61fba03801630/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3e4df694e62c67b0154a9700fff0907b/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f9fdcbd507130267461cce88aa01168e/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
 	package
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:4:5-30
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-61:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:11-69
@@ -129,13 +130,13 @@ ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:9:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:10:5-11:40
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:10:5-12:40
 	tools:ignore
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:11:9-37
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:12:9-37
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:10:22-78
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:11:9-65
 uses-permission#android.permission.INTERNET
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:12:5-67
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:5-67
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:11:5-67
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/78c647b51aa9a1ce0e8bd001675b19c1/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:8:5-67
@@ -153,9 +154,9 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /h
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/63c064656a8e7aaa441294ea04028986/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/63c064656a8e7aaa441294ea04028986/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:12:22-64
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:5-79
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:14:5-79
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:12:5-79
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ee4b9d7c82c7c791fbf1c29863d4e493/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:12:5-79
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/6a23ea8fde499b8c753a1c629c788d8c/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:22:5-79
@@ -177,9 +178,15 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e111502eba369acc7517c69ed6a1f87d/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e111502eba369acc7517c69ed6a1f87d/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:13:22-76
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:14:22-76
+queries
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:15:5-17:15
+package#te.app.evidence
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:9-51
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:18-48
 application
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:15:5-59:19
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:5-62:19
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/0f12eff98186791d169dd8720173cce0/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/0f12eff98186791d169dd8720173cce0/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-2/files-2.1/1256201b925291c10163ce61c277858a/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
@@ -230,6 +237,8 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar
 MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/dc7968bc43e49a274cae5f821ba5e021/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9a1aefd7a6b2e42e44add4b02e6a2d0c/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-2/files-2.1/9a1aefd7a6b2e42e44add4b02e6a2d0c/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
+MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/529042315385d8413ce2368d9dfa18df/core-1.5.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/529042315385d8413ce2368d9dfa18df/core-1.5.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/f11514eeb4b62c711b59a518896cffda/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
@@ -241,93 +250,97 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e111502eba369acc7517c69ed6a1f87d/jetified-transport-runtime-3.0.0/AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/e111502eba369acc7517c69ed6a1f87d/jetified-transport-runtime-3.0.0/AndroidManifest.xml:25:5-39:19
 	android:requestLegacyExternalStorage
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:23:9-52
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-52
 	android:launchMode
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:22:9-40
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:25:9-40
 	tools:ignore
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:29:9-35
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:30:9-35
 	android:largeHeap
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:21:9-33
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:24:9-33
 	android:icon
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:19:9-43
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:22:9-43
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/529042315385d8413ce2368d9dfa18df/core-1.5.0/AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:24:9-35
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:27:9-35
 	android:label
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:20:9-41
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:23:9-41
 		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/dc7968bc43e49a274cae5f821ba5e021/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:13:9-41
 	android:hardwareAccelerated
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:9-43
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:21:9-43
 	tools:targetApi
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:28:9-28
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:32:9-28
 	android:allowBackup
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:17:9-36
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:20:9-36
 		REJECTED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-2/files-2.1/dc7968bc43e49a274cae5f821ba5e021/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:25:9-40
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:28:9-40
 	tools:replace
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:27:9-58
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:31:9-58
 	android:usesCleartextTraffic
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-44
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:29:9-44
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:9-58
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:19:9-58
 meta-data#com.google.android.gms.version
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:30:9-32:69
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:33:9-35:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a3d12d1fc89a97f738d5feb33bafe6f6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a3d12d1fc89a97f738d5feb33bafe6f6/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:32:13-66
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:35:13-66
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:31:13-58
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:34:13-58
 meta-data#com.google.firebase.messaging.default_notification_icon
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:33:9-35:54
-	android:resource
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:35:13-51
-	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:34:13-83
-meta-data#com.google.firebase.messaging.default_notification_color
 ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:36:9-38:54
 	android:resource
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:38:13-51
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:37:13-84
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:37:13-83
+meta-data#com.google.firebase.messaging.default_notification_color
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:39:9-41:54
+	android:resource
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:41:13-51
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:40:13-84
 meta-data#com.google.android.geo.API_KEY
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:39:9-41:50
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:42:9-44:50
 	android:value
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:41:13-47
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:44:13-47
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:40:13-58
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:43:13-58
 activity#te.app.evidence.activity.MainActivity
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:43:9-46:69
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:46:9-49:70
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:46:13-67
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:49:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:45:13-74
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:44:13-65
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:47:13-65
+activity#te.app.evidence.activity.PdftActivity
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:9-59
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:19-56
 activity#te.app.evidence.activity.BaseActivity
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:9-58:20
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:9-61:20
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:13-67
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:13-74
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:49:13-65
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-65
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-57:29
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:13-60:29
 action#android.intent.action.MAIN
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:17-69
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:17-69
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:25-66
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:25-66
 action#android.intent.action.VIEW
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:17-69
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:17-69
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:25-66
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:17-77
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:17-77
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:27-74
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:27-74
 uses-sdk
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
@@ -436,6 +449,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/ff18b858c20b71a11feaedffcb96ee4b/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7597f5fec237d87aa33af9076b050b3b/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/7597f5fec237d87aa33af9076b050b3b/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3808c758a3525ae49908c10928c8c363/jetified-viewbinding-4.1.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:4.1.3] /home/elnagar/.gradle/caches/transforms-2/files-2.1/3808c758a3525ae49908c10928c8c363/jetified-viewbinding-4.1.3/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.3.0] /home/elnagar/.gradle/caches/transforms-2/files-2.1/a160a7b8c789b3a5e3a9351e6acde76d/jetified-appcompat-resources-1.3.0/AndroidManifest.xml:20:5-22:41

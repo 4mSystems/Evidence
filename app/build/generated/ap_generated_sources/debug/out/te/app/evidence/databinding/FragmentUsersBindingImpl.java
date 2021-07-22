@@ -22,7 +22,7 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback5;
+    private final android.view.View.OnClickListener mCallback6;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,7 +43,7 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
         this.rcUsers.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback5 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -176,7 +176,7 @@ public class FragmentUsersBindingImpl extends FragmentUsersBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback5);
+            this.mboundView3.setOnClickListener(mCallback6);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

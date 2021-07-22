@@ -1,11 +1,8 @@
 package te.app.evidence.pages.home.models;
 
-import java.util.List;
-
 import com.google.gson.annotations.SerializedName;
 
-import te.app.evidence.pages.mohdrs.models.ReportersData;
-import te.app.evidence.pages.sessions.models.SessionItem;
+import te.app.evidence.pages.mohdrs.models.ReportersMainData;
 import te.app.evidence.pages.sessions.models.SessionMainData;
 
 public class HomeData {
@@ -13,9 +10,8 @@ public class HomeData {
     @SerializedName("coming_session")
     private SessionMainData comingSession;
 
-//    @SerializedName("mohder")
-//    private List<ReportersData> mohder;
-
+    @SerializedName("mohder")
+    private ReportersMainData reportersMainData;
     @SerializedName("previous_session")
     private SessionMainData previousSession;
 
@@ -26,9 +22,9 @@ public class HomeData {
         return comingSession;
     }
 
-//    public List<ReportersData> getMohder() {
-//        return mohder;
-//    }
+    public ReportersMainData getReportersMainData() {
+        return reportersMainData;
+    }
 
     public SessionMainData getPreviousSession() {
         return previousSession;

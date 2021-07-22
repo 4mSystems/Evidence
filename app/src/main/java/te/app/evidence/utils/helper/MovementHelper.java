@@ -29,6 +29,7 @@ import com.google.gson.Gson;
 import te.app.evidence.PassingObject;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
+import te.app.evidence.activity.PdftActivity;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.utils.Constants;
@@ -128,6 +129,12 @@ public class MovementHelper {
             intent.putExtra(Constants.NAME_BAR, name);
         }
         LauncherHelper.execute(intent, request, from);
+    }
+
+    public static void startPdfActivityForResultWithBundle(Context from, String url) {
+        Intent intent = new Intent(from, PdftActivity.class);
+        intent.putExtra(Constants.BUNDLE, url);
+        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
     }
 
     public static void finishWithResult(PassingObject passingObject, Context context) {

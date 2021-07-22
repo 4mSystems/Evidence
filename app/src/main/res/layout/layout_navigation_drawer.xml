@@ -80,6 +80,7 @@
                             android:layout_height="@dimen/dp60h"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp25h"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.PROFILE)}"
                             android:src="@drawable/logo"
                             app:civ_border_color="@color/white"
                             app:civ_border_width="4dp" />
@@ -91,6 +92,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp8h"
                             android:text="@{menuViewModel.userData.userData.name}"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.PROFILE)}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 

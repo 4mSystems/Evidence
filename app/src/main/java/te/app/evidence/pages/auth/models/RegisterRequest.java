@@ -2,7 +2,12 @@ package te.app.evidence.pages.auth.models;
 
 import android.text.TextUtils;
 
+import androidx.databinding.ObservableField;
+
 import com.google.gson.annotations.SerializedName;
+
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.validation.Validate;
 
 public class RegisterRequest {
     @SerializedName("name")
@@ -12,16 +17,16 @@ public class RegisterRequest {
     @SerializedName("password")
     private String password;
     private String confirmPassword;
-    @SerializedName("city_id")
-    private String city_id;
-    @SerializedName("type")
-    private String type;
-    @SerializedName("firebase_token")
-    private String firebase_token;
     @SerializedName("email")
     private String email;
-
-    private int validator = 0;
+    @SerializedName("address")
+    private String address;
+    public transient ObservableField<String> nameError = new ObservableField<>();
+    public transient ObservableField<String> phoneError = new ObservableField<>();
+    public transient ObservableField<String> passwordError = new ObservableField<>();
+    public transient ObservableField<String> confirmError = new ObservableField<>();
+    public transient ObservableField<String> emailError = new ObservableField<>();
+    public transient ObservableField<String> addressError = new ObservableField<>();
 
 
     public RegisterRequest() {
@@ -32,44 +37,36 @@ public class RegisterRequest {
     }
 
     public boolean isValid() {
-        return (!TextUtils.isEmpty(name)
-                && !TextUtils.isEmpty(phone)
-                && !TextUtils.isEmpty(password)
-                && !TextUtils.isEmpty(email)
-                && !TextUtils.isEmpty(type)
-                && !TextUtils.isEmpty(city_id)
-
-        );
+        boolean valid = true;
+        if (!Validate.isValid(name, Constants.FIELD)) {
+            nameError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(email, Constants.EMAIL)) {
+            emailError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(phone, Constants.FIELD)) {
+            phoneError.set(Validate.error);
+            valid = false;
+        }  else if (!Validate.isValid(address, Constants.FIELD)) {
+            addressError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(password, Constants.FIELD)) {
+            passwordError.set(Validate.error);
+            valid = false;
+        } else if (!Validate.isValid(confirmPassword, Constants.FIELD)) {
+            confirmError.set(Validate.error);
+            valid = false;
+        }
+        return valid;
     }
 
-    public String getType() {
-        return type;
+    public String getAddress() {
+        return address;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getFirebase_token() {
-        return firebase_token;
-    }
-
-    public void setFirebase_token(String firebase_token) {
-        this.firebase_token = firebase_token;
-    }
-
-    public boolean isUpdateValid() {
-        return (!TextUtils.isEmpty(name)
-                && !TextUtils.isEmpty(phone)
-                && !TextUtils.isEmpty(email)
-                && !TextUtils.isEmpty(type)
-                && !TextUtils.isEmpty(city_id)
-
-        );
-    }
-
-    public boolean isPasswordsValid() {
-        return (!TextUtils.isEmpty(password) && !TextUtils.isEmpty(confirmPassword));
+    public void setAddress(String address) {
+        addressError.set(null);
+        this.address = address;
     }
 
     public String getConfirmPassword() {
@@ -77,6 +74,7 @@ public class RegisterRequest {
     }
 
     public void setConfirmPassword(String confirmPassword) {
+        confirmError.set(null);
         this.confirmPassword = confirmPassword;
     }
 
@@ -85,6 +83,7 @@ public class RegisterRequest {
     }
 
     public void setName(String name) {
+        nameError.set(null);
         this.name = name;
     }
 
@@ -93,6 +92,7 @@ public class RegisterRequest {
     }
 
     public void setPhone(String phone) {
+        phoneError.set(null);
         this.phone = phone;
     }
 
@@ -101,6 +101,7 @@ public class RegisterRequest {
     }
 
     public void setPassword(String password) {
+        passwordError.set(null);
         this.password = password;
     }
 
@@ -109,15 +110,8 @@ public class RegisterRequest {
     }
 
     public void setEmail(String email) {
+        emailError.set(null);
         this.email = email;
-    }
-
-    public String getCity_id() {
-        return city_id;
-    }
-
-    public void setCity_id(String city_id) {
-        this.city_id = city_id;
     }
 
 

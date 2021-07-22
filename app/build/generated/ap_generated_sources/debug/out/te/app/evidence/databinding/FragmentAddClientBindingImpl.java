@@ -40,11 +40,11 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback43;
+    private final android.view.View.OnClickListener mCallback47;
     @Nullable
-    private final android.view.View.OnClickListener mCallback42;
+    private final android.view.View.OnClickListener mCallback45;
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
+    private final android.view.View.OnClickListener mCallback46;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -309,9 +309,9 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -769,10 +769,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback44);
-            this.catName.setOnClickListener(mCallback43);
+            this.btnSave.setOnClickListener(mCallback47);
+            this.catName.setOnClickListener(mCallback46);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
-            this.clientType.setOnClickListener(mCallback42);
+            this.clientType.setOnClickListener(mCallback45);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.clientType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, clientTypeandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
@@ -830,7 +830,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -843,7 +843,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.showCategories();
+                    viewmodel.addNewClient();
                 }
                 break;
             }
@@ -864,7 +864,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 }
                 break;
             }
-            case 3: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -877,7 +877,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.addNewClient();
+                    viewmodel.showCategories();
                 }
                 break;
             }

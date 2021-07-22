@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.SearchRequest;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
@@ -38,6 +39,11 @@ public class ClientsRepository extends BaseRepository {
 
     public Disposable getClients(int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENTS + page, new Object(), ClientsResponse.class,
+                Constants.CLIENTS, showProgress);
+    }
+
+    public Disposable search(int page, boolean showProgress, SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEARCH_CLIENTS + page, searchRequest, ClientsResponse.class,
                 Constants.CLIENTS, showProgress);
     }
 

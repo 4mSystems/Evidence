@@ -55,7 +55,7 @@
     <string name="password_hint">قم بإدخال كلمة المرور</string>
     <string name="register_header">إنشاء حساب جديد</string>
     <string name="register_name">الإسم <font fgcolor='#E80101'>*</font></string>
-    <string name="name_hint">اكتب الاسم بالكامل</string>
+    <string name="name_hint">إسم المستخدم</string>
     <string name="register_phone"> رقم الجوال<font fgcolor='#E80101'>*</font></string>
     <string name="register_password">كلمة المرور</string>
     <string name="register">إنشاء حساب جديد</string>
@@ -453,5 +453,8 @@
     <string name="add_new_mohdr">إضافة محضر جديد</string>
     <string name="no_permission">عفوا لا يوجد لديك صلاحيات للدخول لهذه الصفحه</string>
     <string name="load_more">رؤية المزيد</string>
+    <string name="register_login">إنشاء حساب جديد</string>
+    <string name="download_success">تم تحميل الملف بنجاح</string>
+    <string name="download_in_progress">جارى تحميل ملفك يرجى الانتظار</string>
 
 </resources>

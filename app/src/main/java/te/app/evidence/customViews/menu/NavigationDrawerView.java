@@ -29,6 +29,7 @@ import te.app.evidence.pages.categories.CategoriesFragment;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -84,6 +85,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.replaceFragment(context, new HomeFragment(), "");
             } else if (o.equals(Constants.CLIENTS)) {
                 MovementHelper.startActivity(context, ClientsFragment.class.getName(), ResourceManager.getString(R.string.clients), null);
+            } else if (o.equals(Constants.PROFILE)) {
+                MovementHelper.startActivity(context, ProfileFragment.class.getName(), ResourceManager.getString(R.string.profile_edit), null);
             } else if (o.equals(Constants.USERS)) {
                 MovementHelper.startActivity(context, UsersFragment.class.getName(), ResourceManager.getString(R.string.menuUsers), null);
             } else if (o.equals(Constants.CATEGORIES)) {

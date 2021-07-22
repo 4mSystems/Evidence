@@ -3,86 +3,54 @@ package te.app.evidence.utils.helper;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.app.Dialog;
+import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Environment;
+import android.provider.Browser;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
+import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import java.io.File;
 import java.util.Calendar;
+import java.util.Objects;
 
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.R;
+import te.app.evidence.base.ParentActivity;
+import te.app.evidence.databinding.DownloadDialogBinding;
+import te.app.evidence.databinding.OptionDialogBinding;
+import te.app.evidence.utils.resources.ResourceManager;
+import te.app.evidence.utils.session.LanguagesHelper;
 
 /**
  * Created by osama on 03/01/2018.
  */
 
 public class AppHelper {
-    public static final String mapStyle = "&zoom=11&style=feature:transit.line%7Cvisibility:simplified%7Ccolor:0xbababa&style=feature:road.highway%7Celement:labels.text.stroke%7Cvisibility:on%7Ccolor:0xb06eba&style=feature:road.highway%7Celement:labels.text.fill%7Cvisibility:on%7Ccolor:0xffffff&maptype=terrain&scale=2&size=400x400&";
-
-    public static DatePickerDialog initCalender(Context context, boolean startFromNow, DatePickerDialog.OnDateSetListener datePickerDialog) {
-        Calendar calendar = Calendar.getInstance();
-        int day = 6, month = 6, year = 1990;
-        if (startFromNow) {
-            day = calendar.get(Calendar.DAY_OF_MONTH);
-            month = calendar.get(Calendar.MONTH);
-            year = calendar.get(Calendar.YEAR);
-        }
-        DatePickerDialog dPickerDialog = new DatePickerDialog(context, R.style.ThemeOverlay_MaterialComponents_MaterialAlertDialog_Picker_Date_Calendar, datePickerDialog, year, month, day);
-        if (startFromNow)
-            dPickerDialog.getDatePicker().setMinDate(calendar.getTimeInMillis());
-        dPickerDialog.setOnShowListener(new DialogInterface.OnShowListener() {
-            @Override
-            public void onShow(DialogInterface dialogInterface) {
-
-//                dPickerDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setPadding(5,5,5,5);
-//                dPickerDialog.getButton(AlertDialog.BUTTON_NEGATIVE).setPadding(5,5,5,5);
-            }
-        });
-        return dPickerDialog;
-    }
-
-    public static Bitmap resizeIcon(Drawable drawable) {
-        int height = 50;
-        int width = 50;
-//        BitmapDrawable bitmapDrawable = (BitmapDrawable) convertVectorToBitMap(drawable);
-        Bitmap b = convertVectorToBitMap(drawable);
-        return Bitmap.createScaledBitmap(b, width, height, false);
-    }
-
-    public static Bitmap convertVectorToBitMap(Drawable drawable) {
-        try {
-            Bitmap bitmap;
-
-            bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
-
-            Canvas canvas = new Canvas(bitmap);
-            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
-            drawable.draw(canvas);
-
-            return bitmap;
-        } catch (OutOfMemoryError e) {
-            // Handle the error
-            Log.e("convertVectorToBitMap", "convertVectorToBitMap: " + e.getMessage());
-            return null;
-        }
-    }
 
     public static void shareApp(Activity activity) {
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -148,23 +116,18 @@ public class AppHelper {
 
 
     public static void openEmail(Context context, String email) {
-
         String mailto = "mailto:" + email + "?" +
 //                "?cc=" + "sales@2grand.net" +
                 "&subject=" + context.getString(R.string.app_name) +
                 "&body=";
-
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse(mailto));
-
         try {
             context.startActivity(emailIntent);
         } catch (ActivityNotFoundException e) {
             //TODO: Handle case where no email app is available
             Toast.makeText(context, "No Server Mail Application Found", Toast.LENGTH_SHORT).show();
         }
-
-
     }
 
     @SuppressLint("WrongConstant")
@@ -194,22 +157,58 @@ public class AppHelper {
         recyclerView.setLayoutManager(new GridLayoutManager(context, spanCount, LinearLayoutManager.HORIZONTAL, false));
     }
 
-    public static String numberToDecimal(int number) {
-        String number2Decimal = String.valueOf(number);
-        if (number < 10) {
-            number2Decimal = "0" + number2Decimal;
+    public static void download(String fromUrl, String toFilename, Context context) {
+        //Show download dialog
+        boolean downloading = true;
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fromUrl));
+        request.setMimeType("application/pdf");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, toFilename);
+        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+        DownloadManager dm = (DownloadManager) context.getSystemService(Context.DOWNLOAD_SERVICE);
+        try {
+            long id = dm.enqueue(request);
+            DownloadManager.Query query = new DownloadManager.Query();
+            query.setFilterByStatus(DownloadManager.STATUS_FAILED | DownloadManager.STATUS_PAUSED | DownloadManager.STATUS_SUCCESSFUL | DownloadManager.STATUS_RUNNING | DownloadManager.STATUS_PENDING);
+            Cursor c = dm.query(query);
+            while (downloading) {
+                c = dm.query(query);
+                if (c.moveToFirst()) {
+                    Log.i("FLAG", "Downloading");
+                    int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+                    if (status == DownloadManager.STATUS_SUCCESSFUL) {
+                        Log.i("FLAG", "done");
+                        downloading = false;
+                        ((ParentActivity) context).toastMessage(ResourceManager.getString(R.string.download_success), R.drawable.ic_check_white_24dp, R.color.successColor);
+                        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), toFilename);
+                        Log.e("FLAG", "download: " + file.getName());
+                        if (file.exists()) {
+                            Log.e("FLAG", "download: ");
+                        }
+                        break;
+                    }
+                    if (status == DownloadManager.STATUS_FAILED) {
+                        Log.i("FLAG", "Fail");
+                        downloading = false;
+                        break;
+                    }
+                }
+            }
+        } catch (SecurityException e) {
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+            dm.enqueue(request);
         }
-        return number2Decimal;
     }
 
-
-    public static void hideKeyboard(Activity activity) {
-        View view = activity.getCurrentFocus();
-        if (view != null) {
-            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-        }
-        activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
+    public static void showDownloadDialog(String fromUrl, String toFilename, Context context) {
+        Dialog downloadDialog = new Dialog(context, R.style.PauseDialog);
+        downloadDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(downloadDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        downloadDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        DownloadDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(downloadDialog.getContext()), R.layout.download_dialog, null, false);
+        downloadDialog.setContentView(binding.getRoot());
+        downloadDialog.show();
+        download(fromUrl, toFilename, context);
     }
-
 }

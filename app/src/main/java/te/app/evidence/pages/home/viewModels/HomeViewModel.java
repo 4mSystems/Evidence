@@ -14,6 +14,8 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.home.adapters.HomeReportersAdapter;
 import te.app.evidence.pages.home.adapters.SessionsAdapter;
 import te.app.evidence.pages.home.models.HomeData;
+import te.app.evidence.pages.mohdrs.models.ReportersMainData;
+import te.app.evidence.pages.sessions.models.SessionMainData;
 import te.app.evidence.repository.HomeRepository;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -28,6 +30,8 @@ public class HomeViewModel extends BaseViewModel {
     HomeData homeData;
     SessionsAdapter sessionsAdapter;
     HomeReportersAdapter homeReportersAdapter;
+    SessionMainData commingSessionMainData, preSessionMainData;
+    ReportersMainData reportersMainData;
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
@@ -35,6 +39,9 @@ public class HomeViewModel extends BaseViewModel {
         this.homeRepository = homeRepository;
         this.liveData = new MutableLiveData<>();
         homeRepository.setLiveData(liveData);
+        commingSessionMainData = new SessionMainData();
+        preSessionMainData = new SessionMainData();
+        reportersMainData = new ReportersMainData();
     }
 
     public void homeResponse() {
@@ -48,14 +55,51 @@ public class HomeViewModel extends BaseViewModel {
 
     @Bindable
     public void setHomeData(HomeData homeData) {
-        if (getSessionsAdapter().getSessionItemList().size() > 0) {
-            getSessionsAdapter().loadMore(homeData.getComingSession().getSessionItem());
-        } else {
-            getSessionsAdapter().update(homeData.getPreviousSession().getSessionItem());
-            notifyChange(BR.sessionsAdapter);
-        }
+        setCommingSessionMainData(homeData.getComingSession());
         notifyChange(BR.homeData);
         this.homeData = homeData;
+    }
+
+    public SessionMainData getCommingSessionMainData() {
+        return commingSessionMainData;
+    }
+
+    public void setCommingSessionMainData(SessionMainData commingSessionMainData) {
+        if (getSessionsAdapter().getSessionItemList().size() > 0) {
+            getSessionsAdapter().loadMore(commingSessionMainData.getSessionItem());
+        } else {
+            getSessionsAdapter().update(commingSessionMainData.getSessionItem());
+            notifyChange(BR.sessionsAdapter);
+        }
+        this.commingSessionMainData = commingSessionMainData;
+    }
+
+    public SessionMainData getPreSessionMainData() {
+        return preSessionMainData;
+    }
+
+    public void setPreSessionMainData(SessionMainData preSessionMainData) {
+        if (getSessionsAdapter().getSessionItemList().size() > 0) {
+            getSessionsAdapter().loadMore(preSessionMainData.getSessionItem());
+        } else {
+            getSessionsAdapter().update(preSessionMainData.getSessionItem());
+            notifyChange(BR.sessionsAdapter);
+        }
+        this.preSessionMainData = preSessionMainData;
+    }
+
+    public ReportersMainData getReportersMainData() {
+        return reportersMainData;
+    }
+
+    public void setReportersMainData(ReportersMainData reportersMainData) {
+        if (getHomeReportersAdapter().getItemCount() > 0) {
+            getHomeReportersAdapter().loadMore(reportersMainData.getBailiffsDataList());
+        } else {
+            getHomeReportersAdapter().update(reportersMainData.getBailiffsDataList());
+            notifyChange(BR.sessionsAdapter);
+        }
+        this.reportersMainData = reportersMainData;
     }
 
     @Bindable

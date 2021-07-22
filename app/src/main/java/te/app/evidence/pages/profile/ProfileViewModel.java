@@ -11,18 +11,18 @@ import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.pages.auth.models.RegisterRequest;
+import te.app.evidence.pages.users.models.AddUserRequest;
 import te.app.evidence.repository.AuthRepository;
 import te.app.evidence.utils.Constants;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class ProfileViewModel extends BaseViewModel {
     MutableLiveData<Mutable> liveData;
-    private ArrayList<FileObject> fileObject;
+    ArrayList<FileObject> fileObject;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private RegisterRequest request;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    AddUserRequest addUserRequest;
     private int type;
 
     @Inject
@@ -31,31 +31,30 @@ public class ProfileViewModel extends BaseViewModel {
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
-        request = new RegisterRequest();
-//        request.setCity_id(String.valueOf(userData.getCityId()));
-//        request.setEmail(userData.getEmail());
-//        request.setName(userData.getName());
-//        request.setPhone(userData.getPhone());
-//        request.setType(String.valueOf(userData.getType()));
+        addUserRequest = new AddUserRequest();
+        getAddUserRequest().setName(userData.getUserData().getName());
+        getAddUserRequest().setEmail(userData.getUserData().getEmail());
+        getAddUserRequest().setPhone(userData.getUserData().getPhone());
     }
 
     public void updateProfile() {
-        if (getRequest().isUpdateValid()) {
-            compositeDisposable.add(repository.updateProfile(request, getFileObject()));
+        if (getAddUserRequest().isUpdateProfileValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
+            compositeDisposable.add(repository.updateProfile(getAddUserRequest(), getFileObject()));
         }
 
     }
 
-    public void changeUserType(int type) {
-        setType(type);
+    public void changePassword() {
+        liveData.setValue(new Mutable(Constants.CHANGE_PASSWORD));
     }
 
     public void imageSubmit() {
         liveData.setValue(new Mutable(Constants.IMAGE));
     }
 
-    public RegisterRequest getRequest() {
-        return request;
+    public AddUserRequest getAddUserRequest() {
+        return addUserRequest;
     }
 
     private void unSubscribeFromObservable() {

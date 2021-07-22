@@ -36,9 +36,9 @@ import java.util.Objects;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.connection.FileObject;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.LauncherHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.R;
-
 
 
 @SuppressLint("NewApi")
@@ -318,7 +318,7 @@ public class FileOperations {
                         } else {
                             intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         }
-                        ((ParentActivity) context).startActivityForResult(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), requestCode);
+                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), Constants.FILE_TYPE_IMAGE, context);
                     }).show();
         } else {
             ActivityCompat.requestPermissions(fragment.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1007);

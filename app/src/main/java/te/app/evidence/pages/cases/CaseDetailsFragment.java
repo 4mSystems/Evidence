@@ -31,7 +31,9 @@ import te.app.evidence.pages.cases.models.cases.Cases;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
 import te.app.evidence.pages.sessions.SessionsFragment;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.AppHelper;
 import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.session.LanguagesHelper;
 
 
 public class CaseDetailsFragment extends BaseFragment {
@@ -78,6 +80,8 @@ public class CaseDetailsFragment extends BaseFragment {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId()), getString(R.string.sessions), SessionsFragment.class.getName(), Constants.SESSION_CODE);
             } else if (Constants.CASE_ATTACHMENTS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId(), Constants.CASE_ATTACHMENTS), getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
+            } else if (Constants.PDF.equals(((Mutable) o).message)) {
+                AppHelper.download("http://tes.golden-info.com/api/printCase/1?api_token=" + LanguagesHelper.getJwt(), viewModel.getCaseDetails().getCaseData().getInvetationNum() + ".pdf", requireActivity());
             }
 
         });

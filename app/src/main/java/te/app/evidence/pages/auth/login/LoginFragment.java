@@ -24,6 +24,7 @@ import te.app.evidence.databinding.FragmentLoginBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.models.UsersResponse;
+import te.app.evidence.pages.auth.register.RegisterFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.session.UserHelper;
@@ -57,7 +58,9 @@ public class LoginFragment extends BaseFragment {
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);
                     break;
-
+                case Constants.REGISTER:
+                    MovementHelper.startActivity(context, RegisterFragment.class.getName(), null, null);
+                    break;
 
             }
         });

@@ -19,7 +19,8 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="@{viewmodel.caseDetails.caseData!=null?View.VISIBLE:View.GONE,default=gone}">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -292,6 +293,7 @@
                         android:layout_marginTop="@dimen/dp12h"
                         android:layout_marginEnd="@dimen/dp8w"
                         android:layout_marginBottom="@dimen/dp12h"
+                        android:onClick="@{()-> viewmodel.buttonActions(Constants.PDF)}"
                         android:text="@string/print"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/white"

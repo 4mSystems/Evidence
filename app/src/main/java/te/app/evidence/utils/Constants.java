@@ -128,7 +128,7 @@ public class Constants {
 
     public static boolean DATA_CHANGED = false;
 
-    public static final String SEARCH_LISTING_TYPE = "SEARCH_LISTING_TYPE";
+    public static final String SEARCH = "SEARCH";
     public static final String RESULT_SEARCH_LISTING_TYPE = "RESULT_SEARCH_LISTING_TYPE";
     public static final String REMOVE_FAVO = "REMOVE_FAVO";
     public static final String REMOVE_ADD_FAVORITE = "REMOVE_ADD_FAVORITE";

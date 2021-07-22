@@ -41,6 +41,10 @@ public class LoginViewModel extends BaseViewModel {
         liveData.setValue(new Mutable(Constants.FORGET_PASSWORD));
     }
 
+    public void register() {
+        liveData.setValue(new Mutable(Constants.REGISTER));
+    }
+
     public LoginRequest getLoginRequest() {
         return loginRequest;
     }
