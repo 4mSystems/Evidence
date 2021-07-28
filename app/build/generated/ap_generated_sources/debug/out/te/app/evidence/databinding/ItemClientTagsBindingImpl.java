@@ -133,9 +133,10 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         java.lang.String itemViewModelClientsClientName = null;
         te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
-        boolean itemViewModelUserDataUserDataEqualsJavaLangStringAdmin = false;
-        int itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        java.lang.String itemViewModelUserDataUserDataType = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -166,11 +167,17 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
 
 
                     if (itemViewModelUserDataUserData != null) {
-                        // read itemViewModel.userData.userData.equals("admin")
-                        itemViewModelUserDataUserDataEqualsJavaLangStringAdmin = itemViewModelUserDataUserData.equals("admin");
+                        // read itemViewModel.userData.userData.type
+                        itemViewModelUserDataUserDataType = itemViewModelUserDataUserData.getType();
+                    }
+
+
+                    if (itemViewModelUserDataUserDataType != null) {
+                        // read itemViewModel.userData.userData.type.equals("admin")
+                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("admin");
                     }
                 if((dirtyFlags & 0x5L) != 0) {
-                    if(itemViewModelUserDataUserDataEqualsJavaLangStringAdmin) {
+                    if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
                             dirtyFlags |= 0x10L;
                     }
                     else {
@@ -179,8 +186,8 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
                 }
 
 
-                    // read itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
-                    itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
@@ -193,7 +200,7 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            this.delete.setVisibility(itemViewModelUserDataUserDataEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.delete.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -247,8 +254,8 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.clients
         flag 2 (0x3L): null
-        flag 3 (0x4L): itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): itemViewModel.userData.userData.equals("admin") ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

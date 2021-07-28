@@ -54,9 +54,9 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback67;
     @Nullable
-    private final android.view.View.OnClickListener mCallback65;
+    private final android.view.View.OnClickListener mCallback68;
     @Nullable
-    private final android.view.View.OnClickListener mCallback64;
+    private final android.view.View.OnClickListener mCallback69;
     @Nullable
     private final android.view.View.OnClickListener mCallback66;
     // values
@@ -374,10 +374,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -880,10 +880,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         if ((dirtyFlags & 0x800L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback67);
-            this.inputCat.setOnClickListener(mCallback66);
-            this.inputClients.setOnClickListener(mCallback64);
-            this.inputKhesm.setOnClickListener(mCallback65);
+            this.btnSave.setOnClickListener(mCallback69);
+            this.inputCat.setOnClickListener(mCallback68);
+            this.inputClients.setOnClickListener(mCallback66);
+            this.inputKhesm.setOnClickListener(mCallback67);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView19, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView19androidTextAttrChanged);
@@ -954,23 +954,6 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.createMohdr();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -990,6 +973,40 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
                 }
                 break;
             }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toCategories();
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createMohdr();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1006,23 +1023,6 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
 
 
                     viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toCategories();
                 }
                 break;
             }

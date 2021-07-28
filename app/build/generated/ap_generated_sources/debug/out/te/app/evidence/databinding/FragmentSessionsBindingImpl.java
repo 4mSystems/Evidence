@@ -24,11 +24,11 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback65;
+    @Nullable
     private final android.view.View.OnClickListener mCallback63;
     @Nullable
-    private final android.view.View.OnClickListener mCallback61;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback62;
+    private final android.view.View.OnClickListener mCallback64;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -93,9 +93,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback63 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback63 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -252,9 +252,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback61);
-            this.mboundView6.setOnClickListener(mCallback63);
-            this.search.setOnClickListener(mCallback62);
+            this.mboundView2.setOnClickListener(mCallback63);
+            this.mboundView6.setOnClickListener(mCallback65);
+            this.search.setOnClickListener(mCallback64);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

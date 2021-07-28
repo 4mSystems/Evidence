@@ -23,7 +23,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -45,7 +45,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback20 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -178,7 +178,7 @@ public class FragmentCaseClientsBindingImpl extends FragmentCaseClientsBinding i
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback20);
+            this.mboundView3.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

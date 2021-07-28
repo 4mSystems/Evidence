@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -27,15 +28,20 @@ public abstract class FragmentCasesBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView rcClients;
 
+  @NonNull
+  public final AppCompatImageButton search;
+
   @Bindable
   protected CasesViewModel mViewmodel;
 
   protected FragmentCasesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcClients) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcClients,
+      AppCompatImageButton search) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.rcClients = rcClients;
+    this.search = search;
   }
 
   public abstract void setViewmodel(@Nullable CasesViewModel viewmodel);

@@ -338,6 +338,7 @@ attr defaultState
 attr deltaPolarAngle
 attr deltaPolarRadius
 attr deriveConstraintsFrom
+attr dialogActionButtonColor
 attr dialogCornerRadius
 attr dialogPreferredPadding
 attr dialogTheme
@@ -455,7 +456,11 @@ attr goIcon
 attr gravity
 attr haloColor
 attr haloRadius
+attr headerBgColor
+attr headerFontColorNormal
+attr headerFontColorSelected
 attr headerLayout
+attr headerTitleColor
 attr height
 attr helperText
 attr helperTextEnabled
@@ -689,6 +694,11 @@ attr mock_labelBackgroundColor
 attr mock_labelColor
 attr mock_showDiagonals
 attr mock_showLabel
+attr monthBgColor
+attr monthBgSelectedColor
+attr monthFontColorDisabled
+attr monthFontColorNormal
+attr monthFontColorSelected
 attr motionDebug
 attr motionDurationLong1
 attr motionDurationLong2
@@ -1205,6 +1215,10 @@ color flat_red_1
 color flat_red_2
 color flat_yellow_1
 color flat_yellow_2
+color fontBlackDisable
+color fontBlackEnable
+color fontWhiteDisable
+color fontWhiteEnable
 color foreground_material_dark
 color foreground_material_light
 color header_data_table
@@ -1416,6 +1430,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
+dimen activity_horizontal_margin
+dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1428,6 +1444,8 @@ dimen compat_button_padding_vertical_material
 dimen compat_control_corner_material
 dimen compat_notification_large_icon_max_height
 dimen compat_notification_large_icon_max_width
+dimen datepicker_view_animator_height
+dimen datepicker_year_label_height
 dimen default_dimension
 dimen design_appbar_elevation
 dimen design_bottom_navigation_active_item_max_width
@@ -3040,6 +3058,7 @@ drawable ic_pdf
 drawable ic_permission_off
 drawable ic_permission_on
 drawable ic_profile_camera
+drawable ic_report_search
 drawable ic_reports
 drawable ic_search
 drawable ic_session_notes
@@ -3063,6 +3082,7 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable month_ripplr
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -3153,6 +3173,7 @@ id action_bar_root
 id action_bar_spinner
 id action_bar_subtitle
 id action_bar_title
+id action_btn_lay
 id action_container
 id action_context_bar
 id action_divider
@@ -3342,6 +3363,7 @@ id grouping
 id groups
 id guideline
 id hardware
+id header
 id header_title
 id hideable
 id home
@@ -3375,14 +3397,17 @@ id info
 id input_address
 id input_case
 id input_cat
+id input_category
 id input_circle
 id input_clients
 id input_confirm_password
 id input_court
+id input_date
 id input_email
 id input_invite_type
 id input_khesm
 id input_khesms
+id input_month
 id input_name
 id input_new_password
 id input_password
@@ -3391,6 +3416,7 @@ id input_phone
 id input_register_email
 id input_search
 id input_whom
+id input_year
 id invisible
 id inward
 id italic
@@ -3410,6 +3436,7 @@ id linear
 id linear_out_slow_in
 id listMode
 id list_item
+id listview
 id ll_base_action_bar_container
 id ll_base_container
 id loading
@@ -3443,6 +3470,8 @@ id media_actions
 id message
 id middle
 id mini
+id month
+id monthPicker
 id month_grid
 id month_navigation_bar
 id month_navigation_fragment_toggle
@@ -3493,6 +3522,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id ok_action
 id on
 id onAttachStateChangeListener
 id onDateChanged
@@ -3518,6 +3548,7 @@ id pb_base_loading_bar
 id peekHeight
 id percent
 id permission
+id picker_view
 id pie
 id pin
 id pin_Validate
@@ -3525,6 +3556,7 @@ id position
 id postLayout
 id previousSessions
 id previous_session_rc
+id print
 id progress
 id progress_bar_home
 id progress_circular
@@ -3700,6 +3732,7 @@ id tv_clients
 id tv_confirm_title
 id tv_confirm_title_2
 id tv_court
+id tv_drop_cat
 id tv_forget_remember
 id tv_forget_timer
 id tv_forget_title
@@ -3742,6 +3775,7 @@ id v6
 id v7
 id v8
 id v9
+id v_drop
 id vertical
 id view_attachments
 id view_casee
@@ -3764,6 +3798,8 @@ id withinBounds
 id worm
 id wrap
 id wrap_content
+id year
+id yearView
 id zero_corner_chip
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
@@ -3875,10 +3911,12 @@ layout fragment_change_password
 layout fragment_client_profile
 layout fragment_clients
 layout fragment_confirm_code
+layout fragment_daily_reports
 layout fragment_edit_case
 layout fragment_forget_password
 layout fragment_home
 layout fragment_login
+layout fragment_monthly_reports
 layout fragment_onboard
 layout fragment_profile
 layout fragment_register
@@ -3897,6 +3935,7 @@ layout item_category
 layout item_client_search
 layout item_client_tags
 layout item_clients
+layout item_drop_category
 layout item_home_reporter
 layout item_note
 layout item_session
@@ -3920,6 +3959,9 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout month_picker_dialog
+layout month_picker_view
+layout month_view_header
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -3987,6 +4029,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout toast_layout
+layout year_label_text_view
 mipmap ic_close
 mipmap ic_delete
 mipmap ic_detail_call
@@ -4170,6 +4213,7 @@ string current_ads
 string current_location
 string customize
 string daily_reports
+string date
 string deal_address
 string deal_price
 string deal_type
@@ -4285,6 +4329,8 @@ string khesm_selected
 string khesm_unselected
 string kitchen_count
 string kitchen_count_ad
+string label_month
+string label_year
 string land
 string land_size
 string land_size_ad
@@ -4478,6 +4524,7 @@ string remove_image_first
 string rent
 string rent_title
 string report
+string report_about
 string report_desc
 string reporter_details
 string reporter_status_done
@@ -4492,9 +4539,12 @@ string samllest_area
 string save
 string save_password
 string school
+string search
 string search_case
+string search_case_hint
 string search_locations
 string search_menu_title
+string search_mohdr_hint
 string seeker
 string select_file
 string select_image_from
@@ -4824,6 +4874,7 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style MonthPickerDialogStyle
 style PauseDialog
 style PauseDialogAnimation
 style PinWidget
@@ -5465,6 +5516,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable monthPickerDialog dialogActionButtonColor headerBgColor headerFontColorNormal headerFontColorSelected headerTitleColor monthBgColor monthBgSelectedColor monthFontColorDisabled monthFontColorNormal monthFontColorSelected
 xml provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

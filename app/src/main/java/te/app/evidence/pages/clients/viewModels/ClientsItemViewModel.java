@@ -1,5 +1,6 @@
 package te.app.evidence.pages.clients.viewModels;
 
+import android.util.Log;
 import android.widget.CompoundButton;
 
 import androidx.databinding.Bindable;

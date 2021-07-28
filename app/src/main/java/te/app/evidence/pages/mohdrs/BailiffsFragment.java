@@ -66,6 +66,8 @@ public class BailiffsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.GET_MOHDAREEN.equals(((Mutable) o).message)) {
                 viewModel.setMainData(((ReportersResponse) mutable.object).getMainData());
+            } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
+                viewModel.setMainData(((ReportersResponse) mutable.object).getMainData());
             } else if (Constants.CHANGE_STATUS.equals(((Mutable) o).message)) {
                 toastMessage(((ChangeStatusResponse) mutable.object).mMessage);
                 viewModel.getBailiffsAdapter().getBailiffsDataList().get(viewModel.getBailiffsAdapter().lastSelected).setStatus(((ChangeStatusResponse) mutable.object).getStatus());
@@ -100,7 +102,10 @@ public class BailiffsFragment extends BaseFragment {
                 if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getMainData().getNextPageUrl())) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getBailiffsAdapter().getBailiffsDataList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.getMohdareen((viewModel.getMainData().getCurrentPage() + 1), false);
+                        if (TextUtils.isEmpty(viewModel.searchRequest.getSearch()))
+                            viewModel.getMohdareen((viewModel.getMainData().getCurrentPage() + 1), false);
+                        else
+                            viewModel.search((viewModel.getMainData().getCurrentPage() + 1), false);
                     }
                 }
             }

@@ -12,11 +12,11 @@ import te.app.evidence.model.base.SearchRequest;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.AddCaseRequest;
 import te.app.evidence.pages.cases.models.CaseClientsCategoriesResponse;
+import te.app.evidence.pages.cases.models.CaseClientsResponse;
 import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
-import te.app.evidence.pages.clients.models.AddClientResponse;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.mohdrs.models.AddMohdrRequest;
 import te.app.evidence.pages.mohdrs.models.AddMohdrResponse;
@@ -58,6 +58,11 @@ public class CasesRepository extends BaseRepository {
                 Constants.GET_MOHDAREEN, showProgress);
     }
 
+    public Disposable searchMohdr(int page, boolean showProgress, SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEARCH_MOHDR + page, searchRequest, ReportersResponse.class,
+                Constants.SEARCH, showProgress);
+    }
+
     public Disposable ChangeStatus(int mohId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CHANGE_MOH_STATUS + mohId, new Object(), ChangeStatusResponse.class,
                 Constants.CHANGE_STATUS, true);
@@ -93,13 +98,18 @@ public class CasesRepository extends BaseRepository {
                 Constants.ALL_CASES, showProgress);
     }
 
+    public Disposable search(int page, boolean showProgress, SearchRequest searchRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SEARCH_CASES + page, searchRequest, AllCasesResponse.class,
+                Constants.SEARCH, showProgress);
+    }
+
     public Disposable caseDetails(int caseId) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_DETAILS + caseId, new Object(), CaseDetailsResponse.class,
                 Constants.CASE_DETAILS, true);
     }
 
     public Disposable getCaseClients(int caseId, String type, int page, boolean showProgress) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_CLIENTS + caseId + "/" + type + "?page=" + page, new Object(), ClientsResponse.class,
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_CLIENTS + caseId + "/" + type + "?page=" + page, new Object(), CaseClientsResponse.class,
                 Constants.CLIENTS, showProgress);
     }
 

@@ -30,6 +30,8 @@ import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
+import te.app.evidence.pages.reports.DailyReportsFragment;
+import te.app.evidence.pages.reports.MonthlyReportsFragment;
 import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -97,6 +99,10 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, CasesFragment.class.getName(), ResourceManager.getString(R.string.search_case), null);
             } else if (o.equals(Constants.GET_MOHDAREEN)) {
                 MovementHelper.startActivity(context, BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
+            } else if (o.equals(Constants.DAILY_REPORTS)) {
+                MovementHelper.startActivity(context, DailyReportsFragment.class.getName(), ResourceManager.getString(R.string.daily_reports), "VIS");
+            } else if (o.equals(Constants.MONTHLY_REPORTS)) {
+                MovementHelper.startActivity(context, MonthlyReportsFragment.class.getName(), ResourceManager.getString(R.string.monthly_reports), "VIS");
             } else if (o.equals(Constants.ERROR_TOAST)) {
                 ((ParentActivity) context).toastError(ResourceManager.getString(R.string.no_permission));
             } else if (o.equals(Constants.LANGUAGE)) {

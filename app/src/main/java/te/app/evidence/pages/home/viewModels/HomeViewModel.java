@@ -1,6 +1,8 @@
 package te.app.evidence.pages.home.viewModels;
 
 
+import android.util.Log;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 

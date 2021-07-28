@@ -1,4 +1,5 @@
 package te.app.evidence.pages.cases;
+
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -11,7 +12,9 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import javax.inject.Inject;
+
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
@@ -44,6 +47,8 @@ public class CasesFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.ALL_CASES.equals(((Mutable) o).message)) {
                 viewModel.setCasesMainData(((AllCasesResponse) mutable.object).getData());
+            } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
+                viewModel.setCasesMainData(((AllCasesResponse) mutable.object).getData());
             }
         });
         binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -59,7 +64,10 @@ public class CasesFragment extends BaseFragment {
                 if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getCasesMainData().getNextPageUrl())) {
                     if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getCasesAdapter().getCasesList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.cases((viewModel.getCasesMainData().getCurrentPage() + 1), false);
+                        if (TextUtils.isEmpty(viewModel.searchRequest.getSearch()))
+                            viewModel.cases((viewModel.getCasesMainData().getCurrentPage() + 1), false);
+                        else
+                            viewModel.search((viewModel.getCasesMainData().getCurrentPage() + 1), false);
                     }
                 }
             }

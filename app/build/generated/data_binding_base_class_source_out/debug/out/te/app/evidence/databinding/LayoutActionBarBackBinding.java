@@ -9,6 +9,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -19,12 +20,17 @@ public abstract class LayoutActionBarBackBinding extends ViewDataBinding {
   public final AppCompatImageView imgActionBarCancel;
 
   @NonNull
+  public final MaterialButton print;
+
+  @NonNull
   public final CustomTextViewMedium tvActionBarTitle;
 
   protected LayoutActionBarBackBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView imgActionBarCancel, CustomTextViewMedium tvActionBarTitle) {
+      AppCompatImageView imgActionBarCancel, MaterialButton print,
+      CustomTextViewMedium tvActionBarTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.imgActionBarCancel = imgActionBarCancel;
+    this.print = print;
     this.tvActionBarTitle = tvActionBarTitle;
   }
 

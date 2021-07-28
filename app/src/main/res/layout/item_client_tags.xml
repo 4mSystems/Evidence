@@ -107,12 +107,11 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
-                android:visibility="@{itemViewModel.userData.userData.equals(`admin`)?View.VISIBLE:View.GONE}"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:layout_constraintEnd_toStartOf="@+id/permission"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/v1" />
-
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/br5"

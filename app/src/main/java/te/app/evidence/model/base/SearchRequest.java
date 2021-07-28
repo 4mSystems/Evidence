@@ -13,6 +13,8 @@ public class SearchRequest {
     private String note;
     @SerializedName("session_id")
     private String sessionId;
+    @SerializedName("search")
+    private String search;
 
     public String getName() {
         return name;
@@ -52,5 +54,13 @@ public class SearchRequest {
 
     public void setSessionId(String sessionId) {
         this.sessionId = sessionId;
+    }
+
+    public String getSearch() {
+        return search;
+    }
+
+    public void setSearch(String search) {
+        this.search = search;
     }
 }

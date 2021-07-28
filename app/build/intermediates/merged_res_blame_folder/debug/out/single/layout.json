@@ -164,6 +164,14 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_home_reporter.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_daily_reports.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_daily_reports.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_monthly_reports.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_monthly_reports.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_clients.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_clients.xml"
     },

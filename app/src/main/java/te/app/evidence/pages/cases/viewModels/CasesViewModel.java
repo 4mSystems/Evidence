@@ -1,5 +1,7 @@
 package te.app.evidence.pages.cases.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -26,12 +28,13 @@ public class CasesViewModel extends BaseViewModel {
     CaseDetails caseDetails;
     private int selectedBtn = 0;
     InputTagClientsAdapter clientsAdapter;
-    CasesMainData casesMainData;
+    CasesMainData casesMainData,oldCasesMainData;
 
     @Inject
     public CasesViewModel(CasesRepository casesRepository) {
         caseDetails = new CaseDetails();
-        caseDetails = new CaseDetails();
+        casesMainData = new CasesMainData();
+        oldCasesMainData = new CasesMainData();
         this.casesRepository = casesRepository;
         this.liveData = new MutableLiveData<>();
         casesRepository.setLiveData(liveData);
@@ -44,6 +47,10 @@ public class CasesViewModel extends BaseViewModel {
     public void caseDetailsResponse() {
         compositeDisposable.add(casesRepository.caseDetails(getPassingObject().getId()));
     }
+    public void search(int page, boolean showProgress) {
+        if (!TextUtils.isEmpty(searchRequest.getSearch()))
+            compositeDisposable.add(casesRepository.search(page, showProgress, searchRequest));
+    }
 
     public void clients() {
         setSelectedBtn(0);
@@ -55,6 +62,13 @@ public class CasesViewModel extends BaseViewModel {
 
     public void buttonActions(String action) {
         liveData.setValue(new Mutable(action));
+    }
+
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(s)) {
+            getCasesAdapter().getCasesList().clear();
+            setCasesMainData(oldCasesMainData);
+        }
     }
 
     @Bindable
@@ -77,11 +91,21 @@ public class CasesViewModel extends BaseViewModel {
     }
 
     public void setCasesMainData(CasesMainData casesMainData) {
-        if (getCasesAdapter().getCasesList().size() > 0) {
-            getCasesAdapter().loadMore(casesMainData.getCases());
+        if (!TextUtils.isEmpty(searchRequest.getSearch())) { // if search required
+            if (casesMainData.getCurrentPage() > 1) {
+                getCasesAdapter().loadMore(casesMainData.getCases());
+            } else {
+                getCasesAdapter().update(casesMainData.getCases());
+                notifyChange(BR.clientsAdapter);
+            }
         } else {
-            getCasesAdapter().update(casesMainData.getCases());
-            notifyChange(BR.casesAdapter);
+            if (getCasesAdapter().getCasesList().size() > 0) {
+                getCasesAdapter().loadMore(casesMainData.getCases());
+            } else {
+                oldCasesMainData = casesMainData;
+                getCasesAdapter().update(casesMainData.getCases());
+                notifyChange(BR.casesAdapter);
+            }
         }
         searchProgressVisible.set(false);
         this.casesMainData = casesMainData;
@@ -89,7 +113,6 @@ public class CasesViewModel extends BaseViewModel {
 
     @Bindable
     public void setCaseDetails(CaseDetails caseDetails) {
-//        getClientsAdapter().update(caseDetails.getClients());
         notifyChange(BR.caseDetails);
         this.caseDetails = caseDetails;
     }

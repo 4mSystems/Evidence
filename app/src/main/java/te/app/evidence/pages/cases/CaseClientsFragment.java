@@ -5,19 +5,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
@@ -25,6 +21,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -34,9 +31,9 @@ import te.app.evidence.databinding.FragmentCaseClientsBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.cases.models.CaseClientsResponse;
 import te.app.evidence.pages.cases.viewModels.CaseClientsViewModel;
 import te.app.evidence.pages.clients.models.Clients;
-import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 
@@ -71,7 +68,8 @@ public class CaseClientsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
+                viewModel.getClientsAdapter().update(((CaseClientsResponse) mutable.object).getClientsList());
+                viewModel.notifyChange(BR.clientsAdapter);
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
@@ -83,26 +81,8 @@ public class CaseClientsFragment extends BaseFragment {
             }
         });
 
-        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getClientsAdapter().getClientsList().size()), requireActivity(), Constants.CLIENTS_CODE));
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getClientsAdapter().getClientsList().size()), requireActivity(), viewModel.getPassingObject().getObject().equals(Constants.client) ? Constants.CLIENTS_CODE : Constants.KHESM_CODE));
         viewModel.getClientsAdapter().actionLiveData.observe(requireActivity(), o -> showDeleteDialog());
-        binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getClientsMainData().getNextPageUrl())) {
-                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getClientsAdapter().getClientsList().size() - 1) {
-                        viewModel.searchProgressVisible.set(true);
-                        viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
-                    }
-                }
-            }
-        });
     }
 
     private void showDeleteDialog() {
@@ -126,7 +106,7 @@ public class CaseClientsFragment extends BaseFragment {
         binding.getRoot().setOnKeyListener((v, keyCode, event) -> {
             //This is the filter
             if (event.getAction() != KeyEvent.ACTION_DOWN) {
-                MovementHelper.finishWithResult(new PassingObject(viewModel.getClientsAdapter().getClientsList().size()), requireActivity(), Constants.CLIENTS_CODE);
+                MovementHelper.finishWithResult(new PassingObject(viewModel.getClientsAdapter().getClientsList().size()), requireActivity(), viewModel.getPassingObject().getObject().equals(Constants.client) ? Constants.CLIENTS_CODE : Constants.KHESM_CODE);
                 return true;
             }
             return false;

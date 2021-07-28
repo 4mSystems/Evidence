@@ -13,5 +13,4 @@ public class CategoriesMainData extends Paginate {
     public List<CategoriesData> getCategoriesDataList() {
         return categoriesDataList;
     }
-
 }

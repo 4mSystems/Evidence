@@ -129,6 +129,13 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
+import te.app.evidence.pages.reports.DailyReportsFragment;
+import te.app.evidence.pages.reports.DailyReportsFragment_MembersInjector;
+import te.app.evidence.pages.reports.MonthlyReportsFragment;
+import te.app.evidence.pages.reports.MonthlyReportsFragment_MembersInjector;
+import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
+import te.app.evidence.pages.reports.viewModels.ReportsViewModel_Factory;
+import te.app.evidence.pages.reports.viewModels.ReportsViewModel_MembersInjector;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment_MembersInjector;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
@@ -338,6 +345,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectSessionNotesViewModel(SessionNotesViewModel_Factory.newInstance(casesRepositoryProvider.get()));
   }
 
+  private ReportsViewModel reportsViewModel() {
+    return injectReportsViewModel(ReportsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -521,6 +532,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(SessionNotesFragment sessionNotesFragment) {
     injectSessionNotesFragment(sessionNotesFragment);
+  }
+
+  @Override
+  public void inject(DailyReportsFragment dailyReportsFragment) {
+    injectDailyReportsFragment(dailyReportsFragment);
+  }
+
+  @Override
+  public void inject(MonthlyReportsFragment monthlyReportsFragment) {
+    injectMonthlyReportsFragment(monthlyReportsFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -834,6 +855,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private SessionNotesFragment injectSessionNotesFragment(SessionNotesFragment instance) {
     SessionNotesFragment_MembersInjector.injectViewModel(instance, sessionNotesViewModel());
+    return instance;
+  }
+
+  private ReportsViewModel injectReportsViewModel(ReportsViewModel instance) {
+    ReportsViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider.get());
+    return instance;
+  }
+
+  private DailyReportsFragment injectDailyReportsFragment(DailyReportsFragment instance) {
+    DailyReportsFragment_MembersInjector.injectViewModel(instance, reportsViewModel());
+    return instance;
+  }
+
+  private MonthlyReportsFragment injectMonthlyReportsFragment(MonthlyReportsFragment instance) {
+    MonthlyReportsFragment_MembersInjector.injectViewModel(instance, reportsViewModel());
     return instance;
   }
 

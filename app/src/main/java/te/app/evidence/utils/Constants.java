@@ -81,13 +81,6 @@ public class Constants {
     public static final int PAYMENT_REQUIRED_CODE = 402;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
-    public static final int RESPONSE_401 = 401;
-    public static final int GPS_REQUEST = 406;
-    public static final int LOCATION_REQUEST = 407;
-    public static final int RATE_REQUEST = 408;
-    public static final int FILTER_REQUEST = 409;
-    public static final int SEARCH_REQUEST = 410;
-
     public static final int RESULT_CODE = 6000;
     public final static int CLIENTS_CODE = 6001;
     public final static int SESSION_CODE = 6005;
@@ -123,13 +116,13 @@ public class Constants {
 
 
     public static final String REGISTER = "register";
-    public static final String CURRENT_LOCATION = "CURRENT_LOCATION";
+    public static final String MONTHLY_REPORTS = "MONTHLY_REPORTS";
 
 
     public static boolean DATA_CHANGED = false;
 
     public static final String SEARCH = "SEARCH";
-    public static final String RESULT_SEARCH_LISTING_TYPE = "RESULT_SEARCH_LISTING_TYPE";
+    public static final String DAILY_REPORTS = "DAILY_REPORTS";
     public static final String REMOVE_FAVO = "REMOVE_FAVO";
     public static final String REMOVE_ADD_FAVORITE = "REMOVE_ADD_FAVORITE";
     public static final String MY_LISTING = "MY_LISTING";

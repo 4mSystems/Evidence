@@ -31,6 +31,8 @@ import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
+import te.app.evidence.pages.reports.DailyReportsFragment;
+import te.app.evidence.pages.reports.MonthlyReportsFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
 import te.app.evidence.pages.sessions.SessionsFragment;
@@ -109,6 +111,10 @@ public interface IApplicationComponent {
     void inject(AddSessionFragment addSessionFragment);
 
     void inject(SessionNotesFragment sessionNotesFragment);
+
+    void inject(DailyReportsFragment dailyReportsFragment);
+
+    void inject(MonthlyReportsFragment monthlyReportsFragment);
 
     @Component.Builder
     interface Builder {

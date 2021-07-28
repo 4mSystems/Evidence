@@ -27,11 +27,11 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     @Nullable
     private final android.view.View.OnClickListener mCallback59;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
     private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,10 +73,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -259,10 +259,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback58);
-            this.edit.setOnClickListener(mCallback59);
-            this.statusValue.setOnClickListener(mCallback57);
-            this.viewValue.setOnClickListener(mCallback60);
+            this.delete.setOnClickListener(mCallback60);
+            this.edit.setOnClickListener(mCallback61);
+            this.statusValue.setOnClickListener(mCallback59);
+            this.viewValue.setOnClickListener(mCallback62);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -288,25 +288,6 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -361,6 +342,25 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
 
 
                     itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
                 }
                 break;
             }

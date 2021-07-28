@@ -8,8 +8,8 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.cases.models.CaseClientsResponse;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
-import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -37,4 +37,5 @@ public class BaseRepository {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CATEGORIES, new Object(), CategoriesResponse.class,
                 Constants.CATEGORIES, true);
     }
+
 }

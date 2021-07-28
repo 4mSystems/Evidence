@@ -91,8 +91,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/dp8h"
-                            android:text="@{menuViewModel.userData.userData.name}"
                             android:onClick="@{()-> menuViewModel.buttonAction(Constants.PROFILE)}"
+                            android:text="@{menuViewModel.userData.userData.name}"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 
@@ -194,6 +194,34 @@
                             android:gravity="center"
                             android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.category.equals(`yes`)?Constants.CATEGORIES:Constants.ERROR_TOAST)}"
                             android:text="@string/menuCat"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_reports"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.category.equals(`yes`)?Constants.DAILY_REPORTS:Constants.ERROR_TOAST)}"
+                            android:text="@string/daily_reports"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_reports"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(menuViewModel.userData.permission.category.equals(`yes`)?Constants.MONTHLY_REPORTS:Constants.ERROR_TOAST)}"
+                            android:text="@string/monthly_reports"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
                             android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />

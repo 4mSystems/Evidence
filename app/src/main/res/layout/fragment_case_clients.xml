@@ -35,6 +35,7 @@
                 android:padding="@dimen/dp10h"
                 android:textAlignment="viewStart"
                 android:textColorHint="@color/medium_color"
+                android:visibility="gone"
                 app:helperTextTextColor="@color/black"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintEnd_toEndOf="parent"

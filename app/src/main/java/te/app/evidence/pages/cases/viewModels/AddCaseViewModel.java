@@ -1,7 +1,6 @@
 package te.app.evidence.pages.cases.viewModels;
 
 import androidx.databinding.Bindable;
-import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;

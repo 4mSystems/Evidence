@@ -51,12 +51,14 @@ public class URLS {
 
     public static final String CASE_CLIENTS_CATEGORIES = "select/data/to_add_case";
     public static final String GET_MOHDAREEN = "mohdars?page=";
+    public static final String SEARCH_MOHDR = "search-mohdareen?page=";
     public static final String CHANGE_MOH_STATUS = "update_status/";
     public static final String DELETE_MOHDR = "delete_mohdar/";
     public static final String REPORTER_DETAILS = "mohder_by_id/";
     public static final String ADD_CASE = "add_Cases";
     public static final String EDIT_CASE = "edit_Case";
     public static final String ALL_CASES = "Cases?page=";
+    public static final String SEARCH_CASES = "search-cases?page=";
     public static final String CASE_DETAILS = "caseData/";
     public static final String CASE_CLIENTS = "caseClients/data_by_id/";
     public static final String DELETE_CLIENT_FROM_CASE = "caseClients/destroy";

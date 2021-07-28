@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
+public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -13,32 +13,75 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 3);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback21;
     // values
     // listeners
+    private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener inputSearchandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.searchRequest.search
+            //         is viewmodel.searchRequest.setSearch((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(inputSearch);
+            // localize variables for thread safety
+            // viewmodel.searchRequest
+            te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.searchRequest != null
+            boolean viewmodelSearchRequestJavaLangObjectNull = false;
+            // viewmodel.searchRequest.search
+            java.lang.String viewmodelSearchRequestSearch = null;
+            // viewmodel
+            te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelSearchRequest = viewmodel.searchRequest;
+
+                viewmodelSearchRequestJavaLangObjectNull = (viewmodelSearchRequest) != (null);
+                if (viewmodelSearchRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelSearchRequest.setSearch(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentCasesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentCasesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.google.android.material.textfield.TextInputEditText) bindings[3]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[1]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (androidx.appcompat.widget.AppCompatImageButton) bindings[2]
             );
+        this.inputSearch.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
+        this.search.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -124,15 +167,33 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
         boolean viewmodelSearchProgressVisibleGet = false;
         te.app.evidence.pages.cases.adapters.AllCasesAdapter viewmodelCasesAdapter = null;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        java.lang.String viewmodelSearchRequestSearch = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
         te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.search
+                        viewmodelSearchRequestSearch = viewmodelSearchRequest.getSearch();
+                    }
+            }
             if ((dirtyFlags & 0xeL) != 0) {
 
                     if (viewmodel != null) {
@@ -168,6 +229,12 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
             }
         }
         // batch finished
+        if ((dirtyFlags & 0xaL) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputSearch, viewmodelSearchRequestSearch);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputSearch, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputSearchandroidTextAttrChanged);
+        }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
@@ -178,9 +245,43 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding  {
 
             te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelCasesAdapter, "1", "1");
         }
+        if ((dirtyFlags & 0x8L) != 0) {
+            // api target 1
+
+            this.search.setOnClickListener(mCallback21);
+        }
     }
     // Listener Stub Implementations
+    public static class OnTextChangedImpl implements androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged{
+        private te.app.evidence.pages.cases.viewModels.CasesViewModel value;
+        public OnTextChangedImpl setValue(te.app.evidence.pages.cases.viewModels.CasesViewModel value) {
+            this.value = value;
+            return value == null ? null : this;
+        }
+        @Override
+        public void onTextChanged(java.lang.CharSequence arg0, int arg1, int arg2, int arg3) {
+            this.value.onTextChanged(arg0, arg1, arg2, arg3); 
+        }
+    }
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+
+
+            viewmodel.search(1, true);
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

@@ -100,24 +100,28 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-mdpi/ic_favorite.png"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_auth_password.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_auth_password.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_add_user.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_user.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_auth_password.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_auth_password.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_drop_category.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_drop_category.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_favorite.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_favorite.png"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_close.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-hdpi/ic_close.png"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_category.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_category.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_close.png.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-hdpi/ic_close.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_refresh.png.flat",
@@ -256,12 +260,12 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_send_chat.png"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_client_search.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_client_search.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_auth_phone.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_auth_phone.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_item_client_search.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_client_search.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_close.png.flat",
@@ -564,6 +568,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_attachment.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_daily_reports.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_daily_reports.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_exit_layout.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/exit_layout.xml"
     },
@@ -614,6 +622,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_reports.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_reports.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_report_search.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_report_search.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/drawable_ic_add_session.xml.flat",
@@ -702,6 +714,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/color_navigation_selection.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/color/navigation_selection.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/layout_fragment_monthly_reports.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_monthly_reports.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_share.png.flat",

@@ -45,7 +45,6 @@ public class ClientsViewModel extends BaseViewModel {
     public void search(int page, boolean showProgress) {
         if (!TextUtils.isEmpty(searchRequest.getName()))
             compositeDisposable.add(clientsRepository.search(page, showProgress, searchRequest));
-
     }
 
     @Bindable

@@ -31,16 +31,27 @@
             android:id="@+id/tv_action_bar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp6w"
             android:layout_marginTop="@dimen/dp4h"
-            android:layout_marginEnd="@dimen/dp8w"
             android:text="home"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/print"
             app:layout_constraintStart_toEndOf="@id/img_action_bar_cancel"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/print"
+            android:visibility="gone"
+            app:backgroundTint="@color/warningColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rippleColor="@color/colorPrimaryDark" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

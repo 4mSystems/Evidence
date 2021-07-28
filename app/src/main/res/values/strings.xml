@@ -344,7 +344,7 @@
     <string name="ad_rooms_count">عدد الحجرات</string>
     <string name="ad_bath_count">عدد الحمامات</string>
     <string name="building_age">عمر العقار</string>
-    <string name="year">سنه</string>
+    <string name="year">العام</string>
     <string name="land_size_ad">مساحه الارض</string>
     <string name="area_tatal_ad">مساحه المبنى الكليه</string>
     <string name="kitchen_count_ad">عدد المطابخ</string>
@@ -456,5 +456,10 @@
     <string name="register_login">إنشاء حساب جديد</string>
     <string name="download_success">تم تحميل الملف بنجاح</string>
     <string name="download_in_progress">جارى تحميل ملفك يرجى الانتظار</string>
+    <string name="search_case_hint">ابحث باسم الموكل و الخصم و المحكمةونوع الدعوى</string>
+    <string name="search_mohdr_hint" />
+    <string name="report_about">تقارير عن</string>
+    <string name="date">التاريخ</string>
+    <string name="search">رؤية النتائج</string>
 
 </resources>

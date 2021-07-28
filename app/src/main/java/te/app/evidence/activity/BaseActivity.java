@@ -3,6 +3,7 @@ package te.app.evidence.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
@@ -23,7 +24,7 @@ public class BaseActivity extends ParentActivity {
     private static final String TAG = "BaseActivity";
     ActivityBaseBinding activityBaseBinding;
     public BackActionBarView backActionBarView;
-     MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
+    MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,8 @@ public class BaseActivity extends ParentActivity {
         if (getIntent().hasExtra(Constants.NAME_BAR)) {
             backActionBarView = new BackActionBarView(this);
             backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
+            if (getIntent().hasExtra(Constants.SHARE_BAR))
+                backActionBarView.layoutActionBarBackBinding.print.setVisibility(View.VISIBLE);
             activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
         }
     }

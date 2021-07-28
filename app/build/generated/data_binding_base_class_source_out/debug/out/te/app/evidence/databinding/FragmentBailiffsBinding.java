@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -27,15 +28,20 @@ public abstract class FragmentBailiffsBinding extends ViewDataBinding {
   @NonNull
   public final RecyclerView rcMohdrs;
 
+  @NonNull
+  public final AppCompatImageButton search;
+
   @Bindable
   protected BailiffsViewModel mViewmodel;
 
   protected FragmentBailiffsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcMohdrs) {
+      TextInputEditText inputSearch, CircularProgressIndicator progress, RecyclerView rcMohdrs,
+      AppCompatImageButton search) {
     super(_bindingComponent, _root, _localFieldCount);
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.rcMohdrs = rcMohdrs;
+    this.search = search;
   }
 
   public abstract void setViewmodel(@Nullable BailiffsViewModel viewmodel);
