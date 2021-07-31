@@ -3,15 +3,20 @@ package te.app.evidence.pages.attachments.viewModels;
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
+import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.attachments.adapters.AttachmentsAdapter;
 import te.app.evidence.pages.attachments.models.AttachmentsMainData;
 import te.app.evidence.repository.AttachmentsRepository;
+import te.app.evidence.utils.Constants;
 
 public class AttachmentsViewModel extends BaseViewModel {
 
@@ -21,9 +26,11 @@ public class AttachmentsViewModel extends BaseViewModel {
     AttachmentsRepository attachmentsRepository;
     AttachmentsAdapter attachmentsAdapter;
     AttachmentsMainData mainData;
+    List<FileObject> fileObjects;
 
     @Inject
     public AttachmentsViewModel(AttachmentsRepository attachmentsRepository) {
+        fileObjects= new ArrayList<>();
         this.attachmentsRepository = attachmentsRepository;
         this.liveData = new MutableLiveData<>();
         attachmentsRepository.setLiveData(liveData);
@@ -32,6 +39,14 @@ public class AttachmentsViewModel extends BaseViewModel {
 
     public void attachments(int page, boolean showProgress) {
         compositeDisposable.add(attachmentsRepository.getAttachments(getPassingObject().getObject(), getPassingObject().getId(), page, showProgress));
+    }
+
+    public void deleteAttachments() {
+        compositeDisposable.add(attachmentsRepository.deleteAttachment(getAttachmentsAdapter().getAttachmentList().get(getAttachmentsAdapter().lastSelected).getId(), getPassingObject().getObject()));
+    }
+
+    public void selectFile() {
+        liveData.setValue(new Mutable(Constants.SELECT));
     }
 
     @Bindable
@@ -56,6 +71,10 @@ public class AttachmentsViewModel extends BaseViewModel {
 
     public AttachmentsRepository getAttachmentsRepository() {
         return attachmentsRepository;
+    }
+
+    public List<FileObject> getFileObjects() {
+        return fileObjects;
     }
 
     protected void unSubscribeFromObservable() {

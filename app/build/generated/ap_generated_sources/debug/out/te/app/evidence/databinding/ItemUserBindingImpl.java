@@ -32,9 +32,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
-    @Nullable
     private final android.view.View.OnClickListener mCallback29;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback30;
     @Nullable
     private final android.view.View.OnClickListener mCallback28;
     // values
@@ -79,9 +79,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         this.userTypeValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -233,9 +233,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback28);
-            this.edit.setOnClickListener(mCallback29);
-            this.permission.setOnClickListener(mCallback27);
+            this.delete.setOnClickListener(mCallback29);
+            this.edit.setOnClickListener(mCallback30);
+            this.permission.setOnClickListener(mCallback28);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -258,7 +258,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
@@ -271,7 +271,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toUserPermission();
+                    itemViewModel.toDelete();
                 }
                 break;
             }
@@ -292,7 +292,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
@@ -305,7 +305,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toDelete();
+                    itemViewModel.toUserPermission();
                 }
                 break;
             }

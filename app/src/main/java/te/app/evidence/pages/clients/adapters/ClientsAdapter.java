@@ -20,6 +20,7 @@ import java.util.List;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemClientsBinding;
+import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.clients.models.Clients;
@@ -63,6 +64,8 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.edit_client), AddClientFragment.class.getName(), null);
             } else if (o.equals(Constants.CLIENT_PROFILE)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client), ResourceManager.getString(R.string.client_profile), ClientProfileFragment.class.getName(), null);
+            } else if (o.equals(Constants.CLIENT_ATTACHMENTS)) {
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getClientId(), Constants.CLIENT_ATTACHMENTS), ResourceManager.getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
             } else if (o.equals(Constants.DELETE)) {
                 actionLiveData.setValue(o);
             }

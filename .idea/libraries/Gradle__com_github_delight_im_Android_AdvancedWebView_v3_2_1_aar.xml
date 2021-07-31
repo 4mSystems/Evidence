@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.delight-im:Android-AdvancedWebView:v3.2.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/c6e1a4363bd9e8ccc4de2d66c6d0253b/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6502d152b6f8eca850c9183c512efb1d/transformed/jetified-Android-AdvancedWebView-v3.2.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.delight-im/Android-AdvancedWebView/v3.2.1/3f98c7418d3f202f27942c57d4a5ca3d1d8803e3/Android-AdvancedWebView-v3.2.1-javadoc.jar!/" />

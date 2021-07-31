@@ -327,19 +327,19 @@ public class FileOperations {
 
 
     public static void pickVideo(final Context context, Fragment fragment, int requestCode) {
-        if (ActivityCompat.checkSelfPermission(fragment.getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-//            Intent intent;
-//            intent = new Intent(Intent.ACTION_GET_CONTENT);
-//            intent.setType("*/*");
-//            ((AppCompatActivity) context).startActivityForResult(Intent.createChooser(intent, "Select File"), requestCode);
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            String[] mimetypes = {
+                    "image/*",
+                    "text/*",
+            };
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("video/*");
-            ((AppCompatActivity) context).startActivityForResult(Intent.createChooser(intent, ResourceManager.getString(R.string.select_file)), requestCode);
+            intent.setType("*/*");
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, mimetypes); //Important part here
+            LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_file)), requestCode, context);
 
         } else {
-            ActivityCompat.requestPermissions(fragment.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1007);
-
+            ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1007);
         }
     }
 

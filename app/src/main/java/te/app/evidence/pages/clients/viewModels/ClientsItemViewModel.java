@@ -1,6 +1,5 @@
 package te.app.evidence.pages.clients.viewModels;
 
-import android.util.Log;
 import android.widget.CompoundButton;
 
 import androidx.databinding.Bindable;
@@ -31,6 +30,10 @@ public class ClientsItemViewModel extends BaseViewModel {
 
     public void toClientProfile() {
         getLiveData().setValue(Constants.CLIENT_PROFILE);
+    }
+
+    public void toAttachments() {
+        getLiveData().setValue(Constants.CLIENT_ATTACHMENTS);
     }
 
     public void onCheckedChange(CompoundButton button, boolean check) {

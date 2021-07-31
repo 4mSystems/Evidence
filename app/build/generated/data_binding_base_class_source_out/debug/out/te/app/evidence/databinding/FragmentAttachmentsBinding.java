@@ -10,6 +10,7 @@ import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
@@ -18,6 +19,12 @@ import te.app.evidence.R;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel;
 
 public abstract class FragmentAttachmentsBinding extends ViewDataBinding {
+  @NonNull
+  public final ExtendedFloatingActionButton fileBtn;
+
+  @NonNull
+  public final ExtendedFloatingActionButton imageBtn;
+
   @NonNull
   public final TextInputEditText inputSearch;
 
@@ -31,9 +38,12 @@ public abstract class FragmentAttachmentsBinding extends ViewDataBinding {
   protected AttachmentsViewModel mViewmodel;
 
   protected FragmentAttachmentsBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ExtendedFloatingActionButton fileBtn, ExtendedFloatingActionButton imageBtn,
       TextInputEditText inputSearch, CircularProgressIndicator progress,
       RecyclerView rcAttachments) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.fileBtn = fileBtn;
+    this.imageBtn = imageBtn;
     this.inputSearch = inputSearch;
     this.progress = progress;
     this.rcAttachments = rcAttachments;

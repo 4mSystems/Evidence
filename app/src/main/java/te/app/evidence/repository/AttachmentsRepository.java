@@ -10,10 +10,6 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.attachments.models.AttachmentsResponse;
-import te.app.evidence.pages.clients.models.AddClientRequest;
-import te.app.evidence.pages.clients.models.AddClientResponse;
-import te.app.evidence.pages.clients.models.ClientsResponse;
-import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 
@@ -35,13 +31,17 @@ public class AttachmentsRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getAttachments(String type, int id,int page, boolean showProgress) {
+    public Disposable getAttachments(String type, int id, int page, boolean showProgress) {
         if (type.equals(Constants.CASE_ATTACHMENTS))
-            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_ATTACHMENTS + id+"?page="+page, new Object(), AttachmentsResponse.class,
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CASE_ATTACHMENTS + id + "?page=" + page, new Object(), AttachmentsResponse.class,
                     Constants.CASE_ATTACHMENTS, showProgress);
         else
-            return null;
+            return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_ATTACHMENTS + id + "?page=" + page, new Object(), AttachmentsResponse.class,
+                    Constants.CASE_ATTACHMENTS, showProgress);
     }
 
-
+    public Disposable deleteAttachment(int attachId, String type) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, type.equals(Constants.CASE_ATTACHMENTS) ? URLS.DELETE_CASE_ATTACHMENT : URLS.DELETE_ATTACHMENT + attachId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
 }

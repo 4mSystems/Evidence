@@ -23,7 +23,7 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback83;
+    private final android.view.View.OnClickListener mCallback88;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -224,7 +224,7 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback83);
+            this.inputCat.setOnClickListener(mCallback88);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1

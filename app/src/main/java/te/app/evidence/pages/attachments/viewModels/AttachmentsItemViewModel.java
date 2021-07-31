@@ -4,6 +4,7 @@ import androidx.databinding.Bindable;
 
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.pages.attachments.models.Attachment;
+import te.app.evidence.utils.Constants;
 
 public class AttachmentsItemViewModel extends BaseViewModel {
     public Attachment attachment;
@@ -17,5 +18,16 @@ public class AttachmentsItemViewModel extends BaseViewModel {
         return attachment;
     }
 
+    public void download() {
+        getLiveData().setValue(Constants.MENu);
+    }
+
+    public void toDelete() {
+        getLiveData().setValue(Constants.DELETE);
+    }
+
+    public void toEdit() {
+        getLiveData().setValue(Constants.EDIT);
+    }
 
 }

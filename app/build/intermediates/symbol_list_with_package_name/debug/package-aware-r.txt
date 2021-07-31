@@ -3035,9 +3035,11 @@ drawable ic_check_white_24dp
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_download
 drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_home
+drawable ic_image_type
 drawable ic_info_outline_white_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_lang
@@ -3228,6 +3230,7 @@ id br_status
 id btnSave
 id btn_airplane_off
 id btn_mobile_on
+id btn_print
 id btn_save
 id btn_wifi_on
 id buttonPanel
@@ -3336,7 +3339,7 @@ id expanded_menu
 id fade
 id fast_out_linear_in
 id fast_out_slow_in
-id file_value
+id file_btn
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3389,6 +3392,7 @@ id ignore
 id ignoreRequest
 id image
 id imageSlider
+id image_btn
 id img_action_bar_cancel
 id img_airplane
 id img_home_bar_menu
@@ -4114,8 +4118,8 @@ string area
 string area_tatal_ad
 string attach_desc
 string attach_search_hint
+string attachment_file
 string attachment_images
-string attachment_video
 string attachments
 string back_car_add
 string bank_name
@@ -4240,6 +4244,8 @@ string doc_type
 string doc_type_ad
 string document
 string donot_have_account
+string download
+string download_doc
 string download_in_progress
 string download_success
 string driver_location_url

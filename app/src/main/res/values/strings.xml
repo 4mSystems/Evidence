@@ -267,7 +267,7 @@
     <string name="house">منزل</string>
     <string name="office">مكتب</string>
     <string name="attachment_images">إرفاق صور العقار</string>
-    <string name="attachment_video">إرفاق فيديو للعقار إن وجد</string>
+    <string name="attachment_file">إرفاق فيديو للعقار إن وجد</string>
     <string name="success_title">تم إضافة الإعلان بنجاح</string>
     <string name="my_ads">إعلاناتي</string>
     <string name="tv_account_contact_support">تواصل مع ادارة التطبيق</string>
@@ -285,7 +285,7 @@
     <string name="option_dialog_title">تحذير</string>
     <string name="no">لا</string>
     <string name="report">إبلاغ</string>
-    <string name="wrong_price">السعر خطا</string>
+    <string name="attachment_pick_mes">السعر خطا</string>
     <string name="wrong_location">الموقع خطأ</string>
     <string name="wrong_behave">تعامل غير لائق</string>
     <string name="wrong_building">العقار غير متوفر</string>
@@ -461,5 +461,7 @@
     <string name="report_about">تقارير عن</string>
     <string name="date">التاريخ</string>
     <string name="search">رؤية النتائج</string>
+    <string name="download">طباعة</string>
+    <string name="download_doc"> طباعة الملف</string>
 
 </resources>

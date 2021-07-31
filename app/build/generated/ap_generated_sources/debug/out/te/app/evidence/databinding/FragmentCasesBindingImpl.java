@@ -20,7 +20,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback21;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -81,7 +81,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -248,7 +248,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.search.setOnClickListener(mCallback21);
+            this.search.setOnClickListener(mCallback22);
         }
     }
     // Listener Stub Implementations

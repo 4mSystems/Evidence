@@ -32,8 +32,8 @@ public class BaseFragment extends Fragment {
         FileOperations.pickImage(context, BaseFragment.this, requestCode);
     }
 
-    protected void pickVideo() {
-        FileOperations.pickVideo(context, BaseFragment.this, Constants.FILE_TYPE_VIDEO);
+    protected void pickFile(int requestCode) {
+        FileOperations.pickVideo(context, BaseFragment.this,requestCode);
     }
 
 

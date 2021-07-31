@@ -14,17 +14,16 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.name_text, 9);
-        sViewsWithIds.put(R.id.v1, 10);
-        sViewsWithIds.put(R.id.unit_text, 11);
-        sViewsWithIds.put(R.id.v2, 12);
-        sViewsWithIds.put(R.id.client_type_text, 13);
-        sViewsWithIds.put(R.id.v5, 14);
-        sViewsWithIds.put(R.id.client_address_text, 15);
-        sViewsWithIds.put(R.id.v3, 16);
-        sViewsWithIds.put(R.id.client_note_text, 17);
-        sViewsWithIds.put(R.id.v4, 18);
-        sViewsWithIds.put(R.id.attachments, 19);
+        sViewsWithIds.put(R.id.name_text, 10);
+        sViewsWithIds.put(R.id.v1, 11);
+        sViewsWithIds.put(R.id.unit_text, 12);
+        sViewsWithIds.put(R.id.v2, 13);
+        sViewsWithIds.put(R.id.client_type_text, 14);
+        sViewsWithIds.put(R.id.v5, 15);
+        sViewsWithIds.put(R.id.client_address_text, 16);
+        sViewsWithIds.put(R.id.v3, 17);
+        sViewsWithIds.put(R.id.client_note_text, 18);
+        sViewsWithIds.put(R.id.v4, 19);
         sViewsWithIds.put(R.id.br5, 20);
         sViewsWithIds.put(R.id.v8, 21);
     }
@@ -34,6 +33,8 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback10;
     @Nullable
     private final android.view.View.OnClickListener mCallback9;
     @Nullable
@@ -47,28 +48,29 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     }
     private ItemClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[19]
-            , (androidx.constraintlayout.widget.Barrier) bindings[20]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
+            , (androidx.constraintlayout.widget.Barrier) bindings[20]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (android.view.View) bindings[10]
-            , (android.view.View) bindings[12]
-            , (android.view.View) bindings[16]
-            , (android.view.View) bindings[18]
-            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[17]
+            , (android.view.View) bindings[19]
+            , (android.view.View) bindings[15]
             , (android.view.View) bindings[21]
             );
+        this.attachments.setTag(null);
         this.clientAddressValue.setTag(null);
         this.clientNoteValue.setTag(null);
         this.clientTypeValue.setTag(null);
@@ -82,6 +84,7 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
         setRootTag(root);
         // listeners
         mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
@@ -232,6 +235,14 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.attachments.setOnClickListener(mCallback7);
+            this.delete.setOnClickListener(mCallback9);
+            this.edit.setOnClickListener(mCallback10);
+            this.permission.setOnClickListener(mCallback8);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
@@ -240,13 +251,6 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.clientTypeValue, itemViewModelClientsType);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelClientsClientName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.unitValue, itemViewModelClientsClientUnit);
-        }
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.delete.setOnClickListener(mCallback8);
-            this.edit.setOnClickListener(mCallback9);
-            this.permission.setOnClickListener(mCallback7);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -272,11 +276,11 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toDelete();
+                    itemViewModel.toClientProfile();
                 }
                 break;
             }
-            case 3: {
+            case 4: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
@@ -293,6 +297,23 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
                 }
                 break;
             }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -306,7 +327,7 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toClientProfile();
+                    itemViewModel.toAttachments();
                 }
                 break;
             }

@@ -113,23 +113,15 @@ public class Constants {
     public static final String SESSION_NOTES = "SESSION_NOTES";
     public static final String ADD_MOHDR = "ADD_MOHDR";
     public static final String UPDATE_USER_PERMISSIONS = "UPDATE_USER_PERMISSIONS";
-
-
     public static final String REGISTER = "register";
     public static final String MONTHLY_REPORTS = "MONTHLY_REPORTS";
-
-
     public static boolean DATA_CHANGED = false;
-
     public static final String SEARCH = "SEARCH";
     public static final String DAILY_REPORTS = "DAILY_REPORTS";
-    public static final String REMOVE_FAVO = "REMOVE_FAVO";
-    public static final String REMOVE_ADD_FAVORITE = "REMOVE_ADD_FAVORITE";
-    public static final String MY_LISTING = "MY_LISTING";
-    public static final String MY_PREMIUM_ADS = "MY_PREMIUM_ADS";
+
     public final static String REMOVE_AD = "REMOVE_AD";
-    public static final String GET_AD_DETAILS = "GET_AD_DETAILS";
-    public static final String CALL = "CALL";
+    public static final String CLIENT_ATTACHMENTS = "CLIENT_ATTACHMENTS";
+    public static final String IMAGE_MIME_TYPE = "image/jpeg";
     public static final String REPORT = "REPORT";
     public static final String CONTACT = "CONTACT";
     public static final String SEND_REPORT = "SEND_REPORT";

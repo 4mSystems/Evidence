@@ -215,6 +215,7 @@
                 android:layout_marginEnd="@dimen/dp10w"
                 android:drawableTop="@drawable/ic_attachments"
                 android:text="@string/attachments"
+                android:onClick="@{()-> itemViewModel.toAttachments()}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"

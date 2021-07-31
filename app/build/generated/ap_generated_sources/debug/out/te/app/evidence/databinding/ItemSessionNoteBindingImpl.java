@@ -26,11 +26,11 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback37;
+    @Nullable
     private final android.view.View.OnClickListener mCallback35;
     @Nullable
     private final android.view.View.OnClickListener mCallback36;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback34;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,9 +63,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         this.statusValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -218,9 +218,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback35);
-            this.edit.setOnClickListener(mCallback36);
-            this.statusValue.setOnClickListener(mCallback34);
+            this.delete.setOnClickListener(mCallback36);
+            this.edit.setOnClickListener(mCallback37);
+            this.statusValue.setOnClickListener(mCallback35);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -239,25 +239,6 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -293,6 +274,25 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
 
 
                     itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
                 }
                 break;
             }

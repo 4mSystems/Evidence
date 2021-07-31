@@ -6,19 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.button.MaterialButton;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel;
 
 public abstract class ItemAttachmentBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView fileValue;
+  public final MaterialButton btnPrint;
+
+  @NonNull
+  public final CustomTextViewRegular delete;
 
   @NonNull
   public final CustomTextViewMedium sessionCaseNumber;
@@ -36,10 +40,11 @@ public abstract class ItemAttachmentBinding extends ViewDataBinding {
   protected AttachmentsItemViewModel mItemViewModel;
 
   protected ItemAttachmentBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView fileValue, CustomTextViewMedium sessionCaseNumber,
+      MaterialButton btnPrint, CustomTextViewRegular delete, CustomTextViewMedium sessionCaseNumber,
       CustomTextViewMedium sessionDateText, CustomTextViewMedium tvUsername, View v9) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.fileValue = fileValue;
+    this.btnPrint = btnPrint;
+    this.delete = delete;
     this.sessionCaseNumber = sessionCaseNumber;
     this.sessionDateText = sessionDateText;
     this.tvUsername = tvUsername;

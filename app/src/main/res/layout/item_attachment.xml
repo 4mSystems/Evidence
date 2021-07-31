@@ -4,10 +4,15 @@
 
     <data>
 
+        <import type="android.view.View" />
+
+        <import type="te.app.evidence.utils.Constants" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,8 +23,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp6h">
+            android:layout_height="wrap_content">
 
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
@@ -35,6 +39,7 @@
                 android:textColor="@color/colorPrimary"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/session_case_number"
                 android:layout_width="0dp"
@@ -42,8 +47,8 @@
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp12h"
                 android:layout_marginEnd="@dimen/dp20w"
-                android:textAlignment="center"
                 android:text="@{itemViewModel.attachment.imgDescription}"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -68,21 +73,41 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_print"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="@+id/file_value"
-                app:layout_constraintTop_toTopOf="@+id/file_value" />
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/file_value"
+                app:layout_constraintTop_toTopOf="@+id/btn_print" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_print"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp12h"
-                android:layout_marginBottom="@dimen/dp12h"
-                android:layout_marginEnd="@dimen/dp20w"
-                android:src="@drawable/ic_pdf"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp8w"
+                android:onClick="@{()-> itemViewModel.download()}"
+                android:text="@{itemViewModel.attachment.fileType.contains(Constants.IMAGE_MIME_TYPE)?@string/download:@string/download_doc}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                app:cornerRadius="@dimen/dp6h"
+                app:icon="@drawable/ic_download"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/session_date_text"
-                app:layout_constraintTop_toBottomOf="@+id/v9"  />
+                app:layout_constraintTop_toTopOf="@+id/v9" />
+
+            <te.app.evidence.customViews.views.CustomTextViewRegular
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/flat_red_1"
+                android:onClick="@{()-> itemViewModel.toDelete()}"
+                android:padding="@dimen/dp10h"
+                android:text="@string/delete"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/white"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_print" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

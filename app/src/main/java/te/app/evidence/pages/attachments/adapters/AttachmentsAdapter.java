@@ -1,5 +1,6 @@
 package te.app.evidence.pages.attachments.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -18,11 +21,14 @@ import te.app.evidence.R;
 import te.app.evidence.databinding.ItemAttachmentBinding;
 import te.app.evidence.pages.attachments.models.Attachment;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel;
-import te.app.evidence.pages.clients.models.Clients;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.AppHelper;
 
 public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.ViewHolder> {
     List<Attachment> attachmentList;
     Context context;
+    public int lastSelected = -1;
+    public MutableLiveData<Object> actionLiveData = new MutableLiveData<>();
 
     public AttachmentsAdapter() {
         this.attachmentList = new ArrayList<>();
@@ -41,11 +47,18 @@ public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.
         return new ViewHolder(itemView);
     }
 
-
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
         Attachment attachment = attachmentList.get(position);
         AttachmentsItemViewModel itemMenuViewModel = new AttachmentsItemViewModel(attachment);
+        itemMenuViewModel.getLiveData().observe((LifecycleOwner) context, o -> {
+            lastSelected = position;
+            if (o.equals(Constants.MENu))
+                AppHelper.download(attachment.getImgUrl(), attachment.getImgDescription().concat(".png"), context);
+            else
+                actionLiveData.setValue(o);
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 
@@ -55,6 +68,7 @@ public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.
         attachmentList.addAll(dataList);
         notifyDataSetChanged();
     }
+
     public void loadMore(@NotNull List<Attachment> dataList) {
         int start = attachmentList.size();
         attachmentList.addAll(dataList);

@@ -3034,9 +3034,11 @@ int drawable ic_check_white_24dp 0x7f070090
 int drawable ic_clear_white_24dp 0x7f070091
 int drawable ic_clock_black_24dp 0x7f070092
 int drawable ic_close 0x7f070093
+int drawable ic_download 0x7f0700e3
 int drawable ic_email 0x7f070094
 int drawable ic_error_outline_white_24dp 0x7f070095
 int drawable ic_home 0x7f070096
+int drawable ic_image_type 0x7f0700e4
 int drawable ic_info_outline_white_24dp 0x7f070097
 int drawable ic_keyboard_black_24dp 0x7f070098
 int drawable ic_lang 0x7f070099
@@ -3227,6 +3229,7 @@ int id br_status 0x7f09006d
 int id btnSave 0x7f09006e
 int id btn_airplane_off 0x7f09006f
 int id btn_mobile_on 0x7f090070
+int id btn_print 0x7f0902ae
 int id btn_save 0x7f090071
 int id btn_wifi_on 0x7f090072
 int id buttonPanel 0x7f090073
@@ -3335,7 +3338,7 @@ int id expanded_menu 0x7f0900d9
 int id fade 0x7f0900da
 int id fast_out_linear_in 0x7f0900db
 int id fast_out_slow_in 0x7f0900dc
-int id file_value 0x7f0900dd
+int id file_btn 0x7f0902af
 int id fill 0x7f0900de
 int id fill_horizontal 0x7f0900df
 int id fill_vertical 0x7f0900e0
@@ -3388,6 +3391,7 @@ int id ignore 0x7f09010e
 int id ignoreRequest 0x7f09010f
 int id image 0x7f090110
 int id imageSlider 0x7f090111
+int id image_btn 0x7f0902b0
 int id img_action_bar_cancel 0x7f090112
 int id img_airplane 0x7f090113
 int id img_home_bar_menu 0x7f090114
@@ -4113,8 +4117,8 @@ int string area 0x7f0f0044
 int string area_tatal_ad 0x7f0f0045
 int string attach_desc 0x7f0f0046
 int string attach_search_hint 0x7f0f0047
+int string attachment_file 0x7f0f024e
 int string attachment_images 0x7f0f0048
-int string attachment_video 0x7f0f0049
 int string attachments 0x7f0f004a
 int string back_car_add 0x7f0f004b
 int string bank_name 0x7f0f004c
@@ -4239,6 +4243,8 @@ int string doc_type 0x7f0f00c2
 int string doc_type_ad 0x7f0f00c3
 int string document 0x7f0f00c4
 int string donot_have_account 0x7f0f00c5
+int string download 0x7f0f024c
+int string download_doc 0x7f0f024d
 int string download_in_progress 0x7f0f00c6
 int string download_success 0x7f0f00c7
 int string driver_location_url 0x7f0f00c8

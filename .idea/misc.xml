@@ -11,6 +11,7 @@
         <entry key="app/src/main/res/drawable/ic_add_session.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_user.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_attachments.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_image_type.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_pdf.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_permission_on.xml" value="0.209375" />
@@ -49,7 +50,7 @@
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/item_attachment.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/item_attachment.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_bailiffs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.290625" />
@@ -68,7 +69,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

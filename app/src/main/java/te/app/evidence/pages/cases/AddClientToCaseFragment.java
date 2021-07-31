@@ -50,8 +50,8 @@ public class AddClientToCaseFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
+            viewModel.getCasesClientsCategories();
         }
-        viewModel.getCasesClientsCategories();
         setEvent();
         return binding.getRoot();
     }

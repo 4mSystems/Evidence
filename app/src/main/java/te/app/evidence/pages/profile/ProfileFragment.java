@@ -1,6 +1,5 @@
 package te.app.evidence.pages.profile;
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,17 +9,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.io.File;
-
 import javax.inject.Inject;
-
 import te.app.evidence.R;
-import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
@@ -30,6 +22,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.LauncherHelper;
+import te.app.evidence.utils.session.UserHelper;
 import te.app.evidence.utils.upload.FileOperations;
 
 public class ProfileFragment extends BaseFragment {
@@ -56,8 +49,7 @@ public class ProfileFragment extends BaseFragment {
                     LauncherHelper.execute(LauncherHelper.storage);
                     break;
                 case Constants.UPDATE_PROFILE:
-//                    viewModel.userData.getUserData() = ((AddUserResponse) ((Mutable) o).object).getSystemUserData();
-//                    UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
+                    UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());
                     toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
                     viewModel.goBack(requireActivity());
                     break;

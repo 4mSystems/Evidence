@@ -22,7 +22,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback18;
+    private final android.view.View.OnClickListener mCallback19;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,7 +47,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         this.rcClients.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback18 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback19 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -222,7 +222,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback18);
+            this.inputCat.setOnClickListener(mCallback19);
         }
         if ((dirtyFlags & 0xaL) != 0) {
             // api target 1

@@ -6,12 +6,10 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
-import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.cases.adapters.InputTagClientsAdapter;
 import te.app.evidence.pages.clients.models.AddClientRequest;
-import te.app.evidence.pages.clients.models.ClientsMainData;
 import te.app.evidence.repository.CasesRepository;
 import te.app.evidence.utils.Constants;
 

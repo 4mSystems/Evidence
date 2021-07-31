@@ -38,11 +38,11 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView11;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback23;
-    @Nullable
     private final android.view.View.OnClickListener mCallback24;
     @Nullable
     private final android.view.View.OnClickListener mCallback25;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -95,9 +95,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback23 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -351,9 +351,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback24);
-            this.clientNotes.setOnClickListener(mCallback23);
-            this.mboundView11.setOnClickListener(mCallback25);
+            this.clientCases.setOnClickListener(mCallback25);
+            this.clientNotes.setOnClickListener(mCallback24);
+            this.mboundView11.setOnClickListener(mCallback26);
         }
         if ((dirtyFlags & 0x43L) != 0) {
             // api target 1

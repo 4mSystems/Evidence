@@ -2,6 +2,11 @@ package te.app.evidence.utils;
 
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
+    //Multi media urls
+    public static final String USER_PROFILE_BASE_URL = "http://tes.golden-info.com/uploads/userprofile/";
+    public static final String CASE_ATTACHMENTS_BASE_URL = "http://tes.golden-info.com/uploads/attachments/";
+    public static final String CLIENT_ATTACHMENTS_BASE_URL = "http://tes.golden-info.com/uploads/client/attachments/";
+
     public final static String CLIENTS = "clients?page=";
     public final static String SEARCH_CLIENTS = "search-clients?page=";
     public final static String HOME = "home_data";
@@ -75,5 +80,8 @@ public class URLS {
     public static final String DELETE_SESSION_NOTE = "removeNoteStatus/";
     public static final String EDIT_SESSION_NOTE = "editSessionNote";
     public static final String CASE_ATTACHMENTS = "caseAttachment/";
+    public static final String CLIENT_ATTACHMENTS = "client_attachments/";
+    public static final String DELETE_ATTACHMENT = "delete_client_attachment/";
+    public static final String DELETE_CASE_ATTACHMENT = "remove_attachment/";
     public static final String ADD_MOHDR = "add_mohdars";
 }
