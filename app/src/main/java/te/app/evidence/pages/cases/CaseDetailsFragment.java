@@ -3,6 +3,7 @@ package te.app.evidence.pages.cases;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -79,7 +80,7 @@ public class CaseDetailsFragment extends BaseFragment {
             } else if (Constants.CASE_SESSIONS.equals(((Mutable) o).message)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId()), getString(R.string.sessions), SessionsFragment.class.getName(), Constants.SESSION_CODE);
             } else if (Constants.CASE_ATTACHMENTS.equals(((Mutable) o).message)) {
-                MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId(), Constants.CASE_ATTACHMENTS), getString(R.string.attachments), AttachmentsFragment.class.getName(), null);
+                MovementHelper.startActivityForResultWithBundle(context, new PassingObject(viewModel.getCaseDetails().getCaseData().getId(), Constants.CASE_ATTACHMENTS), getString(R.string.attachments), AttachmentsFragment.class.getName(), Constants.ATTACH_REQUEST);
             } else if (Constants.PDF.equals(((Mutable) o).message)) {
                 AppHelper.download("http://tes.golden-info.com/api/printCase/1?api_token=" + LanguagesHelper.getJwt(), viewModel.getCaseDetails().getCaseData().getInvetationNum() + ".pdf", requireActivity());
             }
@@ -106,6 +107,9 @@ public class CaseDetailsFragment extends BaseFragment {
                     binding.viewId.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getSessionsNumber()), true);
                 } else if (request == Constants.EDIT_CASE_REQUEST) {
                     viewModel.getCaseDetails().setCaseData(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Cases.class));
+                } else if (request == Constants.ATTACH_REQUEST) {
+                    viewModel.getCaseDetails().getNumbers().setAttachmentsNumber(String.valueOf(passingObject.getId()));
+                    binding.viewAttachments.setProgress(Integer.parseInt(viewModel.getCaseDetails().getNumbers().getAttachmentsNumber()), true);
                 }
                 viewModel.setCaseDetails(viewModel.getCaseDetails());
             }

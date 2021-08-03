@@ -1,11 +1,14 @@
 package te.app.evidence.pages.attachments;
 
+import static android.app.Activity.RESULT_OK;
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +16,6 @@ import android.view.Window;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,15 +32,15 @@ import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
-import te.app.evidence.connection.FileObject;
 import te.app.evidence.databinding.FragmentAttachmentsBinding;
 import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.attachments.models.Attachment;
 import te.app.evidence.pages.attachments.models.AttachmentsResponse;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel;
 import te.app.evidence.utils.Constants;
-import te.app.evidence.utils.upload.FileOperations;
+import te.app.evidence.utils.helper.MovementHelper;
 
 
 public class AttachmentsFragment extends BaseFragment {
@@ -59,6 +61,7 @@ public class AttachmentsFragment extends BaseFragment {
             viewModel.attachments(1, true);
         }
         setEvent();
+        onBackPressed();
         return binding.getRoot();
     }
 
@@ -72,8 +75,8 @@ public class AttachmentsFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getAttachmentsAdapter().getAttachmentList().remove(viewModel.getAttachmentsAdapter().lastSelected);
                 viewModel.getAttachmentsAdapter().notifyDataSetChanged();
-            } else if (((Mutable) o).message.equals(Constants.SELECT)) {
-                pickFile(Constants.RESULT_CODE);
+            } else if (((Mutable) o).message.equals(Constants.ADD_ATTACH)) {
+                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId(), viewModel.getPassingObject().getObject()), getString(R.string.add_new_attach), AddAttachmentFragment.class.getName(), null);
             }
         });
         binding.rcAttachments.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -99,6 +102,21 @@ public class AttachmentsFragment extends BaseFragment {
                 showDeleteDialog();
 
         });
+        baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getAttachmentsAdapter().getAttachmentList().size()), requireActivity(), Constants.ATTACH_REQUEST));
+
+    }
+
+    private void onBackPressed() {
+        binding.getRoot().setFocusableInTouchMode(true);
+        binding.getRoot().requestFocus();
+        binding.getRoot().setOnKeyListener((v, keyCode, event) -> {
+            if (event.getAction() != KeyEvent.ACTION_DOWN) {
+                MovementHelper.finishWithResult(new PassingObject(viewModel.getAttachmentsAdapter().getAttachmentList().size()), requireActivity(), Constants.ATTACH_REQUEST);
+                return true;
+            }
+            return false;
+        });
+
     }
 
 
@@ -122,31 +140,19 @@ public class AttachmentsFragment extends BaseFragment {
         super.onResume();
         viewModel.getAttachmentsRepository().setLiveData(viewModel.liveData);
     }
-    public void showAlertDialogWithAutoDismiss(String msg) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(requireActivity());
-        builder
-                .setMessage(msg)
-                .setCancelable(false)
-                .setNegativeButton(getString(R.string.no), (dialog, which) -> {
-                    viewModel.getFileObjects().clear();
-                    dialog.cancel();
-                })
-                .setPositiveButton(getString(R.string.send), (dialog, id) -> {
-                    viewModel.sendMessage();
-                    dialog.cancel();
-                });
-        final AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-    }
+
     @Override
     public void launchActivityResult(int request, int resultCode, Intent data) {
         super.launchActivityResult(request, resultCode, data);
-        if (request == Constants.FILE_TYPE_IMAGE) {
-            FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.IMAGE, Constants.FILE_TYPE_IMAGE);
-            viewModel.getFileObjects().add(fileObject);
-            showAlertDialogWithAutoDismiss(getString(R.string.attachment_pick_mes));
+        if (data != null) {
+            if (resultCode == RESULT_OK) {
+                Bundle bundle = data.getBundleExtra(Constants.BUNDLE);
+                if (bundle != null && bundle.containsKey(Constants.BUNDLE)) {
+                    PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
+                    viewModel.getAttachmentsAdapter().getAttachmentList().add(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Attachment.class));
+                    viewModel.getAttachmentsAdapter().notifyItemInserted(viewModel.getAttachmentsAdapter().getAttachmentList().size() - 1);
+                }
+            }
         }
     }
-
-
 }

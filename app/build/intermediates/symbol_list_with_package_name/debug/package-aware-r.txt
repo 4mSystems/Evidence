@@ -3339,7 +3339,7 @@ id expanded_menu
 id fade
 id fast_out_linear_in
 id fast_out_slow_in
-id file_btn
+id file
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3392,7 +3392,6 @@ id ignore
 id ignoreRequest
 id image
 id imageSlider
-id image_btn
 id img_action_bar_cancel
 id img_airplane
 id img_home_bar_menu
@@ -3407,7 +3406,9 @@ id input_clients
 id input_confirm_password
 id input_court
 id input_date
+id input_desc
 id input_email
+id input_file
 id input_invite_type
 id input_khesm
 id input_khesms
@@ -3897,6 +3898,7 @@ layout design_text_input_start_icon
 layout dialog_no_internet
 layout download_dialog
 layout exit_layout
+layout fragment_add_attachment
 layout fragment_add_bailiffs
 layout fragment_add_case
 layout fragment_add_category
@@ -4120,6 +4122,7 @@ string attach_desc
 string attach_search_hint
 string attachment_file
 string attachment_images
+string attachment_pick_mes
 string attachments
 string back_car_add
 string bank_name
@@ -4633,7 +4636,6 @@ string wifi
 string wrong_behave
 string wrong_building
 string wrong_location
-string wrong_price
 string year
 string yes
 style AlertDialog_AppCompat

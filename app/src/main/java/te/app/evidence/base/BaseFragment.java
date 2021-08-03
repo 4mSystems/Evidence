@@ -3,6 +3,7 @@ package te.app.evidence.base;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void pickFile(int requestCode) {
-        FileOperations.pickVideo(context, BaseFragment.this,requestCode);
+        FileOperations.pickVideo(context, BaseFragment.this, requestCode);
     }
 
 

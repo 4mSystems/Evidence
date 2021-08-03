@@ -83,5 +83,7 @@ public class URLS {
     public static final String CLIENT_ATTACHMENTS = "client_attachments/";
     public static final String DELETE_ATTACHMENT = "delete_client_attachment/";
     public static final String DELETE_CASE_ATTACHMENT = "remove_attachment/";
+    public static final String ADD_CASE_ATTACHMENT = "add_case_attachment";
+    public static final String ADD_CLIENT_ATTACHMENT = "add_client_attachments";
     public static final String ADD_MOHDR = "add_mohdars";
 }

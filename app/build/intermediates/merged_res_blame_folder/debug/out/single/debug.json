@@ -224,6 +224,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/anim/shake_vibrate.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_add_attachment.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_attachment.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_favorite.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_favorite.png"
     },

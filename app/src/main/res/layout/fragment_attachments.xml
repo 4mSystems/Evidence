@@ -71,7 +71,7 @@
             android:layout_margin="@dimen/dp16h"
             android:contentDescription="@string/app_name"
             app:backgroundTint="@color/colorPrimary"
-            android:onClick="@{()-> viewmodel.selectFile()}"
+            android:onClick="@{()-> viewmodel.toAttach()}"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -257,7 +257,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
 
 
 
-            viewmodel.action(te.app.evidence.utils.Constants.CATEGORIES);
+            viewmodel.action(te.app.evidence.utils.Constants.SHOW_CATEGORIES);
         }
     }
     // dirty flag

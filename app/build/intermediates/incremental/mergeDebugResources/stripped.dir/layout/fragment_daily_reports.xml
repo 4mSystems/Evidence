@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+
+    
+
+                                           
+
+                                                         
+
+                 
+                            
+                                                                               
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_daily_reports_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_category"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginTop="@dimen/dp10h"
+            android:layout_marginEnd="@dimen/dp12w"
+            android:tag="binding_1"                                                                        
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_arrow_down"
+                android:drawableTint="@color/medium_color"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/report_about"
+                android:inputType="text"
+                android:tag="binding_2"                                              
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/overlayBackground" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_date"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp12w"
+            android:layout_marginTop="@dimen/dp10h"
+            android:layout_marginEnd="@dimen/dp12w"
+            app:endIconDrawable="@drawable/ic_calendar"
+            app:endIconMode="custom"
+            app:endIconTint="@color/colorPrimaryDark"
+            app:layout_constraintTop_toBottomOf="@+id/input_category">
+
+            <te.app.evidence.customViews.views.DateEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:gravity="center_vertical"
+                android:hint="@string/date"
+                android:inputType="text"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/overlayBackground" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/search"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10h"
+            android:padding="@dimen/dp10h"
+            android:text="@string/search"
+            android:textColor="@color/colorPrimaryDark"
+            app:backgroundTint="@color/white"
+            app:backgroundTintMode="add"
+            app:icon="@drawable/ic_report_search"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="@id/input_date"
+            app:layout_constraintStart_toStartOf="@id/input_date"
+            app:layout_constraintTop_toBottomOf="@id/input_date"
+            app:rippleColor="@color/overlayBackground"
+            app:strokeColor="@color/colorPrimaryDark"
+            app:strokeWidth="1dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_clients"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp12h"
+            android:tag="binding_3"                  
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            app:layout_constraintTop_toBottomOf="@id/search"
+                                    
+                             
+            tools:listitem="@layout/item_clients" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="gone"                                                                  
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h"  android:tag="binding_4"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

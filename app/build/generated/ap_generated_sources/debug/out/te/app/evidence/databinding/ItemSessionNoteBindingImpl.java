@@ -26,11 +26,11 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback39;
+    @Nullable
     private final android.view.View.OnClickListener mCallback37;
     @Nullable
-    private final android.view.View.OnClickListener mCallback35;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback38;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,9 +63,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         this.statusValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -218,9 +218,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback36);
-            this.edit.setOnClickListener(mCallback37);
-            this.statusValue.setOnClickListener(mCallback35);
+            this.delete.setOnClickListener(mCallback38);
+            this.edit.setOnClickListener(mCallback39);
+            this.statusValue.setOnClickListener(mCallback37);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

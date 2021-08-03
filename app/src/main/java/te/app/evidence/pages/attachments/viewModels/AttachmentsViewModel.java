@@ -2,16 +2,10 @@ package te.app.evidence.pages.attachments.viewModels;
 
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
-
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
-import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.attachments.adapters.AttachmentsAdapter;
 import te.app.evidence.pages.attachments.models.AttachmentsMainData;
@@ -26,11 +20,9 @@ public class AttachmentsViewModel extends BaseViewModel {
     AttachmentsRepository attachmentsRepository;
     AttachmentsAdapter attachmentsAdapter;
     AttachmentsMainData mainData;
-    List<FileObject> fileObjects;
 
     @Inject
     public AttachmentsViewModel(AttachmentsRepository attachmentsRepository) {
-        fileObjects= new ArrayList<>();
         this.attachmentsRepository = attachmentsRepository;
         this.liveData = new MutableLiveData<>();
         attachmentsRepository.setLiveData(liveData);
@@ -45,8 +37,8 @@ public class AttachmentsViewModel extends BaseViewModel {
         compositeDisposable.add(attachmentsRepository.deleteAttachment(getAttachmentsAdapter().getAttachmentList().get(getAttachmentsAdapter().lastSelected).getId(), getPassingObject().getObject()));
     }
 
-    public void selectFile() {
-        liveData.setValue(new Mutable(Constants.SELECT));
+    public void toAttach() {
+        liveData.setValue(new Mutable(Constants.ADD_ATTACH));
     }
 
     @Bindable
@@ -71,10 +63,6 @@ public class AttachmentsViewModel extends BaseViewModel {
 
     public AttachmentsRepository getAttachmentsRepository() {
         return attachmentsRepository;
-    }
-
-    public List<FileObject> getFileObjects() {
-        return fileObjects;
     }
 
     protected void unSubscribeFromObservable() {

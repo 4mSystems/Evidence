@@ -44,11 +44,11 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback39;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
     private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
+    private final android.view.View.OnClickListener mCallback41;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -354,9 +354,9 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         this.userType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -858,15 +858,15 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
         if ((dirtyFlags & 0x400L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback40);
-            this.catName.setOnClickListener(mCallback39);
+            this.btnSave.setOnClickListener(mCallback42);
+            this.catName.setOnClickListener(mCallback41);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.userType.setOnClickListener(mCallback38);
+            this.userType.setOnClickListener(mCallback40);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.userType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, userTypeandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x580L) != 0) {
@@ -927,23 +927,6 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.showCategories();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -975,6 +958,23 @@ public class FragmentAddUserBindingImpl extends FragmentAddUserBinding implement
 
 
                     viewmodel.showUserType();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.users.viewModels.AddUserViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.showCategories();
                 }
                 break;
             }

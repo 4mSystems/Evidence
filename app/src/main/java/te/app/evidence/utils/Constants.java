@@ -15,7 +15,7 @@ public class Constants {
     public final static String NOT_VERIFIED = "NOT_VERIFIED";
     public final static String EDIT = "EDIT";
 
-    public final static String UPDATE_PAYMENT = "UPDATE_PAYMENT";
+    public final static String ADD_ATTACH = "ADD_ATTACH";
     public final static String EMAIL = "email";
     public final static String DELETE = "DELETE";
     public final static String VIEW = "VIEW";
@@ -86,7 +86,8 @@ public class Constants {
     public final static int SESSION_CODE = 6005;
     public final static int KHESM_CODE = 6002;
     public final static int FILE_TYPE_IMAGE = 378;
-    public final static int FILE_TYPE_VIDEO = 379;
+    public final static int ATTACH_REQUEST = 6003;
+    public final static String ATTACHMENT_TYPE = "img_Url";
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
 

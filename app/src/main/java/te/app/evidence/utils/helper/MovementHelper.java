@@ -116,7 +116,6 @@ public class MovementHelper {
         if (shareBar != null) {
             intent.putExtra(Constants.SHARE_BAR, shareBar);
         }
-//        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
         LauncherHelper.execute(intent, Constants.RESULT_CODE, from);
     }
 
@@ -147,6 +146,7 @@ public class MovementHelper {
     }
 
     public static void finishWithResult(PassingObject passingObject, Context context, int request) {
+        LauncherHelper.launcherRequest = request;
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
         bundle.putSerializable(Constants.BUNDLE, passingObject);

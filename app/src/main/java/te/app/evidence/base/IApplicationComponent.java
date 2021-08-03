@@ -6,6 +6,7 @@ import dagger.Component;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
 import te.app.evidence.connection.ConnectionModule;
+import te.app.evidence.pages.attachments.AddAttachmentFragment;
 import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
@@ -81,6 +82,8 @@ public interface IApplicationComponent {
     void inject(ClientProfileFragment clientProfileFragment);
 
     void inject(AttachmentsFragment attachmentsFragment);
+
+    void inject(AddAttachmentFragment addAttachmentFragment);
 
     void inject(CategoriesFragment categoriesFragment);
 

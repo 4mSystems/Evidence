@@ -14,41 +14,38 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 5);
+        sViewsWithIds.put(R.id.input_search, 4);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback67;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback68;
+    private final android.view.View.OnClickListener mCallback69;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentAttachmentsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentAttachmentsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[3]
-            , (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[4]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[5]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[4]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
-        this.fileBtn.setTag(null);
-        this.imageBtn.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3];
+        this.mboundView3.setTag(null);
         this.progress.setTag(null);
         this.rcAttachments.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback69 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -181,8 +178,7 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.fileBtn.setOnClickListener(mCallback67);
-            this.imageBtn.setOnClickListener(mCallback68);
+            this.mboundView3.setOnClickListener(mCallback69);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -198,43 +194,19 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
 
 
 
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
 
 
-
-                    viewmodel.selectFile("IMAGE");
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-                    viewmodel.selectFile("FILE");
-                }
-                break;
-            }
+            viewmodel.toAttach();
         }
     }
     // dirty flag

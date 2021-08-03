@@ -24,6 +24,7 @@
         <entry key="app/src/main/res/layout/activity_pdf_downloader.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/download_dialog.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/exit_layout.xml" value="0.12681159420289856" />
+        <entry key="app/src/main/res/layout/fragment_add_attachment.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_add_bailiffs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_case.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_add_category.xml" value="0.19322916666666667" />

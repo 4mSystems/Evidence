@@ -13,8 +13,13 @@ import te.app.evidence.connection.ConnectionHelper_Factory;
 import te.app.evidence.connection.ConnectionModule;
 import te.app.evidence.connection.ConnectionModule_WebServiceFactory;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.attachments.AddAttachmentFragment;
+import te.app.evidence.pages.attachments.AddAttachmentFragment_MembersInjector;
 import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.attachments.AttachmentsFragment_MembersInjector;
+import te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel;
+import te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel_Factory;
+import te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel_MembersInjector;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel_Factory;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel_MembersInjector;
@@ -297,6 +302,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectAttachmentsViewModel(AttachmentsViewModel_Factory.newInstance(attachmentsRepositoryProvider.get()));
   }
 
+  private AddAttachmentViewModel addAttachmentViewModel() {
+    return injectAddAttachmentViewModel(AddAttachmentViewModel_Factory.newInstance(attachmentsRepositoryProvider.get()));
+  }
+
   private CategoriesViewModel categoriesViewModel() {
     return injectCategoriesViewModel(CategoriesViewModel_Factory.newInstance(categoriesRepositoryProvider.get()));
   }
@@ -461,6 +470,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(AttachmentsFragment attachmentsFragment) {
     injectAttachmentsFragment(attachmentsFragment);
+  }
+
+  @Override
+  public void inject(AddAttachmentFragment addAttachmentFragment) {
+    injectAddAttachmentFragment(addAttachmentFragment);
   }
 
   @Override
@@ -718,6 +732,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private AttachmentsFragment injectAttachmentsFragment(AttachmentsFragment instance) {
     AttachmentsFragment_MembersInjector.injectViewModel(instance, attachmentsViewModel());
+    return instance;
+  }
+
+  private AddAttachmentViewModel injectAddAttachmentViewModel(AddAttachmentViewModel instance) {
+    AddAttachmentViewModel_MembersInjector.injectAttachmentsRepository(instance, attachmentsRepositoryProvider.get());
+    return instance;
+  }
+
+  private AddAttachmentFragment injectAddAttachmentFragment(AddAttachmentFragment instance) {
+    AddAttachmentFragment_MembersInjector.injectViewModel(instance, addAttachmentViewModel());
     return instance;
   }
 

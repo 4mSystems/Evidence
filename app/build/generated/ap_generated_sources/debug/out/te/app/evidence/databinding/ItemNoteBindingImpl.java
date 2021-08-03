@@ -24,7 +24,7 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback90;
+    private final android.view.View.OnClickListener mCallback92;
     @Nullable
     private final android.view.View.OnClickListener mCallback91;
     // values
@@ -53,8 +53,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback92 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -210,8 +210,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback90);
-            this.edit.setOnClickListener(mCallback91);
+            this.delete.setOnClickListener(mCallback91);
+            this.edit.setOnClickListener(mCallback92);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -224,23 +224,6 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toDelete();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -255,6 +238,23 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
 
 
                     itemViewModel.toEdit();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
                 }
                 break;
             }

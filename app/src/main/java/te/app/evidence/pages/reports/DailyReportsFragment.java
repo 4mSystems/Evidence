@@ -4,6 +4,7 @@ package te.app.evidence.pages.reports;
 import android.app.Dialog;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,10 +26,12 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentDailyReportsBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.categories.models.CategoriesResponse;
 import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.PopUp.PopUpMenuHelper;
 import te.app.evidence.utils.helper.MovementHelper;
 
 
@@ -36,7 +39,6 @@ public class DailyReportsFragment extends BaseFragment {
     FragmentDailyReportsBinding binding;
     @Inject
     ReportsViewModel viewModel;
-    Dialog deleteDialog;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,7 +46,8 @@ public class DailyReportsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-//        viewModel.clients(1, true);
+        binding.setViewmodel(viewModel);
+        viewModel.getCasesClientsCategories();
         setEvent();
         return binding.getRoot();
     }
@@ -53,18 +56,11 @@ public class DailyReportsFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (Constants.CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
-            } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
-                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
-            } else if (Constants.ADD_CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.getClientsAdapter().lastSelected = -1;
-                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
-            } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
-                toastMessage(((StatusMessage) mutable.object).mMessage);
-                viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
-                viewModel.getClientsAdapter().notifyDataSetChanged();
-                deleteDialog.dismiss();
+            if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
+                Log.e("setEvent", "setEvent: "+ ((CategoriesResponse) mutable.object).getMainData());
+                viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getMainData().getCategoriesDataList());
+            }else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
+                showCategories();
             }
         });
 
@@ -88,6 +84,14 @@ public class DailyReportsFragment extends BaseFragment {
         });
     }
 
+    private void showCategories() {
+        PopUpMenuHelper.showCategoriesPopUp(requireActivity(), binding.inputCat, viewModel.getCategoriesDataList()).
+                setOnMenuItemClickListener(item -> {
+                    binding.inputCat.setText(viewModel.getCategoriesDataList().get(item.getItemId()).getName());
+//                    viewModel.getAddCaseRequest().setTo_whome(viewModel.getCaseClientsCategoriesData().getCategories().get(item.getItemId()).getId());
+                    return false;
+                });
+    }
     @Override
     public void onResume() {
         super.onResume();

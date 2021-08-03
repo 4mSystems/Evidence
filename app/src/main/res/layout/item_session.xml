@@ -216,7 +216,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
-                android:visibility="@{itemViewModel.userData.userData.equals(`admin`)&amp;&amp;TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)?View.VISIBLE:View.GONE}" />
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)&amp;&amp;TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)?View.VISIBLE:View.GONE}" />
 
             <te.app.evidence.customViews.views.CustomTextViewRegular
                 android:id="@+id/edit"
@@ -228,7 +228,7 @@
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
-                android:visibility="@{itemViewModel.userData.userData.equals(`admin`)&amp;&amp;TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)?View.VISIBLE:View.GONE}" />
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)&amp;&amp;TextUtils.isEmpty(itemViewModel.sessionItem.invetation_num)?View.VISIBLE:View.GONE}" />
 
             <te.app.evidence.customViews.views.CustomTextViewRegular
                 android:id="@+id/view_value"
