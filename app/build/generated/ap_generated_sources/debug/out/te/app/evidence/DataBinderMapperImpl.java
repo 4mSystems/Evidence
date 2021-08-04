@@ -64,6 +64,7 @@ import te.app.evidence.databinding.ItemClientTagsBindingImpl;
 import te.app.evidence.databinding.ItemClientsBindingImpl;
 import te.app.evidence.databinding.ItemHomeReporterBindingImpl;
 import te.app.evidence.databinding.ItemNoteBindingImpl;
+import te.app.evidence.databinding.ItemReportBindingImpl;
 import te.app.evidence.databinding.ItemSessionBindingImpl;
 import te.app.evidence.databinding.ItemSessionNoteBindingImpl;
 import te.app.evidence.databinding.ItemUserBindingImpl;
@@ -171,21 +172,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMNOTE = 49;
 
-  private static final int LAYOUT_ITEMSESSION = 50;
+  private static final int LAYOUT_ITEMREPORT = 50;
 
-  private static final int LAYOUT_ITEMSESSIONNOTE = 51;
+  private static final int LAYOUT_ITEMSESSION = 51;
 
-  private static final int LAYOUT_ITEMUSER = 52;
+  private static final int LAYOUT_ITEMSESSIONNOTE = 52;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 53;
+  private static final int LAYOUT_ITEMUSER = 53;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 54;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 54;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 55;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 55;
 
-  private static final int LAYOUT_OPTIONDIALOG = 56;
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 56;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(56);
+  private static final int LAYOUT_OPTIONDIALOG = 57;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(57);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -237,6 +240,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_reporter, LAYOUT_ITEMHOMEREPORTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_note, LAYOUT_ITEMNOTE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_report, LAYOUT_ITEMREPORT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_session, LAYOUT_ITEMSESSION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_session_note, LAYOUT_ITEMSESSIONNOTE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_user, LAYOUT_ITEMUSER);
@@ -543,11 +547,11 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_note is invalid. Received: " + tag);
       }
-      case  LAYOUT_ITEMSESSION: {
-        if ("layout/item_session_0".equals(tag)) {
-          return new ItemSessionBindingImpl(component, view);
+      case  LAYOUT_ITEMREPORT: {
+        if ("layout/item_report_0".equals(tag)) {
+          return new ItemReportBindingImpl(component, view);
         }
-        throw new IllegalArgumentException("The tag for item_session is invalid. Received: " + tag);
+        throw new IllegalArgumentException("The tag for item_report is invalid. Received: " + tag);
       }
     }
     return null;
@@ -556,6 +560,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_ITEMSESSION: {
+        if ("layout/item_session_0".equals(tag)) {
+          return new ItemSessionBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_session is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMSESSIONNOTE: {
         if ("layout/item_session_note_0".equals(tag)) {
           return new ItemSessionNoteBindingImpl(component, view);
@@ -658,7 +668,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(41);
+    static final SparseArray<String> sKeys = new SparseArray<String>(45);
 
     static {
       sKeys.put(0, "_all");
@@ -691,22 +701,26 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(27, "onBoardViewModels");
       sKeys.put(28, "passingObject");
       sKeys.put(29, "reportersData");
-      sKeys.put(30, "selectedBtn");
-      sKeys.put(31, "sessionItem");
-      sKeys.put(32, "sessionsAdapter");
-      sKeys.put(33, "settingsData");
-      sKeys.put(34, "systemUserData");
-      sKeys.put(35, "type");
-      sKeys.put(36, "userDocuments");
-      sKeys.put(37, "userPermissionsData");
-      sKeys.put(38, "usersAdapter");
-      sKeys.put(39, "usersMainData");
-      sKeys.put(40, "viewmodel");
+      sKeys.put(30, "reportsAdapter");
+      sKeys.put(31, "reportsData");
+      sKeys.put(32, "reportsMain");
+      sKeys.put(33, "searchReportRequest");
+      sKeys.put(34, "selectedBtn");
+      sKeys.put(35, "sessionItem");
+      sKeys.put(36, "sessionsAdapter");
+      sKeys.put(37, "settingsData");
+      sKeys.put(38, "systemUserData");
+      sKeys.put(39, "type");
+      sKeys.put(40, "userDocuments");
+      sKeys.put(41, "userPermissionsData");
+      sKeys.put(42, "usersAdapter");
+      sKeys.put(43, "usersMainData");
+      sKeys.put(44, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(56);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(57);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -758,6 +772,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_clients_0", te.app.evidence.R.layout.item_clients);
       sKeys.put("layout/item_home_reporter_0", te.app.evidence.R.layout.item_home_reporter);
       sKeys.put("layout/item_note_0", te.app.evidence.R.layout.item_note);
+      sKeys.put("layout/item_report_0", te.app.evidence.R.layout.item_report);
       sKeys.put("layout/item_session_0", te.app.evidence.R.layout.item_session);
       sKeys.put("layout/item_session_note_0", te.app.evidence.R.layout.item_session_note);
       sKeys.put("layout/item_user_0", te.app.evidence.R.layout.item_user);

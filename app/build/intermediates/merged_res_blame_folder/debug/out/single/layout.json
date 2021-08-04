@@ -68,6 +68,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_case.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_report.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_report.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_sessions.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_sessions.xml"
     },

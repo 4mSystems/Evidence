@@ -3,7 +3,7 @@ package te.app.evidence.pages.reports.viewModels;
 import dagger.internal.Factory;
 import javax.annotation.processing.Generated;
 import javax.inject.Provider;
-import te.app.evidence.repository.ClientsRepository;
+import te.app.evidence.repository.ReportsRepository;
 
 @Generated(
     value = "dagger.internal.codegen.ComponentProcessor",
@@ -14,30 +14,30 @@ import te.app.evidence.repository.ClientsRepository;
     "rawtypes"
 })
 public final class ReportsViewModel_Factory implements Factory<ReportsViewModel> {
-  private final Provider<ClientsRepository> clientsRepositoryProvider;
+  private final Provider<ReportsRepository> reportsRepositoryProvider;
 
-  private final Provider<ClientsRepository> clientsRepositoryProvider2;
+  private final Provider<ReportsRepository> reportsRepositoryProvider2;
 
-  public ReportsViewModel_Factory(Provider<ClientsRepository> clientsRepositoryProvider,
-      Provider<ClientsRepository> clientsRepositoryProvider2) {
-    this.clientsRepositoryProvider = clientsRepositoryProvider;
-    this.clientsRepositoryProvider2 = clientsRepositoryProvider2;
+  public ReportsViewModel_Factory(Provider<ReportsRepository> reportsRepositoryProvider,
+      Provider<ReportsRepository> reportsRepositoryProvider2) {
+    this.reportsRepositoryProvider = reportsRepositoryProvider;
+    this.reportsRepositoryProvider2 = reportsRepositoryProvider2;
   }
 
   @Override
   public ReportsViewModel get() {
-    ReportsViewModel instance = newInstance(clientsRepositoryProvider.get());
-    ReportsViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider2.get());
+    ReportsViewModel instance = newInstance(reportsRepositoryProvider.get());
+    ReportsViewModel_MembersInjector.injectReportsRepository(instance, reportsRepositoryProvider2.get());
     return instance;
   }
 
   public static ReportsViewModel_Factory create(
-      Provider<ClientsRepository> clientsRepositoryProvider,
-      Provider<ClientsRepository> clientsRepositoryProvider2) {
-    return new ReportsViewModel_Factory(clientsRepositoryProvider, clientsRepositoryProvider2);
+      Provider<ReportsRepository> reportsRepositoryProvider,
+      Provider<ReportsRepository> reportsRepositoryProvider2) {
+    return new ReportsViewModel_Factory(reportsRepositoryProvider, reportsRepositoryProvider2);
   }
 
-  public static ReportsViewModel newInstance(ClientsRepository clientsRepository) {
-    return new ReportsViewModel(clientsRepository);
+  public static ReportsViewModel newInstance(ReportsRepository reportsRepository) {
+    return new ReportsViewModel(reportsRepository);
   }
 }

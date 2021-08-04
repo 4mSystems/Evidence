@@ -3263,9 +3263,11 @@ id client_name_value
 id client_note_text
 id client_note_value
 id client_notes
+id client_text
 id client_type
 id client_type_text
 id client_type_value
+id client_value
 id clients
 id clip_horizontal
 id clip_vertical
@@ -3531,6 +3533,8 @@ id ok_action
 id on
 id onAttachStateChangeListener
 id onDateChanged
+id opponents_text
+id opponents_value
 id option_cancel
 id option_done
 id outline
@@ -3780,7 +3784,9 @@ id v6
 id v7
 id v8
 id v9
+id v_client
 id v_drop
+id v_opponents
 id vertical
 id view_attachments
 id view_casee
@@ -3944,6 +3950,7 @@ layout item_clients
 layout item_drop_category
 layout item_home_reporter
 layout item_note
+layout item_report
 layout item_session
 layout item_session_note
 layout item_user

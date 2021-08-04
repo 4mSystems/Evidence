@@ -33,7 +33,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback83;
     @Nullable
-    private final android.view.View.OnClickListener mCallback81;
+    private final android.view.View.OnClickListener mCallback87;
     @Nullable
     private final android.view.View.OnClickListener mCallback86;
     @Nullable
@@ -91,12 +91,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback81 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         invalidateAll();
     }
 
@@ -470,12 +470,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.homeItem2.setOnClickListener(mCallback81);
-            this.homeItem3.setOnClickListener(mCallback82);
-            this.homeItem4.setOnClickListener(mCallback83);
-            this.nextMohdareen.setOnClickListener(mCallback86);
-            this.nextSessions.setOnClickListener(mCallback84);
-            this.previousSessions.setOnClickListener(mCallback85);
+            this.homeItem2.setOnClickListener(mCallback82);
+            this.homeItem3.setOnClickListener(mCallback83);
+            this.homeItem4.setOnClickListener(mCallback84);
+            this.nextMohdareen.setOnClickListener(mCallback87);
+            this.nextSessions.setOnClickListener(mCallback85);
+            this.previousSessions.setOnClickListener(mCallback86);
         }
         if ((dirtyFlags & 0x62L) != 0) {
             // api target 1
@@ -492,6 +492,81 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.mohdreen
+                java.lang.String viewmodelUserDataPermissionMohdreen = null;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.mohdreen.equals("yes") ? Constants.GET_MOHDAREEN : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = null;
+                // viewmodel.userData.permission.mohdreen.equals("yes")
+                boolean viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = false;
+                // viewmodel.userData.permission.mohdreen != null
+                boolean viewmodelUserDataPermissionMohdreenJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionMohdreen = viewmodelUserDataPermission.getMohdreen();
+
+                            viewmodelUserDataPermissionMohdreenJavaLangObjectNull = (viewmodelUserDataPermissionMohdreen) != (null);
+                            if (viewmodelUserDataPermissionMohdreenJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = viewmodelUserDataPermissionMohdreen.equals("yes");
+                                if (viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.GET_MOHDAREEN;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel.userData.permission
@@ -564,6 +639,40 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                             }
                         }
                     }
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextMohdars();
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.previousSessions();
                 }
                 break;
             }
@@ -642,98 +751,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel.userData.permission
-                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel.userData.permission != null
-                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
-                // viewmodel.userData
-                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
-                // viewmodel.userData.permission.mohdreen
-                java.lang.String viewmodelUserDataPermissionMohdreen = null;
-                // viewmodel.userData != null
-                boolean viewmodelUserDataJavaLangObjectNull = false;
-                // viewmodel.userData.permission.mohdreen.equals("yes") ? Constants.GET_MOHDAREEN : Constants.ERROR_TOAST
-                java.lang.String viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = null;
-                // viewmodel.userData.permission.mohdreen.equals("yes")
-                boolean viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = false;
-                // viewmodel.userData.permission.mohdreen != null
-                boolean viewmodelUserDataPermissionMohdreenJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodelUserData = viewmodel.userData;
-
-                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
-                    if (viewmodelUserDataJavaLangObjectNull) {
-
-
-                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
-
-                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
-                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
-
-
-                            viewmodelUserDataPermissionMohdreen = viewmodelUserDataPermission.getMohdreen();
-
-                            viewmodelUserDataPermissionMohdreenJavaLangObjectNull = (viewmodelUserDataPermissionMohdreen) != (null);
-                            if (viewmodelUserDataPermissionMohdreenJavaLangObjectNull) {
-
-
-
-                                viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = viewmodelUserDataPermissionMohdreen.equals("yes");
-                                if (viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes) {
-
-
-
-
-                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.GET_MOHDAREEN;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
-                                }
-                                else {
-
-
-
-
-                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
-                                }
-                            }
-                        }
-                    }
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextMohdars();
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -748,23 +765,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                     viewmodel.nextSessions();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.previousSessions();
                 }
                 break;
             }

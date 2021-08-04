@@ -1,8 +1,5 @@
 package te.app.evidence.pages.reports.viewModels;
 
-import android.text.TextUtils;
-import android.util.Log;
-
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -12,39 +9,37 @@ import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.pages.categories.adapters.CategoriesAdapter;
-import te.app.evidence.pages.categories.adapters.CategoriesDropAdapter;
-import te.app.evidence.pages.clients.adapters.ClientsAdapter;
-import te.app.evidence.pages.clients.models.ClientsMainData;
-import te.app.evidence.repository.ClientsRepository;
-import te.app.evidence.utils.Constants;
+import te.app.evidence.pages.reports.adapters.ReportsAdapter;
+import te.app.evidence.pages.reports.models.ReportsMain;
+import te.app.evidence.pages.reports.models.SearchReportRequest;
+import te.app.evidence.repository.ReportsRepository;
 
 public class ReportsViewModel extends BaseViewModel {
 
     public MutableLiveData<Mutable> liveData;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
-    ClientsRepository clientsRepository;
-    ClientsAdapter clientsAdapter;
-    ClientsMainData clientsMainData, oldClientsMainData;
-   public CategoriesDropAdapter categoriesAdapter;
+    ReportsRepository reportsRepository;
+    ReportsAdapter reportsAdapter;
+    ReportsMain reportsMain;
+    SearchReportRequest searchReportRequest;
 
     @Inject
-    public ReportsViewModel(ClientsRepository clientsRepository) {
-        clientsMainData = new ClientsMainData();
-        oldClientsMainData = new ClientsMainData();
-        this.clientsRepository = clientsRepository;
+    public ReportsViewModel(ReportsRepository reportsRepository) {
+        reportsMain = new ReportsMain();
+        this.reportsRepository = reportsRepository;
         this.liveData = new MutableLiveData<>();
-        clientsRepository.setLiveData(liveData);
+        reportsRepository.setLiveData(liveData);
+
     }
 
-    public void clients(int page, boolean showProgress) {
-        compositeDisposable.add(clientsRepository.getClients(page, showProgress));
+    public void getReports(int page, boolean showProgress) {
+        compositeDisposable.add(reportsRepository.searchReports(page, showProgress, getSearchReportRequest()));
     }
 
     public void getCasesClientsCategories() {
         if (userData.getUserData().getType().equals("admin"))
-            compositeDisposable.add(clientsRepository.getCategories());
+            compositeDisposable.add(reportsRepository.getCategories());
     }
 
     public void action(String action) {
@@ -52,46 +47,34 @@ public class ReportsViewModel extends BaseViewModel {
     }
 
     @Bindable
-    public ClientsMainData getClientsMainData() {
-        return clientsMainData;
+    public ReportsMain getReportsMain() {
+        return reportsMain;
     }
 
     @Bindable
-    public void setClientsMainData(ClientsMainData clientsMainData) {
-        if (!TextUtils.isEmpty(searchRequest.getName())) { // if search required
-            if (clientsMainData.getCurrentPage() > 1) {
-                getClientsAdapter().loadMore(clientsMainData.getClientsList());
-            } else {
-                getClientsAdapter().update(clientsMainData.getClientsList());
-                notifyChange(BR.clientsAdapter);
-            }
+    public void setReportsMain(ReportsMain reportsMain) {
+        if (getReportsAdapter().getReportsDataList().size() > 0) {
+            getReportsAdapter().loadMore(reportsMain.getReportsDataList());
         } else {
-            if (getClientsAdapter().getClientsList().size() > 0) {
-                getClientsAdapter().loadMore(clientsMainData.getClientsList());
-            } else {
-                oldClientsMainData = clientsMainData;
-                getClientsAdapter().update(clientsMainData.getClientsList());
-                notifyChange(BR.clientsAdapter);
-            }
+            getReportsAdapter().update(reportsMain.getReportsDataList());
+            notifyChange(BR.reportsAdapter);
         }
         searchProgressVisible.set(false);
-        this.clientsMainData = clientsMainData;
+        this.reportsMain = reportsMain;
     }
 
     @Bindable
-    public ClientsAdapter getClientsAdapter() {
-        return this.clientsAdapter == null ? this.clientsAdapter = new ClientsAdapter() : this.clientsAdapter;
+    public ReportsAdapter getReportsAdapter() {
+        return this.reportsAdapter == null ? this.reportsAdapter = new ReportsAdapter() : this.reportsAdapter;
     }
 
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-        if (TextUtils.isEmpty(s)) {
-            getClientsAdapter().getClientsList().clear();
-            setClientsMainData(oldClientsMainData);
-        }
+    @Bindable
+    public SearchReportRequest getSearchReportRequest() {
+        return this.searchReportRequest == null ? this.searchReportRequest = new SearchReportRequest() : this.searchReportRequest;
     }
 
-    public ClientsRepository getClientsRepository() {
-        return clientsRepository;
+    public ReportsRepository getReportsRepository() {
+        return reportsRepository;
     }
 
     protected void unSubscribeFromObservable() {

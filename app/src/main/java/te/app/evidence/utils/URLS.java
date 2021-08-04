@@ -44,8 +44,8 @@ public class URLS {
     public static final String ADD_CATEGORY = "add_category";
     public static final String EDIT_CATEGORY = "edit_category";
     public final static String DELETE_CATEGORY = "delete_category/";
-    public final static String REMOVE_AD = "listings/delete-listing/";
-    public final static String REMOVE_IMAGE = "listings/delete-img/";
+    public final static String DAILY_REPORTS = "report_daily?page=";
+    public final static String MONTHLY_REPORTS = "report_monthly?page=";
 
 
     public static final String DELETE_USER = "delete_user/";

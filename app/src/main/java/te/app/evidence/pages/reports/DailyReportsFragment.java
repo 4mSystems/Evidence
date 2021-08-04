@@ -1,10 +1,8 @@
 package te.app.evidence.pages.reports;
 
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,21 +16,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import javax.inject.Inject;
 
-import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentDailyReportsBinding;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
-import te.app.evidence.pages.clients.AddClientFragment;
-import te.app.evidence.pages.clients.models.ClientsResponse;
+import te.app.evidence.pages.reports.models.ReportsResponse;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
-import te.app.evidence.utils.helper.MovementHelper;
 
 
 public class DailyReportsFragment extends BaseFragment {
@@ -46,7 +40,6 @@ public class DailyReportsFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
-        binding.setViewmodel(viewModel);
         viewModel.getCasesClientsCategories();
         setEvent();
         return binding.getRoot();
@@ -57,10 +50,11 @@ public class DailyReportsFragment extends BaseFragment {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
-                Log.e("setEvent", "setEvent: "+ ((CategoriesResponse) mutable.object).getMainData());
                 viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getMainData().getCategoriesDataList());
-            }else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
+            } else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
                 showCategories();
+            }else if (Constants.REPORT.equals(((Mutable) o).message)) {
+                viewModel.setReportsMain(((ReportsResponse)mutable.object).getReportsMain());
             }
         });
 
@@ -74,10 +68,10 @@ public class DailyReportsFragment extends BaseFragment {
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getClientsMainData().getNextPageUrl())) {
-                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getClientsAdapter().getClientsList().size() - 1) {
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getReportsMain().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getReportsAdapter().getReportsDataList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
+                        viewModel.getReports((viewModel.getReportsMain().getCurrentPage() + 1), false);
                     }
                 }
             }
@@ -88,14 +82,15 @@ public class DailyReportsFragment extends BaseFragment {
         PopUpMenuHelper.showCategoriesPopUp(requireActivity(), binding.inputCat, viewModel.getCategoriesDataList()).
                 setOnMenuItemClickListener(item -> {
                     binding.inputCat.setText(viewModel.getCategoriesDataList().get(item.getItemId()).getName());
-//                    viewModel.getAddCaseRequest().setTo_whome(viewModel.getCaseClientsCategoriesData().getCategories().get(item.getItemId()).getId());
+                    viewModel.getSearchReportRequest().setCategory_id(viewModel.getCategoriesDataList().get(item.getItemId()).getId());
                     return false;
                 });
     }
+
     @Override
     public void onResume() {
         super.onResume();
-        viewModel.getClientsRepository().setLiveData(viewModel.liveData);
+        viewModel.getReportsRepository().setLiveData(viewModel.liveData);
     }
 
 }

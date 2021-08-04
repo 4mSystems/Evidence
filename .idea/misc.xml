@@ -59,6 +59,7 @@
         <entry key="app/src/main/res/layout/item_clients.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_drop_category.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_report.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_session.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_session_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.19322916666666667" />

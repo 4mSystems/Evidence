@@ -22,9 +22,9 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback98;
+    private final android.view.View.OnClickListener mCallback100;
     @Nullable
-    private final android.view.View.OnClickListener mCallback97;
+    private final android.view.View.OnClickListener mCallback99;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -87,8 +87,8 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback98 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback97 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback100 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback99 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -245,8 +245,8 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback98);
-            this.search.setOnClickListener(mCallback97);
+            this.mboundView5.setOnClickListener(mCallback100);
+            this.search.setOnClickListener(mCallback99);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

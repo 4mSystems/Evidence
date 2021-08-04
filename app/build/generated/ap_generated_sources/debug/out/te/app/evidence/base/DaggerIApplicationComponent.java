@@ -190,6 +190,8 @@ import te.app.evidence.repository.HomeRepository;
 import te.app.evidence.repository.HomeRepository_Factory;
 import te.app.evidence.repository.NotesRepository;
 import te.app.evidence.repository.NotesRepository_Factory;
+import te.app.evidence.repository.ReportsRepository;
+import te.app.evidence.repository.ReportsRepository_Factory;
 import te.app.evidence.repository.SystemUsersRepository;
 import te.app.evidence.repository.SystemUsersRepository_Factory;
 
@@ -223,6 +225,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<CategoriesRepository> categoriesRepositoryProvider;
 
   private Provider<NotesRepository> notesRepositoryProvider;
+
+  private Provider<ReportsRepository> reportsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -359,7 +363,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ReportsViewModel reportsViewModel() {
-    return injectReportsViewModel(ReportsViewModel_Factory.newInstance(clientsRepositoryProvider.get()));
+    return injectReportsViewModel(ReportsViewModel_Factory.newInstance(reportsRepositoryProvider.get()));
   }
 
   @SuppressWarnings("unchecked")
@@ -376,6 +380,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.attachmentsRepositoryProvider = DoubleCheck.provider(AttachmentsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.categoriesRepositoryProvider = DoubleCheck.provider(CategoriesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.notesRepositoryProvider = DoubleCheck.provider(NotesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.reportsRepositoryProvider = DoubleCheck.provider(ReportsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -887,7 +892,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   private ReportsViewModel injectReportsViewModel(ReportsViewModel instance) {
-    ReportsViewModel_MembersInjector.injectClientsRepository(instance, clientsRepositoryProvider.get());
+    ReportsViewModel_MembersInjector.injectReportsRepository(instance, reportsRepositoryProvider.get());
     return instance;
   }
 

@@ -14,47 +14,91 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_date, 5);
-        sViewsWithIds.put(R.id.search, 6);
+        sViewsWithIds.put(R.id.input_date, 7);
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final te.app.evidence.customViews.views.DateEditText mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback19;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.searchReportRequest.session_date
+            //         is viewmodel.searchReportRequest.setSession_date((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
+            // localize variables for thread safety
+            // viewmodel.searchReportRequest != null
+            boolean viewmodelSearchReportRequestJavaLangObjectNull = false;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.searchReportRequest
+            te.app.evidence.pages.reports.models.SearchReportRequest viewmodelSearchReportRequest = null;
+            // viewmodel
+            te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
+            // viewmodel.searchReportRequest.session_date
+            java.lang.String viewmodelSearchReportRequestSessionDate = null;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelSearchReportRequest = viewmodel.getSearchReportRequest();
+
+                viewmodelSearchReportRequestJavaLangObjectNull = (viewmodelSearchReportRequest) != (null);
+                if (viewmodelSearchReportRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelSearchReportRequest.setSession_date(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentDailyReportsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private FragmentDailyReportsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             , (com.google.android.material.textfield.TextInputLayout) bindings[1]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[4]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
-            , (com.google.android.material.button.MaterialButton) bindings[6]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[6]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
             );
         this.inputCat.setTag(null);
         this.inputCategory.setTag(null);
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView3 = (te.app.evidence.customViews.views.DateEditText) bindings[3];
+        this.mboundView3.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
+        this.search.setTag(null);
         setRootTag(root);
         // listeners
         mCallback19 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x8L;
+                mDirtyFlags = 0x10L;
         }
         requestRebind();
     }
@@ -117,9 +161,15 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
             }
             return true;
         }
-        else if (fieldId == BR.clientsAdapter) {
+        else if (fieldId == BR.searchReportRequest) {
             synchronized(this) {
                     mDirtyFlags |= 0x4L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.reportsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x8L;
             }
             return true;
         }
@@ -134,20 +184,35 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
             mDirtyFlags = 0;
         }
         boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
+        te.app.evidence.pages.reports.models.SearchReportRequest viewmodelSearchReportRequest = null;
         int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
-        te.app.evidence.pages.clients.adapters.ClientsAdapter viewmodelClientsAdapter = null;
         te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         boolean viewmodelSearchProgressVisibleGet = false;
+        java.lang.String viewmodelSearchReportRequestSessionDate = null;
         java.lang.String viewmodelUserDataUserDataType = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
+        te.app.evidence.pages.reports.adapters.ReportsAdapter viewmodelReportsAdapter = null;
         te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0xfL) != 0) {
+        if ((dirtyFlags & 0x1fL) != 0) {
 
 
-            if ((dirtyFlags & 0xbL) != 0) {
+            if ((dirtyFlags & 0x16L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchReportRequest
+                        viewmodelSearchReportRequest = viewmodel.getSearchReportRequest();
+                    }
+
+
+                    if (viewmodelSearchReportRequest != null) {
+                        // read viewmodel.searchReportRequest.session_date
+                        viewmodelSearchReportRequestSessionDate = viewmodelSearchReportRequest.getSession_date();
+                    }
+            }
+            if ((dirtyFlags & 0x13L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.searchProgressVisible
@@ -160,12 +225,12 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                         // read viewmodel.searchProgressVisible.get()
                         viewmodelSearchProgressVisibleGet = viewmodelSearchProgressVisible.get();
                     }
-                if((dirtyFlags & 0xbL) != 0) {
+                if((dirtyFlags & 0x13L) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x100L;
                     }
                     else {
-                            dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x80L;
                     }
                 }
 
@@ -173,14 +238,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
-            if ((dirtyFlags & 0xeL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.clientsAdapter
-                        viewmodelClientsAdapter = viewmodel.getClientsAdapter();
-                    }
-            }
-            if ((dirtyFlags & 0xaL) != 0) {
+            if ((dirtyFlags & 0x12L) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.userData
@@ -204,12 +262,12 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                         // read viewmodel.userData.userData.type.equals("admin")
                         viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("admin");
                     }
-                if((dirtyFlags & 0xaL) != 0) {
+                if((dirtyFlags & 0x12L) != 0) {
                     if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x40L;
                     }
                     else {
-                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x20L;
                     }
                 }
 
@@ -217,47 +275,85 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                     // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
                     viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0x1aL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.reportsAdapter
+                        viewmodelReportsAdapter = viewmodel.getReportsAdapter();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x8L) != 0) {
+        if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.inputCat.setOnClickListener(mCallback19);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
+            this.search.setOnClickListener(mCallback20);
         }
-        if ((dirtyFlags & 0xaL) != 0) {
+        if ((dirtyFlags & 0x12L) != 0) {
             // api target 1
 
             this.inputCategory.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0xbL) != 0) {
+        if ((dirtyFlags & 0x16L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelSearchReportRequestSessionDate);
+        }
+        if ((dirtyFlags & 0x13L) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0xeL) != 0) {
+        if ((dirtyFlags & 0x1aL) != 0) {
             // api target 1
 
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelClientsAdapter, "1", "1");
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelReportsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
 
 
-            viewmodel.action(te.app.evidence.utils.Constants.SHOW_CATEGORIES);
+                    viewmodel.action(te.app.evidence.utils.Constants.SHOW_CATEGORIES);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.getReports(1, true);
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -265,12 +361,13 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     /* flag mapping
         flag 0 (0x1L): viewmodel.searchProgressVisible
         flag 1 (0x2L): viewmodel
-        flag 2 (0x3L): viewmodel.clientsAdapter
-        flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 2 (0x3L): viewmodel.searchReportRequest
+        flag 3 (0x4L): viewmodel.reportsAdapter
+        flag 4 (0x5L): null
         flag 5 (0x6L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
         flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 8 (0x9L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

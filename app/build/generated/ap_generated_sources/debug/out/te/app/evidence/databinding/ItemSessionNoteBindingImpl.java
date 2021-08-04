@@ -28,7 +28,7 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback40;
     @Nullable
     private final android.view.View.OnClickListener mCallback38;
     // values
@@ -63,9 +63,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         this.statusValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -218,9 +218,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback38);
-            this.edit.setOnClickListener(mCallback39);
-            this.statusValue.setOnClickListener(mCallback37);
+            this.delete.setOnClickListener(mCallback39);
+            this.edit.setOnClickListener(mCallback40);
+            this.statusValue.setOnClickListener(mCallback38);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -239,6 +239,25 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -274,25 +293,6 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
 
 
                     itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.notes.viewModels.NotesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.DELETE);
                 }
                 break;
             }

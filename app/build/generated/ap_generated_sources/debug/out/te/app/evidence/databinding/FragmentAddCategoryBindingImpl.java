@@ -26,7 +26,7 @@ public class FragmentAddCategoryBindingImpl extends FragmentAddCategoryBinding i
     private final androidx.appcompat.widget.AppCompatButton mboundView3;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback30;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -84,7 +84,7 @@ public class FragmentAddCategoryBindingImpl extends FragmentAddCategoryBinding i
         this.mboundView3.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -255,7 +255,7 @@ public class FragmentAddCategoryBindingImpl extends FragmentAddCategoryBinding i
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.mboundView3.setOnClickListener(mCallback29);
+            this.mboundView3.setOnClickListener(mCallback30);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1

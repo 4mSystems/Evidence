@@ -23,7 +23,7 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentMonthlyReportsBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
-import te.app.evidence.pages.clients.models.ClientsResponse;
+import te.app.evidence.pages.reports.models.ReportsResponse;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
@@ -48,14 +48,12 @@ public class MonthlyReportsFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (Constants.CLIENTS.equals(((Mutable) o).message)) {
-                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
-            } else if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
+            if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
                 viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getMainData().getCategoriesDataList());
-            } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
-                viewModel.setClientsMainData(((ClientsResponse) mutable.object).getClientsMainData());
             } else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
                 showCategories();
+            } else if (Constants.REPORT.equals(((Mutable) o).message)) {
+                viewModel.setReportsMain(((ReportsResponse) mutable.object).getReportsMain());
             }
         });
 
@@ -69,10 +67,10 @@ public class MonthlyReportsFragment extends BaseFragment {
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
-                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getClientsMainData().getNextPageUrl())) {
-                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getClientsAdapter().getClientsList().size() - 1) {
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getReportsMain().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getReportsAdapter().getReportsDataList().size() - 1) {
                         viewModel.searchProgressVisible.set(true);
-                        viewModel.clients((viewModel.getClientsMainData().getCurrentPage() + 1), false);
+                        viewModel.getReports((viewModel.getReportsMain().getCurrentPage() + 1), false);
                     }
                 }
             }
@@ -83,7 +81,7 @@ public class MonthlyReportsFragment extends BaseFragment {
         PopUpMenuHelper.showCategoriesPopUp(requireActivity(), binding.inputCat, viewModel.getCategoriesDataList()).
                 setOnMenuItemClickListener(item -> {
                     binding.inputCat.setText(viewModel.getCategoriesDataList().get(item.getItemId()).getName());
-//                    viewModel.getAddCaseRequest().setTo_whome(viewModel.getCaseClientsCategoriesData().getCategories().get(item.getItemId()).getId());
+                    viewModel.getSearchReportRequest().setCategory_id(viewModel.getCategoriesDataList().get(item.getItemId()).getId());
                     return false;
                 });
     }
@@ -91,7 +89,7 @@ public class MonthlyReportsFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        viewModel.getClientsRepository().setLiveData(viewModel.liveData);
+        viewModel.getReportsRepository().setLiveData(viewModel.liveData);
     }
 
 }

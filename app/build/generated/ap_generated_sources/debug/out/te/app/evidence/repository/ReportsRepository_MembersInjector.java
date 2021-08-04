@@ -14,31 +14,31 @@ import te.app.evidence.connection.ConnectionHelper;
     "unchecked",
     "rawtypes"
 })
-public final class AdsRepository_MembersInjector implements MembersInjector<AdsRepository> {
+public final class ReportsRepository_MembersInjector implements MembersInjector<ReportsRepository> {
   private final Provider<ConnectionHelper> connectionHelperProvider;
 
   private final Provider<ConnectionHelper> connectionHelperProvider2;
 
-  public AdsRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider,
+  public ReportsRepository_MembersInjector(Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
     this.connectionHelperProvider = connectionHelperProvider;
     this.connectionHelperProvider2 = connectionHelperProvider2;
   }
 
-  public static MembersInjector<AdsRepository> create(
+  public static MembersInjector<ReportsRepository> create(
       Provider<ConnectionHelper> connectionHelperProvider,
       Provider<ConnectionHelper> connectionHelperProvider2) {
-    return new AdsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
+    return new ReportsRepository_MembersInjector(connectionHelperProvider, connectionHelperProvider2);
   }
 
   @Override
-  public void injectMembers(AdsRepository instance) {
+  public void injectMembers(ReportsRepository instance) {
     BaseRepository_MembersInjector.injectConnectionHelper(instance, connectionHelperProvider.get());
     injectConnectionHelper(instance, connectionHelperProvider2.get());
   }
 
-  @InjectedFieldSignature("te.app.evidence.repository.AdsRepository.connectionHelper")
-  public static void injectConnectionHelper(AdsRepository instance,
+  @InjectedFieldSignature("te.app.evidence.repository.ReportsRepository.connectionHelper")
+  public static void injectConnectionHelper(ReportsRepository instance,
       ConnectionHelper connectionHelper) {
     instance.connectionHelper = connectionHelper;
   }

@@ -35,7 +35,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 import java.util.Objects;
 
 import te.app.evidence.base.MyApplication;
@@ -51,6 +54,10 @@ import te.app.evidence.utils.session.LanguagesHelper;
  */
 
 public class AppHelper {
+    public static String selectDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        return sdf.format(new Date());
+    }
 
     public static void shareApp(Activity activity) {
         Intent intent = new Intent(Intent.ACTION_SEND);
