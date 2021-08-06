@@ -184,11 +184,9 @@ public class AppHelper {
                     Log.i("FLAG", "Downloading");
                     int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
                     if (status == DownloadManager.STATUS_SUCCESSFUL) {
-                        Log.i("FLAG", "done");
                         downloading = false;
                         ((ParentActivity) context).toastMessage(ResourceManager.getString(R.string.download_success), R.drawable.ic_check_white_24dp, R.color.successColor);
                         File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), toFilename);
-                        Log.e("FLAG", "download: " + file.getName());
                         if (file.exists()) {
                             Log.e("FLAG", "download: ");
                         }

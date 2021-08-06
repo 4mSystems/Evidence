@@ -1,5 +1,7 @@
 package te.app.evidence.pages.reports.viewModels;
 
+import android.text.TextUtils;
+
 import androidx.databinding.Bindable;
 import androidx.lifecycle.MutableLiveData;
 
@@ -7,12 +9,19 @@ import javax.inject.Inject;
 
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
+import te.app.evidence.R;
 import te.app.evidence.base.BaseViewModel;
+import te.app.evidence.base.MyApplication;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.reports.adapters.ReportsAdapter;
 import te.app.evidence.pages.reports.models.ReportsMain;
 import te.app.evidence.pages.reports.models.SearchReportRequest;
 import te.app.evidence.repository.ReportsRepository;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.URLS;
+import te.app.evidence.utils.helper.AppHelper;
+import te.app.evidence.utils.resources.ResourceManager;
+import te.app.evidence.utils.session.LanguagesHelper;
 
 public class ReportsViewModel extends BaseViewModel {
 
@@ -30,16 +39,18 @@ public class ReportsViewModel extends BaseViewModel {
         this.reportsRepository = reportsRepository;
         this.liveData = new MutableLiveData<>();
         reportsRepository.setLiveData(liveData);
-
     }
 
     public void getReports(int page, boolean showProgress) {
         compositeDisposable.add(reportsRepository.searchReports(page, showProgress, getSearchReportRequest()));
     }
 
+
     public void getCasesClientsCategories() {
         if (userData.getUserData().getType().equals("admin"))
             compositeDisposable.add(reportsRepository.getCategories());
+        else
+            getSearchReportRequest().setCategory_id(userData.getUserData().getCatId());
     }
 
     public void action(String action) {

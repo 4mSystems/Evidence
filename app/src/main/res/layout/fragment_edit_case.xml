@@ -26,18 +26,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_circle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/circle_num"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_circle"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -47,7 +35,7 @@
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
                 app:error="@{viewmodel.addCaseRequest.circleNumError}"
-                app:layout_constraintTop_toBottomOf="@+id/tv_circle">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -60,17 +48,6 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_case"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/case_number"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_circle" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_case"
@@ -81,7 +58,7 @@
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
                 app:error="@{viewmodel.addCaseRequest.invetationNumError}"
-                app:layout_constraintTop_toBottomOf="@+id/tv_case">
+                app:layout_constraintTop_toBottomOf="@+id/input_circle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -94,18 +71,6 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_court"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/court_mohdr"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_case" />
-
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_court"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -115,7 +80,7 @@
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
                 app:error="@{viewmodel.addCaseRequest.courtError}"
-                app:layout_constraintTop_toBottomOf="@+id/tv_court">
+                app:layout_constraintTop_toBottomOf="@+id/input_case">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -128,17 +93,28 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_whom"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_invite_type"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/addressed_to"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_court" />
+                android:layout_marginEnd="@dimen/dp12w"
+                app:error="@{viewmodel.addCaseRequest.invetationTypeError}"
+                app:layout_constraintTop_toBottomOf="@id/input_court">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:hint="@string/inventation_type"
+                    android:inputType="text"
+                    android:text="@={viewmodel.addCaseRequest.inventation_type}"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/overlayBackground" />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/input_whom"
@@ -149,7 +125,7 @@
                 android:layout_marginTop="@dimen/dp10h"
                 android:layout_marginEnd="@dimen/dp12w"
                 app:error="@{viewmodel.addCaseRequest.catError}"
-                app:layout_constraintTop_toBottomOf="@+id/tv_whom">
+                app:layout_constraintTop_toBottomOf="@+id/input_invite_type">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_cat"
@@ -166,41 +142,6 @@
                     android:textColorHint="@color/overlayBackground" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <te.app.evidence.customViews.views.CustomTextViewMedium
-                android:id="@+id/tv_invite_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:text="@string/inventation_type"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:textColor="@color/colorPrimary"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/input_whom" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/input_invite_type"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp12w"
-                android:layout_marginTop="@dimen/dp10h"
-                android:layout_marginEnd="@dimen/dp12w"
-                app:error="@{viewmodel.addCaseRequest.invetationTypeError}"
-                app:layout_constraintTop_toBottomOf="@id/tv_invite_type">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical"
-                    android:hint="@string/inventation_type"
-                    android:inputType="text"
-                    android:text="@={viewmodel.addCaseRequest.inventation_type}"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textColorHint="@color/overlayBackground" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_save"
                 android:layout_width="match_parent"
@@ -216,7 +157,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_invite_type" />
+                app:layout_constraintTop_toBottomOf="@id/input_whom" />
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/progress"

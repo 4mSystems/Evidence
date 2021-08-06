@@ -1,5 +1,8 @@
 te/app/evidence/pages/home/HomeFragment.java
  te.app.evidence.pages.home.HomeFragment
+ te.app.evidence.pages.home.HomeFragment$1
+ te.app.evidence.pages.home.HomeFragment$2
+ te.app.evidence.pages.home.HomeFragment$3
 te/app/evidence/pages/cases/models/CaseClientsCategoriesData.java
  te.app.evidence.pages.cases.models.CaseClientsCategoriesData
 te/app/evidence/utils/helper/MovementHelper.java
@@ -371,8 +374,6 @@ te/app/evidence/databinding/FragmentBailiffsBinding.java
  te.app.evidence.databinding.FragmentBailiffsBinding
 te/app/evidence/pages/mohdrs/viewModels/BailiffsItemViewModel.java
  te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel
-te/app/evidence/activity/PdftActivity.java
- te.app.evidence.activity.PdftActivity
 te/app/evidence/databinding/FragmentMonthlyReportsBinding.java
  te.app.evidence.databinding.FragmentMonthlyReportsBinding
 te/app/evidence/customViews/circleProgress/AnimationMode.java

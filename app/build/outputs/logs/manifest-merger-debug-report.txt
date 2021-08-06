@@ -1,14 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.0] /home/elnagar/.gradle/caches/transforms-3/dcc989cf992a77cbbae818c970a38382/transformed/databinding-adapters-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.0] /home/elnagar/.gradle/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-3/bc74773df9b689d9730e5879605f9f2c/transformed/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transforms-3/f982415f438087c32e8808e0aad15016/transformed/jetified-pinview-1.4.3/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-3/79b577a0b88ad718feaa6e7cd09c1c8c/transformed/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-3/0ccf647b65ad58c1a47905429b96012a/transformed/jetified-Toasty-1.4.2/AndroidManifest.xml:2:1-11:12
@@ -56,7 +56,6 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/b67af44e25393b34fe10df08cdf3586d/transformed/jetified-picasso-2.71828/AndroidManifest.xml:2:1-14:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-3/cfbfe185cc59f022389f6a36744ca03b/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-3/d67717ce6e2789fe23563df1c48063c8/transformed/jetified-percentagechartview-0.3.1/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] /home/elnagar/.gradle/caches/transforms-3/e6a3e97e6828e1dcfb74456aa9480d56/transformed/jetified-monthandyearpicker-1.3.0/AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/elnagar/.gradle/caches/transforms-3/cada2ec9cf0d559236be88eb6a51cd2d/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/elnagar/.gradle/caches/transforms-3/3b7802734493ead7838ef1c3ae5b202e/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -95,22 +94,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/e
 MERGED from [androidx.print:print:1.0.0] /home/elnagar/.gradle/caches/transforms-3/e4f6e5452622a1b51bd4ab0c44c2db1c/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.gradle/caches/transforms-3/25f35b40da736ef9bbb6e353ad748032/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-3/4d9b93bb27652b835dd1a0260c30d407/transformed/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
 	package
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:4:5-30
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-64:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:11-69
@@ -187,11 +186,11 @@ ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:18-48
 application
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:5-62:19
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:5-61:19
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-3/bc74773df9b689d9730e5879605f9f2c/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-3/bc74773df9b689d9730e5879605f9f2c/transformed/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-3/ed53203c69a273311e0f26bbedfb2105/transformed/jetified-lottie-3.6.0/AndroidManifest.xml:9:5-20
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-3/ed53203c69a273311e0f26bbedfb2105/transformed/jetified-lottie-3.6.0/AndroidManifest.xml:9:5-20
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:11:5-20
@@ -238,8 +237,6 @@ MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar
 MERGED from [com.github.smarteist:autoimageslider:1.4.0-appcompat] /home/elnagar/.gradle/caches/transforms-3/4acb4706f63c1f13539c6c32bd977d68/transformed/jetified-autoimageslider-1.4.0-appcompat/AndroidManifest.xml:11:5-15:19
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/b67af44e25393b34fe10df08cdf3586d/transformed/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
 MERGED from [com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/b67af44e25393b34fe10df08cdf3586d/transformed/jetified-picasso-2.71828/AndroidManifest.xml:7:5-12:19
-MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
-MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:9:5-20
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] /home/elnagar/.gradle/caches/transforms-3/e6a3e97e6828e1dcfb74456aa9480d56/transformed/jetified-monthandyearpicker-1.3.0/AndroidManifest.xml:11:5-15:38
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] /home/elnagar/.gradle/caches/transforms-3/e6a3e97e6828e1dcfb74456aa9480d56/transformed/jetified-monthandyearpicker-1.3.0/AndroidManifest.xml:11:5-15:38
 MERGED from [androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/AndroidManifest.xml:24:5-89
@@ -320,32 +317,28 @@ ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:13-74
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:47:13-65
-activity#te.app.evidence.activity.PdftActivity
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:9-59
-	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:19-56
 activity#te.app.evidence.activity.BaseActivity
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:9-61:20
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:9-60:20
 	android:windowSoftInputMode
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:13-67
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:13-67
 	android:configChanges
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:13-74
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-74
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-65
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:13-65
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:13-60:29
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:13-59:29
 action#android.intent.action.MAIN
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:17-69
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:25-66
+action#android.intent.action.VIEW
 ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:17-69
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:25-66
-action#android.intent.action.VIEW
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:17-69
-	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:17-77
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:17-77
 	android:name
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:27-74
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:27-74
 uses-sdk
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
@@ -358,8 +351,8 @@ MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-3/bc74773df9b689d9730e5879605f9f2c/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/elnagar/.gradle/caches/transforms-3/bc74773df9b689d9730e5879605f9f2c/transformed/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transforms-3/f982415f438087c32e8808e0aad15016/transformed/jetified-pinview-1.4.3/AndroidManifest.xml:20:5-22:41
 MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transforms-3/f982415f438087c32e8808e0aad15016/transformed/jetified-pinview-1.4.3/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-3/79b577a0b88ad718feaa6e7cd09c1c8c/transformed/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:20:5-44
@@ -454,8 +447,6 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/elnagar/.gradle/caches/transforms-3/cfbfe185cc59f022389f6a36744ca03b/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-3/d67717ce6e2789fe23563df1c48063c8/transformed/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.ramijemli.percentagechartview:percentagechartview:0.3.1] /home/elnagar/.gradle/caches/transforms-3/d67717ce6e2789fe23563df1c48063c8/transformed/jetified-percentagechartview-0.3.1/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.delight-im:Android-AdvancedWebView:v3.2.1] /home/elnagar/.gradle/caches/transforms-3/f8b330c8daf52065930721d763ab71b7/transformed/jetified-Android-AdvancedWebView-v3.2.1/AndroidManifest.xml:5:5-7:41
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] /home/elnagar/.gradle/caches/transforms-3/e6a3e97e6828e1dcfb74456aa9480d56/transformed/jetified-monthandyearpicker-1.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.whiteelephant:monthandyearpicker:1.3.0] /home/elnagar/.gradle/caches/transforms-3/e6a3e97e6828e1dcfb74456aa9480d56/transformed/jetified-monthandyearpicker-1.3.0/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] /home/elnagar/.gradle/caches/transforms-3/cada2ec9cf0d559236be88eb6a51cd2d/transformed/jetified-appcompat-resources-1.3.1/AndroidManifest.xml:20:5-22:41

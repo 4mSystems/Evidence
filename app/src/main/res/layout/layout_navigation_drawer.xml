@@ -211,7 +211,7 @@
                             android:text="@string/daily_reports"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
-                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
+                            android:visibility="@{menuViewModel.userData.permission.dailyReport.equals(`yes`)?View.VISIBLE:View.GONE}" />
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:layout_width="wrap_content"
@@ -225,7 +225,7 @@
                             android:text="@string/monthly_reports"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white"
-                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
+                            android:visibility="@{menuViewModel.userData.permission.monthlyReport.equals(`yes`)?View.VISIBLE:View.GONE}" />
 
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium

@@ -27,6 +27,10 @@ import te.app.evidence.pages.reports.models.ReportsResponse;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
+import te.app.evidence.utils.URLS;
+import te.app.evidence.utils.helper.AppHelper;
+import te.app.evidence.utils.resources.ResourceManager;
+import te.app.evidence.utils.session.LanguagesHelper;
 
 public class MonthlyReportsFragment extends BaseFragment {
     FragmentMonthlyReportsBinding binding;
@@ -74,6 +78,16 @@ public class MonthlyReportsFragment extends BaseFragment {
                     }
                 }
             }
+        });
+        baseActivity().backActionBarView.layoutActionBarBackBinding.print.setOnClickListener(v -> {
+            if (viewModel.getReportsAdapter().getReportsDataList().size() > 0) {
+                AppHelper.download(URLS.BASE_URL.concat(URLS.MONTHLY_REPORTS_PDF) + viewModel.getSearchReportRequest().getMonth()
+                                + "/" + viewModel.getSearchReportRequest().getYear()
+                                + "/" + viewModel.getSearchReportRequest().getCategory_id() + "api_token=" + LanguagesHelper.getJwt(),
+                        ResourceManager.getString(R.string.monthly_file_name).concat(viewModel.getSearchReportRequest().getMonth())
+                                + ".pdf",requireActivity());
+            } else
+                toastErrorMessage(ResourceManager.getString(R.string.empty_report));
         });
     }
 

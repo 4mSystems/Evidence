@@ -30,7 +30,7 @@ public class HomeViewModel extends BaseViewModel {
     @Inject
     HomeRepository homeRepository;
     HomeData homeData;
-    SessionsAdapter sessionsAdapter;
+    SessionsAdapter comingSessionsAdapter,prevSessionsAdapter;
     HomeReportersAdapter homeReportersAdapter;
     SessionMainData commingSessionMainData, preSessionMainData;
     ReportersMainData reportersMainData;
@@ -50,6 +50,18 @@ public class HomeViewModel extends BaseViewModel {
         compositeDisposable.add(homeRepository.getHome());
     }
 
+    public void prevSessionsPaginate(int page) {
+        compositeDisposable.add(homeRepository.getPrevSessions(page));
+    }
+
+    public void comingSessionsPaginate(int page) {
+        compositeDisposable.add(homeRepository.getComingSessions(page));
+    }
+
+    public void reportersPaginate(int page) {
+        compositeDisposable.add(homeRepository.getReporters(page));
+    }
+
     @Bindable
     public HomeData getHomeData() {
         return homeData;
@@ -58,6 +70,8 @@ public class HomeViewModel extends BaseViewModel {
     @Bindable
     public void setHomeData(HomeData homeData) {
         setCommingSessionMainData(homeData.getComingSession());
+        setPreSessionMainData(homeData.getPreviousSession());
+        setReportersMainData(homeData.getReportersMainData());
         notifyChange(BR.homeData);
         this.homeData = homeData;
     }
@@ -67,12 +81,13 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setCommingSessionMainData(SessionMainData commingSessionMainData) {
-        if (getSessionsAdapter().getSessionItemList().size() > 0) {
-            getSessionsAdapter().loadMore(commingSessionMainData.getSessionItem());
+        if (getComingSessionsAdapter().getSessionItemList().size() > 0) {
+            getComingSessionsAdapter().loadMore(commingSessionMainData.getSessionItem());
         } else {
-            getSessionsAdapter().update(commingSessionMainData.getSessionItem());
+            getComingSessionsAdapter().update(commingSessionMainData.getSessionItem());
             notifyChange(BR.sessionsAdapter);
         }
+        searchProgressVisible.set(false);
         this.commingSessionMainData = commingSessionMainData;
     }
 
@@ -81,12 +96,13 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setPreSessionMainData(SessionMainData preSessionMainData) {
-        if (getSessionsAdapter().getSessionItemList().size() > 0) {
-            getSessionsAdapter().loadMore(preSessionMainData.getSessionItem());
+        if (getPrevSessionsAdapter().getSessionItemList().size() > 0) {
+            getPrevSessionsAdapter().loadMore(preSessionMainData.getSessionItem());
         } else {
-            getSessionsAdapter().update(preSessionMainData.getSessionItem());
+            getPrevSessionsAdapter().update(preSessionMainData.getSessionItem());
             notifyChange(BR.sessionsAdapter);
         }
+        searchProgressVisible.set(false);
         this.preSessionMainData = preSessionMainData;
     }
 
@@ -101,12 +117,17 @@ public class HomeViewModel extends BaseViewModel {
             getHomeReportersAdapter().update(reportersMainData.getBailiffsDataList());
             notifyChange(BR.sessionsAdapter);
         }
+        searchProgressVisible.set(false);
         this.reportersMainData = reportersMainData;
     }
 
     @Bindable
-    public SessionsAdapter getSessionsAdapter() {
-        return this.sessionsAdapter == null ? this.sessionsAdapter = new SessionsAdapter() : this.sessionsAdapter;
+    public SessionsAdapter getComingSessionsAdapter() {
+        return this.comingSessionsAdapter == null ? this.comingSessionsAdapter = new SessionsAdapter() : this.comingSessionsAdapter;
+    }
+ @Bindable
+    public SessionsAdapter getPrevSessionsAdapter() {
+        return this.prevSessionsAdapter == null ? this.prevSessionsAdapter = new SessionsAdapter() : this.prevSessionsAdapter;
     }
 
     @Bindable

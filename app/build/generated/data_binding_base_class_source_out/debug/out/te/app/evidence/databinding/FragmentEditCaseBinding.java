@@ -16,7 +16,6 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
-import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.pages.cases.viewModels.AddCaseViewModel;
 
 public abstract class FragmentEditCaseBinding extends ViewDataBinding {
@@ -44,30 +43,13 @@ public abstract class FragmentEditCaseBinding extends ViewDataBinding {
   @NonNull
   public final CircularProgressIndicator progress;
 
-  @NonNull
-  public final CustomTextViewMedium tvCase;
-
-  @NonNull
-  public final CustomTextViewMedium tvCircle;
-
-  @NonNull
-  public final CustomTextViewMedium tvCourt;
-
-  @NonNull
-  public final CustomTextViewMedium tvInviteType;
-
-  @NonNull
-  public final CustomTextViewMedium tvWhom;
-
   @Bindable
   protected AddCaseViewModel mViewmodel;
 
   protected FragmentEditCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
       AppCompatButton btnSave, TextInputLayout inputCase, TextInputEditText inputCat,
       TextInputLayout inputCircle, TextInputLayout inputCourt, TextInputLayout inputInviteType,
-      TextInputLayout inputWhom, CircularProgressIndicator progress, CustomTextViewMedium tvCase,
-      CustomTextViewMedium tvCircle, CustomTextViewMedium tvCourt,
-      CustomTextViewMedium tvInviteType, CustomTextViewMedium tvWhom) {
+      TextInputLayout inputWhom, CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSave = btnSave;
     this.inputCase = inputCase;
@@ -77,11 +59,6 @@ public abstract class FragmentEditCaseBinding extends ViewDataBinding {
     this.inputInviteType = inputInviteType;
     this.inputWhom = inputWhom;
     this.progress = progress;
-    this.tvCase = tvCase;
-    this.tvCircle = tvCircle;
-    this.tvCourt = tvCourt;
-    this.tvInviteType = tvInviteType;
-    this.tvWhom = tvWhom;
   }
 
   public abstract void setViewmodel(@Nullable AddCaseViewModel viewmodel);

@@ -14,13 +14,14 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.input_category, 6);
         sViewsWithIds.put(R.id.input_date, 7);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final te.app.evidence.customViews.views.DateEditText mboundView3;
+    private final te.app.evidence.customViews.views.DateEditText mboundView2;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback19;
@@ -29,12 +30,12 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.searchReportRequest.session_date
             //         is viewmodel.searchReportRequest.setSession_date((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel.searchReportRequest != null
             boolean viewmodelSearchReportRequestJavaLangObjectNull = false;
@@ -72,19 +73,18 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     }
     private FragmentDailyReportsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[1]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[6]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
-            , (com.google.android.material.button.MaterialButton) bindings[4]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[5]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[4]
+            , (com.google.android.material.button.MaterialButton) bindings[3]
             );
         this.inputCat.setTag(null);
-        this.inputCategory.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (te.app.evidence.customViews.views.DateEditText) bindings[3];
-        this.mboundView3.setTag(null);
+        this.mboundView2 = (te.app.evidence.customViews.views.DateEditText) bindings[2];
+        this.mboundView2.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
         this.search.setTag(null);
@@ -185,11 +185,12 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         }
         boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         te.app.evidence.pages.reports.models.SearchReportRequest viewmodelSearchReportRequest = null;
-        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse = false;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         boolean viewmodelSearchProgressVisibleGet = false;
+        java.lang.String viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser = null;
         java.lang.String viewmodelSearchReportRequestSessionDate = null;
         java.lang.String viewmodelUserDataUserDataType = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
@@ -227,10 +228,10 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                     }
                 if((dirtyFlags & 0x13L) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x100L;
+                            dirtyFlags |= 0x400L;
                     }
                     else {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x200L;
                     }
                 }
 
@@ -265,15 +266,19 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
                 if((dirtyFlags & 0x12L) != 0) {
                     if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
                             dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x100L;
                     }
                     else {
                             dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                 }
 
 
-                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.userData.userData.type.equals("admin") ? true : false
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (true) : (false));
+                    // read viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (inputCat.getResources().getString(R.string.report_about)) : (inputCat.getResources().getString(R.string.report_about_user)));
             }
             if ((dirtyFlags & 0x1aL) != 0) {
 
@@ -284,22 +289,23 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x12L) != 0) {
+            // api target 1
+
+            this.inputCat.setEnabled(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse);
+            this.inputCat.setHint(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser);
+        }
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.inputCat.setOnClickListener(mCallback19);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             this.search.setOnClickListener(mCallback20);
-        }
-        if ((dirtyFlags & 0x12L) != 0) {
-            // api target 1
-
-            this.inputCategory.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelSearchReportRequestSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelSearchReportRequestSessionDate);
         }
         if ((dirtyFlags & 0x13L) != 0) {
             // api target 1
@@ -364,10 +370,12 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         flag 2 (0x3L): viewmodel.searchReportRequest
         flag 3 (0x4L): viewmodel.reportsAdapter
         flag 4 (0x5L): null
-        flag 5 (0x6L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.userData.userData.type.equals("admin") ? true : false
+        flag 6 (0x7L): viewmodel.userData.userData.type.equals("admin") ? true : false
+        flag 7 (0x8L): viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+        flag 8 (0x9L): viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+        flag 9 (0xaL): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

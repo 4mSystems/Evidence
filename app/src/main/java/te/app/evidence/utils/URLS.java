@@ -10,6 +10,9 @@ public class URLS {
     public final static String CLIENTS = "clients?page=";
     public final static String SEARCH_CLIENTS = "search-clients?page=";
     public final static String HOME = "home_data";
+    public final static String HOME_PREV_SESSIONS = "previous_session_pagination?page=";
+    public final static String HOME_COMING_SESSIONS = "coming_session_pagination?page=";
+    public final static String HOME_REPORTERS = "mohder_pagination?page=";
     public final static String ADD_CLIENTS = "add_client";
 
     public final static String CATEGORIES = "categories?page=";
@@ -46,12 +49,13 @@ public class URLS {
     public final static String DELETE_CATEGORY = "delete_category/";
     public final static String DAILY_REPORTS = "report_daily?page=";
     public final static String MONTHLY_REPORTS = "report_monthly?page=";
+    public static final String DAILY_REPORTS_PDF = "printSearchDaily/";
+    public static final String MONTHLY_REPORTS_PDF = "printSearchMonthly/";
 
 
     public static final String DELETE_USER = "delete_user/";
     public static final String USER_PERMISSIONS = "select_user_permission/";
     public static final String UPDATE_USER_PERMISSIONS = "update_permission";
-    public static final String UPDATE_AD_DATE = "listings/update-listing-date/";
     public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
 
     public static final String CASE_CLIENTS_CATEGORIES = "select/data/to_add_case";

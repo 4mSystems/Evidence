@@ -66,7 +66,7 @@ public class Constants {
     public static final String SHARE_BAR = "SHARE_BAR";
     public static final String PROFILE = "PROFILE";
     public static final String CHANGE_STATUS = "CHANGE_STATUS";
-    public static final String REMOVE_IMAGE = "REMOVE_IMAGE";
+    public static final String DOWNLOAD = "DOWNLOAD";
 
 
     //REQUESTS
@@ -120,14 +120,14 @@ public class Constants {
     public static final String SEARCH = "SEARCH";
     public static final String DAILY_REPORTS = "DAILY_REPORTS";
 
-    public final static String REMOVE_AD = "REMOVE_AD";
+    public final static String PREV_SESSIONS = "PREV_SESSIONS";
     public static final String CLIENT_ATTACHMENTS = "CLIENT_ATTACHMENTS";
     public static final String IMAGE_MIME_TYPE = "image/jpeg";
     public static final String REPORT = "REPORT";
     public static final String CONTACT = "CONTACT";
-    public static final String SEND_REPORT = "SEND_REPORT";
+    public static final String COMING_SESSIONS = "COMING_SESSIONS";
 
-    public static final String UPDATE_AD_DATE = "UPDATE_AD_DATE";
+    public static final String HOME_REPORTERS = "HOME_REPORTERS";
     public static final String EDIT_DIALOG = "EDIT_DIALOG";
     public static final String UPDATE_IMAGES = "UPDATE_IMAGES";
     public static final String NOTIFICATIONS = "notifications";

@@ -119,7 +119,7 @@
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp12h"
                 android:layout_marginEnd="@dimen/dp20w"
-                android:text="@{itemViewModel.systemUserData.type}"
+                android:text="@{itemViewModel.systemUserData.type.equals(`admin`)?@string/admin:@string/user}"
                 android:textAlignment="viewEnd"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
@@ -207,6 +207,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="@dimen/dp12h"
                 android:background="@color/line_color"
+                android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.INVISIBLE}"
                 app:layout_constraintTop_toBottomOf="@id/user_address_text" />
 
             <te.app.evidence.customViews.views.CustomTextViewRegular
@@ -238,7 +239,6 @@
                 android:onClick="@{()-> itemViewModel.toDelete()}"
                 android:text="@string/delete"
                 android:textAlignment="center"
-
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
                 android:visibility="@{itemViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"

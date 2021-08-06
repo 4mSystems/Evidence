@@ -668,7 +668,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(45);
+    static final SparseArray<String> sKeys = new SparseArray<String>(47);
 
     static {
       sKeys.put(0, "_all");
@@ -688,34 +688,36 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(14, "clients");
       sKeys.put(15, "clientsAdapter");
       sKeys.put(16, "clientsMainData");
-      sKeys.put(17, "homeData");
-      sKeys.put(18, "homeReportersAdapter");
-      sKeys.put(19, "itemViewModel");
-      sKeys.put(20, "mainData");
-      sKeys.put(21, "menuModel");
-      sKeys.put(22, "menuViewModel");
-      sKeys.put(23, "message");
-      sKeys.put(24, "notes");
-      sKeys.put(25, "notesAdapter");
-      sKeys.put(26, "onBoardAdapter");
-      sKeys.put(27, "onBoardViewModels");
-      sKeys.put(28, "passingObject");
-      sKeys.put(29, "reportersData");
-      sKeys.put(30, "reportsAdapter");
-      sKeys.put(31, "reportsData");
-      sKeys.put(32, "reportsMain");
-      sKeys.put(33, "searchReportRequest");
-      sKeys.put(34, "selectedBtn");
-      sKeys.put(35, "sessionItem");
-      sKeys.put(36, "sessionsAdapter");
-      sKeys.put(37, "settingsData");
-      sKeys.put(38, "systemUserData");
-      sKeys.put(39, "type");
-      sKeys.put(40, "userDocuments");
-      sKeys.put(41, "userPermissionsData");
-      sKeys.put(42, "usersAdapter");
-      sKeys.put(43, "usersMainData");
-      sKeys.put(44, "viewmodel");
+      sKeys.put(17, "comingSessionsAdapter");
+      sKeys.put(18, "homeData");
+      sKeys.put(19, "homeReportersAdapter");
+      sKeys.put(20, "itemViewModel");
+      sKeys.put(21, "mainData");
+      sKeys.put(22, "menuModel");
+      sKeys.put(23, "menuViewModel");
+      sKeys.put(24, "message");
+      sKeys.put(25, "notes");
+      sKeys.put(26, "notesAdapter");
+      sKeys.put(27, "onBoardAdapter");
+      sKeys.put(28, "onBoardViewModels");
+      sKeys.put(29, "passingObject");
+      sKeys.put(30, "prevSessionsAdapter");
+      sKeys.put(31, "reportersData");
+      sKeys.put(32, "reportsAdapter");
+      sKeys.put(33, "reportsData");
+      sKeys.put(34, "reportsMain");
+      sKeys.put(35, "searchReportRequest");
+      sKeys.put(36, "selectedBtn");
+      sKeys.put(37, "sessionItem");
+      sKeys.put(38, "sessionsAdapter");
+      sKeys.put(39, "settingsData");
+      sKeys.put(40, "systemUserData");
+      sKeys.put(41, "type");
+      sKeys.put(42, "userDocuments");
+      sKeys.put(43, "userPermissionsData");
+      sKeys.put(44, "usersAdapter");
+      sKeys.put(45, "usersMainData");
+      sKeys.put(46, "viewmodel");
     }
   }
 

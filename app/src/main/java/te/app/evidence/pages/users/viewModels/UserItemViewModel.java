@@ -1,5 +1,7 @@
 package te.app.evidence.pages.users.viewModels;
 
+import android.util.Log;
+
 import androidx.databinding.Bindable;
 
 import te.app.evidence.base.BaseViewModel;
@@ -11,6 +13,7 @@ public class UserItemViewModel extends BaseViewModel {
 
     public UserItemViewModel(SystemUserData qualificationsItem) {
         this.systemUserData = qualificationsItem;
+        Log.e("UserItemViewModel", "UserItemViewModel: "+userData.getUserData().getType() );
     }
 
     @Bindable

@@ -13,24 +13,19 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     private static final android.util.SparseIntArray sViewsWithIds;
     static {
         sIncludes = null;
-        sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.tv_circle, 13);
-        sViewsWithIds.put(R.id.tv_case, 14);
-        sViewsWithIds.put(R.id.tv_court, 15);
-        sViewsWithIds.put(R.id.tv_whom, 16);
-        sViewsWithIds.put(R.id.tv_invite_type, 17);
+        sViewsWithIds = null;
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
-    @NonNull
-    private final com.google.android.material.textfield.TextInputEditText mboundView10;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView4;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView6;
+    @NonNull
+    private final com.google.android.material.textfield.TextInputEditText mboundView8;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback17;
@@ -39,43 +34,6 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView10androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
-        @Override
-        public void onChange() {
-            // Inverse of viewmodel.addCaseRequest.inventation_type
-            //         is viewmodel.addCaseRequest.setInventation_type((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView10);
-            // localize variables for thread safety
-            // viewmodel.addCaseRequest
-            te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
-            // viewmodel != null
-            boolean viewmodelJavaLangObjectNull = false;
-            // viewmodel.addCaseRequest.inventation_type
-            java.lang.String viewmodelAddCaseRequestInventationType = null;
-            // viewmodel.addCaseRequest != null
-            boolean viewmodelAddCaseRequestJavaLangObjectNull = false;
-            // viewmodel
-            te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
-
-
-
-            viewmodelJavaLangObjectNull = (viewmodel) != (null);
-            if (viewmodelJavaLangObjectNull) {
-
-
-                viewmodelAddCaseRequest = viewmodel.getAddCaseRequest();
-
-                viewmodelAddCaseRequestJavaLangObjectNull = (viewmodelAddCaseRequest) != (null);
-                if (viewmodelAddCaseRequestJavaLangObjectNull) {
-
-
-
-
-                    viewmodelAddCaseRequest.setInventation_type(((java.lang.String) (callbackArg_0)));
-                }
-            }
-        }
-    };
     private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
@@ -187,25 +145,57 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
             }
         }
     };
+    private androidx.databinding.InverseBindingListener mboundView8androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewmodel.addCaseRequest.inventation_type
+            //         is viewmodel.addCaseRequest.setInventation_type((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView8);
+            // localize variables for thread safety
+            // viewmodel.addCaseRequest
+            te.app.evidence.pages.cases.models.AddCaseRequest viewmodelAddCaseRequest = null;
+            // viewmodel != null
+            boolean viewmodelJavaLangObjectNull = false;
+            // viewmodel.addCaseRequest.inventation_type
+            java.lang.String viewmodelAddCaseRequestInventationType = null;
+            // viewmodel.addCaseRequest != null
+            boolean viewmodelAddCaseRequestJavaLangObjectNull = false;
+            // viewmodel
+            te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+            viewmodelJavaLangObjectNull = (viewmodel) != (null);
+            if (viewmodelJavaLangObjectNull) {
+
+
+                viewmodelAddCaseRequest = viewmodel.getAddCaseRequest();
+
+                viewmodelAddCaseRequestJavaLangObjectNull = (viewmodelAddCaseRequest) != (null);
+                if (viewmodelAddCaseRequestJavaLangObjectNull) {
+
+
+
+
+                    viewmodelAddCaseRequest.setInventation_type(((java.lang.String) (callbackArg_0)));
+                }
+            }
+        }
+    };
 
     public FragmentEditCaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 18, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 13, sIncludes, sViewsWithIds));
     }
     private FragmentEditCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 6
             , (androidx.appcompat.widget.AppCompatButton) bindings[11]
             , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (com.google.android.material.textfield.TextInputEditText) bindings[8]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[10]
             , (com.google.android.material.textfield.TextInputLayout) bindings[1]
             , (com.google.android.material.textfield.TextInputLayout) bindings[5]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
             );
         this.btnSave.setTag(null);
         this.inputCase.setTag(null);
@@ -216,14 +206,14 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         this.inputWhom.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView10 = (com.google.android.material.textfield.TextInputEditText) bindings[10];
-        this.mboundView10.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
         this.mboundView4.setTag(null);
         this.mboundView6 = (com.google.android.material.textfield.TextInputEditText) bindings[6];
         this.mboundView6.setTag(null);
+        this.mboundView8 = (com.google.android.material.textfield.TextInputEditText) bindings[8];
+        this.mboundView8.setTag(null);
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
@@ -574,10 +564,10 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
 
             this.btnSave.setOnClickListener(mCallback18);
             this.inputCat.setOnClickListener(mCallback17);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xa1L) != 0) {
             // api target 1
@@ -607,10 +597,10 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         if ((dirtyFlags & 0xa0L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView10, viewmodelAddCaseRequestInventationType);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelAddCaseRequestCircleNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelAddCaseRequestInvetationNum);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView6, viewmodelAddCaseRequestCourt);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView8, viewmodelAddCaseRequestInventationType);
         }
     }
     // Listener Stub Implementations

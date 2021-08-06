@@ -14,16 +14,15 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.name_text, 9);
-        sViewsWithIds.put(R.id.v1, 10);
-        sViewsWithIds.put(R.id.email_text, 11);
-        sViewsWithIds.put(R.id.v2, 12);
-        sViewsWithIds.put(R.id.user_type_text, 13);
-        sViewsWithIds.put(R.id.v3, 14);
-        sViewsWithIds.put(R.id.user_phone_text, 15);
-        sViewsWithIds.put(R.id.v4, 16);
-        sViewsWithIds.put(R.id.user_address_text, 17);
-        sViewsWithIds.put(R.id.v5, 18);
+        sViewsWithIds.put(R.id.name_text, 10);
+        sViewsWithIds.put(R.id.v1, 11);
+        sViewsWithIds.put(R.id.email_text, 12);
+        sViewsWithIds.put(R.id.v2, 13);
+        sViewsWithIds.put(R.id.user_type_text, 14);
+        sViewsWithIds.put(R.id.v3, 15);
+        sViewsWithIds.put(R.id.user_phone_text, 16);
+        sViewsWithIds.put(R.id.v4, 17);
+        sViewsWithIds.put(R.id.user_address_text, 18);
         sViewsWithIds.put(R.id.br5, 19);
         sViewsWithIds.put(R.id.v8, 20);
     }
@@ -47,24 +46,24 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     private ItemUserBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.constraintlayout.widget.Barrier) bindings[19]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (android.view.View) bindings[10]
-            , (android.view.View) bindings[12]
-            , (android.view.View) bindings[14]
-            , (android.view.View) bindings[16]
-            , (android.view.View) bindings[18]
+            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[13]
+            , (android.view.View) bindings[15]
+            , (android.view.View) bindings[17]
+            , (android.view.View) bindings[6]
             , (android.view.View) bindings[20]
             );
         this.delete.setTag(null);
@@ -77,6 +76,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         this.userAddressValue.setTag(null);
         this.userPhoneValue.setTag(null);
         this.userTypeValue.setTag(null);
+        this.v5.setTag(null);
         setRootTag(root);
         // listeners
         mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
@@ -158,6 +158,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         }
         java.lang.String itemViewModelSystemUserDataType = null;
         int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        java.lang.String itemViewModelSystemUserDataTypeEqualsJavaLangStringAdminUserTypeValueAndroidStringAdminUserTypeValueAndroidStringUser = null;
         java.lang.String itemViewModelSystemUserDataName = null;
         te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
         te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
@@ -165,6 +166,8 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         java.lang.String itemViewModelSystemUserDataAddress = null;
         java.lang.String itemViewModelSystemUserDataPhone = null;
         te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
+        int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewINVISIBLE = 0;
+        boolean itemViewModelSystemUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String itemViewModelSystemUserDataEmail = null;
         te.app.evidence.pages.users.models.SystemUserData itemViewModelSystemUserData = null;
         java.lang.String itemViewModelUserDataUserDataType = null;
@@ -199,15 +202,19 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if((dirtyFlags & 0x5L) != 0) {
                     if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
                             dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x100L;
                     }
                     else {
                             dirtyFlags |= 0x8L;
+                            dirtyFlags |= 0x80L;
                     }
                 }
 
 
                     // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
                     itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.INVISIBLE
+                    itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewINVISIBLE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.INVISIBLE));
             }
 
                 if (itemViewModel != null) {
@@ -228,6 +235,24 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                     // read itemViewModel.systemUserData.email
                     itemViewModelSystemUserDataEmail = itemViewModelSystemUserData.getEmail();
                 }
+
+
+                if (itemViewModelSystemUserDataType != null) {
+                    // read itemViewModel.systemUserData.type.equals("admin")
+                    itemViewModelSystemUserDataTypeEqualsJavaLangStringAdmin = itemViewModelSystemUserDataType.equals("admin");
+                }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(itemViewModelSystemUserDataTypeEqualsJavaLangStringAdmin) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+
+
+                // read itemViewModel.systemUserData.type.equals("admin") ? @android:string/admin : @android:string/user
+                itemViewModelSystemUserDataTypeEqualsJavaLangStringAdminUserTypeValueAndroidStringAdminUserTypeValueAndroidStringUser = ((itemViewModelSystemUserDataTypeEqualsJavaLangStringAdmin) ? (userTypeValue.getResources().getString(R.string.admin)) : (userTypeValue.getResources().getString(R.string.user)));
         }
         // batch finished
         if ((dirtyFlags & 0x4L) != 0) {
@@ -243,6 +268,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             this.delete.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
             this.edit.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
             this.permission.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.v5.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewINVISIBLE);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -251,7 +277,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.nameValue, itemViewModelSystemUserDataName);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userAddressValue, itemViewModelSystemUserDataAddress);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userPhoneValue, itemViewModelSystemUserDataPhone);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userTypeValue, itemViewModelSystemUserDataType);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userTypeValue, itemViewModelSystemUserDataTypeEqualsJavaLangStringAdminUserTypeValueAndroidStringAdminUserTypeValueAndroidStringUser);
         }
     }
     // Listener Stub Implementations
@@ -319,6 +345,10 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         flag 2 (0x3L): null
         flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
         flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): itemViewModel.systemUserData.type.equals("admin") ? @android:string/admin : @android:string/user
+        flag 6 (0x7L): itemViewModel.systemUserData.type.equals("admin") ? @android:string/admin : @android:string/user
+        flag 7 (0x8L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.INVISIBLE
+        flag 8 (0x9L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.INVISIBLE
     flag mapping end*/
     //end
 }

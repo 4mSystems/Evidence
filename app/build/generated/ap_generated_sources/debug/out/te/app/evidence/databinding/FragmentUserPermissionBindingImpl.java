@@ -31,9 +31,9 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
     @NonNull
     private final com.google.android.material.switchmaterial.SwitchMaterial mboundView6;
     @NonNull
-    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView7;
+    private final com.google.android.material.switchmaterial.SwitchMaterial mboundView7;
     @NonNull
-    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView8;
+    private final com.google.android.material.switchmaterial.SwitchMaterial mboundView8;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback59;
@@ -80,9 +80,9 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         this.mboundView5.setTag(null);
         this.mboundView6 = (com.google.android.material.switchmaterial.SwitchMaterial) bindings[6];
         this.mboundView6.setTag(null);
-        this.mboundView7 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7];
+        this.mboundView7 = (com.google.android.material.switchmaterial.SwitchMaterial) bindings[7];
         this.mboundView7.setTag(null);
-        this.mboundView8 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8];
+        this.mboundView8 = (com.google.android.material.switchmaterial.SwitchMaterial) bindings[8];
         this.mboundView8.setTag(null);
         this.progress.setTag(null);
         setRootTag(root);
@@ -184,12 +184,12 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
         java.lang.String viewmodelUserPermissionsDataClients = null;
         java.lang.String viewmodelUserPermissionsDataSearchCase = null;
+        boolean viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
         java.lang.String viewmodelMessage = null;
         boolean viewmodelUserPermissionsDataClientsEqualsJavaLangStringYes = false;
         boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         java.lang.String viewmodelUserPermissionsDataMonthlyReport = null;
         boolean viewmodelUserPermissionsDataCategoryEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
-        android.graphics.drawable.Drawable viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesMboundView8AndroidDrawableIcPermissionOnMboundView8AndroidDrawableIcPermissionOff = null;
         boolean viewmodelUserPermissionsDataMohdreenEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
         boolean viewmodelUserPermissionsDataClientsEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
@@ -200,7 +200,6 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         boolean viewmodelUserPermissionsDataSearchCaseEqualsJavaLangStringYes = false;
         boolean viewmodelUserPermissionsDataAddcasesEqualsJavaLangStringYes = false;
         boolean viewmodelUserPermissionsDataAddcasesEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
-        android.graphics.drawable.Drawable viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesMboundView7AndroidDrawableIcPermissionOnMboundView7AndroidDrawableIcPermissionOff = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
         boolean viewmodelUserPermissionsDataUsersEqualsJavaLangStringYes = false;
         boolean viewmodelUserPermissionsDataUsersEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
@@ -210,6 +209,7 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         boolean viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYes = false;
         boolean viewmodelUserPermissionsDataMohdreenEqualsJavaLangStringYes = false;
         java.lang.String viewmodelUserPermissionsDataCategory = null;
+        boolean viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse = false;
         te.app.evidence.pages.users.viewModels.UserPermissionsViewModel viewmodel = mViewmodel;
         boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
@@ -274,10 +274,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYes) {
-                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x8000000L;
                     }
                     else {
-                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x4000000L;
                     }
                 }
                     if (viewmodelUserPermissionsDataAddcases != null) {
@@ -310,10 +310,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelUserPermissionsDataUsersEqualsJavaLangStringYes) {
-                            dirtyFlags |= 0x2000000L;
+                            dirtyFlags |= 0x800000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000000L;
+                            dirtyFlags |= 0x400000L;
                     }
                 }
                     if (viewmodelUserPermissionsDataDailyReport != null) {
@@ -322,10 +322,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYes) {
-                            dirtyFlags |= 0x800000L;
+                            dirtyFlags |= 0x200L;
                     }
                     else {
-                            dirtyFlags |= 0x400000L;
+                            dirtyFlags |= 0x100L;
                     }
                 }
                     if (viewmodelUserPermissionsDataCategory != null) {
@@ -334,10 +334,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelUserPermissionsDataCategoryEqualsJavaLangStringYes) {
-                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x800L;
                     }
                     else {
-                            dirtyFlags |= 0x100L;
+                            dirtyFlags |= 0x400L;
                     }
                 }
 
@@ -346,16 +346,16 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
                     viewmodelUserPermissionsDataClientsEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataClientsEqualsJavaLangStringYes) ? (true) : (false));
                     // read viewmodel.userPermissionsData.searchCase.equals("yes") ? true : false
                     viewmodelUserPermissionsDataSearchCaseEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataSearchCaseEqualsJavaLangStringYes) ? (true) : (false));
-                    // read viewmodel.userPermissionsData.monthlyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
-                    viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesMboundView8AndroidDrawableIcPermissionOnMboundView8AndroidDrawableIcPermissionOff = ((viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYes) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView8.getContext(), R.drawable.ic_permission_on)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView8.getContext(), R.drawable.ic_permission_off)));
+                    // read viewmodel.userPermissionsData.monthlyReport.equals("yes") ? true : false
+                    viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYes) ? (true) : (false));
                     // read viewmodel.userPermissionsData.addcases.equals("yes") ? true : false
                     viewmodelUserPermissionsDataAddcasesEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataAddcasesEqualsJavaLangStringYes) ? (true) : (false));
                     // read viewmodel.userPermissionsData.mohdreen.equals("yes") ? true : false
                     viewmodelUserPermissionsDataMohdreenEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataMohdreenEqualsJavaLangStringYes) ? (true) : (false));
                     // read viewmodel.userPermissionsData.users.equals("yes") ? true : false
                     viewmodelUserPermissionsDataUsersEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataUsersEqualsJavaLangStringYes) ? (true) : (false));
-                    // read viewmodel.userPermissionsData.dailyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
-                    viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesMboundView7AndroidDrawableIcPermissionOnMboundView7AndroidDrawableIcPermissionOff = ((viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYes) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView7.getContext(), R.drawable.ic_permission_on)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(mboundView7.getContext(), R.drawable.ic_permission_off)));
+                    // read viewmodel.userPermissionsData.dailyReport.equals("yes") ? true : false
+                    viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYes) ? (true) : (false));
                     // read viewmodel.userPermissionsData.category.equals("yes") ? true : false
                     viewmodelUserPermissionsDataCategoryEqualsJavaLangStringYesBooleanTrueBooleanFalse = ((viewmodelUserPermissionsDataCategoryEqualsJavaLangStringYes) ? (true) : (false));
             }
@@ -426,10 +426,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
             }
             if((dirtyFlags & 0xdL) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
-                        dirtyFlags |= 0x8000000L;
+                        dirtyFlags |= 0x2000000L;
                 }
                 else {
-                        dirtyFlags |= 0x4000000L;
+                        dirtyFlags |= 0x1000000L;
                 }
             }
 
@@ -471,8 +471,8 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView4, viewmodelUserPermissionsDataSearchCaseEqualsJavaLangStringYesBooleanTrueBooleanFalse);
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView5, viewmodelUserPermissionsDataMohdreenEqualsJavaLangStringYesBooleanTrueBooleanFalse);
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView6, viewmodelUserPermissionsDataCategoryEqualsJavaLangStringYesBooleanTrueBooleanFalse);
-            androidx.databinding.adapters.TextViewBindingAdapter.setDrawableEnd(this.mboundView7, viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesMboundView7AndroidDrawableIcPermissionOnMboundView7AndroidDrawableIcPermissionOff);
-            androidx.databinding.adapters.TextViewBindingAdapter.setDrawableEnd(this.mboundView8, viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesMboundView8AndroidDrawableIcPermissionOnMboundView8AndroidDrawableIcPermissionOff);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView7, viewmodelUserPermissionsDataDailyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.mboundView8, viewmodelUserPermissionsDataMonthlyReportEqualsJavaLangStringYesBooleanTrueBooleanFalse);
         }
     }
     // Listener Stub Implementations
@@ -653,10 +653,10 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         flag 5 (0x6L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
         flag 6 (0x7L): viewmodel.userPermissionsData.searchCase.equals("yes") ? true : false
         flag 7 (0x8L): viewmodel.userPermissionsData.searchCase.equals("yes") ? true : false
-        flag 8 (0x9L): viewmodel.userPermissionsData.category.equals("yes") ? true : false
-        flag 9 (0xaL): viewmodel.userPermissionsData.category.equals("yes") ? true : false
-        flag 10 (0xbL): viewmodel.userPermissionsData.monthlyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
-        flag 11 (0xcL): viewmodel.userPermissionsData.monthlyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
+        flag 8 (0x9L): viewmodel.userPermissionsData.dailyReport.equals("yes") ? true : false
+        flag 9 (0xaL): viewmodel.userPermissionsData.dailyReport.equals("yes") ? true : false
+        flag 10 (0xbL): viewmodel.userPermissionsData.category.equals("yes") ? true : false
+        flag 11 (0xcL): viewmodel.userPermissionsData.category.equals("yes") ? true : false
         flag 12 (0xdL): viewmodel.userPermissionsData.mohdreen.equals("yes") ? true : false
         flag 13 (0xeL): viewmodel.userPermissionsData.mohdreen.equals("yes") ? true : false
         flag 14 (0xfL): viewmodel.userPermissionsData.clients.equals("yes") ? true : false
@@ -667,12 +667,12 @@ public class FragmentUserPermissionBindingImpl extends FragmentUserPermissionBin
         flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 20 (0x15L): viewmodel.userPermissionsData.addcases.equals("yes") ? true : false
         flag 21 (0x16L): viewmodel.userPermissionsData.addcases.equals("yes") ? true : false
-        flag 22 (0x17L): viewmodel.userPermissionsData.dailyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
-        flag 23 (0x18L): viewmodel.userPermissionsData.dailyReport.equals("yes") ? @android:drawable/ic_permission_on : @android:drawable/ic_permission_off
-        flag 24 (0x19L): viewmodel.userPermissionsData.users.equals("yes") ? true : false
-        flag 25 (0x1aL): viewmodel.userPermissionsData.users.equals("yes") ? true : false
-        flag 26 (0x1bL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
-        flag 27 (0x1cL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 22 (0x17L): viewmodel.userPermissionsData.users.equals("yes") ? true : false
+        flag 23 (0x18L): viewmodel.userPermissionsData.users.equals("yes") ? true : false
+        flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 25 (0x1aL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 26 (0x1bL): viewmodel.userPermissionsData.monthlyReport.equals("yes") ? true : false
+        flag 27 (0x1cL): viewmodel.userPermissionsData.monthlyReport.equals("yes") ? true : false
         flag 28 (0x1dL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
         flag 29 (0x1eL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/

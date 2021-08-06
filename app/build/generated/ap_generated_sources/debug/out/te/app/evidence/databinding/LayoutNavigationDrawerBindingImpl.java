@@ -195,11 +195,18 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
             mDirtyFlags = 0;
         }
         te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+        int menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYesViewVISIBLEViewGONE = 0;
         boolean menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
+        int menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYesViewVISIBLEViewGONE = 0;
+        te.app.evidence.pages.auth.models.Permission menuViewModelUserDataPermission = null;
+        java.lang.String menuViewModelUserDataPermissionDailyReport = null;
         int menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String menuViewModelUserDataUserDataImage = null;
+        java.lang.String menuViewModelUserDataPermissionMonthlyReport = null;
+        boolean menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYes = false;
         te.app.evidence.pages.auth.models.UserData menuViewModelUserDataUserData = null;
         te.app.evidence.pages.auth.models.UserMainData menuViewModelUserData = null;
+        boolean menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYes = false;
         java.lang.String menuViewModelUserDataUserDataName = null;
         java.lang.String menuViewModelUserDataUserDataType = null;
 
@@ -214,11 +221,19 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
 
 
                 if (menuViewModelUserData != null) {
+                    // read menuViewModel.userData.permission
+                    menuViewModelUserDataPermission = menuViewModelUserData.getPermission();
                     // read menuViewModel.userData.userData
                     menuViewModelUserDataUserData = menuViewModelUserData.getUserData();
                 }
 
 
+                if (menuViewModelUserDataPermission != null) {
+                    // read menuViewModel.userData.permission.dailyReport
+                    menuViewModelUserDataPermissionDailyReport = menuViewModelUserDataPermission.getDailyReport();
+                    // read menuViewModel.userData.permission.monthlyReport
+                    menuViewModelUserDataPermissionMonthlyReport = menuViewModelUserDataPermission.getMonthlyReport();
+                }
                 if (menuViewModelUserDataUserData != null) {
                     // read menuViewModel.userData.userData.image
                     menuViewModelUserDataUserDataImage = menuViewModelUserDataUserData.getImage();
@@ -229,20 +244,48 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
 
 
-                if (menuViewModelUserDataUserDataType != null) {
-                    // read menuViewModel.userData.userData.type.equals("admin")
-                    menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = menuViewModelUserDataUserDataType.equals("admin");
+                if (menuViewModelUserDataPermissionDailyReport != null) {
+                    // read menuViewModel.userData.permission.dailyReport.equals("yes")
+                    menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYes = menuViewModelUserDataPermissionDailyReport.equals("yes");
                 }
             if((dirtyFlags & 0x3L) != 0) {
-                if(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                if(menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYes) {
                         dirtyFlags |= 0x8L;
                 }
                 else {
                         dirtyFlags |= 0x4L;
                 }
             }
+                if (menuViewModelUserDataPermissionMonthlyReport != null) {
+                    // read menuViewModel.userData.permission.monthlyReport.equals("yes")
+                    menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYes = menuViewModelUserDataPermissionMonthlyReport.equals("yes");
+                }
+            if((dirtyFlags & 0x3L) != 0) {
+                if(menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYes) {
+                        dirtyFlags |= 0x20L;
+                }
+                else {
+                        dirtyFlags |= 0x10L;
+                }
+            }
+                if (menuViewModelUserDataUserDataType != null) {
+                    // read menuViewModel.userData.userData.type.equals("admin")
+                    menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = menuViewModelUserDataUserDataType.equals("admin");
+                }
+            if((dirtyFlags & 0x3L) != 0) {
+                if(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                        dirtyFlags |= 0x80L;
+                }
+                else {
+                        dirtyFlags |= 0x40L;
+                }
+            }
 
 
+                // read menuViewModel.userData.permission.dailyReport.equals("yes") ? View.VISIBLE : View.GONE
+                menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYesViewVISIBLEViewGONE = ((menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYes) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read menuViewModel.userData.permission.monthlyReport.equals("yes") ? View.VISIBLE : View.GONE
+                menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYesViewVISIBLEViewGONE = ((menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYes) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
                 // read menuViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
                 menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
@@ -267,8 +310,8 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
 
-            this.mboundView10.setVisibility(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
-            this.mboundView11.setVisibility(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+            this.mboundView10.setVisibility(menuViewModelUserDataPermissionDailyReportEqualsJavaLangStringYesViewVISIBLEViewGONE);
+            this.mboundView11.setVisibility(menuViewModelUserDataPermissionMonthlyReportEqualsJavaLangStringYesViewVISIBLEViewGONE);
             this.mboundView9.setVisibility(menuViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvUserLogin, menuViewModelUserDataUserDataName);
             te.app.evidence.base.ApplicationBinding.loadMarketImage(this.vvNavigationDrawerImage, menuViewModelUserDataUserDataImage);
@@ -976,8 +1019,12 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     /* flag mapping
         flag 0 (0x1L): menuViewModel
         flag 1 (0x2L): null
-        flag 2 (0x3L): menuViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 3 (0x4L): menuViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 2 (0x3L): menuViewModel.userData.permission.dailyReport.equals("yes") ? View.VISIBLE : View.GONE
+        flag 3 (0x4L): menuViewModel.userData.permission.dailyReport.equals("yes") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): menuViewModel.userData.permission.monthlyReport.equals("yes") ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): menuViewModel.userData.permission.monthlyReport.equals("yes") ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): menuViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): menuViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

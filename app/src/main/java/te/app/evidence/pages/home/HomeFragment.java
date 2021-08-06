@@ -3,12 +3,16 @@ package te.app.evidence.pages.home;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import javax.inject.Inject;
 
@@ -22,6 +26,8 @@ import te.app.evidence.pages.cases.CasesFragment;
 import te.app.evidence.pages.home.models.HomeResponse;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.mohdrs.models.ReportersResponse;
+import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
 import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -72,6 +78,66 @@ public class HomeFragment extends BaseFragment {
                 MovementHelper.startActivity(requireActivity(), BailiffsFragment.class.getName(), ResourceManager.getString(R.string.menuMohdar), null);
             } else if (Constants.USERS.equals(o.message)) {
                 MovementHelper.startActivity(requireActivity(), UsersFragment.class.getName(), ResourceManager.getString(R.string.menuUsers), null);
+            } else if (Constants.PREV_SESSIONS.equals(o.message)) {
+                viewModel.setPreSessionMainData(((CaseSessionsResponse) o.object).getSessionMainData());
+            } else if (Constants.COMING_SESSIONS.equals(o.message)) {
+                viewModel.setCommingSessionMainData(((CaseSessionsResponse) o.object).getSessionMainData());
+            } else if (Constants.HOME_REPORTERS.equals(o.message)) {
+                viewModel.setReportersMainData(((ReportersResponse) o.object).getMainData());
+            }
+        });
+        binding.previousSessionRc.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getPreSessionMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getPrevSessionsAdapter().getSessionItemList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.prevSessionsPaginate((viewModel.getPreSessionMainData().getCurrentPage() + 1));
+                    }
+                }
+            }
+        });
+        binding.commingSessionRc.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getCommingSessionMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getComingSessionsAdapter().getSessionItemList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.comingSessionsPaginate((viewModel.getCommingSessionMainData().getCurrentPage() + 1));
+                    }
+                }
+            }
+        });
+        binding.homeReportersRc.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                LinearLayoutManager linearLayoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
+                if (!viewModel.searchProgressVisible.get() && !TextUtils.isEmpty(viewModel.getReportersMainData().getNextPageUrl())) {
+                    if (linearLayoutManager != null && linearLayoutManager.findLastCompletelyVisibleItemPosition() == viewModel.getHomeReportersAdapter().getBailiffsDataList().size() - 1) {
+                        viewModel.searchProgressVisible.set(true);
+                        viewModel.reportersPaginate((viewModel.getReportersMainData().getCurrentPage() + 1));
+                    }
+                }
             }
         });
     }

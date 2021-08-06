@@ -57,7 +57,6 @@
             android:name="te.app.evidence.activity.MainActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name="te.app.evidence.activity.PdftActivity" />
         <activity
             android:name="te.app.evidence.activity.BaseActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

@@ -26,13 +26,13 @@ public class AddUserRequest {
     private String id;
     private transient String catName;
 
-    public ObservableField<String> userNameError = new ObservableField<>();
-    public ObservableField<String> emailError = new ObservableField<>();
-    public ObservableField<String> userAddressError = new ObservableField<>();
-    public ObservableField<String> phoneError = new ObservableField<>();
-    public ObservableField<String> passwordError = new ObservableField<>();
-    public ObservableField<String> typeError = new ObservableField<>();
-    public ObservableField<String> catError = new ObservableField<>();
+    public transient ObservableField<String> userNameError = new ObservableField<>();
+    public transient ObservableField<String> emailError = new ObservableField<>();
+    public transient ObservableField<String> userAddressError = new ObservableField<>();
+    public transient ObservableField<String> phoneError = new ObservableField<>();
+    public transient ObservableField<String> passwordError = new ObservableField<>();
+    public transient ObservableField<String> typeError = new ObservableField<>();
+    public transient ObservableField<String> catError = new ObservableField<>();
 
     public boolean isValid() {
         boolean valid = true;

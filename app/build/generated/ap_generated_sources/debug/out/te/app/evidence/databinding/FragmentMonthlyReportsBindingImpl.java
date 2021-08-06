@@ -14,6 +14,7 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.input_category, 7);
         sViewsWithIds.put(R.id.input_year, 8);
         sViewsWithIds.put(R.id.input_month, 9);
     }
@@ -21,9 +22,9 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
-    private final te.app.evidence.customViews.views.YearEditText mboundView3;
+    private final te.app.evidence.customViews.views.YearEditText mboundView2;
     @NonNull
-    private final te.app.evidence.customViews.views.MonthlyEditText mboundView4;
+    private final te.app.evidence.customViews.views.MonthlyEditText mboundView3;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback90;
@@ -32,12 +33,12 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     // values
     // listeners
     // Inverse Binding Event Handlers
-    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView2androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.searchReportRequest.year
             //         is viewmodel.searchReportRequest.setYear((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView2);
             // localize variables for thread safety
             // viewmodel.searchReportRequest != null
             boolean viewmodelSearchReportRequestJavaLangObjectNull = false;
@@ -69,12 +70,12 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
             }
         }
     };
-    private androidx.databinding.InverseBindingListener mboundView4androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+    private androidx.databinding.InverseBindingListener mboundView3androidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
             // Inverse of viewmodel.searchReportRequest.month
             //         is viewmodel.searchReportRequest.setMonth((java.lang.String) callbackArg_0)
-            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView4);
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(mboundView3);
             // localize variables for thread safety
             // viewmodel.searchReportRequest != null
             boolean viewmodelSearchReportRequestJavaLangObjectNull = false;
@@ -112,22 +113,21 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     }
     private FragmentMonthlyReportsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.google.android.material.textfield.TextInputEditText) bindings[2]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[1]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
             , (com.google.android.material.textfield.TextInputLayout) bindings[9]
             , (com.google.android.material.textfield.TextInputLayout) bindings[8]
-            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[7]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[6]
-            , (com.google.android.material.button.MaterialButton) bindings[5]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[6]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[5]
+            , (com.google.android.material.button.MaterialButton) bindings[4]
             );
         this.inputCat.setTag(null);
-        this.inputCategory.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (te.app.evidence.customViews.views.YearEditText) bindings[3];
+        this.mboundView2 = (te.app.evidence.customViews.views.YearEditText) bindings[2];
+        this.mboundView2.setTag(null);
+        this.mboundView3 = (te.app.evidence.customViews.views.MonthlyEditText) bindings[3];
         this.mboundView3.setTag(null);
-        this.mboundView4 = (te.app.evidence.customViews.views.MonthlyEditText) bindings[4];
-        this.mboundView4.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
         this.search.setTag(null);
@@ -228,13 +228,14 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         }
         boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         te.app.evidence.pages.reports.models.SearchReportRequest viewmodelSearchReportRequest = null;
-        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse = false;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         java.lang.String viewmodelSearchReportRequestMonth = null;
         java.lang.String viewmodelSearchReportRequestYear = null;
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         boolean viewmodelSearchProgressVisibleGet = false;
+        java.lang.String viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser = null;
         java.lang.String viewmodelUserDataUserDataType = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.reports.adapters.ReportsAdapter viewmodelReportsAdapter = null;
@@ -273,10 +274,10 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
                     }
                 if((dirtyFlags & 0x13L) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x100L;
+                            dirtyFlags |= 0x400L;
                     }
                     else {
-                            dirtyFlags |= 0x80L;
+                            dirtyFlags |= 0x200L;
                     }
                 }
 
@@ -311,15 +312,19 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
                 if((dirtyFlags & 0x12L) != 0) {
                     if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
                             dirtyFlags |= 0x40L;
+                            dirtyFlags |= 0x100L;
                     }
                     else {
                             dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                 }
 
 
-                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.userData.userData.type.equals("admin") ? true : false
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (true) : (false));
+                    // read viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+                    viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (inputCat.getResources().getString(R.string.report_about)) : (inputCat.getResources().getString(R.string.report_about_user)));
             }
             if ((dirtyFlags & 0x1aL) != 0) {
 
@@ -330,24 +335,25 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
             }
         }
         // batch finished
+        if ((dirtyFlags & 0x12L) != 0) {
+            // api target 1
+
+            this.inputCat.setEnabled(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminBooleanTrueBooleanFalse);
+            this.inputCat.setHint(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminInputCatAndroidStringReportAboutInputCatAndroidStringReportAboutUser);
+        }
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
             this.inputCat.setOnClickListener(mCallback90);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             this.search.setOnClickListener(mCallback91);
-        }
-        if ((dirtyFlags & 0x12L) != 0) {
-            // api target 1
-
-            this.inputCategory.setVisibility(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelSearchReportRequestYear);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView4, viewmodelSearchReportRequestMonth);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView2, viewmodelSearchReportRequestYear);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.mboundView3, viewmodelSearchReportRequestMonth);
         }
         if ((dirtyFlags & 0x13L) != 0) {
             // api target 1
@@ -412,10 +418,12 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         flag 2 (0x3L): viewmodel.searchReportRequest
         flag 3 (0x4L): viewmodel.reportsAdapter
         flag 4 (0x5L): null
-        flag 5 (0x6L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 6 (0x7L): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 8 (0x9L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.userData.userData.type.equals("admin") ? true : false
+        flag 6 (0x7L): viewmodel.userData.userData.type.equals("admin") ? true : false
+        flag 7 (0x8L): viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+        flag 8 (0x9L): viewmodel.userData.userData.type.equals("admin") ? @android:string/report_about : @android:string/report_about_user
+        flag 9 (0xaL): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 10 (0xbL): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

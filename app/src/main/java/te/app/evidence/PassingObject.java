@@ -3,7 +3,6 @@ package te.app.evidence;
 import com.google.gson.Gson;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class PassingObject implements Serializable {
     private int id;
@@ -11,7 +10,7 @@ public class PassingObject implements Serializable {
     private String object;
     private String object2;
 
-
+    //TODO search attachment / delete case
     public PassingObject() {
     }
 
