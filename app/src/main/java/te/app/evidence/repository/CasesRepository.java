@@ -113,6 +113,11 @@ public class CasesRepository extends BaseRepository {
                 Constants.CLIENTS, showProgress);
     }
 
+    public Disposable deleteCCase(int caseId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CASE + caseId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
+
     public Disposable deleteClientFromCase(AddClientRequest addClientRequest) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.DELETE_CLIENT_FROM_CASE, addClientRequest, StatusMessage.class,
                 Constants.DELETE_CLIENT, true);

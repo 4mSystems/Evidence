@@ -18,6 +18,9 @@ import te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel;
 
 public abstract class ItemAllCaseBinding extends ViewDataBinding {
   @NonNull
+  public final CustomTextViewRegular delete;
+
+  @NonNull
   public final CustomTextViewMedium paperNumberText;
 
   @NonNull
@@ -60,12 +63,14 @@ public abstract class ItemAllCaseBinding extends ViewDataBinding {
   protected ClientCasesItemViewModel mItemViewModel;
 
   protected ItemAllCaseBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium paperNumberText, CustomTextViewRegular paperNumberValue,
-      CustomTextViewMedium paperTypeText, CustomTextViewRegular paperTypeValue,
-      CustomTextViewMedium sessionDateText, CustomTextViewRegular sessionMonthValue,
-      CustomTextViewMedium statusText, CustomTextViewRegular statusValue, View v3, View v4, View v6,
-      View v7, CustomTextViewRegular viewValue) {
+      CustomTextViewRegular delete, CustomTextViewMedium paperNumberText,
+      CustomTextViewRegular paperNumberValue, CustomTextViewMedium paperTypeText,
+      CustomTextViewRegular paperTypeValue, CustomTextViewMedium sessionDateText,
+      CustomTextViewRegular sessionMonthValue, CustomTextViewMedium statusText,
+      CustomTextViewRegular statusValue, View v3, View v4, View v6, View v7,
+      CustomTextViewRegular viewValue) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.delete = delete;
     this.paperNumberText = paperNumberText;
     this.paperNumberValue = paperNumberValue;
     this.paperTypeText = paperTypeText;

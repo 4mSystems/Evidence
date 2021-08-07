@@ -8,29 +8,29 @@ import androidx.lifecycle.MutableLiveData;
 import javax.inject.Inject;
 
 import te.app.evidence.base.BaseViewModel;
-import te.app.evidence.base.MyApplication;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.settings.models.AboutData;
-import te.app.evidence.pages.settings.models.settings.SettingsData;
+import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.repository.SettingsRepository;
-import te.app.evidence.utils.helper.AppHelper;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class SettingsViewModel extends BaseViewModel {
-    private SettingsData settingsData;
-    private AboutData aboutData;
+    AboutData aboutData;
     public MutableLiveData<Mutable> liveData;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
     @Inject
     SettingsRepository repository;
+    ContactUsRequest contactUsRequest;
 
     @Inject
     public SettingsViewModel(SettingsRepository repository) {
         aboutData = new AboutData();
-        settingsData = new SettingsData();
         this.repository = repository;
         this.liveData = new MutableLiveData<>();
         repository.setLiveData(liveData);
+        getContactUsRequest().setName(userData.getUserData().getName());
+        getContactUsRequest().setPhone(userData.getUserData().getPhone());
+        getContactUsRequest().setEmail(userData.getUserData().getEmail());
     }
 
     public void getAbout() {
@@ -41,20 +41,14 @@ public class SettingsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getTerms());
     }
 
-    public void getContact() {
-        compositeDisposable.add(repository.getContact());
+    public void sendContact() {
+        if (getContactUsRequest().isValid())
+            compositeDisposable.add(repository.sendContact(getContactUsRequest()));
     }
 
-    protected void unSubscribeFromObservable() {
-        if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
-            compositeDisposable.dispose();
-        }
-    }
-
-    @Override
-    protected void onCleared() {
-        super.onCleared();
-        unSubscribeFromObservable();
+    @Bindable
+    public ContactUsRequest getContactUsRequest() {
+        return this.contactUsRequest == null ? this.contactUsRequest = new ContactUsRequest() : this.contactUsRequest;
     }
 
     public SettingsRepository getRepository() {
@@ -72,14 +66,16 @@ public class SettingsViewModel extends BaseViewModel {
         this.aboutData = aboutData;
     }
 
-    @Bindable
-    public SettingsData getSettingsData() {
-        return settingsData;
+    protected void unSubscribeFromObservable() {
+        if (compositeDisposable != null && !compositeDisposable.isDisposed()) {
+            compositeDisposable.dispose();
+        }
     }
 
-    @Bindable
-    public void setSettingsData(SettingsData settingsData) {
-        notifyChange(BR.settingsData);
-        this.settingsData = settingsData;
+    @Override
+    protected void onCleared() {
+        super.onCleared();
+        unSubscribeFromObservable();
     }
+
 }

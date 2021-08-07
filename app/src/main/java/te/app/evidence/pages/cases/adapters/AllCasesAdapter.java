@@ -60,6 +60,8 @@ public class AllCasesAdapter extends RecyclerView.Adapter<AllCasesAdapter.ViewHo
             lastSelected = position;
             if (o.equals(Constants.CASE_DETAILS)) {
                 MovementHelper.startActivityForResultWithBundle(context, new PassingObject(client.getId()), ResourceManager.getString(R.string.case_details), CaseDetailsFragment.class.getName(), null);
+            } else if (o.equals(Constants.DELETE)) {
+                actionLiveData.setValue(o);
             }
         });
         holder.setViewModel(itemMenuViewModel);

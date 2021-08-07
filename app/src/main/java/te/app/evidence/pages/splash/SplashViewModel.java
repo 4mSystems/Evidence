@@ -64,11 +64,6 @@ public class SplashViewModel extends BaseViewModel {
         unSubscribeFromObservable();
     }
 
-
-    public void getSettings() {
-        compositeDisposable.add(repository.getSettings());
-    }
-
     public void setupSlider(SliderView sliderView) {
         List<OnBoard> onBoardList = new ArrayList<>();
         onBoardList.add(new OnBoard(R.drawable.board1, ResourceManager.getString(R.string.slider_title1), ResourceManager.getString(R.string.slider_desc1), 1));

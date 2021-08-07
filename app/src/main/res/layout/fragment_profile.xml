@@ -146,7 +146,7 @@
                     android:layout_marginStart="@dimen/dp14w"
                     android:layout_marginTop="@dimen/dp8h"
                     android:layout_marginEnd="@dimen/dp15w"
-                    android:hint="@string/password_hint"
+                    android:hint="@string/profile_change_password"
                     android:textColorHint="@color/medium_color"
                     app:helperTextTextColor="@color/black"
                     app:layout_constraintEnd_toEndOf="parent"

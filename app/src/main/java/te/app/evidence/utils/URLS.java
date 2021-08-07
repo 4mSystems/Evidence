@@ -67,6 +67,7 @@ public class URLS {
     public static final String ADD_CASE = "add_Cases";
     public static final String EDIT_CASE = "edit_Case";
     public static final String ALL_CASES = "Cases?page=";
+    public static final String DELETE_CASE = "delete_Case/";
     public static final String SEARCH_CASES = "search-cases?page=";
     public static final String CASE_DETAILS = "caseData/";
     public static final String CASE_CLIENTS = "caseClients/data_by_id/";

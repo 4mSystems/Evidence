@@ -3111,6 +3111,7 @@ drawable ic_check_white_24dp
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_contact
 drawable ic_download
 drawable ic_email
 drawable ic_error_outline_white_24dp
@@ -3473,6 +3474,7 @@ id home_khems
 id home_mohdrs
 id home_reporters_rc
 id home_session
+id home_title
 id home_users
 id honorRequest
 id horizontal
@@ -3498,7 +3500,9 @@ id input_cat
 id input_category
 id input_circle
 id input_clients
+id input_company_name
 id input_confirm_password
+id input_contact_message
 id input_court
 id input_date
 id input_desc
@@ -3510,6 +3514,7 @@ id input_khesms
 id input_month
 id input_name
 id input_new_password
+id input_old_password
 id input_password
 id input_password_confirm
 id input_phone
@@ -3543,6 +3548,7 @@ id ll_base_container
 id loading
 id login
 id login_background
+id login_container
 id login_header
 id logo
 id logout_txt
@@ -4030,6 +4036,7 @@ layout fragment_change_password
 layout fragment_client_profile
 layout fragment_clients
 layout fragment_confirm_code
+layout fragment_contact
 layout fragment_daily_reports
 layout fragment_edit_case
 layout fragment_forget_password
@@ -4235,6 +4242,7 @@ string client_unselected
 string client_warning
 string clients
 string common_google_play_services_unknown_issue
+string company_name_hint
 string confirm
 string confirm_header_text
 string confirm_header_text2
@@ -4259,6 +4267,7 @@ string default_snackbar_message
 string default_title
 string default_web_client_id
 string delete
+string delete_case_waring
 string descion
 string design_program
 string donot_have_account
@@ -4343,6 +4352,7 @@ string menuHome
 string menuMohdar
 string menuReports
 string menuUsers
+string message_hint
 string mobile_data
 string month
 string monthly_file_name
@@ -4392,6 +4402,7 @@ string no_permission
 string note_search_hint
 string notes
 string ok
+string old_password
 string opponents
 string option_cancel
 string option_dialog_delete

@@ -4,6 +4,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel" />
@@ -247,8 +249,8 @@
                 android:layout_marginEnd="@dimen/dp10w"
                 android:layout_marginBottom="@dimen/dp6h"
                 android:drawableTop="@drawable/ic_view_more"
-                android:text="@string/view_more"
                 android:onClick="@{()-> itemViewModel.itemAction()}"
+                android:text="@string/view_more"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintBottom_toBottomOf="parent"

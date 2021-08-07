@@ -28,16 +28,16 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_case_clients.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-xxhdpi_board.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxhdpi/board.png"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_category.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_category.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_attachment.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_attachment.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_category.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_category.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-xxhdpi_board.png.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxhdpi/board.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-mdpi_board.png.flat",
@@ -72,20 +72,20 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_session_notes.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_session_note.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_session_note.xml"
-    },
-    {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_session.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_session.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_bailiffs.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_bailiffs.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable_ic_report_search.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_report_search.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_bailiffs.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_bailiffs.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_session.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_session.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_session_note.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_session_note.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable_ic_user_edit.xml.flat",
@@ -110,6 +110,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_contact.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_contact.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_clients.xml.flat",
@@ -314,6 +318,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_add_user.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_user.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable_ic_contact.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/ic_contact.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_loader_animation.xml.flat",

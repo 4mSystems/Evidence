@@ -2,7 +2,6 @@ package te.app.evidence.pages.splash;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +23,6 @@ import te.app.evidence.R;
 import te.app.evidence.databinding.FragmentSplashBinding;
 import te.app.evidence.pages.auth.login.LoginFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
-import te.app.evidence.pages.settings.models.settings.SettingsResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.session.UserHelper;

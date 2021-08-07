@@ -39,6 +39,9 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
   public final TextInputLayout inputNewPassword;
 
   @NonNull
+  public final TextInputLayout inputOldPassword;
+
+  @NonNull
   public final AppCompatImageView loginBackground;
 
   @NonNull
@@ -54,8 +57,8 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
       int _localFieldCount, AppCompatButton appCompatButtonNext, CustomTextViewMedium appLoginTitle,
       CustomTextViewMedium appName, AppCompatImageView imgLoginLogo,
       TextInputLayout inputConfirmPassword, TextInputLayout inputNewPassword,
-      AppCompatImageView loginBackground, CustomTextViewRegular tvChangeHeaderText,
-      CustomTextViewMedium tvChangeTitle) {
+      TextInputLayout inputOldPassword, AppCompatImageView loginBackground,
+      CustomTextViewRegular tvChangeHeaderText, CustomTextViewMedium tvChangeTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.appLoginTitle = appLoginTitle;
@@ -63,6 +66,7 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
     this.imgLoginLogo = imgLoginLogo;
     this.inputConfirmPassword = inputConfirmPassword;
     this.inputNewPassword = inputNewPassword;
+    this.inputOldPassword = inputOldPassword;
     this.loginBackground = loginBackground;
     this.tvChangeHeaderText = tvChangeHeaderText;
     this.tvChangeTitle = tvChangeTitle;

@@ -3110,6 +3110,7 @@ int drawable ic_check_white_24dp 0x7f070082
 int drawable ic_clear_white_24dp 0x7f070083
 int drawable ic_clock_black_24dp 0x7f070084
 int drawable ic_close 0x7f070085
+int drawable ic_contact 0x7f0700d2
 int drawable ic_download 0x7f070086
 int drawable ic_email 0x7f070087
 int drawable ic_error_outline_white_24dp 0x7f070088
@@ -3472,6 +3473,7 @@ int id home_khems 0x7f090119
 int id home_mohdrs 0x7f09011a
 int id home_reporters_rc 0x7f09011b
 int id home_session 0x7f09011c
+int id home_title 0x7f0902e0
 int id home_users 0x7f09011d
 int id honorRequest 0x7f09011e
 int id horizontal 0x7f09011f
@@ -3497,7 +3499,9 @@ int id input_cat 0x7f090132
 int id input_category 0x7f090133
 int id input_circle 0x7f090134
 int id input_clients 0x7f090135
+int id input_company_name 0x7f0902e3
 int id input_confirm_password 0x7f090136
+int id input_contact_message 0x7f0902e1
 int id input_court 0x7f090137
 int id input_date 0x7f090138
 int id input_desc 0x7f090139
@@ -3509,6 +3513,7 @@ int id input_khesms 0x7f09013e
 int id input_month 0x7f09013f
 int id input_name 0x7f090140
 int id input_new_password 0x7f090141
+int id input_old_password 0x7f0902e4
 int id input_password 0x7f090142
 int id input_password_confirm 0x7f090143
 int id input_phone 0x7f090144
@@ -3542,6 +3547,7 @@ int id ll_base_container 0x7f09015f
 int id loading 0x7f090160
 int id login 0x7f090161
 int id login_background 0x7f090162
+int id login_container 0x7f0902e2
 int id login_header 0x7f090163
 int id logo 0x7f090164
 int id logout_txt 0x7f090165
@@ -4029,6 +4035,7 @@ int layout fragment_change_password 0x7f0c0041
 int layout fragment_client_profile 0x7f0c0042
 int layout fragment_clients 0x7f0c0043
 int layout fragment_confirm_code 0x7f0c0044
+int layout fragment_contact 0x7f0c00bd
 int layout fragment_daily_reports 0x7f0c0045
 int layout fragment_edit_case 0x7f0c0046
 int layout fragment_forget_password 0x7f0c0047
@@ -4234,6 +4241,7 @@ int string client_unselected 0x7f0f004e
 int string client_warning 0x7f0f004f
 int string clients 0x7f0f0050
 int string common_google_play_services_unknown_issue 0x7f0f0051
+int string company_name_hint 0x7f0f0135
 int string confirm 0x7f0f0052
 int string confirm_header_text 0x7f0f0053
 int string confirm_header_text2 0x7f0f0054
@@ -4258,6 +4266,7 @@ int string default_snackbar_message 0x7f0f0066
 int string default_title 0x7f0f0067
 int string default_web_client_id 0x7f0f0068
 int string delete 0x7f0f0069
+int string delete_case_waring 0x7f0f0133
 int string descion 0x7f0f006a
 int string design_program 0x7f0f006b
 int string donot_have_account 0x7f0f006c
@@ -4342,6 +4351,7 @@ int string menuHome 0x7f0f00ba
 int string menuMohdar 0x7f0f00bb
 int string menuReports 0x7f0f00bc
 int string menuUsers 0x7f0f00bd
+int string message_hint 0x7f0f0134
 int string mobile_data 0x7f0f00be
 int string month 0x7f0f00bf
 int string monthly_file_name 0x7f0f00c0
@@ -4391,6 +4401,7 @@ int string no_permission 0x7f0f00eb
 int string note_search_hint 0x7f0f00ec
 int string notes 0x7f0f00ed
 int string ok 0x7f0f00ee
+int string old_password 0x7f0f0136
 int string opponents 0x7f0f00ef
 int string option_cancel 0x7f0f00f0
 int string option_dialog_delete 0x7f0f00f1

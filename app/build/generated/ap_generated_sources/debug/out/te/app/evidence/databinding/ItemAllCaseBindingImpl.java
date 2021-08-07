@@ -14,44 +14,48 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.paper_type_text, 6);
-        sViewsWithIds.put(R.id.v3, 7);
-        sViewsWithIds.put(R.id.paper_number_text, 8);
-        sViewsWithIds.put(R.id.v6, 9);
-        sViewsWithIds.put(R.id.session_date_text, 10);
-        sViewsWithIds.put(R.id.v7, 11);
-        sViewsWithIds.put(R.id.status_text, 12);
-        sViewsWithIds.put(R.id.v4, 13);
+        sViewsWithIds.put(R.id.paper_type_text, 7);
+        sViewsWithIds.put(R.id.v3, 8);
+        sViewsWithIds.put(R.id.paper_number_text, 9);
+        sViewsWithIds.put(R.id.v6, 10);
+        sViewsWithIds.put(R.id.session_date_text, 11);
+        sViewsWithIds.put(R.id.v7, 12);
+        sViewsWithIds.put(R.id.status_text, 13);
+        sViewsWithIds.put(R.id.v4, 14);
     }
     // views
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback116;
+    private final android.view.View.OnClickListener mCallback118;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback117;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public ItemAllCaseBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 14, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 15, sIncludes, sViewsWithIds));
     }
     private ItemAllCaseBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
-            , (android.view.View) bindings[7]
-            , (android.view.View) bindings[13]
-            , (android.view.View) bindings[9]
-            , (android.view.View) bindings[11]
+            , (android.view.View) bindings[8]
+            , (android.view.View) bindings[14]
+            , (android.view.View) bindings[10]
+            , (android.view.View) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[5]
             );
+        this.delete.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.paperNumberValue.setTag(null);
@@ -61,7 +65,8 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback116 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback118 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback117 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -136,12 +141,17 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
         java.lang.String itemViewModelCasesClients = null;
         java.lang.String itemViewModelCasesCourt = null;
+        int itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.cases.models.cases.Cases itemViewModelCases = null;
         java.lang.String itemViewModelCasesInvetationNum = null;
         java.lang.String itemViewModelCasesKhesms = null;
+        te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
+        te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        boolean itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
+        te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
+        java.lang.String itemViewModelUserDataUserDataType = null;
 
         if ((dirtyFlags & 0x7L) != 0) {
 
@@ -163,8 +173,56 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
                     // read itemViewModel.cases.khesms
                     itemViewModelCasesKhesms = itemViewModelCases.getKhesms();
                 }
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (itemViewModel != null) {
+                        // read itemViewModel.userData
+                        itemViewModelUserData = itemViewModel.userData;
+                    }
+
+
+                    if (itemViewModelUserData != null) {
+                        // read itemViewModel.userData.userData
+                        itemViewModelUserDataUserData = itemViewModelUserData.getUserData();
+                    }
+
+
+                    if (itemViewModelUserDataUserData != null) {
+                        // read itemViewModel.userData.userData.type
+                        itemViewModelUserDataUserDataType = itemViewModelUserDataUserData.getType();
+                    }
+
+
+                    if (itemViewModelUserDataUserDataType != null) {
+                        // read itemViewModel.userData.userData.type.equals("admin")
+                        itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin = itemViewModelUserDataUserDataType.equals("admin");
+                    }
+                if((dirtyFlags & 0x5L) != 0) {
+                    if(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
+                            dirtyFlags |= 0x10L;
+                    }
+                    else {
+                            dirtyFlags |= 0x8L;
+                    }
+                }
+
+
+                    // read itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+                    itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.delete.setOnClickListener(mCallback118);
+            this.viewValue.setOnClickListener(mCallback117);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
+            // api target 1
+
+            this.delete.setVisibility(itemViewModelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
@@ -173,28 +231,45 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelCasesClients);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelCasesKhesms);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
-            // api target 1
-
-            this.viewValue.setOnClickListener(mCallback116);
-        }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // itemViewModel
-        te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
-        // itemViewModel != null
-        boolean itemViewModelJavaLangObjectNull = false;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
 
 
 
-        itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-        if (itemViewModelJavaLangObjectNull) {
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
 
 
-            itemViewModel.itemAction();
+                    itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.itemAction();
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -203,6 +278,8 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         flag 0 (0x1L): itemViewModel
         flag 1 (0x2L): itemViewModel.cases
         flag 2 (0x3L): null
+        flag 3 (0x4L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): itemViewModel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

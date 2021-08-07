@@ -171,7 +171,7 @@ public class ParentActivity extends AppCompatActivity implements
                     // clearing app data
                     Runtime runtime = Runtime.getRuntime();
                     runtime.exec("pm clear" + MyApplication.getInstance().getPackageName());
-                    UserHelper.getInstance(this).loggout();
+                    UserHelper.getInstance(this).logOut();
                     MovementHelper.startActivityBase(this, LoginFragment.class.getName(), null, null);
                 } catch (Exception e) {
                     e.printStackTrace();

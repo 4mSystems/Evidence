@@ -7,8 +7,9 @@ import javax.inject.Singleton;
 
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.settings.models.AboutResponse;
-import te.app.evidence.pages.settings.models.settings.SettingsResponse;
+import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -41,9 +42,8 @@ public class SettingsRepository extends BaseRepository {
                 Constants.TERMS, true);
     }
 
-    public Disposable getContact() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CONTACT_US, new Object(), SettingsResponse.class,
+    public Disposable sendContact(ContactUsRequest contactUsRequest) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONTACT_US, contactUsRequest, StatusMessage.class,
                 Constants.CONTACT, true);
     }
-
 }

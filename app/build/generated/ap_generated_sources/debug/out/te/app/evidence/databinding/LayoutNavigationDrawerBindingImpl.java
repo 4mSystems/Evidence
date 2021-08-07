@@ -14,11 +14,11 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.dl_main_navigation_menu, 14);
-        sViewsWithIds.put(R.id.rl_navigation_drawer, 15);
-        sViewsWithIds.put(R.id.ll_base_action_bar_container, 16);
-        sViewsWithIds.put(R.id.fl_home_container, 17);
-        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 18);
+        sViewsWithIds.put(R.id.dl_main_navigation_menu, 15);
+        sViewsWithIds.put(R.id.rl_navigation_drawer, 16);
+        sViewsWithIds.put(R.id.ll_base_action_bar_container, 17);
+        sViewsWithIds.put(R.id.fl_home_container, 18);
+        sViewsWithIds.put(R.id.rl_navigation_drawer_header, 19);
     }
     // views
     @NonNull
@@ -31,6 +31,8 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView12;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView13;
+    @NonNull
+    private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView14;
     @NonNull
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView3;
     @NonNull
@@ -46,6 +48,8 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     private final android.view.View.OnClickListener mCallback106;
     @Nullable
     private final android.view.View.OnClickListener mCallback104;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback116;
     @Nullable
     private final android.view.View.OnClickListener mCallback114;
     @Nullable
@@ -73,16 +77,16 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
     // Inverse Binding Event Handlers
 
     public LayoutNavigationDrawerBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private LayoutNavigationDrawerBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[6]
-            , (androidx.drawerlayout.widget.DrawerLayout) bindings[14]
-            , (android.widget.FrameLayout) bindings[17]
-            , (android.widget.LinearLayout) bindings[16]
-            , (android.widget.RelativeLayout) bindings[15]
-            , (android.widget.RelativeLayout) bindings[18]
+            , (androidx.drawerlayout.widget.DrawerLayout) bindings[15]
+            , (android.widget.FrameLayout) bindings[18]
+            , (android.widget.LinearLayout) bindings[17]
+            , (android.widget.RelativeLayout) bindings[16]
+            , (android.widget.RelativeLayout) bindings[19]
             , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[7]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
@@ -98,6 +102,8 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         this.mboundView12.setTag(null);
         this.mboundView13 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13];
         this.mboundView13.setTag(null);
+        this.mboundView14 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14];
+        this.mboundView14.setTag(null);
         this.mboundView3 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3];
         this.mboundView3.setTag(null);
         this.mboundView4 = (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4];
@@ -115,6 +121,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
         // listeners
         mCallback106 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         mCallback104 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback116 = new te.app.evidence.generated.callback.OnClickListener(this, 14);
         mCallback114 = new te.app.evidence.generated.callback.OnClickListener(this, 12);
         mCallback112 = new te.app.evidence.generated.callback.OnClickListener(this, 10);
         mCallback110 = new te.app.evidence.generated.callback.OnClickListener(this, 8);
@@ -298,6 +305,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
             this.mboundView11.setOnClickListener(mCallback113);
             this.mboundView12.setOnClickListener(mCallback114);
             this.mboundView13.setOnClickListener(mCallback115);
+            this.mboundView14.setOnClickListener(mCallback116);
             this.mboundView3.setOnClickListener(mCallback105);
             this.mboundView4.setOnClickListener(mCallback106);
             this.mboundView5.setOnClickListener(mCallback107);
@@ -415,6 +423,23 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 }
                 break;
             }
+            case 14: {
+                // localize variables for thread safety
+                // menuViewModel
+                te.app.evidence.customViews.menu.MenuViewModel menuViewModel = mMenuViewModel;
+                // menuViewModel != null
+                boolean menuViewModelJavaLangObjectNull = false;
+
+
+
+                menuViewModelJavaLangObjectNull = (menuViewModel) != (null);
+                if (menuViewModelJavaLangObjectNull) {
+
+
+                    menuViewModel.logout();
+                }
+                break;
+            }
             case 12: {
                 // localize variables for thread safety
                 // menuViewModel
@@ -428,7 +453,9 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 if (menuViewModelJavaLangObjectNull) {
 
 
-                    menuViewModel.changeLanguage();
+
+
+                    menuViewModel.buttonAction(te.app.evidence.utils.Constants.CONTACT_US);
                 }
                 break;
             }
@@ -745,7 +772,7 @@ public class LayoutNavigationDrawerBindingImpl extends LayoutNavigationDrawerBin
                 if (menuViewModelJavaLangObjectNull) {
 
 
-                    menuViewModel.logout();
+                    menuViewModel.changeLanguage();
                 }
                 break;
             }

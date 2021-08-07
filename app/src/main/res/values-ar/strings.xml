@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Evidence</string>
+    <string name="app_name">الدليل</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="design_program">Design and programming</string>
@@ -65,7 +65,7 @@
     <string name="edit">تعديل</string>
     <string name="msg_server_error">حدث خطأ ما يرجى المحاوله فى وقت اخر</string>
     <string name="password_not_match">كلمة المرور غير مطابقة</string>
-    <string name="tv_account_contact">"اتصل بنا "</string>
+    <string name="tv_account_contact">الشكاوى والمقترحات</string>
     <string name="empty_warning">يجب ملئ جميع البيانات</string>
     <string name="donot_have_account">ليس لديك حساب؟</string>
     <string name="forget_body">برجاء إدخال البريد الإلكتروني لإستعادة كلمة المرور</string>
@@ -177,5 +177,10 @@
     <string name="download_doc"> طباعة الملف</string>
     <string name="choose_category">إضغط لاختيار تصنيف</string>
     <string name="month">الشهر</string>
+    <string name="delete_case_waring">سيتم حذف جميع الجلسات والملاحظات للدعوى</string>
+    <string name="message_hint">اكتب رسالتك...</string>
+    <string name="company_name_hint">إسم المؤسسة</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="profile_change_password">تغيير كلمة المرور</string>
 
 </resources>

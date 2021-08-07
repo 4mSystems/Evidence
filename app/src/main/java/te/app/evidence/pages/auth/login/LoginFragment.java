@@ -59,7 +59,7 @@ public class LoginFragment extends BaseFragment {
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);
                     break;
                 case Constants.REGISTER:
-                    MovementHelper.startActivity(context, RegisterFragment.class.getName(), null, null);
+                    MovementHelper.startActivity(context, RegisterFragment.class.getName(), getString(R.string.register), null);
                     break;
 
             }

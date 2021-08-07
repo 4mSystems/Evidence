@@ -1,6 +1,7 @@
 package te.app.evidence.base;
 
 import android.graphics.Color;
+import android.util.Log;
 import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 
 import te.app.evidence.R;
+import te.app.evidence.utils.URLS;
 import te.app.evidence.utils.helper.AppHelper;
 
 public class ApplicationBinding {
@@ -20,10 +22,11 @@ public class ApplicationBinding {
             imageView.setBackgroundColor(Color.parseColor(color));
         }
     }
+
     @BindingAdapter("imageMarketUrl")
     public static void loadMarketImage(ImageView imageView, Object image) {
         if (image instanceof String) {
-            Picasso.get().load((String) image).placeholder(R.mipmap.ic_launcher_round).into(imageView);
+            Picasso.get().load(URLS.USER_PROFILE_BASE_URL.concat((String) image)).placeholder(R.drawable.splash).into(imageView);
         }
     }
 

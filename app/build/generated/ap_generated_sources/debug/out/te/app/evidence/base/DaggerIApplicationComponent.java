@@ -156,6 +156,11 @@ import te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel_MembersIn
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_Factory;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_MembersInjector;
+import te.app.evidence.pages.settings.ContactUsFragment;
+import te.app.evidence.pages.settings.ContactUsFragment_MembersInjector;
+import te.app.evidence.pages.settings.viewModels.SettingsViewModel;
+import te.app.evidence.pages.settings.viewModels.SettingsViewModel_Factory;
+import te.app.evidence.pages.settings.viewModels.SettingsViewModel_MembersInjector;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.pages.splash.SplashFragment_MembersInjector;
 import te.app.evidence.pages.splash.SplashViewModel;
@@ -192,6 +197,8 @@ import te.app.evidence.repository.NotesRepository;
 import te.app.evidence.repository.NotesRepository_Factory;
 import te.app.evidence.repository.ReportsRepository;
 import te.app.evidence.repository.ReportsRepository_Factory;
+import te.app.evidence.repository.SettingsRepository;
+import te.app.evidence.repository.SettingsRepository_Factory;
 import te.app.evidence.repository.SystemUsersRepository;
 import te.app.evidence.repository.SystemUsersRepository_Factory;
 
@@ -227,6 +234,8 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   private Provider<NotesRepository> notesRepositoryProvider;
 
   private Provider<ReportsRepository> reportsRepositoryProvider;
+
+  private Provider<SettingsRepository> settingsRepositoryProvider;
 
   private DaggerIApplicationComponent(ConnectionModule connectionModuleParam,
       LiveData liveDataParam) {
@@ -366,6 +375,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectReportsViewModel(ReportsViewModel_Factory.newInstance(reportsRepositoryProvider.get()));
   }
 
+  private SettingsViewModel settingsViewModel() {
+    return injectSettingsViewModel(SettingsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -381,6 +394,7 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     this.categoriesRepositoryProvider = DoubleCheck.provider(CategoriesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.notesRepositoryProvider = DoubleCheck.provider(NotesRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
     this.reportsRepositoryProvider = DoubleCheck.provider(ReportsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
+    this.settingsRepositoryProvider = DoubleCheck.provider(SettingsRepository_Factory.create(connectionHelperProvider, connectionHelperProvider, connectionHelperProvider));
   }
 
   @Override
@@ -565,6 +579,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(MonthlyReportsFragment monthlyReportsFragment) {
     injectMonthlyReportsFragment(monthlyReportsFragment);
+  }
+
+  @Override
+  public void inject(ContactUsFragment contactUsFragment) {
+    injectContactUsFragment(contactUsFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -903,6 +922,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MonthlyReportsFragment injectMonthlyReportsFragment(MonthlyReportsFragment instance) {
     MonthlyReportsFragment_MembersInjector.injectViewModel(instance, reportsViewModel());
+    return instance;
+  }
+
+  private SettingsViewModel injectSettingsViewModel(SettingsViewModel instance) {
+    SettingsViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private ContactUsFragment injectContactUsFragment(ContactUsFragment instance) {
+    ContactUsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

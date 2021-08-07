@@ -204,6 +204,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/activity_base.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_contact.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_contact.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_client.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_client.xml"
     },

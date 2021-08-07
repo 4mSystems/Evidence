@@ -12,6 +12,7 @@
         <entry key="app/src/main/res/drawable/ic_add_session.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_user.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_attachments.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_contact.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_image_type.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_more.xml" value="0.16614583333333333" />
@@ -25,6 +26,7 @@
         <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/rounded_view_primary_dark.xml" value="0.16614583333333333" />
+        <entry key="app/src/main/res/layout/activity_base.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/activity_pdf_downloader.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/download_dialog.xml" value="0.29483695652173914" />
         <entry key="app/src/main/res/layout/exit_layout.xml" value="0.12681159420289856" />
@@ -41,16 +43,17 @@
         <entry key="app/src/main/res/layout/fragment_case_details.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_cases.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/layout/fragment_categories.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/fragment_change_password.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_client_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_clients.xml" value="0.47463516330785266" />
+        <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_daily_reports.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_edit_case.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.10388821385176185" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.6001757469244289" />
         <entry key="app/src/main/res/layout/fragment_monthly_reports.xml" value="0.14326059050064185" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.531104199066874" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_session_notes.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.531104199066874" />
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.33" />
@@ -58,14 +61,14 @@
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_attachment.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_bailiffs.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/item_case.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_case.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_category.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/item_client_tags.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_clients.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_drop_category.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_report.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_session.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_session.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_session_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_action_bar_back.xml" value="0.33" />

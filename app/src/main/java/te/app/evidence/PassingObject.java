@@ -10,7 +10,6 @@ public class PassingObject implements Serializable {
     private String object;
     private String object2;
 
-    //TODO search attachment / delete case
     public PassingObject() {
     }
 

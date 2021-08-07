@@ -10,8 +10,11 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
+
 import java.io.File;
+
 import javax.inject.Inject;
+
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
@@ -19,9 +22,11 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.connection.FileObject;
 import te.app.evidence.databinding.FragmentProfileBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.LauncherHelper;
+import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.session.UserHelper;
 import te.app.evidence.utils.upload.FileOperations;
 
@@ -47,6 +52,10 @@ public class ProfileFragment extends BaseFragment {
             switch (((Mutable) o).message) {
                 case Constants.IMAGE:
                     LauncherHelper.execute(LauncherHelper.storage);
+                    break;
+                case Constants.CHANGE_PASSWORD:
+                    MovementHelper.startActivity(requireActivity(), ChangePasswordFragment.class.getName(), null, null)
+                    ;
                     break;
                 case Constants.UPDATE_PROFILE:
                     UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());
@@ -83,6 +92,4 @@ public class ProfileFragment extends BaseFragment {
             binding.userImg.setImageURI(Uri.parse(String.valueOf(new File(fileObject.getFilePath()))));
         }
     }
-
-
 }

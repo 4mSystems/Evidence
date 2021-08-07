@@ -232,6 +232,19 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_contact"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.CONTACT_US)}"
+                            android:text="@string/tv_account_contact"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
                             android:layout_marginTop="@dimen/dp4h"
                             android:layout_marginBottom="@dimen/dp8h"
                             android:drawableStart="@drawable/ic_lang"

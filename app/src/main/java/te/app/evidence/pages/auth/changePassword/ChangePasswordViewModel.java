@@ -7,10 +7,7 @@ import javax.inject.Inject;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.models.RegisterRequest;
-import te.app.evidence.pages.auth.models.UserData;
 import te.app.evidence.repository.AuthRepository;
-import te.app.evidence.utils.Constants;
-import te.app.evidence.utils.validation.Validate;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class ChangePasswordViewModel extends BaseViewModel {

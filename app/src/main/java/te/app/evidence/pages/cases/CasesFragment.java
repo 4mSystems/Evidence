@@ -1,10 +1,14 @@
 package te.app.evidence.pages.cases;
 
+import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +17,8 @@ import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Objects;
+
 import javax.inject.Inject;
 
 import te.app.evidence.R;
@@ -20,7 +26,9 @@ import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentCasesBinding;
+import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.cases.viewModels.CasesViewModel;
 import te.app.evidence.utils.Constants;
@@ -49,6 +57,10 @@ public class CasesFragment extends BaseFragment {
                 viewModel.setCasesMainData(((AllCasesResponse) mutable.object).getData());
             } else if (Constants.SEARCH.equals(((Mutable) o).message)) {
                 viewModel.setCasesMainData(((AllCasesResponse) mutable.object).getData());
+            } else if (Constants.DELETE.equals(((Mutable) o).message)) {
+                toastMessage(((StatusMessage) mutable.object).mMessage);
+                viewModel.getCasesAdapter().getCasesList().remove(viewModel.getCasesAdapter().lastSelected);
+                viewModel.getCasesAdapter().notifyDataSetChanged();
             }
         });
         binding.rcClients.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -72,8 +84,24 @@ public class CasesFragment extends BaseFragment {
                 }
             }
         });
+        viewModel.getCasesAdapter().actionLiveData.observe(requireActivity(), o -> showDeleteDialog());
     }
 
+    private void showDeleteDialog() {
+        Dialog deleteDialog = new Dialog(requireActivity(), R.style.PauseDialog);
+        deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
+        deleteDialog.setContentView(binding.getRoot());
+        binding.rcFilter.setText(getString(R.string.delete_case_waring));
+        binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
+        binding.optionDone.setOnClickListener(v -> {
+            deleteDialog.dismiss();
+            viewModel.deleteCase();
+        });
+        deleteDialog.show();
+    }
 
     @Override
     public void onResume() {

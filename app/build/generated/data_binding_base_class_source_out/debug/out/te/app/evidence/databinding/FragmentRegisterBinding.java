@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -19,7 +20,13 @@ import te.app.evidence.pages.auth.register.RegisterViewModel;
 
 public abstract class FragmentRegisterBinding extends ViewDataBinding {
   @NonNull
+  public final AppCompatImageView homeTitle;
+
+  @NonNull
   public final TextInputLayout inputAddress;
+
+  @NonNull
+  public final TextInputLayout inputCompanyName;
 
   @NonNull
   public final TextInputLayout inputName;
@@ -46,12 +53,15 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   protected RegisterViewModel mViewmodel;
 
   protected FragmentRegisterBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputLayout inputAddress, TextInputLayout inputName, TextInputLayout inputPassword,
+      AppCompatImageView homeTitle, TextInputLayout inputAddress, TextInputLayout inputCompanyName,
+      TextInputLayout inputName, TextInputLayout inputPassword,
       TextInputLayout inputPasswordConfirm, TextInputLayout inputPhone,
       TextInputLayout inputRegisterEmail, AppCompatButton login,
       CircularProgressIndicator progress) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.homeTitle = homeTitle;
     this.inputAddress = inputAddress;
+    this.inputCompanyName = inputCompanyName;
     this.inputName = inputName;
     this.inputPassword = inputPassword;
     this.inputPasswordConfirm = inputPasswordConfirm;

@@ -62,7 +62,7 @@ public class Constants {
     public static final String GET_MOHDAREEN = "GET_MOHDAREEN";
     public static final String CATEGORIES = "CATEGORIES";
     public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
-    public static final String GET_USER_DOCUMENTS = "GET_USER_DOCUMENTS";
+    public static final String CONTACT_US = "CONTACT_US";
     public static final String SHARE_BAR = "SHARE_BAR";
     public static final String PROFILE = "PROFILE";
     public static final String CHANGE_STATUS = "CHANGE_STATUS";

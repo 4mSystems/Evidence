@@ -4,7 +4,6 @@ package te.app.evidence.repository;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -20,10 +19,7 @@ import te.app.evidence.pages.auth.models.LoginRequest;
 import te.app.evidence.pages.auth.models.RegisterRequest;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.onBoard.models.BoardResponse;
-import te.app.evidence.pages.settings.models.UserDocumentsResponse;
-import te.app.evidence.pages.settings.models.settings.SettingsResponse;
 import te.app.evidence.pages.users.models.AddUserRequest;
-import te.app.evidence.pages.users.models.AddUserResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -50,11 +46,6 @@ public class AuthRepository extends BaseRepository {
     public Disposable getBoard() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BOARD, new Object(), BoardResponse.class,
                 Constants.BOARD, true);
-    }
-
-    public Disposable getSettings() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SETTINGS, new Object(), SettingsResponse.class,
-                Constants.SETTINGS, false);
     }
 
     public Disposable login(LoginRequest request) {
@@ -92,11 +83,6 @@ public class AuthRepository extends BaseRepository {
     public Disposable changePassword(ChangePasswordRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, StatusMessage.class,
                 Constants.CHANGE_PASSWORD, true);
-    }
-
-    public Disposable getUserDocuments() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_USER_DOCUMENTS, new Object(), UserDocumentsResponse.class,
-                Constants.GET_USER_DOCUMENTS, true);
     }
 
 }

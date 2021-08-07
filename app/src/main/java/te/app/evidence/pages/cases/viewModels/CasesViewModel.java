@@ -28,7 +28,7 @@ public class CasesViewModel extends BaseViewModel {
     CaseDetails caseDetails;
     private int selectedBtn = 0;
     InputTagClientsAdapter clientsAdapter;
-    CasesMainData casesMainData,oldCasesMainData;
+    CasesMainData casesMainData, oldCasesMainData;
 
     @Inject
     public CasesViewModel(CasesRepository casesRepository) {
@@ -47,6 +47,11 @@ public class CasesViewModel extends BaseViewModel {
     public void caseDetailsResponse() {
         compositeDisposable.add(casesRepository.caseDetails(getPassingObject().getId()));
     }
+
+    public void deleteCase() {
+        compositeDisposable.add(casesRepository.deleteCCase(getCasesAdapter().getCasesList().get(getCasesAdapter().lastSelected).getId()));
+    }
+
     public void search(int page, boolean showProgress) {
         if (!TextUtils.isEmpty(searchRequest.getSearch()))
             compositeDisposable.add(casesRepository.search(page, showProgress, searchRequest));
