@@ -18,6 +18,8 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    @NonNull
+    private final com.airbnb.lottie.LottieAnimationView mboundView5;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback23;
@@ -64,7 +66,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
     };
 
     public FragmentCasesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentCasesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -76,6 +78,8 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         this.inputSearch.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView5 = (com.airbnb.lottie.LottieAnimationView) bindings[5];
+        this.mboundView5.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
         this.search.setTag(null);
@@ -167,39 +171,49 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
-        boolean viewmodelSearchProgressVisibleGet = false;
         te.app.evidence.pages.cases.adapters.AllCasesAdapter viewmodelCasesAdapter = null;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
+        int viewmodelCasesAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
+        boolean viewmodelSearchProgressVisibleGet = false;
         java.lang.String viewmodelSearchRequestSearch = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
-        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        boolean viewmodelCasesAdapterItemCountInt0 = false;
         te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+        int viewmodelCasesAdapterItemCount = 0;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.searchRequest
-                        viewmodelSearchRequest = viewmodel.searchRequest;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
-                    }
-
-
-                    if (viewmodelSearchRequest != null) {
-                        // read viewmodel.searchRequest.search
-                        viewmodelSearchRequestSearch = viewmodelSearchRequest.getSearch();
-                    }
-            }
             if ((dirtyFlags & 0xeL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.casesAdapter
                         viewmodelCasesAdapter = viewmodel.getCasesAdapter();
                     }
+
+
+                    if (viewmodelCasesAdapter != null) {
+                        // read viewmodel.casesAdapter.itemCount
+                        viewmodelCasesAdapterItemCount = viewmodelCasesAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.casesAdapter.itemCount == 0
+                    viewmodelCasesAdapterItemCountInt0 = (viewmodelCasesAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelCasesAdapterItemCountInt0) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
+
+
+                    // read viewmodel.casesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelCasesAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelCasesAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0xbL) != 0) {
 
@@ -216,16 +230,31 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                     else {
-                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
                     }
                 }
 
 
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.search
+                        viewmodelSearchRequestSearch = viewmodelSearchRequest.getSearch();
+                    }
             }
         }
         // batch finished
@@ -235,15 +264,16 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputSearch, viewmodelSearchRequestSearch);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputSearch, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputSearchandroidTextAttrChanged);
         }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView5.setVisibility(viewmodelCasesAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelCasesAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelCasesAdapter, "1", "1");
         }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
@@ -289,8 +319,10 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         flag 1 (0x2L): viewmodel
         flag 2 (0x3L): viewmodel.casesAdapter
         flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.casesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.casesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

@@ -10,6 +10,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
+import te.app.evidence.pages.settings.models.PackagesResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -32,14 +33,14 @@ public class SettingsRepository extends BaseRepository {
         connectionHelper.liveData = liveData;
     }
 
-    public Disposable getAbout() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.ABOUT, new Object(), AboutResponse.class,
-                Constants.ABOUT, true);
+    public Disposable getPackages() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PACKAGES, new Object(), PackagesResponse.class,
+                Constants.PACKAGES, true);
     }
 
-    public Disposable getTerms() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.TERMS, new Object(), AboutResponse.class,
-                Constants.TERMS, true);
+    public Disposable subscribePackage(int packageId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE + packageId, new Object(), StatusMessage.class,
+                Constants.SUBSCRIBE, true);
     }
 
     public Disposable sendContact(ContactUsRequest contactUsRequest) {

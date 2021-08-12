@@ -19,12 +19,14 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
+    private final com.airbnb.lottie.LottieAnimationView mboundView5;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
-    @Nullable
     private final android.view.View.OnClickListener mCallback2;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback1;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -68,7 +70,7 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
     };
 
     public FragmentSessionNotesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentSessionNotesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -80,15 +82,17 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
         this.inputSearch.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView5 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5];
+        this.mboundView5 = (com.airbnb.lottie.LottieAnimationView) bindings[5];
         this.mboundView5.setTag(null);
+        this.mboundView6 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6];
+        this.mboundView6.setTag(null);
         this.progress.setTag(null);
         this.rcNotes.setTag(null);
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback1 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         mCallback2 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback1 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -174,40 +178,21 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelNotesAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        java.lang.String viewmodelSearchRequestNote = null;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
         te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
         te.app.evidence.pages.sessions.adapters.SessionNotesAdapter viewmodelNotesAdapter = null;
         boolean viewmodelSearchProgressVisibleGet = false;
-        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
-        java.lang.String viewmodelSearchRequestNote = null;
-        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        int viewmodelNotesAdapterItemCount = 0;
+        boolean viewmodelNotesAdapterItemCountInt0 = false;
         te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.searchRequest
-                        viewmodelSearchRequest = viewmodel.searchRequest;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
-                    }
-
-
-                    if (viewmodelSearchRequest != null) {
-                        // read viewmodel.searchRequest.note
-                        viewmodelSearchRequestNote = viewmodelSearchRequest.getNote();
-                    }
-            }
-            if ((dirtyFlags & 0xeL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.notesAdapter
-                        viewmodelNotesAdapter = viewmodel.getNotesAdapter();
-                    }
-            }
             if ((dirtyFlags & 0xbL) != 0) {
 
                     if (viewmodel != null) {
@@ -223,6 +208,50 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.note
+                        viewmodelSearchRequestNote = viewmodelSearchRequest.getNote();
+                    }
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.notesAdapter
+                        viewmodelNotesAdapter = viewmodel.getNotesAdapter();
+                    }
+
+
+                    if (viewmodelNotesAdapter != null) {
+                        // read viewmodel.notesAdapter.itemCount
+                        viewmodelNotesAdapterItemCount = viewmodelNotesAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.notesAdapter.itemCount == 0
+                    viewmodelNotesAdapterItemCountInt0 = (viewmodelNotesAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelNotesAdapterItemCountInt0) {
                             dirtyFlags |= 0x20L;
                     }
                     else {
@@ -231,8 +260,8 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
                 }
 
 
-                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    // read viewmodel.notesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelNotesAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelNotesAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
@@ -242,21 +271,22 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputSearch, viewmodelSearchRequestNote);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputSearch, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputSearchandroidTextAttrChanged);
         }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView5.setVisibility(viewmodelNotesAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcNotes, viewmodelNotesAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback2);
+            this.mboundView6.setOnClickListener(mCallback2);
             this.search.setOnClickListener(mCallback1);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcNotes, viewmodelNotesAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -274,6 +304,23 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAddNote();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -293,23 +340,6 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toAddNote();
-                }
-                break;
-            }
         }
     }
     // dirty flag
@@ -319,8 +349,10 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
         flag 1 (0x2L): viewmodel
         flag 2 (0x3L): viewmodel.notesAdapter
         flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.notesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.notesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

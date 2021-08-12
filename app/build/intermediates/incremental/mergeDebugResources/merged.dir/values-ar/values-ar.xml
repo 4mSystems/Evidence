@@ -50,7 +50,7 @@
     <string name="addressed_to">موجهة الى</string>
     <string name="admin">أدمن</string>
     <string name="app_login_hint">يرجي ادخال البريد الالكتروني و كلمة المرور</string>
-    <string name="app_name">Evidence</string>
+    <string name="app_name">الدليل</string>
     <string name="attach_desc">الوصف</string>
     <string name="attach_search_hint">هل تبحث عن ملف ؟</string>
     <string name="attachments">الملحقات</string>
@@ -84,6 +84,7 @@
     <string name="client_unselected">إضغط لرؤية العملاء</string>
     <string name="client_warning">عفوا لايمكن اتمام العملية, الدعوى لابد من وجود عميل واحد على الاقل</string>
     <string name="clients">الموكلين</string>
+    <string name="coin">ج.م</string>
     <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"‏لدى <ns1:g id="APP_NAME">%1$s</ns1:g> مشكلة في خدمات Google Play. يُرجى إعادة المحاولة."</string>
     <string name="company_name_hint">إسم المؤسسة</string>
     <string name="confirm">تأكيد</string>
@@ -170,7 +171,7 @@
     <string name="menuMohdar">المحضرين</string>
     <string name="menuReports">التقارير</string>
     <string name="menuUsers">المستخدمين</string>
-    <string name="message_hint">اكتب رسالتك...</string>
+    <string name="message_hint">اكتب رسالتك…</string>
     <string name="month">الشهر</string>
     <string name="monthly_file_name">تقرير شهر " "</string>
     <string name="monthly_reports">التقارير الشهرية</string>
@@ -220,6 +221,7 @@
     <string name="opponents">الخصوم</string>
     <string name="option_cancel">إلغاء</string>
     <string name="option_dialog_delete">هل أنت متأكد ؟</string>
+    <string name="packes">الاشتراكات</string>
     <string name="paper_delivered_date">تاريخ تسليم الورقة</string>
     <string name="paper_number">رقم الورقة</string>
     <string name="paper_type">نوع الورقة</string>
@@ -232,6 +234,7 @@
     <string name="please_select_another_file">Please select another file</string>
     <string name="previousSessions">الجلسات الفائتة</string>
     <string name="print">طباعة</string>
+    <string name="profile_change_password">تغيير كلمة المرور</string>
     <string name="profile_edit">تعديل حسابى</string>
     <string name="public_info">نظرة عامة</string>
     <string name="rate">قيم التطبيق</string>
@@ -239,6 +242,8 @@
     <string name="register_login">إنشاء حساب جديد</string>
     <string name="report_about">تقارير عن</string>
     <string name="report_about_user">تقرير عن التصنيف الخاص بك</string>
+    <string name="report_monthly_warning">اضغط لرؤية جلساتك خلال شهر</string>
+    <string name="report_warning">إضغط لرؤية جلساتك اليومية</string>
     <string name="reporter_details">تفاصيل المحضر</string>
     <string name="reporter_status_done">تم التنفيذ</string>
     <string name="reporter_status_wait">قيد الانتظار</string>
@@ -265,6 +270,7 @@
     <string name="startApp">إبدأ التطبيق</string>
     <string name="status">الحالة</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="subscribe">اشتراك</string>
     <string name="terms">الشروط و الأحكام</string>
     <string name="tv_account_contact">الشكاوى والمقترحات</string>
     <string name="user">مستخدم</string>

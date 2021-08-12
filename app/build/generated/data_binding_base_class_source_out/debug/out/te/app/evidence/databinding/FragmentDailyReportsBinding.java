@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -20,6 +21,9 @@ import te.app.evidence.R;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 
 public abstract class FragmentDailyReportsBinding extends ViewDataBinding {
+  @NonNull
+  public final AppCompatImageView icBusinessReport;
+
   @NonNull
   public final TextInputEditText inputCat;
 
@@ -42,9 +46,11 @@ public abstract class FragmentDailyReportsBinding extends ViewDataBinding {
   protected ReportsViewModel mViewmodel;
 
   protected FragmentDailyReportsBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      TextInputEditText inputCat, TextInputLayout inputCategory, TextInputLayout inputDate,
-      CircularProgressIndicator progress, RecyclerView rcClients, MaterialButton search) {
+      AppCompatImageView icBusinessReport, TextInputEditText inputCat,
+      TextInputLayout inputCategory, TextInputLayout inputDate, CircularProgressIndicator progress,
+      RecyclerView rcClients, MaterialButton search) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.icBusinessReport = icBusinessReport;
     this.inputCat = inputCat;
     this.inputCategory = inputCategory;
     this.inputDate = inputDate;

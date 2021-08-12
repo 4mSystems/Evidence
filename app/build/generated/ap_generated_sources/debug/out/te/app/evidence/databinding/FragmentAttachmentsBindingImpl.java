@@ -14,13 +14,15 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.input_search, 4);
+        sViewsWithIds.put(R.id.input_search, 5);
     }
     // views
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView3;
+    private final com.airbnb.lottie.LottieAnimationView mboundView3;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView4;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback70;
@@ -29,18 +31,20 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
     // Inverse Binding Event Handlers
 
     public FragmentAttachmentsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentAttachmentsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (com.google.android.material.textfield.TextInputEditText) bindings[4]
+            , (com.google.android.material.textfield.TextInputEditText) bindings[5]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView3 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[3];
+        this.mboundView3 = (com.airbnb.lottie.LottieAnimationView) bindings[3];
         this.mboundView3.setTag(null);
+        this.mboundView4 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[4];
+        this.mboundView4.setTag(null);
         this.progress.setTag(null);
         this.rcAttachments.setTag(null);
         setRootTag(root);
@@ -131,10 +135,13 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelAttachmentsAdapterItemCount = 0;
         te.app.evidence.pages.attachments.adapters.AttachmentsAdapter viewmodelAttachmentsAdapter = null;
         boolean viewmodelSearchProgressVisibleGet = false;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        boolean viewmodelAttachmentsAdapterItemCountInt0 = false;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
+        int viewmodelAttachmentsAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.attachments.viewModels.AttachmentsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
@@ -146,6 +153,28 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
                         // read viewmodel.attachmentsAdapter
                         viewmodelAttachmentsAdapter = viewmodel.getAttachmentsAdapter();
                     }
+
+
+                    if (viewmodelAttachmentsAdapter != null) {
+                        // read viewmodel.attachmentsAdapter.itemCount
+                        viewmodelAttachmentsAdapterItemCount = viewmodelAttachmentsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.attachmentsAdapter.itemCount == 0
+                    viewmodelAttachmentsAdapterItemCountInt0 = (viewmodelAttachmentsAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelAttachmentsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.attachmentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelAttachmentsAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelAttachmentsAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0xbL) != 0) {
 
@@ -175,20 +204,21 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
             }
         }
         // batch finished
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView3.setVisibility(viewmodelAttachmentsAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcAttachments, viewmodelAttachmentsAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView3.setOnClickListener(mCallback70);
+            this.mboundView4.setOnClickListener(mCallback70);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcAttachments, viewmodelAttachmentsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -218,6 +248,8 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
         flag 3 (0x4L): null
         flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
         flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.attachmentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.attachmentsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

@@ -21,7 +21,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     @NonNull
     private final androidx.appcompat.widget.AppCompatImageView mboundView2;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
+    private final com.airbnb.lottie.LottieAnimationView mboundView6;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView7;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback69;
@@ -72,7 +74,7 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     };
 
     public FragmentSessionsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 8, sIncludes, sViewsWithIds));
     }
     private FragmentSessionsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -86,8 +88,10 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         this.mboundView0.setTag(null);
         this.mboundView2 = (androidx.appcompat.widget.AppCompatImageView) bindings[2];
         this.mboundView2.setTag(null);
-        this.mboundView6 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6];
+        this.mboundView6 = (com.airbnb.lottie.LottieAnimationView) bindings[6];
         this.mboundView6.setTag(null);
+        this.mboundView7 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[7];
+        this.mboundView7.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
         this.search.setTag(null);
@@ -181,39 +185,49 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
+        int viewmodelSessionsAdapterItemCount = 0;
         te.app.evidence.pages.home.adapters.SessionsAdapter viewmodelSessionsAdapter = null;
-        boolean viewmodelSearchProgressVisibleGet = false;
         androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
-        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelSearchRequestSessionDate = null;
         androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
+        int viewmodelSessionsAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
+        boolean viewmodelSearchProgressVisibleGet = false;
+        boolean viewmodelSessionsAdapterItemCountInt0 = false;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.sessions.viewModels.SessionsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.searchRequest
-                        viewmodelSearchRequest = viewmodel.searchRequest;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
-                    }
-
-
-                    if (viewmodelSearchRequest != null) {
-                        // read viewmodel.searchRequest.sessionDate
-                        viewmodelSearchRequestSessionDate = viewmodelSearchRequest.getSessionDate();
-                    }
-            }
             if ((dirtyFlags & 0xeL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.sessionsAdapter
                         viewmodelSessionsAdapter = viewmodel.getSessionsAdapter();
                     }
+
+
+                    if (viewmodelSessionsAdapter != null) {
+                        // read viewmodel.sessionsAdapter.itemCount
+                        viewmodelSessionsAdapterItemCount = viewmodelSessionsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.sessionsAdapter.itemCount == 0
+                    viewmodelSessionsAdapterItemCountInt0 = (viewmodelSessionsAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelSessionsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
+                }
+
+
+                    // read viewmodel.sessionsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelSessionsAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelSessionsAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0xbL) != 0) {
 
@@ -230,16 +244,31 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
                     }
                 if((dirtyFlags & 0xbL) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x20L;
+                            dirtyFlags |= 0x80L;
                     }
                     else {
-                            dirtyFlags |= 0x10L;
+                            dirtyFlags |= 0x40L;
                     }
                 }
 
 
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.sessionDate
+                        viewmodelSearchRequestSessionDate = viewmodelSearchRequest.getSessionDate();
+                    }
             }
         }
         // batch finished
@@ -253,18 +282,19 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
             // api target 1
 
             this.mboundView2.setOnClickListener(mCallback67);
-            this.mboundView6.setOnClickListener(mCallback69);
+            this.mboundView7.setOnClickListener(mCallback69);
             this.search.setOnClickListener(mCallback68);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView6.setVisibility(viewmodelSessionsAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelSessionsAdapter, "1", "1");
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelSessionsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -344,8 +374,10 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         flag 1 (0x2L): viewmodel
         flag 2 (0x3L): viewmodel.sessionsAdapter
         flag 3 (0x4L): null
-        flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 4 (0x5L): viewmodel.sessionsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.sessionsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

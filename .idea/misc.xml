@@ -12,6 +12,8 @@
         <entry key="app/src/main/res/drawable/ic_add_session.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_user.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_attachments.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_best_price.xml" value="0.2942708333333333" />
+        <entry key="app/src/main/res/drawable/ic_business_report.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/drawable/ic_contact.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_image_type.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
@@ -22,6 +24,7 @@
         <entry key="app/src/main/res/drawable/ic_profile_camera.xml" value="0.371875" />
         <entry key="app/src/main/res/drawable/ic_report_search.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.315625" />
+        <entry key="app/src/main/res/drawable/ic_resource_package.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/logo.xml" value="0.209375" />
@@ -47,17 +50,18 @@
         <entry key="app/src/main/res/layout/fragment_client_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_clients.xml" value="0.47463516330785266" />
         <entry key="app/src/main/res/layout/fragment_contact.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_daily_reports.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_daily_reports.xml" value="0.20234833659491194" />
         <entry key="app/src/main/res/layout/fragment_edit_case.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.10388821385176185" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.6001757469244289" />
         <entry key="app/src/main/res/layout/fragment_monthly_reports.xml" value="0.14326059050064185" />
+        <entry key="app/src/main/res/layout/fragment_packages.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_session_notes.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.531104199066874" />
+        <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.507360157016683" />
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_users.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_users.xml" value="0.25" />
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_attachment.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_bailiffs.xml" value="0.19322916666666667" />
@@ -67,6 +71,7 @@
         <entry key="app/src/main/res/layout/item_clients.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_drop_category.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_package.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_report.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_session.xml" value="0.22" />
         <entry key="app/src/main/res/layout/item_session_note.xml" value="0.19322916666666667" />

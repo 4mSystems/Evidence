@@ -1312,6 +1312,7 @@
     <string name="client_unselected">إضغط لرؤية العملاء</string>
     <string name="client_warning">عفوا لايمكن اتمام العملية, الدعوى لابد من وجود عميل واحد على الاقل</string>
     <string name="clients">الموكلين</string>
+    <string name="coin">ج.م</string>
     <string name="common_google_play_services_unknown_issue"><ns2:g id="app_name">%1$s</ns2:g> is having trouble with Google Play services. Please try again.</string>
     <string name="company_name_hint">إسم المؤسسة</string>
     <string name="confirm">تأكيد</string>
@@ -1477,6 +1478,7 @@
     <string name="opponents">الخصوم</string>
     <string name="option_cancel">إلغاء</string>
     <string name="option_dialog_delete">هل أنت متأكد ؟</string>
+    <string name="packes">الاشتراكات</string>
     <string name="paper_delivered_date">تاريخ تسليم الورقة</string>
     <string name="paper_number">رقم الورقة</string>
     <string name="paper_type">نوع الورقة</string>
@@ -1495,6 +1497,7 @@
     <string name="please_turn_on">Please turn on</string>
     <string name="previousSessions">الجلسات الفائتة</string>
     <string name="print">طباعة</string>
+    <string name="profile_change_password">تغيير كلمة المرور</string>
     <string name="profile_edit">تعديل حسابى</string>
     <string name="project_id" translatable="false">evidence-45abd</string>
     <string name="public_info">نظرة عامة</string>
@@ -1503,6 +1506,8 @@
     <string name="register_login">إنشاء حساب جديد</string>
     <string name="report_about">تقارير عن</string>
     <string name="report_about_user">تقرير عن التصنيف الخاص بك</string>
+    <string name="report_monthly_warning">اضغط لرؤية جلساتك خلال شهر</string>
+    <string name="report_warning">"اضغط لرؤية جلساتك "</string>
     <string name="reporter_details">تفاصيل المحضر</string>
     <string name="reporter_status_done">تم التنفيذ</string>
     <string name="reporter_status_wait">قيد الانتظار</string>
@@ -1530,6 +1535,7 @@
     <string name="startApp">إبدأ التطبيق</string>
     <string name="status">الحالة</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="subscribe">اشتراك</string>
     <string name="terms">الشروط و الأحكام</string>
     <string name="toast_message">Toast message</string>
     <string name="tv_account_contact">"اتصل بنا "</string>

@@ -55,6 +55,8 @@ public class DailyReportsFragment extends BaseFragment {
             handleActions(mutable);
             if (Constants.CATEGORIES.equals(((Mutable) o).message)) {
                 viewModel.setCategoriesDataList(((CategoriesResponse) mutable.object).getMainData().getCategoriesDataList());
+                binding.inputCat.setText(viewModel.getCategoriesDataList().get(0).getName());
+                viewModel.getSearchReportRequest().setCategory_id(viewModel.getCategoriesDataList().get(0).getId());
             } else if (Constants.SHOW_CATEGORIES.equals(((Mutable) o).message)) {
                 showCategories();
             } else if (Constants.REPORT.equals(((Mutable) o).message)) {

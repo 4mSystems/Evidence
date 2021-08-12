@@ -14,19 +14,25 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.toolbar_layout, 15);
-        sViewsWithIds.put(R.id.home_item1, 16);
-        sViewsWithIds.put(R.id.view_id, 17);
-        sViewsWithIds.put(R.id.view_mohdr, 18);
-        sViewsWithIds.put(R.id.view_users, 19);
-        sViewsWithIds.put(R.id.view_casee, 20);
-        sViewsWithIds.put(R.id.flow, 21);
-        sViewsWithIds.put(R.id.br3, 22);
-        sViewsWithIds.put(R.id.progress_bar_home, 23);
+        sViewsWithIds.put(R.id.toolbar_layout, 18);
+        sViewsWithIds.put(R.id.home_item1, 19);
+        sViewsWithIds.put(R.id.view_id, 20);
+        sViewsWithIds.put(R.id.view_mohdr, 21);
+        sViewsWithIds.put(R.id.view_users, 22);
+        sViewsWithIds.put(R.id.view_casee, 23);
+        sViewsWithIds.put(R.id.flow, 24);
+        sViewsWithIds.put(R.id.br3, 25);
+        sViewsWithIds.put(R.id.progress_bar_home, 26);
     }
     // views
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    @NonNull
+    private final com.airbnb.lottie.LottieAnimationView mboundView15;
+    @NonNull
+    private final com.airbnb.lottie.LottieAnimationView mboundView16;
+    @NonNull
+    private final com.airbnb.lottie.LottieAnimationView mboundView17;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback82;
@@ -45,15 +51,15 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // Inverse Binding Event Handlers
 
     public FragmentHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 24, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 27, sIncludes, sViewsWithIds));
     }
     private FragmentHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
-            , (androidx.constraintlayout.widget.Barrier) bindings[22]
+            , (androidx.constraintlayout.widget.Barrier) bindings[25]
             , (androidx.recyclerview.widget.RecyclerView) bindings[11]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[21]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[24]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
-            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[16]
+            , (androidx.constraintlayout.widget.ConstraintLayout) bindings[19]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[2]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[4]
             , (androidx.constraintlayout.widget.ConstraintLayout) bindings[6]
@@ -66,12 +72,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             , (androidx.recyclerview.widget.RecyclerView) bindings[12]
             , (androidx.appcompat.widget.AppCompatButton) bindings[9]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[14]
-            , (android.widget.ProgressBar) bindings[23]
-            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[15]
+            , (android.widget.ProgressBar) bindings[26]
+            , (com.google.android.material.appbar.CollapsingToolbarLayout) bindings[18]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[23]
             , (com.ramijemli.percentagechartview.PercentageChartView) bindings[20]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[17]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[18]
-            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[19]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[21]
+            , (com.ramijemli.percentagechartview.PercentageChartView) bindings[22]
             );
         this.commingSessionRc.setTag(null);
         this.homeCases.setTag(null);
@@ -84,6 +90,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.homeUsers.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView15 = (com.airbnb.lottie.LottieAnimationView) bindings[15];
+        this.mboundView15.setTag(null);
+        this.mboundView16 = (com.airbnb.lottie.LottieAnimationView) bindings[16];
+        this.mboundView16.setTag(null);
+        this.mboundView17 = (com.airbnb.lottie.LottieAnimationView) bindings[17];
+        this.mboundView17.setTag(null);
         this.nextMohdareen.setTag(null);
         this.nextSessions.setTag(null);
         this.previousSessionRc.setTag(null);
@@ -221,26 +233,38 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         java.lang.String homeCasesAndroidStringMenuCasesConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataCasesViewmodelHomeDataCountDataCasesJavaLangString = null;
         te.app.evidence.pages.home.adapters.SessionsAdapter viewmodelPrevSessionsAdapter = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
+        int viewmodelPrevSessionsAdapterItemCount = 0;
+        int viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalseViewVISIBLEViewGONE = 0;
         android.graphics.drawable.Drawable viewmodelSelectedBtnInt2NextMohdareenAndroidDrawableCornerViewPrimaryYellowNextMohdareenAndroidDrawableCornerViewPrimaryDarkHome = null;
+        int viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalseViewVISIBLEViewGONE = 0;
+        boolean viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse = false;
         te.app.evidence.pages.home.adapters.SessionsAdapter viewmodelComingSessionsAdapter = null;
         te.app.evidence.pages.home.models.CountData viewmodelHomeDataCountData = null;
         boolean viewmodelSelectedBtnInt1 = false;
+        boolean viewmodelHomeReportersAdapterItemCountInt0 = false;
+        int viewmodelHomeReportersAdapterItemCount = 0;
         boolean textUtilsIsEmptyViewmodelHomeDataCountDataSessions = false;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataUsers1 = false;
         te.app.evidence.pages.home.models.HomeData viewmodelHomeData = null;
+        int viewmodelComingSessionsAdapterItemCount = 0;
         te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
         java.lang.String homeUsersAndroidStringMenuUsersConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataUsersViewmodelHomeDataCountDataUsersJavaLangString = null;
         int viewmodelSelectedBtnInt1ViewVISIBLEViewGONE = 0;
+        boolean viewmodelPrevSessionsAdapterItemCountInt0 = false;
         te.app.evidence.pages.home.adapters.HomeReportersAdapter viewmodelHomeReportersAdapter = null;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataMohdreen1 = false;
         java.lang.String textUtilsIsEmptyViewmodelHomeDataCountDataCasesViewmodelHomeDataCountDataCasesJavaLangString = null;
+        int viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalseViewVISIBLEViewGONE = 0;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataSessions1 = false;
         boolean viewmodelSelectedBtnInt0 = false;
         java.lang.String viewmodelHomeDataCountDataCases = null;
         java.lang.String textUtilsIsEmptyViewmodelHomeDataCountDataUsersViewmodelHomeDataCountDataUsersJavaLangString = null;
+        boolean viewmodelComingSessionsAdapterItemCountInt0 = false;
+        boolean viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalse = false;
         android.graphics.drawable.Drawable viewmodelSelectedBtnInt0NextSessionsAndroidDrawableCornerViewPrimaryYellowNextSessionsAndroidDrawableCornerViewPrimaryDarkHome = null;
         java.lang.String textUtilsIsEmptyViewmodelHomeDataCountDataSessionsViewmodelHomeDataCountDataSessionsJavaLangString = null;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataCases1 = false;
+        boolean viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalse = false;
         java.lang.String viewmodelHomeDataCountDataMohdreen = null;
         java.lang.String viewmodelHomeDataCountDataUsers = null;
         boolean viewmodelSelectedBtnInt2 = false;
@@ -266,31 +290,31 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 if((dirtyFlags & 0x8aL) != 0) {
                     if(viewmodelSelectedBtnInt1) {
                             dirtyFlags |= 0x800L;
-                            dirtyFlags |= 0x200000L;
+                            dirtyFlags |= 0x8000000L;
                     }
                     else {
                             dirtyFlags |= 0x400L;
-                            dirtyFlags |= 0x100000L;
+                            dirtyFlags |= 0x4000000L;
                     }
                 }
                 if((dirtyFlags & 0x8aL) != 0) {
                     if(viewmodelSelectedBtnInt0) {
                             dirtyFlags |= 0x200L;
-                            dirtyFlags |= 0x8000000L;
+                            dirtyFlags |= 0x2000000000L;
                     }
                     else {
                             dirtyFlags |= 0x100L;
-                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags |= 0x1000000000L;
                     }
                 }
                 if((dirtyFlags & 0x8aL) != 0) {
                     if(viewmodelSelectedBtnInt2) {
                             dirtyFlags |= 0x2000L;
-                            dirtyFlags |= 0x80000L;
+                            dirtyFlags |= 0x200000L;
                     }
                     else {
                             dirtyFlags |= 0x1000L;
-                            dirtyFlags |= 0x40000L;
+                            dirtyFlags |= 0x100000L;
                     }
                 }
 
@@ -334,19 +358,55 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
-            if ((dirtyFlags & 0xa2L) != 0) {
+            if ((dirtyFlags & 0xaaL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.prevSessionsAdapter
                         viewmodelPrevSessionsAdapter = viewmodel.getPrevSessionsAdapter();
                     }
+
+
+                    if (viewmodelPrevSessionsAdapter != null) {
+                        // read viewmodel.prevSessionsAdapter.itemCount
+                        viewmodelPrevSessionsAdapterItemCount = viewmodelPrevSessionsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.prevSessionsAdapter.itemCount == 0
+                    viewmodelPrevSessionsAdapterItemCountInt0 = (viewmodelPrevSessionsAdapterItemCount) == (0);
+                if((dirtyFlags & 0xaaL) != 0) {
+                    if(viewmodelPrevSessionsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x800000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x400000000L;
+                    }
+                }
             }
-            if ((dirtyFlags & 0x92L) != 0) {
+            if ((dirtyFlags & 0x9aL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.comingSessionsAdapter
                         viewmodelComingSessionsAdapter = viewmodel.getComingSessionsAdapter();
                     }
+
+
+                    if (viewmodelComingSessionsAdapter != null) {
+                        // read viewmodel.comingSessionsAdapter.itemCount
+                        viewmodelComingSessionsAdapterItemCount = viewmodelComingSessionsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.comingSessionsAdapter.itemCount == 0
+                    viewmodelComingSessionsAdapterItemCountInt0 = (viewmodelComingSessionsAdapterItemCount) == (0);
+                if((dirtyFlags & 0x9aL) != 0) {
+                    if(viewmodelComingSessionsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x20000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10000000000L;
+                    }
+                }
             }
             if ((dirtyFlags & 0x86L) != 0) {
 
@@ -394,18 +454,18 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     textUtilsIsEmptyViewmodelHomeDataCountDataUsers = !TextUtilsIsEmptyViewmodelHomeDataCountDataUsers1;
                 if((dirtyFlags & 0x86L) != 0) {
                     if(TextUtilsIsEmptyViewmodelHomeDataCountDataSessions1) {
-                            dirtyFlags |= 0x20000000L;
+                            dirtyFlags |= 0x8000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000000L;
+                            dirtyFlags |= 0x4000000000L;
                     }
                 }
                 if((dirtyFlags & 0x86L) != 0) {
                     if(TextUtilsIsEmptyViewmodelHomeDataCountDataCases1) {
-                            dirtyFlags |= 0x800000L;
+                            dirtyFlags |= 0x20000000L;
                     }
                     else {
-                            dirtyFlags |= 0x400000L;
+                            dirtyFlags |= 0x10000000L;
                     }
                 }
                 if((dirtyFlags & 0x86L) != 0) {
@@ -418,6 +478,31 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 if((dirtyFlags & 0x86L) != 0) {
                     if(textUtilsIsEmptyViewmodelHomeDataCountDataUsers) {
+                            dirtyFlags |= 0x200000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100000000L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0xcaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.homeReportersAdapter
+                        viewmodelHomeReportersAdapter = viewmodel.getHomeReportersAdapter();
+                    }
+
+
+                    if (viewmodelHomeReportersAdapter != null) {
+                        // read viewmodel.homeReportersAdapter.itemCount
+                        viewmodelHomeReportersAdapterItemCount = viewmodelHomeReportersAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.homeReportersAdapter.itemCount == 0
+                    viewmodelHomeReportersAdapterItemCountInt0 = (viewmodelHomeReportersAdapterItemCount) == (0);
+                if((dirtyFlags & 0xcaL) != 0) {
+                    if(viewmodelHomeReportersAdapterItemCountInt0) {
                             dirtyFlags |= 0x2000000L;
                     }
                     else {
@@ -425,16 +510,62 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     }
                 }
             }
-            if ((dirtyFlags & 0xc2L) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.homeReportersAdapter
-                        viewmodelHomeReportersAdapter = viewmodel.getHomeReportersAdapter();
-                    }
-            }
         }
         // batch finished
 
+        if ((dirtyFlags & 0x20802000000L) != 0) {
+
+                if (viewmodel != null) {
+                    // read viewmodel.selectedBtn
+                    viewmodelSelectedBtn = viewmodel.getSelectedBtn();
+                }
+
+            if ((dirtyFlags & 0x800000000L) != 0) {
+
+                    // read viewmodel.selectedBtn == 1
+                    viewmodelSelectedBtnInt1 = (viewmodelSelectedBtn) == (1);
+                if((dirtyFlags & 0x8aL) != 0) {
+                    if(viewmodelSelectedBtnInt1) {
+                            dirtyFlags |= 0x800L;
+                            dirtyFlags |= 0x8000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x400L;
+                            dirtyFlags |= 0x4000000L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0x20000000000L) != 0) {
+
+                    // read viewmodel.selectedBtn == 0
+                    viewmodelSelectedBtnInt0 = (viewmodelSelectedBtn) == (0);
+                if((dirtyFlags & 0x8aL) != 0) {
+                    if(viewmodelSelectedBtnInt0) {
+                            dirtyFlags |= 0x200L;
+                            dirtyFlags |= 0x2000000000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x100L;
+                            dirtyFlags |= 0x1000000000L;
+                    }
+                }
+            }
+            if ((dirtyFlags & 0x2000000L) != 0) {
+
+                    // read viewmodel.selectedBtn == 2
+                    viewmodelSelectedBtnInt2 = (viewmodelSelectedBtn) == (2);
+                if((dirtyFlags & 0x8aL) != 0) {
+                    if(viewmodelSelectedBtnInt2) {
+                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x200000L;
+                    }
+                    else {
+                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x100000L;
+                    }
+                }
+            }
+        }
         if ((dirtyFlags & 0x86L) != 0) {
 
                 // read !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
@@ -455,6 +586,58 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 homeUsersAndroidStringMenuUsersConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataUsersViewmodelHomeDataCountDataUsersJavaLangString = homeUsers.getResources().getString(R.string.menuUsers).concat("\n").concat("#").concat(textUtilsIsEmptyViewmodelHomeDataCountDataUsersViewmodelHomeDataCountDataUsersJavaLangString);
                 // read @android:string/sessions.concat("\n").concat("#").concat(!TextUtils.isEmpty(viewmodel.homeData.countData.sessions) ? viewmodel.homeData.countData.sessions : "")
                 homeSessionAndroidStringSessionsConcatJavaLangStringNConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelHomeDataCountDataSessionsViewmodelHomeDataCountDataSessionsJavaLangString = homeSession.getResources().getString(R.string.sessions).concat("\n").concat("#").concat(textUtilsIsEmptyViewmodelHomeDataCountDataSessionsViewmodelHomeDataCountDataSessionsJavaLangString);
+        }
+
+        if ((dirtyFlags & 0xcaL) != 0) {
+
+                // read viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false
+                viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse = ((viewmodelHomeReportersAdapterItemCountInt0) ? (viewmodelSelectedBtnInt2) : (false));
+            if((dirtyFlags & 0xcaL) != 0) {
+                if(viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse) {
+                        dirtyFlags |= 0x80000L;
+                }
+                else {
+                        dirtyFlags |= 0x40000L;
+                }
+            }
+
+
+                // read viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
+                viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalseViewVISIBLEViewGONE = ((viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        if ((dirtyFlags & 0xaaL) != 0) {
+
+                // read viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false
+                viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalse = ((viewmodelPrevSessionsAdapterItemCountInt0) ? (viewmodelSelectedBtnInt1) : (false));
+            if((dirtyFlags & 0xaaL) != 0) {
+                if(viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalse) {
+                        dirtyFlags |= 0x800000L;
+                }
+                else {
+                        dirtyFlags |= 0x400000L;
+                }
+            }
+
+
+                // read viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false ? View.VISIBLE : View.GONE
+                viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalseViewVISIBLEViewGONE = ((viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        if ((dirtyFlags & 0x9aL) != 0) {
+
+                // read viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false
+                viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalse = ((viewmodelComingSessionsAdapterItemCountInt0) ? (viewmodelSelectedBtnInt0) : (false));
+            if((dirtyFlags & 0x9aL) != 0) {
+                if(viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalse) {
+                        dirtyFlags |= 0x80000000L;
+                }
+                else {
+                        dirtyFlags |= 0x40000000L;
+                }
+            }
+
+
+                // read viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false ? View.VISIBLE : View.GONE
+                viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalseViewVISIBLEViewGONE = ((viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x8aL) != 0) {
@@ -494,6 +677,21 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             // api target 1
 
             this.homeReportersRc.setAdapter(viewmodelHomeReportersAdapter);
+        }
+        if ((dirtyFlags & 0x9aL) != 0) {
+            // api target 1
+
+            this.mboundView15.setVisibility(viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalseViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xaaL) != 0) {
+            // api target 1
+
+            this.mboundView16.setVisibility(viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalseViewVISIBLEViewGONE);
+        }
+        if ((dirtyFlags & 0xcaL) != 0) {
+            // api target 1
+
+            this.mboundView17.setVisibility(viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalseViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0xa2L) != 0) {
             // api target 1
@@ -809,18 +1007,30 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         flag 15 (0x10L): !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
         flag 16 (0x11L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
         flag 17 (0x12L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 18 (0x13L): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 19 (0x14L): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 20 (0x15L): viewmodel.selectedBtn == 1 ? View.VISIBLE : View.GONE
-        flag 21 (0x16L): viewmodel.selectedBtn == 1 ? View.VISIBLE : View.GONE
-        flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.homeData.countData.cases) ? viewmodel.homeData.countData.cases : ""
-        flag 23 (0x18L): !TextUtils.isEmpty(viewmodel.homeData.countData.cases) ? viewmodel.homeData.countData.cases : ""
-        flag 24 (0x19L): !TextUtils.isEmpty(viewmodel.homeData.countData.users) ? viewmodel.homeData.countData.users : ""
-        flag 25 (0x1aL): !TextUtils.isEmpty(viewmodel.homeData.countData.users) ? viewmodel.homeData.countData.users : ""
-        flag 26 (0x1bL): viewmodel.selectedBtn == 0 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 27 (0x1cL): viewmodel.selectedBtn == 0 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 28 (0x1dL): !TextUtils.isEmpty(viewmodel.homeData.countData.sessions) ? viewmodel.homeData.countData.sessions : ""
-        flag 29 (0x1eL): !TextUtils.isEmpty(viewmodel.homeData.countData.sessions) ? viewmodel.homeData.countData.sessions : ""
+        flag 18 (0x13L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
+        flag 19 (0x14L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
+        flag 20 (0x15L): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 21 (0x16L): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 22 (0x17L): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false ? View.VISIBLE : View.GONE
+        flag 23 (0x18L): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false ? View.VISIBLE : View.GONE
+        flag 24 (0x19L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false
+        flag 25 (0x1aL): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false
+        flag 26 (0x1bL): viewmodel.selectedBtn == 1 ? View.VISIBLE : View.GONE
+        flag 27 (0x1cL): viewmodel.selectedBtn == 1 ? View.VISIBLE : View.GONE
+        flag 28 (0x1dL): !TextUtils.isEmpty(viewmodel.homeData.countData.cases) ? viewmodel.homeData.countData.cases : ""
+        flag 29 (0x1eL): !TextUtils.isEmpty(viewmodel.homeData.countData.cases) ? viewmodel.homeData.countData.cases : ""
+        flag 30 (0x1fL): viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false ? View.VISIBLE : View.GONE
+        flag 31 (0x20L): viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false ? View.VISIBLE : View.GONE
+        flag 32 (0x21L): !TextUtils.isEmpty(viewmodel.homeData.countData.users) ? viewmodel.homeData.countData.users : ""
+        flag 33 (0x22L): !TextUtils.isEmpty(viewmodel.homeData.countData.users) ? viewmodel.homeData.countData.users : ""
+        flag 34 (0x23L): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false
+        flag 35 (0x24L): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false
+        flag 36 (0x25L): viewmodel.selectedBtn == 0 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 37 (0x26L): viewmodel.selectedBtn == 0 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 38 (0x27L): !TextUtils.isEmpty(viewmodel.homeData.countData.sessions) ? viewmodel.homeData.countData.sessions : ""
+        flag 39 (0x28L): !TextUtils.isEmpty(viewmodel.homeData.countData.sessions) ? viewmodel.homeData.countData.sessions : ""
+        flag 40 (0x29L): viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false
+        flag 41 (0x2aL): viewmodel.comingSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 0 : false
     flag mapping end*/
     //end
 }

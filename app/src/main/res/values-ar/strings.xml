@@ -178,9 +178,14 @@
     <string name="choose_category">إضغط لاختيار تصنيف</string>
     <string name="month">الشهر</string>
     <string name="delete_case_waring">سيتم حذف جميع الجلسات والملاحظات للدعوى</string>
-    <string name="message_hint">اكتب رسالتك...</string>
+    <string name="message_hint">اكتب رسالتك…</string>
     <string name="company_name_hint">إسم المؤسسة</string>
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="profile_change_password">تغيير كلمة المرور</string>
+    <string name="subscribe">اشتراك</string>
+    <string name="coin">ج.م</string>
+    <string name="packes">الاشتراكات</string>
+    <string name="report_warning">إضغط لرؤية جلساتك اليومية</string>
+    <string name="report_monthly_warning">اضغط لرؤية جلساتك خلال شهر</string>
 
 </resources>

@@ -24,7 +24,7 @@ public class Constants {
     public final static String UPDATE_PROFILE = "update_profile";
 
 
-    public final static String IMAGE = "img";
+    public final static String IMAGE = "image";
     public final static String DELETE_CLIENT = "DELETE_CLIENT";
     public final static String CLIENT_PROFILE = "CLIENT_PROFILE";
     public final static String ADD_NOTE = "ADD_NOTE";
@@ -128,8 +128,8 @@ public class Constants {
     public static final String COMING_SESSIONS = "COMING_SESSIONS";
 
     public static final String HOME_REPORTERS = "HOME_REPORTERS";
-    public static final String EDIT_DIALOG = "EDIT_DIALOG";
-    public static final String UPDATE_IMAGES = "UPDATE_IMAGES";
+    public static final String PACKAGES = "PACKAGES";
+    public static final String SUBSCRIBE = "SUBSCRIBE";
     public static final String NOTIFICATIONS = "notifications";
     public static final String SELECT = "select";
     public static final String UPDATE_AD_DATA = "UPDATE_AD_DATA";

@@ -3103,6 +3103,8 @@ int drawable ic_attachments 0x7f07007b
 int drawable ic_auth_password 0x7f07007c
 int drawable ic_auth_phone 0x7f07007d
 int drawable ic_back 0x7f07007e
+int drawable ic_best_price 0x7f0700d3
+int drawable ic_business_report 0x7f0700d6
 int drawable ic_calendar 0x7f07007f
 int drawable ic_cases 0x7f070080
 int drawable ic_categories 0x7f070081
@@ -3134,6 +3136,7 @@ int drawable ic_note_add 0x7f070099
 int drawable ic_profile_camera 0x7f07009a
 int drawable ic_report_search 0x7f07009b
 int drawable ic_reports 0x7f07009c
+int drawable ic_resource_package 0x7f0700d4
 int drawable ic_search 0x7f07009d
 int drawable ic_session_notes 0x7f07009e
 int drawable ic_swap_vert_24dp 0x7f07009f
@@ -3180,6 +3183,7 @@ int drawable notification_template_icon_bg 0x7f0700c7
 int drawable notification_template_icon_low_bg 0x7f0700c8
 int drawable notification_tile_bg 0x7f0700c9
 int drawable notify_panel_notification_icon_bg 0x7f0700ca
+int drawable price_container 0x7f0700d5
 int drawable rounded_view_medium 0x7f0700cb
 int drawable rounded_view_primary_dark 0x7f0700cc
 int drawable splash 0x7f0700cd
@@ -3309,9 +3313,11 @@ int id br5 0x7f090075
 int id br_status 0x7f090076
 int id btnSave 0x7f090077
 int id btn_airplane_off 0x7f090078
+int id btn_free 0x7f0902e5
 int id btn_mobile_on 0x7f090079
 int id btn_print 0x7f09007a
 int id btn_save 0x7f09007b
+int id btn_subscribe 0x7f0902e6
 int id btn_wifi_on 0x7f09007c
 int id buttonPanel 0x7f09007d
 int id cache_measures 0x7f09007e
@@ -3479,6 +3485,8 @@ int id honorRequest 0x7f09011e
 int id horizontal 0x7f09011f
 int id horizontal_only 0x7f090120
 int id ib_close 0x7f090121
+int id ic_business_report 0x7f0902eb
+int id ic_resource 0x7f0902e7
 int id icon 0x7f090122
 int id icon_group 0x7f090123
 int id ifRoom 0x7f090124
@@ -3861,6 +3869,8 @@ int id tv_login_forget 0x7f09029c
 int id tv_login_header_number 0x7f09029d
 int id tv_login_title 0x7f09029e
 int id tv_message 0x7f09029f
+int id tv_package 0x7f0902e9
+int id tv_package_desc 0x7f0902ea
 int id tv_please_turn_off 0x7f0902a0
 int id tv_please_turn_on 0x7f0902a1
 int id tv_title 0x7f0902a2
@@ -4043,6 +4053,7 @@ int layout fragment_home 0x7f0c0048
 int layout fragment_login 0x7f0c0049
 int layout fragment_monthly_reports 0x7f0c004a
 int layout fragment_onboard 0x7f0c004b
+int layout fragment_packages 0x7f0c00be
 int layout fragment_profile 0x7f0c004c
 int layout fragment_register 0x7f0c004d
 int layout fragment_reporter_details 0x7f0c004e
@@ -4063,6 +4074,7 @@ int layout item_clients 0x7f0c005c
 int layout item_drop_category 0x7f0c005d
 int layout item_home_reporter 0x7f0c005e
 int layout item_note 0x7f0c005f
+int layout item_package 0x7f0c00bf
 int layout item_report 0x7f0c0060
 int layout item_session 0x7f0c0061
 int layout item_session_note 0x7f0c0062
@@ -4240,6 +4252,7 @@ int string client_unit 0x7f0f004d
 int string client_unselected 0x7f0f004e
 int string client_warning 0x7f0f004f
 int string clients 0x7f0f0050
+int string coin 0x7f0f0137
 int string common_google_play_services_unknown_issue 0x7f0f0051
 int string company_name_hint 0x7f0f0135
 int string confirm 0x7f0f0052
@@ -4405,6 +4418,7 @@ int string old_password 0x7f0f0136
 int string opponents 0x7f0f00ef
 int string option_cancel 0x7f0f00f0
 int string option_dialog_delete 0x7f0f00f1
+int string packes 0x7f0f0138
 int string paper_delivered_date 0x7f0f00f2
 int string paper_number 0x7f0f00f3
 int string paper_type 0x7f0f00f4
@@ -4423,6 +4437,7 @@ int string please_turn_off 0x7f0f0100
 int string please_turn_on 0x7f0f0101
 int string previousSessions 0x7f0f0102
 int string print 0x7f0f0103
+int string profile_change_password 0x7f0f0139
 int string profile_edit 0x7f0f0104
 int string project_id 0x7f0f0105
 int string public_info 0x7f0f0106
@@ -4431,6 +4446,8 @@ int string register 0x7f0f0108
 int string register_login 0x7f0f0109
 int string report_about 0x7f0f010a
 int string report_about_user 0x7f0f010b
+int string report_monthly_warning 0x7f0f013c
+int string report_warning 0x7f0f013b
 int string reporter_details 0x7f0f010c
 int string reporter_status_done 0x7f0f010d
 int string reporter_status_wait 0x7f0f010e
@@ -4458,6 +4475,7 @@ int string slider_title3 0x7f0f0123
 int string startApp 0x7f0f0124
 int string status 0x7f0f0125
 int string status_bar_notification_info_overflow 0x7f0f0126
+int string subscribe 0x7f0f013a
 int string terms 0x7f0f0127
 int string toast_message 0x7f0f0128
 int string tv_account_contact 0x7f0f0129

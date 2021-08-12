@@ -158,6 +158,8 @@ import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_Factory;
 import te.app.evidence.pages.sessions.viewModels.SessionsViewModel_MembersInjector;
 import te.app.evidence.pages.settings.ContactUsFragment;
 import te.app.evidence.pages.settings.ContactUsFragment_MembersInjector;
+import te.app.evidence.pages.settings.PackagesFragment;
+import te.app.evidence.pages.settings.PackagesFragment_MembersInjector;
 import te.app.evidence.pages.settings.viewModels.SettingsViewModel;
 import te.app.evidence.pages.settings.viewModels.SettingsViewModel_Factory;
 import te.app.evidence.pages.settings.viewModels.SettingsViewModel_MembersInjector;
@@ -586,6 +588,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     injectContactUsFragment(contactUsFragment);
   }
 
+  @Override
+  public void inject(PackagesFragment packagesFragment) {
+    injectPackagesFragment(packagesFragment);
+  }
+
   private MainActivity injectMainActivity(MainActivity instance) {
     MainActivity_MembersInjector.injectLiveData(instance, getMutableLiveDataProvider.get());
     return instance;
@@ -932,6 +939,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ContactUsFragment injectContactUsFragment(ContactUsFragment instance) {
     ContactUsFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
+    return instance;
+  }
+
+  private PackagesFragment injectPackagesFragment(PackagesFragment instance) {
+    PackagesFragment_MembersInjector.injectViewModel(instance, settingsViewModel());
     return instance;
   }
 

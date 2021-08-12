@@ -233,6 +233,21 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/dp12w"
                             android:layout_marginTop="@dimen/dp20h"
+                            android:drawableStart="@drawable/ic_best_price"
+                            android:drawablePadding="@dimen/dp6w"
+                            android:gravity="center"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.PACKAGES)}"
+                            android:text="@string/packes"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/white"
+                            android:visibility="@{menuViewModel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}" />
+
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp12w"
+                            android:layout_marginTop="@dimen/dp20h"
                             android:drawableStart="@drawable/ic_contact"
                             android:drawablePadding="@dimen/dp6w"
                             android:gravity="center"

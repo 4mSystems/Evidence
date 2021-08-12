@@ -19,12 +19,14 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     @NonNull
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
+    private final com.airbnb.lottie.LottieAnimationView mboundView5;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback126;
+    private final android.view.View.OnClickListener mCallback128;
     @Nullable
-    private final android.view.View.OnClickListener mCallback125;
+    private final android.view.View.OnClickListener mCallback127;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -68,7 +70,7 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     };
 
     public FragmentBailiffsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentBailiffsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -80,15 +82,17 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         this.inputSearch.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView5 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5];
+        this.mboundView5 = (com.airbnb.lottie.LottieAnimationView) bindings[5];
         this.mboundView5.setTag(null);
+        this.mboundView6 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6];
+        this.mboundView6.setTag(null);
         this.progress.setTag(null);
         this.rcMohdrs.setTag(null);
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback126 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback125 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback128 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback127 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -174,33 +178,21 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        boolean viewmodelBailiffsAdapterItemCountInt0 = false;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
         te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
         boolean viewmodelSearchProgressVisibleGet = false;
-        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        int viewmodelBailiffsAdapterItemCount = 0;
         java.lang.String viewmodelSearchRequestSearch = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.mohdrs.adapters.BailiffsAdapter viewmodelBailiffsAdapter = null;
-        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        int viewmodelBailiffsAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.searchRequest
-                        viewmodelSearchRequest = viewmodel.searchRequest;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
-                    }
-
-
-                    if (viewmodelSearchRequest != null) {
-                        // read viewmodel.searchRequest.search
-                        viewmodelSearchRequestSearch = viewmodelSearchRequest.getSearch();
-                    }
-            }
             if ((dirtyFlags & 0xbL) != 0) {
 
                     if (viewmodel != null) {
@@ -227,12 +219,49 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.search
+                        viewmodelSearchRequestSearch = viewmodelSearchRequest.getSearch();
+                    }
+            }
             if ((dirtyFlags & 0xeL) != 0) {
 
                     if (viewmodel != null) {
                         // read viewmodel.bailiffsAdapter
                         viewmodelBailiffsAdapter = viewmodel.getBailiffsAdapter();
                     }
+
+
+                    if (viewmodelBailiffsAdapter != null) {
+                        // read viewmodel.bailiffsAdapter.itemCount
+                        viewmodelBailiffsAdapterItemCount = viewmodelBailiffsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.bailiffsAdapter.itemCount == 0
+                    viewmodelBailiffsAdapterItemCountInt0 = (viewmodelBailiffsAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelBailiffsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.bailiffsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelBailiffsAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelBailiffsAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
         }
         // batch finished
@@ -242,21 +271,22 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputSearch, viewmodelSearchRequestSearch);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputSearch, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputSearchandroidTextAttrChanged);
         }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView5.setVisibility(viewmodelBailiffsAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcMohdrs, viewmodelBailiffsAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback126);
-            this.search.setOnClickListener(mCallback125);
+            this.mboundView6.setOnClickListener(mCallback128);
+            this.search.setOnClickListener(mCallback127);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcMohdrs, viewmodelBailiffsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -321,6 +351,8 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         flag 3 (0x4L): null
         flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
         flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.bailiffsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.bailiffsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

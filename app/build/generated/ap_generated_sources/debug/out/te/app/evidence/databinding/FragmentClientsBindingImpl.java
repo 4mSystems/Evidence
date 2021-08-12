@@ -19,7 +19,9 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     @NonNull
     private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
     @NonNull
-    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView5;
+    private final com.airbnb.lottie.LottieAnimationView mboundView5;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback100;
@@ -68,7 +70,7 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     };
 
     public FragmentClientsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 7, sIncludes, sViewsWithIds));
     }
     private FragmentClientsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 2
@@ -80,8 +82,10 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         this.inputSearch.setTag(null);
         this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
-        this.mboundView5 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5];
+        this.mboundView5 = (com.airbnb.lottie.LottieAnimationView) bindings[5];
         this.mboundView5.setTag(null);
+        this.mboundView6 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[6];
+        this.mboundView6.setTag(null);
         this.progress.setTag(null);
         this.rcClients.setTag(null);
         this.search.setTag(null);
@@ -174,40 +178,21 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        int viewmodelClientsAdapterItemCount = 0;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
         te.app.evidence.model.base.SearchRequest viewmodelSearchRequest = null;
         te.app.evidence.pages.clients.adapters.ClientsAdapter viewmodelClientsAdapter = null;
         boolean viewmodelSearchProgressVisibleGet = false;
-        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
         int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelSearchRequestName = null;
-        androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = null;
+        boolean viewmodelClientsAdapterItemCountInt0 = false;
+        int viewmodelClientsAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.clients.viewModels.ClientsViewModel viewmodel = mViewmodel;
 
         if ((dirtyFlags & 0xfL) != 0) {
 
 
-            if ((dirtyFlags & 0xaL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.searchRequest
-                        viewmodelSearchRequest = viewmodel.searchRequest;
-                        // read viewmodel::onTextChanged
-                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
-                    }
-
-
-                    if (viewmodelSearchRequest != null) {
-                        // read viewmodel.searchRequest.name
-                        viewmodelSearchRequestName = viewmodelSearchRequest.getName();
-                    }
-            }
-            if ((dirtyFlags & 0xeL) != 0) {
-
-                    if (viewmodel != null) {
-                        // read viewmodel.clientsAdapter
-                        viewmodelClientsAdapter = viewmodel.getClientsAdapter();
-                    }
-            }
             if ((dirtyFlags & 0xbL) != 0) {
 
                     if (viewmodel != null) {
@@ -234,6 +219,50 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
                     // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
                     viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0xaL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel::onTextChanged
+                        viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = (((mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged == null) ? (mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged = new OnTextChangedImpl()) : mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged).setValue(viewmodel));
+                        // read viewmodel.searchRequest
+                        viewmodelSearchRequest = viewmodel.searchRequest;
+                    }
+
+
+                    if (viewmodelSearchRequest != null) {
+                        // read viewmodel.searchRequest.name
+                        viewmodelSearchRequestName = viewmodelSearchRequest.getName();
+                    }
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.clientsAdapter
+                        viewmodelClientsAdapter = viewmodel.getClientsAdapter();
+                    }
+
+
+                    if (viewmodelClientsAdapter != null) {
+                        // read viewmodel.clientsAdapter.itemCount
+                        viewmodelClientsAdapterItemCount = viewmodelClientsAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.clientsAdapter.itemCount == 0
+                    viewmodelClientsAdapterItemCountInt0 = (viewmodelClientsAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelClientsAdapterItemCountInt0) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.clientsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelClientsAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelClientsAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
         if ((dirtyFlags & 0xaL) != 0) {
@@ -242,21 +271,22 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.inputSearch, viewmodelSearchRequestName);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputSearch, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)viewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputSearchandroidTextAttrChanged);
         }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.mboundView5.setVisibility(viewmodelClientsAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelClientsAdapter, "1", "1");
+        }
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView5.setOnClickListener(mCallback100);
+            this.mboundView6.setOnClickListener(mCallback100);
             this.search.setOnClickListener(mCallback99);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
 
             this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
-        }
-        if ((dirtyFlags & 0xeL) != 0) {
-            // api target 1
-
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcClients, viewmodelClientsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -321,6 +351,8 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         flag 3 (0x4L): null
         flag 4 (0x5L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
         flag 5 (0x6L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.clientsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.clientsAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

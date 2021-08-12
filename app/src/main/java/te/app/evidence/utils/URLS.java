@@ -17,7 +17,7 @@ public class URLS {
 
     public final static String CATEGORIES = "categories?page=";
     public final static String LOGIN = "login";
-    public final static String SETTINGS = "settings/settings";
+    public final static String SUBSCRIBE = "packages/subscripe/";
     public final static String REGISTER = "user/register";
     public final static String BOARD = "settings/sliders";
     public final static String CONFIRM_CODE = "user/verify-code";
@@ -56,7 +56,7 @@ public class URLS {
     public static final String DELETE_USER = "delete_user/";
     public static final String USER_PERMISSIONS = "select_user_permission/";
     public static final String UPDATE_USER_PERMISSIONS = "update_permission";
-    public static final String GET_USER_DOCUMENTS = "listings/update-listing-details";
+    public static final String PACKAGES = "packages";
 
     public static final String CASE_CLIENTS_CATEGORIES = "select/data/to_add_case";
     public static final String GET_MOHDAREEN = "mohdars?page=";

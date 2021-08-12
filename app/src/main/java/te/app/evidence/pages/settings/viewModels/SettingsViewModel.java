@@ -9,6 +9,7 @@ import javax.inject.Inject;
 
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.settings.adapters.PackagesAdapter;
 import te.app.evidence.pages.settings.models.AboutData;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.repository.SettingsRepository;
@@ -21,6 +22,7 @@ public class SettingsViewModel extends BaseViewModel {
     @Inject
     SettingsRepository repository;
     ContactUsRequest contactUsRequest;
+    PackagesAdapter packagesAdapter;
 
     @Inject
     public SettingsViewModel(SettingsRepository repository) {
@@ -33,12 +35,12 @@ public class SettingsViewModel extends BaseViewModel {
         getContactUsRequest().setEmail(userData.getUserData().getEmail());
     }
 
-    public void getAbout() {
-        compositeDisposable.add(repository.getAbout());
+    public void getPackages() {
+        compositeDisposable.add(repository.getPackages());
     }
 
-    public void getTerms() {
-        compositeDisposable.add(repository.getTerms());
+    public void subscribePackage(int packageId) {
+        compositeDisposable.add(repository.subscribePackage(packageId));
     }
 
     public void sendContact() {
@@ -64,6 +66,11 @@ public class SettingsViewModel extends BaseViewModel {
     public void setAboutData(AboutData aboutData) {
         notifyChange(BR.aboutData);
         this.aboutData = aboutData;
+    }
+
+    @Bindable
+    public PackagesAdapter getPackagesAdapter() {
+        return this.packagesAdapter == null ? this.packagesAdapter = new PackagesAdapter() : this.packagesAdapter;
     }
 
     protected void unSubscribeFromObservable() {

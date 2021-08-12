@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -45,6 +46,9 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
   public final AppCompatImageView loginBackground;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final CustomTextViewRegular tvChangeHeaderText;
 
   @NonNull
@@ -58,7 +62,8 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
       CustomTextViewMedium appName, AppCompatImageView imgLoginLogo,
       TextInputLayout inputConfirmPassword, TextInputLayout inputNewPassword,
       TextInputLayout inputOldPassword, AppCompatImageView loginBackground,
-      CustomTextViewRegular tvChangeHeaderText, CustomTextViewMedium tvChangeTitle) {
+      CircularProgressIndicator progress, CustomTextViewRegular tvChangeHeaderText,
+      CustomTextViewMedium tvChangeTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.appLoginTitle = appLoginTitle;
@@ -68,6 +73,7 @@ public abstract class FragmentChangePasswordBinding extends ViewDataBinding {
     this.inputNewPassword = inputNewPassword;
     this.inputOldPassword = inputOldPassword;
     this.loginBackground = loginBackground;
+    this.progress = progress;
     this.tvChangeHeaderText = tvChangeHeaderText;
     this.tvChangeTitle = tvChangeTitle;
   }

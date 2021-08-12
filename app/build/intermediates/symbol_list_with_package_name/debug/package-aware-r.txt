@@ -3104,6 +3104,8 @@ drawable ic_attachments
 drawable ic_auth_password
 drawable ic_auth_phone
 drawable ic_back
+drawable ic_best_price
+drawable ic_business_report
 drawable ic_calendar
 drawable ic_cases
 drawable ic_categories
@@ -3135,6 +3137,7 @@ drawable ic_note_add
 drawable ic_profile_camera
 drawable ic_report_search
 drawable ic_reports
+drawable ic_resource_package
 drawable ic_search
 drawable ic_session_notes
 drawable ic_swap_vert_24dp
@@ -3181,6 +3184,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable price_container
 drawable rounded_view_medium
 drawable rounded_view_primary_dark
 drawable splash
@@ -3310,9 +3314,11 @@ id br5
 id br_status
 id btnSave
 id btn_airplane_off
+id btn_free
 id btn_mobile_on
 id btn_print
 id btn_save
+id btn_subscribe
 id btn_wifi_on
 id buttonPanel
 id cache_measures
@@ -3480,6 +3486,8 @@ id honorRequest
 id horizontal
 id horizontal_only
 id ib_close
+id ic_business_report
+id ic_resource
 id icon
 id icon_group
 id ifRoom
@@ -3862,6 +3870,8 @@ id tv_login_forget
 id tv_login_header_number
 id tv_login_title
 id tv_message
+id tv_package
+id tv_package_desc
 id tv_please_turn_off
 id tv_please_turn_on
 id tv_title
@@ -4044,6 +4054,7 @@ layout fragment_home
 layout fragment_login
 layout fragment_monthly_reports
 layout fragment_onboard
+layout fragment_packages
 layout fragment_profile
 layout fragment_register
 layout fragment_reporter_details
@@ -4064,6 +4075,7 @@ layout item_clients
 layout item_drop_category
 layout item_home_reporter
 layout item_note
+layout item_package
 layout item_report
 layout item_session
 layout item_session_note
@@ -4241,6 +4253,7 @@ string client_unit
 string client_unselected
 string client_warning
 string clients
+string coin
 string common_google_play_services_unknown_issue
 string company_name_hint
 string confirm
@@ -4406,6 +4419,7 @@ string old_password
 string opponents
 string option_cancel
 string option_dialog_delete
+string packes
 string paper_delivered_date
 string paper_number
 string paper_type
@@ -4424,6 +4438,7 @@ string please_turn_off
 string please_turn_on
 string previousSessions
 string print
+string profile_change_password
 string profile_edit
 string project_id
 string public_info
@@ -4432,6 +4447,8 @@ string register
 string register_login
 string report_about
 string report_about_user
+string report_monthly_warning
+string report_warning
 string reporter_details
 string reporter_status_done
 string reporter_status_wait
@@ -4459,6 +4476,7 @@ string slider_title3
 string startApp
 string status
 string status_bar_notification_info_overflow
+string subscribe
 string terms
 string toast_message
 string tv_account_contact
