@@ -24,7 +24,6 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
-import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -71,7 +70,7 @@ public class CategoriesFragment extends BaseFragment {
             } else if (Constants.DELETE_CATEGORY.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getCategoriesAdapter().getCategoriesDataList().remove(viewModel.getCategoriesAdapter().lastSelected);
-                viewModel.getCategoriesAdapter().notifyItemRangeChanged(viewModel.getCategoriesAdapter().lastSelected, viewModel.getCategoriesAdapter().getItemCount());
+                viewModel.getCategoriesAdapter().notifyDataSetChanged();
                 deleteDialog.dismiss();
             }
         });

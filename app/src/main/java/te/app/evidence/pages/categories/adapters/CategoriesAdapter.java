@@ -23,9 +23,6 @@ import te.app.evidence.databinding.ItemCategoryBinding;
 import te.app.evidence.pages.categories.AddCategoryFragment;
 import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel;
-import te.app.evidence.pages.clients.models.Clients;
-import te.app.evidence.pages.users.AddUserFragment;
-import te.app.evidence.pages.users.UserPermissionsFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -66,6 +63,8 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Vi
                 actionLiveData.setValue(o);
             }
         });
+        if (categoriesDataList.size() == 1)
+            holder.itemMenuBinding.delete.setVisibility(View.GONE);
         holder.setViewModel(itemMenuViewModel);
     }
 

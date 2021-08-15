@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:context="te.app.moon.views.fragments.SplashFragment">
 
-    <data>
+                                                       
+                                                  
+                                                               
 
-        <import type="android.view.View" />
+    
 
-        <import type="android.text.TextUtils" />
+                                           
 
-        <import type="te.app.evidence.utils.Constants" />
+                                                
 
-        <variable
-            name="viewmodel"
-            type="te.app.evidence.pages.auth.register.RegisterViewModel" />
-    </data>
+                                                         
+
+                 
+                            
+                                                                           
+           
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" android:tag="layout/fragment_register_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/home_title"
@@ -52,7 +52,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/name_hint"
-                    app:error="@{viewmodel.request.nameError}"
+                    android:tag="binding_1"                   
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -62,7 +62,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:text="@={viewmodel.request.name}"
+                        android:tag="binding_2"                  
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -77,7 +77,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/company_name_hint"
-                    app:error="@{viewmodel.request.catError}"
+                    android:tag="binding_3"                  
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_name"
@@ -87,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:text="@={viewmodel.request.catName}"
+                        android:tag="binding_4"                     
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -102,7 +102,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/email"
-                    app:error="@{viewmodel.request.emailError}"
+                    android:tag="binding_5"                    
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_company_name"
@@ -112,7 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textEmailAddress"
-                        android:text="@={viewmodel.request.email}"
+                        android:tag="binding_6"                   
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -127,7 +127,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/phone"
-                    app:error="@{viewmodel.request.phoneError}"
+                    android:tag="binding_7"                    
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_register_email"
@@ -138,7 +138,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="phone"
                         android:textDirection="ltr"
-                        android:text="@={viewmodel.request.phone}"
+                        android:tag="binding_8"                   
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -153,7 +153,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/address_hint"
-                    app:error="@{viewmodel.request.addressError}"
+                    android:tag="binding_9"                      
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_phone"
@@ -163,7 +163,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="text"
-                        android:text="@={viewmodel.request.address}"
+                        android:tag="binding_10"                    
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -178,7 +178,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/password"
-                    app:error="@{viewmodel.request.passwordError}"
+                    android:tag="binding_11"                      
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_address"
@@ -189,7 +189,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
-                        android:text="@={viewmodel.request.password}"
+                        android:tag="binding_12"                     
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -204,7 +204,7 @@
                     android:layout_marginTop="@dimen/dp4h"
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/password_hint_confirm"
-                    app:error="@{viewmodel.request.confirmError}"
+                    android:tag="binding_13"                     
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_password"
@@ -215,7 +215,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textPassword"
-                        android:text="@={viewmodel.request.confirmPassword}"
+                        android:tag="binding_14"                            
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
                         android:textColorHint="@color/overlayBackground" />
@@ -229,9 +229,9 @@
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
-            android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
-            android:onClick="@{()-> viewmodel.register()}"
+            android:background="@color/colorPrimaryDark"                                                                                                                                               
+            android:tag="binding_15"                                                                                               
+                                                          
             android:text="@string/register"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/white"
@@ -243,11 +243,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminate="true"
-            android:visibility="@{!TextUtils.isEmpty(viewmodel.message)&amp;&amp;viewmodel.message.equals(Constants.SHOW_PROGRESS)?View.VISIBLE:View.GONE}"
+            android:tag="binding_16"                                                                                                                       
             app:layout_constraintBottom_toBottomOf="@id/login"
             app:layout_constraintStart_toStartOf="@id/login"
             app:layout_constraintTop_toTopOf="@id/login"
             app:trackColor="@color/white"
             app:trackThickness="@dimen/dp4h" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>
+         

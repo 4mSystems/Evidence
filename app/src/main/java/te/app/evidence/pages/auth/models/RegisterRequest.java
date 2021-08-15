@@ -1,7 +1,5 @@
 package te.app.evidence.pages.auth.models;
 
-import android.text.TextUtils;
-
 import androidx.databinding.ObservableField;
 
 import com.google.gson.annotations.SerializedName;
@@ -21,12 +19,16 @@ public class RegisterRequest {
     private String email;
     @SerializedName("address")
     private String address;
+    @SerializedName("cat_name")
+    private String catName;
+
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
     public transient ObservableField<String> passwordError = new ObservableField<>();
     public transient ObservableField<String> confirmError = new ObservableField<>();
     public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> addressError = new ObservableField<>();
+    public transient ObservableField<String> catError = new ObservableField<>();
 
 
     public RegisterRequest() {
@@ -41,13 +43,16 @@ public class RegisterRequest {
         if (!Validate.isValid(name, Constants.FIELD)) {
             nameError.set(Validate.error);
             valid = false;
+        } else if (!Validate.isValid(catName, Constants.FIELD)) {
+            catError.set(Validate.error);
+            valid = false;
         } else if (!Validate.isValid(email, Constants.EMAIL)) {
             emailError.set(Validate.error);
             valid = false;
         } else if (!Validate.isValid(phone, Constants.FIELD)) {
             phoneError.set(Validate.error);
             valid = false;
-        }  else if (!Validate.isValid(address, Constants.FIELD)) {
+        } else if (!Validate.isValid(address, Constants.FIELD)) {
             addressError.set(Validate.error);
             valid = false;
         } else if (!Validate.isValid(password, Constants.FIELD)) {
@@ -114,5 +119,12 @@ public class RegisterRequest {
         this.email = email;
     }
 
+    public String getCatName() {
+        return catName;
+    }
 
+    public void setCatName(String catName) {
+        catError.set(null);
+        this.catName = catName;
+    }
 }

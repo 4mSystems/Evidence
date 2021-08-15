@@ -18,7 +18,7 @@ public class URLS {
     public final static String CATEGORIES = "categories?page=";
     public final static String LOGIN = "login";
     public final static String SUBSCRIBE = "packages/subscripe/";
-    public final static String REGISTER = "user/register";
+    public final static String REGISTER = "registeration";
     public final static String BOARD = "settings/sliders";
     public final static String CONFIRM_CODE = "user/verify-code";
     public final static String UPDATE_PROFILE = "update_profile";
