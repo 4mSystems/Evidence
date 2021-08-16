@@ -48,6 +48,7 @@ public class PackagesFragment extends BaseFragment {
                 viewModel.notifyChange(BR.packagesAdapter);
             } else if (((Mutable) o).message.equals(Constants.SUBSCRIBE)) {
                 toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
+                Constants.DATA_CHANGED = true;
                 viewModel.goBack(requireActivity());
             }
         });

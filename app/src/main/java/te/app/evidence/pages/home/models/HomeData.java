@@ -17,6 +17,8 @@ public class HomeData {
 
     @SerializedName("count_data")
     private CountData countData;
+    @SerializedName("package_data")
+    private UserPackage userPackage;
 
     public SessionMainData getComingSession() {
         return comingSession;
@@ -32,5 +34,9 @@ public class HomeData {
 
     public CountData getCountData() {
         return countData;
+    }
+
+    public UserPackage getUserPackage() {
+        return userPackage;
     }
 }

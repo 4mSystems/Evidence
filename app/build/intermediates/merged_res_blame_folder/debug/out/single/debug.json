@@ -28,16 +28,16 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_case_clients.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-xxhdpi_board.png.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxhdpi/board.png"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_category.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_category.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_attachment.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_attachment.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_item_category.xml.flat",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_category.xml"
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-xxhdpi_board.png.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable-xxhdpi/board.png"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable-mdpi_board.png.flat",
@@ -498,6 +498,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_search_clients.xml.flat",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_search_clients.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/drawable_corner_view_warning.xml.flat",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/drawable/corner_view_warning.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/merged_res/debug/layout_fragment_monthly_reports.xml.flat",

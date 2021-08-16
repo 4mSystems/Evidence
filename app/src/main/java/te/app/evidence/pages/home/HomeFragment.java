@@ -28,6 +28,7 @@ import te.app.evidence.pages.home.viewModels.HomeViewModel;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
+import te.app.evidence.pages.settings.PackagesFragment;
 import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -84,6 +85,8 @@ public class HomeFragment extends BaseFragment {
                 viewModel.setCommingSessionMainData(((CaseSessionsResponse) o.object).getSessionMainData());
             } else if (Constants.HOME_REPORTERS.equals(o.message)) {
                 viewModel.setReportersMainData(((ReportersResponse) o.object).getMainData());
+            } else if (o.message.equals(Constants.SUBSCRIBE)) {
+                MovementHelper.startActivity(requireActivity(), PackagesFragment.class.getName(), ResourceManager.getString(R.string.packes), null);
             }
         });
         binding.previousSessionRc.addOnScrollListener(new RecyclerView.OnScrollListener() {

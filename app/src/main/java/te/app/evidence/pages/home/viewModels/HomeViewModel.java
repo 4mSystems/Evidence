@@ -4,7 +4,15 @@ package te.app.evidence.pages.home.viewModels;
 import android.util.Log;
 
 import androidx.databinding.Bindable;
+import androidx.databinding.ObservableBoolean;
+import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 import javax.inject.Inject;
 
@@ -30,10 +38,12 @@ public class HomeViewModel extends BaseViewModel {
     @Inject
     HomeRepository homeRepository;
     HomeData homeData;
-    SessionsAdapter comingSessionsAdapter,prevSessionsAdapter;
+    SessionsAdapter comingSessionsAdapter, prevSessionsAdapter;
     HomeReportersAdapter homeReportersAdapter;
     SessionMainData commingSessionMainData, preSessionMainData;
     ReportersMainData reportersMainData;
+    public ObservableBoolean warningDate = new ObservableBoolean();
+    public ObservableField<String> packageRemainDays = new ObservableField<>();
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
@@ -74,6 +84,23 @@ public class HomeViewModel extends BaseViewModel {
         setReportersMainData(homeData.getReportersMainData());
         notifyChange(BR.homeData);
         this.homeData = homeData;
+        calcExpireDate();
+    }
+
+    private void calcExpireDate() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd", new Locale("en"));
+        if (getHomeData().getUserPackage().getWarningDate().equals(format.format(new Date()))) {
+            warningDate.set(true);
+            Date packageDate = null;
+            try {
+                packageDate = format.parse(getHomeData().getUserPackage().getExpiryDate());
+                long diffInMillies = Math.abs(packageDate.getTime() - new Date().getTime());
+                long diff = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+                packageRemainDays.set(String.valueOf(diff));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public SessionMainData getCommingSessionMainData() {
@@ -125,7 +152,8 @@ public class HomeViewModel extends BaseViewModel {
     public SessionsAdapter getComingSessionsAdapter() {
         return this.comingSessionsAdapter == null ? this.comingSessionsAdapter = new SessionsAdapter() : this.comingSessionsAdapter;
     }
- @Bindable
+
+    @Bindable
     public SessionsAdapter getPrevSessionsAdapter() {
         return this.prevSessionsAdapter == null ? this.prevSessionsAdapter = new SessionsAdapter() : this.prevSessionsAdapter;
     }

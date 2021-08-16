@@ -83,6 +83,15 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
   public final CollapsingToolbarLayout toolbarLayout;
 
   @NonNull
+  public final CustomTextViewMedium tvDemoPackage;
+
+  @NonNull
+  public final CustomTextViewMedium tvExpirePackage;
+
+  @NonNull
+  public final CustomTextViewMedium tvWarningExpire;
+
+  @NonNull
   public final PercentageChartView viewCasee;
 
   @NonNull
@@ -93,6 +102,9 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
 
   @NonNull
   public final PercentageChartView viewUsers;
+
+  @NonNull
+  public final ConstraintLayout warningContainer;
 
   @Bindable
   protected HomeViewModel mViewmodel;
@@ -105,8 +117,10 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
       AppCompatButton nextMohdareen, AppCompatButton nextSessions, RecyclerView previousSessionRc,
       AppCompatButton previousSessions, CircularProgressIndicator progress,
       ProgressBar progressBarHome, CollapsingToolbarLayout toolbarLayout,
-      PercentageChartView viewCasee, PercentageChartView viewId, PercentageChartView viewMohdr,
-      PercentageChartView viewUsers) {
+      CustomTextViewMedium tvDemoPackage, CustomTextViewMedium tvExpirePackage,
+      CustomTextViewMedium tvWarningExpire, PercentageChartView viewCasee,
+      PercentageChartView viewId, PercentageChartView viewMohdr, PercentageChartView viewUsers,
+      ConstraintLayout warningContainer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br3 = br3;
     this.commingSessionRc = commingSessionRc;
@@ -127,10 +141,14 @@ public abstract class FragmentHomeBinding extends ViewDataBinding {
     this.progress = progress;
     this.progressBarHome = progressBarHome;
     this.toolbarLayout = toolbarLayout;
+    this.tvDemoPackage = tvDemoPackage;
+    this.tvExpirePackage = tvExpirePackage;
+    this.tvWarningExpire = tvWarningExpire;
     this.viewCasee = viewCasee;
     this.viewId = viewId;
     this.viewMohdr = viewMohdr;
     this.viewUsers = viewUsers;
+    this.warningContainer = warningContainer;
   }
 
   public abstract void setViewmodel(@Nullable HomeViewModel viewmodel);

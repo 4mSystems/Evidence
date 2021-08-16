@@ -178,7 +178,7 @@
     <string name="choose_category">إضغط لاختيار تصنيف</string>
     <string name="month">الشهر</string>
     <string name="delete_case_waring">سيتم حذف جميع الجلسات والملاحظات للدعوى</string>
-    <string name="message_hint">اكتب رسالتك...</string>
+    <string name="message_hint">اكتب رسالتك…</string>
     <string name="company_name_hint">إسم المؤسسة</string>
     <string name="old_password">كلمة المرور القديمة</string>
     <string name="profile_change_password">تغيير كلمة المرور</string>
@@ -187,5 +187,9 @@
     <string name="packes">الاشتراكات</string>
     <string name="report_warning">"اضغط لرؤية جلساتك "</string>
     <string name="report_monthly_warning">اضغط لرؤية جلساتك خلال شهر</string>
+    <string name="warning_expire">"الباقة على وشك الانتهاء يرجى تجديد الباقة "</string>
+    <string name="demo_warning">"انت الان تمتع بالباقة التجربية للاشتراك "</string>
+    <string name="expire_package">لقد انتهت الباقة يرجى الاشتراك للاستمتاع بتوثيق</string>
+    <string name="day">يوم</string>
 
 </resources>
