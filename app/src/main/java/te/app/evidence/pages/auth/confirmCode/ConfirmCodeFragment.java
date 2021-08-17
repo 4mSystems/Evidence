@@ -70,16 +70,18 @@ public class ConfirmCodeFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (mutable.message.equals(Constants.CONFIRM_CODE)) {
                 if (viewModel.getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER) {
                     UserHelper.getInstance(context).userLogin(((UsersResponse) mutable.object).getData());
                     MovementHelper.startActivityMain(context);
                 } else {
                     UserHelper.getInstance(context).addJwt(((UsersResponse) ((Mutable) o).object).getData().getUserData().getApiToken());
-                    MovementHelper.startActivity(context, ChangePasswordFragment.class.getName(), null, null);
+                    MovementHelper.startActivityWithBundle(context, new PassingObject(viewModel.getPassingObject().getId()), null, ChangePasswordFragment.class.getName(), null);
                 }
                 viewModel.goBack(context);
             } else if (mutable.message.equals(Constants.FORGET_PASSWORD)) {
+                binding.tvLoginForget.setEnabled(false);
                 startTimer();
             }
         });

@@ -23,9 +23,9 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback89;
-    @Nullable
     private final android.view.View.OnClickListener mCallback90;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback91;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,8 +49,8 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
         this.sessionCaseNumber.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -213,8 +213,8 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPrint.setOnClickListener(mCallback89);
-            this.delete.setOnClickListener(mCallback90);
+            this.btnPrint.setOnClickListener(mCallback90);
+            this.delete.setOnClickListener(mCallback91);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

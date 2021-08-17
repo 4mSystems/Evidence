@@ -51,11 +51,10 @@ public class ChangePasswordFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.UPDATE_PROFILE)) {
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
+            if (((Mutable) o).message.equals(Constants.CHANGE_PASSWORD)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.goBack(context);
-            } else if (((Mutable) o).message.equals(Constants.NOT_MATCH_PASSWORD)) {
-                showError(getResources().getString(R.string.password_not_match));
             }
         });
     }

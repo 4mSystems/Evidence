@@ -10,13 +10,14 @@ import te.app.evidence.pages.auth.models.ConfirmCodeRequest;
 import te.app.evidence.pages.auth.models.ForgetPasswordRequest;
 import te.app.evidence.repository.AuthRepository;
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.evidence.utils.Constants;
 
 public class ConfirmViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private ConfirmCodeRequest request;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    ConfirmCodeRequest request;
 
     @Inject
     public ConfirmViewModel(AuthRepository repository) {
@@ -29,11 +30,13 @@ public class ConfirmViewModel extends BaseViewModel {
     public void confirmCode() {
         getRequest().setPhone(getPassingObject().getObject());
         if (request.isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
             compositeDisposable.add(repository.confirmCode(request));
         }
     }
 
     public void resendCode() {
+        setMessage(Constants.SHOW_PROGRESS);
         compositeDisposable.add(repository.forgetPassword(new ForgetPasswordRequest(getPassingObject().getObject())));
     }
 

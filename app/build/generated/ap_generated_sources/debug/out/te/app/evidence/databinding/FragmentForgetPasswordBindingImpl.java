@@ -14,13 +14,12 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.login_background, 4);
-        sViewsWithIds.put(R.id.logo, 5);
-        sViewsWithIds.put(R.id.app_name, 6);
-        sViewsWithIds.put(R.id.app_login_title, 7);
-        sViewsWithIds.put(R.id.tv_forget_title, 8);
-        sViewsWithIds.put(R.id.tv_login_header_number, 9);
-        sViewsWithIds.put(R.id.tv_forget_remember, 10);
+        sViewsWithIds.put(R.id.login_background, 6);
+        sViewsWithIds.put(R.id.logo, 7);
+        sViewsWithIds.put(R.id.app_name, 8);
+        sViewsWithIds.put(R.id.app_login_title, 9);
+        sViewsWithIds.put(R.id.tv_forget_title, 10);
+        sViewsWithIds.put(R.id.tv_login_header_number, 11);
     }
     // views
     @NonNull
@@ -28,6 +27,8 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback82;
     @Nullable
     private final android.view.View.OnClickListener mCallback81;
     // values
@@ -72,19 +73,20 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     };
 
     public FragmentForgetPasswordBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 12, sIncludes, sViewsWithIds));
     }
     private FragmentForgetPasswordBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (androidx.appcompat.widget.AppCompatButton) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[7]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[4]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[5]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[9]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[8]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[1]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[7]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[5]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[10]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
             );
         this.appCompatButtonNext.setTag(null);
         this.inputEmail.setTag(null);
@@ -92,8 +94,11 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         this.mboundView0.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
+        this.progress.setTag(null);
+        this.tvForgetRemember.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         mCallback81 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
@@ -101,7 +106,7 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -153,6 +158,12 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
             }
             return true;
         }
+        else if (fieldId == BR.message) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -165,31 +176,130 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
         }
         te.app.evidence.pages.auth.models.ForgetPasswordRequest viewmodelRequest = null;
         java.lang.String viewmodelRequestPhone = null;
+        boolean textUtilsIsEmptyViewmodelMessage = false;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
+        boolean TextUtilsIsEmptyViewmodelMessage1 = false;
+        boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        java.lang.String viewmodelMessage = null;
+        int textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = 0;
+        boolean viewmodelMessageEqualsConstantsHIDEPROGRESS = false;
+        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewMedium = null;
+        boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+        boolean textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = false;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.request
+                        viewmodelRequest = viewmodel.getRequest();
+                    }
+
+
+                    if (viewmodelRequest != null) {
+                        // read viewmodel.request.phone
+                        viewmodelRequestPhone = viewmodelRequest.getPhone();
+                    }
+            }
 
                 if (viewmodel != null) {
-                    // read viewmodel.request
-                    viewmodelRequest = viewmodel.getRequest();
+                    // read viewmodel.message
+                    viewmodelMessage = viewmodel.getMessage();
                 }
 
 
-                if (viewmodelRequest != null) {
-                    // read viewmodel.request.phone
-                    viewmodelRequestPhone = viewmodelRequest.getPhone();
+                // read TextUtils.isEmpty(viewmodel.message)
+                textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessage) {
+                        dirtyFlags |= 0x400L;
                 }
+                else {
+                        dirtyFlags |= 0x200L;
+                }
+            }
+
+
+                // read !TextUtils.isEmpty(viewmodel.message)
+                TextUtilsIsEmptyViewmodelMessage1 = !textUtilsIsEmptyViewmodelMessage;
+            if((dirtyFlags & 0x7L) != 0) {
+                if(TextUtilsIsEmptyViewmodelMessage1) {
+                        dirtyFlags |= 0x1000L;
+                }
+                else {
+                        dirtyFlags |= 0x800L;
+                }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+
+        if ((dirtyFlags & 0x1000L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.SHOW_PROGRESS)
+                    viewmodelMessageEqualsConstantsSHOWPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.SHOW_PROGRESS);
+                }
+        }
+        if ((dirtyFlags & 0x200L) != 0) {
+
+                if (viewmodelMessage != null) {
+                    // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                    viewmodelMessageEqualsConstantsHIDEPROGRESS = viewmodelMessage.equals(te.app.evidence.utils.Constants.HIDE_PROGRESS);
+                }
+        }
+
+        if ((dirtyFlags & 0x7L) != 0) {
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = ((textUtilsIsEmptyViewmodelMessage) ? (true) : (viewmodelMessageEqualsConstantsHIDEPROGRESS));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
+                        dirtyFlags |= 0x10L;
+                        dirtyFlags |= 0x100L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                        dirtyFlags |= 0x80L;
+                }
+            }
+            if((dirtyFlags & 0x7L) != 0) {
+                if(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) {
+                        dirtyFlags |= 0x40L;
+                }
+                else {
+                        dirtyFlags |= 0x20L;
+                }
+            }
+
+
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(appCompatButtonNext.getContext(), R.drawable.corner_view_medium)));
+                // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+                textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+        }
+        // batch finished
+        if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback81);
-            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.appCompatButtonNext, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSAppCompatButtonNextAndroidDrawableCornerViewPrimaryDarkAppCompatButtonNextAndroidDrawableCornerViewMedium);
+            this.appCompatButtonNext.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
+            this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.appCompatButtonNext.setOnClickListener(mCallback82);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
+            this.tvForgetRemember.setOnClickListener(mCallback81);
+        }
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
             this.inputEmail.setError(viewmodelRequestPhone);
@@ -199,26 +309,60 @@ public class FragmentForgetPasswordBindingImpl extends FragmentForgetPasswordBin
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
-        // localize variables for thread safety
-        // viewmodel != null
-        boolean viewmodelJavaLangObjectNull = false;
-        // viewmodel
-        te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+        switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
 
 
 
-        viewmodelJavaLangObjectNull = (viewmodel) != (null);
-        if (viewmodelJavaLangObjectNull) {
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
 
 
-            viewmodel.sendCode();
+                    viewmodel.sendCode();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.forgetPassword.ForgetPasswordViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+                    viewmodel.goBack(getRoot().getContext());
+                }
+                break;
+            }
         }
     }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.message
+        flag 2 (0x3L): null
+        flag 3 (0x4L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 4 (0x5L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 5 (0x6L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 8 (0x9L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
+        flag 9 (0xaL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 11 (0xcL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
+        flag 12 (0xdL): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false
     flag mapping end*/
     //end
 }

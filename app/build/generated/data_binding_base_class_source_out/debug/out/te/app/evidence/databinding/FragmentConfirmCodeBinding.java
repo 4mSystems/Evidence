@@ -4,14 +4,15 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.chaos.view.PinView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -23,10 +24,13 @@ public abstract class FragmentConfirmCodeBinding extends ViewDataBinding {
   public final AppCompatButton appCompatButtonNext;
 
   @NonNull
-  public final ImageView imgLoginLogo;
+  public final AppCompatImageView imgLoginLogo;
 
   @NonNull
   public final PinView pinValidate;
+
+  @NonNull
+  public final CircularProgressIndicator progress;
 
   @NonNull
   public final CustomTextViewMedium tvConfirmTitle;
@@ -47,14 +51,15 @@ public abstract class FragmentConfirmCodeBinding extends ViewDataBinding {
   protected ConfirmViewModel mViewmodel;
 
   protected FragmentConfirmCodeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton appCompatButtonNext, ImageView imgLoginLogo, PinView pinValidate,
-      CustomTextViewMedium tvConfirmTitle, CustomTextViewMedium tvConfirmTitle2,
-      CustomTextViewMedium tvForgetTimer, CustomTextViewMedium tvLoginForget,
-      CustomTextViewMedium tvLoginTitle) {
+      AppCompatButton appCompatButtonNext, AppCompatImageView imgLoginLogo, PinView pinValidate,
+      CircularProgressIndicator progress, CustomTextViewMedium tvConfirmTitle,
+      CustomTextViewMedium tvConfirmTitle2, CustomTextViewMedium tvForgetTimer,
+      CustomTextViewMedium tvLoginForget, CustomTextViewMedium tvLoginTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.imgLoginLogo = imgLoginLogo;
     this.pinValidate = pinValidate;
+    this.progress = progress;
     this.tvConfirmTitle = tvConfirmTitle;
     this.tvConfirmTitle2 = tvConfirmTitle2;
     this.tvForgetTimer = tvForgetTimer;

@@ -37,9 +37,9 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     private final com.google.android.material.button.MaterialButton mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback82;
-    @Nullable
     private final android.view.View.OnClickListener mCallback83;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
     private final android.view.View.OnClickListener mCallback87;
     @Nullable
@@ -117,13 +117,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.warningContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -255,7 +255,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        int viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringNViewVISIBLEViewGONE = 0;
         java.lang.String tvWarningExpireAndroidStringWarningExpireConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelPackageRemainDaysViewmodelPackageRemainDaysJavaLangString = null;
         int viewmodelSelectedBtn = 0;
         int viewmodelSelectedBtnInt0ViewVISIBLEViewGONE = 0;
@@ -280,11 +279,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         int viewmodelPrevSessionsAdapterItemCount = 0;
         int viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalseViewVISIBLEViewGONE = 0;
         android.graphics.drawable.Drawable viewmodelSelectedBtnInt2NextMohdareenAndroidDrawableCornerViewPrimaryYellowNextMohdareenAndroidDrawableCornerViewPrimaryDarkHome = null;
+        boolean viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY = false;
         int viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalseViewVISIBLEViewGONE = 0;
         boolean viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse = false;
         te.app.evidence.pages.home.adapters.SessionsAdapter viewmodelComingSessionsAdapter = null;
         te.app.evidence.pages.home.models.CountData viewmodelHomeDataCountData = null;
-        boolean viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN = false;
+        int viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringYViewVISIBLEViewGONE = 0;
         boolean viewmodelSelectedBtnInt1 = false;
         boolean viewmodelHomeReportersAdapterItemCountInt0 = false;
         int viewmodelHomeReportersAdapterItemCount = 0;
@@ -310,6 +310,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         boolean textUtilsIsEmptyViewmodelPackageRemainDays = false;
         int viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalseViewVISIBLEViewGONE = 0;
         boolean TextUtilsIsEmptyViewmodelPackageRemainDays1 = false;
+        boolean viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY = false;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataSessions1 = false;
         boolean viewmodelSelectedBtnInt0 = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelPackageRemainDays = null;
@@ -321,7 +322,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         boolean viewmodelPrevSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt1BooleanFalse = false;
         android.graphics.drawable.Drawable viewmodelSelectedBtnInt0NextSessionsAndroidDrawableCornerViewPrimaryYellowNextSessionsAndroidDrawableCornerViewPrimaryDarkHome = null;
         java.lang.String textUtilsIsEmptyViewmodelHomeDataCountDataSessionsViewmodelHomeDataCountDataSessionsJavaLangString = null;
-        boolean ViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN1 = false;
         boolean TextUtilsIsEmptyViewmodelHomeDataCountDataCases1 = false;
         boolean viewmodelComingSessionsAdapterItemCountInt0ViewmodelSelectedBtnInt0BooleanFalse = false;
         java.lang.String viewmodelHomeDataCountDataMohdreen = null;
@@ -349,32 +349,32 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     viewmodelSelectedBtnInt2 = (viewmodelSelectedBtn) == (2);
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt1) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                             dirtyFlags |= 0x8000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                             dirtyFlags |= 0x4000000000L;
                     }
                 }
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt0) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x800L;
                             dirtyFlags |= 0x8000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x400L;
                             dirtyFlags |= 0x4000000000000L;
                     }
                 }
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt2) {
-                            dirtyFlags |= 0x20000L;
-                            dirtyFlags |= 0x8000000L;
+                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000L;
-                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000000L;
                     }
                 }
 
@@ -407,10 +407,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     }
                 if((dirtyFlags & 0x205L) != 0) {
                     if(viewmodelSearchProgressVisibleGet) {
-                            dirtyFlags |= 0x200000L;
+                            dirtyFlags |= 0x80000L;
                     }
                     else {
-                            dirtyFlags |= 0x100000L;
+                            dirtyFlags |= 0x40000L;
                     }
                 }
 
@@ -437,10 +437,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     viewmodelWarningDateBooleanTrue = (viewmodelWarningDateGet) == (true);
                 if((dirtyFlags & 0x216L) != 0) {
                     if(viewmodelWarningDateBooleanTrue) {
-                            dirtyFlags |= 0x800000L;
+                            dirtyFlags |= 0x200000L;
                     }
                     else {
-                            dirtyFlags |= 0x400000L;
+                            dirtyFlags |= 0x100000L;
                     }
                 }
                 if((dirtyFlags & 0x206L) != 0) {
@@ -604,10 +604,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 if((dirtyFlags & 0x214L) != 0) {
                     if(TextUtilsIsEmptyViewmodelHomeDataCountDataMohdreen1) {
-                            dirtyFlags |= 0x80000L;
+                            dirtyFlags |= 0x20000L;
                     }
                     else {
-                            dirtyFlags |= 0x40000L;
+                            dirtyFlags |= 0x10000L;
                     }
                 }
                 if((dirtyFlags & 0x214L) != 0) {
@@ -690,11 +690,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     viewmodelSelectedBtnInt1 = (viewmodelSelectedBtn) == (1);
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt1) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                             dirtyFlags |= 0x8000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                             dirtyFlags |= 0x4000000000L;
                     }
                 }
@@ -705,11 +705,11 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     viewmodelSelectedBtnInt0 = (viewmodelSelectedBtn) == (0);
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt0) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x800L;
                             dirtyFlags |= 0x8000000000000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x400L;
                             dirtyFlags |= 0x4000000000000L;
                     }
                 }
@@ -720,12 +720,12 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     viewmodelSelectedBtnInt2 = (viewmodelSelectedBtn) == (2);
                 if((dirtyFlags & 0x224L) != 0) {
                     if(viewmodelSelectedBtnInt2) {
-                            dirtyFlags |= 0x20000L;
-                            dirtyFlags |= 0x8000000L;
+                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000L;
-                            dirtyFlags |= 0x4000000L;
+                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000000L;
                     }
                 }
             }
@@ -772,7 +772,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                     tvWarningExpireAndroidStringWarningExpireConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelPackageRemainDaysViewmodelPackageRemainDaysJavaLangStringConcatJavaLangStringConcatTvWarningExpireAndroidStringDay = tvWarningExpireAndroidStringWarningExpireConcatJavaLangStringConcatTextUtilsIsEmptyViewmodelPackageRemainDaysViewmodelPackageRemainDaysJavaLangStringConcatJavaLangString.concat(tvWarningExpire.getResources().getString(R.string.day));
                 }
         }
-        if ((dirtyFlags & 0x400000L) != 0) {
+        if ((dirtyFlags & 0x100000L) != 0) {
 
                 if (viewmodel != null) {
                     // read viewmodel.homeData
@@ -810,10 +810,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5 = ((viewmodelWarningDateBooleanTrue) ? (true) : (viewmodelHomeDataUserPackagePackageIdInt5));
             if((dirtyFlags & 0x216L) != 0) {
                 if(viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5) {
-                        dirtyFlags |= 0x200000000L;
+                        dirtyFlags |= 0x8000000L;
                 }
                 else {
-                        dirtyFlags |= 0x100000000L;
+                        dirtyFlags |= 0x4000000L;
                 }
             }
         }
@@ -823,10 +823,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse = ((viewmodelHomeReportersAdapterItemCountInt0) ? (viewmodelSelectedBtnInt2) : (false));
             if((dirtyFlags & 0x324L) != 0) {
                 if(viewmodelHomeReportersAdapterItemCountInt0ViewmodelSelectedBtnInt2BooleanFalse) {
-                        dirtyFlags |= 0x2000000L;
+                        dirtyFlags |= 0x800000L;
                 }
                 else {
-                        dirtyFlags |= 0x1000000L;
+                        dirtyFlags |= 0x400000L;
                 }
             }
 
@@ -870,7 +870,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         }
         // batch finished
 
-        if ((dirtyFlags & 0x100000000L) != 0) {
+        if ((dirtyFlags & 0x4000000L) != 0) {
 
                 if (viewmodel != null) {
                     // read viewmodel.homeData
@@ -891,39 +891,27 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
 
 
                 if (viewmodelHomeDataUserPackageExpiryPackage != null) {
-                    // read viewmodel.homeData.userPackage.expiryPackage.equals("n")
-                    viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN = viewmodelHomeDataUserPackageExpiryPackage.equals("n");
+                    // read viewmodel.homeData.userPackage.expiryPackage.equals("y")
+                    viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY = viewmodelHomeDataUserPackageExpiryPackage.equals("y");
                 }
-            if((dirtyFlags & 0x214L) != 0) {
-                if(viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN) {
-                        dirtyFlags |= 0x200000000000000L;
-                }
-                else {
-                        dirtyFlags |= 0x100000000000000L;
-                }
-            }
-
-
-                // read !viewmodel.homeData.userPackage.expiryPackage.equals("n")
-                ViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN1 = !viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN;
         }
 
         if ((dirtyFlags & 0x216L) != 0) {
 
-                // read viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n")
-                viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN = ((viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5) ? (true) : (ViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN1));
+                // read viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y")
+                viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY = ((viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5) ? (true) : (viewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY));
             if((dirtyFlags & 0x216L) != 0) {
-                if(viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN) {
-                        dirtyFlags |= 0x800L;
+                if(viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY) {
+                        dirtyFlags |= 0x200000000L;
                 }
                 else {
-                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x100000000L;
                 }
             }
 
 
-                // read viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n") ? View.VISIBLE : View.GONE
-                viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringNViewVISIBLEViewGONE = ((viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringN) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                // read viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y") ? View.VISIBLE : View.GONE
+                viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringYViewVISIBLEViewGONE = ((viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringY) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
         if ((dirtyFlags & 0x224L) != 0) {
@@ -954,13 +942,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.homeItem2.setOnClickListener(mCallback83);
-            this.homeItem3.setOnClickListener(mCallback84);
-            this.homeItem4.setOnClickListener(mCallback85);
-            this.mboundView5.setOnClickListener(mCallback82);
-            this.nextMohdareen.setOnClickListener(mCallback88);
-            this.nextSessions.setOnClickListener(mCallback86);
-            this.previousSessions.setOnClickListener(mCallback87);
+            this.homeItem2.setOnClickListener(mCallback84);
+            this.homeItem3.setOnClickListener(mCallback85);
+            this.homeItem4.setOnClickListener(mCallback86);
+            this.mboundView5.setOnClickListener(mCallback83);
+            this.nextMohdareen.setOnClickListener(mCallback89);
+            this.nextSessions.setOnClickListener(mCallback87);
+            this.previousSessions.setOnClickListener(mCallback88);
         }
         if ((dirtyFlags & 0x304L) != 0) {
             // api target 1
@@ -1005,7 +993,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x216L) != 0) {
             // api target 1
 
-            this.warningContainer.setVisibility(viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringNViewVISIBLEViewGONE);
+            this.warningContainer.setVisibility(viewmodelWarningDateBooleanTrueBooleanTrueViewmodelHomeDataUserPackagePackageIdInt5BooleanTrueViewmodelHomeDataUserPackageExpiryPackageEqualsJavaLangStringYViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
@@ -1031,115 +1019,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel.userData.permission
-                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel.userData.permission != null
-                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
-                // viewmodel.userData
-                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
-                // viewmodel.userData.permission.mohdreen
-                java.lang.String viewmodelUserDataPermissionMohdreen = null;
-                // viewmodel.userData != null
-                boolean viewmodelUserDataJavaLangObjectNull = false;
-                // viewmodel.userData.permission.mohdreen.equals("yes") ? Constants.GET_MOHDAREEN : Constants.ERROR_TOAST
-                java.lang.String viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = null;
-                // viewmodel.userData.permission.mohdreen.equals("yes")
-                boolean viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = false;
-                // viewmodel.userData.permission.mohdreen != null
-                boolean viewmodelUserDataPermissionMohdreenJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodelUserData = viewmodel.userData;
-
-                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
-                    if (viewmodelUserDataJavaLangObjectNull) {
-
-
-                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
-
-                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
-                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
-
-
-                            viewmodelUserDataPermissionMohdreen = viewmodelUserDataPermission.getMohdreen();
-
-                            viewmodelUserDataPermissionMohdreenJavaLangObjectNull = (viewmodelUserDataPermissionMohdreen) != (null);
-                            if (viewmodelUserDataPermissionMohdreenJavaLangObjectNull) {
-
-
-
-                                viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = viewmodelUserDataPermissionMohdreen.equals("yes");
-                                if (viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes) {
-
-
-
-
-                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.GET_MOHDAREEN;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
-                                }
-                                else {
-
-
-
-
-                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
-                                }
-                            }
-                        }
-                    }
-                }
-                break;
-            }
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.previousSessions();
-                }
-                break;
-            }
-            case 5: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextSessions();
-                }
-                break;
-            }
             case 7: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1157,26 +1036,10 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
-            case 3: {
+            case 5: {
                 // localize variables for thread safety
-                // viewmodel.userData.permission
-                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
-                // viewmodel.userData.permission.users.equals("yes")
-                boolean viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = false;
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel.userData.permission != null
-                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
-                // viewmodel.userData
-                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
-                // viewmodel.userData.permission.users != null
-                boolean viewmodelUserDataPermissionUsersJavaLangObjectNull = false;
-                // viewmodel.userData != null
-                boolean viewmodelUserDataJavaLangObjectNull = false;
-                // viewmodel.userData.permission.users
-                java.lang.String viewmodelUserDataPermissionUsers = null;
-                // viewmodel.userData.permission.users.equals("yes") ? Constants.USERS : Constants.ERROR_TOAST
-                java.lang.String viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = null;
                 // viewmodel
                 te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
 
@@ -1186,49 +1049,7 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-
-                    viewmodelUserData = viewmodel.userData;
-
-                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
-                    if (viewmodelUserDataJavaLangObjectNull) {
-
-
-                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
-
-                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
-                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
-
-
-                            viewmodelUserDataPermissionUsers = viewmodelUserDataPermission.getUsers();
-
-                            viewmodelUserDataPermissionUsersJavaLangObjectNull = (viewmodelUserDataPermissionUsers) != (null);
-                            if (viewmodelUserDataPermissionUsersJavaLangObjectNull) {
-
-
-
-                                viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = viewmodelUserDataPermissionUsers.equals("yes");
-                                if (viewmodelUserDataPermissionUsersEqualsJavaLangStringYes) {
-
-
-
-
-                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.USERS;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
-                                }
-                                else {
-
-
-
-
-                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
-
-                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
-                                }
-                            }
-                        }
-                    }
+                    viewmodel.nextSessions();
                 }
                 break;
             }
@@ -1307,6 +1128,173 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                 }
                 break;
             }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.previousSessions();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.mohdreen
+                java.lang.String viewmodelUserDataPermissionMohdreen = null;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.mohdreen.equals("yes") ? Constants.GET_MOHDAREEN : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = null;
+                // viewmodel.userData.permission.mohdreen.equals("yes")
+                boolean viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = false;
+                // viewmodel.userData.permission.mohdreen != null
+                boolean viewmodelUserDataPermissionMohdreenJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionMohdreen = viewmodelUserDataPermission.getMohdreen();
+
+                            viewmodelUserDataPermissionMohdreenJavaLangObjectNull = (viewmodelUserDataPermissionMohdreen) != (null);
+                            if (viewmodelUserDataPermissionMohdreenJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes = viewmodelUserDataPermissionMohdreen.equals("yes");
+                                if (viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.GET_MOHDAREEN;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionMohdreenEqualsJavaLangStringYesConstantsGETMOHDAREENConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel.userData.permission
+                te.app.evidence.pages.auth.models.Permission viewmodelUserDataPermission = null;
+                // viewmodel.userData.permission.users.equals("yes")
+                boolean viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = false;
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel.userData.permission != null
+                boolean viewmodelUserDataPermissionJavaLangObjectNull = false;
+                // viewmodel.userData
+                te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+                // viewmodel.userData.permission.users != null
+                boolean viewmodelUserDataPermissionUsersJavaLangObjectNull = false;
+                // viewmodel.userData != null
+                boolean viewmodelUserDataJavaLangObjectNull = false;
+                // viewmodel.userData.permission.users
+                java.lang.String viewmodelUserDataPermissionUsers = null;
+                // viewmodel.userData.permission.users.equals("yes") ? Constants.USERS : Constants.ERROR_TOAST
+                java.lang.String viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = null;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodelUserData = viewmodel.userData;
+
+                    viewmodelUserDataJavaLangObjectNull = (viewmodelUserData) != (null);
+                    if (viewmodelUserDataJavaLangObjectNull) {
+
+
+                        viewmodelUserDataPermission = viewmodelUserData.getPermission();
+
+                        viewmodelUserDataPermissionJavaLangObjectNull = (viewmodelUserDataPermission) != (null);
+                        if (viewmodelUserDataPermissionJavaLangObjectNull) {
+
+
+                            viewmodelUserDataPermissionUsers = viewmodelUserDataPermission.getUsers();
+
+                            viewmodelUserDataPermissionUsersJavaLangObjectNull = (viewmodelUserDataPermissionUsers) != (null);
+                            if (viewmodelUserDataPermissionUsersJavaLangObjectNull) {
+
+
+
+                                viewmodelUserDataPermissionUsersEqualsJavaLangStringYes = viewmodelUserDataPermissionUsers.equals("yes");
+                                if (viewmodelUserDataPermissionUsersEqualsJavaLangStringYes) {
+
+
+
+
+                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.USERS;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
+                                }
+                                else {
+
+
+
+
+                                    viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST = te.app.evidence.utils.Constants.ERROR_TOAST;
+
+                                    viewmodel.buttonAction(viewmodelUserDataPermissionUsersEqualsJavaLangStringYesConstantsUSERSConstantsERRORTOAST);
+                                }
+                            }
+                        }
+                    }
+                }
+                break;
+            }
         }
     }
     // dirty flag
@@ -1322,30 +1310,30 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         flag 7 (0x8L): viewmodel.prevSessionsAdapter
         flag 8 (0x9L): viewmodel.homeReportersAdapter
         flag 9 (0xaL): null
-        flag 10 (0xbL): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n") ? View.VISIBLE : View.GONE
-        flag 11 (0xcL): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n") ? View.VISIBLE : View.GONE
-        flag 12 (0xdL): viewmodel.selectedBtn == 0 ? View.VISIBLE : View.GONE
-        flag 13 (0xeL): viewmodel.selectedBtn == 0 ? View.VISIBLE : View.GONE
-        flag 14 (0xfL): viewmodel.selectedBtn == 1 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 15 (0x10L): viewmodel.selectedBtn == 1 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 16 (0x11L): viewmodel.selectedBtn == 2 ? View.VISIBLE : View.GONE
-        flag 17 (0x12L): viewmodel.selectedBtn == 2 ? View.VISIBLE : View.GONE
-        flag 18 (0x13L): !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
-        flag 19 (0x14L): !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
-        flag 20 (0x15L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 21 (0x16L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
-        flag 22 (0x17L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5
-        flag 23 (0x18L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5
-        flag 24 (0x19L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
-        flag 25 (0x1aL): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
-        flag 26 (0x1bL): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
-        flag 27 (0x1cL): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 10 (0xbL): viewmodel.selectedBtn == 0 ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): viewmodel.selectedBtn == 0 ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): viewmodel.selectedBtn == 1 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 13 (0xeL): viewmodel.selectedBtn == 1 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 14 (0xfL): viewmodel.selectedBtn == 2 ? View.VISIBLE : View.GONE
+        flag 15 (0x10L): viewmodel.selectedBtn == 2 ? View.VISIBLE : View.GONE
+        flag 16 (0x11L): !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
+        flag 17 (0x12L): !TextUtils.isEmpty(viewmodel.homeData.countData.mohdreen) ? viewmodel.homeData.countData.mohdreen : ""
+        flag 18 (0x13L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 19 (0x14L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 20 (0x15L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5
+        flag 21 (0x16L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5
+        flag 22 (0x17L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
+        flag 23 (0x18L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false ? View.VISIBLE : View.GONE
+        flag 24 (0x19L): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 25 (0x1aL): viewmodel.selectedBtn == 2 ? @android:drawable/corner_view_primary_yellow : @android:drawable/corner_view_primary_dark_home
+        flag 26 (0x1bL): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y")
+        flag 27 (0x1cL): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y")
         flag 28 (0x1dL): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false ? View.VISIBLE : View.GONE
         flag 29 (0x1eL): viewmodel.prevSessionsAdapter.itemCount == 0 ? viewmodel.selectedBtn == 1 : false ? View.VISIBLE : View.GONE
         flag 30 (0x1fL): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false
         flag 31 (0x20L): viewmodel.homeReportersAdapter.itemCount == 0 ? viewmodel.selectedBtn == 2 : false
-        flag 32 (0x21L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n")
-        flag 33 (0x22L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : !viewmodel.homeData.userPackage.expiryPackage.equals("n")
+        flag 32 (0x21L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y") ? View.VISIBLE : View.GONE
+        flag 33 (0x22L): viewmodel.warningDate.get() == true ? true : viewmodel.homeData.userPackage.packageId == 5 ? true : viewmodel.homeData.userPackage.expiryPackage.equals("y") ? View.VISIBLE : View.GONE
         flag 34 (0x23L): !TextUtils.isEmpty(viewmodel.packageRemainDays.get()) ? viewmodel.packageRemainDays.get() : " "
         flag 35 (0x24L): !TextUtils.isEmpty(viewmodel.packageRemainDays.get()) ? viewmodel.packageRemainDays.get() : " "
         flag 36 (0x25L): viewmodel.warningDate.get() == true ? View.VISIBLE : View.GONE

@@ -9,13 +9,14 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.auth.models.ForgetPasswordRequest;
 import te.app.evidence.repository.AuthRepository;
 import io.reactivex.disposables.CompositeDisposable;
+import te.app.evidence.utils.Constants;
 
 public class ForgetPasswordViewModel extends BaseViewModel {
     public MutableLiveData<Mutable> liveData;
     @Inject
     AuthRepository repository;
-    private CompositeDisposable compositeDisposable = new CompositeDisposable();
-    private ForgetPasswordRequest request;
+    CompositeDisposable compositeDisposable = new CompositeDisposable();
+    ForgetPasswordRequest request;
 
     @Inject
     public ForgetPasswordViewModel(AuthRepository repository) {
@@ -27,6 +28,7 @@ public class ForgetPasswordViewModel extends BaseViewModel {
 
     public void sendCode() {
         if (getRequest().isValid()) {
+            setMessage(Constants.SHOW_PROGRESS);
             compositeDisposable.add(repository.forgetPassword(request));
         }
     }

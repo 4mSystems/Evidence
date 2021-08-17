@@ -12,7 +12,7 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
-import te.app.evidence.pages.auth.models.ChangePasswordRequest;
+import te.app.evidence.pages.auth.changePassword.ChangePasswordRequest;
 import te.app.evidence.pages.auth.models.ConfirmCodeRequest;
 import te.app.evidence.pages.auth.models.ForgetPasswordRequest;
 import te.app.evidence.pages.auth.models.LoginRequest;
@@ -60,7 +60,7 @@ public class AuthRepository extends BaseRepository {
 
     public Disposable confirmCode(ConfirmCodeRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONFIRM_CODE, request, UsersResponse.class,
-                Constants.CONFIRM_CODE, true);
+                Constants.CONFIRM_CODE, false);
     }
 
 
@@ -77,12 +77,12 @@ public class AuthRepository extends BaseRepository {
 
     public Disposable forgetPassword(ForgetPasswordRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.FORGET_PASSWORD, request, StatusMessage.class,
-                Constants.FORGET_PASSWORD, true);
+                Constants.FORGET_PASSWORD, false);
     }
 
     public Disposable changePassword(ChangePasswordRequest request) {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CHANGE_PASSWORD, request, StatusMessage.class,
-                Constants.CHANGE_PASSWORD, true);
+                Constants.CHANGE_PASSWORD, false);
     }
 
 }

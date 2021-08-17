@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -39,6 +40,9 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   public final AppCompatImageView logo;
 
   @NonNull
+  public final CircularProgressIndicator progress;
+
+  @NonNull
   public final CustomTextViewMedium tvForgetRemember;
 
   @NonNull
@@ -53,8 +57,9 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
   protected FragmentForgetPasswordBinding(Object _bindingComponent, View _root,
       int _localFieldCount, AppCompatButton appCompatButtonNext, CustomTextViewMedium appLoginTitle,
       CustomTextViewMedium appName, TextInputLayout inputEmail, AppCompatImageView loginBackground,
-      AppCompatImageView logo, CustomTextViewMedium tvForgetRemember,
-      CustomTextViewMedium tvForgetTitle, CustomTextViewRegular tvLoginHeaderNumber) {
+      AppCompatImageView logo, CircularProgressIndicator progress,
+      CustomTextViewMedium tvForgetRemember, CustomTextViewMedium tvForgetTitle,
+      CustomTextViewRegular tvLoginHeaderNumber) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appCompatButtonNext = appCompatButtonNext;
     this.appLoginTitle = appLoginTitle;
@@ -62,6 +67,7 @@ public abstract class FragmentForgetPasswordBinding extends ViewDataBinding {
     this.inputEmail = inputEmail;
     this.loginBackground = loginBackground;
     this.logo = logo;
+    this.progress = progress;
     this.tvForgetRemember = tvForgetRemember;
     this.tvForgetTitle = tvForgetTitle;
     this.tvLoginHeaderNumber = tvLoginHeaderNumber;

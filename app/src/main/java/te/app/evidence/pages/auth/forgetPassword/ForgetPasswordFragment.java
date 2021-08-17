@@ -54,6 +54,7 @@ public class ForgetPasswordFragment extends BaseFragment {
         viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             if (((Mutable) o).message.equals(Constants.FORGET_PASSWORD)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.CHECK_CONFIRM_NAV_FORGET, viewModel.getRequest().getPhone()), null, ConfirmCodeFragment.class.getName(), null);

@@ -20,10 +20,10 @@ public class URLS {
     public final static String SUBSCRIBE = "packages/subscripe/";
     public final static String REGISTER = "registeration";
     public final static String BOARD = "settings/sliders";
-    public final static String CONFIRM_CODE = "user/verify-code";
+    public final static String CONFIRM_CODE = "code-check";
     public final static String UPDATE_PROFILE = "update_profile";
-    public static final String FORGET_PASSWORD = "user/send-code";
-    public static final String CHANGE_PASSWORD = "forget-password";
+    public static final String FORGET_PASSWORD = "reset-password";
+    public static final String CHANGE_PASSWORD = "change-password";
 
     public final static String EDIT_CLIENTS = "edit_client";
     public final static String DELETE_CLIENT = "delete_client/";

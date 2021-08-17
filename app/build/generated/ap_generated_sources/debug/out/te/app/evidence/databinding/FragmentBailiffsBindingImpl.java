@@ -24,7 +24,7 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback128;
+    private final android.view.View.OnClickListener mCallback130;
     @Nullable
     private final android.view.View.OnClickListener mCallback129;
     // values
@@ -91,8 +91,8 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback128 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback129 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback130 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback129 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -280,8 +280,8 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView6.setOnClickListener(mCallback129);
-            this.search.setOnClickListener(mCallback128);
+            this.mboundView6.setOnClickListener(mCallback130);
+            this.search.setOnClickListener(mCallback129);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -304,6 +304,23 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAddMohdr();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -320,23 +337,6 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
 
 
                     viewmodel.search(1, true);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.mohdrs.viewModels.BailiffsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toAddMohdr();
                 }
                 break;
             }

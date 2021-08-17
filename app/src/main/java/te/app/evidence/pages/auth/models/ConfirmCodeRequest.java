@@ -5,7 +5,7 @@ import android.text.TextUtils;
 import com.google.gson.annotations.SerializedName;
 
 public class ConfirmCodeRequest {
-    @SerializedName("phone")
+    @SerializedName("email")
     private String phone;
     @SerializedName("code")
     private String code;

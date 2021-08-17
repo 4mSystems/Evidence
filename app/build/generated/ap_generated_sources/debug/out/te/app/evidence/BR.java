@@ -75,23 +75,25 @@ public class BR {
 
   public static final int reportsMain = 36;
 
-  public static final int searchReportRequest = 37;
+  public static final int request = 37;
 
-  public static final int selectedBtn = 38;
+  public static final int searchReportRequest = 38;
 
-  public static final int sessionItem = 39;
+  public static final int selectedBtn = 39;
 
-  public static final int sessionsAdapter = 40;
+  public static final int sessionItem = 40;
 
-  public static final int systemUserData = 41;
+  public static final int sessionsAdapter = 41;
 
-  public static final int type = 42;
+  public static final int systemUserData = 42;
 
-  public static final int userPermissionsData = 43;
+  public static final int type = 43;
 
-  public static final int usersAdapter = 44;
+  public static final int userPermissionsData = 44;
 
-  public static final int usersMainData = 45;
+  public static final int usersAdapter = 45;
 
-  public static final int viewmodel = 46;
+  public static final int usersMainData = 46;
+
+  public static final int viewmodel = 47;
 }

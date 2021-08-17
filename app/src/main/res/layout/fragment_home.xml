@@ -46,7 +46,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="@dimen/dp8h"
                         android:background="@drawable/corner_view_warning"
-                        android:visibility="@{viewmodel.warningDate==true|| viewmodel.homeData.userPackage.packageId==5||!viewmodel.homeData.userPackage.expiryPackage.equals(`n`)?View.VISIBLE:View.GONE,default=gone}"
+                        android:visibility="@{viewmodel.warningDate==true|| viewmodel.homeData.userPackage.packageId==5||viewmodel.homeData.userPackage.expiryPackage.equals(`y`)?View.VISIBLE:View.GONE,default=gone}"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <te.app.evidence.customViews.views.CustomTextViewMedium
