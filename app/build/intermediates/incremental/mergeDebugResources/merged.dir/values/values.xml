@@ -592,6 +592,7 @@
     <color name="header_data_table">#797979</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
+    <color name="ic_launcher_background">#033253</color>
     <color name="infoColor">#3F51B5</color>
     <color name="line_color">#F0F0F0</color>
     <color name="material_blue_grey_800">#ff37474f</color>
@@ -1493,6 +1494,10 @@
     <string name="please_select_another_file">Please select another file</string>
     <string name="please_turn_off">Please turn off</string>
     <string name="please_turn_on">Please turn on</string>
+    <string name="point">نقظة</string>
+    <string name="point_warning1">يمكنك استبدال نقاطك بمبالغ مالية</string>
+    <string name="point_warning2">رصيد حسابك الحالي يمكن استبداله ب</string>
+    <string name="points_btn">استبدال نقاطي</string>
     <string name="previousSessions">الجلسات الفائتة</string>
     <string name="print">طباعة</string>
     <string name="profile_change_password">تغيير كلمة المرور</string>

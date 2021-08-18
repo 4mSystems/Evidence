@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_replaced_points.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_replaced_points.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_forget_password.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_forget_password.xml"
     },
@@ -146,6 +150,10 @@
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_user.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_user.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_points.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_points.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",

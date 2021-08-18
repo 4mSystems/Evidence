@@ -35,6 +35,7 @@
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp12h"
             android:layout_marginBottom="@dimen/dp10h"
             app:layout_constraintBottom_toTopOf="@+id/login"
             app:layout_constraintTop_toBottomOf="@+id/home_title">
@@ -137,11 +138,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="phone"
-                        android:textDirection="ltr"
                         android:text="@={viewmodel.request.phone}"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textColorHint="@color/overlayBackground" />
+                        android:textColorHint="@color/overlayBackground"
+                        android:textDirection="ltr" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout

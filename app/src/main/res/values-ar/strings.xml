@@ -191,5 +191,9 @@
     <string name="demo_warning">انت الان تمتع بالباقة التجربية للاشتراك في الباقات </string>
     <string name="expire_package">لقد انتهت الباقة يرجى الاشتراك للاستمتاع بخدمات توثيق</string>
     <string name="day">يوم</string>
+    <string name="point">نقطة</string>
+    <string name="point_warning1">يمكنك ربح مزيد من النقاط لتجديد باقتك عن طريق الخطوات التالية</string>
+    <string name="points_btn">استبدال نقاطي</string>
+    <string name="point_warning2">رصيد حسابك الحالي يمكن استبداله ب</string>
 
 </resources>

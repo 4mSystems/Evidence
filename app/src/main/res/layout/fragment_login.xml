@@ -38,7 +38,7 @@
                 android:layout_width="@dimen/dp100w"
                 android:layout_height="@dimen/dp100h"
                 android:layout_marginTop="@dimen/dp16h"
-                android:src="@color/white"
+                android:src="@drawable/logo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

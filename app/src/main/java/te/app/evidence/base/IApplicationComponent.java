@@ -31,6 +31,7 @@ import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.mohdrs.ReportersDetailsFragment;
 import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
+import te.app.evidence.pages.points.PointsFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
@@ -124,6 +125,8 @@ public interface IApplicationComponent {
     void inject(ContactUsFragment contactUsFragment);
 
     void inject(PackagesFragment packagesFragment);
+
+    void inject(PointsFragment pointsFragment);
 
     @Component.Builder
     interface Builder {

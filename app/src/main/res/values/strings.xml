@@ -191,5 +191,9 @@
     <string name="demo_warning">"انت الان تمتع بالباقة التجربية للاشتراك "</string>
     <string name="expire_package">لقد انتهت الباقة يرجى الاشتراك للاستمتاع بتوثيق</string>
     <string name="day">يوم</string>
+    <string name="point">نقظة</string>
+    <string name="point_warning1">يمكنك استبدال نقاطك بمبالغ مالية</string>
+    <string name="points_btn">استبدال نقاطي</string>
+    <string name="point_warning2">رصيد حسابك الحالي يمكن استبداله ب</string>
 
 </resources>
