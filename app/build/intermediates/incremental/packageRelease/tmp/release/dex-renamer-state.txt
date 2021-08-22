@@ -1,4 +1,4 @@
-#Thu Aug 19 00:14:07 EET 2021
+#Sun Aug 22 13:33:18 EET 2021
 base.1=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
 path.1=classes2.dex
 base.0=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/mergeDexRelease/classes.dex

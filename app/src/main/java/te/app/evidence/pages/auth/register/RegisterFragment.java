@@ -40,6 +40,7 @@ public class RegisterFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
+            viewModel.setMessage(mutable.message.equals(Constants.HIDE_PROGRESS) ? mutable.message : "");
             switch (((Mutable) o).message) {
                 case Constants.IMAGE:
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);

@@ -31,9 +31,10 @@ public class RegisterViewModel extends BaseViewModel {
 
     public void register() {
         if (getRequest().isValid()) {
-            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword()))
+            if (Validate.isMatchPassword(getRequest().getPassword(), getRequest().getConfirmPassword())) {
+                setMessage(Constants.SHOW_PROGRESS);
                 compositeDisposable.add(repository.register(request));
-            else
+            } else
                 liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.password_not_match)));
         } else
             liveData.setValue(new Mutable(Constants.ERROR_TOAST, ResourceManager.getString(R.string.empty_warning)));
