@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Window;
 import android.widget.RelativeLayout;
@@ -29,6 +30,7 @@ import te.app.evidence.pages.categories.CategoriesFragment;
 import te.app.evidence.pages.clients.ClientsFragment;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.mohdrs.BailiffsFragment;
+import te.app.evidence.pages.points.PointsFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
@@ -109,6 +111,8 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, ContactUsFragment.class.getName(), ResourceManager.getString(R.string.tv_account_contact), null);
             } else if (o.equals(Constants.PACKAGES)) {
                 MovementHelper.startActivity(context, PackagesFragment.class.getName(), ResourceManager.getString(R.string.packes), null);
+            } else if (o.equals(Constants.POINTS)) {
+                MovementHelper.startActivity(context, PointsFragment.class.getName(), ResourceManager.getString(R.string.points), null);
             } else if (o.equals(Constants.ERROR_TOAST)) {
                 ((ParentActivity) context).toastError(ResourceManager.getString(R.string.no_permission));
             } else if (o.equals(Constants.LANGUAGE)) {

@@ -25,7 +25,7 @@ import te.app.evidence.pages.settings.viewModels.ItemPackagesViewModel;
 public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.ViewHolder> {
     List<Packages> packagesList;
     Context context;
-   public MutableLiveData<Object> liveData = new MutableLiveData<>();
+   public MutableLiveData<Packages> liveData = new MutableLiveData<>();
 
     public PackagesAdapter() {
         this.packagesList = new ArrayList<>();
@@ -46,7 +46,7 @@ public class PackagesAdapter extends RecyclerView.Adapter<PackagesAdapter.ViewHo
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         Packages client = packagesList.get(position);
         ItemPackagesViewModel itemMenuViewModel = new ItemPackagesViewModel(client);
-        itemMenuViewModel.getLiveData().observe((LifecycleOwner) context, o -> liveData.setValue(client.getId()));
+        itemMenuViewModel.getLiveData().observe((LifecycleOwner) context, o -> liveData.setValue(client));
         holder.setViewModel(itemMenuViewModel);
     }
 

@@ -97,6 +97,18 @@
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                             android:textColor="@color/white" />
 
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp8h"
+                            android:onClick="@{()-> menuViewModel.buttonAction(Constants.POINTS)}"
+                            android:text="@{menuViewModel.userData.userData.my_points.concat(` `).concat(@string/point)}"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/colorPrimaryDark"
+                            app:backgroundTint="@color/white"
+                            app:cornerRadius="@dimen/dp6h" />
+
                         <te.app.evidence.customViews.views.CustomTextViewMedium
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"

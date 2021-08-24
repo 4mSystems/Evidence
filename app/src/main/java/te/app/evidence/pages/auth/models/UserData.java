@@ -50,6 +50,16 @@ public class UserData {
 
     @SerializedName("status")
     private String status;
+    @SerializedName("warning_date")
+    private String warning_date;
+    @SerializedName("expiry_date")
+    private String expiry_date;
+    @SerializedName("expiry_package")
+    private String expiry_package;
+    @SerializedName("my_points")
+    private String my_points;
+    @SerializedName("user_code")
+    private String user_code;
 
     public String getImage() {
         return URLS.USER_PROFILE_BASE_URL.concat(image);
@@ -109,5 +119,25 @@ public class UserData {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getWarning_date() {
+        return warning_date;
+    }
+
+    public String getExpiry_date() {
+        return expiry_date;
+    }
+
+    public String getExpiry_package() {
+        return expiry_package;
+    }
+
+    public String getMy_points() {
+        return my_points;
+    }
+
+    public String getUser_code() {
+        return user_code;
     }
 }

@@ -21,6 +21,8 @@ public class RegisterRequest {
     private String address;
     @SerializedName("cat_name")
     private String catName;
+    @SerializedName("invite_code")
+    private String inviteCode;
 
     public transient ObservableField<String> nameError = new ObservableField<>();
     public transient ObservableField<String> phoneError = new ObservableField<>();
@@ -126,5 +128,13 @@ public class RegisterRequest {
     public void setCatName(String catName) {
         catError.set(null);
         this.catName = catName;
+    }
+
+    public String getInviteCode() {
+        return inviteCode;
+    }
+
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode;
     }
 }

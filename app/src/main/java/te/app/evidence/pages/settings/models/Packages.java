@@ -15,6 +15,8 @@ public class Packages {
 
     @SerializedName("description")
     private String description;
+    @SerializedName("renew_points")
+    private String renew_points;
 
     @SerializedName("id")
     private int id;
@@ -37,5 +39,9 @@ public class Packages {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getRenew_points() {
+        return renew_points;
     }
 }

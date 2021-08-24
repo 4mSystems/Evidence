@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer;
 
 import javax.inject.Inject;
 
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
@@ -18,7 +19,9 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentRegisterBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.MovementHelper;
 
 public class RegisterFragment extends BaseFragment {
     FragmentRegisterBinding binding;
@@ -46,7 +49,8 @@ public class RegisterFragment extends BaseFragment {
                     pickImageDialogSelect(Constants.FILE_TYPE_IMAGE);
                     break;
                 case Constants.REGISTER:
-                    toastMessage(((StatusMessage)mutable.object).mMessage);
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getRequest().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
                     finishActivity();
                     break;
             }

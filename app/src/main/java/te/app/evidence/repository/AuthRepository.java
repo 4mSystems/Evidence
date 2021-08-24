@@ -64,6 +64,12 @@ public class AuthRepository extends BaseRepository {
     }
 
 
+    public Disposable confirmAccount(ConfirmCodeRequest request) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONFIRM_ACCOUNT, request, UsersResponse.class,
+                Constants.CONFIRM_CODE, false);
+    }
+
+
     public Disposable updateProfile(AddUserRequest request, ArrayList<FileObject> fileObjects) {
         if (fileObjects == null) {
             return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.UPDATE_PROFILE, request, UsersResponse.class,

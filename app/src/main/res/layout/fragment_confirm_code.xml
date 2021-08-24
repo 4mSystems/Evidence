@@ -93,10 +93,10 @@
                 android:cursorVisible="true"
                 android:gravity="center_horizontal"
                 android:inputType="number"
-                android:itemBackground="@color/colorPrimary"
+                android:itemBackground="@color/black"
                 android:padding="8dp"
                 android:text="@={viewmodel.request.code}"
-                android:textColor="@color/overlayBackground"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:cursorColor="#8A98A3"
@@ -110,7 +110,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_confirm_title_2"
                 app:lineWidth="2dp"
-                app:viewType="rectangle" />
+                app:viewType="line" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/appCompatButtonNext"

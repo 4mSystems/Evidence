@@ -21,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp4h"
         app:cardCornerRadius="@dimen/dp10h"
-        app:cardUseCompatPadding="true"
-        app:cardElevation="4dp">
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -84,19 +84,33 @@
                 android:text="@{itemViewModel.packages.description}"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimaryDark"
-                app:layout_constraintBottom_toTopOf="@id/btn_subscribe"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/ic_resource"
                 app:layout_constraintTop_toBottomOf="@id/btn_free" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_package_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:layout_marginEnd="@dimen/dp15w"
+                android:layout_marginBottom="@dimen/dp25h"
+                android:textStyle="bold"
+                android:text="@{itemViewModel.packages.renew_points.concat(` `).concat(@string/point)}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toTopOf="@id/btn_subscribe"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_package_desc" />
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/btn_subscribe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
+                android:onClick="@{()-> itemViewModel.itemAction()}"
                 android:padding="@dimen/dp15h"
                 android:text="@string/subscribe"
-                android:onClick="@{()-> itemViewModel.itemAction()}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"

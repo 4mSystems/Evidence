@@ -22,6 +22,7 @@ import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentLoginBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.auth.register.RegisterFragment;
@@ -60,6 +61,9 @@ public class LoginFragment extends BaseFragment {
                     break;
                 case Constants.REGISTER:
                     MovementHelper.startActivity(context, RegisterFragment.class.getName(), getString(R.string.register), null);
+                    break;
+                case Constants.NOT_VERIFIED:
+                    MovementHelper.startActivityWithBundle(requireActivity(), new PassingObject(Constants.CHECK_CONFIRM_NAV_REGISTER, viewModel.getLoginRequest().getEmail()), null, ConfirmCodeFragment.class.getName(), null);
                     break;
 
             }

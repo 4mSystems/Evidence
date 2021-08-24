@@ -195,5 +195,13 @@
     <string name="point_warning1">يمكنك استبدال نقاطك بمبالغ مالية</string>
     <string name="points_btn">استبدال نقاطي</string>
     <string name="point_warning2">رصيد حسابك الحالي يمكن استبداله ب</string>
+    <string name="points">نقاطى</string>
+    <string name="my_package">"اسم الباقة "</string>
+    <string name="expire_package_title">تاريخ التجديد</string>
+    <string name="my_package_info">معلومات باقتك</string>
+    <string name="my_package_renew">يمكنك التجديد بالاختيار الباقاة المفضلة اليك</string>
+    <string name="invite_code">كود الدعوة</string>
+    <string name="renew_package_dialog">يمكنك تجديد الاشتراك عن طريق نقاطك او الدفع الالكترونى</string>
+    <string name="online">الدفع اونلاين</string>
 
 </resources>

@@ -208,6 +208,8 @@ public class ConnectionHelper {
                                 liveData.setValue(new Mutable(Constants.LOGOUT, statusMessage.mMessage));
                             else if (statusMessage.code == Constants.RESPONSE_404)
                                 liveData.setValue(new Mutable(Constants.ERROR_NOT_FOUND, statusMessage.mMessage));
+                            else if (statusMessage.code == Constants.RESPONSE_NOT_VERIFIED)
+                                liveData.setValue(new Mutable(Constants.NOT_VERIFIED, statusMessage.mMessage));
                             else if (statusMessage.code == Constants.PAYMENT_REQUIRED_CODE) {
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             } else

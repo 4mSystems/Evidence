@@ -31,7 +31,10 @@ public class ConfirmViewModel extends BaseViewModel {
         getRequest().setPhone(getPassingObject().getObject());
         if (request.isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
-            compositeDisposable.add(repository.confirmCode(request));
+            if (getPassingObject().getId() == Constants.CHECK_CONFIRM_NAV_REGISTER) {
+                compositeDisposable.add(repository.confirmAccount(request));
+            } else
+                compositeDisposable.add(repository.confirmCode(request));
         }
     }
 

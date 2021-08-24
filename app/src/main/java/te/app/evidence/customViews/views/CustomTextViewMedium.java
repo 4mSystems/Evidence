@@ -31,5 +31,6 @@ public class CustomTextViewMedium extends AppCompatTextView {
         Typeface tf = Typeface.createFromAsset(context.getAssets(),
                 "fonts/medium.otf");
         setTypeface(tf);
+        setLineSpacing(1.8f, 1.5f);
     }
 }

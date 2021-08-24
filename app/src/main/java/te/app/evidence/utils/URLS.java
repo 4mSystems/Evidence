@@ -21,6 +21,7 @@ public class URLS {
     public final static String REGISTER = "registeration";
     public final static String BOARD = "settings/sliders";
     public final static String CONFIRM_CODE = "code-check";
+    public final static String CONFIRM_ACCOUNT = "verify_email";
     public final static String UPDATE_PROFILE = "update_profile";
     public static final String FORGET_PASSWORD = "reset-password";
     public static final String CHANGE_PASSWORD = "change-password";

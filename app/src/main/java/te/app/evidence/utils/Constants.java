@@ -81,6 +81,7 @@ public class Constants {
     public static final int PAYMENT_REQUIRED_CODE = 402;
     public static final int RESPONSE_JWT_EXPIRE = 403;
     public static final int RESPONSE_404 = 404;
+    public static final int RESPONSE_NOT_VERIFIED = 405;
     public static final int RESULT_CODE = 6000;
     public final static int CLIENTS_CODE = 6001;
     public final static int SESSION_CODE = 6005;
@@ -104,7 +105,7 @@ public class Constants {
     public static final String EDIT_CASE = "EDIT_CASE";
     public static final int EDIT_CASE_REQUEST = 6004;
     public static final String CASE_ATTACHMENTS = "CASE_ATTACHMENTS";
-    public static final String ABOUT = "about";
+    public static final String POINTS = "POINTS";
     public static final String TERMS = "terms";
     public static final String FIELD = "FIELD";
     public static final String LOGIN = "login";
