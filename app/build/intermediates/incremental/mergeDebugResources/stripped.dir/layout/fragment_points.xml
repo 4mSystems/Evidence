@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                 
+                            
+                                                                             
+           
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:tag="layout/fragment_points_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/MaterialCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp33h"
+                    app:cardCornerRadius="@dimen/dp110h"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8h">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/img_points"
+                            android:layout_width="@dimen/dp200w"
+                            android:layout_height="@dimen/dp200h"
+                            android:background="@drawable/round_circle"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:id="@+id/customTextViewMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp50h"
+                            android:tag="binding_1"                                
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/sp40"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="@+id/img_points"
+                            app:layout_constraintStart_toStartOf="@+id/img_points"
+                            app:layout_constraintTop_toTopOf="@+id/img_points" />
+
+                        <te.app.evidence.customViews.views.CustomTextViewMedium
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:text="@string/point"
+                            android:textColor="@color/medium_color"
+                            android:textSize="@dimen/sp30"
+                            app:layout_constraintBottom_toBottomOf="@+id/img_points"
+                            app:layout_constraintEnd_toEndOf="@+id/img_points"
+                            app:layout_constraintStart_toStartOf="@+id/img_points"
+                            app:layout_constraintTop_toBottomOf="@id/customTextViewMedium" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <te.app.evidence.customViews.views.CustomTextViewMedium
+                    android:id="@+id/tv_point_warning1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp12w"
+                    android:layout_marginTop="@dimen/dp30h"
+                    android:layout_marginEnd="@dimen/dp12w"
+                    android:text="@string/point_warning1"
+                    android:textAlignment="viewStart"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/medium_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/MaterialCardView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp10h"
+                    tools:listitem="@layout/item_replaced_points"
+                    app:layout_constraintTop_toBottomOf="@id/tv_point_warning1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+         

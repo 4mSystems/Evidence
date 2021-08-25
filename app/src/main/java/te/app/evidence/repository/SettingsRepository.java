@@ -8,9 +8,11 @@ import javax.inject.Singleton;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.pages.settings.models.PackagesResponse;
+import te.app.evidence.pages.settings.models.RenewPackageRequest;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 import io.reactivex.disposables.Disposable;
@@ -38,8 +40,8 @@ public class SettingsRepository extends BaseRepository {
                 Constants.PACKAGES, true);
     }
 
-    public Disposable subscribePackage(int packageId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.SUBSCRIBE + packageId, new Object(), StatusMessage.class,
+    public Disposable subscribePackage(int packageId, int type) {
+        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.SUBSCRIBE, new RenewPackageRequest(packageId, type), UsersResponse.class,
                 Constants.SUBSCRIBE, true);
     }
 

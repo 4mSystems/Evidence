@@ -23,16 +23,15 @@ import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
-import te.app.evidence.base.ParentActivity;
-import te.app.evidence.databinding.ExitLayoutBinding;
 import te.app.evidence.databinding.FragmentPackagesBinding;
 import te.app.evidence.databinding.PackageRenewDialogBinding;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.model.base.StatusMessage;
+import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.settings.models.Packages;
 import te.app.evidence.pages.settings.models.PackagesResponse;
 import te.app.evidence.pages.settings.viewModels.SettingsViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.session.UserHelper;
 
 public class PackagesFragment extends BaseFragment {
     FragmentPackagesBinding binding;
@@ -58,9 +57,10 @@ public class PackagesFragment extends BaseFragment {
                 viewModel.getPackagesAdapter().update(((PackagesResponse) ((Mutable) o).object).getPackagesList());
                 viewModel.notifyChange(BR.packagesAdapter);
             } else if (((Mutable) o).message.equals(Constants.SUBSCRIBE)) {
-                toastMessage(((StatusMessage) ((Mutable) o).object).mMessage);
+                toastMessage(((UsersResponse) ((Mutable) o).object).mMessage);
+                UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());
                 Constants.DATA_CHANGED = true;
-                viewModel.goBack(requireActivity());
+                finishActivity();
             }
         });
         viewModel.getPackagesAdapter().liveData.observe(requireActivity(), this::renewDialog);
@@ -76,10 +76,13 @@ public class PackagesFragment extends BaseFragment {
         if (viewModel.userData.getUserData().getMy_points().equals(o.getRenew_points()))
             binding.points.setEnabled(true);
         binding.online.setOnClickListener(v -> {
+            viewModel.subscribePackage(o.getId(), Constants.ONLINE);
             dialog.dismiss();
-
         });
-        binding.points.setOnClickListener(v -> dialog.dismiss());
+        binding.points.setOnClickListener(v -> {
+            viewModel.subscribePackage(o.getId(), Constants.FROM_POINTS);
+            dialog.dismiss();
+        });
         dialog.setOnCancelListener(DialogInterface::dismiss);
         dialog.show();
     }

@@ -39,8 +39,8 @@ public class SettingsViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getPackages());
     }
 
-    public void subscribePackage(int packageId) {
-        compositeDisposable.add(repository.subscribePackage(packageId));
+    public void subscribePackage(int packageId,int type) {
+        compositeDisposable.add(repository.subscribePackage(packageId,type));
     }
 
     public void sendContact() {

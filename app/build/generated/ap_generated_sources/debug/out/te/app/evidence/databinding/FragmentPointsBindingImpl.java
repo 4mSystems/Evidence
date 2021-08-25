@@ -14,9 +14,8 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.MaterialCardView, 1);
-        sViewsWithIds.put(R.id.img_points, 2);
-        sViewsWithIds.put(R.id.customTextViewMedium, 3);
+        sViewsWithIds.put(R.id.MaterialCardView, 2);
+        sViewsWithIds.put(R.id.img_points, 3);
         sViewsWithIds.put(R.id.tv_point_warning1, 4);
     }
     // views
@@ -32,11 +31,12 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     }
     private FragmentPointsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.card.MaterialCardView) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[2]
+            , (com.google.android.material.card.MaterialCardView) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
             );
+        this.customTextViewMedium.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
         setRootTag(root);
@@ -75,7 +75,13 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.points.viewModels.PointsViewModel Viewmodel) {
+        updateRegistration(0, Viewmodel);
         this.mViewmodel = Viewmodel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewmodel);
+        super.requestRebind();
     }
 
     @Override
@@ -103,7 +109,38 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
+        java.lang.String viewmodelUserDataUserDataMyPoints = null;
+        te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+        te.app.evidence.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (viewmodel != null) {
+                    // read viewmodel.userData
+                    viewmodelUserData = viewmodel.userData;
+                }
+
+
+                if (viewmodelUserData != null) {
+                    // read viewmodel.userData.userData
+                    viewmodelUserDataUserData = viewmodelUserData.getUserData();
+                }
+
+
+                if (viewmodelUserDataUserData != null) {
+                    // read viewmodel.userData.userData.my_points
+                    viewmodelUserDataUserDataMyPoints = viewmodelUserDataUserData.getMy_points();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.customTextViewMedium, viewmodelUserDataUserDataMyPoints);
+        }
     }
     // Listener Stub Implementations
     // callback impls

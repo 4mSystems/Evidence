@@ -56,12 +56,9 @@ public class Constants {
     public final static String NAME_BAR = "name_bar";
     public static final String BUNDLE = "bundle";
     public static final String DELETE_CATEGORY = "DELETE_CATEGORY";
-    public static final String SETTINGS = "SETTINGS";
-    public static final String REGISTER_SHOPS = "REGISTER_SHOPS";
     public static final String CASE_CLIENTS_CATEGORIES = "CASE_CLIENTS_CATEGORIES";
     public static final String GET_MOHDAREEN = "GET_MOHDAREEN";
     public static final String CATEGORIES = "CATEGORIES";
-    public static final String DELEGATE_DOCUMNET = "DELEGATE_DOCUMNET";
     public static final String CONTACT_US = "CONTACT_US";
     public static final String SHARE_BAR = "SHARE_BAR";
     public static final String PROFILE = "PROFILE";
@@ -131,30 +128,14 @@ public class Constants {
     public static final String HOME_REPORTERS = "HOME_REPORTERS";
     public static final String PACKAGES = "PACKAGES";
     public static final String SUBSCRIBE = "SUBSCRIBE";
-    public static final String NOTIFICATIONS = "notifications";
     public static final String SELECT = "select";
-    public static final String UPDATE_AD_DATA = "UPDATE_AD_DATA";
 
     public static final String CHANGE_PASSWORD = "forget-password";
     public static final String PASSWORD = "password";
-    public static final String EDIT_AD_DETAILS = "EDIT_AD_DETAILS";
-    public static final String SERVICES = "services";
     public static final String REMOVE_DIALOG = "REMOVE_DIALOG";
-    public static final String CONVERSATIONS = "CONVERSATIONS";
-    public static final String DISMISS = "dismiss";
-
-    public static final String CHAT = "chat";
-    public static final String SEND_MESSAGE = "SEND_MESSAGE";
-    public static final int CUSTOM_REQUEST_CODE = 532;
-    public static final String FILTER = "FILTER";
-    public static final String LANGUAGE_SELECTED = "language_selected";
-    public static final String TRUE = "true";
+    public static final int ONLINE = 0;
+    public static final int FROM_POINTS = 1;
     public static final String PDF = "pdf";
-    public static final String MENU_HOME = "menu_home";
-    public static final String MENU_FAVORITE = "menu_favorite";
-    public static final String MENU_ADD_AD = "menu_ad";
-    public static final String MENU_CONVERSATIONS = "menu_conversations";
-    public static final String NEXT = "next";
     public static final String BOARD = "board";
     public static final String MENu = "menu";
 }

@@ -65,6 +65,8 @@ te/app/evidence/databinding/ItemAttachmentBinding.java
 te/app/evidence/pages/cases/CasesFragment.java
  te.app.evidence.pages.cases.CasesFragment
  te.app.evidence.pages.cases.CasesFragment$1
+te/app/evidence/pages/settings/models/RenewPackageRequest.java
+ te.app.evidence.pages.settings.models.RenewPackageRequest
 te/app/evidence/databinding/ItemHomeReporterBinding.java
  te.app.evidence.databinding.ItemHomeReporterBinding
 te/app/evidence/databinding/OptionDialogBinding.java

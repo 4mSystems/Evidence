@@ -130,8 +130,9 @@ public class FragmentPackagesBindingImpl extends FragmentPackagesBinding  {
             mDirtyFlags = 0;
         }
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
-        java.lang.String viewmodelUserDataUserDataExpiryPackage = null;
         te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
+        java.lang.String viewmodelUserDataUserDataPackageName = null;
+        java.lang.String viewmodelUserDataUserDataExpiryDate = null;
         te.app.evidence.pages.settings.adapters.PackagesAdapter viewmodelPackagesAdapter = null;
         te.app.evidence.pages.settings.viewModels.SettingsViewModel viewmodel = mViewmodel;
 
@@ -153,8 +154,10 @@ public class FragmentPackagesBindingImpl extends FragmentPackagesBinding  {
 
 
                     if (viewmodelUserDataUserData != null) {
-                        // read viewmodel.userData.userData.expiry_package
-                        viewmodelUserDataUserDataExpiryPackage = viewmodelUserDataUserData.getExpiry_package();
+                        // read viewmodel.userData.userData.packageName
+                        viewmodelUserDataUserDataPackageName = viewmodelUserDataUserData.getPackageName();
+                        // read viewmodel.userData.userData.expiry_date
+                        viewmodelUserDataUserDataExpiryDate = viewmodelUserDataUserData.getExpiry_date();
                     }
             }
 
@@ -172,8 +175,8 @@ public class FragmentPackagesBindingImpl extends FragmentPackagesBinding  {
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPointsAmount, viewmodelUserDataUserDataExpiryPackage);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvWalletAmount, viewmodelUserDataUserDataExpiryPackage);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvPointsAmount, viewmodelUserDataUserDataExpiryDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvWalletAmount, viewmodelUserDataUserDataPackageName);
         }
     }
     // Listener Stub Implementations

@@ -56,6 +56,8 @@ public class UserData {
     private String expiry_date;
     @SerializedName("expiry_package")
     private String expiry_package;
+    @SerializedName("package_name")
+    private String packageName;
     @SerializedName("my_points")
     private String my_points;
     @SerializedName("user_code")
@@ -63,10 +65,6 @@ public class UserData {
 
     public String getImage() {
         return URLS.USER_PROFILE_BASE_URL.concat(image);
-    }
-
-    public String getAddress() {
-        return address;
     }
 
     public String getApiToken() {
@@ -77,10 +75,6 @@ public class UserData {
         return createdAt;
     }
 
-    public Object getEmailVerifiedAt() {
-        return emailVerifiedAt;
-    }
-
     public String getPackageId() {
         return packageId;
     }
@@ -89,16 +83,8 @@ public class UserData {
         return type;
     }
 
-    public String getUpdatedAt() {
-        return updatedAt;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public Object getParentId() {
-        return parentId;
     }
 
     public String getCatId() {
@@ -121,10 +107,6 @@ public class UserData {
         return status;
     }
 
-    public String getWarning_date() {
-        return warning_date;
-    }
-
     public String getExpiry_date() {
         return expiry_date;
     }
@@ -137,7 +119,7 @@ public class UserData {
         return my_points;
     }
 
-    public String getUser_code() {
-        return user_code;
+    public String getPackageName() {
+        return packageName;
     }
 }
