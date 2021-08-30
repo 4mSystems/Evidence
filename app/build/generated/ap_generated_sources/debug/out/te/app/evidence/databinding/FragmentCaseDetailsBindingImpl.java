@@ -40,11 +40,11 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     private final androidx.core.widget.NestedScrollView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback44;
-    @Nullable
     private final android.view.View.OnClickListener mCallback49;
     @Nullable
     private final android.view.View.OnClickListener mCallback47;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback50;
     @Nullable
     private final android.view.View.OnClickListener mCallback48;
     @Nullable
@@ -119,12 +119,12 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         this.tvInvetationNum.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback49 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback47 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback48 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback46 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -436,12 +436,12 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback45);
-            this.clientNotes.setOnClickListener(mCallback44);
-            this.homeItem1.setOnClickListener(mCallback46);
-            this.homeItem3.setOnClickListener(mCallback47);
-            this.homeItem4.setOnClickListener(mCallback48);
-            this.homeItem5.setOnClickListener(mCallback49);
+            this.clientCases.setOnClickListener(mCallback46);
+            this.clientNotes.setOnClickListener(mCallback45);
+            this.homeItem1.setOnClickListener(mCallback47);
+            this.homeItem3.setOnClickListener(mCallback48);
+            this.homeItem4.setOnClickListener(mCallback49);
+            this.homeItem5.setOnClickListener(mCallback50);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -469,7 +469,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -484,7 +484,26 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
 
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.EDIT_CASE);
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_SESSIONS);
                 }
                 break;
             }
@@ -526,7 +545,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
                 }
                 break;
             }
-            case 5: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -541,7 +560,7 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
 
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CLIENTS);
+                    viewmodel.buttonActions(te.app.evidence.utils.Constants.EDIT_CASE);
                 }
                 break;
             }
@@ -561,25 +580,6 @@ public class FragmentCaseDetailsBindingImpl extends FragmentCaseDetailsBinding i
 
 
                     viewmodel.buttonActions(te.app.evidence.utils.Constants.PDF);
-                }
-                break;
-            }
-            case 3: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.CasesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonActions(te.app.evidence.utils.Constants.CASE_SESSIONS);
                 }
                 break;
             }

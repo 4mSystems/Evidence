@@ -20,6 +20,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
 import java.util.Objects;
 import javax.inject.Inject;
+
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -68,7 +70,7 @@ public class UsersFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getUsersAdapter().getSystemUserDataList().remove(viewModel.getUsersAdapter().lastSelected);
                 viewModel.getUsersAdapter().notifyDataSetChanged();
-                deleteDialog.dismiss();
+                viewModel.notifyChange(BR.usersAdapter);
             }
         });
         viewModel.getUsersAdapter().actionLiveData.observe(requireActivity(), o -> showDeleteDialog());
@@ -100,7 +102,10 @@ public class UsersFragment extends BaseFragment {
         OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
         deleteDialog.setContentView(binding.getRoot());
         binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
-        binding.optionDone.setOnClickListener(v -> viewModel.deleteUser());
+        binding.optionDone.setOnClickListener(v -> {
+            deleteDialog.dismiss();
+            viewModel.deleteUser();
+        });
         deleteDialog.show();
     }
 

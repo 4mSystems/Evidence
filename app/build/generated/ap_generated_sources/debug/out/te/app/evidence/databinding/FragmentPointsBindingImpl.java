@@ -14,31 +14,35 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.MaterialCardView, 2);
-        sViewsWithIds.put(R.id.img_points, 3);
-        sViewsWithIds.put(R.id.tv_point_warning1, 4);
+        sViewsWithIds.put(R.id.MaterialCardView, 3);
+        sViewsWithIds.put(R.id.img_points, 4);
+        sViewsWithIds.put(R.id.tv_point_warning1, 5);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
+    @NonNull
+    private final androidx.recyclerview.widget.RecyclerView mboundView2;
     // variables
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentPointsBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private FragmentPointsBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
-            , (com.google.android.material.card.MaterialCardView) bindings[2]
+            , (com.google.android.material.card.MaterialCardView) bindings[3]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[1]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[3]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[4]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             );
         this.customTextViewMedium.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView2 = (androidx.recyclerview.widget.RecyclerView) bindings[2];
+        this.mboundView2.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -47,7 +51,7 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -99,6 +103,12 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
             }
             return true;
         }
+        else if (fieldId == BR.replacedPointsAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
         return false;
     }
 
@@ -111,35 +121,48 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
         }
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
         java.lang.String viewmodelUserDataUserDataMyPoints = null;
+        te.app.evidence.pages.points.adapters.ReplacedPointsAdapter viewmodelReplacedPointsAdapter = null;
         te.app.evidence.pages.auth.models.UserMainData viewmodelUserData = null;
         te.app.evidence.pages.points.viewModels.PointsViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (viewmodel != null) {
-                    // read viewmodel.userData
-                    viewmodelUserData = viewmodel.userData;
+                    // read viewmodel.replacedPointsAdapter
+                    viewmodelReplacedPointsAdapter = viewmodel.getReplacedPointsAdapter();
                 }
+            if ((dirtyFlags & 0x5L) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.userData
+                        viewmodelUserData = viewmodel.userData;
+                    }
 
 
-                if (viewmodelUserData != null) {
-                    // read viewmodel.userData.userData
-                    viewmodelUserDataUserData = viewmodelUserData.getUserData();
-                }
+                    if (viewmodelUserData != null) {
+                        // read viewmodel.userData.userData
+                        viewmodelUserDataUserData = viewmodelUserData.getUserData();
+                    }
 
 
-                if (viewmodelUserDataUserData != null) {
-                    // read viewmodel.userData.userData.my_points
-                    viewmodelUserDataUserDataMyPoints = viewmodelUserDataUserData.getMy_points();
-                }
+                    if (viewmodelUserDataUserData != null) {
+                        // read viewmodel.userData.userData.my_points
+                        viewmodelUserDataUserDataMyPoints = viewmodelUserDataUserData.getMy_points();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.customTextViewMedium, viewmodelUserDataUserDataMyPoints);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.mboundView2, viewmodelReplacedPointsAdapter, "1", "1");
         }
     }
     // Listener Stub Implementations
@@ -148,7 +171,8 @@ public class FragmentPointsBindingImpl extends FragmentPointsBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): null
+        flag 1 (0x2L): viewmodel.replacedPointsAdapter
+        flag 2 (0x3L): null
     flag mapping end*/
     //end
 }

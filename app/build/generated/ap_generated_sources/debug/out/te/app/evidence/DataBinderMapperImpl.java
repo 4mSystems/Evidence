@@ -728,7 +728,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(48);
+    static final SparseArray<String> sKeys = new SparseArray<String>(50);
 
     static {
       sKeys.put(0, "_all");
@@ -764,21 +764,23 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(30, "packagesAdapter");
       sKeys.put(31, "passingObject");
       sKeys.put(32, "prevSessionsAdapter");
-      sKeys.put(33, "reportersData");
-      sKeys.put(34, "reportsAdapter");
-      sKeys.put(35, "reportsData");
-      sKeys.put(36, "reportsMain");
-      sKeys.put(37, "request");
-      sKeys.put(38, "searchReportRequest");
-      sKeys.put(39, "selectedBtn");
-      sKeys.put(40, "sessionItem");
-      sKeys.put(41, "sessionsAdapter");
-      sKeys.put(42, "systemUserData");
-      sKeys.put(43, "type");
-      sKeys.put(44, "userPermissionsData");
-      sKeys.put(45, "usersAdapter");
-      sKeys.put(46, "usersMainData");
-      sKeys.put(47, "viewmodel");
+      sKeys.put(33, "replacedPoints");
+      sKeys.put(34, "replacedPointsAdapter");
+      sKeys.put(35, "reportersData");
+      sKeys.put(36, "reportsAdapter");
+      sKeys.put(37, "reportsData");
+      sKeys.put(38, "reportsMain");
+      sKeys.put(39, "request");
+      sKeys.put(40, "searchReportRequest");
+      sKeys.put(41, "selectedBtn");
+      sKeys.put(42, "sessionItem");
+      sKeys.put(43, "sessionsAdapter");
+      sKeys.put(44, "systemUserData");
+      sKeys.put(45, "type");
+      sKeys.put(46, "userPermissionsData");
+      sKeys.put(47, "usersAdapter");
+      sKeys.put(48, "usersMainData");
+      sKeys.put(49, "viewmodel");
     }
   }
 

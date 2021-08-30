@@ -9,6 +9,7 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.auth.models.UsersResponse;
+import te.app.evidence.pages.points.models.EarnPointsResponse;
 import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.pages.settings.models.PackagesResponse;
@@ -49,4 +50,11 @@ public class SettingsRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.CONTACT_US, contactUsRequest, StatusMessage.class,
                 Constants.CONTACT, true);
     }
+
+    public Disposable getReplacedPoints() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REPLACED_POINTS, new Object(), EarnPointsResponse.class,
+                Constants.POINTS, true);
+    }
+
+
 }

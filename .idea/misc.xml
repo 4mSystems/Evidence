@@ -40,7 +40,7 @@
         <entry key="app/src/main/res/layout/fragment_add_bailiffs.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_case.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_add_category.xml" value="0.19322916666666667" />
-        <entry key="app/src/main/res/layout/fragment_add_client.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_add_client.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_add_client_to_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/fragment_add_user.xml" value="0.531104199066874" />
         <entry key="app/src/main/res/layout/fragment_attachments.xml" value="0.23045822102425875" />
@@ -81,7 +81,7 @@
         <entry key="app/src/main/res/layout/item_replaced_points.xml" value="0.29528985507246375" />
         <entry key="app/src/main/res/layout/item_report.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_session.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/item_session_note.xml" value="0.19322916666666667" />
+        <entry key="app/src/main/res/layout/item_session_note.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_user.xml" value="0.1" />
         <entry key="app/src/main/res/layout/layout_action_bar_back.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout_navigation_drawer.xml" value="0.5" />

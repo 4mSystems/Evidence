@@ -25,6 +25,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -80,9 +81,11 @@ public class SessionNotesFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getNotesAdapter().getNotesList().remove(viewModel.getNotesAdapter().lastSelected);
                 viewModel.getNotesAdapter().notifyDataSetChanged();
-                deleteDialog.dismiss();
+                viewModel.notifyChange(BR.notesAdapter);
+
 
             } else if (Constants.ADD_NOTE.equals(((Mutable) o).message)) {
+                viewModel.getNotesAdapter().lastSelected = -1;
                 MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId(), Constants.SESSION_NOTES),
                         getString(R.string.add_new_note),
                         AddNoteFragment.class.getName(), null);
@@ -127,7 +130,10 @@ public class SessionNotesFragment extends BaseFragment {
         OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
         deleteDialog.setContentView(binding.getRoot());
         binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
-        binding.optionDone.setOnClickListener(v -> viewModel.deleteSessionNote());
+        binding.optionDone.setOnClickListener(v -> {
+            deleteDialog.dismiss();
+            viewModel.deleteSessionNote();
+        });
         deleteDialog.show();
     }
 
@@ -149,6 +155,7 @@ public class SessionNotesFragment extends BaseFragment {
                         viewModel.getNotesAdapter().notifyItemChanged(viewModel.getNotesAdapter().lastSelected);
                         binding.rcNotes.scrollToPosition(viewModel.getNotesAdapter().lastSelected);
                     }
+                    viewModel.notifyChange(BR.notesAdapter);
                 }
             }
         }

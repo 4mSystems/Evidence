@@ -17,7 +17,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     }
     // views
     @NonNull
-    private final androidx.core.widget.NestedScrollView mboundView0;
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     @NonNull
     private final com.google.android.material.textfield.TextInputLayout mboundView1;
     @NonNull
@@ -40,9 +40,9 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
     private final com.google.android.material.textfield.TextInputLayout mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
-    @Nullable
     private final android.view.View.OnClickListener mCallback52;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback54;
     @Nullable
     private final android.view.View.OnClickListener mCallback53;
     // values
@@ -284,7 +284,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.btnSave.setTag(null);
         this.catName.setTag(null);
         this.clientType.setTag(null);
-        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
+        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
         this.mboundView1 = (com.google.android.material.textfield.TextInputLayout) bindings[1];
         this.mboundView1.setTag(null);
@@ -309,9 +309,9 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -458,7 +458,6 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        android.graphics.drawable.Drawable textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = null;
         java.lang.String viewmodelAddClientRequestClientTypeErrorGet = null;
         java.lang.String viewmodelAddClientRequestClientUnitErrorGet = null;
         te.app.evidence.PassingObject viewmodelPassingObject = null;
@@ -484,6 +483,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = false;
         java.lang.String viewmodelAddClientRequestNotes = null;
         boolean viewmodelMessageEqualsConstantsSHOWPROGRESS = false;
+        int textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = 0;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddClientRequestClientNoteError = null;
         java.lang.String viewmodelAddClientRequestClientName = null;
         te.app.evidence.pages.clients.models.AddClientRequest viewmodelAddClientRequest = null;
@@ -519,10 +519,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     viewmodelPassingObjectObjectClassJavaLangObjectNull = (viewmodelPassingObjectObjectClass) == (null);
                 if((dirtyFlags & 0x340L) != 0) {
                     if(viewmodelPassingObjectObjectClassJavaLangObjectNull) {
-                            dirtyFlags |= 0x20000L;
+                            dirtyFlags |= 0x8000L;
                     }
                     else {
-                            dirtyFlags |= 0x10000L;
+                            dirtyFlags |= 0x4000L;
                     }
                 }
 
@@ -542,10 +542,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0x2c0L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                     }
                 }
 
@@ -696,10 +696,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                     }
                 if((dirtyFlags & 0x240L) != 0) {
                     if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x800L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x400L;
                     }
                 }
 
@@ -710,7 +710,7 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         }
         // batch finished
 
-        if ((dirtyFlags & 0x4000L) != 0) {
+        if ((dirtyFlags & 0x1000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
@@ -733,11 +733,11 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse = ((TextUtilsIsEmptyViewmodelMessage1) ? (viewmodelMessageEqualsConstantsSHOWPROGRESS) : (false));
             if((dirtyFlags & 0x2c0L) != 0) {
                 if(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) {
-                        dirtyFlags |= 0x800L;
+                        dirtyFlags |= 0x20000L;
                         dirtyFlags |= 0x80000L;
                 }
                 else {
-                        dirtyFlags |= 0x400L;
+                        dirtyFlags |= 0x10000L;
                         dirtyFlags |= 0x40000L;
                 }
             }
@@ -751,10 +751,10 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
             }
 
 
-                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_primary_dark)) : (androidx.appcompat.content.res.AppCompatResources.getDrawable(btnSave.getContext(), R.drawable.corner_view_medium)));
                 // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
                 textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (true) : (false));
+                // read TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+                textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor = ((textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS) ? (getColorFromResource(btnSave, R.color.colorPrimaryDark)) : (getColorFromResource(btnSave, R.color.medium_color)));
                 // read !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
                 textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE = ((textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalse) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
@@ -762,17 +762,17 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         if ((dirtyFlags & 0x2c0L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidDrawableCornerViewPrimaryDarkBtnSaveAndroidDrawableCornerViewMedium);
+            androidx.databinding.adapters.ViewBindingAdapter.setBackground(this.btnSave, androidx.databinding.adapters.Converters.convertColorToDrawable(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBtnSaveAndroidColorColorPrimaryDarkBtnSaveAndroidColorMediumColor));
             this.btnSave.setEnabled(textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESSBooleanTrueBooleanFalse);
             this.progress.setVisibility(textUtilsIsEmptyViewmodelMessageViewmodelMessageEqualsConstantsSHOWPROGRESSBooleanFalseViewVISIBLEViewGONE);
         }
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback53);
-            this.catName.setOnClickListener(mCallback52);
+            this.btnSave.setOnClickListener(mCallback54);
+            this.catName.setOnClickListener(mCallback53);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.catName, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, catNameandroidTextAttrChanged);
-            this.clientType.setOnClickListener(mCallback51);
+            this.clientType.setOnClickListener(mCallback52);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.clientType, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, clientTypeandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView12, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView12androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
@@ -847,23 +847,6 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
                 }
                 break;
             }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.showCategories();
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -878,6 +861,23 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
 
 
                     viewmodel.addNewClient();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.AddClientViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.showCategories();
                 }
                 break;
             }
@@ -896,16 +896,16 @@ public class FragmentAddClientBindingImpl extends FragmentAddClientBinding imple
         flag 7 (0x8L): viewmodel.message
         flag 8 (0x9L): viewmodel.passingObject
         flag 9 (0xaL): null
-        flag 10 (0xbL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 11 (0xcL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:drawable/corner_view_primary_dark : @android:drawable/corner_view_medium
-        flag 12 (0xdL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 13 (0xeL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
-        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 16 (0x11L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 17 (0x12L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
-        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
-        flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 10 (0xbL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 11 (0xcL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 14 (0xfL): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 15 (0x10L): viewmodel.passingObject.objectClass == null ? @android:string/add_new_client : @android:string/edit_client
+        flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
+        flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
+        flag 19 (0x14L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color
         flag 20 (0x15L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 21 (0x16L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false ? View.VISIBLE : View.GONE
         flag 22 (0x17L): !TextUtils.isEmpty(viewmodel.message) ? viewmodel.message.equals(Constants.SHOW_PROGRESS) : false

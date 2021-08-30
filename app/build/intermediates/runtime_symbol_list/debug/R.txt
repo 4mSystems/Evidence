@@ -4268,6 +4268,7 @@ int string circle_num 0x7f0f0042
 int string clear_text_end_icon_content_description 0x7f0f0043
 int string client 0x7f0f0044
 int string client_address 0x7f0f0045
+int string client_age 0x7f0f0150
 int string client_data 0x7f0f0046
 int string client_name 0x7f0f0047
 int string client_note 0x7f0f0048
@@ -4275,7 +4276,7 @@ int string client_notes 0x7f0f0049
 int string client_profile 0x7f0f004a
 int string client_search_hint 0x7f0f004b
 int string client_selected 0x7f0f004c
-int string client_unit 0x7f0f004d
+int string client_type 0x7f0f014f
 int string client_unselected 0x7f0f004e
 int string client_warning 0x7f0f004f
 int string clients 0x7f0f0050
@@ -4355,7 +4356,9 @@ int string invalidEmail 0x7f0f0099
 int string invalidPassword 0x7f0f009a
 int string invalidPhone 0x7f0f009b
 int string inventation_type 0x7f0f009c
+int string invite 0x7f0f014d
 int string invite_code 0x7f0f009d
+int string invite_friend 0x7f0f014e
 int string item_view_role_description 0x7f0f009e
 int string khesm 0x7f0f009f
 int string khesm_selected 0x7f0f00a0

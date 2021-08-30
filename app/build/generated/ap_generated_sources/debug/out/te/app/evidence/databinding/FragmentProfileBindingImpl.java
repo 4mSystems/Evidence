@@ -33,9 +33,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     @Nullable
     private final android.view.View.OnClickListener mCallback76;
     @Nullable
-    private final android.view.View.OnClickListener mCallback75;
-    @Nullable
     private final android.view.View.OnClickListener mCallback77;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback78;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -184,9 +184,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback76 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback75 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback77 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback76 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback77 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback78 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -495,12 +495,12 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback77);
-            this.mboundView2.setOnClickListener(mCallback75);
+            this.appCompatButtonNext.setOnClickListener(mCallback78);
+            this.mboundView2.setOnClickListener(mCallback76);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.mboundView9.setOnClickListener(mCallback76);
+            this.mboundView9.setOnClickListener(mCallback77);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -530,23 +530,6 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.changePassword();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -561,6 +544,23 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
 
 
                     viewmodel.imageSubmit();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.changePassword();
                 }
                 break;
             }

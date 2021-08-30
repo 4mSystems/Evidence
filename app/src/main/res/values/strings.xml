@@ -110,7 +110,7 @@
     <string name="add_new_user">إضافة مستخدم جديد</string>
     <string name="daily_reports">التقارير اليومية</string>
     <string name="monthly_reports">التقارير الشهرية</string>
-    <string name="client_unit">الوحدة</string>
+    <string name="client_age">الوحدة</string>
     <string name="client_address">العنوان</string>
     <string name="client_note">الملاحظة</string>
     <string name="client_profile"> بروفايل العميل</string>
@@ -203,5 +203,8 @@
     <string name="invite_code">كود الدعوة</string>
     <string name="renew_package_dialog">يمكنك تجديد الاشتراك عن طريق نقاطك او الدفع الالكترونى</string>
     <string name="online">الدفع اونلاين</string>
+    <string name="invite">دعوة</string>
+    <string name="invite_friend">قم بالتسجيل عن طريق الكود الخاص لتربح نقاط مجانية</string>
+    <string name="client_type">نوع العميل</string>
 
 </resources>

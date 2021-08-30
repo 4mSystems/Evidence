@@ -25,13 +25,13 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback67;
+    @Nullable
     private final android.view.View.OnClickListener mCallback65;
     @Nullable
     private final android.view.View.OnClickListener mCallback64;
     @Nullable
     private final android.view.View.OnClickListener mCallback66;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback63;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,10 +73,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback63 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback64 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback64);
-            this.edit.setOnClickListener(mCallback65);
-            this.statusValue.setOnClickListener(mCallback63);
-            this.viewValue.setOnClickListener(mCallback66);
+            this.delete.setOnClickListener(mCallback65);
+            this.edit.setOnClickListener(mCallback66);
+            this.statusValue.setOnClickListener(mCallback64);
+            this.viewValue.setOnClickListener(mCallback67);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -321,7 +321,7 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
+            case 4: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
@@ -336,7 +336,7 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
 
 
 
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.NOTES);
                 }
                 break;
             }
@@ -359,25 +359,6 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
                 }
                 break;
             }
-            case 4: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.NOTES);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -394,6 +375,25 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
 
 
                     itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
                 }
                 break;
             }

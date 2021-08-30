@@ -68,7 +68,7 @@
                 android:layout_marginStart="@dimen/dp15w"
                 android:layout_marginTop="@dimen/dp12h"
                 android:layout_marginEnd="@dimen/dp4w"
-                android:text="@string/client_unit"
+                android:text="@string/client_age"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimary"

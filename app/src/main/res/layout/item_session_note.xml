@@ -93,7 +93,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/session_date_text"
+                app:layout_constraintStart_toEndOf="@+id/tv_username"
                 app:layout_constraintTop_toBottomOf="@+id/v9" />
 
             <View

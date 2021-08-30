@@ -19,7 +19,7 @@ public class Constants {
     public final static String EMAIL = "email";
     public final static String DELETE = "DELETE";
     public final static String VIEW = "VIEW";
-    public final static String NOT_MATCH_PASSWORD = "NOT_MATCH_PASSWORD";
+    public final static String INVITE = "INVITE";
 
     public final static String UPDATE_PROFILE = "update_profile";
 

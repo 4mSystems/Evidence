@@ -14,7 +14,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
-import te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel;
+import te.app.evidence.pages.points.viewModels.ItemReplacedPointsViewModel;
 
 public abstract class ItemReplacedPointsBinding extends ViewDataBinding {
   @NonNull
@@ -27,7 +27,7 @@ public abstract class ItemReplacedPointsBinding extends ViewDataBinding {
   public final CustomTextViewMedium point;
 
   @Bindable
-  protected CategoriesItemViewModel mItemViewModel;
+  protected ItemReplacedPointsViewModel mItemViewModel;
 
   protected ItemReplacedPointsBinding(Object _bindingComponent, View _root, int _localFieldCount,
       MaterialButton btnAction, CustomTextViewMedium catName, CustomTextViewMedium point) {
@@ -37,10 +37,10 @@ public abstract class ItemReplacedPointsBinding extends ViewDataBinding {
     this.point = point;
   }
 
-  public abstract void setItemViewModel(@Nullable CategoriesItemViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemReplacedPointsViewModel itemViewModel);
 
   @Nullable
-  public CategoriesItemViewModel getItemViewModel() {
+  public ItemReplacedPointsViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

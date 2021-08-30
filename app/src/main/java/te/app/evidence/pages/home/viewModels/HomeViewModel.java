@@ -105,7 +105,7 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setCommingSessionMainData(SessionMainData commingSessionMainData) {
-        if (getComingSessionsAdapter().getSessionItemList().size() > 0) {
+        if (commingSessionMainData.getCurrentPage() > 1) {
             getComingSessionsAdapter().loadMore(commingSessionMainData.getSessionItem());
         } else {
             getComingSessionsAdapter().update(commingSessionMainData.getSessionItem());
@@ -120,7 +120,7 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setPreSessionMainData(SessionMainData preSessionMainData) {
-        if (getPrevSessionsAdapter().getSessionItemList().size() > 0) {
+        if (preSessionMainData.getCurrentPage() > 1) {
             getPrevSessionsAdapter().loadMore(preSessionMainData.getSessionItem());
         } else {
             getPrevSessionsAdapter().update(preSessionMainData.getSessionItem());
@@ -135,7 +135,7 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setReportersMainData(ReportersMainData reportersMainData) {
-        if (getHomeReportersAdapter().getItemCount() > 0) {
+        if (reportersMainData.getCurrentPage() > 1) {
             getHomeReportersAdapter().loadMore(reportersMainData.getBailiffsDataList());
         } else {
             getHomeReportersAdapter().update(reportersMainData.getBailiffsDataList());

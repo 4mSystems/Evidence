@@ -4269,6 +4269,7 @@ string circle_num
 string clear_text_end_icon_content_description
 string client
 string client_address
+string client_age
 string client_data
 string client_name
 string client_note
@@ -4276,7 +4277,7 @@ string client_notes
 string client_profile
 string client_search_hint
 string client_selected
-string client_unit
+string client_type
 string client_unselected
 string client_warning
 string clients
@@ -4356,7 +4357,9 @@ string invalidEmail
 string invalidPassword
 string invalidPhone
 string inventation_type
+string invite
 string invite_code
+string invite_friend
 string item_view_role_description
 string khesm
 string khesm_selected

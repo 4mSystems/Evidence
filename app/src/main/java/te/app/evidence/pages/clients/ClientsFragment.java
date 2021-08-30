@@ -25,6 +25,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -75,7 +76,7 @@ public class ClientsFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
                 viewModel.getClientsAdapter().notifyDataSetChanged();
-                deleteDialog.dismiss();
+                viewModel.notifyChange(BR.clientsAdapter);
             }
         });
 
@@ -111,7 +112,10 @@ public class ClientsFragment extends BaseFragment {
         OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
         deleteDialog.setContentView(binding.getRoot());
         binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
-        binding.optionDone.setOnClickListener(v -> viewModel.deleteClient());
+        binding.optionDone.setOnClickListener(v -> {
+            deleteDialog.dismiss();
+            viewModel.deleteClient();
+        });
         deleteDialog.show();
     }
 
@@ -133,6 +137,7 @@ public class ClientsFragment extends BaseFragment {
                         viewModel.getClientsAdapter().notifyItemChanged(viewModel.getClientsAdapter().lastSelected);
                         binding.rcClients.scrollToPosition(viewModel.getClientsAdapter().lastSelected);
                     }
+                    viewModel.notifyChange(BR.clientsAdapter);
                 }
             }
         }

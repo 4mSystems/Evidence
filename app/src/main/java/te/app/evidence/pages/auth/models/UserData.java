@@ -122,4 +122,8 @@ public class UserData {
     public String getPackageName() {
         return packageName;
     }
+
+    public String getUser_code() {
+        return user_code;
+    }
 }

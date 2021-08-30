@@ -40,7 +40,7 @@ public class URLS {
     public final static String USERS = "users?page=";
     public final static String ADD_USER = "add_users";
     public final static String EDIT_USER = "edit_user";
-    public final static String ABOUT = "settings/about-us";
+    public final static String REPLACED_POINTS = "get_points_roles";
     public final static String TERMS = "settings/terms";
 
 
