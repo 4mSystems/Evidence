@@ -56,6 +56,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_bailiffs.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_places.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_places.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_all_case.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_all_case.xml"
     },
@@ -132,6 +136,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_session.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_place.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_place.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_categories.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_categories.xml"
     },
@@ -160,12 +168,12 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/activity_main.xml"
     },
     {
-        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_case.xml",
-        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_edit_case.xml"
-    },
-    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/package_renew_dialog.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/package_renew_dialog.xml"
+    },
+    {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_edit_case.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_edit_case.xml"
     },
     {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_case_details.xml",

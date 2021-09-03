@@ -129,6 +129,11 @@ import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel_Factory
 import te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel_MembersInjector;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment_MembersInjector;
+import te.app.evidence.pages.places.PlacesFragment;
+import te.app.evidence.pages.places.PlacesFragment_MembersInjector;
+import te.app.evidence.pages.places.viewModels.PlacesViewModel;
+import te.app.evidence.pages.places.viewModels.PlacesViewModel_Factory;
+import te.app.evidence.pages.places.viewModels.PlacesViewModel_MembersInjector;
 import te.app.evidence.pages.points.PointsFragment;
 import te.app.evidence.pages.points.PointsFragment_MembersInjector;
 import te.app.evidence.pages.points.viewModels.PointsViewModel;
@@ -390,6 +395,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectPointsViewModel(PointsViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
+  private PlacesViewModel placesViewModel() {
+    return injectPlacesViewModel(PlacesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -605,6 +614,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(PointsFragment pointsFragment) {
     injectPointsFragment(pointsFragment);
+  }
+
+  @Override
+  public void inject(PlacesFragment placesFragment) {
+    injectPlacesFragment(placesFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -968,6 +982,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private PointsFragment injectPointsFragment(PointsFragment instance) {
     PointsFragment_MembersInjector.injectViewModel(instance, pointsViewModel());
+    return instance;
+  }
+
+  private PlacesViewModel injectPlacesViewModel(PlacesViewModel instance) {
+    PlacesViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private PlacesFragment injectPlacesFragment(PlacesFragment instance) {
+    PlacesFragment_MembersInjector.injectViewModel(instance, placesViewModel());
     return instance;
   }
 

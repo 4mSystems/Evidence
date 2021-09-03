@@ -40,7 +40,7 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     @Nullable
     private final android.view.View.OnClickListener mCallback30;
     @Nullable
-    private final android.view.View.OnClickListener mCallback28;
+    private final android.view.View.OnClickListener mCallback31;
     @Nullable
     private final android.view.View.OnClickListener mCallback29;
     // values
@@ -95,9 +95,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -351,9 +351,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback29);
-            this.clientNotes.setOnClickListener(mCallback28);
-            this.mboundView11.setOnClickListener(mCallback30);
+            this.clientCases.setOnClickListener(mCallback30);
+            this.clientNotes.setOnClickListener(mCallback29);
+            this.mboundView11.setOnClickListener(mCallback31);
         }
         if ((dirtyFlags & 0x43L) != 0) {
             // api target 1
@@ -375,6 +375,23 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.cases();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -406,23 +423,6 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
 
 
                     viewmodel.notes();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.ClientProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.cases();
                 }
                 break;
             }

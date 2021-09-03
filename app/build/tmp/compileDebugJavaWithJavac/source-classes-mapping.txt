@@ -1,6 +1,8 @@
-te/app/evidence/pages/sessions/SessionNotesFragment.java
- te.app.evidence.pages.sessions.SessionNotesFragment
- te.app.evidence.pages.sessions.SessionNotesFragment$1
+te/app/evidence/pages/home/HomeFragment.java
+ te.app.evidence.pages.home.HomeFragment
+ te.app.evidence.pages.home.HomeFragment$1
+ te.app.evidence.pages.home.HomeFragment$2
+ te.app.evidence.pages.home.HomeFragment$3
 te/app/evidence/pages/cases/models/CaseClientsCategoriesData.java
  te.app.evidence.pages.cases.models.CaseClientsCategoriesData
 te/app/evidence/utils/helper/MovementHelper.java
@@ -38,6 +40,8 @@ te/app/evidence/utils/helper/LauncherInterface.java
  te.app.evidence.utils.helper.LauncherInterface$permissionInterface
 te/app/evidence/pages/home/models/HomeResponse.java
  te.app.evidence.pages.home.models.HomeResponse
+te/app/evidence/databinding/ItemPlaceBinding.java
+ te.app.evidence.databinding.ItemPlaceBinding
 te/app/evidence/databinding/ItemAllCaseBinding.java
  te.app.evidence.databinding.ItemAllCaseBinding
 te/app/evidence/pages/categories/models/AddCategoryResponse.java
@@ -46,6 +50,9 @@ te/app/evidence/pages/cases/viewModels/SearchClientsViewModel.java
  te.app.evidence.pages.cases.viewModels.SearchClientsViewModel
 te/app/evidence/databinding/FragmentUserPermissionBinding.java
  te.app.evidence.databinding.FragmentUserPermissionBinding
+te/app/evidence/pages/places/adapters/PlacesAdapter.java
+ te.app.evidence.pages.places.adapters.PlacesAdapter
+ te.app.evidence.pages.places.adapters.PlacesAdapter$ViewHolder
 te/app/evidence/pages/reports/models/ReportsData.java
  te.app.evidence.pages.reports.models.ReportsData
 te/app/evidence/pages/auth/login/LoginViewModel.java
@@ -81,10 +88,13 @@ te/app/evidence/base/LiveData.java
  te.app.evidence.base.LiveData
 te/app/evidence/pages/settings/PackagesFragment.java
  te.app.evidence.pages.settings.PackagesFragment
-te/app/evidence/pages/users/models/userPermissions/UserPermissionsData.java
- te.app.evidence.pages.users.models.userPermissions.UserPermissionsData
+te/app/evidence/pages/home/adapters/SessionsAdapter.java
+ te.app.evidence.pages.home.adapters.SessionsAdapter
+ te.app.evidence.pages.home.adapters.SessionsAdapter$ViewHolder
 te/app/evidence/pages/clients/notes/viewModels/AddNoteViewModel_Factory.java
  te.app.evidence.pages.clients.notes.viewModels.AddNoteViewModel_Factory
+te/app/evidence/pages/places/viewModels/ItemPlacesViewModel.java
+ te.app.evidence.pages.places.viewModels.ItemPlacesViewModel
 te/app/evidence/connection/Api.java
  te.app.evidence.connection.Api
 te/app/evidence/pages/reports/models/ReportsResponse.java
@@ -111,8 +121,8 @@ te/app/evidence/pages/cases/EditCaseFragment.java
  te.app.evidence.pages.cases.EditCaseFragment
 te/app/evidence/databinding/FragmentSessionsBinding.java
  te.app.evidence.databinding.FragmentSessionsBinding
-te/app/evidence/base/ApplicationComponent.java
- te.app.evidence.base.ApplicationComponent
+te/app/evidence/customViews/menu/NavigationDrawerView.java
+ te.app.evidence.customViews.menu.NavigationDrawerView
 te/app/evidence/repository/NotesRepository.java
  te.app.evidence.repository.NotesRepository
 te/app/evidence/model/base/Paginate.java
@@ -148,6 +158,8 @@ te/app/evidence/pages/users/AddUserFragment.java
  te.app.evidence.pages.users.AddUserFragment
 te/app/evidence/databinding/LayoutActionBarBackBinding.java
  te.app.evidence.databinding.LayoutActionBarBackBinding
+te/app/evidence/pages/places/viewModels/PlacesViewModel.java
+ te.app.evidence.pages.places.viewModels.PlacesViewModel
 te/app/evidence/pages/mohdrs/AddBailiffsFragment.java
  te.app.evidence.pages.mohdrs.AddBailiffsFragment
 te/app/evidence/databinding/ActivityMainBinding.java
@@ -156,6 +168,8 @@ te/app/evidence/pages/clients/viewModels/AddClientViewModel.java
  te.app.evidence.pages.clients.viewModels.AddClientViewModel
 te/app/evidence/databinding/FragmentEditCaseBinding.java
  te.app.evidence.databinding.FragmentEditCaseBinding
+te/app/evidence/pages/places/PlacesFragment.java
+ te.app.evidence.pages.places.PlacesFragment
 te/app/evidence/pages/splash/SplashFragment.java
  te.app.evidence.pages.splash.SplashFragment
 te/app/evidence/pages/reports/models/SearchReportRequest.java
@@ -163,8 +177,9 @@ te/app/evidence/pages/reports/models/SearchReportRequest.java
 te/app/evidence/pages/onBoard/OnBoardAdapter.java
  te.app.evidence.pages.onBoard.OnBoardAdapter
  te.app.evidence.pages.onBoard.OnBoardAdapter$SliderAdapterVH
-te/app/evidence/pages/categories/viewModels/AddCategoriesViewModel.java
- te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel
+te/app/evidence/pages/sessions/SessionNotesFragment.java
+ te.app.evidence.pages.sessions.SessionNotesFragment
+ te.app.evidence.pages.sessions.SessionNotesFragment$1
 te/app/evidence/pages/attachments/models/AddAttachmentRequest.java
  te.app.evidence.pages.attachments.models.AddAttachmentRequest
 te/app/evidence/pages/categories/models/AddCategoryRequest.java
@@ -183,8 +198,8 @@ te/app/evidence/databinding/ExitLayoutBinding.java
  te.app.evidence.databinding.ExitLayoutBinding
 te/app/evidence/repository/HomeRepository.java
  te.app.evidence.repository.HomeRepository
-te/app/evidence/model/base/Mutable.java
- te.app.evidence.model.base.Mutable
+te/app/evidence/base/ApplicationComponent.java
+ te.app.evidence.base.ApplicationComponent
 te/app/evidence/databinding/FragmentCaseDetailsBinding.java
  te.app.evidence.databinding.FragmentCaseDetailsBinding
 te/app/evidence/pages/mohdrs/BailiffsFragment.java
@@ -240,12 +255,13 @@ te/app/evidence/pages/cases/adapters/AllCasesAdapter.java
 te/app/evidence/pages/reports/adapters/ReportsAdapter.java
  te.app.evidence.pages.reports.adapters.ReportsAdapter
  te.app.evidence.pages.reports.adapters.ReportsAdapter$ViewHolder
-te/app/evidence/pages/mohdrs/models/AddMohdrResponse.java
- te.app.evidence.pages.mohdrs.models.AddMohdrResponse
+te/app/evidence/base/IApplicationComponent.java
+ te.app.evidence.base.IApplicationComponent
+ te.app.evidence.base.IApplicationComponent$Builder
 te/app/evidence/pages/cases/CaseClientsFragment.java
  te.app.evidence.pages.cases.CaseClientsFragment
-te/app/evidence/repository/AuthRepository.java
- te.app.evidence.repository.AuthRepository
+te/app/evidence/base/MyApplication.java
+ te.app.evidence.base.MyApplication
 te/app/evidence/databinding/FragmentRegisterBinding.java
  te.app.evidence.databinding.FragmentRegisterBinding
 te/app/evidence/pages/attachments/AttachmentsFragment.java
@@ -300,9 +316,9 @@ te/app/evidence/pages/cases/viewModels/AddCaseViewModel.java
  te.app.evidence.pages.cases.viewModels.AddCaseViewModel
 te/app/evidence/databinding/FragmentSearchClientsBinding.java
  te.app.evidence.databinding.FragmentSearchClientsBinding
-te/app/evidence/pages/home/adapters/SessionsAdapter.java
- te.app.evidence.pages.home.adapters.SessionsAdapter
- te.app.evidence.pages.home.adapters.SessionsAdapter$ViewHolder
+te/app/evidence/pages/users/UsersFragment.java
+ te.app.evidence.pages.users.UsersFragment
+ te.app.evidence.pages.users.UsersFragment$1
 te/app/evidence/pages/points/models/ReplacedPoints.java
  te.app.evidence.pages.points.models.ReplacedPoints
 te/app/evidence/databinding/ItemUserBinding.java
@@ -444,6 +460,8 @@ te/app/evidence/pages/clients/models/ClientsMainData.java
  te.app.evidence.pages.clients.models.ClientsMainData
 te/app/evidence/pages/mohdrs/viewModels/ReportersDetailsViewModel.java
  te.app.evidence.pages.mohdrs.viewModels.ReportersDetailsViewModel
+te/app/evidence/pages/places/models/PlacesData.java
+ te.app.evidence.pages.places.models.PlacesData
 te/app/evidence/pages/users/models/SystemUserData.java
  te.app.evidence.pages.users.models.SystemUserData
 te/app/evidence/pages/sessions/models/SessionNotesResponse.java
@@ -555,6 +573,8 @@ te/app/evidence/databinding/FragmentHomeBinding.java
  te.app.evidence.databinding.FragmentHomeBinding
 te/app/evidence/databinding/FragmentAddUserBinding.java
  te.app.evidence.databinding.FragmentAddUserBinding
+te/app/evidence/databinding/FragmentPlacesBinding.java
+ te.app.evidence.databinding.FragmentPlacesBinding
 te/app/evidence/pages/cases/models/caseDetails/CaseDetails.java
  te.app.evidence.pages.cases.models.caseDetails.CaseDetails
 te/app/evidence/pages/reports/models/ReportsMain.java
@@ -682,18 +702,15 @@ te/app/evidence/pages/cases/CaseDetailsFragment.java
  te.app.evidence.pages.cases.CaseDetailsFragment
 te/app/evidence/pages/cases/models/cases/AddCaseResponse.java
  te.app.evidence.pages.cases.models.cases.AddCaseResponse
-te/app/evidence/pages/users/UsersFragment.java
- te.app.evidence.pages.users.UsersFragment
- te.app.evidence.pages.users.UsersFragment$1
-te/app/evidence/pages/home/HomeFragment.java
- te.app.evidence.pages.home.HomeFragment
- te.app.evidence.pages.home.HomeFragment$1
- te.app.evidence.pages.home.HomeFragment$2
- te.app.evidence.pages.home.HomeFragment$3
-te/app/evidence/base/IApplicationComponent.java
- te.app.evidence.base.IApplicationComponent
- te.app.evidence.base.IApplicationComponent$Builder
-te/app/evidence/customViews/menu/NavigationDrawerView.java
- te.app.evidence.customViews.menu.NavigationDrawerView
-te/app/evidence/base/MyApplication.java
- te.app.evidence.base.MyApplication
+te/app/evidence/pages/users/models/userPermissions/UserPermissionsData.java
+ te.app.evidence.pages.users.models.userPermissions.UserPermissionsData
+te/app/evidence/pages/places/models/PlacesResponse.java
+ te.app.evidence.pages.places.models.PlacesResponse
+te/app/evidence/pages/categories/viewModels/AddCategoriesViewModel.java
+ te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel
+te/app/evidence/repository/AuthRepository.java
+ te.app.evidence.repository.AuthRepository
+te/app/evidence/pages/mohdrs/models/AddMohdrResponse.java
+ te.app.evidence.pages.mohdrs.models.AddMohdrResponse
+te/app/evidence/model/base/Mutable.java
+ te.app.evidence.model.base.Mutable

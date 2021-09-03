@@ -103,7 +103,7 @@ public class Constants {
     public static final int EDIT_CASE_REQUEST = 6004;
     public static final String CASE_ATTACHMENTS = "CASE_ATTACHMENTS";
     public static final String POINTS = "POINTS";
-    public static final String TERMS = "terms";
+    public static final String SHOW_GOVS = "SHOW_GOVS";
     public static final String FIELD = "FIELD";
     public static final String LOGIN = "login";
     public static final String NOTES = "NOTES";

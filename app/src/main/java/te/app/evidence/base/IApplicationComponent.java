@@ -6,6 +6,7 @@ import dagger.Component;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
 import te.app.evidence.connection.ConnectionModule;
+import te.app.evidence.pages.places.PlacesFragment;
 import te.app.evidence.pages.attachments.AddAttachmentFragment;
 import te.app.evidence.pages.attachments.AttachmentsFragment;
 import te.app.evidence.pages.auth.changePassword.ChangePasswordFragment;
@@ -35,6 +36,8 @@ import te.app.evidence.pages.points.PointsFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
+import te.app.evidence.pages.services.AddServiceFragment;
+import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
 import te.app.evidence.pages.sessions.SessionsFragment;
@@ -127,6 +130,12 @@ public interface IApplicationComponent {
     void inject(PackagesFragment packagesFragment);
 
     void inject(PointsFragment pointsFragment);
+
+    void inject(PlacesFragment placesFragment);
+
+    void inject(ServicesFragment servicesFragment);
+
+    void inject(AddServiceFragment addServiceFragment);
 
     @Component.Builder
     interface Builder {

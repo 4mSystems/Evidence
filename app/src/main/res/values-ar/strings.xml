@@ -4,7 +4,7 @@
     <string name="camera">Camera</string>
     <string name="design_program">Design and programming</string>
     <string name="call_grand">Contact</string>
-    <string name="whats">What\'s app</string>
+    <string name="whats">الواتس اب</string>
     <string name="call">Contact</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -206,5 +206,10 @@
     <string name="invite">دعوة</string>
     <string name="invite_friend">قم بالتسجيل عن طريق الكود الخاص لتربح نقاط مجانية</string>
     <string name="client_type">نوع العميل</string>
+    <string name="gov_hint">اختر المحافظة</string>
+    <string name="service_title">عنوان الخدمة</string>
+    <string name="service_price">سعر الخدمة المتوقع</string>
+    <string name="description">يرجى كتابة تفاصيل اخرى عن الخدمة </string>
+    <string name="add_image_optional">صورة توضيحية للخدمة (إختيارى)</string>
 
 </resources>

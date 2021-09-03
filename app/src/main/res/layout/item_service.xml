@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="itemViewModel"
+            type="te.app.evidence.pages.places.viewModels.ItemPlacesViewModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        app:cardCornerRadius="@dimen/dp6h"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_place"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp50h"
+                android:layout_margin="@dimen/dp6h"
+                android:src="@drawable/splash"
+                app:civ_border_color="@color/background_gray"
+                app:civ_border_width="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="Mostafa Elnagar"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintEnd_toStartOf="@+id/flow"
+                app:layout_constraintStart_toEndOf="@id/ic_place"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10"
+                app:backgroundTint="@color/flat_red_1"
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textEnd"
+                app:iconPadding="@dimen/dp2w"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/medium_color" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/edit"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10"
+                app:backgroundTint="@color/colorPrimaryDark"
+                app:icon="@drawable/ic_edit"
+                app:iconGravity="textEnd"
+                app:iconPadding="@dimen/dp2w"
+                app:iconTint="@color/white"
+                app:rippleColor="@color/medium_color" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp6w"
+                app:constraint_referenced_ids="delete,edit"
+                app:flow_maxElementsWrap="1"
+                app:flow_verticalStyle="packed"
+                app:flow_wrapMode="chain"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/user_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:src="@drawable/ic_telephone"
+                app:layout_constraintStart_toEndOf="@id/ic_place"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_whats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:src="@drawable/ic_whatsapp"
+                app:layout_constraintStart_toEndOf="@id/ic_phone"
+                app:layout_constraintTop_toBottomOf="@id/user_name" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/br"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="flow,ic_place" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp4h"
+                android:text="اريد محضر من محكمة القاهره "
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/br" />
+
+            <te.app.evidence.customViews.views.ExpandableTextView
+                android:id="@+id/tv_desc_post"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6w"
+                android:text="لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية. ويكيبيديا"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:trimLength="150" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_live"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp120w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:scaleType="centerCrop"
+                android:src="@drawable/splash"
+                app:layout_constraintTop_toBottomOf="@id/tv_desc_post" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

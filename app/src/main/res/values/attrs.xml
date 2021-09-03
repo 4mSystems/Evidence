@@ -17,8 +17,7 @@
         <attr name="backStrokeColor" format="color|reference" />
         <attr name="animationMode" />
     </declare-styleable>
-<!--    <attr name="animationMode">-->
-<!--        <enum name="linear" value="0" />-->
-<!--&lt;!&ndash;        <enum name="overdraw" value="1" />&ndash;&gt;-->
-<!--    </attr>-->
+    <declare-styleable name="ExpandableTextView">
+        <attr name="trimLength" format="integer"/>
+    </declare-styleable>
 </resources>

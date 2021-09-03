@@ -3114,6 +3114,7 @@ drawable ic_contact
 drawable ic_download
 drawable ic_email
 drawable ic_error_outline_white_24dp
+drawable ic_estate_location
 drawable ic_home
 drawable ic_info_outline_white_24dp
 drawable ic_invite_code
@@ -3132,6 +3133,8 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_no_wifi_1
 drawable ic_no_wifi_2
 drawable ic_note_add
+drawable ic_pin_court
+drawable ic_police_station
 drawable ic_profile_camera
 drawable ic_renew
 drawable ic_report_search
@@ -3270,6 +3273,7 @@ id actions
 id activity_chooser_view_content
 id add
 id add_case
+id address
 id agree
 id alertTitle
 id aligned
@@ -3492,6 +3496,7 @@ id horizontal_only
 id ib_close
 id ic_business_report
 id ic_img
+id ic_place
 id ic_resource
 id icon
 id icon_group
@@ -3690,6 +3695,7 @@ id postLayout
 id previousSessions
 id previous_session_rc
 id print
+id product_name
 id progress
 id progress_bar_home
 id progress_circular
@@ -3706,6 +3712,7 @@ id rc_client_notes
 id rc_clients
 id rc_filter
 id rc_notes
+id rc_products
 id rectangle
 id rectangles
 id restart
@@ -3743,6 +3750,7 @@ id search_case
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_input
 id search_mag_icon
 id search_plate
 id search_src_text
@@ -4079,6 +4087,7 @@ layout fragment_login
 layout fragment_monthly_reports
 layout fragment_onboard
 layout fragment_packages
+layout fragment_places
 layout fragment_points
 layout fragment_profile
 layout fragment_register
@@ -4101,6 +4110,7 @@ layout item_drop_category
 layout item_home_reporter
 layout item_note
 layout item_package
+layout item_place
 layout item_replaced_points
 layout item_report
 layout item_session
@@ -4350,6 +4360,7 @@ string google_app_id
 string google_crash_reporting_api_key
 string google_map
 string google_storage_bucket
+string gov_hint
 string hide_bottom_view_on_scroll_behavior
 string home_search_hint
 string icon_content_description

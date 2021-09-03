@@ -206,5 +206,10 @@
     <string name="invite">دعوة</string>
     <string name="invite_friend">قم بالتسجيل عن طريق الكود الخاص لتربح نقاط مجانية</string>
     <string name="client_type">نوع العميل</string>
+    <string name="gov_hint">اختر المحافظة</string>
+    <string name="service_title">عنوان الخدمة</string>
+    <string name="service_price">سعر الخدمة المتوقع</string>
+    <string name="description">"يرجى كتابة تفاصيل اخرى عن الخدمة "</string>
+    <string name="add_image_optional">صورة توضيحية للخدمة (إختيارى)</string>
 
 </resources>
