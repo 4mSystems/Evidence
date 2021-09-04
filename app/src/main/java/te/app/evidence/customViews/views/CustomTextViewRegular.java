@@ -38,6 +38,7 @@ public class CustomTextViewRegular extends AppCompatTextView {
             Typeface font = null;
             font = Typeface.createFromAsset(getContext().getAssets(), "fonts/font_regular.otf");
             setTypeface(font);
+            setLineSpacing(1.4f, 1.3f);
         }
 
     }

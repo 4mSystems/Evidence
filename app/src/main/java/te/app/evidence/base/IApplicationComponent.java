@@ -6,6 +6,7 @@ import dagger.Component;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
 import te.app.evidence.connection.ConnectionModule;
+import te.app.evidence.pages.home.MainHomeFragment;
 import te.app.evidence.pages.places.PlacesFragment;
 import te.app.evidence.pages.attachments.AddAttachmentFragment;
 import te.app.evidence.pages.attachments.AttachmentsFragment;
@@ -136,6 +137,8 @@ public interface IApplicationComponent {
     void inject(ServicesFragment servicesFragment);
 
     void inject(AddServiceFragment addServiceFragment);
+
+    void inject(MainHomeFragment mainHomeFragment);
 
     @Component.Builder
     interface Builder {

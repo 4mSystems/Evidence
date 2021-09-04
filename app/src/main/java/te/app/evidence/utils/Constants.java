@@ -138,5 +138,11 @@ public class Constants {
     public static final String PDF = "pdf";
     public static final String BOARD = "board";
     public static final String MENu = "menu";
+    public static final String SERVICES = "SERVICES";
+    public static final String LOCATIONS = "LOCATIONS";
+    public static final String PLACES_BY_GOVERN = "PLACES_BY_GOVERN";
+    public static final String COURT = "محكمة";
+    public static final String POLICE_STATION = "قسم شرطة";
+    public static final String Real_estate_month = "شهر عقاري";
 }
 

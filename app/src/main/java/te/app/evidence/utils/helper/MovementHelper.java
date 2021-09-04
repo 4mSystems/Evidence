@@ -200,7 +200,7 @@ public class MovementHelper {
     public static void startActivityMain(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
-        ((Activity) context).finishAffinity();
+//        ((Activity) context).finishAffinity();
     }
 
 

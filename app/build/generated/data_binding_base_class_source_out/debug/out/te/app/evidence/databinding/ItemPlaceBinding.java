@@ -6,14 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.pages.places.viewModels.ItemPlacesViewModel;
 
 public abstract class ItemPlaceBinding extends ViewDataBinding {
@@ -21,20 +22,29 @@ public abstract class ItemPlaceBinding extends ViewDataBinding {
   public final CustomTextViewMedium address;
 
   @NonNull
-  public final CircleImageView icPlace;
+  public final AppCompatImageView icPlace;
 
   @NonNull
-  public final CustomTextViewMedium productName;
+  public final AppCompatImageView icShare;
+
+  @NonNull
+  public final CustomTextViewRegular tvMap;
+
+  @NonNull
+  public final CustomTextViewMedium userName;
 
   @Bindable
   protected ItemPlacesViewModel mItemViewModel;
 
   protected ItemPlaceBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CustomTextViewMedium address, CircleImageView icPlace, CustomTextViewMedium productName) {
+      CustomTextViewMedium address, AppCompatImageView icPlace, AppCompatImageView icShare,
+      CustomTextViewRegular tvMap, CustomTextViewMedium userName) {
     super(_bindingComponent, _root, _localFieldCount);
     this.address = address;
     this.icPlace = icPlace;
-    this.productName = productName;
+    this.icShare = icShare;
+    this.tvMap = tvMap;
+    this.userName = userName;
   }
 
   public abstract void setItemViewModel(@Nullable ItemPlacesViewModel itemViewModel);

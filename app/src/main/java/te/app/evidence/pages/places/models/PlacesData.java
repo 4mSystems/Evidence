@@ -4,38 +4,44 @@ import com.google.gson.annotations.SerializedName;
 
 public class PlacesData {
 
-	@SerializedName("image")
-	private String image;
+    @SerializedName("lat")
+    private String lat;
+    @SerializedName("long")
+    private String lng;
 
-	@SerializedName("address")
-	private String address;
+    @SerializedName("address")
+    private String address;
 
-	@SerializedName("phone")
-	private String phone;
+    @SerializedName("type")
+    private String type;
 
-	@SerializedName("name")
-	private String name;
+    @SerializedName("name")
+    private String name;
 
-	@SerializedName("id")
-	private int id;
+    @SerializedName("id")
+    private int id;
 
-	public String getImage(){
-		return image;
-	}
+    public String getLat() {
+        return lat;
+    }
 
-	public String getAddress(){
-		return address;
-	}
+    public String getLng() {
+        return lng;
+    }
 
-	public String getPhone(){
-		return phone;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getName(){
-		return name;
-	}
+    public String getType() {
+        return type;
+    }
 
-	public int getId(){
-		return id;
-	}
+    public String getName() {
+        return name;
+    }
+
+    public int getId() {
+        return id;
+    }
 }

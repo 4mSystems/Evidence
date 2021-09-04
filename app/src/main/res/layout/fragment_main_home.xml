@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <import type="te.app.evidence.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.evidence.pages.home.viewModels.HomeViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_main_img"
+                android:layout_width="@dimen/dp110w"
+                android:layout_height="@dimen/dp110h"
+                android:layout_margin="@dimen/dp10h"
+                android:src="@color/white"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ic_user_img"
+                android:layout_width="@dimen/dp100w"
+                android:layout_height="@dimen/dp100h"
+                android:src="@drawable/splash"
+                app:imageMarketUrl="@{viewmodel.userData.userData.image}"
+                app:layout_constraintBottom_toBottomOf="@id/ic_main_img"
+                app:layout_constraintEnd_toEndOf="@id/ic_main_img"
+                app:layout_constraintStart_toStartOf="@+id/ic_main_img"
+                app:layout_constraintTop_toTopOf="@+id/ic_main_img" />
+
+            <te.app.evidence.customViews.views.CustomTextViewRegular
+                android:id="@+id/t_points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/points"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimary" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/t_points_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.userData.userData.my_points}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="t_points,t_points_value"
+                app:flow_maxElementsWrap="1"
+                app:flow_verticalGap="@dimen/dp8h"
+                app:flow_verticalStyle="spread_inside"
+                app:flow_wrapMode="chain"
+                app:layout_constraintBottom_toBottomOf="@id/ic_main_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@id/ic_main_img" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:background="@color/line_color"
+                app:layout_constraintBottom_toBottomOf="@id/ic_main_img"
+                app:layout_constraintEnd_toStartOf="@+id/flow3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/ic_main_img"
+                app:layout_constraintTop_toTopOf="@id/ic_main_img" />
+
+            <te.app.evidence.customViews.views.CustomTextViewRegular
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:text="@string/welcome"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/medium_color"
+                app:layout_constraintStart_toStartOf="@id/ic_main_img"
+                app:layout_constraintTop_toBottomOf="@id/ic_main_img" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp4w"
+                android:layout_marginTop="@dimen/dp10h"
+                android:text="@{viewmodel.userData.userData.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/welcome"
+                app:layout_constraintTop_toBottomOf="@id/ic_main_img" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_office"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:onClick="@{()-> viewmodel.buttonAction(Constants.HOME)}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ic_main_img"
+                app:layout_constraintTop_toBottomOf="@id/tv_username">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_office"
+                        android:layout_width="@dimen/dp50w"
+                        android:layout_height="@dimen/dp50h"
+                        android:layout_margin="@dimen/dp8h"
+                        android:src="@drawable/logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:text="@string/office"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toEndOf="@+id/ic_office"
+                        app:layout_constraintTop_toTopOf="@+id/ic_office" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:layout_marginBottom="@dimen/dp4h"
+                        android:text="@string/office_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_color"
+                        android:textSize="@dimen/sp10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/fb_office"
+                        app:layout_constraintStart_toEndOf="@+id/ic_office"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_office" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fb_office"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:contentDescription="@string/app_name"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:onClick="@{()-> viewmodel.buttonAction(Constants.HOME)}"
+                        android:src="@drawable/ic_left"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabCustomSize="@dimen/dp20h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rippleColor="@color/medium_color"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_services"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:onClick="@{()-> viewmodel.buttonAction(Constants.SERVICES)}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ic_main_img"
+                app:layout_constraintTop_toBottomOf="@id/card_office">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_court_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp8h"
+                        android:src="@drawable/ic_marketing"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:text="@string/services"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toEndOf="@+id/ic_court_services"
+                        app:layout_constraintTop_toTopOf="@+id/ic_court_services" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:layout_marginBottom="@dimen/dp4h"
+                        android:text="@string/services_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_color"
+                        android:textSize="@dimen/sp10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/fb_services"
+                        app:layout_constraintStart_toEndOf="@+id/ic_court_services"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_service" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fb_services"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="@{()-> viewmodel.buttonAction(Constants.SERVICES)}"
+                        android:src="@drawable/ic_left"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabCustomSize="@dimen/dp20h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rippleColor="@color/medium_color"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_locations"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:onClick="@{()-> viewmodel.buttonAction(Constants.LOCATIONS)}"
+                app:cardCornerRadius="@dimen/dp8h"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/ic_main_img"
+                app:layout_constraintTop_toBottomOf="@id/card_services">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ic_locations"
+                        android:layout_width="@dimen/dp50w"
+                        android:layout_height="@dimen/dp50h"
+                        android:layout_margin="@dimen/dp8h"
+                        android:src="@drawable/ic_estate_location"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewMedium
+                        android:id="@+id/tv_locations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginTop="@dimen/dp8h"
+                        android:text="@string/location"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/colordark"
+                        app:layout_constraintStart_toEndOf="@+id/ic_locations"
+                        app:layout_constraintTop_toTopOf="@+id/ic_locations" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp12w"
+                        android:layout_marginEnd="@dimen/dp6w"
+                        android:layout_marginBottom="@dimen/dp4h"
+                        android:text="@string/locations_desc"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/medium_color"
+                        android:textSize="@dimen/sp10"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/fb_locations"
+                        app:layout_constraintStart_toEndOf="@+id/ic_locations"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_locations" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fb_locations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp8w"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="@{()-> viewmodel.buttonAction(Constants.LOCATIONS)}"
+                        android:src="@drawable/ic_left"
+                        app:backgroundTint="@color/colorPrimary"
+                        app:fabCustomSize="@dimen/dp20h"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:rippleColor="@color/medium_color"
+                        app:tint="@color/white" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import com.google.android.material.textfield.TextInputEditText;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -22,21 +23,29 @@ public abstract class FragmentPlacesBinding extends ViewDataBinding {
   public final LottieAnimationView pbBaseLoadingBar;
 
   @NonNull
-  public final RecyclerView rcProducts;
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcPlaces;
 
   @NonNull
   public final TextInputEditText searchInput;
+
+  @NonNull
+  public final TextInputEditText searchType;
 
   @Bindable
   protected PlacesViewModel mViewmodel;
 
   protected FragmentPlacesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LottieAnimationView pbBaseLoadingBar, RecyclerView rcProducts,
-      TextInputEditText searchInput) {
+      LottieAnimationView pbBaseLoadingBar, CircularProgressIndicator progress,
+      RecyclerView rcPlaces, TextInputEditText searchInput, TextInputEditText searchType) {
     super(_bindingComponent, _root, _localFieldCount);
     this.pbBaseLoadingBar = pbBaseLoadingBar;
-    this.rcProducts = rcProducts;
+    this.progress = progress;
+    this.rcPlaces = rcPlaces;
     this.searchInput = searchInput;
+    this.searchType = searchType;
   }
 
   public abstract void setViewmodel(@Nullable PlacesViewModel viewmodel);

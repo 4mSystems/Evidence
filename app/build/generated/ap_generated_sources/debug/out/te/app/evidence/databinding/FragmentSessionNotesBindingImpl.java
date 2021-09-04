@@ -26,7 +26,7 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
     @Nullable
     private final android.view.View.OnClickListener mCallback2;
     @Nullable
-    private final android.view.View.OnClickListener mCallback1;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -91,8 +91,8 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback1 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback2 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -280,8 +280,8 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView6.setOnClickListener(mCallback2);
-            this.search.setOnClickListener(mCallback1);
+            this.mboundView6.setOnClickListener(mCallback3);
+            this.search.setOnClickListener(mCallback2);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -304,23 +304,6 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toAddNote();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -337,6 +320,23 @@ public class FragmentSessionNotesBindingImpl extends FragmentSessionNotesBinding
 
 
                     viewmodel.search(1, true);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.sessions.viewModels.SessionNotesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toAddNote();
                 }
                 break;
             }

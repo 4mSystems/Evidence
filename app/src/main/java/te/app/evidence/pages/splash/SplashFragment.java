@@ -22,6 +22,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.R;
 import te.app.evidence.databinding.FragmentSplashBinding;
 import te.app.evidence.pages.auth.login.LoginFragment;
+import te.app.evidence.pages.home.MainHomeFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
@@ -49,7 +50,7 @@ public class SplashFragment extends BaseFragment {
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.DEFAULT_LANGUAGE)) {
                 if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
-                    MovementHelper.startActivityMain(context);
+                    MovementHelper.startActivityBase(context, MainHomeFragment.class.getName(), getString(R.string.menuHome), null);
                 } else {
                     if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
                         MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);

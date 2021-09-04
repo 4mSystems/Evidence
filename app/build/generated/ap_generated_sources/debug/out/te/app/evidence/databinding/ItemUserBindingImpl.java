@@ -31,11 +31,11 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback35;
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
-    private final android.view.View.OnClickListener mCallback33;
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
-    private final android.view.View.OnClickListener mCallback34;
+    private final android.view.View.OnClickListener mCallback44;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -79,9 +79,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         this.v5.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -258,9 +258,9 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback34);
-            this.edit.setOnClickListener(mCallback35);
-            this.permission.setOnClickListener(mCallback33);
+            this.delete.setOnClickListener(mCallback43);
+            this.edit.setOnClickListener(mCallback44);
+            this.permission.setOnClickListener(mCallback42);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -284,7 +284,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
@@ -297,7 +297,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toEdit();
+                    itemViewModel.toDelete();
                 }
                 break;
             }
@@ -318,7 +318,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 }
                 break;
             }
-            case 2: {
+            case 3: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.users.viewModels.UserItemViewModel itemViewModel = mItemViewModel;
@@ -331,7 +331,7 @@ public class ItemUserBindingImpl extends ItemUserBinding implements te.app.evide
                 if (itemViewModelJavaLangObjectNull) {
 
 
-                    itemViewModel.toDelete();
+                    itemViewModel.toEdit();
                 }
                 break;
             }

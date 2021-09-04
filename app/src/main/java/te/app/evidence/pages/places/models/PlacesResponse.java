@@ -10,9 +10,9 @@ import te.app.evidence.model.base.StatusMessage;
 public class PlacesResponse extends StatusMessage {
 
     @SerializedName("data")
-    private List<PlacesData> data;
+    private PlacesMain placesMain;
 
-    public List<PlacesData> getData() {
-        return data;
+    public PlacesMain getPlacesMain() {
+        return placesMain;
     }
 }

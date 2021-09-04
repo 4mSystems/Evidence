@@ -24,9 +24,9 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback98;
+    private final android.view.View.OnClickListener mCallback110;
     @Nullable
-    private final android.view.View.OnClickListener mCallback97;
+    private final android.view.View.OnClickListener mCallback109;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -53,8 +53,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback98 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback97 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback110 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback109 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -210,8 +210,8 @@ public class ItemNoteBindingImpl extends ItemNoteBinding implements te.app.evide
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback97);
-            this.edit.setOnClickListener(mCallback98);
+            this.delete.setOnClickListener(mCallback109);
+            this.edit.setOnClickListener(mCallback110);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

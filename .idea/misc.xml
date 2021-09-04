@@ -13,14 +13,18 @@
         <entry key="app/src/main/res/drawable/ic_add_session.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_add_user.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_attachments.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_best_price.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/drawable/ic_business_report.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/drawable/ic_cloud_upload.xml" value="0.32788559754851887" />
         <entry key="app/src/main/res/drawable/ic_contact.xml" value="0.315625" />
+        <entry key="app/src/main/res/drawable/ic_court_services.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_delete.xml" value="0.33489583333333334" />
         <entry key="app/src/main/res/drawable/ic_estate_location.xml" value="0.33489583333333334" />
+        <entry key="app/src/main/res/drawable/ic_forward.xml" value="0.32482124616956076" />
         <entry key="app/src/main/res/drawable/ic_image_type.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_logout_warning.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_marketing.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_more.xml" value="0.16614583333333333" />
         <entry key="app/src/main/res/drawable/ic_move.xml" value="0.16614583333333333" />
         <entry key="app/src/main/res/drawable/ic_pdf.xml" value="0.371875" />
@@ -33,6 +37,7 @@
         <entry key="app/src/main/res/drawable/ic_reports.xml" value="0.315625" />
         <entry key="app/src/main/res/drawable/ic_resource_package.xml" value="0.2942708333333333" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.209375" />
+        <entry key="app/src/main/res/drawable/ic_share_location.xml" value="0.33125" />
         <entry key="app/src/main/res/drawable/ic_telephone.xml" value="0.32839632277834524" />
         <entry key="app/src/main/res/drawable/ic_user_delete.xml" value="0.33489583333333334" />
         <entry key="app/src/main/res/drawable/ic_warning.xml" value="0.209375" />
@@ -67,6 +72,7 @@
         <entry key="app/src/main/res/layout/fragment_forget_password.xml" value="0.3463541666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.6001757469244289" />
+        <entry key="app/src/main/res/layout/fragment_main_home.xml" value="0.4642301710730949" />
         <entry key="app/src/main/res/layout/fragment_monthly_reports.xml" value="0.14326059050064185" />
         <entry key="app/src/main/res/layout/fragment_packages.xml" value="0.26927083333333335" />
         <entry key="app/src/main/res/layout/fragment_places.xml" value="0.33" />
@@ -78,6 +84,7 @@
         <entry key="app/src/main/res/layout/fragment_sessions.xml" value="0.507360157016683" />
         <entry key="app/src/main/res/layout/fragment_user_permission.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_users.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/govern_dialog.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/item_all_case.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_attachment.xml" value="0.5" />
         <entry key="app/src/main/res/layout/item_bailiffs.xml" value="0.19322916666666667" />
@@ -86,9 +93,10 @@
         <entry key="app/src/main/res/layout/item_client_tags.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_clients.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_drop_category.xml" value="0.17255434782608695" />
+        <entry key="app/src/main/res/layout/item_govern.xml" value="0.3109375" />
         <entry key="app/src/main/res/layout/item_note.xml" value="0.19322916666666667" />
         <entry key="app/src/main/res/layout/item_package.xml" value="0.5" />
-        <entry key="app/src/main/res/layout/item_place.xml" value="0.51661918328585" />
+        <entry key="app/src/main/res/layout/item_place.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_replaced_points.xml" value="0.29528985507246375" />
         <entry key="app/src/main/res/layout/item_report.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_service.xml" value="0.5" />

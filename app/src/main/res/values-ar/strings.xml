@@ -211,5 +211,16 @@
     <string name="service_price">سعر الخدمة المتوقع</string>
     <string name="description">يرجى كتابة تفاصيل اخرى عن الخدمة </string>
     <string name="add_image_optional">صورة توضيحية للخدمة (إختيارى)</string>
+    <string name="services">الخدمات</string>
+    <string name="services_desc">يمكنك إضافة خدمة او التسجيل في خدمة لتربح مزيد من الاموال</string>
+    <string name="office">المكتب</string>
+    <string name="office_desc"> اداره مكتبك وتفقد الدعاوى ,الجلسات و العملاء </string>
+    <string name="location">العناوين المهمة</string>
+    <string name="locations_desc">تصفح العناوين المهمة … أقسام الشرطة , المحاكم و الشهر العقارى</string>
+    <string name="welcome">مرحبا مجددا ,</string>
+    <string name="search_govern">إبحث باسم المحافظة</string>
+    <string name="station">أقسام الشرطة</string>
+    <string name="real_estate_month">الشهر العقارى</string>
+    <string name="map">الخريطة</string>
 
 </resources>

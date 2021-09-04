@@ -1,5 +1,6 @@
 package te.app.evidence.pages.places.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,8 @@ import te.app.evidence.R;
 import te.app.evidence.databinding.ItemPlaceBinding;
 import te.app.evidence.pages.places.models.PlacesData;
 import te.app.evidence.pages.places.viewModels.ItemPlacesViewModel;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.helper.AppHelper;
 
 
 public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder> {
@@ -26,6 +29,10 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
 
     public PlacesAdapter() {
         this.placesDataList = new ArrayList<>();
+    }
+
+    public List<PlacesData> getPlacesDataList() {
+        return placesDataList;
     }
 
     @NonNull
@@ -42,6 +49,12 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         PlacesData product = placesDataList.get(position);
         ItemPlacesViewModel itemMenuViewModel = new ItemPlacesViewModel(product);
+        itemMenuViewModel.getLiveData().observeForever(o -> {
+            if (Constants.LOCATIONS == o)
+                AppHelper.startAndroidGoogleMap(context, product.getLat(), product.getLng());
+            else
+                AppHelper.shareCustom((Activity) context, product.getName(), product.getAddress().concat("\n").concat(AppHelper.mapLink(product.getLat(), product.getLng())));
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 
@@ -50,6 +63,12 @@ public class PlacesAdapter extends RecyclerView.Adapter<PlacesAdapter.ViewHolder
         this.placesDataList.clear();
         placesDataList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<PlacesData> dataList) {
+        int start = placesDataList.size();
+        placesDataList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override

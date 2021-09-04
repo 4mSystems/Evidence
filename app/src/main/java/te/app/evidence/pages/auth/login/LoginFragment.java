@@ -26,6 +26,7 @@ import te.app.evidence.pages.auth.confirmCode.ConfirmCodeFragment;
 import te.app.evidence.pages.auth.forgetPassword.ForgetPasswordFragment;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.auth.register.RegisterFragment;
+import te.app.evidence.pages.home.MainHomeFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.session.UserHelper;
@@ -54,7 +55,7 @@ public class LoginFragment extends BaseFragment {
                 case Constants.LOGIN:
                     toastMessage(((UsersResponse) mutable.object).mMessage);
                     UserHelper.getInstance(context).userLogin(((UsersResponse) ((Mutable) o).object).getData());
-                    MovementHelper.startActivityMain(context);
+                    MovementHelper.startActivityBase(context, MainHomeFragment.class.getName(), getString(R.string.menuHome), null);
                     break;
                 case Constants.FORGET_PASSWORD:
                     MovementHelper.startActivityWithBundle(context, new PassingObject(Constants.FORGET_PASSWORD), null, ForgetPasswordFragment.class.getName(), null);

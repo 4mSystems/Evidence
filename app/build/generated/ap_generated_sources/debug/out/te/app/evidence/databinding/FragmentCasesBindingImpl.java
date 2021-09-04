@@ -22,7 +22,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
     private final com.airbnb.lottie.LottieAnimationView mboundView5;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback25;
+    private final android.view.View.OnClickListener mCallback28;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -85,7 +85,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback28 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -278,7 +278,7 @@ public class FragmentCasesBindingImpl extends FragmentCasesBinding implements te
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.search.setOnClickListener(mCallback25);
+            this.search.setOnClickListener(mCallback28);
         }
     }
     // Listener Stub Implementations

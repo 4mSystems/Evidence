@@ -8,6 +8,8 @@
 
         <import type="android.view.View" />
 
+        <import type="te.app.evidence.utils.Constants" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.places.viewModels.ItemPlacesViewModel" />
@@ -24,41 +26,67 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ic_place"
                 android:layout_width="@dimen/dp50w"
                 android:layout_height="@dimen/dp50h"
                 android:layout_margin="@dimen/dp6h"
-                android:src="@drawable/ic_estate_location"
+                android:onClick="@{()->itemViewModel.itemAction(Constants.LOCATIONS)}"
+                android:src="@{itemViewModel.placesData.type.equals(Constants.Real_estate_month)?@drawable/ic_estate_location:itemViewModel.placesData.type.equals(Constants.COURT)?@drawable/ic_pin_court:@drawable/ic_police_station}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.evidence.customViews.views.CustomTextViewRegular
+                android:id="@+id/tv_map"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_view_primary_dark_home"
+                android:onClick="@{()->itemViewModel.itemAction(Constants.LOCATIONS)}"
+                android:text="@string/map"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp8_5"
+                app:layout_constraintEnd_toEndOf="@id/ic_place"
+                app:layout_constraintStart_toStartOf="@id/ic_place"
+                app:layout_constraintTop_toBottomOf="@id/ic_place" />
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/user_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
-                android:text="محكمة شمال القاهره"
+                android:text="@{itemViewModel.placesData.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorPrimaryDark"
                 app:layout_constraintBottom_toBottomOf="@id/ic_place"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_share"
                 app:layout_constraintStart_toEndOf="@id/ic_place"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@id/ic_place" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ic_share"
+                android:onClick="@{()->itemViewModel.itemAction(Constants.SHARE_BAR)}"
+                app:layout_constraintTop_toTopOf="@id/ic_place"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/dp6h"
+                android:src="@drawable/ic_share_location"/>
+
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/address"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp4h"
-                android:text="العباسية، عباسية، الوايلى، محافظة القاهرة‬"
+                android:layout_margin="@dimen/dp8h"
+                android:text="@{itemViewModel.placesData.address}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colordark"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ic_place" />
+                app:layout_constraintTop_toBottomOf="@id/tv_map" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

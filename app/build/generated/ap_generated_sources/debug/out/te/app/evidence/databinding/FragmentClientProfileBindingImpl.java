@@ -38,11 +38,11 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView11;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback31;
+    private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback29;
+    private final android.view.View.OnClickListener mCallback38;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -95,9 +95,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -351,9 +351,9 @@ public class FragmentClientProfileBindingImpl extends FragmentClientProfileBindi
         if ((dirtyFlags & 0x40L) != 0) {
             // api target 1
 
-            this.clientCases.setOnClickListener(mCallback30);
-            this.clientNotes.setOnClickListener(mCallback29);
-            this.mboundView11.setOnClickListener(mCallback31);
+            this.clientCases.setOnClickListener(mCallback39);
+            this.clientNotes.setOnClickListener(mCallback38);
+            this.mboundView11.setOnClickListener(mCallback40);
         }
         if ((dirtyFlags & 0x43L) != 0) {
             // api target 1

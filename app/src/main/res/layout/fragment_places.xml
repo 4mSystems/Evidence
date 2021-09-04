@@ -26,26 +26,62 @@
             android:drawablePadding="@dimen/dp8w"
             android:focusable="false"
             android:gravity="center_vertical"
-            android:hint="@string/gov_hint"
             android:onClick="@{()-> viewmodel.showGovs()}"
             android:padding="@dimen/dp8h"
+            android:text="@{viewmodel.governText}"
+            android:textColor="@color/black"
             android:textColorHint="@color/medium_color"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/search_type"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:background="@drawable/corner_view_gray_border"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawablePadding="@dimen/dp8w"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:onClick="@{()-> viewmodel.showSearchType()}"
+            android:padding="@dimen/dp8h"
+            android:text="@string/court"
+            android:textColor="@color/black"
+            android:textColorHint="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/search_input"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rc_products"
+            android:id="@+id/rc_places"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="@dimen/dp4h"
             app:adapter="@{viewmodel.placesAdapter}"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/progress"
             app:layout_constraintTop_toBottomOf="@+id/search_input"
             app:orientation="@{`1`}"
             app:span="@{`1`}"
             tools:listitem="@layout/item_place" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/pb_base_loading_bar"

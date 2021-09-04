@@ -25,7 +25,7 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback5;
     @Nullable
     private final android.view.View.OnClickListener mCallback4;
     // values
@@ -53,8 +53,8 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         this.permission.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback5 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback4 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -194,8 +194,8 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback4);
-            this.permission.setOnClickListener(mCallback3);
+            this.delete.setOnClickListener(mCallback5);
+            this.permission.setOnClickListener(mCallback4);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -212,23 +212,6 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toClientProfile();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -243,6 +226,23 @@ public class ItemClientTagsBindingImpl extends ItemClientTagsBinding implements 
 
 
                     itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toClientProfile();
                 }
                 break;
             }

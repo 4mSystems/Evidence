@@ -1130,6 +1130,7 @@ attr transitionShapeAppearance
 attr triggerId
 attr triggerReceiver
 attr triggerSlack
+attr trimLength
 attr ttcIndex
 attr upDuration
 attr useCompatPadding
@@ -3110,18 +3111,24 @@ drawable ic_check_white_24dp
 drawable ic_clear_white_24dp
 drawable ic_clock_black_24dp
 drawable ic_close
+drawable ic_cloud_upload
 drawable ic_contact
+drawable ic_delete
 drawable ic_download
+drawable ic_edit
 drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_estate_location
+drawable ic_forward
 drawable ic_home
 drawable ic_info_outline_white_24dp
 drawable ic_invite_code
 drawable ic_keyboard_black_24dp
 drawable ic_lang
+drawable ic_left
 drawable ic_logout
 drawable ic_logout_warning
+drawable ic_marketing
 drawable ic_menu
 drawable ic_mohdars
 drawable ic_more
@@ -3142,7 +3149,9 @@ drawable ic_reports
 drawable ic_resource_package
 drawable ic_search
 drawable ic_session_notes
+drawable ic_share_location
 drawable ic_swap_vert_24dp
+drawable ic_telephone
 drawable ic_upload_folder
 drawable ic_user_delete
 drawable ic_user_edit
@@ -3150,6 +3159,7 @@ drawable ic_user_permission
 drawable ic_users
 drawable ic_view_more
 drawable ic_warning
+drawable ic_whatsapp
 drawable ic_wifi_24dp
 drawable logo
 drawable material_cursor_drawable
@@ -3313,6 +3323,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id br
 id br3
 id br4
 id br5
@@ -3330,6 +3341,9 @@ id buttonPanel
 id cache_measures
 id cancel_action
 id cancel_button
+id card_locations
+id card_office
+id card_services
 id card_wallet_info
 id carryVelocity
 id cat_name
@@ -3445,6 +3459,9 @@ id expanded_menu
 id fade
 id fast_out_linear_in
 id fast_out_slow_in
+id fb_locations
+id fb_office
+id fb_services
 id file
 id fill
 id fill_horizontal
@@ -3457,6 +3474,7 @@ id flip
 id floating
 id flow
 id flow2
+id flow3
 id forever
 id forget_password
 id fragment_container_view_tag
@@ -3494,10 +3512,19 @@ id honorRequest
 id horizontal
 id horizontal_only
 id ib_close
+id ic_battery
 id ic_business_report
+id ic_court_services
 id ic_img
+id ic_locations
+id ic_main_img
+id ic_office
+id ic_phone
 id ic_place
 id ic_resource
+id ic_share
+id ic_user_img
+id ic_whats
 id icon
 id icon_group
 id ifRoom
@@ -3507,7 +3534,9 @@ id image
 id imageSlider
 id img_action_bar_cancel
 id img_airplane
+id img_container
 id img_home_bar_menu
+id img_live
 id img_login_logo
 id img_points
 id immediateStop
@@ -3695,7 +3724,6 @@ id postLayout
 id previousSessions
 id previous_session_rc
 id print
-id product_name
 id progress
 id progress_bar_home
 id progress_circular
@@ -3712,7 +3740,7 @@ id rc_client_notes
 id rc_clients
 id rc_filter
 id rc_notes
-id rc_products
+id rc_places
 id rectangle
 id rectangles
 id restart
@@ -3754,6 +3782,7 @@ id search_input
 id search_mag_icon
 id search_plate
 id search_src_text
+id search_type
 id search_voice_btn
 id select_dialog_listview
 id selected
@@ -3811,6 +3840,8 @@ id supportScrollUp
 id swap
 id sweep
 id swipe_container
+id t_points
+id t_points_value
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -3877,21 +3908,26 @@ id tv_clients
 id tv_confirm_title
 id tv_confirm_title_2
 id tv_demo_package
+id tv_desc_post
 id tv_drop_cat
 id tv_expire_package
 id tv_forget_remember
 id tv_forget_timer
 id tv_forget_title
+id tv_govern_name
 id tv_home_bar_text
 id tv_invetationNum
 id tv_invetationNum_text
 id tv_khesm
+id tv_locations
 id tv_login_forget
 id tv_login_header_number
 id tv_login_title
+id tv_map
 id tv_message
 id tv_my_package_info
 id tv_my_package_renew
+id tv_office
 id tv_package
 id tv_package_desc
 id tv_package_points
@@ -3900,7 +3936,9 @@ id tv_please_turn_on
 id tv_point_warning1
 id tv_points
 id tv_points_amount
+id tv_service
 id tv_title
+id tv_upload
 id tv_user_login
 id tv_username
 id tv_wallet
@@ -3916,6 +3954,7 @@ id useLogo
 id user_address_text
 id user_address_value
 id user_img
+id user_name
 id user_phone_text
 id user_phone_value
 id user_type
@@ -3937,6 +3976,7 @@ id v_opponents
 id v_wallet
 id vertical
 id vertical_only
+id view
 id view_attachments
 id view_casee
 id view_clients
@@ -3955,6 +3995,7 @@ id visible_removing_fragment_view_tag
 id vv_navigation_drawer_image
 id warning_container
 id webview
+id welcome
 id west
 id withText
 id withinBounds
@@ -4066,6 +4107,7 @@ layout fragment_add_category
 layout fragment_add_client
 layout fragment_add_client_to_case
 layout fragment_add_note
+layout fragment_add_service
 layout fragment_add_session
 layout fragment_add_user
 layout fragment_attachments
@@ -4084,6 +4126,7 @@ layout fragment_edit_case
 layout fragment_forget_password
 layout fragment_home
 layout fragment_login
+layout fragment_main_home
 layout fragment_monthly_reports
 layout fragment_onboard
 layout fragment_packages
@@ -4093,11 +4136,13 @@ layout fragment_profile
 layout fragment_register
 layout fragment_reporter_details
 layout fragment_search_clients
+layout fragment_services
 layout fragment_session_notes
 layout fragment_sessions
 layout fragment_splash
 layout fragment_user_permission
 layout fragment_users
+layout govern_dialog
 layout item_all_case
 layout item_attachment
 layout item_bailiffs
@@ -4107,12 +4152,14 @@ layout item_client_search
 layout item_client_tags
 layout item_clients
 layout item_drop_category
+layout item_govern
 layout item_home_reporter
 layout item_note
 layout item_package
 layout item_place
 layout item_replaced_points
 layout item_report
+layout item_service
 layout item_session
 layout item_session_note
 layout item_user
@@ -4239,6 +4286,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string about
 string add_case
+string add_image_optional
 string add_new_attach
 string add_new_category
 string add_new_client
@@ -4322,6 +4370,7 @@ string delete
 string delete_case_waring
 string demo_warning
 string descion
+string description
 string design_program
 string donot_have_account
 string download
@@ -4381,9 +4430,12 @@ string lang
 string legal_cons
 string library_name
 string load_more
+string location
+string locations_desc
 string login
 string logout
 string logout_text
+string map
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -4463,6 +4515,8 @@ string nextSessions
 string no_permission
 string note_search_hint
 string notes
+string office
+string office_desc
 string ok
 string old_password
 string online
@@ -4498,6 +4552,7 @@ string profile_edit
 string project_id
 string public_info
 string rate
+string real_estate_month
 string register
 string register_login
 string renew_package_dialog
@@ -4513,12 +4568,17 @@ string save_password
 string search
 string search_case
 string search_case_hint
+string search_govern
 string search_menu_title
 string search_mohdr_hint
 string select_file
 string select_image_from
 string send
 string send_code
+string service_price
+string service_title
+string services
+string services_desc
 string session_date
 string session_search_hint
 string sessions
@@ -4530,6 +4590,7 @@ string slider_title1
 string slider_title2
 string slider_title3
 string startApp
+string station
 string status
 string status_bar_notification_info_overflow
 string subscribe
@@ -4542,6 +4603,7 @@ string user_permission
 string user_type
 string view_more
 string warning_expire
+string welcome
 string whats
 string wifi
 string year
@@ -5334,6 +5396,7 @@ styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_a
 styleable CustomAttribute attributeName customBoolean customColorDrawableValue customColorValue customDimension customFloatValue customIntegerValue customPixelDimension customReference customStringValue methodName
 styleable CustomEditText android_text android_inputType drawable focusable gravity isValidate
 styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color drawableSize gapBetweenBars spinBars thickness
+styleable ExpandableTextView trimLength
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
 styleable FitChart animationMode backStrokeColor strokeSize valueStrokeColor

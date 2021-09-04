@@ -109,6 +109,8 @@ import te.app.evidence.pages.clients.viewModels.ClientsViewModel_Factory;
 import te.app.evidence.pages.clients.viewModels.ClientsViewModel_MembersInjector;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.HomeFragment_MembersInjector;
+import te.app.evidence.pages.home.MainHomeFragment;
+import te.app.evidence.pages.home.MainHomeFragment_MembersInjector;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
 import te.app.evidence.pages.home.viewModels.HomeViewModel_Factory;
 import te.app.evidence.pages.home.viewModels.HomeViewModel_MembersInjector;
@@ -151,6 +153,13 @@ import te.app.evidence.pages.reports.MonthlyReportsFragment_MembersInjector;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel_Factory;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel_MembersInjector;
+import te.app.evidence.pages.services.AddServiceFragment;
+import te.app.evidence.pages.services.AddServiceFragment_MembersInjector;
+import te.app.evidence.pages.services.ServicesFragment;
+import te.app.evidence.pages.services.ServicesFragment_MembersInjector;
+import te.app.evidence.pages.services.viewModels.ServicesViewModel;
+import te.app.evidence.pages.services.viewModels.ServicesViewModel_Factory;
+import te.app.evidence.pages.services.viewModels.ServicesViewModel_MembersInjector;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment_MembersInjector;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
@@ -399,6 +408,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectPlacesViewModel(PlacesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
+  private ServicesViewModel servicesViewModel() {
+    return injectServicesViewModel(ServicesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -619,6 +632,21 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(PlacesFragment placesFragment) {
     injectPlacesFragment(placesFragment);
+  }
+
+  @Override
+  public void inject(ServicesFragment servicesFragment) {
+    injectServicesFragment(servicesFragment);
+  }
+
+  @Override
+  public void inject(AddServiceFragment addServiceFragment) {
+    injectAddServiceFragment(addServiceFragment);
+  }
+
+  @Override
+  public void inject(MainHomeFragment mainHomeFragment) {
+    injectMainHomeFragment(mainHomeFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -992,6 +1020,26 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private PlacesFragment injectPlacesFragment(PlacesFragment instance) {
     PlacesFragment_MembersInjector.injectViewModel(instance, placesViewModel());
+    return instance;
+  }
+
+  private ServicesViewModel injectServicesViewModel(ServicesViewModel instance) {
+    ServicesViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private ServicesFragment injectServicesFragment(ServicesFragment instance) {
+    ServicesFragment_MembersInjector.injectViewModel(instance, servicesViewModel());
+    return instance;
+  }
+
+  private AddServiceFragment injectAddServiceFragment(AddServiceFragment instance) {
+    AddServiceFragment_MembersInjector.injectViewModel(instance, servicesViewModel());
+    return instance;
+  }
+
+  private MainHomeFragment injectMainHomeFragment(MainHomeFragment instance) {
+    MainHomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
     return instance;
   }
 

@@ -32,11 +32,11 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback15;
+    @Nullable
     private final android.view.View.OnClickListener mCallback13;
     @Nullable
-    private final android.view.View.OnClickListener mCallback11;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback12;
+    private final android.view.View.OnClickListener mCallback14;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -77,9 +77,9 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback11 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -240,9 +240,9 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback12);
-            this.statusValue.setOnClickListener(mCallback11);
-            this.viewValue.setOnClickListener(mCallback13);
+            this.delete.setOnClickListener(mCallback14);
+            this.statusValue.setOnClickListener(mCallback13);
+            this.viewValue.setOnClickListener(mCallback15);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

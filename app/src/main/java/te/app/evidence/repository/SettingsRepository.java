@@ -9,6 +9,8 @@ import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.auth.models.UsersResponse;
+import te.app.evidence.pages.places.models.PlacesByGovernResponse;
+import te.app.evidence.pages.places.models.PlacesResponse;
 import te.app.evidence.pages.points.models.EarnPointsResponse;
 import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
@@ -54,6 +56,16 @@ public class SettingsRepository extends BaseRepository {
     public Disposable getReplacedPoints() {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.REPLACED_POINTS, new Object(), EarnPointsResponse.class,
                 Constants.POINTS, true);
+    }
+
+    public Disposable getPlaces() {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PLACES, new Object(), PlacesResponse.class,
+                Constants.LOCATIONS, true);
+    }
+
+    public Disposable getPlacesByGovernId(int governId, String type, int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PLACES_BY_GOVERN + governId + "/" + type + "?page=" + page, new Object(), PlacesByGovernResponse.class,
+                Constants.PLACES_BY_GOVERN, showProgress);
     }
 
 

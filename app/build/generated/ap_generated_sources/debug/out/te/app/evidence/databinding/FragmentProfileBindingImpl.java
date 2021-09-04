@@ -31,11 +31,11 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     private final androidx.appcompat.widget.AppCompatEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback79;
+    private final android.view.View.OnClickListener mCallback90;
     @Nullable
-    private final android.view.View.OnClickListener mCallback77;
+    private final android.view.View.OnClickListener mCallback91;
     @Nullable
-    private final android.view.View.OnClickListener mCallback78;
+    private final android.view.View.OnClickListener mCallback89;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -184,9 +184,9 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         this.userImg.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback79 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback77 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback78 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -495,12 +495,12 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.appCompatButtonNext.setOnClickListener(mCallback79);
-            this.mboundView2.setOnClickListener(mCallback77);
+            this.appCompatButtonNext.setOnClickListener(mCallback91);
+            this.mboundView2.setOnClickListener(mCallback89);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView8, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView8androidTextAttrChanged);
-            this.mboundView9.setOnClickListener(mCallback78);
+            this.mboundView9.setOnClickListener(mCallback90);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -530,6 +530,23 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.profile.ProfileViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.changePassword();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -561,23 +578,6 @@ public class FragmentProfileBindingImpl extends FragmentProfileBinding implement
 
 
                     viewmodel.imageSubmit();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.profile.ProfileViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.changePassword();
                 }
                 break;
             }

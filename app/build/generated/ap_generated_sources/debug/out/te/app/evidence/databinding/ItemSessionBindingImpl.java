@@ -25,13 +25,13 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback67;
+    private final android.view.View.OnClickListener mCallback79;
     @Nullable
-    private final android.view.View.OnClickListener mCallback65;
+    private final android.view.View.OnClickListener mCallback77;
     @Nullable
-    private final android.view.View.OnClickListener mCallback68;
+    private final android.view.View.OnClickListener mCallback80;
     @Nullable
-    private final android.view.View.OnClickListener mCallback66;
+    private final android.view.View.OnClickListener mCallback78;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,10 +73,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback67 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback68 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback66 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback79 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback77 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback80 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback78 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback66);
-            this.edit.setOnClickListener(mCallback67);
-            this.statusValue.setOnClickListener(mCallback65);
-            this.viewValue.setOnClickListener(mCallback68);
+            this.delete.setOnClickListener(mCallback78);
+            this.edit.setOnClickListener(mCallback79);
+            this.statusValue.setOnClickListener(mCallback77);
+            this.viewValue.setOnClickListener(mCallback80);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
