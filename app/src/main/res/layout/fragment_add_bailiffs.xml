@@ -202,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp12w"
                 android:layout_marginTop="@dimen/dp10h"
-                android:visibility="@{viewmodel.userData.userData.type.equals(`Admin`)?View.VISIBLE:View.GONE}"
+                android:visibility="@{viewmodel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 android:layout_marginEnd="@dimen/dp12w"
                 app:error="@{viewmodel.addMohdrRequest.catError}">
 

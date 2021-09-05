@@ -19,7 +19,7 @@ import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
 import te.app.evidence.customViews.views.ExpandableTextView;
-import te.app.evidence.pages.places.viewModels.ItemPlacesViewModel;
+import te.app.evidence.pages.services.viewModels.ItemServicesViewModel;
 
 public abstract class ItemServiceBinding extends ViewDataBinding {
   @NonNull
@@ -55,13 +55,17 @@ public abstract class ItemServiceBinding extends ViewDataBinding {
   @NonNull
   public final CustomTextViewMedium userName;
 
+  @NonNull
+  public final View vService;
+
   @Bindable
-  protected ItemPlacesViewModel mItemViewModel;
+  protected ItemServicesViewModel mItemViewModel;
 
   protected ItemServiceBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Barrier br, MaterialButton delete, MaterialButton edit, Flow flow, AppCompatImageView icPhone,
       CircleImageView icPlace, AppCompatImageView icWhats, AppCompatImageView imgLive,
-      CustomTextViewMedium title, ExpandableTextView tvDescPost, CustomTextViewMedium userName) {
+      CustomTextViewMedium title, ExpandableTextView tvDescPost, CustomTextViewMedium userName,
+      View vService) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
     this.delete = delete;
@@ -74,12 +78,13 @@ public abstract class ItemServiceBinding extends ViewDataBinding {
     this.title = title;
     this.tvDescPost = tvDescPost;
     this.userName = userName;
+    this.vService = vService;
   }
 
-  public abstract void setItemViewModel(@Nullable ItemPlacesViewModel itemViewModel);
+  public abstract void setItemViewModel(@Nullable ItemServicesViewModel itemViewModel);
 
   @Nullable
-  public ItemPlacesViewModel getItemViewModel() {
+  public ItemServicesViewModel getItemViewModel() {
     return mItemViewModel;
   }
 

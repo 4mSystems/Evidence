@@ -32,13 +32,13 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
+    private final android.view.View.OnClickListener mCallback13;
+    @Nullable
     private final android.view.View.OnClickListener mCallback11;
     @Nullable
     private final android.view.View.OnClickListener mCallback12;
     @Nullable
     private final android.view.View.OnClickListener mCallback10;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback9;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -83,10 +83,10 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
         this.unitValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback11 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback9 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback11 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback12 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback10 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -238,10 +238,10 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.attachments.setOnClickListener(mCallback9);
-            this.delete.setOnClickListener(mCallback11);
-            this.edit.setOnClickListener(mCallback12);
-            this.permission.setOnClickListener(mCallback10);
+            this.attachments.setOnClickListener(mCallback10);
+            this.delete.setOnClickListener(mCallback12);
+            this.edit.setOnClickListener(mCallback13);
+            this.permission.setOnClickListener(mCallback11);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -263,23 +263,6 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toDelete();
-                }
-                break;
-            }
             case 4: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -311,6 +294,23 @@ public class ItemClientsBindingImpl extends ItemClientsBinding implements te.app
 
 
                     itemViewModel.toClientProfile();
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
                 }
                 break;
             }

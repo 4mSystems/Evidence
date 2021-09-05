@@ -3481,6 +3481,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3512,9 +3513,9 @@ id honorRequest
 id horizontal
 id horizontal_only
 id ib_close
-id ic_battery
 id ic_business_report
 id ic_court_services
+id ic_image
 id ic_img
 id ic_locations
 id ic_main_img
@@ -3741,6 +3742,7 @@ id rc_clients
 id rc_filter
 id rc_notes
 id rc_places
+id rc_services
 id rectangle
 id rectangles
 id restart
@@ -3973,6 +3975,7 @@ id v__expire
 id v_client
 id v_drop
 id v_opponents
+id v_service
 id v_wallet
 id vertical
 id vertical_only
@@ -4295,6 +4298,7 @@ string add_new_mohdr
 string add_new_note
 string add_new_session
 string add_new_user
+string add_service
 string address_hint
 string addressed_to
 string admin
@@ -4383,6 +4387,7 @@ string edit_case
 string edit_category
 string edit_client
 string edit_note
+string edit_service
 string edit_session
 string edit_user
 string email
@@ -4576,6 +4581,7 @@ string select_image_from
 string send
 string send_code
 string service_price
+string service_time
 string service_title
 string services
 string services_desc

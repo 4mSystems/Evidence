@@ -11,6 +11,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 import com.airbnb.lottie.LottieAnimationView;
+import com.google.android.material.progressindicator.CircularProgressIndicator;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -21,16 +22,21 @@ public abstract class FragmentServicesBinding extends ViewDataBinding {
   public final LottieAnimationView pbBaseLoadingBar;
 
   @NonNull
-  public final RecyclerView rcPlaces;
+  public final CircularProgressIndicator progress;
+
+  @NonNull
+  public final RecyclerView rcServices;
 
   @Bindable
   protected ServicesViewModel mViewmodel;
 
   protected FragmentServicesBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      LottieAnimationView pbBaseLoadingBar, RecyclerView rcPlaces) {
+      LottieAnimationView pbBaseLoadingBar, CircularProgressIndicator progress,
+      RecyclerView rcServices) {
     super(_bindingComponent, _root, _localFieldCount);
     this.pbBaseLoadingBar = pbBaseLoadingBar;
-    this.rcPlaces = rcPlaces;
+    this.progress = progress;
+    this.rcServices = rcServices;
   }
 
   public abstract void setViewmodel(@Nullable ServicesViewModel viewmodel);

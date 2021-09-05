@@ -83,6 +83,28 @@
                     android:layout_marginStart="@dimen/dp6w"
                     android:layout_marginTop="@dimen/dp6h"
                     android:layout_marginEnd="@dimen/dp6w"
+                    app:error="@{viewmodel.addServiceRequest.serviceTimeError}">
+
+                    <te.app.evidence.customViews.views.FutureDateEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/service_time"
+                        android:inputType="text"
+                        android:text="@={viewmodel.addServiceRequest.time}"
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp6h"
+                    android:layout_marginEnd="@dimen/dp6w"
                     app:endIconDrawable="@drawable/ic_telephone"
                     app:endIconMode="custom"
                     app:endIconTintMode="src_atop"
@@ -109,14 +131,14 @@
                     app:endIconDrawable="@drawable/ic_whatsapp"
                     app:endIconMode="custom"
                     app:endIconTintMode="src_atop"
-                    app:error="@{viewmodel.addServiceRequest.serviceWhatseError}">
+                    app:error="@{viewmodel.addServiceRequest.serviceWhatsError}">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/client_type"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/whats"
-                        android:inputType="text"
+                        android:inputType="phone"
                         android:text="@={viewmodel.addServiceRequest.serviceWhats}"
                         android:textAlignment="viewStart"
                         android:textColor="@color/colorPrimaryDark"
@@ -168,6 +190,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginBottom="@dimen/dp8h"
+                        android:onClick="@{()-> viewmodel.actions(Constants.IMAGE)}"
                         android:src="@drawable/ic_cloud_upload"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -175,18 +198,18 @@
                         app:layout_constraintTop_toBottomOf="@+id/tv_upload" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/ic_battery"
+                        android:id="@+id/ic_image"
                         android:layout_width="@dimen/dp30w"
                         android:layout_height="@dimen/dp30h"
                         android:layout_marginStart="@dimen/dp8w"
                         android:layout_marginTop="@dimen/dp8h"
                         android:layout_marginBottom="@dimen/dp8h"
+                        android:visibility="@{!TextUtils.isEmpty(viewmodel.addServiceRequest.serviceImage)?View.VISIBLE:View.GONE}"
                         app:civ_border_color="@color/colorPrimaryDark"
                         app:civ_border_width="4dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/tv_upload" />
-                    <!--                    android:visibility="@{!TextUtils.isEmpty(viewmodel.serviceOrderRequest.tyreImage)?View.VISIBLE:View.GONE,default=gone}"-->
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -202,7 +225,7 @@
             android:background="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?@color/colorPrimaryDark:@color/medium_color,default=@color/colorPrimaryDark}"
             android:enabled="@{TextUtils.isEmpty(viewmodel.message)||viewmodel.message.equals(Constants.HIDE_PROGRESS)?true:false}"
             android:onClick="@{()-> viewmodel.addNewService()}"
-            android:text="@{viewmodel.passingObject.objectClass==null?@string/add_new_client:@string/edit_client}"
+            android:text="@{viewmodel.passingObject.objectClass==null?@string/add_service:@string/edit_service}"
             android:textAllCaps="false"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@color/white"

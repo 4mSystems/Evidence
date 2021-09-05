@@ -8,9 +8,11 @@
 
         <import type="android.view.View" />
 
+        <import type="android.text.TextUtils" />
+
         <variable
             name="itemViewModel"
-            type="te.app.evidence.pages.places.viewModels.ItemPlacesViewModel" />
+            type="te.app.evidence.pages.services.viewModels.ItemServicesViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView
@@ -32,6 +34,7 @@
                 android:src="@drawable/splash"
                 app:civ_border_color="@color/background_gray"
                 app:civ_border_width="4dp"
+                app:imageShowUrl="@{itemViewModel.serviceData.user.image}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -40,7 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6h"
-                android:text="Mostafa Elnagar"
+                android:text="@{itemViewModel.serviceData.user.name}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimaryDark"
@@ -87,6 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dp6w"
+                android:visibility="@{itemViewModel.serviceData.user.id==itemViewModel.userData.userData.id?View.VISIBLE:View.GONE}"
                 app:constraint_referenced_ids="delete,edit"
                 app:flow_maxElementsWrap="1"
                 app:flow_verticalStyle="packed"
@@ -124,7 +128,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp4h"
-                android:text="اريد محضر من محكمة القاهره "
+                android:text="@{itemViewModel.serviceData.title}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
@@ -137,7 +141,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/dp6w"
-                android:text="لوريم إيبسوم طريقة لكتابة النصوص في النشر والتصميم الجرافيكي تستخدم بشكل شائع لتوضيح الشكل المرئي للمستند أو الخط دون الاعتماد على محتوى ذي معنى. يمكن استخدام لوريم إيبسوم قبل نشر النسخة النهائية. ويكيبيديا"
+                android:text="@{itemViewModel.serviceData.desc}"
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/medium_color"
@@ -146,6 +150,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/title"
                 app:trimLength="150" />
 
+            <View
+                android:id="@+id/v_service"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp4h"
+                app:layout_constraintTop_toBottomOf="@id/tv_desc_post" />
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_live"
                 android:layout_width="match_parent"
@@ -153,7 +163,9 @@
                 android:layout_marginTop="@dimen/dp8h"
                 android:scaleType="centerCrop"
                 android:src="@drawable/splash"
-                app:layout_constraintTop_toBottomOf="@id/tv_desc_post" />
+                android:visibility="@{!TextUtils.isEmpty(itemViewModel.serviceData.image)?View.VISIBLE:View.GONE}"
+                app:imageShowUrl="@{itemViewModel.serviceData.image}"
+                app:layout_constraintTop_toBottomOf="@id/v_service" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

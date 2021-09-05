@@ -15,23 +15,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 import te.app.evidence.R;
-import te.app.evidence.databinding.ItemPlaceBinding;
-import te.app.evidence.pages.places.models.PlacesData;
-import te.app.evidence.pages.places.viewModels.ItemPlacesViewModel;
+import te.app.evidence.databinding.ItemServiceBinding;
+import te.app.evidence.pages.services.models.ServiceData;
+import te.app.evidence.pages.services.viewModels.ItemServicesViewModel;
 
 
 public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHolder> {
-    List<PlacesData> placesDataList;
+    List<ServiceData> serviceDataList;
     Context context;
+    public int lastSelected = -1;
 
     public ServicesAdapter() {
-        this.placesDataList = new ArrayList<>();
+        this.serviceDataList = new ArrayList<>();
+    }
+
+    public List<ServiceData> getServiceDataList() {
+        return serviceDataList;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int i) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_place,
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_service,
                 parent, false);
         this.context = parent.getContext();
         return new ViewHolder(itemView);
@@ -40,16 +45,22 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHo
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-        PlacesData product = placesDataList.get(position);
-        ItemPlacesViewModel itemMenuViewModel = new ItemPlacesViewModel(product);
+        ServiceData product = serviceDataList.get(position);
+        ItemServicesViewModel itemMenuViewModel = new ItemServicesViewModel(product);
         holder.setViewModel(itemMenuViewModel);
     }
 
 
-    public void update(List<PlacesData> dataList) {
-        this.placesDataList.clear();
-        placesDataList.addAll(dataList);
+    public void update(List<ServiceData> dataList) {
+        this.serviceDataList.clear();
+        serviceDataList.addAll(dataList);
         notifyDataSetChanged();
+    }
+
+    public void loadMore(@NotNull List<ServiceData> dataList) {
+        int start = serviceDataList.size();
+        serviceDataList.addAll(dataList);
+        notifyItemRangeInserted(start, dataList.size());
     }
 
     @Override
@@ -66,11 +77,11 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return placesDataList.size();
+        return serviceDataList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ItemPlaceBinding itemMenuBinding;
+        public ItemServiceBinding itemMenuBinding;
 
         ViewHolder(View itemView) {
             super(itemView);
@@ -90,7 +101,7 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHo
             }
         }
 
-        void setViewModel(ItemPlacesViewModel itemViewModels) {
+        void setViewModel(ItemServicesViewModel itemViewModels) {
             if (itemMenuBinding != null) {
                 itemMenuBinding.setItemViewModel(itemViewModels);
             }

@@ -54,11 +54,11 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     @Nullable
     private final android.view.View.OnClickListener mCallback87;
     @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback90;
     @Nullable
     private final android.view.View.OnClickListener mCallback88;
     @Nullable
-    private final android.view.View.OnClickListener mCallback85;
+    private final android.view.View.OnClickListener mCallback89;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -374,10 +374,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback85 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -556,10 +556,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         java.lang.String viewmodelAddMohdrRequestCasenumber = null;
         java.lang.String viewmodelAddMohdrRequestDeliverDateErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddMohdrRequestPaperTypeError = null;
+        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelAddMohdrRequestCatErrorGet = null;
         boolean textUtilsIsEmptyViewmodelMessage = false;
         boolean TextUtilsIsEmptyViewmodelMessage1 = false;
-        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String viewmodelAddMohdrRequestKhesmErrorGet = null;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddMohdrRequestCatError = null;
         te.app.evidence.pages.auth.models.UserData viewmodelUserDataUserData = null;
@@ -572,8 +572,8 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         boolean textUtilsIsEmptyViewmodelMessageBooleanTrueViewmodelMessageEqualsConstantsHIDEPROGRESS = false;
         androidx.databinding.ObservableField<java.lang.String> viewmodelAddMohdrRequestMokelError = null;
         java.lang.String viewmodelAddMohdrRequestCourtErrorGet = null;
-        int viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = 0;
         java.lang.String viewmodelAddMohdrRequestMokelErrorGet = null;
+        boolean viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = false;
         java.lang.String viewmodelAddMohdrRequestDateErrorGet = null;
         java.lang.String viewmodelAddMohdrRequestCourtMohdareen = null;
         java.lang.String viewmodelAddMohdrRequestInvetationNumErrorGet = null;
@@ -609,10 +609,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
                     textUtilsIsEmptyViewmodelMessage = android.text.TextUtils.isEmpty(viewmodelMessage);
                 if((dirtyFlags & 0xe00L) != 0) {
                     if(textUtilsIsEmptyViewmodelMessage) {
-                            dirtyFlags |= 0x2000L;
+                            dirtyFlags |= 0x8000L;
                     }
                     else {
-                            dirtyFlags |= 0x1000L;
+                            dirtyFlags |= 0x4000L;
                     }
                 }
 
@@ -649,20 +649,20 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
 
 
                     if (viewmodelUserDataUserDataType != null) {
-                        // read viewmodel.userData.userData.type.equals("Admin")
-                        viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("Admin");
+                        // read viewmodel.userData.userData.type.equals("admin")
+                        viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin = viewmodelUserDataUserDataType.equals("admin");
                     }
                 if((dirtyFlags & 0xa00L) != 0) {
                     if(viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) {
-                            dirtyFlags |= 0x8000L;
+                            dirtyFlags |= 0x2000L;
                     }
                     else {
-                            dirtyFlags |= 0x4000L;
+                            dirtyFlags |= 0x1000L;
                     }
                 }
 
 
-                    // read viewmodel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
+                    // read viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
                     viewmodelUserDataUserDataTypeEqualsJavaLangStringAdminViewVISIBLEViewGONE = ((viewmodelUserDataUserDataTypeEqualsJavaLangStringAdmin) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
             if ((dirtyFlags & 0xbffL) != 0) {
@@ -821,7 +821,7 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         }
         // batch finished
 
-        if ((dirtyFlags & 0x1000L) != 0) {
+        if ((dirtyFlags & 0x4000L) != 0) {
 
                 if (viewmodelMessage != null) {
                     // read viewmodel.message.equals(Constants.HIDE_PROGRESS)
@@ -880,10 +880,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         if ((dirtyFlags & 0x800L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback88);
-            this.inputCat.setOnClickListener(mCallback87);
-            this.inputClients.setOnClickListener(mCallback85);
-            this.inputKhesm.setOnClickListener(mCallback86);
+            this.btnSave.setOnClickListener(mCallback90);
+            this.inputCat.setOnClickListener(mCallback89);
+            this.inputClients.setOnClickListener(mCallback87);
+            this.inputKhesm.setOnClickListener(mCallback88);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView10, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView10androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView16, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView16androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView19, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView19androidTextAttrChanged);
@@ -954,7 +954,7 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -967,7 +967,26 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toCategories();
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.createMohdr();
                 }
                 break;
             }
@@ -990,7 +1009,7 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
                 }
                 break;
             }
-            case 4: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1003,26 +1022,7 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.createMohdr();
-                }
-                break;
-            }
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.mohdrs.viewModels.AddBailiffsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
+                    viewmodel.toCategories();
                 }
                 break;
             }
@@ -1043,10 +1043,10 @@ public class FragmentAddBailiffsBindingImpl extends FragmentAddBailiffsBinding i
         flag 9 (0xaL): viewmodel
         flag 10 (0xbL): viewmodel.message
         flag 11 (0xcL): null
-        flag 12 (0xdL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 13 (0xeL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
-        flag 14 (0xfL): viewmodel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
-        flag 15 (0x10L): viewmodel.userData.userData.type.equals("Admin") ? View.VISIBLE : View.GONE
+        flag 12 (0xdL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 13 (0xeL): viewmodel.userData.userData.type.equals("admin") ? View.VISIBLE : View.GONE
+        flag 14 (0xfL): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
+        flag 15 (0x10L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS)
         flag 16 (0x11L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 17 (0x12L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? true : false
         flag 18 (0x13L): TextUtils.isEmpty(viewmodel.message) ? true : viewmodel.message.equals(Constants.HIDE_PROGRESS) ? @android:color/colorPrimaryDark : @android:color/medium_color

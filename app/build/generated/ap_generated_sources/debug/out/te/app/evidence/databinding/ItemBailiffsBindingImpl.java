@@ -34,7 +34,7 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback15;
     @Nullable
-    private final android.view.View.OnClickListener mCallback13;
+    private final android.view.View.OnClickListener mCallback16;
     @Nullable
     private final android.view.View.OnClickListener mCallback14;
     // values
@@ -77,9 +77,9 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback13 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback15 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback16 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback14 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -240,9 +240,9 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback14);
-            this.statusValue.setOnClickListener(mCallback13);
-            this.viewValue.setOnClickListener(mCallback15);
+            this.delete.setOnClickListener(mCallback15);
+            this.statusValue.setOnClickListener(mCallback14);
+            this.viewValue.setOnClickListener(mCallback16);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -254,6 +254,23 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.delete();
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -285,23 +302,6 @@ public class ItemBailiffsBindingImpl extends ItemBailiffsBinding implements te.a
 
 
                     itemViewModel.changeStatus();
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.mohdrs.viewModels.BailiffsItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.delete();
                 }
                 break;
             }

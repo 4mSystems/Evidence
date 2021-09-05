@@ -30,7 +30,7 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback21;
     @Nullable
-    private final android.view.View.OnClickListener mCallback20;
+    private final android.view.View.OnClickListener mCallback22;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -217,8 +217,8 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback20 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback22 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -562,8 +562,8 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
         if ((dirtyFlags & 0x80L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback21);
-            this.inputCat.setOnClickListener(mCallback20);
+            this.btnSave.setOnClickListener(mCallback22);
+            this.inputCat.setOnClickListener(mCallback21);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView6, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView6androidTextAttrChanged);
@@ -607,23 +607,6 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.editCase();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -638,6 +621,23 @@ public class FragmentEditCaseBindingImpl extends FragmentEditCaseBinding impleme
 
 
                     viewmodel.toCategories();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.editCase();
                 }
                 break;
             }

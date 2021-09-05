@@ -54,8 +54,7 @@ public class ProfileFragment extends BaseFragment {
                     LauncherHelper.execute(LauncherHelper.storage);
                     break;
                 case Constants.CHANGE_PASSWORD:
-                    MovementHelper.startActivity(requireActivity(), ChangePasswordFragment.class.getName(), null, null)
-                    ;
+                    MovementHelper.startActivity(requireActivity(), ChangePasswordFragment.class.getName(), null, null);
                     break;
                 case Constants.UPDATE_PROFILE:
                     UserHelper.getInstance(requireActivity()).userLogin(((UsersResponse) ((Mutable) o).object).getData());

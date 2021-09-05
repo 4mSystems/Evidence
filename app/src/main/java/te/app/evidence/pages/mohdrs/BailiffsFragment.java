@@ -26,6 +26,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -75,7 +76,7 @@ public class BailiffsFragment extends BaseFragment {
             } else if (Constants.DELETE.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getBailiffsAdapter().getBailiffsDataList().remove(viewModel.getBailiffsAdapter().lastSelected);
-                viewModel.getBailiffsAdapter().notifyItemRangeChanged(viewModel.getBailiffsAdapter().lastSelected, viewModel.getBailiffsAdapter().getItemCount());
+                viewModel.getBailiffsAdapter().notifyDataSetChanged();
                 deleteDialog.dismiss();
             } else if (Constants.ADD_MOHDR.equals(((Mutable) o).message)) {
                 viewModel.getBailiffsAdapter().lastSelected = -1;
@@ -135,6 +136,7 @@ public class BailiffsFragment extends BaseFragment {
                     if (viewModel.getBailiffsAdapter().lastSelected == -1) {
                         viewModel.getBailiffsAdapter().getBailiffsDataList().add(0, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ReportersData.class));
                         viewModel.getBailiffsAdapter().notifyDataSetChanged();
+                        viewModel.notifyChange(BR.bailiffsAdapter);
                     } else {
                         viewModel.getBailiffsAdapter().getBailiffsDataList().set(viewModel.getBailiffsAdapter().lastSelected, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ReportersData.class));
                         viewModel.getBailiffsAdapter().notifyItemChanged(viewModel.getBailiffsAdapter().lastSelected);

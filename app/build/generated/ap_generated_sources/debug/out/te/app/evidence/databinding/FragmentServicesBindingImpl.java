@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentServicesBindingImpl extends FragmentServicesBinding  {
+public class FragmentServicesBindingImpl extends FragmentServicesBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -17,33 +17,42 @@ public class FragmentServicesBindingImpl extends FragmentServicesBinding  {
     }
     // views
     @NonNull
-    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView4;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback65;
     // values
     // listeners
     // Inverse Binding Event Handlers
 
     public FragmentServicesBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 5, sIncludes, sViewsWithIds));
     }
     private FragmentServicesBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
-            , (com.airbnb.lottie.LottieAnimationView) bindings[2]
+        super(bindingComponent, root, 2
+            , (com.airbnb.lottie.LottieAnimationView) bindings[3]
+            , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[2]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
             );
-        this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView4 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[4];
+        this.mboundView4.setTag(null);
         this.pbBaseLoadingBar.setTag(null);
-        this.rcPlaces.setTag(null);
+        this.progress.setTag(null);
+        this.rcServices.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback65 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -71,10 +80,10 @@ public class FragmentServicesBindingImpl extends FragmentServicesBinding  {
     }
 
     public void setViewmodel(@Nullable te.app.evidence.pages.services.viewModels.ServicesViewModel Viewmodel) {
-        updateRegistration(0, Viewmodel);
+        updateRegistration(1, Viewmodel);
         this.mViewmodel = Viewmodel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewmodel);
         super.requestRebind();
@@ -84,20 +93,31 @@ public class FragmentServicesBindingImpl extends FragmentServicesBinding  {
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
             case 0 :
+                return onChangeViewmodelSearchProgressVisible((androidx.databinding.ObservableBoolean) object, fieldId);
+            case 1 :
                 return onChangeViewmodel((te.app.evidence.pages.services.viewModels.ServicesViewModel) object, fieldId);
         }
         return false;
     }
-    private boolean onChangeViewmodel(te.app.evidence.pages.services.viewModels.ServicesViewModel Viewmodel, int fieldId) {
+    private boolean onChangeViewmodelSearchProgressVisible(androidx.databinding.ObservableBoolean ViewmodelSearchProgressVisible, int fieldId) {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
             }
             return true;
         }
-        else if (fieldId == BR.placesAdapter) {
+        return false;
+    }
+    private boolean onChangeViewmodel(te.app.evidence.pages.services.viewModels.ServicesViewModel Viewmodel, int fieldId) {
+        if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x2L;
+            }
+            return true;
+        }
+        else if (fieldId == BR.servicesAdapter) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x4L;
             }
             return true;
         }
@@ -111,61 +131,123 @@ public class FragmentServicesBindingImpl extends FragmentServicesBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        te.app.evidence.pages.places.adapters.PlacesAdapter viewmodelPlacesAdapter = null;
-        int viewmodelPlacesAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
-        int viewmodelPlacesAdapterItemCount = 0;
-        boolean viewmodelPlacesAdapterItemCountInt0 = false;
+        int viewmodelServicesAdapterItemCount = 0;
+        te.app.evidence.pages.services.adapters.ServicesAdapter viewmodelServicesAdapter = null;
+        boolean viewmodelServicesAdapterItemCountInt0 = false;
+        boolean viewmodelSearchProgressVisibleGet = false;
+        int viewmodelServicesAdapterItemCountInt0ViewVISIBLEViewGONE = 0;
+        androidx.databinding.ObservableBoolean viewmodelSearchProgressVisible = null;
+        int viewmodelSearchProgressVisibleViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.services.viewModels.ServicesViewModel viewmodel = mViewmodel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xeL) != 0) {
 
-                if (viewmodel != null) {
-                    // read viewmodel.placesAdapter
-                    viewmodelPlacesAdapter = viewmodel.getPlacesAdapter();
+                    if (viewmodel != null) {
+                        // read viewmodel.servicesAdapter
+                        viewmodelServicesAdapter = viewmodel.getServicesAdapter();
+                    }
+
+
+                    if (viewmodelServicesAdapter != null) {
+                        // read viewmodel.servicesAdapter.itemCount
+                        viewmodelServicesAdapterItemCount = viewmodelServicesAdapter.getItemCount();
+                    }
+
+
+                    // read viewmodel.servicesAdapter.itemCount == 0
+                    viewmodelServicesAdapterItemCountInt0 = (viewmodelServicesAdapterItemCount) == (0);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(viewmodelServicesAdapterItemCountInt0) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
 
 
-                if (viewmodelPlacesAdapter != null) {
-                    // read viewmodel.placesAdapter.itemCount
-                    viewmodelPlacesAdapterItemCount = viewmodelPlacesAdapter.getItemCount();
-                }
-
-
-                // read viewmodel.placesAdapter.itemCount == 0
-                viewmodelPlacesAdapterItemCountInt0 = (viewmodelPlacesAdapterItemCount) == (0);
-            if((dirtyFlags & 0x7L) != 0) {
-                if(viewmodelPlacesAdapterItemCountInt0) {
-                        dirtyFlags |= 0x10L;
-                }
-                else {
-                        dirtyFlags |= 0x8L;
-                }
+                    // read viewmodel.servicesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+                    viewmodelServicesAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelServicesAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
             }
+            if ((dirtyFlags & 0xbL) != 0) {
+
+                    if (viewmodel != null) {
+                        // read viewmodel.searchProgressVisible
+                        viewmodelSearchProgressVisible = viewmodel.searchProgressVisible;
+                    }
+                    updateRegistration(0, viewmodelSearchProgressVisible);
 
 
-                // read viewmodel.placesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
-                viewmodelPlacesAdapterItemCountInt0ViewVISIBLEViewGONE = ((viewmodelPlacesAdapterItemCountInt0) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+                    if (viewmodelSearchProgressVisible != null) {
+                        // read viewmodel.searchProgressVisible.get()
+                        viewmodelSearchProgressVisibleGet = viewmodelSearchProgressVisible.get();
+                    }
+                if((dirtyFlags & 0xbL) != 0) {
+                    if(viewmodelSearchProgressVisibleGet) {
+                            dirtyFlags |= 0x80L;
+                    }
+                    else {
+                            dirtyFlags |= 0x40L;
+                    }
+                }
+
+
+                    // read viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+                    viewmodelSearchProgressVisibleViewVISIBLEViewGONE = ((viewmodelSearchProgressVisibleGet) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.pbBaseLoadingBar.setVisibility(viewmodelPlacesAdapterItemCountInt0ViewVISIBLEViewGONE);
-            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcPlaces, viewmodelPlacesAdapter, "1", "1");
+            this.mboundView4.setOnClickListener(mCallback65);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.pbBaseLoadingBar.setVisibility(viewmodelServicesAdapterItemCountInt0ViewVISIBLEViewGONE);
+            te.app.evidence.base.ApplicationBinding.getItemsV2Binding(this.rcServices, viewmodelServicesAdapter, "1", "1");
+        }
+        if ((dirtyFlags & 0xbL) != 0) {
+            // api target 1
+
+            this.progress.setVisibility(viewmodelSearchProgressVisibleViewVISIBLEViewGONE);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewmodel != null
+        boolean viewmodelJavaLangObjectNull = false;
+        // viewmodel
+        te.app.evidence.pages.services.viewModels.ServicesViewModel viewmodel = mViewmodel;
+
+
+
+        viewmodelJavaLangObjectNull = (viewmodel) != (null);
+        if (viewmodelJavaLangObjectNull) {
+
+
+
+
+            viewmodel.actions(te.app.evidence.utils.Constants.ADD_SERVICE);
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewmodel
-        flag 1 (0x2L): viewmodel.placesAdapter
-        flag 2 (0x3L): null
-        flag 3 (0x4L): viewmodel.placesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
-        flag 4 (0x5L): viewmodel.placesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 0 (0x1L): viewmodel.searchProgressVisible
+        flag 1 (0x2L): viewmodel
+        flag 2 (0x3L): viewmodel.servicesAdapter
+        flag 3 (0x4L): null
+        flag 4 (0x5L): viewmodel.servicesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 5 (0x6L): viewmodel.servicesAdapter.itemCount == 0 ? View.VISIBLE : View.GONE
+        flag 6 (0x7L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
+        flag 7 (0x8L): viewmodel.searchProgressVisible.get() ? View.VISIBLE : View.GONE
     flag mapping end*/
     //end
 }

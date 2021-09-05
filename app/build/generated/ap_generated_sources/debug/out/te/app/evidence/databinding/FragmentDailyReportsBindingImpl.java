@@ -28,7 +28,7 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     @Nullable
     private final android.view.View.OnClickListener mCallback25;
     @Nullable
-    private final android.view.View.OnClickListener mCallback24;
+    private final android.view.View.OnClickListener mCallback26;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -96,8 +96,8 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -336,9 +336,9 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback24);
+            this.inputCat.setOnClickListener(mCallback25);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
-            this.search.setOnClickListener(mCallback25);
+            this.search.setOnClickListener(mCallback26);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
@@ -355,25 +355,6 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.getReports(1, true);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -390,6 +371,25 @@ public class FragmentDailyReportsBindingImpl extends FragmentDailyReportsBinding
 
 
                     viewmodel.action(te.app.evidence.utils.Constants.SHOW_CATEGORIES);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.getReports(1, true);
                 }
                 break;
             }

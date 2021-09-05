@@ -37,11 +37,11 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback33;
     @Nullable
+    private final android.view.View.OnClickListener mCallback38;
+    @Nullable
     private final android.view.View.OnClickListener mCallback36;
     @Nullable
     private final android.view.View.OnClickListener mCallback34;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback32;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -85,12 +85,12 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
         this.tvUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback35 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback33 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback34 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -195,12 +195,12 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.cardLocations.setOnClickListener(mCallback36);
-            this.cardOffice.setOnClickListener(mCallback32);
-            this.cardServices.setOnClickListener(mCallback34);
-            this.fbLocations.setOnClickListener(mCallback37);
-            this.fbOffice.setOnClickListener(mCallback33);
-            this.fbServices.setOnClickListener(mCallback35);
+            this.cardLocations.setOnClickListener(mCallback37);
+            this.cardOffice.setOnClickListener(mCallback33);
+            this.cardServices.setOnClickListener(mCallback35);
+            this.fbLocations.setOnClickListener(mCallback38);
+            this.fbOffice.setOnClickListener(mCallback34);
+            this.fbServices.setOnClickListener(mCallback36);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -214,63 +214,6 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 6: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.LOCATIONS);
-                }
-                break;
-            }
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.SERVICES);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.HOME);
-                }
-                break;
-            }
             case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -310,6 +253,63 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
                 break;
             }
             case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.HOME);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.LOCATIONS);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.SERVICES);
+                }
+                break;
+            }
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;

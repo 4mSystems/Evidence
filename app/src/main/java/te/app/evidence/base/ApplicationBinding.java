@@ -1,6 +1,8 @@
 package te.app.evidence.base;
 
 import android.graphics.Color;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.ImageView;
 
 import androidx.databinding.BindingAdapter;
@@ -10,6 +12,7 @@ import com.squareup.picasso.Picasso;
 
 import te.app.evidence.R;
 import te.app.evidence.utils.helper.AppHelper;
+import te.app.evidence.utils.images.PhotoFullPopupWindow;
 
 public class ApplicationBinding {
 
@@ -23,8 +26,15 @@ public class ApplicationBinding {
 
     @BindingAdapter("imageMarketUrl")
     public static void loadMarketImage(ImageView imageView, Object image) {
-        if (image instanceof String) {
+        if (image instanceof String && !TextUtils.isEmpty((String) image)) {
             Picasso.get().load((String) image).placeholder(R.drawable.splash).into(imageView);
+        }
+    }
+ @BindingAdapter("imageShowUrl")
+    public static void loadMShowImage(ImageView imageView, Object image) {
+        if (image instanceof String && !TextUtils.isEmpty((String) image)) {
+            Picasso.get().load((String) image).placeholder(R.drawable.splash).into(imageView);
+            imageView.setOnClickListener(v -> new PhotoFullPopupWindow(MyApplication.getInstance(), R.layout.popup_photo_full, imageView, (String) image, null));
         }
     }
 

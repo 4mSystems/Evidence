@@ -22,7 +22,7 @@ public class FragmentAddAttachmentBindingImpl extends FragmentAddAttachmentBindi
     private final com.google.android.material.textfield.TextInputEditText mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback30;
+    private final android.view.View.OnClickListener mCallback32;
     @Nullable
     private final android.view.View.OnClickListener mCallback31;
     // values
@@ -88,8 +88,8 @@ public class FragmentAddAttachmentBindingImpl extends FragmentAddAttachmentBindi
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback32 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback31 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -343,8 +343,8 @@ public class FragmentAddAttachmentBindingImpl extends FragmentAddAttachmentBindi
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback31);
-            this.file.setOnClickListener(mCallback30);
+            this.btnSave.setOnClickListener(mCallback32);
+            this.file.setOnClickListener(mCallback31);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
         }
         if ((dirtyFlags & 0x15L) != 0) {
@@ -367,23 +367,6 @@ public class FragmentAddAttachmentBindingImpl extends FragmentAddAttachmentBindi
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.select();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -398,6 +381,23 @@ public class FragmentAddAttachmentBindingImpl extends FragmentAddAttachmentBindi
 
 
                     viewmodel.addAttach();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.select();
                 }
                 break;
             }

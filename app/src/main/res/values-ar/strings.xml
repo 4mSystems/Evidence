@@ -222,5 +222,8 @@
     <string name="station">أقسام الشرطة</string>
     <string name="real_estate_month">الشهر العقارى</string>
     <string name="map">الخريطة</string>
+    <string name="service_time">ميعاد الخدمة</string>
+    <string name="add_service">إضافة خدمة</string>
+    <string name="edit_service">تعديل الخدمة</string>
 
 </resources>

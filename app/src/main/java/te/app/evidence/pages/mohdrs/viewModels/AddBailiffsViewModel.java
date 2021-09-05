@@ -40,10 +40,10 @@ public class AddBailiffsViewModel extends BaseViewModel {
     public void createMohdr() {
         List<String> clientList = new ArrayList<>();
         List<String> khesmList = new ArrayList<>();
-        if (userData.getUserData().getType().equals("User"))
-            getAddMohdrRequest().setCatid(userData.getUserData().getCatId());
         if (getAddMohdrRequest().isValid()) {
             setMessage(Constants.SHOW_PROGRESS);
+            if (userData.getUserData().getType().equals("User"))
+                getAddMohdrRequest().setCatid(userData.getUserData().getCatId());
             for (int i = 0; i < getCaseClientsCategoriesData().getClients().size(); i++) {
                 if (getCaseClientsCategoriesData().getClients().get(i).isChecked())
                     clientList.add(getCaseClientsCategoriesData().getClients().get(i).getClientName());

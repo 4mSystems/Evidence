@@ -183,4 +183,31 @@ public class AddMohdrRequest {
         this.khesmText = khesmText;
     }
 
+    @Override
+    public String toString() {
+        return "AddMohdrRequest{" +
+                "courtMohdareen='" + courtMohdareen + '\'' +
+                ", paperType='" + paperType + '\'' +
+                ", deliverData='" + deliverData + '\'' +
+                ", paperNumber='" + paperNumber + '\'' +
+                ", sessionDate='" + sessionDate + '\'' +
+                ", mokelName='" + mokelName + '\'' +
+                ", khesmName='" + khesmName + '\'' +
+                ", casenumber='" + casenumber + '\'' +
+                ", catid='" + catid + '\'' +
+                ", notes='" + notes + '\'' +
+                ", mokelText='" + mokelText + '\'' +
+                ", khesmText='" + khesmText + '\'' +
+                ", invetationNumError=" + invetationNumError +
+                ", dateError=" + dateError +
+                ", descionError=" + descionError +
+                ", mokelError=" + mokelError +
+                ", khesmError=" + khesmError +
+                ", courtError=" + courtError +
+                ", paperTypeError=" + paperTypeError +
+                ", deliverDateError=" + deliverDateError +
+                ", paperNumberError=" + paperNumberError +
+                ", catError=" + catError +
+                '}';
+    }
 }

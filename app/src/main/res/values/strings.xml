@@ -216,11 +216,14 @@
     <string name="office">المكتب</string>
     <string name="office_desc">"يمكنك اداره مكتبك من  وتفقد الدعوى والجلسات "</string>
     <string name="location">العناوين المهمة</string>
-    <string name="locations_desc">تصفح العناوين المهمة ... أقسام الشرطة , المحاكم , الشهر العقارى</string>
+    <string name="locations_desc">تصفح العناوين المهمة … أقسام الشرطة , المحاكم , الشهر العقارى</string>
     <string name="welcome">مرحبا مجددا ,</string>
     <string name="search_govern">إبحث باسم المحافظة</string>
     <string name="station">أقسام الشرطة</string>
     <string name="real_estate_month">الشهر العقارى</string>
     <string name="map">الخريطة</string>
+    <string name="service_time">ميعاد الخدمة</string>
+    <string name="add_service">إضافة خدمة</string>
+    <string name="edit_service">تعديل الخدمة</string>
 
 </resources>

@@ -85,6 +85,7 @@ public class Constants {
     public final static int KHESM_CODE = 6002;
     public final static int FILE_TYPE_IMAGE = 378;
     public final static int ATTACH_REQUEST = 6003;
+    public final static int ADD_SERVICE_REQUEST = 6006;
     public final static String ATTACHMENT_TYPE = "img_Url";
     public final static int CHECK_CONFIRM_NAV_REGISTER = 0;
     public final static int CHECK_CONFIRM_NAV_FORGET = 1;
@@ -144,5 +145,6 @@ public class Constants {
     public static final String COURT = "محكمة";
     public static final String POLICE_STATION = "قسم شرطة";
     public static final String Real_estate_month = "شهر عقاري";
+    public static final String ADD_SERVICE = "ADD_SERVICE";
 }
 

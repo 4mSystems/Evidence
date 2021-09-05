@@ -2,16 +2,23 @@ package te.app.evidence.repository;
 
 import androidx.lifecycle.MutableLiveData;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import te.app.evidence.connection.ConnectionHelper;
+import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.auth.models.UsersResponse;
 import te.app.evidence.pages.places.models.PlacesByGovernResponse;
 import te.app.evidence.pages.places.models.PlacesResponse;
 import te.app.evidence.pages.points.models.EarnPointsResponse;
+import te.app.evidence.pages.services.models.AddServiceRequest;
+import te.app.evidence.pages.services.models.AddServiceResponse;
+import te.app.evidence.pages.services.models.ServicesResponse;
 import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.pages.settings.models.PackagesResponse;
@@ -66,6 +73,21 @@ public class SettingsRepository extends BaseRepository {
     public Disposable getPlacesByGovernId(int governId, String type, int page, boolean showProgress) {
         return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.PLACES_BY_GOVERN + governId + "/" + type + "?page=" + page, new Object(), PlacesByGovernResponse.class,
                 Constants.PLACES_BY_GOVERN, showProgress);
+    }
+
+    public Disposable getServices(int page, boolean showProgress) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.GET_SERVICES + page, new Object(), ServicesResponse.class,
+                Constants.SERVICES, showProgress);
+    }
+
+    public Disposable addServices(AddServiceRequest addServiceRequest, ArrayList<FileObject> fileObjects) {
+        if (fileObjects.size() == 0) {
+            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_SERVICE_REQUEST, addServiceRequest, AddServiceResponse.class,
+                    Constants.ADD_SERVICE, false);
+        } else {
+            return connectionHelper.requestApi(URLS.ADD_SERVICE_REQUEST, addServiceRequest, fileObjects, AddServiceResponse.class,
+                    Constants.ADD_SERVICE, false);
+        }
     }
 
 

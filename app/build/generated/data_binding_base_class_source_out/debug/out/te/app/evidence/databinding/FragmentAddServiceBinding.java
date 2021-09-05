@@ -28,7 +28,7 @@ public abstract class FragmentAddServiceBinding extends ViewDataBinding {
   public final TextInputEditText clientType;
 
   @NonNull
-  public final CircleImageView icBattery;
+  public final CircleImageView icImage;
 
   @NonNull
   public final ConstraintLayout imgContainer;
@@ -43,13 +43,13 @@ public abstract class FragmentAddServiceBinding extends ViewDataBinding {
   protected ServicesViewModel mViewmodel;
 
   protected FragmentAddServiceBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatButton btnSave, TextInputEditText clientType, CircleImageView icBattery,
+      AppCompatButton btnSave, TextInputEditText clientType, CircleImageView icImage,
       ConstraintLayout imgContainer, CircularProgressIndicator progress,
       CustomTextViewMedium tvUpload) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnSave = btnSave;
     this.clientType = clientType;
-    this.icBattery = icBattery;
+    this.icImage = icImage;
     this.imgContainer = imgContainer;
     this.progress = progress;
     this.tvUpload = tvUpload;

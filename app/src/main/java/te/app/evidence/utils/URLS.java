@@ -94,4 +94,6 @@ public class URLS {
     public static final String ADD_MOHDR = "add_mohdars";
     public static final String PLACES = "get_governments";
     public static final String PLACES_BY_GOVERN = "get_locations_by_gov_id/";
+    public static final String ADD_SERVICE_REQUEST = "add-service";
+    public static final String GET_SERVICES = "services?page=";
 }

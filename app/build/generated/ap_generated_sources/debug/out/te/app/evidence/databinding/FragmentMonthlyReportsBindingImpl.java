@@ -29,9 +29,9 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     private final te.app.evidence.customViews.views.CustomTextViewRegular mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback106;
+    private final android.view.View.OnClickListener mCallback108;
     @Nullable
-    private final android.view.View.OnClickListener mCallback107;
+    private final android.view.View.OnClickListener mCallback109;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -139,8 +139,8 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback106 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback107 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback108 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback109 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -382,10 +382,10 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback106);
+            this.inputCat.setOnClickListener(mCallback108);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            this.search.setOnClickListener(mCallback107);
+            this.search.setOnClickListener(mCallback109);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1

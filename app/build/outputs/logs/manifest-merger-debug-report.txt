@@ -13,23 +13,26 @@ MERGED from [com.chaos.view:pinview:1.4.3] /home/elnagar/.gradle/caches/transfor
 MERGED from [com.google.dagger:dagger-android-support:2.30.1] /home/elnagar/.gradle/caches/transforms-3/79b577a0b88ad718feaa6e7cd09c1c8c/transformed/jetified-dagger-android-support-2.30.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-3/0ccf647b65ad58c1a47905429b96012a/transformed/jetified-Toasty-1.4.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-3/ed53203c69a273311e0f26bbedfb2105/transformed/jetified-lottie-3.6.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-3/64f6da0b2f554d864e5aff0cc1526934/transformed/jetified-PhotoView-2.2.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/elnagar/.gradle/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.multidex:multidex:2.0.1] /home/elnagar/.gradle/caches/transforms-3/bcf0a322ad6eae5e4804c86629d6995e/transformed/multidex-2.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:2:1-13:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /home/elnagar/.gradle/caches/transforms-3/14a7f20ec4a558c8343a44dfdecd1eb5/transformed/jetified-rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/elnagar/.gradle/caches/transforms-3/be52a72971f015b10af18cb5a3045d69/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/elnagar/.gradle/caches/transforms-3/de148e248a6a02749480d8bad9640882/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:17:1-58:12
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.firebase:firebase-core:19.0.0] /home/elnagar/.gradle/caches/transforms-3/96797fe4909bfd510baa21b71461be96/transformed/jetified-firebase-core-19.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b506e1c9e863853d36377b285ee3473e/transformed/jetified-firebase-analytics-19.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:17:1-46:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.0] /home/elnagar/.gradle/caches/transforms-3/e22ec2a86bc857a0246d51a8a16b04d5/transformed/jetified-play-services-measurement-sdk-19.0.0/AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.firebase:firebase-core:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cb2a3f7b978cddad95f045489c18b609/transformed/jetified-firebase-core-19.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /home/elnagar/.gradle/caches/transforms-3/bdfa15188adddae8650b5522003914d6/transformed/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:17:1-46:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cc6c67f594b2fb09dd1ffc6bcc23b3bb/transformed/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:17:1-31:12
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/elnagar/.gradle/caches/transforms-3/444a5b3b3cdbae4d2e521c5d819a48b3/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:15:1-34:12
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:17:1-36:12
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:2:1-24:12
 MERGED from [com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:15:1-40:12
 MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /home/elnagar/.gradle/caches/transforms-3/af76f5bf78109fd48e72bed54cb39135/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:2:1-10:12
@@ -37,8 +40,8 @@ MERGED from [com.google.firebase:firebase-installations-interop:17.0.0] /home/el
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2d652dd5c167d95ef0c23b90e3a801/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/elnagar/.gradle/caches/transforms-3/895fc85a8816eba2d8323c3040a812e9/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/elnagar/.gradle/caches/transforms-3/bd31689b3cc0de059dbd681816ea9d82/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:17:1-27:12
-MERGED from [com.google.android.gms:play-services-measurement-base:19.0.0] /home/elnagar/.gradle/caches/transforms-3/dbf6f221e1a6d0464fb9861d7cdd5a93/transformed/jetified-play-services-measurement-base-19.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:17:1-27:12
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /home/elnagar/.gradle/caches/transforms-3/1893f84c82a0aea05a932b80d4534f20/transformed/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.3.6] /home/elnagar/.gradle/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] /home/elnagar/.gradle/caches/transforms-3/bcd9de11b2a200f975afca59611e23ea/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
@@ -85,7 +88,8 @@ MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/eln
 MERGED from [com.google.android.datatransport:transport-api:3.0.0] /home/elnagar/.gradle/caches/transforms-3/ec91dc9af933f6b7db44503be4079213/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
 MERGED from [com.google.firebase:firebase-components:17.0.0] /home/elnagar/.gradle/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:15:1-23:12
 MERGED from [com.google.dagger:dagger-android:2.30.1] /home/elnagar/.gradle/caches/transforms-3/61131c391b35b2e8d004552089df2ee4/transformed/jetified-dagger-android-2.30.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/elnagar/.gradle/caches/transforms-3/eca3ba0210bbbd976e50fb129550fcca/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/.gradle/caches/transforms-3/68b1c4cc2fc065099ebbc6cb4166f210/transformed/exifinterface-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/.gradle/caches/transforms-3/222960d5020cba7c3446c0bf7158b450/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/elnagar/.gradle/caches/transforms-3/12668bb07e7f24d0585fa902ab338913/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.tracing:tracing:1.0.0] /home/elnagar/.gradle/caches/transforms-3/8501c8a826f012f3dac1cdb29b8a227a/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /home/elnagar/.gradle/caches/transforms-3/c9661ab9e64328f156137deeb07f30fc/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
@@ -141,16 +145,16 @@ MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:11:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:8:5-67
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:22:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:11:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:23:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:26:5-67
 	android:name
@@ -163,16 +167,16 @@ MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradl
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:22:5-79
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:7:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:10:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:22:5-79
@@ -197,24 +201,28 @@ MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches
 MERGED from [org.conscrypt:conscrypt-android:2.5.1] /home/elnagar/.gradle/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/AndroidManifest.xml:11:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:27:5-56:19
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:27:5-56:19
-MERGED from [com.google.firebase:firebase-core:19.0.0] /home/elnagar/.gradle/caches/transforms-3/96797fe4909bfd510baa21b71461be96/transformed/jetified-firebase-core-19.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:19.0.0] /home/elnagar/.gradle/caches/transforms-3/96797fe4909bfd510baa21b71461be96/transformed/jetified-firebase-core-19.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b506e1c9e863853d36377b285ee3473e/transformed/jetified-firebase-analytics-19.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b506e1c9e863853d36377b285ee3473e/transformed/jetified-firebase-analytics-19.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:28:5-44:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.0] /home/elnagar/.gradle/caches/transforms-3/e22ec2a86bc857a0246d51a8a16b04d5/transformed/jetified-play-services-measurement-sdk-19.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.0] /home/elnagar/.gradle/caches/transforms-3/e22ec2a86bc857a0246d51a8a16b04d5/transformed/jetified-play-services-measurement-sdk-19.0.0/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:28:5-29:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.firebase:firebase-core:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cb2a3f7b978cddad95f045489c18b609/transformed/jetified-firebase-core-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cb2a3f7b978cddad95f045489c18b609/transformed/jetified-firebase-core-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /home/elnagar/.gradle/caches/transforms-3/bdfa15188adddae8650b5522003914d6/transformed/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /home/elnagar/.gradle/caches/transforms-3/bdfa15188adddae8650b5522003914d6/transformed/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:28:5-44:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cc6c67f594b2fb09dd1ffc6bcc23b3bb/transformed/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cc6c67f594b2fb09dd1ffc6bcc23b3bb/transformed/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:28:5-29:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:28:5-29:19
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/elnagar/.gradle/caches/transforms-3/444a5b3b3cdbae4d2e521c5d819a48b3/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/elnagar/.gradle/caches/transforms-3/444a5b3b3cdbae4d2e521c5d819a48b3/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:24:5-32:19
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:24:5-32:19
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:14:5-22:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:25:5-38:19
@@ -227,8 +235,8 @@ MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/el
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/elnagar/.gradle/caches/transforms-3/895fc85a8816eba2d8323c3040a812e9/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/elnagar/.gradle/caches/transforms-3/bd31689b3cc0de059dbd681816ea9d82/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/elnagar/.gradle/caches/transforms-3/bd31689b3cc0de059dbd681816ea9d82/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:19.0.0] /home/elnagar/.gradle/caches/transforms-3/dbf6f221e1a6d0464fb9861d7cdd5a93/transformed/jetified-play-services-measurement-base-19.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:19.0.0] /home/elnagar/.gradle/caches/transforms-3/dbf6f221e1a6d0464fb9861d7cdd5a93/transformed/jetified-play-services-measurement-base-19.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /home/elnagar/.gradle/caches/transforms-3/1893f84c82a0aea05a932b80d4534f20/transformed/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /home/elnagar/.gradle/caches/transforms-3/1893f84c82a0aea05a932b80d4534f20/transformed/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /home/elnagar/.gradle/caches/transforms-3/896fb0873c90c01e787a3c37dc056eaa/transformed/jetified-circleimageview-3.1.0/AndroidManifest.xml:9:5-20
@@ -249,6 +257,8 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:25:5-39:19
 MERGED from [com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:25:5-39:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/.gradle/caches/transforms-3/222960d5020cba7c3446c0bf7158b450/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/.gradle/caches/transforms-3/222960d5020cba7c3446c0bf7158b450/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
 	android:requestLegacyExternalStorage
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-52
 	android:launchMode
@@ -361,6 +371,8 @@ MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/tran
 MERGED from [com.github.GrenderG:Toasty:1.4.2] /home/elnagar/.gradle/caches/transforms-3/0ccf647b65ad58c1a47905429b96012a/transformed/jetified-Toasty-1.4.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-3/ed53203c69a273311e0f26bbedfb2105/transformed/jetified-lottie-3.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.airbnb.android:lottie:3.6.0] /home/elnagar/.gradle/caches/transforms-3/ed53203c69a273311e0f26bbedfb2105/transformed/jetified-lottie-3.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-3/64f6da0b2f554d864e5aff0cc1526934/transformed/jetified-PhotoView-2.2.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.chrisbanes:PhotoView:2.2.0] /home/elnagar/.gradle/caches/transforms-3/64f6da0b2f554d864e5aff0cc1526934/transformed/jetified-PhotoView-2.2.0/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/elnagar/.gradle/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.3.1] /home/elnagar/.gradle/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.multidex:multidex:2.0.1] /home/elnagar/.gradle/caches/transforms-3/bcf0a322ad6eae5e4804c86629d6995e/transformed/multidex-2.0.1/AndroidManifest.xml:20:5-43
@@ -373,28 +385,32 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradl
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/elnagar/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/elnagar/.gradle/caches/transforms-3/be52a72971f015b10af18cb5a3045d69/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/elnagar/.gradle/caches/transforms-3/be52a72971f015b10af18cb5a3045d69/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/elnagar/.gradle/caches/transforms-3/de148e248a6a02749480d8bad9640882/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/elnagar/.gradle/caches/transforms-3/de148e248a6a02749480d8bad9640882/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:19.0.0] /home/elnagar/.gradle/caches/transforms-3/96797fe4909bfd510baa21b71461be96/transformed/jetified-firebase-core-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:19.0.0] /home/elnagar/.gradle/caches/transforms-3/96797fe4909bfd510baa21b71461be96/transformed/jetified-firebase-core-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b506e1c9e863853d36377b285ee3473e/transformed/jetified-firebase-analytics-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b506e1c9e863853d36377b285ee3473e/transformed/jetified-firebase-analytics-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.0] /home/elnagar/.gradle/caches/transforms-3/e22ec2a86bc857a0246d51a8a16b04d5/transformed/jetified-play-services-measurement-sdk-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.0] /home/elnagar/.gradle/caches/transforms-3/e22ec2a86bc857a0246d51a8a16b04d5/transformed/jetified-play-services-measurement-sdk-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-core:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cb2a3f7b978cddad95f045489c18b609/transformed/jetified-firebase-core-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cb2a3f7b978cddad95f045489c18b609/transformed/jetified-firebase-core-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /home/elnagar/.gradle/caches/transforms-3/bdfa15188adddae8650b5522003914d6/transformed/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:19.0.1] /home/elnagar/.gradle/caches/transforms-3/bdfa15188adddae8650b5522003914d6/transformed/jetified-firebase-analytics-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cc6c67f594b2fb09dd1ffc6bcc23b3bb/transformed/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:19.0.1] /home/elnagar/.gradle/caches/transforms-3/cc6c67f594b2fb09dd1ffc6bcc23b3bb/transformed/jetified-play-services-measurement-sdk-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/elnagar/.gradle/caches/transforms-3/444a5b3b3cdbae4d2e521c5d819a48b3/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-stats:17.0.0] /home/elnagar/.gradle/caches/transforms-3/444a5b3b3cdbae4d2e521c5d819a48b3/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:20:5-22:41
@@ -409,10 +425,10 @@ MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/el
 MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /home/elnagar/.gradle/caches/transforms-3/895fc85a8816eba2d8323c3040a812e9/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/elnagar/.gradle/caches/transforms-3/bd31689b3cc0de059dbd681816ea9d82/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] /home/elnagar/.gradle/caches/transforms-3/bd31689b3cc0de059dbd681816ea9d82/transformed/jetified-play-services-ads-identifier-17.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:19.0.0] /home/elnagar/.gradle/caches/transforms-3/dbf6f221e1a6d0464fb9861d7cdd5a93/transformed/jetified-play-services-measurement-base-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:19.0.0] /home/elnagar/.gradle/caches/transforms-3/dbf6f221e1a6d0464fb9861d7cdd5a93/transformed/jetified-play-services-measurement-base-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /home/elnagar/.gradle/caches/transforms-3/1893f84c82a0aea05a932b80d4534f20/transformed/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:19.0.1] /home/elnagar/.gradle/caches/transforms-3/1893f84c82a0aea05a932b80d4534f20/transformed/jetified-play-services-measurement-base-19.0.1/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] /home/elnagar/.gradle/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
@@ -505,8 +521,10 @@ MERGED from [com.google.firebase:firebase-components:17.0.0] /home/elnagar/.grad
 MERGED from [com.google.firebase:firebase-components:17.0.0] /home/elnagar/.gradle/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.dagger:dagger-android:2.30.1] /home/elnagar/.gradle/caches/transforms-3/61131c391b35b2e8d004552089df2ee4/transformed/jetified-dagger-android-2.30.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.dagger:dagger-android:2.30.1] /home/elnagar/.gradle/caches/transforms-3/61131c391b35b2e8d004552089df2ee4/transformed/jetified-dagger-android-2.30.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/elnagar/.gradle/caches/transforms-3/eca3ba0210bbbd976e50fb129550fcca/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.0.0] /home/elnagar/.gradle/caches/transforms-3/eca3ba0210bbbd976e50fb129550fcca/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/.gradle/caches/transforms-3/68b1c4cc2fc065099ebbc6cb4166f210/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.2.0] /home/elnagar/.gradle/caches/transforms-3/68b1c4cc2fc065099ebbc6cb4166f210/transformed/exifinterface-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/.gradle/caches/transforms-3/222960d5020cba7c3446c0bf7158b450/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /home/elnagar/.gradle/caches/transforms-3/222960d5020cba7c3446c0bf7158b450/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/elnagar/.gradle/caches/transforms-3/12668bb07e7f24d0585fa902ab338913/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /home/elnagar/.gradle/caches/transforms-3/12668bb07e7f24d0585fa902ab338913/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.tracing:tracing:1.0.0] /home/elnagar/.gradle/caches/transforms-3/8501c8a826f012f3dac1cdb29b8a227a/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
@@ -533,18 +551,24 @@ INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManife
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
+meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+	android:value
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+	android:name
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:9:5-68
 MERGED from [com.google.android.gms:play-services-cloud-messaging:16.0.0] /home/elnagar/.gradle/caches/transforms-3/2b5a124450d3dff39b90c54e644a81ef/transformed/jetified-play-services-cloud-messaging-16.0.0/AndroidManifest.xml:9:5-68
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/f8266185c802609dfa880cbc6dbf0087/transformed/jetified-play-services-measurement-sdk-api-19.0.0/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/a6312e3985f3b10bd707475800ec2672/transformed/jetified-play-services-measurement-sdk-api-19.0.1/AndroidManifest.xml:25:5-68
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:22-65
 uses-permission#com.google.android.c2dm.permission.RECEIVE
@@ -587,8 +611,8 @@ service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:25:9-31:19
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:25:9-31:19
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:27:9-33:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:15:9-21:19
 MERGED from [com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:33:9-37:35
@@ -608,37 +632,37 @@ ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.0] /home/elnagar/.gradle/caches/transforms-3/b15c612b686a98e6e26393e875ce4dd2/transformed/jetified-play-services-measurement-impl-19.0.0/AndroidManifest.xml:26:5-110
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:19.0.1] /home/elnagar/.gradle/caches/transforms-3/d9813ec62df124ce06880f1897704ef4/transformed/jetified-play-services-measurement-impl-19.0.1/AndroidManifest.xml:26:5-110
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:26:22-107
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:26:22-107
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:29:9-33:20
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:29:9-33:20
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:31:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:31:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:32:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:30:13-85
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:30:13-85
 service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:35:9-38:40
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:35:9-38:40
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:37:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:38:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:38:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:36:13-84
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:36:13-84
 service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:39:9-43:72
+ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:39:9-43:72
 	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:41:13-35
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:41:13-35
 	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:42:13-37
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:42:13-37
 	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:43:13-69
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:43:13-69
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:19.0.0] /home/elnagar/.gradle/caches/transforms-3/5f024576e9aaa3ece6169fd98d40ef2b/transformed/jetified-play-services-measurement-19.0.0/AndroidManifest.xml:40:13-87
+		ADDED from [com.google.android.gms:play-services-measurement:19.0.1] /home/elnagar/.gradle/caches/transforms-3/27918acaace17ddbd42a9b52c68e9b58/transformed/jetified-play-services-measurement-19.0.1/AndroidManifest.xml:40:13-87
 meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
 ADDED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
 	android:value
@@ -646,11 +670,11 @@ ADDED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gr
 	android:name
 		ADDED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:30:13-32:85
+ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:30:13-32:85
 	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:32:17-82
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:32:17-82
 	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.0] /home/elnagar/.gradle/caches/transforms-3/fd0bddb23f5f97bc90320e345b59b19a/transformed/jetified-play-services-measurement-api-19.0.0/AndroidManifest.xml:31:17-139
+		ADDED from [com.google.android.gms:play-services-measurement-api:19.0.1] /home/elnagar/.gradle/caches/transforms-3/3246659f3a1112384cccb8df292af98c/transformed/jetified-play-services-measurement-api-19.0.1/AndroidManifest.xml:31:17-139
 meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
 ADDED from [com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
 	android:value

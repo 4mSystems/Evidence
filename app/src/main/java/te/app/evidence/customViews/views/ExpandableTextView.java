@@ -27,11 +27,11 @@ public class ExpandableTextView extends CustomTextViewRegular {
         this.trimLength = typedArray.getInt(R.styleable.ExpandableTextView_trimLength, DEFAULT_TRIM_LENGTH);
         typedArray.recycle();
 
-//        setOnClickListener(v -> {
-//            trim = !trim;
-//            setText();
-//            requestFocusFromTouch();
-//        });
+        setOnClickListener(v -> {
+            trim = !trim;
+            setText();
+            requestFocusFromTouch();
+        });
     }
 
     private void setText() {

@@ -8,21 +8,24 @@ import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.validation.Validate;
 
 public class AddServiceRequest {
-    @SerializedName("service_title")
+    @SerializedName("title")
     private String serviceTitle;
-    @SerializedName("service_price")
+    @SerializedName("price")
     private String servicePrice;
-    @SerializedName("service_desc")
+    @SerializedName("desc")
     private String serviceDesc;
     @SerializedName("phone")
     private String servicePhone;
-    @SerializedName("service_whats")
+    @SerializedName("whatsapp")
     private String serviceWhats;
+    @SerializedName("time")
+    private String time;
     private transient String serviceImage;
-    public ObservableField<String> serviceTitleError = new ObservableField<>();
-    public ObservableField<String> servicePriceError = new ObservableField<>();
-    public ObservableField<String> servicePhoneError = new ObservableField<>();
-    public ObservableField<String> serviceWhatseError = new ObservableField<>();
+    public transient ObservableField<String> serviceTitleError = new ObservableField<>();
+    public transient ObservableField<String> servicePriceError = new ObservableField<>();
+    public transient ObservableField<String> servicePhoneError = new ObservableField<>();
+    public transient ObservableField<String> serviceWhatsError = new ObservableField<>();
+    public transient ObservableField<String> serviceTimeError = new ObservableField<>();
 
     public boolean isValid() {
         boolean valid = true;
@@ -32,11 +35,14 @@ public class AddServiceRequest {
         } else if (!Validate.isValid(servicePrice, Constants.FIELD)) {
             servicePriceError.set(Validate.error);
             valid = false;
+        } else if (!Validate.isValid(time, Constants.FIELD)) {
+            serviceTimeError.set(Validate.error);
+            valid = false;
         } else if (!Validate.isValid(servicePhone, Constants.FIELD)) {
             servicePhoneError.set(Validate.error);
             valid = false;
         } else if (!Validate.isValid(serviceWhats, Constants.FIELD)) {
-            serviceWhatseError.set(Validate.error);
+            serviceWhatsError.set(Validate.error);
             valid = false;
         }
         return valid;
@@ -83,8 +89,24 @@ public class AddServiceRequest {
     }
 
     public void setServiceWhats(String serviceWhats) {
-        serviceWhatseError.set(null);
+        serviceWhatsError.set(null);
         this.serviceWhats = serviceWhats;
     }
 
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        serviceTimeError.set(null);
+        this.time = time;
+    }
+
+    public String getServiceImage() {
+        return serviceImage;
+    }
+
+    public void setServiceImage(String serviceImage) {
+        this.serviceImage = serviceImage;
+    }
 }
