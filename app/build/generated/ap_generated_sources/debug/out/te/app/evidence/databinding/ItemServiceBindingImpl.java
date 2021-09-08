@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemServiceBindingImpl extends ItemServiceBinding  {
+public class ItemServiceBindingImpl extends ItemServiceBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,10 +14,6 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.delete, 7);
-        sViewsWithIds.put(R.id.edit, 8);
-        sViewsWithIds.put(R.id.ic_phone, 9);
-        sViewsWithIds.put(R.id.ic_whats, 10);
         sViewsWithIds.put(R.id.br, 11);
         sViewsWithIds.put(R.id.v_service, 12);
     }
@@ -25,6 +21,12 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback8;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback6;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback7;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -35,28 +37,35 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
     private ItemServiceBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
             , (androidx.constraintlayout.widget.Barrier) bindings[11]
-            , (com.google.android.material.button.MaterialButton) bindings[7]
-            , (com.google.android.material.button.MaterialButton) bindings[8]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[9]
+            , (com.google.android.material.button.MaterialButton) bindings[9]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[3]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[4]
-            , (te.app.evidence.customViews.views.ExpandableTextView) bindings[5]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[8]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[6]
+            , (te.app.evidence.customViews.views.ExpandableTextView) bindings[7]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[4]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             , (android.view.View) bindings[12]
+            , (androidx.appcompat.widget.AppCompatButton) bindings[10]
             );
-        this.flow.setTag(null);
+        this.call.setTag(null);
+        this.icMore.setTag(null);
         this.icPlace.setTag(null);
         this.imgLive.setTag(null);
         this.mboundView0 = (androidx.cardview.widget.CardView) bindings[0];
         this.mboundView0.setTag(null);
         this.title.setTag(null);
         this.tvDescPost.setTag(null);
+        this.userCreate.setTag(null);
         this.userName.setTag(null);
+        this.userPrice.setTag(null);
+        this.whats.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback8 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback6 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback7 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -132,17 +141,21 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
             mDirtyFlags = 0;
         }
         java.lang.String itemViewModelServiceDataImage = null;
+        java.lang.String itemViewModelServiceDataPriceConcatJavaLangString = null;
         boolean itemViewModelServiceDataUserIdItemViewModelUserDataUserDataId = false;
         int textUtilsIsEmptyItemViewModelServiceDataImageViewVISIBLEViewGONE = 0;
         java.lang.String itemViewModelServiceDataUserName = null;
         boolean textUtilsIsEmptyItemViewModelServiceDataImage = false;
         te.app.evidence.pages.auth.models.UserData itemViewModelServiceDataUser = null;
+        java.lang.String itemViewModelServiceDataPrice = null;
+        java.lang.String itemViewModelServiceDataTime = null;
         java.lang.String itemViewModelServiceDataDesc = null;
         int itemViewModelUserDataUserDataId = 0;
         java.lang.String itemViewModelServiceDataTitle = null;
         te.app.evidence.pages.services.viewModels.ItemServicesViewModel itemViewModel = mItemViewModel;
         boolean TextUtilsIsEmptyItemViewModelServiceDataImage1 = false;
         te.app.evidence.pages.auth.models.UserMainData itemViewModelUserData = null;
+        java.lang.String itemViewModelServiceDataPriceConcatJavaLangStringConcatUserPriceAndroidStringCoin = null;
         te.app.evidence.pages.auth.models.UserData itemViewModelUserDataUserData = null;
         int itemViewModelServiceDataUserIdItemViewModelUserDataUserDataIdViewVISIBLEViewGONE = 0;
         te.app.evidence.pages.services.models.ServiceData itemViewModelServiceData = null;
@@ -170,6 +183,10 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
                     itemViewModelServiceDataImage = itemViewModelServiceData.getImage();
                     // read itemViewModel.serviceData.user
                     itemViewModelServiceDataUser = itemViewModelServiceData.getUser();
+                    // read itemViewModel.serviceData.price
+                    itemViewModelServiceDataPrice = itemViewModelServiceData.getPrice();
+                    // read itemViewModel.serviceData.time
+                    itemViewModelServiceDataTime = itemViewModelServiceData.getTime();
                     // read itemViewModel.serviceData.desc
                     itemViewModelServiceDataDesc = itemViewModelServiceData.getDesc();
                     // read itemViewModel.serviceData.title
@@ -190,6 +207,10 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
                     itemViewModelServiceDataUserImage = itemViewModelServiceDataUser.getImage();
                     // read itemViewModel.serviceData.user.id
                     itemViewModelServiceDataUserId = itemViewModelServiceDataUser.getId();
+                }
+                if (itemViewModelServiceDataPrice != null) {
+                    // read itemViewModel.serviceData.price.concat(" ")
+                    itemViewModelServiceDataPriceConcatJavaLangString = itemViewModelServiceDataPrice.concat(" ");
                 }
 
 
@@ -213,6 +234,10 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
                         dirtyFlags |= 0x20L;
                 }
             }
+                if (itemViewModelServiceDataPriceConcatJavaLangString != null) {
+                    // read itemViewModel.serviceData.price.concat(" ").concat(@android:string/coin)
+                    itemViewModelServiceDataPriceConcatJavaLangStringConcatUserPriceAndroidStringCoin = itemViewModelServiceDataPriceConcatJavaLangString.concat(userPrice.getResources().getString(R.string.coin));
+                }
 
 
                 // read !TextUtils.isEmpty(itemViewModel.serviceData.image) ? View.VISIBLE : View.GONE
@@ -221,20 +246,90 @@ public class ItemServiceBindingImpl extends ItemServiceBinding  {
                 itemViewModelServiceDataUserIdItemViewModelUserDataUserDataIdViewVISIBLEViewGONE = ((itemViewModelServiceDataUserIdItemViewModelUserDataUserDataId) ? (android.view.View.VISIBLE) : (android.view.View.GONE));
         }
         // batch finished
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.call.setOnClickListener(mCallback7);
+            this.icMore.setOnClickListener(mCallback6);
+            this.whats.setOnClickListener(mCallback8);
+        }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
 
-            this.flow.setVisibility(itemViewModelServiceDataUserIdItemViewModelUserDataUserDataIdViewVISIBLEViewGONE);
+            this.icMore.setVisibility(itemViewModelServiceDataUserIdItemViewModelUserDataUserDataIdViewVISIBLEViewGONE);
             te.app.evidence.base.ApplicationBinding.loadMShowImage(this.icPlace, itemViewModelServiceDataUserImage);
             this.imgLive.setVisibility(textUtilsIsEmptyItemViewModelServiceDataImageViewVISIBLEViewGONE);
             te.app.evidence.base.ApplicationBinding.loadMShowImage(this.imgLive, itemViewModelServiceDataImage);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.title, itemViewModelServiceDataTitle);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvDescPost, itemViewModelServiceDataDesc);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userCreate, itemViewModelServiceDataTime);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userName, itemViewModelServiceDataUserName);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.userPrice, itemViewModelServiceDataPriceConcatJavaLangStringConcatUserPriceAndroidStringCoin);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        switch(sourceId) {
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.services.viewModels.ItemServicesViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.action(te.app.evidence.utils.Constants.WHATS);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.services.viewModels.ItemServicesViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.action(te.app.evidence.utils.Constants.EDIT);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.services.viewModels.ItemServicesViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.action(te.app.evidence.utils.Constants.CALL);
+                }
+                break;
+            }
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

@@ -13,6 +13,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -149,6 +150,7 @@ public class MovementHelper {
     }
 
     public static void finishWithResultWithRequestCode(PassingObject passingObject, Context context, int request) {
+        LauncherHelper.launcherRequest = request;
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
         bundle.putSerializable(Constants.BUNDLE, passingObject);
@@ -157,22 +159,6 @@ public class MovementHelper {
         ((Activity) context).finish();
     }
 
-    public static void startMapActivityForResultWithBundle(Context from, PassingObject passingObject) {
-//        Intent intent = new Intent(from, MapAddressActivity.class);
-//        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
-////        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        ((ParentActivity) from).startActivityForResult(intent, Constants.RESULT_CODE);
-    }
-
-    public static void startDialogWithBundle(Context from, PassingObject passingObject, DialogFragment dialogFragment, Fragment fragment) {
-        Intent intent = new Intent();
-        intent.putExtra(Constants.BUNDLE, new Gson().toJson(passingObject));
-        Bundle args = new Bundle();
-        args.putString(Constants.BUNDLE, intent.getStringExtra(Constants.BUNDLE));
-        dialogFragment.setArguments(args);
-        dialogFragment.show(((FragmentActivity) from).getSupportFragmentManager(), dialogFragment.getTag());
-
-    }
 
     public static void startActivityBase(Context context, String page, String pageNameBar, String shareBar) {
         Intent intent = new Intent(context, BaseActivity.class);

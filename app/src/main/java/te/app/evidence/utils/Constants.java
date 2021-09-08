@@ -146,5 +146,7 @@ public class Constants {
     public static final String POLICE_STATION = "قسم شرطة";
     public static final String Real_estate_month = "شهر عقاري";
     public static final String ADD_SERVICE = "ADD_SERVICE";
+    public static final String CALL = "CALL";
+    public static final String WHATS = "WHATS";
 }
 

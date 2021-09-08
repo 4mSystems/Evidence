@@ -1,14 +1,16 @@
 package te.app.evidence.pages.services;
 
-import static android.app.Activity.RESULT_OK;
 
+import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,15 +21,20 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 
+import java.util.Objects;
+
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentServicesBinding;
+import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.services.models.ServiceData;
 import te.app.evidence.pages.services.models.ServicesResponse;
 import te.app.evidence.pages.services.viewModels.ServicesViewModel;
@@ -54,11 +61,20 @@ public class ServicesFragment extends BaseFragment {
         viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
-            if (((Mutable) o).message.equals(Constants.ADD_SERVICE)) {
-                viewModel.getServicesAdapter().lastSelected = -1;
-                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_service), AddServiceFragment.class.getName(), Constants.ADD_SERVICE_REQUEST);
-            } else if (((Mutable) o).message.equals(Constants.SERVICES)) {
-                viewModel.setServiceMainData(((ServicesResponse) mutable.object).getServiceMainData());
+            switch (((Mutable) o).message) {
+                case Constants.ADD_SERVICE:
+                    viewModel.getServicesAdapter().lastSelected = -1;
+                    MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_service), AddServiceFragment.class.getName(), Constants.ADD_SERVICE_REQUEST);
+                    break;
+                case Constants.SERVICES:
+                    viewModel.setServiceMainData(((ServicesResponse) mutable.object).getServiceMainData());
+                    break;
+                case Constants.DELETE:
+                    toastMessage(((StatusMessage) mutable.object).mMessage);
+                    viewModel.getServicesAdapter().getServiceDataList().remove(viewModel.getServicesAdapter().lastSelected);
+                    viewModel.getServicesAdapter().notifyDataSetChanged();
+                    viewModel.notifyChange(BR.servicesAdapter);
+                    break;
             }
         });
         binding.rcServices.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -79,6 +95,27 @@ public class ServicesFragment extends BaseFragment {
                 }
             }
         });
+        viewModel.getServicesAdapter().liveData.observeForever(o -> {
+            if (o.equals(Constants.DELETE))
+                showDeleteDialog();
+            else
+                MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getServicesAdapter().getServiceDataList().get(viewModel.getServicesAdapter().lastSelected)), getString(R.string.edit_service), AddServiceFragment.class.getName(), Constants.ADD_SERVICE_REQUEST);
+        });
+    }
+
+    private void showDeleteDialog() {
+        Dialog deleteDialog = new Dialog(requireActivity(), R.style.PauseDialog);
+        deleteDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        Objects.requireNonNull(deleteDialog.getWindow()).getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        deleteDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        OptionDialogBinding binding = DataBindingUtil.inflate(LayoutInflater.from(deleteDialog.getContext()), R.layout.option_dialog, null, false);
+        deleteDialog.setContentView(binding.getRoot());
+        binding.optionCancel.setOnClickListener(v -> deleteDialog.dismiss());
+        binding.optionDone.setOnClickListener(v -> {
+            deleteDialog.dismiss();
+            viewModel.deleteService();
+        });
+        deleteDialog.show();
     }
 
     @Override
@@ -100,6 +137,7 @@ public class ServicesFragment extends BaseFragment {
                         viewModel.getServicesAdapter().notifyItemInserted(viewModel.getServicesAdapter().getServiceDataList().size() - 1);
                         binding.rcServices.scrollToPosition(viewModel.getServicesAdapter().getServiceDataList().size() - 1);
                     } else {
+                        ServiceData serviceData = new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ServiceData.class);
                         viewModel.getServicesAdapter().getServiceDataList().set(viewModel.getServicesAdapter().lastSelected, new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), ServiceData.class));
                         viewModel.getServicesAdapter().notifyItemChanged(viewModel.getServicesAdapter().lastSelected);
                         binding.rcServices.scrollToPosition(viewModel.getServicesAdapter().lastSelected);

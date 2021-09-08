@@ -20,6 +20,8 @@ public class AddServiceRequest {
     private String serviceWhats;
     @SerializedName("time")
     private String time;
+    private transient int id;
+
     private transient String serviceImage;
     public transient ObservableField<String> serviceTitleError = new ObservableField<>();
     public transient ObservableField<String> servicePriceError = new ObservableField<>();
@@ -108,5 +110,13 @@ public class AddServiceRequest {
 
     public void setServiceImage(String serviceImage) {
         this.serviceImage = serviceImage;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

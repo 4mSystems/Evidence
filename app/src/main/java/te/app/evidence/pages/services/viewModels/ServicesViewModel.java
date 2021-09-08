@@ -14,6 +14,7 @@ import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.services.adapters.ServicesAdapter;
 import te.app.evidence.pages.services.models.AddServiceRequest;
+import te.app.evidence.pages.services.models.ServiceData;
 import te.app.evidence.pages.services.models.ServiceMainData;
 import te.app.evidence.repository.SettingsRepository;
 import te.app.evidence.utils.Constants;
@@ -27,6 +28,7 @@ public class ServicesViewModel extends BaseViewModel {
     AddServiceRequest addServiceRequest;
     public ArrayList<FileObject> fileObjects;
     ServiceMainData serviceMainData;
+    ServiceData serviceData;
 
     @Inject
     public ServicesViewModel(SettingsRepository repository) {
@@ -41,18 +43,17 @@ public class ServicesViewModel extends BaseViewModel {
         compositeDisposable.add(repository.getServices(page, showProgress));
     }
 
-    //    public void getClients(int govId) {
-//        compositeDisposable.add(repository.getClients(govId));
-//    }
-//
-//    public void getGovs() {
-//        compositeDisposable.add(repository.getGovs());
-//    }
-//
+    public void deleteService() {
+        compositeDisposable.add(repository.deleteService(getServicesAdapter().getServiceDataList().get(getServicesAdapter().lastSelected).getId()));
+    }
+
     public void addNewService() {
         if (getAddServiceRequest().isValid()) {
-         setMessage(Constants.SHOW_PROGRESS);
-            compositeDisposable.add(repository.addServices(getAddServiceRequest(), getFileObjects()));
+            setMessage(Constants.SHOW_PROGRESS);
+            if (getPassingObject().getObjectClass() == null)
+                compositeDisposable.add(repository.addServices(getAddServiceRequest(), getFileObjects()));
+            else
+                compositeDisposable.add(repository.editServices(getAddServiceRequest(), getFileObjects()));
         }
     }
 
@@ -79,6 +80,25 @@ public class ServicesViewModel extends BaseViewModel {
         searchProgressVisible.set(false);
         notifyChange(BR.serviceMainData);
         this.serviceMainData = serviceMainData;
+    }
+
+    @Bindable
+    public ServiceData getServiceData() {
+        return this.serviceData == null ? this.serviceData = new ServiceData() : this.serviceData;
+    }
+
+    public void setServiceData(ServiceData serviceData) {
+        if (serviceData != null) {
+            getAddServiceRequest().setServiceTitle(serviceData.getTitle());
+            getAddServiceRequest().setServicePrice(serviceData.getPrice());
+            getAddServiceRequest().setTime(serviceData.getTime());
+            getAddServiceRequest().setServicePhone(serviceData.getPhone());
+            getAddServiceRequest().setServiceWhats(serviceData.getWhatsapp());
+            getAddServiceRequest().setId(serviceData.getId());
+            getAddServiceRequest().setServiceDesc(serviceData.getDesc());
+        }
+        notifyChange(BR.serviceData);
+        this.serviceData = serviceData;
     }
 
     @Bindable

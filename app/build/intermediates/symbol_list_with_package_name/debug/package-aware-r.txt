@@ -3339,6 +3339,7 @@ id btn_subscribe
 id btn_wifi_on
 id buttonPanel
 id cache_measures
+id call
 id cancel_action
 id cancel_button
 id card_locations
@@ -3519,13 +3520,12 @@ id ic_image
 id ic_img
 id ic_locations
 id ic_main_img
+id ic_more
 id ic_office
-id ic_phone
 id ic_place
 id ic_resource
 id ic_share
 id ic_user_img
-id ic_whats
 id icon
 id icon_group
 id ifRoom
@@ -3955,10 +3955,12 @@ id up
 id useLogo
 id user_address_text
 id user_address_value
+id user_create
 id user_img
 id user_name
 id user_phone_text
 id user_phone_value
+id user_price
 id user_type
 id user_type_text
 id user_type_value
@@ -4000,6 +4002,7 @@ id warning_container
 id webview
 id welcome
 id west
+id whats
 id withText
 id withinBounds
 id worm

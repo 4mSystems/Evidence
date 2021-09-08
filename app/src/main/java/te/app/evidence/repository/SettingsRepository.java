@@ -80,14 +80,19 @@ public class SettingsRepository extends BaseRepository {
                 Constants.SERVICES, showProgress);
     }
 
+    public Disposable deleteService(int serviceId) {
+        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_SERVICES + serviceId, new Object(), StatusMessage.class,
+                Constants.DELETE, true);
+    }
+
     public Disposable addServices(AddServiceRequest addServiceRequest, ArrayList<FileObject> fileObjects) {
-        if (fileObjects.size() == 0) {
-            return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.ADD_SERVICE_REQUEST, addServiceRequest, AddServiceResponse.class,
-                    Constants.ADD_SERVICE, false);
-        } else {
-            return connectionHelper.requestApi(URLS.ADD_SERVICE_REQUEST, addServiceRequest, fileObjects, AddServiceResponse.class,
-                    Constants.ADD_SERVICE, false);
-        }
+        return connectionHelper.requestApi(URLS.ADD_SERVICE_REQUEST, addServiceRequest, fileObjects, AddServiceResponse.class,
+                Constants.ADD_SERVICE, false);
+    }
+
+    public Disposable editServices(AddServiceRequest addServiceRequest, ArrayList<FileObject> fileObjects) {
+        return connectionHelper.requestApi(URLS.EDIT_SERVICE_REQUEST + addServiceRequest.getId(), addServiceRequest, fileObjects, AddServiceResponse.class,
+                Constants.ADD_SERVICE, false);
     }
 
 

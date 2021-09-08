@@ -1,12 +1,16 @@
 package te.app.evidence.pages.services.adapters;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -14,15 +18,24 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemServiceBinding;
+import te.app.evidence.pages.services.AddServiceFragment;
 import te.app.evidence.pages.services.models.ServiceData;
 import te.app.evidence.pages.services.viewModels.ItemServicesViewModel;
+import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.PopUp.PopUp;
+import te.app.evidence.utils.PopUp.PopUpMenuHelper;
+import te.app.evidence.utils.helper.AppHelper;
+import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 
 public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHolder> {
     List<ServiceData> serviceDataList;
     Context context;
+    public MutableLiveData<Object> liveData = new MutableLiveData<>();
     public int lastSelected = -1;
 
     public ServicesAdapter() {
@@ -44,12 +57,35 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.ViewHo
 
 
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         ServiceData product = serviceDataList.get(position);
         ItemServicesViewModel itemMenuViewModel = new ItemServicesViewModel(product);
+        itemMenuViewModel.getLiveData().observeForever(o -> {
+            lastSelected = position;
+            if (o.equals(Constants.WHATS)) {
+                AppHelper.openWhats((Activity) context, product.getWhatsapp());
+            } else if (o.equals(Constants.CALL)) {
+                AppHelper.openDialNumber(context, product.getPhone());
+            } else if (o.equals(Constants.EDIT)) {
+                showPostOption(holder);
+            }
+        });
         holder.setViewModel(itemMenuViewModel);
     }
 
+    private void showPostOption(ViewHolder holder) {
+        List<PopUp> popUpList = new ArrayList<>();
+        popUpList.add(new PopUp(ResourceManager.getString(R.string.edit), "1"));
+        popUpList.add(new PopUp(ResourceManager.getString(R.string.delete), "2"));
+        PopUpMenuHelper.showPopUp(context, holder.itemMenuBinding.icMore, popUpList).
+                setOnMenuItemClickListener(item -> {
+                    if (popUpList.get(item.getItemId()).getId().equals("2"))
+                        liveData.setValue(Constants.DELETE);
+                    else
+                        liveData.setValue(Constants.EDIT);
+                    return false;
+                });
+    }
 
     public void update(List<ServiceData> dataList) {
         this.serviceDataList.clear();

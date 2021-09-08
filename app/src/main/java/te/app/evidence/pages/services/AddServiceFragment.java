@@ -3,6 +3,7 @@ package te.app.evidence.pages.services;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ import te.app.evidence.connection.FileObject;
 import te.app.evidence.databinding.FragmentAddServiceBinding;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.pages.services.models.AddServiceResponse;
+import te.app.evidence.pages.services.models.ServiceData;
 import te.app.evidence.pages.services.viewModels.ServicesViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.LauncherHelper;
@@ -48,7 +50,7 @@ public class AddServiceFragment extends BaseFragment {
         if (bundle != null) {
             String passingObject = bundle.getString(Constants.BUNDLE);
             viewModel.setPassingObject(new Gson().fromJson(passingObject, PassingObject.class));
-//            viewModel.setSystemUserData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), SystemUserData.class));
+            viewModel.setServiceData(new Gson().fromJson(String.valueOf(viewModel.getPassingObject().getObjectClass()), ServiceData.class));
         }
         setEvent();
         return binding.getRoot();

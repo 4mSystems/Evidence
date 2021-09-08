@@ -20,11 +20,11 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback52;
+    private final android.view.View.OnClickListener mCallback55;
     @Nullable
-    private final android.view.View.OnClickListener mCallback50;
+    private final android.view.View.OnClickListener mCallback54;
     @Nullable
-    private final android.view.View.OnClickListener mCallback51;
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,9 +49,9 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
         this.userName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback50 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback51 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback55 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -207,9 +207,9 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icPlace.setOnClickListener(mCallback50);
-            this.icShare.setOnClickListener(mCallback52);
-            this.tvMap.setOnClickListener(mCallback51);
+            this.icPlace.setOnClickListener(mCallback53);
+            this.icShare.setOnClickListener(mCallback55);
+            this.tvMap.setOnClickListener(mCallback54);
         }
     }
     // Listener Stub Implementations
@@ -235,7 +235,7 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
                 }
                 break;
             }
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.places.viewModels.ItemPlacesViewModel itemViewModel = mItemViewModel;
@@ -254,7 +254,7 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
                 }
                 break;
             }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // itemViewModel
                 te.app.evidence.pages.places.viewModels.ItemPlacesViewModel itemViewModel = mItemViewModel;

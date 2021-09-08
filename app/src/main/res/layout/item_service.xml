@@ -10,6 +10,8 @@
 
         <import type="android.text.TextUtils" />
 
+        <import type="te.app.evidence.utils.Constants" />
+
         <variable
             name="itemViewModel"
             type="te.app.evidence.pages.services.viewModels.ItemServicesViewModel" />
@@ -47,81 +49,52 @@
                 android:textAlignment="viewStart"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/colorPrimaryDark"
-                app:layout_constraintEnd_toStartOf="@+id/flow"
+                app:layout_constraintEnd_toStartOf="@+id/ic_more"
                 app:layout_constraintStart_toEndOf="@id/ic_place"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/delete"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:text="@string/delete"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
-                app:backgroundTint="@color/flat_red_1"
-                app:icon="@drawable/ic_delete"
-                app:iconGravity="textEnd"
-                app:iconPadding="@dimen/dp2w"
-                app:iconTint="@color/white"
-                app:rippleColor="@color/medium_color" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/edit"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:text="@string/edit"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp10"
-                app:backgroundTint="@color/colorPrimaryDark"
-                app:icon="@drawable/ic_edit"
-                app:iconGravity="textEnd"
-                app:iconPadding="@dimen/dp2w"
-                app:iconTint="@color/white"
-                app:rippleColor="@color/medium_color" />
-
-            <androidx.constraintlayout.helper.widget.Flow
-                android:id="@+id/flow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dp6w"
-                android:visibility="@{itemViewModel.serviceData.user.id==itemViewModel.userData.userData.id?View.VISIBLE:View.GONE}"
-                app:constraint_referenced_ids="delete,edit"
-                app:flow_maxElementsWrap="1"
-                app:flow_verticalStyle="packed"
-                app:flow_wrapMode="chain"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/user_name" />
-
             <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_phone"
+                android:id="@+id/ic_more"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp6w"
-                android:src="@drawable/ic_telephone"
+                android:layout_margin="@dimen/dp6h"
+                android:onClick="@{()->itemViewModel.action(Constants.EDIT)}"
+                android:src="@drawable/ic_more"
+                android:visibility="@{itemViewModel.serviceData.user.id==itemViewModel.userData.userData.id?View.VISIBLE:View.GONE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <te.app.evidence.customViews.views.CustomTextViewRegular
+                android:id="@+id/user_create"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemViewModel.serviceData.time}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/medium_color"
+                app:layout_constraintEnd_toStartOf="@+id/ic_more"
                 app:layout_constraintStart_toEndOf="@id/ic_place"
                 app:layout_constraintTop_toBottomOf="@id/user_name" />
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ic_whats"
-                android:layout_width="wrap_content"
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/user_price"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/dp6w"
-                android:src="@drawable/ic_whatsapp"
-                app:layout_constraintStart_toEndOf="@id/ic_phone"
-                app:layout_constraintTop_toBottomOf="@id/user_name" />
+                android:layout_margin="@dimen/dp6h"
+                android:text="@{itemViewModel.serviceData.price.concat(` `).concat(@string/coin)}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/ic_more"
+                app:layout_constraintTop_toBottomOf="@id/user_create" />
 
             <androidx.constraintlayout.widget.Barrier
                 android:id="@+id/br"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:barrierDirection="bottom"
-                app:constraint_referenced_ids="flow,ic_place" />
+                app:constraint_referenced_ids="ic_place,user_price" />
 
             <te.app.evidence.customViews.views.CustomTextViewMedium
                 android:id="@+id/title"
@@ -154,6 +127,7 @@
                 android:id="@+id/v_service"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp4h"
+                android:layout_marginTop="@dimen/dp4h"
                 app:layout_constraintTop_toBottomOf="@id/tv_desc_post" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -162,10 +136,45 @@
                 android:layout_height="@dimen/dp120w"
                 android:layout_marginTop="@dimen/dp8h"
                 android:scaleType="centerCrop"
-                android:src="@drawable/splash"
+                android:src="@color/overlayBackground"
                 android:visibility="@{!TextUtils.isEmpty(itemViewModel.serviceData.image)?View.VISIBLE:View.GONE}"
                 app:imageShowUrl="@{itemViewModel.serviceData.image}"
                 app:layout_constraintTop_toBottomOf="@id/v_service" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/call"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/colorPrimaryDark"
+                android:drawableEnd="@drawable/ic_telephone"
+                android:drawablePadding="@dimen/dp8w"
+                android:onClick="@{()->itemViewModel.action(Constants.CALL)}"
+                android:text="@string/call"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/whats"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_live" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/whats"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/white"
+                android:drawableEnd="@drawable/ic_whatsapp"
+                android:drawablePadding="@dimen/dp8w"
+                android:onClick="@{()->itemViewModel.action(Constants.WHATS)}"
+                android:text="@string/whats"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/successColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/call"
+                app:layout_constraintTop_toBottomOf="@id/img_live" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

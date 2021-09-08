@@ -28,9 +28,9 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback138;
+    private final android.view.View.OnClickListener mCallback140;
     @Nullable
-    private final android.view.View.OnClickListener mCallback137;
+    private final android.view.View.OnClickListener mCallback141;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -65,8 +65,8 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback138 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback137 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback140 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback141 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -215,8 +215,8 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback138);
-            this.viewValue.setOnClickListener(mCallback137);
+            this.delete.setOnClickListener(mCallback141);
+            this.viewValue.setOnClickListener(mCallback140);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1
@@ -236,23 +236,6 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toDelete();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -267,6 +250,23 @@ public class ItemAllCaseBindingImpl extends ItemAllCaseBinding implements te.app
 
 
                     itemViewModel.itemAction();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.clients.viewModels.ClientCasesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
                 }
                 break;
             }

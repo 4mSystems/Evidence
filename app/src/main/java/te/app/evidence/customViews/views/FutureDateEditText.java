@@ -51,8 +51,7 @@ public class FutureDateEditText extends TextInputEditText {
             int month = mcurrentTime.get(Calendar.MONTH);
             int day = mcurrentTime.get(Calendar.DAY_OF_MONTH);
             SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm", new Locale("en"));
-            datePickerDialog
-                    = new DatePickerDialog(getContext(), (datePicker, i, i1, i2) -> {
+            datePickerDialog = new DatePickerDialog(getContext(), (datePicker, i, i1, i2) -> {
                 Calendar calendar = Calendar.getInstance();
                 calendar.set(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth());
                 new TimePickerDialog(context, (view, hourOfDay, minute) -> {

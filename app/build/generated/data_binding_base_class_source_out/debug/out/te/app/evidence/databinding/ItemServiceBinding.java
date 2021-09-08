@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.AppCompatImageView;
-import androidx.constraintlayout.helper.widget.Flow;
 import androidx.constraintlayout.widget.Barrier;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
@@ -18,6 +18,7 @@ import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
 import te.app.evidence.customViews.views.CustomTextViewMedium;
+import te.app.evidence.customViews.views.CustomTextViewRegular;
 import te.app.evidence.customViews.views.ExpandableTextView;
 import te.app.evidence.pages.services.viewModels.ItemServicesViewModel;
 
@@ -26,22 +27,13 @@ public abstract class ItemServiceBinding extends ViewDataBinding {
   public final Barrier br;
 
   @NonNull
-  public final MaterialButton delete;
+  public final MaterialButton call;
 
   @NonNull
-  public final MaterialButton edit;
-
-  @NonNull
-  public final Flow flow;
-
-  @NonNull
-  public final AppCompatImageView icPhone;
+  public final AppCompatImageView icMore;
 
   @NonNull
   public final CircleImageView icPlace;
-
-  @NonNull
-  public final AppCompatImageView icWhats;
 
   @NonNull
   public final AppCompatImageView imgLive;
@@ -53,32 +45,41 @@ public abstract class ItemServiceBinding extends ViewDataBinding {
   public final ExpandableTextView tvDescPost;
 
   @NonNull
+  public final CustomTextViewRegular userCreate;
+
+  @NonNull
   public final CustomTextViewMedium userName;
 
   @NonNull
+  public final CustomTextViewMedium userPrice;
+
+  @NonNull
   public final View vService;
+
+  @NonNull
+  public final AppCompatButton whats;
 
   @Bindable
   protected ItemServicesViewModel mItemViewModel;
 
   protected ItemServiceBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Barrier br, MaterialButton delete, MaterialButton edit, Flow flow, AppCompatImageView icPhone,
-      CircleImageView icPlace, AppCompatImageView icWhats, AppCompatImageView imgLive,
-      CustomTextViewMedium title, ExpandableTextView tvDescPost, CustomTextViewMedium userName,
-      View vService) {
+      Barrier br, MaterialButton call, AppCompatImageView icMore, CircleImageView icPlace,
+      AppCompatImageView imgLive, CustomTextViewMedium title, ExpandableTextView tvDescPost,
+      CustomTextViewRegular userCreate, CustomTextViewMedium userName,
+      CustomTextViewMedium userPrice, View vService, AppCompatButton whats) {
     super(_bindingComponent, _root, _localFieldCount);
     this.br = br;
-    this.delete = delete;
-    this.edit = edit;
-    this.flow = flow;
-    this.icPhone = icPhone;
+    this.call = call;
+    this.icMore = icMore;
     this.icPlace = icPlace;
-    this.icWhats = icWhats;
     this.imgLive = imgLive;
     this.title = title;
     this.tvDescPost = tvDescPost;
+    this.userCreate = userCreate;
     this.userName = userName;
+    this.userPrice = userPrice;
     this.vService = vService;
+    this.whats = whats;
   }
 
   public abstract void setItemViewModel(@Nullable ItemServicesViewModel itemViewModel);

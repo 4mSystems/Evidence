@@ -20,7 +20,7 @@ public class ItemReplacedPointsBindingImpl extends ItemReplacedPointsBinding imp
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback17;
+    private final android.view.View.OnClickListener mCallback20;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemReplacedPointsBindingImpl extends ItemReplacedPointsBinding imp
         this.point.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback17 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback20 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -175,7 +175,7 @@ public class ItemReplacedPointsBindingImpl extends ItemReplacedPointsBinding imp
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnAction.setOnClickListener(mCallback17);
+            this.btnAction.setOnClickListener(mCallback20);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
