@@ -69,6 +69,14 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name="te.app.evidence.base.MyFirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <meta-data
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
             android:value="GlideModule" />

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                   
+
+    
+
+                                           
+
+                 
+                            
+                                                                             
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_places_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:background="@drawable/corner_view_gray_border"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawablePadding="@dimen/dp8w"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:tag="binding_1"                       
+            android:padding="@dimen/dp8h"
+                                                  
+            android:textColor="@color/black"
+            android:textColorHint="@color/medium_color"
+            app:layout_constraintEnd_toStartOf="@+id/search_type"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp8h"
+            android:background="@drawable/corner_view_gray_border"
+            android:drawableEnd="@drawable/ic_arrow_down"
+            android:drawablePadding="@dimen/dp8w"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:tag="binding_2"                             
+            android:padding="@dimen/dp8h"
+            android:text="@string/court"
+            android:textColor="@color/black"
+            android:textColorHint="@color/medium_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/search_input"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_places"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp4h"
+            android:tag="binding_3"                 
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            app:layout_constraintTop_toBottomOf="@+id/search_input"
+                                    
+                             
+            tools:listitem="@layout/item_place" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="gone"                                                                  
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h"  android:tag="binding_4"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/pb_base_loading_bar"
+            android:layout_width="@dimen/dp100w"
+            android:layout_height="@dimen/dp100h"
+            android:visibility="gone"                                                                       
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_input"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empt.json"
+            app:lottie_loop="true"  android:tag="binding_5"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+         

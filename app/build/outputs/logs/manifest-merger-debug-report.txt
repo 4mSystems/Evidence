@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
 MERGED from [androidx.databinding:databinding-adapters:7.0.0] /home/elnagar/.gradle/caches/transforms-3/dcc989cf992a77cbbae818c970a38382/transformed/databinding-adapters-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.databinding:databinding-runtime:7.0.0] /home/elnagar/.gradle/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2] /home/elnagar/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml:2:1-14:12
@@ -98,22 +98,22 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/e
 MERGED from [androidx.print:print:1.0.0] /home/elnagar/.gradle/caches/transforms-3/e4f6e5452622a1b51bd4ab0c44c2db1c/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/elnagar/.gradle/caches/transforms-3/25f35b40da736ef9bbb6e353ad748032/transformed/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.dagger:dagger-lint-aar:2.30.1] /home/elnagar/.gradle/caches/transforms-3/4d9b93bb27652b835dd1a0260c30d407/transformed/jetified-dagger-lint-aar-2.30.1/AndroidManifest.xml:16:1-19:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
+INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
 	package
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:4:5-30
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
-		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-63:12
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:1-71:12
 		INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:2:11-69
@@ -190,7 +190,7 @@ ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:16:18-48
 application
-ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:5-61:19
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:18:5-69:19
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] /home/elnagar/.gradle/caches/transforms-3/f09f13d5b6fb8b1f6c0fd0f1c5316edd/transformed/constraintlayout-2.1.0/AndroidManifest.xml:9:5-20
@@ -349,6 +349,20 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:17-77
 	android:name
 		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:27-74
+service#te.app.evidence.base.MyFirebaseMessagingService
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:61:9-68:19
+	android:exported
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:63:13-36
+	tools:ignore
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:64:13-43
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:62:13-75
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:65:13-67:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:66:17-78
+	android:name
+		ADDED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:66:25-75
 uses-sdk
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml
@@ -599,14 +613,6 @@ ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle
 		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
-intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:13-47:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:28-51
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:17-78
-	android:name
-		ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:25-75
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
 MERGED from [com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:25:9-31:19

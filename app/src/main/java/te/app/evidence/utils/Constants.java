@@ -148,5 +148,7 @@ public class Constants {
     public static final String ADD_SERVICE = "ADD_SERVICE";
     public static final String CALL = "CALL";
     public static final String WHATS = "WHATS";
+    public static final String TYPE = "type";
+    public static final String SERVICE_ID = "service_id";
 }
 

@@ -3,22 +3,30 @@ package te.app.evidence.activity;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
 
+import com.google.gson.Gson;
+
+import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.customViews.actionbar.BackActionBarView;
 import te.app.evidence.databinding.ActivityBaseBinding;
+import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.splash.SplashFragment;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class BaseActivity extends ParentActivity {
     private static final String TAG = "BaseActivity";
@@ -54,47 +62,42 @@ public class BaseActivity extends ParentActivity {
         });
     }
 
-    private void setTitleName() {
-        if (getIntent().hasExtra(Constants.NAME_BAR)) {
-            backActionBarView = new BackActionBarView(this);
-            backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
-            if (getIntent().hasExtra(Constants.SHARE_BAR))
-                backActionBarView.layoutActionBarBackBinding.print.setVisibility(View.VISIBLE);
-            activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
+    private void setTitleName(@Nullable String title) {
+        if (title != null) {
+            backActionBarView.setTitle(title);
+        } else {
+            if (getIntent().hasExtra(Constants.NAME_BAR)) {
+                backActionBarView = new BackActionBarView(this);
+                backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
+                if (getIntent().hasExtra(Constants.SHARE_BAR))
+                    backActionBarView.layoutActionBarBackBinding.print.setVisibility(View.VISIBLE);
+            }
         }
+        activityBaseBinding.llBaseActionBarContainer.addView(backActionBarView);
     }
 
     public void getNotification() {
-//        Log.d(TAG, "Notification GET");
-//        if (getIntent().getExtras() != null && getIntent().hasExtra(Constants.BUNDLE_NOTIFICATION)) {
-//            Log.d(TAG, "Notification HAS EXTRA");
-//            Bundle bundle = getIntent().getBundleExtra(Constants.BUNDLE_NOTIFICATION);
-//            NotificationGCMModel model = (NotificationGCMModel) bundle.getSerializable(Constants.BUNDLE_NOTIFICATION);
-//            if (model != null) {
-//                if(model.notification_type == 1){
-//                    setTitleName(ResourceManager.getString(R.string.notifications));
-//                    notification_checked = true;
-//                    MovementHelper.replaceFragment(this, new NotificationFragment(), "");
-//                    return;
-//                }else if(model.notification_type == 2){
-//                    setTitleName(ResourceManager.getString(R.string.order_number) + " (" + model.orderNumber + ")");
-//                    notification_checked = true;
-//                    OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
-//                    bundle.putInt(Constants.ID,model.orderId);
-//                    bundle.putBoolean(Constants.ACTION,false);
-//                    orderDetailsFragment.setArguments(bundle);
-//                    MovementHelper.replaceFragment(this,orderDetailsFragment, "");
-//                    return;
-//                }else if(model.notification_type == 3){
-//                    setTitleName(ResourceManager.getString(R.string.chat));
-//                    notification_checked = true;
-//                    MovementHelper.replaceFragment(this, new ChatFragment(), "");
-//                    return;
-//                }
-//            }
-//            return;
-//
-//        }
+        if (getIntent() != null && getIntent().getBooleanExtra("is_notification", false)) {
+            if (getIntent().getSerializableExtra(Constants.TYPE) != null) {
+                notification_checked = true;
+                String typeNotifications = getIntent().getStringExtra(Constants.TYPE);
+                String serviceId = getIntent().getStringExtra(Constants.SERVICE_ID);
+                Log.e("getNotification", "getNotification: " + serviceId);
+                Bundle bundle = new Bundle();
+//                backActionBarView.flag = 1;
+                if (!TextUtils.isEmpty(serviceId)) {
+                    if (Constants.SERVICE_ID.equals(typeNotifications)) {  // post details
+                        setTitleName(ResourceManager.getString(R.string.service_title));
+                        ServicesFragment homeMainFragment = new ServicesFragment();
+                        bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(serviceId))));
+                        homeMainFragment.setArguments(bundle);
+                        MovementHelper.replaceFragmentTag(this, homeMainFragment, homeMainFragment.getClass().getName(), "");
+                    } else {
+                        MovementHelper.startActivityMain(this);
+                    }
+                }
+            }
+        }
     }
 
     private Fragment getBundle(Fragment fragment) {
@@ -102,7 +105,7 @@ public class BaseActivity extends ParentActivity {
         bundle.putString(Constants.BUNDLE, getIntent().getStringExtra(Constants.BUNDLE));
         fragment.setArguments(bundle);
         if (getIntent().hasExtra(Constants.NAME_BAR)) {
-            setTitleName();
+            setTitleName(null);
         }
 
         return fragment;
