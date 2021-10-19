@@ -225,5 +225,5 @@
     <string name="service_time">ميعاد الخدمة</string>
     <string name="add_service">إضافة خدمة</string>
     <string name="edit_service">تعديل الخدمة</string>
-
+    <string name="customer_support">الدعم الفنى</string>
 </resources>

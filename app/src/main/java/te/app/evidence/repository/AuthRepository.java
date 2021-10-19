@@ -18,7 +18,6 @@ import te.app.evidence.pages.auth.models.ForgetPasswordRequest;
 import te.app.evidence.pages.auth.models.LoginRequest;
 import te.app.evidence.pages.auth.models.RegisterRequest;
 import te.app.evidence.pages.auth.models.UsersResponse;
-import te.app.evidence.pages.onBoard.models.BoardResponse;
 import te.app.evidence.pages.users.models.AddUserRequest;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
@@ -40,12 +39,6 @@ public class AuthRepository extends BaseRepository {
     public void setLiveData(MutableLiveData<Mutable> liveData) {
         this.liveData = liveData;
         connectionHelper.liveData = liveData;
-    }
-
-
-    public Disposable getBoard() {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.BOARD, new Object(), BoardResponse.class,
-                Constants.BOARD, true);
     }
 
     public Disposable login(LoginRequest request) {

@@ -9,9 +9,7 @@ import com.whiteelephant.monthpicker.MonthPickerDialog;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Locale;
-
 import te.app.evidence.R;
 import te.app.evidence.utils.resources.ResourceManager;
 
@@ -37,8 +35,6 @@ public class MonthlyEditText extends TextInputEditText {
 
 
     private void init() {
-//        today.set(Calendar.MONTH, Integer.parseInt(sdf.format(new Date())));
-//        setText(today.MONTH);
         setOnClickListener(v -> showDateDialog());
     }
 
@@ -52,11 +48,6 @@ public class MonthlyEditText extends TextInputEditText {
                 .setMinMonth(Calendar.JANUARY)
                 .setTitle(ResourceManager.getString(R.string.month))
                 .showMonthOnly()
-//                .setOnMonthChangedListener(month -> {
-////                    today.set(Calendar.MONTH, month);
-////                    setText(sdf.format(today.getTime()));
-//                    setText(month);
-//                })
                 .build()
                 .show();
     }

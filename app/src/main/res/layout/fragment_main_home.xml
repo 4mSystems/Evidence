@@ -17,7 +17,7 @@
             type="te.app.evidence.pages.home.viewModels.HomeViewModel" />
     </data>
 
-    <androidx.core.widget.NestedScrollView
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -173,8 +173,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/dp8w"
                         android:contentDescription="@string/app_name"
-                        android:minHeight="0dp"
                         android:minWidth="0dp"
+                        android:minHeight="0dp"
                         android:onClick="@{()-> viewmodel.buttonAction(Constants.HOME)}"
                         android:src="@drawable/ic_left"
                         app:backgroundTint="@color/colorPrimary"
@@ -267,7 +267,6 @@
                 app:cardCornerRadius="@dimen/dp8h"
                 app:cardElevation="4dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@id/ic_main_img"
                 app:layout_constraintTop_toBottomOf="@id/card_services">
 
@@ -331,5 +330,21 @@
             </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp16h"
+            android:contentDescription="@string/app_name"
+            android:onClick="@{()-> viewmodel.buttonAction(Constants.SUPPORT)}"
+            android:text="@string/customer_support"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/colorPrimary"
+            app:icon="@drawable/ic_support_agent"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/white"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            app:rippleColor="@color/overlayBackground" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -11,9 +11,7 @@ import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.pages.categories.models.AddCategoryRequest;
 import te.app.evidence.pages.categories.models.AddCategoryResponse;
-import te.app.evidence.pages.categories.models.CategoriesData;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
-import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;
 

@@ -17,7 +17,6 @@ import te.app.evidence.pages.cases.models.caseDetails.CaseDetailsResponse;
 import te.app.evidence.pages.cases.models.cases.AddCaseResponse;
 import te.app.evidence.pages.cases.models.cases.AllCasesResponse;
 import te.app.evidence.pages.clients.models.AddClientRequest;
-import te.app.evidence.pages.clients.models.ClientsResponse;
 import te.app.evidence.pages.mohdrs.models.AddMohdrRequest;
 import te.app.evidence.pages.mohdrs.models.AddMohdrResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;

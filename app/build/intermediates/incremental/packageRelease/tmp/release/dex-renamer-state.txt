@@ -1,7 +1,4 @@
-#Fri Sep 10 17:47:11 EET 2021
-base.1=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/mergeDexRelease/classes2.dex
-path.1=classes2.dex
-base.0=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
-renamed.1=classes2.dex
+#Tue Oct 19 22:49:02 EET 2021
+base.0=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

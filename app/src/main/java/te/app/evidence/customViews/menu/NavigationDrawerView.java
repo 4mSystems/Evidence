@@ -5,8 +5,6 @@ import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.util.AttributeSet;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Window;
 import android.widget.RelativeLayout;
@@ -55,19 +53,6 @@ public class NavigationDrawerView extends RelativeLayout {
         super(context);
         this.context = context;
         liveData = new MutableLiveData<>();
-        init();
-    }
-
-    public NavigationDrawerView(AppCompatActivity context, AttributeSet attrs) {
-        super(context, attrs);
-        this.context = context;
-        init();
-
-    }
-
-    public NavigationDrawerView(AppCompatActivity context, AttributeSet attrs, int defStyle) {
-        super(context, attrs);
-        this.context = context;
         init();
     }
 

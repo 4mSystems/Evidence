@@ -1,6 +1,5 @@
 package te.app.evidence.pages.splash;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
-
-import org.jetbrains.annotations.NotNull;
-
 import javax.inject.Inject;
 
 import te.app.evidence.base.BaseFragment;
@@ -29,14 +24,13 @@ import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.session.UserHelper;
 
 public class SplashFragment extends BaseFragment {
-    private Context context;
     @Inject
     SplashViewModel viewModel;
 
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentSplashBinding fragmentSplashBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_splash, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         fragmentSplashBinding.setViewmodel(viewModel);
         setEvent();
@@ -45,17 +39,17 @@ public class SplashFragment extends BaseFragment {
     }
 
     private void setEvent() {
-        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             if (((Mutable) o).message.equals(Constants.DEFAULT_LANGUAGE)) {
                 if (UserHelper.getInstance(MyApplication.getInstance()).getUserData() != null) {
-                    MovementHelper.startActivityBase(context, MainHomeFragment.class.getName(), getString(R.string.menuHome), null);
+                    MovementHelper.startActivityBase(requireActivity(), MainHomeFragment.class.getName(), getString(R.string.menuHome), null);
                 } else {
                     if (UserHelper.getInstance(MyApplication.getInstance()).getIsFirst()) {
-                        MovementHelper.startActivityBase(context, OnBoardFragment.class.getName(), null, null);
+                        MovementHelper.startActivityBase(requireActivity(), OnBoardFragment.class.getName(), null, null);
                     } else
-                        MovementHelper.startActivityBase(context, LoginFragment.class.getName(), null, null);
+                        MovementHelper.startActivityBase(requireActivity(), LoginFragment.class.getName(), null, null);
                 }
             }
         });
@@ -65,11 +59,5 @@ public class SplashFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.repository.setLiveData(viewModel.liveData);
-    }
-
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 }

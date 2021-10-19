@@ -1,9 +1,5 @@
 package te.app.evidence.base;
 
-/**
- * Created by mos on 6/8/2017.
- */
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,15 +27,6 @@ public class ConnectivityReceiver
         if (connectivityReceiverListener != null) {
             connectivityReceiverListener.onNetworkConnectionChanged(isConnected);
         }
-    }
-
-    public static boolean isConnected() {
-        ConnectivityManager
-                cm = (ConnectivityManager) MyApplication.getInstance().getApplicationContext()
-                .getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
-        return activeNetwork != null
-                && activeNetwork.isConnectedOrConnecting();
     }
 
     public interface ConnectivityReceiverListener {

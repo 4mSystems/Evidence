@@ -1,7 +1,6 @@
 package te.app.evidence.pages.places;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,19 +13,13 @@ import android.view.Window;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 import javax.inject.Inject;
-
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
@@ -42,8 +35,6 @@ import te.app.evidence.utils.PopUp.PopUp;
 import te.app.evidence.utils.PopUp.PopUpMenuHelper;
 
 public class PlacesFragment extends BaseFragment {
-
-    private Context context;
     FragmentPlacesBinding binding;
     @Inject
     PlacesViewModel viewModel;
@@ -51,7 +42,7 @@ public class PlacesFragment extends BaseFragment {
     @Nullable
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_places, container, false);
-        IApplicationComponent component = ((MyApplication) context.getApplicationContext()).getApplicationComponent();
+        IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
         viewModel.getPlaces();
@@ -60,7 +51,7 @@ public class PlacesFragment extends BaseFragment {
     }
 
     private void setEvent() {
-        viewModel.liveData.observe((LifecycleOwner) context, (Observer<Object>) o -> {
+        viewModel.liveData.observe(requireActivity(), (Observer<Object>) o -> {
             Mutable mutable = (Mutable) o;
             handleActions(mutable);
             switch (((Mutable) o).message) {
@@ -120,7 +111,7 @@ public class PlacesFragment extends BaseFragment {
         typeList.add(new PopUp(getString(R.string.court), "Court"));
         typeList.add(new PopUp(getString(R.string.station), "Police_station"));
         typeList.add(new PopUp(getString(R.string.real_estate_month), "Real_estate_month"));
-        PopUpMenuHelper.showPopUp(context, binding.searchType, typeList).
+        PopUpMenuHelper.showPopUp(requireActivity(), binding.searchType, typeList).
                 setOnMenuItemClickListener(item -> {
                     viewModel.searchType.set(typeList.get(item.getItemId()).getId());
                     binding.searchType.setText(typeList.get(item.getItemId()).getName());
@@ -133,11 +124,5 @@ public class PlacesFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
         viewModel.getRepository().setLiveData(viewModel.liveData);
-    }
-
-    @Override
-    public void onAttach(@NotNull Context context) {
-        super.onAttach(context);
-        this.context = context;
     }
 }

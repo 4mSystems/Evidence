@@ -24,9 +24,9 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback150;
+    private final android.view.View.OnClickListener mCallback152;
     @Nullable
-    private final android.view.View.OnClickListener mCallback149;
+    private final android.view.View.OnClickListener mCallback151;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -91,8 +91,8 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback150 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback149 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback152 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback151 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -280,8 +280,8 @@ public class FragmentBailiffsBindingImpl extends FragmentBailiffsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView6.setOnClickListener(mCallback150);
-            this.search.setOnClickListener(mCallback149);
+            this.mboundView6.setOnClickListener(mCallback152);
+            this.search.setOnClickListener(mCallback151);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

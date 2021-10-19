@@ -1,20 +1,13 @@
 package te.app.evidence.activity;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.MutableLiveData;
-
 import com.google.gson.Gson;
-
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.IApplicationComponent;
@@ -29,7 +22,6 @@ import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 
 public class BaseActivity extends ParentActivity {
-    private static final String TAG = "BaseActivity";
     ActivityBaseBinding activityBaseBinding;
     public BackActionBarView backActionBarView;
     MutableLiveData<Boolean> refreshingLiveData = new MutableLiveData<>();
@@ -41,6 +33,7 @@ public class BaseActivity extends ParentActivity {
         IApplicationComponent component = ((MyApplication) getApplicationContext()).getApplicationComponent();
         component.inject(this);
         activityBaseBinding = DataBindingUtil.setContentView(this, R.layout.activity_base);
+        backActionBarView = new BackActionBarView(this);
         getNotification();
         if (!notification_checked) {
             if (getIntent().hasExtra(Constants.PAGE)) {
@@ -57,9 +50,7 @@ public class BaseActivity extends ParentActivity {
                 MovementHelper.replaceFragment(this, new SplashFragment(), "");
         }
         enableRefresh(false);
-        activityBaseBinding.swipeContainer.setOnRefreshListener(() -> {
-            refreshingLiveData.setValue(true);
-        });
+        activityBaseBinding.swipeContainer.setOnRefreshListener(() -> refreshingLiveData.setValue(true));
     }
 
     private void setTitleName(@Nullable String title) {
@@ -67,7 +58,6 @@ public class BaseActivity extends ParentActivity {
             backActionBarView.setTitle(title);
         } else {
             if (getIntent().hasExtra(Constants.NAME_BAR)) {
-                backActionBarView = new BackActionBarView(this);
                 backActionBarView.setTitle(getIntent().getStringExtra(Constants.NAME_BAR));
                 if (getIntent().hasExtra(Constants.SHARE_BAR))
                     backActionBarView.layoutActionBarBackBinding.print.setVisibility(View.VISIBLE);
@@ -82,11 +72,9 @@ public class BaseActivity extends ParentActivity {
                 notification_checked = true;
                 String typeNotifications = getIntent().getStringExtra(Constants.TYPE);
                 String serviceId = getIntent().getStringExtra(Constants.SERVICE_ID);
-                Log.e("getNotification", "getNotification: " + serviceId);
                 Bundle bundle = new Bundle();
-//                backActionBarView.flag = 1;
                 if (!TextUtils.isEmpty(serviceId)) {
-                    if (Constants.SERVICE_ID.equals(typeNotifications)) {  // post details
+                    if (Constants.SERVICE_TYPE.equals(typeNotifications)) {  // post details
                         setTitleName(ResourceManager.getString(R.string.service_title));
                         ServicesFragment homeMainFragment = new ServicesFragment();
                         bundle.putString(Constants.BUNDLE, new Gson().toJson(new PassingObject(Integer.parseInt(serviceId))));

@@ -150,5 +150,8 @@ public class Constants {
     public static final String WHATS = "WHATS";
     public static final String TYPE = "type";
     public static final String SERVICE_ID = "service_id";
+    public static final String SERVICE_TYPE = "service";
+    public static final String SUPPORT = "SUPPORT";
+    public static final int WEB_VIEW_REQUEST = 10000;
 }
 

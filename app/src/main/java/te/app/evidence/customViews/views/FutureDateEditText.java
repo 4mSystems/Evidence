@@ -79,7 +79,5 @@ public class FutureDateEditText extends TextInputEditText {
 
     }
 
-    public DatePickerDialog getDatePickerDialog() {
-        return datePickerDialog;
-    }
+
 }

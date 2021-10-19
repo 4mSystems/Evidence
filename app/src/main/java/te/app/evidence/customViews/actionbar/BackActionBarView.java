@@ -1,15 +1,9 @@
 package te.app.evidence.customViews.actionbar;
 
-/**
- * Created by mohamedatef on 12/30/18.
- */
-
-
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import androidx.databinding.DataBindingUtil;
@@ -20,7 +14,6 @@ import te.app.evidence.databinding.LayoutActionBarBackBinding;
 
 public class BackActionBarView extends RelativeLayout {
     public LayoutActionBarBackBinding layoutActionBarBackBinding;
-    public int service_id = 0;
     public int type = 0;
     public int flag = 0;
 
@@ -47,13 +40,7 @@ public class BackActionBarView extends RelativeLayout {
     }
 
     private void setEvents() {
-        layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ((Activity) getContext()).finish();
-            }
-        });
-
+        layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(view -> ((Activity) getContext()).finish());
     }
 
     public void setTitle(String title) {

@@ -11,17 +11,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.media.AudioAttributes;
 import android.os.Build;
-import android.util.Log;
-
 import androidx.core.app.NotificationCompat;
-
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-
 import org.jetbrains.annotations.NotNull;
-
 import java.util.Map;
-
 import te.app.evidence.R;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.utils.Constants;
@@ -37,7 +31,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     public void onMessageReceived(@NotNull RemoteMessage remoteMessage) {
         super.onMessageReceived(remoteMessage);
         showNotification(remoteMessage.getData());
-        Log.e("onMessageReceived", "onMessageReceived: "+remoteMessage.getData() );
     }
 
     private void showNotification(Map<String, String> notification) {

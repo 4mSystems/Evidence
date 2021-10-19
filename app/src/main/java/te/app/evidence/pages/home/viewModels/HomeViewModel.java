@@ -120,7 +120,7 @@ public class HomeViewModel extends BaseViewModel {
     }
 
     public void setPreSessionMainData(SessionMainData preSessionMainData) {
-        if (preSessionMainData.getCurrentPage() > 1) {
+        if (preSessionMainData != null && preSessionMainData.getCurrentPage() > 1) {
             getPrevSessionsAdapter().loadMore(preSessionMainData.getSessionItem());
         } else {
             getPrevSessionsAdapter().update(preSessionMainData.getSessionItem());

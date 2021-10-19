@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                               
+
+    
+
+                                           
+
+                                                
+
+                                                         
+
+
+                 
+                            
+                                                                                 
+           
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_add_client_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="te.app.moon.views.fragments.SplashFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/dp10h"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:tag="binding_1"                                  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/client_name"
+                        android:inputType="text"
+                        android:tag="binding_2"                                  
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:tag="binding_3"                                  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/client_age"
+                        android:inputType="numberDecimal"
+                        android:tag="binding_4"                                  
+                        android:textAlignment="viewStart"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:tag="binding_5"                                     >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/client_address"
+                        android:inputType="text"
+                        android:tag="binding_6"                                     
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    app:endIconDrawable="@drawable/ic_arrow_down"
+                    app:endIconMode="custom"
+                    android:tag="binding_7"                                  >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/client_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/client_type"
+                        android:inputType="text"
+                        android:tag="binding_8"                             
+                                                                          
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:tag="binding_9"                                                                        
+                    app:endIconDrawable="@drawable/ic_arrow_down"
+                    app:endIconMode="custom"
+                                                                            >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/cat_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="@string/choose_category"
+                        android:inputType="text"
+                        android:tag="binding_10"                            
+                                                                             
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp6w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:layout_marginBottom="@dimen/dp10h"
+                    android:layout_marginEnd="@dimen/dp6w"
+                    android:tag="binding_11"                                 >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp100h"
+                        android:gravity="top"
+                        android:hint="@string/client_note"
+                        android:inputType="textMultiLine"
+                        android:tag="binding_12"                           
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp30h"
+            android:background="@color/colorPrimaryDark"                                                                                                                                               
+            android:tag="binding_13"                                                                                               
+                                                              
+                                                                                                                  
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:tag="binding_14"                                                                                                                       
+            app:layout_constraintBottom_toBottomOf="@id/btnSave"
+            app:layout_constraintStart_toStartOf="@id/btnSave"
+            app:layout_constraintTop_toTopOf="@id/btnSave"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+         

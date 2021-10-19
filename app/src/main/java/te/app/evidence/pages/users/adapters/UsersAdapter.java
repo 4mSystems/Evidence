@@ -69,11 +69,9 @@ public class UsersAdapter extends RecyclerView.Adapter<UsersAdapter.ViewHolder> 
         holder.setViewModel(itemMenuViewModel);
     }
 
-
     public void update(List<SystemUserData> dataList) {
         this.systemUserDataList.clear();
         systemUserDataList.addAll(dataList);
-        notifyDataSetChanged();
     }
 
     public void loadMore(@NotNull List<SystemUserData> dataList) {

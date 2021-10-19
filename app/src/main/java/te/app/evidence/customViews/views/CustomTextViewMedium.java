@@ -6,9 +6,6 @@ import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
 
-/**
- * Created by mohamedatef on 1/8/19.
- */
 
 public class CustomTextViewMedium extends AppCompatTextView {
 

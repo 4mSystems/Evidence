@@ -8,7 +8,6 @@ public class PassingObject implements Serializable {
     private int id;
     private Object objectClass;
     private String object;
-    private String object2;
 
     public PassingObject() {
     }
@@ -16,22 +15,6 @@ public class PassingObject implements Serializable {
     public PassingObject(int id, String object) {
         this.id = id;
         this.object = object;
-    }
-
-    public PassingObject(int id, String object, String object2) {
-        this.id = id;
-        this.object = object;
-        this.object2 = object2;
-    }
-
-    public PassingObject(Object objectClass, String object) {
-        this.objectClass = objectClass;
-        this.object = object;
-    }
-
-    public PassingObject(int id, Object objectClass) {
-        this.id = id;
-        this.objectClass = objectClass;
     }
 
     public PassingObject(String object) {
@@ -44,14 +27,6 @@ public class PassingObject implements Serializable {
         String json = gson.toJson(objectClass);
 
         this.objectClass = (String) json;
-    }
-
-    public String getObject2() {
-        return object2;
-    }
-
-    public void setObject2(String object2) {
-        this.object2 = object2;
     }
 
     public PassingObject(int id) {

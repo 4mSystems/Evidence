@@ -14,26 +14,30 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.ic_main_img, 10);
-        sViewsWithIds.put(R.id.t_points, 11);
-        sViewsWithIds.put(R.id.flow3, 12);
-        sViewsWithIds.put(R.id.view, 13);
-        sViewsWithIds.put(R.id.welcome, 14);
-        sViewsWithIds.put(R.id.ic_office, 15);
-        sViewsWithIds.put(R.id.tv_office, 16);
-        sViewsWithIds.put(R.id.ic_court_services, 17);
-        sViewsWithIds.put(R.id.tv_service, 18);
-        sViewsWithIds.put(R.id.ic_locations, 19);
-        sViewsWithIds.put(R.id.tv_locations, 20);
+        sViewsWithIds.put(R.id.ic_main_img, 11);
+        sViewsWithIds.put(R.id.t_points, 12);
+        sViewsWithIds.put(R.id.flow3, 13);
+        sViewsWithIds.put(R.id.view, 14);
+        sViewsWithIds.put(R.id.welcome, 15);
+        sViewsWithIds.put(R.id.ic_office, 16);
+        sViewsWithIds.put(R.id.tv_office, 17);
+        sViewsWithIds.put(R.id.ic_court_services, 18);
+        sViewsWithIds.put(R.id.tv_service, 19);
+        sViewsWithIds.put(R.id.ic_locations, 20);
+        sViewsWithIds.put(R.id.tv_locations, 21);
     }
     // views
     @NonNull
-    private final androidx.core.widget.NestedScrollView mboundView0;
+    private final androidx.coordinatorlayout.widget.CoordinatorLayout mboundView0;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton mboundView10;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback39;
     @Nullable
     private final android.view.View.OnClickListener mCallback37;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback42;
     @Nullable
     private final android.view.View.OnClickListener mCallback40;
     @Nullable
@@ -47,7 +51,7 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     // Inverse Binding Event Handlers
 
     public FragmentMainHomeBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 21, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 22, sIncludes, sViewsWithIds));
     }
     private FragmentMainHomeBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 1
@@ -57,20 +61,20 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[9]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[5]
             , (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[7]
-            , (androidx.constraintlayout.helper.widget.Flow) bindings[12]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[17]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[19]
-            , (de.hdodenhof.circleimageview.CircleImageView) bindings[10]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[15]
+            , (androidx.constraintlayout.helper.widget.Flow) bindings[13]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[18]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[20]
+            , (de.hdodenhof.circleimageview.CircleImageView) bindings[11]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[16]
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[1]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[11]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[12]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[2]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[20]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[18]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[21]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[19]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[3]
-            , (android.view.View) bindings[13]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[14]
+            , (android.view.View) bindings[14]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
             );
         this.cardLocations.setTag(null);
         this.cardOffice.setTag(null);
@@ -79,14 +83,17 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
         this.fbOffice.setTag(null);
         this.fbServices.setTag(null);
         this.icUserImg.setTag(null);
-        this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
+        this.mboundView0 = (androidx.coordinatorlayout.widget.CoordinatorLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView10 = (com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton) bindings[10];
+        this.mboundView10.setTag(null);
         this.tPointsValue.setTag(null);
         this.tvUsername.setTag(null);
         setRootTag(root);
         // listeners
         mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
         mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
         mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
         mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
@@ -201,6 +208,7 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
             this.fbLocations.setOnClickListener(mCallback41);
             this.fbOffice.setOnClickListener(mCallback37);
             this.fbServices.setOnClickListener(mCallback39);
+            this.mboundView10.setOnClickListener(mCallback42);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -249,6 +257,25 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
 
 
                     viewmodel.buttonAction(te.app.evidence.utils.Constants.HOME);
+                }
+                break;
+            }
+            case 7: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.SUPPORT);
                 }
                 break;
             }

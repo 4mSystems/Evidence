@@ -3,11 +3,8 @@ package te.app.evidence.repository;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
-import java.util.List;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.connection.FileObject;
 import te.app.evidence.model.base.Mutable;
@@ -19,7 +16,6 @@ import te.app.evidence.pages.points.models.EarnPointsResponse;
 import te.app.evidence.pages.services.models.AddServiceRequest;
 import te.app.evidence.pages.services.models.AddServiceResponse;
 import te.app.evidence.pages.services.models.ServicesResponse;
-import te.app.evidence.pages.settings.models.AboutResponse;
 import te.app.evidence.pages.settings.models.ContactUsRequest;
 import te.app.evidence.pages.settings.models.PackagesResponse;
 import te.app.evidence.pages.settings.models.RenewPackageRequest;

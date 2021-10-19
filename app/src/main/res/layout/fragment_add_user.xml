@@ -30,10 +30,11 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
-                app:error="@{viewmodel.addUserRequest.userNameError}">
+                android:layout_marginEnd="@dimen/dp10w"
+                app:error="@{viewmodel.addUserRequest.userNameError}"
+                app:errorEnabled="@{viewmodel.addUserRequest.userNameError!=null?true:false}">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -50,9 +51,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:errorEnabled="@{viewmodel.addUserRequest.emailError!=null?true:false}"
                 app:error="@{viewmodel.addUserRequest.emailError}">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -71,9 +73,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:errorEnabled="@{viewmodel.addUserRequest.phoneError!=null?true:false}"
                 app:error="@{viewmodel.addUserRequest.phoneError}">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -91,9 +94,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:errorEnabled="@{viewmodel.addUserRequest.passwordError!=null?true:false}"
                 android:visibility="@{viewmodel.passingObject.objectClass!=null?View.GONE:View.VISIBLE}"
                 app:error="@{viewmodel.addUserRequest.passwordError}"
                 app:passwordToggleEnabled="true">
@@ -113,9 +117,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:errorEnabled="@{viewmodel.addUserRequest.userAddressError!=null?true:false}"
                 app:error="@{viewmodel.addUserRequest.userAddressError}">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -134,11 +139,12 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
                 app:endIconDrawable="@drawable/ic_arrow_down"
                 app:endIconMode="custom"
+                app:errorEnabled="@{viewmodel.addUserRequest.typeError!=null?true:false}"
                 app:error="@{viewmodel.addUserRequest.typeError}">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -159,9 +165,10 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp4h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
+                app:errorEnabled="@{viewmodel.addUserRequest.catError!=null?true:false}"
                 android:visibility="@{viewmodel.userData.userData.type.equals(`admin`)?View.VISIBLE:View.GONE}"
                 app:endIconDrawable="@drawable/ic_arrow_down"
                 app:endIconMode="custom"
@@ -184,9 +191,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp6w"
+                android:layout_marginStart="@dimen/dp8w"
                 android:layout_marginTop="@dimen/dp30h"
-                android:layout_marginEnd="@dimen/dp6w"
+                android:layout_marginEnd="@dimen/dp8w"
                 android:layout_marginBottom="@dimen/dp30h">
 
                 <androidx.appcompat.widget.AppCompatButton

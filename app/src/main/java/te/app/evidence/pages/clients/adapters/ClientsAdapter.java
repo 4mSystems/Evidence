@@ -2,6 +2,7 @@ package te.app.evidence.pages.clients.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
+import androidx.recyclerview.widget.AsyncListDiffer;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +28,7 @@ import te.app.evidence.pages.clients.AddClientFragment;
 import te.app.evidence.pages.clients.ClientProfileFragment;
 import te.app.evidence.pages.clients.models.Clients;
 import te.app.evidence.pages.clients.viewModels.ClientsItemViewModel;
+import te.app.evidence.pages.users.models.SystemUserData;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
@@ -73,17 +77,20 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
         holder.setViewModel(itemMenuViewModel);
     }
 
-
     public void update(List<Clients> dataList) {
         this.clientsList.clear();
         clientsList.addAll(dataList);
-        notifyDataSetChanged();
     }
 
     public void loadMore(@NotNull List<Clients> dataList) {
         int start = clientsList.size();
         clientsList.addAll(dataList);
         notifyItemRangeInserted(start, dataList.size());
+    }
+
+    public void removeItem() {
+        getClientsList().remove(lastSelected);
+        notifyDataSetChanged();
     }
 
     @Override
@@ -100,7 +107,7 @@ public class ClientsAdapter extends RecyclerView.Adapter<ClientsAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return clientsList.size();
+        return getClientsList().size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

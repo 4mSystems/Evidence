@@ -14,7 +14,7 @@ public class ExpandableTextView extends CustomTextViewRegular {
     private CharSequence trimmedText;
     private BufferType bufferType;
     private boolean trim = true;
-    private int trimLength;
+     int trimLength;
 
     public ExpandableTextView(Context context) {
         this(context, null);
@@ -45,34 +45,17 @@ public class ExpandableTextView extends CustomTextViewRegular {
     @Override
     public void setText(CharSequence text, BufferType type) {
         originalText = text;
-        trimmedText = getTrimmedText(text);
+        trimmedText = getTrimmedText();
         bufferType = type;
         setText();
     }
 
-    private CharSequence getTrimmedText(CharSequence text) {
+    private CharSequence getTrimmedText() {
         if (originalText != null && originalText.length() > trimLength) {
-//            if (LanguagesHelper.getCurrentLanguage().equals("en"))
             return new SpannableStringBuilder(originalText, 0, trimLength + 1).append(Html.fromHtml("<b><span style='color:#000000;'> ... قراءة المزيد </span></b>"));
-//            else
-//            return new SpannableStringBuilder(originalText, 0, trimLength + 1).append("...".con);
-
         } else {
             return originalText;
         }
     }
 
-    public CharSequence getOriginalText() {
-        return originalText;
-    }
-
-    public void setTrimLength(int trimLength) {
-        this.trimLength = trimLength;
-        trimmedText = getTrimmedText(originalText);
-        setText();
-    }
-
-    public int getTrimLength() {
-        return trimLength;
-    }
 }

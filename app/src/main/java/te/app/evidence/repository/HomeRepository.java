@@ -4,12 +4,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
-
-import te.app.evidence.model.base.StatusMessage;
-import te.app.evidence.pages.categories.models.CategoriesResponse;
 import te.app.evidence.pages.home.models.HomeResponse;
 import te.app.evidence.pages.mohdrs.models.ReportersResponse;
 import te.app.evidence.pages.sessions.models.CaseSessionsResponse;

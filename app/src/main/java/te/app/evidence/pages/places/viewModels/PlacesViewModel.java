@@ -1,12 +1,10 @@
 package te.app.evidence.pages.places.viewModels;
 
-
 import androidx.databinding.Bindable;
 import androidx.databinding.ObservableField;
 import androidx.lifecycle.MutableLiveData;
-
+import java.util.Objects;
 import javax.inject.Inject;
-
 import io.reactivex.disposables.CompositeDisposable;
 import te.app.evidence.BR;
 import te.app.evidence.R;
@@ -47,7 +45,7 @@ public class PlacesViewModel extends BaseViewModel {
 
 
     public void getPlacesByGovernId(int page, boolean showProgress) {
-        compositeDisposable.add(repository.getPlacesByGovernId(governId, searchType.get(), page, showProgress));
+        compositeDisposable.add(repository.getPlacesByGovernId(governId, Objects.equals(searchType.get(), ResourceManager.getString(R.string.court)) ? "Court" : searchType.get(), page, showProgress));
     }
 
     public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -74,7 +72,6 @@ public class PlacesViewModel extends BaseViewModel {
         governText.set(placesMain.getGovernmentDataList().get(0).getName());
         governId = placesMain.getGovernmentDataList().get(0).getId();
         searchType.set(ResourceManager.getString(R.string.court));
-
         getGovernAdapter().update(placesMain.getGovernmentDataList());
         setPlacesPaginate(placesMain.getPlacesPaginate());
         notifyChange(BR.governAdapter);

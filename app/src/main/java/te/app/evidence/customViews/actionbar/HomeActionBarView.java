@@ -2,7 +2,6 @@ package te.app.evidence.customViews.actionbar;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.RelativeLayout;
 
 import androidx.core.view.GravityCompat;
@@ -17,7 +16,7 @@ public class HomeActionBarView extends RelativeLayout {
     public LayoutActionBarHomeBinding layoutActionBarHomeBinding;
     NavigationDrawerView navigationDrawerView;
     DrawerLayout drawerLayout;
-    private Context context;
+    Context context;
 
     public HomeActionBarView(Context context) {
         super(context);
@@ -40,7 +39,6 @@ public class HomeActionBarView extends RelativeLayout {
     public void connectDrawer(DrawerLayout drawerLayout, boolean firstConnect) {
         if (firstConnect) {
             this.drawerLayout = drawerLayout;
-            return;
         } else {
             if (drawerLayout.isDrawerOpen(GravityCompat.END))
                 drawerLayout.closeDrawer(GravityCompat.START);

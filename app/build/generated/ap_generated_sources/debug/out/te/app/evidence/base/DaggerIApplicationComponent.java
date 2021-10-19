@@ -7,6 +7,7 @@ import javax.inject.Provider;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
 import te.app.evidence.activity.MainActivity_MembersInjector;
+import te.app.evidence.activity.SupportActivity;
 import te.app.evidence.connection.Api;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.connection.ConnectionHelper_Factory;
@@ -155,6 +156,8 @@ import te.app.evidence.pages.reports.viewModels.ReportsViewModel_Factory;
 import te.app.evidence.pages.reports.viewModels.ReportsViewModel_MembersInjector;
 import te.app.evidence.pages.services.AddServiceFragment;
 import te.app.evidence.pages.services.AddServiceFragment_MembersInjector;
+import te.app.evidence.pages.services.ServiceDetailsFragment;
+import te.app.evidence.pages.services.ServiceDetailsFragment_MembersInjector;
 import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.services.ServicesFragment_MembersInjector;
 import te.app.evidence.pages.services.viewModels.ServicesViewModel;
@@ -440,6 +443,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   }
 
   @Override
+  public void inject(SupportActivity supportActivity) {
+  }
+
+  @Override
   public void inject(SplashFragment splashFragment) {
     injectSplashFragment(splashFragment);
   }
@@ -637,6 +644,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(ServicesFragment servicesFragment) {
     injectServicesFragment(servicesFragment);
+  }
+
+  @Override
+  public void inject(ServiceDetailsFragment serviceDetailsFragment) {
+    injectServiceDetailsFragment(serviceDetailsFragment);
   }
 
   @Override
@@ -1030,6 +1042,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private ServicesFragment injectServicesFragment(ServicesFragment instance) {
     ServicesFragment_MembersInjector.injectViewModel(instance, servicesViewModel());
+    return instance;
+  }
+
+  private ServiceDetailsFragment injectServiceDetailsFragment(ServiceDetailsFragment instance) {
+    ServiceDetailsFragment_MembersInjector.injectViewModel(instance, servicesViewModel());
     return instance;
   }
 

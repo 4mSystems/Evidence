@@ -15,14 +15,12 @@ import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.databinding.FragmentMainHomeBinding;
-import te.app.evidence.pages.cases.CasesFragment;
 import te.app.evidence.pages.home.viewModels.HomeViewModel;
-import te.app.evidence.pages.mohdrs.BailiffsFragment;
 import te.app.evidence.pages.places.PlacesFragment;
 import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.sessions.models.CaseSessionsResponse;
-import te.app.evidence.pages.users.UsersFragment;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.URLS;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 
@@ -54,6 +52,8 @@ public class MainHomeFragment extends BaseFragment {
                 MovementHelper.startActivity(requireActivity(), PlacesFragment.class.getName(), ResourceManager.getString(R.string.location), null);
             } else if (Constants.PREV_SESSIONS.equals(o.message)) {
                 viewModel.setPreSessionMainData(((CaseSessionsResponse) o.object).getSessionMainData());
+            } else if (Constants.SUPPORT.equals(o.message)) {
+                MovementHelper.startWebActivityForResultWithBundle(requireActivity(), URLS.SUPPORT, getString(R.string.customer_support));
             }
         });
 
@@ -64,5 +64,4 @@ public class MainHomeFragment extends BaseFragment {
         super.onResume();
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
     }
-
 }

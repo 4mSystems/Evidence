@@ -38,12 +38,12 @@ public class ReportsRepository extends BaseRepository {
                 Constants.REPORT, showProgress);
     }
 
-    public Disposable pdfReport(SearchReportRequest searchReportRequest) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, searchReportRequest.getYear() ==
-                        null ? URLS.DAILY_REPORTS_PDF + searchReportRequest.getSession_date() + "/" + searchReportRequest.getCategory_id()
-                        : URLS.MONTHLY_REPORTS_PDF + searchReportRequest.getMonth() + "/" + searchReportRequest.getYear() + "/" + searchReportRequest.getCategory_id()
-                , new Object(), ReportsResponse.class,
-                Constants.DOWNLOAD, true);
-    }
+//    public Disposable pdfReport(SearchReportRequest searchReportRequest) {
+//        return connectionHelper.requestApi(Constants.POST_REQUEST, searchReportRequest.getYear() ==
+//                        null ? URLS.DAILY_REPORTS_PDF + searchReportRequest.getSession_date() + "/" + searchReportRequest.getCategory_id()
+//                        : URLS.MONTHLY_REPORTS_PDF + searchReportRequest.getMonth() + "/" + searchReportRequest.getYear() + "/" + searchReportRequest.getCategory_id()
+//                , new Object(), ReportsResponse.class,
+//                Constants.DOWNLOAD, true);
+//    }
 
 }

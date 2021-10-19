@@ -74,8 +74,7 @@ public class ClientsFragment extends BaseFragment {
                 MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(), getString(R.string.add_new_client), AddClientFragment.class.getName(), null);
             } else if (Constants.DELETE_CLIENT.equals(((Mutable) o).message)) {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
-                viewModel.getClientsAdapter().getClientsList().remove(viewModel.getClientsAdapter().lastSelected);
-                viewModel.getClientsAdapter().notifyDataSetChanged();
+               viewModel.getClientsAdapter().removeItem();
                 viewModel.notifyChange(BR.clientsAdapter);
             }
         });

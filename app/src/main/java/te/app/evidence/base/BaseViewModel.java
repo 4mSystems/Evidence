@@ -3,18 +3,14 @@ package te.app.evidence.base;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
-import android.view.View;
-
 import androidx.databinding.Bindable;
 import androidx.databinding.Observable;
 import androidx.databinding.ObservableBoolean;
 import androidx.databinding.PropertyChangeRegistry;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.model.base.SearchRequest;

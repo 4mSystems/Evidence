@@ -8,8 +8,6 @@ import javax.inject.Singleton;
 import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.model.base.StatusMessage;
-import te.app.evidence.pages.clients.models.clientProfile.ClientProfileResponse;
 import te.app.evidence.pages.clients.notes.models.AddNoteRequest;
 import te.app.evidence.pages.clients.notes.models.AddNoteResponse;
 import te.app.evidence.utils.Constants;
@@ -53,14 +51,14 @@ public class NotesRepository extends BaseRepository {
         return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.EDIT_SESSION_NOTE, addNoteRequest, AddNoteResponse.class,
                 Constants.ADD_NOTE, false);
     }
-
-    public Disposable deleteClient(int clientId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CLIENT + clientId, new Object(), StatusMessage.class,
-                Constants.DELETE_CLIENT, true);
-    }
-
-    public Disposable getClientProfile(int clientId) {
-        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_PROFILE + clientId, new Object(), ClientProfileResponse.class,
-                Constants.CLIENT_PROFILE, true);
-    }
+//
+//    public Disposable deleteClient(int clientId) {
+//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.DELETE_CLIENT + clientId, new Object(), StatusMessage.class,
+//                Constants.DELETE_CLIENT, true);
+//    }
+//
+//    public Disposable getClientProfile(int clientId) {
+//        return connectionHelper.requestApi(Constants.GET_REQUEST, URLS.CLIENT_PROFILE + clientId, new Object(), ClientProfileResponse.class,
+//                Constants.CLIENT_PROFILE, true);
+//    }
 }

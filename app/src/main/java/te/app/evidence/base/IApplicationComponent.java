@@ -5,6 +5,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
+import te.app.evidence.activity.SupportActivity;
 import te.app.evidence.connection.ConnectionModule;
 import te.app.evidence.pages.home.MainHomeFragment;
 import te.app.evidence.pages.places.PlacesFragment;
@@ -38,6 +39,7 @@ import te.app.evidence.pages.profile.ProfileFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
 import te.app.evidence.pages.services.AddServiceFragment;
+import te.app.evidence.pages.services.ServiceDetailsFragment;
 import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.sessions.AddSessionFragment;
 import te.app.evidence.pages.sessions.SessionNotesFragment;
@@ -55,6 +57,8 @@ public interface IApplicationComponent {
     void inject(MainActivity mainActivity);
 
     void inject(BaseActivity tmpActivity);
+
+    void inject(SupportActivity supportActivity);
 
     void inject(SplashFragment splashFragment);
 
@@ -135,6 +139,8 @@ public interface IApplicationComponent {
     void inject(PlacesFragment placesFragment);
 
     void inject(ServicesFragment servicesFragment);
+
+    void inject(ServiceDetailsFragment serviceDetailsFragment);
 
     void inject(AddServiceFragment addServiceFragment);
 

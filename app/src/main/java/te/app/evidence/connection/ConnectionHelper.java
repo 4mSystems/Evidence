@@ -1,31 +1,19 @@
 package te.app.evidence.connection;
 
-
-import android.graphics.BitmapFactory;
-import android.util.Log;
-
 import androidx.lifecycle.MutableLiveData;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-
+import org.json.JSONArray;
 import org.json.JSONObject;
-
-import java.io.BufferedOutputStream;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.util.Objects;
 import javax.inject.Inject;
 import javax.inject.Singleton;
-
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.model.base.StatusMessage;
 import te.app.evidence.utils.Constants;
@@ -41,12 +29,9 @@ import okhttp3.RequestBody;
 
 @Singleton
 public class ConnectionHelper {
-
-    private static final String TAG = "ConnectionHelper";
     @Inject
     public Api api;
 
-    //    @Inject
     public MutableLiveData<Mutable> liveData;
 
     public Gson gson;
@@ -55,7 +40,6 @@ public class ConnectionHelper {
     @Inject
     public ConnectionHelper(Api api) {
         this.api = api;
-//        this.liveData = liveData;
     }
 
     @Inject
@@ -64,65 +48,16 @@ public class ConnectionHelper {
     }
 
 
-    private MultipartBody prepareImages(List<FileObject> volleyFileObjects) {
-        MultipartBody requestBody = null;
-        ArrayList<File> files = new ArrayList<>();
-        MultipartBody.Builder builder = new MultipartBody.Builder();
-        builder.setType(MultipartBody.FORM);
-        int counter = 0;
-        for (FileObject volleyFileObject : volleyFileObjects) {
-            if (volleyFileObject.getFileType() == Constants.FILE_TYPE_IMAGE) {
-                Log.d(TAG, "=>" + counter);
-                Log.e("type", "type:" + Constants.FILE_TYPE_IMAGE);
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inSampleSize = 2;
-                OutputStream os = null;
-                try {
-                    os = new BufferedOutputStream(new FileOutputStream(volleyFileObject.getFilePath()));
-//                    volleyFileObject.getBitmap().compress(Bitmap.CompressFormat.JPEG, 70, os);
-                    os.close();
-                    File file = volleyFileObject.getFile();
-                    if (file.exists()) {
-                        files.add(file);
-                        Log.e("KeyNameImage", "KeyNameImage:" + volleyFileObject.getParamName());
-                        builder.addFormDataPart(volleyFileObject.getParamName(),
-                                volleyFileObject.getParamName(), RequestBody.create(MediaType.parse("multipart/form-data"), file));
-                        counter++;
-                    }
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                File file = volleyFileObject.getFile();
-                if (file.exists()) {
-                    Log.e(TAG, "prepareImages: File Found:" + file.getAbsolutePath());
-                    files.add(file);
-                    Log.e("KeyNameImage", "KeyNameImage:" + volleyFileObject.getParamName());
-                    builder.addFormDataPart(volleyFileObject.getParamName(),
-                            volleyFileObject.getParamName(), RequestBody.create(MediaType.parse("multipart/form-data"), file));
-                }
-            }
-        }
-        if (files.size() > 0)
-            requestBody = builder.build();
-        return requestBody;
-    }
-
-    //public Disposable requestApi(String url, Object requestData, Class<?> responseType, String constantSuccessResponse,
-// boolean showProgress) {
     public Disposable requestApi(String url, final Object requestData,
                                  final List<FileObject> fileObjects, final Class<?> responseType, String constantSuccessResponse, boolean showProgress) {
         Map<String, String> map = getParameters(requestData);
         Flowable<JsonObject> call = null;
-        MultipartBody.Part file = null;
+        MultipartBody.Part file;
         if (fileObjects != null && fileObjects.size() > 0) {
             List<MultipartBody.Part> images = new ArrayList<>();
-            int counter = 0;
             for (FileObject fileObject : fileObjects) {
                 File myFile = fileObject.getFile();
-                RequestBody mFile = null;
+                RequestBody mFile;
                 if (fileObject.getFileType() == Constants.FILE_TYPE_IMAGE) {
                     mFile = RequestBody.create(MediaType.parse("image/*"), myFile);
                 } else {
@@ -130,17 +65,15 @@ public class ConnectionHelper {
                 }
                 file = MultipartBody.Part.createFormData(fileObject.getParamName(), myFile.getName(), mFile);
                 images.add(file);
-                counter++;
                 call = api.post(url, map, images);
             }
         } else {
             call = api.post(url, map);
         }
         if (showProgress) {
-            Log.d(TAG, "showProgress");
             liveData.setValue(new Mutable(Constants.SHOW_PROGRESS));
         }
-        return call.subscribeOn(Schedulers.io())
+        return Objects.requireNonNull(call).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSubscriber<JsonObject>() {
                     @Override
@@ -148,10 +81,7 @@ public class ConnectionHelper {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
                         StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
-                        Log.e(TAG, "onNext: " + statusMessage.mMessage);
                         try {
-
-
                             if (statusMessage.code == Constants.RESPONSE_SUCCESS)
                                 liveData.setValue(new Mutable(constantSuccessResponse, gson.fromJson(jsonString, responseType)));
                             else if (statusMessage.code == Constants.RESPONSE_JWT_EXPIRE)
@@ -178,10 +108,10 @@ public class ConnectionHelper {
     }
 
     public Disposable requestApi(int method, String url, Object requestData, Class<?> responseType, String constantSuccessResponse, boolean showProgress) {
-        Flowable<JsonObject> call = null;
+        Flowable<JsonObject> call;
         Map<String, String> map = getParameters(requestData);
         if (method == Constants.POST_REQUEST) {
-            call = api.post(url, requestData);//here
+            call = api.post(url, requestData);
         } else if (method == Constants.GET_REQUEST) {
             call = api.get(url, map);
         } else if (method == Constants.DELETE_REQUEST) {
@@ -199,7 +129,6 @@ public class ConnectionHelper {
                     public void onNext(JsonObject response) {
                         hideProgress(showProgress);
                         String jsonString = gson.toJson(response);
-                        Log.e(TAG, "onNext: " + response);
                         try {
                             StatusMessage statusMessage = gson.fromJson(jsonString, (Type) responseType);
                             if (statusMessage.code == Constants.RESPONSE_SUCCESS || statusMessage.codes == Constants.RESPONSE_SUCCESS)
@@ -234,41 +163,6 @@ public class ConnectionHelper {
 
     }
 
-    public Disposable requestApiBackground(int method, String url, Object requestData) {
-        Flowable<JsonObject> call = null;
-        Map<String, String> map = getParameters(requestData);
-        if (method == Constants.POST_REQUEST) {
-            call = api.post(url, requestData);//here
-        } else if (method == Constants.GET_REQUEST) {
-            call = api.get(url, map);
-        } else if (method == Constants.DELETE_REQUEST) {
-            call = api.delete(url, map);
-        } else
-            call = api.get(url, map);
-
-
-        return call.subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(new DisposableSubscriber<JsonObject>() {
-                    @Override
-                    public void onNext(JsonObject response) {
-                        Log.d(TAG, "onNext CALL BACKGROUND");
-                    }
-
-                    @Override
-                    public void onError(Throwable t) {
-                        Log.d(TAG, "ERROR CALL BACKGROUND");
-                    }
-
-                    @Override
-                    public void onComplete() {
-                        Log.d(TAG, "onComplete CALL BACKGROUND");
-                    }
-                });
-
-    }
-
-
     private void hideProgress(boolean showProgress) {
         if (showProgress)
             liveData.setValue(new Mutable(Constants.HIDE_PROGRESS));
@@ -277,15 +171,22 @@ public class ConnectionHelper {
 
     private Map<String, String> getParameters(final Object requestData) {
         Map<String, String> params = new HashMap<>();
-        if (requestData != null) {
-            try {
-                JSONObject jsonObject = new JSONObject(gson.toJson(requestData));
-                for (int i = 0; i < jsonObject.names().length(); i++) {
-                    params.put(jsonObject.names().getString(i), jsonObject.get(jsonObject.names().getString(i)) + "");
-                }
-            } catch (Exception e) {
-                e.getStackTrace();
+        try {
+            JSONObject jsonObject = new JSONObject(gson.toJson(requestData));
+            for (int i = 0; i < Objects.requireNonNull(jsonObject.names()).length(); i++) {
+                if (jsonObject.get(Objects.requireNonNull(jsonObject.names()).getString(i)) instanceof JSONArray) {
+                    JSONArray jsonArray = (JSONArray) jsonObject.get(Objects.requireNonNull(jsonObject.names()).getString(i));
+                    for (int j = 0; j < jsonArray.length(); j++) {
+                        {
+                            String name = Objects.requireNonNull(jsonObject.names()).getString(i) + "[" + j + "]";
+                            params.put(name, jsonArray.get(j) + "");
+                        }
+                    }
+                } else
+                    params.put(Objects.requireNonNull(jsonObject.names()).getString(i), jsonObject.get(Objects.requireNonNull(jsonObject.names()).getString(i)) + "");
             }
+        } catch (Exception e) {
+            e.getStackTrace();
         }
         return params;
     }

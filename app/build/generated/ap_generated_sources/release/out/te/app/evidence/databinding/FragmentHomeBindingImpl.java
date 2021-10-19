@@ -39,17 +39,17 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     @Nullable
     private final android.view.View.OnClickListener mCallback108;
     @Nullable
+    private final android.view.View.OnClickListener mCallback109;
+    @Nullable
     private final android.view.View.OnClickListener mCallback106;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback110;
     @Nullable
     private final android.view.View.OnClickListener mCallback107;
     @Nullable
     private final android.view.View.OnClickListener mCallback104;
     @Nullable
     private final android.view.View.OnClickListener mCallback105;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback102;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback103;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -117,13 +117,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         this.warningContainer.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback108 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback106 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback107 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback104 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback105 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback102 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback103 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback108 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback109 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback106 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback110 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback107 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback104 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback105 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -942,13 +942,13 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
         if ((dirtyFlags & 0x200L) != 0) {
             // api target 1
 
-            this.homeItem2.setOnClickListener(mCallback103);
-            this.homeItem3.setOnClickListener(mCallback104);
-            this.homeItem4.setOnClickListener(mCallback105);
-            this.mboundView5.setOnClickListener(mCallback102);
-            this.nextMohdareen.setOnClickListener(mCallback108);
-            this.nextSessions.setOnClickListener(mCallback106);
-            this.previousSessions.setOnClickListener(mCallback107);
+            this.homeItem2.setOnClickListener(mCallback105);
+            this.homeItem3.setOnClickListener(mCallback106);
+            this.homeItem4.setOnClickListener(mCallback107);
+            this.mboundView5.setOnClickListener(mCallback104);
+            this.nextMohdareen.setOnClickListener(mCallback110);
+            this.nextSessions.setOnClickListener(mCallback108);
+            this.previousSessions.setOnClickListener(mCallback109);
         }
         if ((dirtyFlags & 0x304L) != 0) {
             // api target 1
@@ -1000,23 +1000,6 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 7: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.nextMohdars();
-                }
-                break;
-            }
             case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -1123,6 +1106,23 @@ public class FragmentHomeBindingImpl extends FragmentHomeBinding implements te.a
                             }
                         }
                     }
+                }
+                break;
+            }
+            case 7: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.nextMohdars();
                 }
                 break;
             }

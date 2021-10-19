@@ -26,9 +26,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback89;
     @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback87;
     @Nullable
     private final android.view.View.OnClickListener mCallback88;
     // values
@@ -97,9 +97,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -281,9 +281,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback86);
-            this.mboundView7.setOnClickListener(mCallback88);
-            this.search.setOnClickListener(mCallback87);
+            this.mboundView2.setOnClickListener(mCallback87);
+            this.mboundView7.setOnClickListener(mCallback89);
+            this.search.setOnClickListener(mCallback88);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1
@@ -312,7 +312,7 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
+            case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -325,9 +325,7 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-
-
-                    viewmodel.search(1, true);
+                    viewmodel.toAddSession();
                 }
                 break;
             }
@@ -348,7 +346,7 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
                 }
                 break;
             }
-            case 3: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -361,7 +359,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.toAddSession();
+
+
+                    viewmodel.search(1, true);
                 }
                 break;
             }

@@ -30,6 +30,7 @@ import com.google.gson.Gson;
 import te.app.evidence.PassingObject;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.activity.MainActivity;
+import te.app.evidence.activity.SupportActivity;
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.utils.Constants;
@@ -44,31 +45,6 @@ public class MovementHelper {
     //---------Fragments----------//
     private static final int CONTAINER_ID = R.id.fl_home_container;
 
-    public static void popAllFragments(Context context) {
-        FragmentManager fm = ((FragmentActivity) context).getSupportFragmentManager();
-        for (int i = 0; i < fm.getBackStackEntryCount(); ++i) {
-            fm.popBackStack();
-        }
-    }
-
-    public static void addFragment(Context context, Fragment fragment, String backStackText) {
-        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().add(CONTAINER_ID, fragment);
-        if (!backStackText.equals("")) {
-            fragmentTransaction.addToBackStack(backStackText);
-        }
-        fragmentTransaction.commit();
-    }
-
-
-    public static void addFragmentTag(Context context, Fragment fragment, String tag, String backStackText) {
-        FragmentManager fragmentManager = ((FragmentActivity) context).getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().add(CONTAINER_ID, fragment, tag);
-        if (!backStackText.equals("")) {
-            fragmentTransaction.addToBackStack(backStackText);
-        }
-        fragmentTransaction.commit();
-    }
 
 
     public static void replaceFragmentTag(Context context, Fragment fragment, String tag, String backStackText) {
@@ -181,6 +157,13 @@ public class MovementHelper {
         if (shareBar != null)
             intent.putExtra(Constants.SHARE_BAR, shareBar);
         context.startActivity(intent);
+    }
+
+    public static void startWebActivityForResultWithBundle(Context from, String url, String title) {
+        Intent intent = new Intent(from, SupportActivity.class);
+        intent.putExtra(Constants.BUNDLE, url);
+        intent.putExtra(Constants.NAME_BAR, title);
+        ((ParentActivity) from).startActivityForResult(intent, Constants.WEB_VIEW_REQUEST);
     }
 
     public static void startActivityMain(Context context) {

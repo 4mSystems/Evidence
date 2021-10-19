@@ -1,14 +1,10 @@
 package te.app.evidence.repository;
 
 import androidx.lifecycle.MutableLiveData;
-
 import javax.inject.Inject;
-import javax.inject.Singleton;
-
 import io.reactivex.disposables.Disposable;
 import te.app.evidence.connection.ConnectionHelper;
 import te.app.evidence.model.base.Mutable;
-import te.app.evidence.pages.cases.models.CaseClientsResponse;
 import te.app.evidence.pages.categories.models.CategoriesResponse;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.URLS;

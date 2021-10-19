@@ -377,10 +377,10 @@ library {
   maven_library {
     groupId: "androidx.constraintlayout"
     artifactId: "constraintlayout"
-    version: "2.1.0"
+    version: "2.1.1"
   }
   digests {
-    sha256: "\244X\247V#c\275Y\302\t\247\336\250G2j\016+&\263z\210=\303\342\220e\247\232\034x\213"
+    sha256: " \207\223\231\275s/g\243DZ\034\240`\267\214\2641d\254\247\005\267y\343\205\352.\275\r=y"
   }
   repo_index {
   }
@@ -389,10 +389,10 @@ library {
   maven_library {
     groupId: "androidx.constraintlayout"
     artifactId: "constraintlayout-core"
-    version: "1.0.0"
+    version: "1.0.1"
   }
   digests {
-    sha256: "Il\214yfK\331p\306\246\276z\226\n \335\025}\374Z\242\361\216[\2033v\177\373\305\231\021"
+    sha256: "\362,\252\271w\276B\320j\v]\361T\035T\345\366\257\032\226\231AO\016\353A\364\027\342\263@r"
   }
   repo_index {
   }
@@ -558,10 +558,10 @@ library {
   maven_library {
     groupId: "com.squareup.okhttp3"
     artifactId: "okhttp"
-    version: "4.9.0"
+    version: "4.9.1"
   }
   digests {
-    sha256: "\333\302\273\004\354\260\002\271\364\004bc\314\255\231oJ=<Y\240\314\230\203~0\ng\000W\037|"
+    sha256: "j\375\330\363_N\266\r\371e\302\220\372:\317)D?\251\206TQ\023\320r\233\204a\366W\037\217"
   }
   repo_index {
     value: 1
@@ -649,10 +649,10 @@ library {
   maven_library {
     groupId: "com.squareup.okhttp3"
     artifactId: "logging-interceptor"
-    version: "4.9.0"
+    version: "4.9.1"
   }
   digests {
-    sha256: "\265\204\207\224\266\251\313t\270}\254\204~\005\342\336#+\343\\*h.\027\004\366]W\261\004/\266"
+    sha256: "\b\256R\324\347\253M\336\217\224\227\v\276\261T[Q\223MK?\b\002\366\350\026\260R)\002\372\235"
   }
   repo_index {
     value: 1
@@ -828,10 +828,10 @@ library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-core"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "6\207\277\273\206-\342\376\334E\334\346\303R\335\253\254\357\256+\377\247\020\207\307G\0013\2772\252\023"
+    sha256: "\363\353\244N\354\301\1775\021\215%\263ZU\016\034\211\023\v\025\340\364\256:\332l\311<\021\347\374a"
   }
   repo_index {
   }
@@ -840,10 +840,10 @@ library {
   maven_library {
     groupId: "com.google.firebase"
     artifactId: "firebase-analytics"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "\224\2658\377\255\270\220\343\311\324\330\205\254Y\035\342\026\234Gd\376\033E\005\364\t\364\241\356\342\342\335"
+    sha256: "\024\247:f$\205}\006\247y\211s\376\260mfE\017^,\352\323\375\005\033gJ\001\227\035L\370"
   }
   repo_index {
   }
@@ -852,10 +852,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "?[\200\217\373>5a\307\3136\241\\\240\020\330\016g\231,\251\316\274[_ \271\243\245\236\374\034"
+    sha256: "\316\n8\224?\322\276D\306y\332M\360\302\344&\270\000\002@\346\2222\024\210\350\323\266Ri\340B"
   }
   repo_index {
   }
@@ -888,10 +888,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-base"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "\322\362\375\021\257\b\216\317\3022J\344\025\3571f\310\f\375\260\353N\312Y 3?\3530\374\256\376"
+    sha256: "\221\257\321\371~\204j\351o\325\273zljF\n\016\3564+\r\377\345\214}?\275]\237\f\357\033"
   }
   repo_index {
   }
@@ -900,10 +900,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-impl"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: ">Y\355\037?\264\237\256k\\\243\314t\231\r;\2424\322\371\253\251\266\243\346\263-\357\325\\\325q"
+    sha256: "?\260>\212\354\375\241\361\216\276\331\025\031X\226\n\261\350\\2\333\301 \246\230\032\202\2411\"\005\362"
   }
   repo_index {
   }
@@ -924,10 +924,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-api"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "\234rZ\361#\362\004\"\3642\310\312H\254\200\304\373\214]\306\266\364\226\3622Tq*\203\033m\207"
+    sha256: "DK\301\000kF\242\265=\247\3407\222*\030\302\245k\267\252S\222\251\037\365\231cO\230t\271>"
   }
   repo_index {
   }
@@ -936,10 +936,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-sdk-api"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "\244\221\225g\223M\323\227\245e\350\230\001{dy\252\222\v5\020\364(\206m\215\263n\313\2214\252"
+    sha256: "x\216\310\v\351\246\341(\357\t\331p\213\365\003-\0225#d\204\235\342\301\037\233\234\211U$\236h"
   }
   repo_index {
   }
@@ -1032,10 +1032,10 @@ library {
   maven_library {
     groupId: "com.google.android.gms"
     artifactId: "play-services-measurement-sdk"
-    version: "19.0.1"
+    version: "19.0.2"
   }
   digests {
-    sha256: "\336)\306\263\2068\273`\354\323\022\326`\025O\252\202\000,\035K\224\356T\302\373\260\2648\217<\213"
+    sha256: "\374\230\307\031\263\030\277\252\030\331{_o7}G\333\353\037FG\231\221>\3256)\234Sv\332\376"
   }
   repo_index {
   }
@@ -1315,10 +1315,10 @@ library {
   maven_library {
     groupId: "com.github.GrenderG"
     artifactId: "Toasty"
-    version: "1.4.2"
+    version: "1.5.2"
   }
   digests {
-    sha256: "I07`\365:W\3357U%\277A\3139(\235\245\2563\365=*Y0\271\t\212\314\016\2768"
+    sha256: "W\206ns\036\276>\370#(\224,\324\331l\371@\262@l\224@\3638W\366\227w\002\1776\265"
   }
   repo_index {
     value: 2
@@ -1507,10 +1507,23 @@ library {
   maven_library {
     groupId: "com.github.chrisbanes"
     artifactId: "PhotoView"
-    version: "2.2.0"
+    version: "2.3.0"
   }
   digests {
-    sha256: "\232\317\265yO\366\347<\337J\356d\266#\v[\304\023\366c\006\216\326\206\270\237\274\266?\031?\205"
+    sha256: "l\211\211\362\224]P\2538\263\3400\000d\361\370\322\327[\274\256\0244\376S]\237\266\211\216\232\326"
+  }
+  repo_index {
+    value: 2
+  }
+}
+library {
+  maven_library {
+    groupId: "com.github.delight-im"
+    artifactId: "Android-AdvancedWebView"
+    version: "v3.2.1"
+  }
+  digests {
+    sha256: "\210\200\000\243\177\300\321\330\2110\203\356\232\310\370\221K\243!L\027j\244\234\257\370\221\373\205tt\214"
   }
   repo_index {
     value: 2
@@ -2186,7 +2199,6 @@ module_dependencies {
   dependency_index: 66
   dependency_index: 67
   dependency_index: 85
-  dependency_index: 68
   dependency_index: 95
   dependency_index: 99
   dependency_index: 41
@@ -2204,6 +2216,7 @@ module_dependencies {
   dependency_index: 120
   dependency_index: 121
   dependency_index: 122
+  dependency_index: 123
 }
 repositories {
   maven_repo {
