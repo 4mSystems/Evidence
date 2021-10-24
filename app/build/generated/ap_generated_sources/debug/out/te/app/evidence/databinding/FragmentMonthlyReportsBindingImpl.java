@@ -29,9 +29,9 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     private final te.app.evidence.customViews.views.CustomTextViewRegular mboundView8;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback114;
+    private final android.view.View.OnClickListener mCallback116;
     @Nullable
-    private final android.view.View.OnClickListener mCallback113;
+    private final android.view.View.OnClickListener mCallback117;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -139,8 +139,8 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback114 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback113 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback116 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback117 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -382,10 +382,10 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.inputCat.setOnClickListener(mCallback113);
+            this.inputCat.setOnClickListener(mCallback116);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
-            this.search.setOnClickListener(mCallback114);
+            this.search.setOnClickListener(mCallback117);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
@@ -403,25 +403,6 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.getReports(1, true);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -438,6 +419,25 @@ public class FragmentMonthlyReportsBindingImpl extends FragmentMonthlyReportsBin
 
 
                     viewmodel.action(te.app.evidence.utils.Constants.SHOW_CATEGORIES);
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.reports.viewModels.ReportsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.getReports(1, true);
                 }
                 break;
             }

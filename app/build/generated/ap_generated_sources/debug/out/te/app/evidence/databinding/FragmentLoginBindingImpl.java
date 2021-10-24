@@ -14,28 +14,39 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.login_background, 9);
-        sViewsWithIds.put(R.id.logo, 10);
-        sViewsWithIds.put(R.id.app_name, 11);
-        sViewsWithIds.put(R.id.app_login_title, 12);
-        sViewsWithIds.put(R.id.login_header, 13);
-        sViewsWithIds.put(R.id.app_login_hint, 14);
-        sViewsWithIds.put(R.id.tv_forget_timer, 15);
+        sViewsWithIds.put(R.id.login_background, 12);
+        sViewsWithIds.put(R.id.logo, 13);
+        sViewsWithIds.put(R.id.app_name, 14);
+        sViewsWithIds.put(R.id.app_login_title, 15);
+        sViewsWithIds.put(R.id.login_header, 16);
+        sViewsWithIds.put(R.id.app_login_hint, 17);
+        sViewsWithIds.put(R.id.tv_forget_timer, 18);
+        sViewsWithIds.put(R.id.terms_container, 19);
     }
     // views
     @NonNull
     private final androidx.core.widget.NestedScrollView mboundView0;
     @NonNull
+    private final te.app.evidence.customViews.views.CustomTextViewRegular mboundView10;
+    @NonNull
+    private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView11;
+    @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView2;
     @NonNull
     private final com.google.android.material.textfield.TextInputEditText mboundView4;
     @NonNull
-    private final android.widget.LinearLayout mboundView8;
+    private final te.app.evidence.customViews.views.CustomTextViewRegular mboundView9;
     // variables
     @Nullable
     private final android.view.View.OnClickListener mCallback23;
     @Nullable
+    private final android.view.View.OnClickListener mCallback24;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback25;
+    @Nullable
     private final android.view.View.OnClickListener mCallback21;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback26;
     @Nullable
     private final android.view.View.OnClickListener mCallback22;
     // values
@@ -117,40 +128,50 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
     };
 
     public FragmentLoginBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 16, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 20, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 3
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[17]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[15]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[14]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[12]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[11]
             , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[5]
             , (com.google.android.material.textfield.TextInputLayout) bindings[1]
             , (com.google.android.material.textfield.TextInputLayout) bindings[3]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[9]
-            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[13]
-            , (androidx.appcompat.widget.AppCompatImageView) bindings[10]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[12]
+            , (te.app.evidence.customViews.views.CustomTextViewMedium) bindings[16]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[13]
             , (com.google.android.material.progressindicator.CircularProgressIndicator) bindings[7]
+            , (android.widget.LinearLayout) bindings[8]
             , (androidx.appcompat.widget.AppCompatButton) bindings[6]
-            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[15]
+            , (android.widget.LinearLayout) bindings[19]
+            , (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[18]
             );
         this.forgetPassword.setTag(null);
         this.inputEmail.setTag(null);
         this.inputPassword.setTag(null);
         this.mboundView0 = (androidx.core.widget.NestedScrollView) bindings[0];
         this.mboundView0.setTag(null);
+        this.mboundView10 = (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[10];
+        this.mboundView10.setTag(null);
+        this.mboundView11 = (com.google.android.material.floatingactionbutton.FloatingActionButton) bindings[11];
+        this.mboundView11.setTag(null);
         this.mboundView2 = (com.google.android.material.textfield.TextInputEditText) bindings[2];
         this.mboundView2.setTag(null);
         this.mboundView4 = (com.google.android.material.textfield.TextInputEditText) bindings[4];
         this.mboundView4.setTag(null);
-        this.mboundView8 = (android.widget.LinearLayout) bindings[8];
-        this.mboundView8.setTag(null);
+        this.mboundView9 = (te.app.evidence.customViews.views.CustomTextViewRegular) bindings[9];
+        this.mboundView9.setTag(null);
         this.progress.setTag(null);
+        this.registerContainer.setTag(null);
         this.startApp.setTag(null);
         setRootTag(root);
         // listeners
         mCallback23 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback24 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback25 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
         mCallback21 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
         mCallback22 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
@@ -402,9 +423,12 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
             // api target 1
 
             this.forgetPassword.setOnClickListener(mCallback21);
+            this.mboundView10.setOnClickListener(mCallback25);
+            this.mboundView11.setOnClickListener(mCallback26);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView4, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView4androidTextAttrChanged);
-            this.mboundView8.setOnClickListener(mCallback23);
+            this.mboundView9.setOnClickListener(mCallback24);
+            this.registerContainer.setOnClickListener(mCallback23);
             this.startApp.setOnClickListener(mCallback22);
         }
         if ((dirtyFlags & 0x16L) != 0) {
@@ -448,7 +472,47 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.register();
+
+
+                    viewmodel.actions(te.app.evidence.utils.Constants.REGISTER);
+                }
+                break;
+            }
+            case 4: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.actions(te.app.evidence.utils.Constants.TERMS);
+                }
+                break;
+            }
+            case 5: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.actions(te.app.evidence.utils.Constants.PRIVACY);
                 }
                 break;
             }
@@ -465,7 +529,28 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements te
                 if (viewmodelJavaLangObjectNull) {
 
 
-                    viewmodel.forgetPassword();
+
+
+                    viewmodel.actions(te.app.evidence.utils.Constants.FORGET_PASSWORD);
+                }
+                break;
+            }
+            case 6: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.auth.login.LoginViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.actions(te.app.evidence.utils.Constants.SUPPORT);
                 }
                 break;
             }

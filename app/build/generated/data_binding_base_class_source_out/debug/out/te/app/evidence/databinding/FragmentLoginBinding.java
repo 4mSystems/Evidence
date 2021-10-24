@@ -4,6 +4,7 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
@@ -52,7 +53,13 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final CircularProgressIndicator progress;
 
   @NonNull
+  public final LinearLayout registerContainer;
+
+  @NonNull
   public final AppCompatButton startApp;
+
+  @NonNull
+  public final LinearLayout termsContainer;
 
   @NonNull
   public final CustomTextViewRegular tvForgetTimer;
@@ -65,7 +72,8 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
       CustomTextViewMedium appName, CustomTextViewMedium forgetPassword, TextInputLayout inputEmail,
       TextInputLayout inputPassword, AppCompatImageView loginBackground,
       CustomTextViewMedium loginHeader, AppCompatImageView logo, CircularProgressIndicator progress,
-      AppCompatButton startApp, CustomTextViewRegular tvForgetTimer) {
+      LinearLayout registerContainer, AppCompatButton startApp, LinearLayout termsContainer,
+      CustomTextViewRegular tvForgetTimer) {
     super(_bindingComponent, _root, _localFieldCount);
     this.appLoginHint = appLoginHint;
     this.appLoginTitle = appLoginTitle;
@@ -77,7 +85,9 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
     this.loginHeader = loginHeader;
     this.logo = logo;
     this.progress = progress;
+    this.registerContainer = registerContainer;
     this.startApp = startApp;
+    this.termsContainer = termsContainer;
     this.tvForgetTimer = tvForgetTimer;
   }
 

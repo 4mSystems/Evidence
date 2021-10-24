@@ -2,11 +2,14 @@ package te.app.evidence.base;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
 import te.app.evidence.R;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.model.base.Mutable;
@@ -32,7 +35,7 @@ public class BaseFragment extends Fragment {
     public void handleActions(Mutable mutable) {
         ((ParentActivity) requireActivity()).handleActions(mutable);
     }
-    
+
 
     public BaseActivity baseActivity() {
         return ((BaseActivity) requireActivity());
@@ -49,12 +52,14 @@ public class BaseFragment extends Fragment {
     public void toastErrorMessage(String message) {
         ((ParentActivity) requireActivity()).toastError(message);
     }
-    
+
     protected void finishActivity() {
         ((ParentActivity) requireActivity()).finish();
     }
-    
+
+    private static final String TAG = "BASEFRAGMENT";
 
     public void launchActivityResult(int request, int resultCode, Intent result) {
+        Log.e(TAG, "launchActivityResult: " + request);
     }
 }

@@ -17,6 +17,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
@@ -35,6 +36,7 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.R;
+import te.app.evidence.utils.resources.ResourceManager;
 
 import static android.app.Activity.RESULT_OK;
 
@@ -169,9 +171,13 @@ public class MovementHelper {
     public static void startActivityMain(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         context.startActivity(intent);
-//        ((Activity) context).finishAffinity();
     }
-
+    public static void openCustomTabs(Context from, String url, String title) {
+        CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
+        builder.setToolbarColor(ResourceManager.getColor(R.color.colorPrimaryDark));
+        CustomTabsIntent customTabsIntent = builder.build();
+        customTabsIntent.launchUrl(from, Uri.parse(url));
+    }
 
     public static void startWebPage(Context context, String page) {
         try {

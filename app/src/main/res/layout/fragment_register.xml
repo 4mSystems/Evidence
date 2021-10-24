@@ -33,16 +33,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/home_title"
-                    android:layout_width="@dimen/dp160w"
-                    android:layout_height="@dimen/dp130h"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="@dimen/dp20h"
-                    android:src="@drawable/logo"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="@dimen/dp90w"
+                    android:layout_height="@dimen/dp90h"
+                    android:layout_marginTop="@dimen/dp18h"
+                    android:src="@drawable/splash"
+                    app:civ_border_color="@color/background_gray"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="6dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp4w"
+                    android:layout_marginBottom="@dimen/dp4h"
+                    android:onClick="@{()->viewmodel.imageSubmit(Constants.IMAGE)}"
+                    android:src="@drawable/ic_profile_camera"
+                    app:layout_constraintBottom_toBottomOf="@id/user_img"
+                    app:layout_constraintStart_toStartOf="@id/user_img" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_name"
@@ -54,9 +66,10 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/name_hint"
                     app:error="@{viewmodel.request.nameError}"
+                    app:errorEnabled="@{viewmodel.request.nameError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/home_title"
+                    app:layout_constraintTop_toBottomOf="@+id/user_img"
                     app:startIconDrawable="@drawable/ic_users">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -79,6 +92,7 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/company_name_hint"
                     app:error="@{viewmodel.request.catError}"
+                    app:errorEnabled="@{viewmodel.request.catError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_name"
@@ -104,6 +118,7 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/email"
                     app:error="@{viewmodel.request.emailError}"
+                    app:errorEnabled="@{viewmodel.request.emailError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_company_name"
@@ -129,6 +144,7 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/phone"
                     app:error="@{viewmodel.request.phoneError}"
+                    app:errorEnabled="@{viewmodel.request.phoneError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_register_email"
@@ -155,6 +171,7 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/address_hint"
                     app:error="@{viewmodel.request.addressError}"
+                    app:errorEnabled="@{viewmodel.request.addressError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_phone"
@@ -171,6 +188,35 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_info_card"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp14w"
+                    android:layout_marginTop="@dimen/dp4h"
+                    android:layout_marginEnd="@dimen/dp14w"
+                    android:hint="@string/image_card_hint"
+                    app:error="@{viewmodel.request.memberShipImageError}"
+                    app:errorEnabled="@{viewmodel.request.memberShipImageError!=null?true:false}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_address"
+                    app:startIconDrawable="@drawable/ic_card_membership">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/input_member"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:inputType="text"
+                        android:onClick="@{()->viewmodel.imageSubmit(Constants.IMAGE_MEMBERSHIP)}"
+                        android:text="@={viewmodel.request.memberShipImage}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textColorHint="@color/overlayBackground" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_password"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
@@ -180,9 +226,10 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/password"
                     app:error="@{viewmodel.request.passwordError}"
+                    app:errorEnabled="@{viewmodel.request.passwordError!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_address"
+                    app:layout_constraintTop_toBottomOf="@+id/input_info_card"
                     app:passwordToggleEnabled="true"
                     app:startIconDrawable="@drawable/ic_auth_password">
 
@@ -206,6 +253,7 @@
                     android:layout_marginEnd="@dimen/dp14w"
                     android:hint="@string/password_hint_confirm"
                     app:error="@{viewmodel.request.confirmError}"
+                    app:errorEnabled="@{viewmodel.request.confirmPassword!=null?true:false}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/input_password"
@@ -247,6 +295,59 @@
                         android:textColorHint="@color/overlayBackground" />
                 </com.google.android.material.textfield.TextInputLayout>
 
+
+                <LinearLayout
+                    android:id="@+id/terms_container"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp14w"
+                    android:layout_marginTop="@dimen/dp10h"
+                    android:gravity="start"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/input_invite_code">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:onCheckedChanged="@{(compoundButton, checked) -> viewmodel.onCheckedChange(compoundButton, checked)}"
+                        android:text="@string/agree_to_terms"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/sp8_5"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/terms_container" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp4w"
+                        android:onClick="@{()-> viewmodel.imageSubmit(Constants.TERMS)}"
+                        android:text="@string/terms"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <te.app.evidence.customViews.views.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp4w"
+                        android:layout_marginEnd="@dimen/dp4w"
+                        android:onClick="@{()-> viewmodel.imageSubmit(Constants.PRIVACY)}"
+                        android:text="@string/privacy"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textColor="@color/colorPrimaryDark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/privacy"
+                        app:layout_constraintTop_toBottomOf="@+id/login_no_account" />
+
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>

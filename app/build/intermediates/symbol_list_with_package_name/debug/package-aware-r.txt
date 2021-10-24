@@ -1210,6 +1210,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -1504,6 +1508,8 @@ dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2037,6 +2043,7 @@ drawable ic_back
 drawable ic_best_price
 drawable ic_business_report
 drawable ic_calendar
+drawable ic_card_membership
 drawable ic_cases
 drawable ic_categories
 drawable ic_check_white_24dp
@@ -2259,6 +2266,11 @@ id br3
 id br4
 id br5
 id br_status
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btnSave
 id btn_action
 id btn_airplane_off
@@ -2488,10 +2500,12 @@ id input_date
 id input_desc
 id input_email
 id input_file
+id input_info_card
 id input_invite_code
 id input_invite_type
 id input_khesm
 id input_khesms
+id input_member
 id input_month
 id input_name
 id input_new_password
@@ -2531,6 +2545,7 @@ id login
 id login_background
 id login_container
 id login_header
+id login_no_account
 id logo
 id logout_txt
 id lottie_layer_name
@@ -2656,6 +2671,7 @@ id postLayout
 id previousSessions
 id previous_session_rc
 id print
+id privacy
 id progress
 id progress_bar_home
 id progress_circular
@@ -2676,6 +2692,7 @@ id rc_places
 id rc_services
 id rectangle
 id rectangles
+id register_container
 id restart
 id reverse
 id reverseSawtooth
@@ -2788,6 +2805,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id terms_container
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -3016,6 +3034,8 @@ layout abc_tooltip
 layout activity_base
 layout activity_main
 layout activity_support
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3234,6 +3254,7 @@ string add_service
 string address_hint
 string addressed_to
 string admin
+string agree_to_terms
 string airplane_mode
 string app_login_hint
 string app_name
@@ -3290,6 +3311,7 @@ string connection_On
 string connection_Wifi
 string connection_invaild_body
 string connection_invaild_msg
+string copy_toast_msg
 string court
 string court_mohdr
 string customer_support
@@ -3334,6 +3356,9 @@ string expire_package_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
 string fieldRequired
 string file
@@ -3351,6 +3376,8 @@ string gov_hint
 string hide_bottom_view_on_scroll_behavior
 string home_search_hint
 string icon_content_description
+string image_card_hint
+string image_required
 string invalidEmail
 string invalidPassword
 string invalidPhone
@@ -3394,6 +3421,7 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string memberShipImage
 string menuCases
 string menuCat
 string menuClients
@@ -3485,6 +3513,7 @@ string points
 string points_btn
 string previousSessions
 string print
+string privacy
 string profile_change_password
 string profile_edit
 string project_id
@@ -3534,6 +3563,7 @@ string status
 string status_bar_notification_info_overflow
 string subscribe
 string terms
+string terms_warning
 string toast_message
 string tv_account_contact
 string user
@@ -4436,6 +4466,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 styleable monthPickerDialog dialogActionButtonColor headerBgColor headerFontColorNormal headerFontColorSelected headerTitleColor monthBgColor monthBgSelectedColor monthFontColorDisabled monthFontColorNormal monthFontColorSelected
+xml image_share_filepaths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

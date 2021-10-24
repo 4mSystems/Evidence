@@ -25,7 +25,7 @@ public class FragmentAddSessionBindingImpl extends FragmentAddSessionBinding imp
     private final te.app.evidence.customViews.views.DateEditText mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback98;
+    private final android.view.View.OnClickListener mCallback101;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -86,7 +86,7 @@ public class FragmentAddSessionBindingImpl extends FragmentAddSessionBinding imp
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback98 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback101 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -311,7 +311,7 @@ public class FragmentAddSessionBindingImpl extends FragmentAddSessionBinding imp
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback98);
+            this.btnSave.setOnClickListener(mCallback101);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView2, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView2androidTextAttrChanged);
         }
         if ((dirtyFlags & 0xbL) != 0) {

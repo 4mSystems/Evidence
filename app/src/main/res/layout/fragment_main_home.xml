@@ -346,5 +346,6 @@
             app:iconTint="@color/white"
             app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
             app:rippleColor="@color/overlayBackground" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

@@ -26,11 +26,11 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView7;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback89;
+    private final android.view.View.OnClickListener mCallback92;
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback90;
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback91;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -97,9 +97,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback92 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback90 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback91 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -281,9 +281,9 @@ public class FragmentSessionsBindingImpl extends FragmentSessionsBinding impleme
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView2.setOnClickListener(mCallback87);
-            this.mboundView7.setOnClickListener(mCallback89);
-            this.search.setOnClickListener(mCallback88);
+            this.mboundView2.setOnClickListener(mCallback90);
+            this.mboundView7.setOnClickListener(mCallback92);
+            this.search.setOnClickListener(mCallback91);
         }
         if ((dirtyFlags & 0xeL) != 0) {
             // api target 1

@@ -4,6 +4,7 @@ package te.app.evidence.repository;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -46,8 +47,8 @@ public class AuthRepository extends BaseRepository {
                 Constants.LOGIN, false);
     }
 
-    public Disposable register(RegisterRequest request) {
-        return connectionHelper.requestApi(Constants.POST_REQUEST, URLS.REGISTER, request, StatusMessage.class,
+    public Disposable register(RegisterRequest request, List<FileObject> objectList) {
+        return connectionHelper.requestApi(URLS.REGISTER, request, objectList, StatusMessage.class,
                 Constants.REGISTER, false);
     }
 

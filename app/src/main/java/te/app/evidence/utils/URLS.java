@@ -3,7 +3,7 @@ package te.app.evidence.utils;
 public class URLS {
     public final static String BASE_URL = "http://tes.golden-info.com/api/";
     public final static String SUPPORT = "https://tawk.to/chat/6129715cd6e7610a49b26059/1fe4u5nh8";
-//    public final static String SUPPORT = "https://tawk.to/chat/6129715cd6e7610a49b26059/1fi2p11hs";
+    //    public final static String SUPPORT = "https://tawk.to/chat/6129715cd6e7610a49b26059/1fi2p11hs";
     //Multi media urls
     public static final String USER_PROFILE_BASE_URL = "http://tes.golden-info.com/uploads/userprofile/";
     public static final String CASE_ATTACHMENTS_BASE_URL = "http://tes.golden-info.com/uploads/attachments/";
@@ -100,4 +100,6 @@ public class URLS {
     public static final String EDIT_SERVICE_REQUEST = "edit-service/";
     public static final String GET_SERVICES = "services?page=";
     public static final String DELETE_SERVICES = "delete-service/";
+    public static final String POLICY_URL = "http://land.golden-info.com/privacy-webview.html";
+    public static final String TERMS_URL = "http://land.golden-info.com/terms-webview.html";
 }

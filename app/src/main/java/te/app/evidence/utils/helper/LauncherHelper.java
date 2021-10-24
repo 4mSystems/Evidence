@@ -16,8 +16,6 @@ import te.app.evidence.base.ParentActivity;
 
 public class LauncherHelper {
     public static int launcherRequest;
-    public static String[] phonePermission = {Manifest.permission.CALL_PHONE};
-    public static String[] location = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
     public static String[] storage = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA};
     public static ActivityResultLauncher<String[]> requestMultiplePermissions;
 

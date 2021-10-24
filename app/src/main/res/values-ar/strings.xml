@@ -27,7 +27,7 @@
     <string name="phone">رقم الهاتف</string>
     <string name="invalidEmail">بريد إلكتروني غير صالح ، Evidence@example.com</string>
     <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف مع أرقام وأحرف</string>
-    <string name="invalidPhone">Invalid phone</string>
+    <string name="invalidPhone">رقم هاتف خاطئ</string>
     <string name="fieldRequired">هذا الحقل مطلوب</string>
     <string name="next">التالى</string>
     <string name="slider_title1">أفتح التطبيق لطلب الخدمة</string>
@@ -58,7 +58,7 @@
     <string name="client_warning">عفوا لايمكن اتمام العملية, الدعوى لابد من وجود عميل واحد على الاقل</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="profile_edit">تعديل حسابى</string>
-    <string name="terms">الشروط و الأحكام</string>
+    <string name="terms"><u>الشروط و الأحكام</u></string>
     <string name="rate">قيم التطبيق</string>
     <string name="about"> عن التطبيق</string>
     <string name="password_hint_confirm">تأكيد كلمة المرور الجديدة</string>
@@ -200,7 +200,7 @@
     <string name="expire_package_title">تاريخ التجديد</string>
     <string name="my_package_info">معلومات باقتك</string>
     <string name="my_package_renew">يمكنك التجديد بالاختيار الباقة المفضلة اليك</string>
-    <string name="invite_code">كود الدعوة</string>
+    <string name="invite_code">كود الدعوة (اختيارى)</string>
     <string name="renew_package_dialog">يمكنك تجديد الاشتراك عن طريق نقاطك او الدفع الالكترونى</string>
     <string name="online">الدفع الالكترونى</string>
     <string name="invite">دعوة</string>
@@ -226,4 +226,11 @@
     <string name="add_service">إضافة خدمة</string>
     <string name="edit_service">تعديل الخدمة</string>
     <string name="customer_support">الدعم الفنى</string>
+    <string name="privacy"><font fgcolor='#BC293E'> | </font><u> سياسة الخصوصية و الإستخدام</u>  </string>
+    <string name="image_card_hint">من فضلك ادخل صورة الكارنية</string>
+    <string name="image_required">يرجى اختيار الصورة الشخصية</string>
+    <string name="memberShipImage">يرجى اختيار صورة الكارنية</string>
+    <string name="agree_to_terms">الموافقه على</string>
+    <string name="terms_warning">يرجى الموافقه على الشروط والاحكام</string>
+
 </resources>

@@ -35,15 +35,15 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     @Nullable
     private final android.view.View.OnClickListener mCallback39;
     @Nullable
-    private final android.view.View.OnClickListener mCallback37;
+    private final android.view.View.OnClickListener mCallback45;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback43;
     @Nullable
     private final android.view.View.OnClickListener mCallback42;
     @Nullable
     private final android.view.View.OnClickListener mCallback40;
     @Nullable
-    private final android.view.View.OnClickListener mCallback38;
-    @Nullable
-    private final android.view.View.OnClickListener mCallback36;
+    private final android.view.View.OnClickListener mCallback44;
     @Nullable
     private final android.view.View.OnClickListener mCallback41;
     // values
@@ -91,13 +91,13 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
         this.tvUsername.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback37 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
-        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback38 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback36 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback39 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback45 = new te.app.evidence.generated.callback.OnClickListener(this, 7);
+        mCallback43 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback42 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback40 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback44 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback41 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
         invalidateAll();
     }
 
@@ -202,13 +202,13 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.cardLocations.setOnClickListener(mCallback40);
-            this.cardOffice.setOnClickListener(mCallback36);
-            this.cardServices.setOnClickListener(mCallback38);
-            this.fbLocations.setOnClickListener(mCallback41);
-            this.fbOffice.setOnClickListener(mCallback37);
-            this.fbServices.setOnClickListener(mCallback39);
-            this.mboundView10.setOnClickListener(mCallback42);
+            this.cardLocations.setOnClickListener(mCallback43);
+            this.cardOffice.setOnClickListener(mCallback39);
+            this.cardServices.setOnClickListener(mCallback41);
+            this.fbLocations.setOnClickListener(mCallback44);
+            this.fbOffice.setOnClickListener(mCallback40);
+            this.fbServices.setOnClickListener(mCallback42);
+            this.mboundView10.setOnClickListener(mCallback45);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
@@ -222,26 +222,7 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 4: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.buttonAction(te.app.evidence.utils.Constants.SERVICES);
-                }
-                break;
-            }
-            case 2: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -298,7 +279,7 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
                 }
                 break;
             }
-            case 3: {
+            case 4: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -317,7 +298,7 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
                 }
                 break;
             }
-            case 1: {
+            case 2: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -352,6 +333,25 @@ public class FragmentMainHomeBindingImpl extends FragmentMainHomeBinding impleme
 
 
                     viewmodel.buttonAction(te.app.evidence.utils.Constants.LOCATIONS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.home.viewModels.HomeViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.buttonAction(te.app.evidence.utils.Constants.SERVICES);
                 }
                 break;
             }

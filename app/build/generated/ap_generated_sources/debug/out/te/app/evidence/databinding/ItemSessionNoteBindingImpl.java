@@ -26,11 +26,11 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback62;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback60;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback61;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -63,9 +63,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         this.statusValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback62 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback60 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback61 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -218,9 +218,9 @@ public class ItemSessionNoteBindingImpl extends ItemSessionNoteBinding implement
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback58);
-            this.edit.setOnClickListener(mCallback59);
-            this.statusValue.setOnClickListener(mCallback57);
+            this.delete.setOnClickListener(mCallback61);
+            this.edit.setOnClickListener(mCallback62);
+            this.statusValue.setOnClickListener(mCallback60);
         }
         if ((dirtyFlags & 0x5L) != 0) {
             // api target 1

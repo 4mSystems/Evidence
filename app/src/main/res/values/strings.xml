@@ -200,7 +200,7 @@
     <string name="expire_package_title">تاريخ التجديد</string>
     <string name="my_package_info">معلومات باقتك</string>
     <string name="my_package_renew">يمكنك التجديد بالاختيار الباقة المفضلة اليك</string>
-    <string name="invite_code">كود الدعوة</string>
+    <string name="invite_code">كود الدعوة (اختيارى)</string>
     <string name="renew_package_dialog">يمكنك تجديد الاشتراك عن طريق نقاطك او الدفع الالكترونى</string>
     <string name="online">الدفع الالكترونى</string>
     <string name="invite">دعوة</string>
@@ -226,5 +226,11 @@
     <string name="add_service">إضافة خدمة</string>
     <string name="edit_service">تعديل الخدمة</string>
     <string name="customer_support">الدعم الفنى</string>
+    <string name="privacy"><font fgcolor='#BC293E'>| </font>Privacy Policy and Usage</string>
+    <string name="image_card_hint">من فضلك ادخل صورة الكارنية</string>
+    <string name="image_required">يرجى اختيار الصورة الشخصية</string>
+    <string name="memberShipImage">يرجى اختيار صورة الكارنية</string>
+    <string name="agree_to_terms">الموافقه على الشروط والاحكام</string>
+    <string name="terms_warning">يرجى الموافقه على الشروط والاحكام</string>
 
 </resources>

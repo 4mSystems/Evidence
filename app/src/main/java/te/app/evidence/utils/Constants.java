@@ -25,6 +25,7 @@ public class Constants {
 
 
     public final static String IMAGE = "image";
+    public final static String IMAGE_MEMBERSHIP = "card_image";
     public final static String DELETE_CLIENT = "DELETE_CLIENT";
     public final static String CLIENT_PROFILE = "CLIENT_PROFILE";
     public final static String ADD_NOTE = "ADD_NOTE";
@@ -133,6 +134,7 @@ public class Constants {
 
     public static final String CHANGE_PASSWORD = "forget-password";
     public static final String PASSWORD = "password";
+    public static final String PHONE_VALID = "PHONE_VALID";
     public static final String REMOVE_DIALOG = "REMOVE_DIALOG";
     public static final int ONLINE = 0;
     public static final int FROM_POINTS = 1;
@@ -152,6 +154,8 @@ public class Constants {
     public static final String SERVICE_ID = "service_id";
     public static final String SERVICE_TYPE = "service";
     public static final String SUPPORT = "SUPPORT";
+    public static final String PRIVACY = "PRIVACY";
+    public static final String TERMS = "TERMS";
     public static final int WEB_VIEW_REQUEST = 10000;
 }
 

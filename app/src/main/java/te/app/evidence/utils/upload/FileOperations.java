@@ -318,7 +318,7 @@ public class FileOperations {
                         } else {
                             intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                         }
-                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), Constants.FILE_TYPE_IMAGE, context);
+                        LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_image_from)), requestCode, context);
                     }).show();
         } else {
             ActivityCompat.requestPermissions(fragment.getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.CAMERA}, 1007);
