@@ -140,6 +140,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_attachment.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_home_main.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/item_home_main.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_onboard.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_onboard.xml"
     },

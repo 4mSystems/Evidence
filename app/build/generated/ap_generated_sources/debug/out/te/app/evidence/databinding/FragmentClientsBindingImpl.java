@@ -24,9 +24,9 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView6;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback130;
+    private final android.view.View.OnClickListener mCallback126;
     @Nullable
-    private final android.view.View.OnClickListener mCallback131;
+    private final android.view.View.OnClickListener mCallback125;
     // values
     // listeners
     private OnTextChangedImpl mViewmodelOnTextChangedAndroidxDatabindingAdaptersTextViewBindingAdapterOnTextChanged;
@@ -91,8 +91,8 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         this.search.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback130 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback131 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback126 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback125 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -280,8 +280,8 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView6.setOnClickListener(mCallback131);
-            this.search.setOnClickListener(mCallback130);
+            this.mboundView6.setOnClickListener(mCallback126);
+            this.search.setOnClickListener(mCallback125);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1
@@ -304,6 +304,23 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.clients.viewModels.ClientsViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.toNewClient();
+                }
+                break;
+            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -320,23 +337,6 @@ public class FragmentClientsBindingImpl extends FragmentClientsBinding implement
 
 
                     viewmodel.search(1, true);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.clients.viewModels.ClientsViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.toNewClient();
                 }
                 break;
             }

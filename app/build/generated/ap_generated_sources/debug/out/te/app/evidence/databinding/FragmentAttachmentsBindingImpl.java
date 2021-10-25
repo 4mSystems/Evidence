@@ -25,7 +25,7 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
     private final com.google.android.material.floatingactionbutton.FloatingActionButton mboundView4;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback93;
+    private final android.view.View.OnClickListener mCallback88;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,7 +49,7 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
         this.rcAttachments.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback93 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -213,7 +213,7 @@ public class FragmentAttachmentsBindingImpl extends FragmentAttachmentsBinding i
         if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
-            this.mboundView4.setOnClickListener(mCallback93);
+            this.mboundView4.setOnClickListener(mCallback88);
         }
         if ((dirtyFlags & 0xbL) != 0) {
             // api target 1

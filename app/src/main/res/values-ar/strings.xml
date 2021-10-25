@@ -232,5 +232,9 @@
     <string name="memberShipImage">يرجى اختيار صورة الكارنية</string>
     <string name="agree_to_terms">الموافقه على</string>
     <string name="terms_warning">يرجى الموافقه على الشروط والاحكام</string>
+    <string name="samples">النماذج</string>
+    <string name="samples_desc">وصف النماذج</string>
+    <string name="more">اخرى</string>
+    <string name="more_desc">عن التطبيق,الشكاوى والمقترحات, سياسة الخصوصية, شروط الاستخدام</string>
 
 </resources>

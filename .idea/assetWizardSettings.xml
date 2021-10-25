@@ -353,7 +353,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/card_membership/baseline_card_membership_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/info/baseline_info_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -365,8 +365,8 @@
                           <map>
                             <entry key="autoMirrored" value="true" />
                             <entry key="color" value="4d4b4b" />
-                            <entry key="outputName" value="ic_card_membership" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/share-location.svg" />
+                            <entry key="outputName" value="ic_info" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/Thalita-Torres-Office-Clipboard.svg" />
                           </map>
                         </option>
                       </PersistentState>

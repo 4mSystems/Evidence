@@ -23,9 +23,9 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback114;
+    private final android.view.View.OnClickListener mCallback110;
     @Nullable
-    private final android.view.View.OnClickListener mCallback115;
+    private final android.view.View.OnClickListener mCallback109;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,8 +49,8 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
         this.sessionCaseNumber.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback114 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback115 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback110 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback109 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -213,8 +213,8 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.btnPrint.setOnClickListener(mCallback114);
-            this.delete.setOnClickListener(mCallback115);
+            this.btnPrint.setOnClickListener(mCallback109);
+            this.delete.setOnClickListener(mCallback110);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -232,23 +232,6 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.download();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -263,6 +246,23 @@ public class ItemAttachmentBindingImpl extends ItemAttachmentBinding implements 
 
 
                     itemViewModel.toDelete();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.download();
                 }
                 break;
             }

@@ -47,77 +47,81 @@ public class BR {
 
   public static final int homeData = 22;
 
-  public static final int homeReportersAdapter = 23;
+  public static final int homeMainAdapter = 23;
 
-  public static final int itemViewModel = 24;
+  public static final int homeReportersAdapter = 24;
 
-  public static final int mainData = 25;
+  public static final int itemViewModel = 25;
 
-  public static final int menuModel = 26;
+  public static final int mainData = 26;
 
-  public static final int menuViewModel = 27;
+  public static final int mainObject = 27;
 
-  public static final int message = 28;
+  public static final int menuModel = 28;
 
-  public static final int notes = 29;
+  public static final int menuViewModel = 29;
 
-  public static final int notesAdapter = 30;
+  public static final int message = 30;
 
-  public static final int onBoardAdapter = 31;
+  public static final int notes = 31;
 
-  public static final int onBoardViewModels = 32;
+  public static final int notesAdapter = 32;
 
-  public static final int packagesAdapter = 33;
+  public static final int onBoardAdapter = 33;
 
-  public static final int passingObject = 34;
+  public static final int onBoardViewModels = 34;
 
-  public static final int placesAdapter = 35;
+  public static final int packagesAdapter = 35;
 
-  public static final int placesData = 36;
+  public static final int passingObject = 36;
 
-  public static final int placesMain = 37;
+  public static final int placesAdapter = 37;
 
-  public static final int placesPaginate = 38;
+  public static final int placesData = 38;
 
-  public static final int prevSessionsAdapter = 39;
+  public static final int placesMain = 39;
 
-  public static final int replacedPoints = 40;
+  public static final int placesPaginate = 40;
 
-  public static final int replacedPointsAdapter = 41;
+  public static final int prevSessionsAdapter = 41;
 
-  public static final int reportersData = 42;
+  public static final int replacedPoints = 42;
 
-  public static final int reportsAdapter = 43;
+  public static final int replacedPointsAdapter = 43;
 
-  public static final int reportsData = 44;
+  public static final int reportersData = 44;
 
-  public static final int reportsMain = 45;
+  public static final int reportsAdapter = 45;
 
-  public static final int request = 46;
+  public static final int reportsData = 46;
 
-  public static final int searchReportRequest = 47;
+  public static final int reportsMain = 47;
 
-  public static final int selectedBtn = 48;
+  public static final int request = 48;
 
-  public static final int serviceData = 49;
+  public static final int searchReportRequest = 49;
 
-  public static final int serviceMainData = 50;
+  public static final int selectedBtn = 50;
 
-  public static final int servicesAdapter = 51;
+  public static final int serviceData = 51;
 
-  public static final int sessionItem = 52;
+  public static final int serviceMainData = 52;
 
-  public static final int sessionsAdapter = 53;
+  public static final int servicesAdapter = 53;
 
-  public static final int systemUserData = 54;
+  public static final int sessionItem = 54;
 
-  public static final int type = 55;
+  public static final int sessionsAdapter = 55;
 
-  public static final int userPermissionsData = 56;
+  public static final int systemUserData = 56;
 
-  public static final int usersAdapter = 57;
+  public static final int type = 57;
 
-  public static final int usersMainData = 58;
+  public static final int userPermissionsData = 58;
 
-  public static final int viewmodel = 59;
+  public static final int usersAdapter = 59;
+
+  public static final int usersMainData = 60;
+
+  public static final int viewmodel = 61;
 }

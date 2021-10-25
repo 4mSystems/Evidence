@@ -36,32 +36,8 @@ public class MainHomeFragment extends BaseFragment {
         IApplicationComponent component = ((MyApplication) requireActivity().getApplicationContext()).getApplicationComponent();
         component.inject(this);
         binding.setViewmodel(viewModel);
+        viewModel.setupHomeMainAdapter();
         baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setVisibility(View.GONE);
-        setEvent();
         return binding.getRoot();
-    }
-
-    private void setEvent() {
-        viewModel.liveData.observe(requireActivity(), o -> {
-            handleActions(o);
-            if (Constants.HOME.equals(o.message)) {
-                MovementHelper.startActivityMain(requireActivity());
-            } else if (Constants.SERVICES.equals(o.message)) {
-                MovementHelper.startActivity(requireActivity(), ServicesFragment.class.getName(), ResourceManager.getString(R.string.services), null);
-            } else if (Constants.LOCATIONS.equals(o.message)) {
-                MovementHelper.startActivity(requireActivity(), PlacesFragment.class.getName(), ResourceManager.getString(R.string.location), null);
-            } else if (Constants.PREV_SESSIONS.equals(o.message)) {
-                viewModel.setPreSessionMainData(((CaseSessionsResponse) o.object).getSessionMainData());
-            } else if (Constants.SUPPORT.equals(o.message)) {
-                MovementHelper.startWebActivityForResultWithBundle(requireActivity(), URLS.SUPPORT, getString(R.string.customer_support));
-            }
-        });
-
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        viewModel.getHomeRepository().setLiveData(viewModel.liveData);
     }
 }

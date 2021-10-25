@@ -2,14 +2,12 @@ package te.app.evidence.base;
 
 import android.graphics.Color;
 import android.text.TextUtils;
-import android.view.View;
+import android.util.Log;
 import android.widget.ImageView;
-
 import androidx.databinding.BindingAdapter;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.Picasso;
-
 import te.app.evidence.R;
 import te.app.evidence.utils.helper.AppHelper;
 import te.app.evidence.utils.images.PhotoFullPopupWindow;
@@ -30,7 +28,14 @@ public class ApplicationBinding {
             Picasso.get().load((String) image).placeholder(R.drawable.splash).into(imageView);
         }
     }
- @BindingAdapter("imageShowUrl")
+
+    @BindingAdapter("imageResourceUrl")
+    public static void loadResourceImage(ImageView imageView, int image) {
+        Log.e("loadResourceImage", "loadResourceImage: "+image );
+        Glide.with(imageView.getContext()).load(image).into(imageView);
+    }
+
+    @BindingAdapter("imageShowUrl")
     public static void loadMShowImage(ImageView imageView, Object image) {
         if (image instanceof String && !TextUtils.isEmpty((String) image)) {
             Picasso.get().load((String) image).placeholder(R.drawable.splash).into(imageView);

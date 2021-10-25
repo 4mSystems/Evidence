@@ -73,6 +73,7 @@ import te.app.evidence.databinding.ItemClientSearchBindingImpl;
 import te.app.evidence.databinding.ItemClientTagsBindingImpl;
 import te.app.evidence.databinding.ItemClientsBindingImpl;
 import te.app.evidence.databinding.ItemGovernBindingImpl;
+import te.app.evidence.databinding.ItemHomeMainBindingImpl;
 import te.app.evidence.databinding.ItemHomeReporterBindingImpl;
 import te.app.evidence.databinding.ItemNoteBindingImpl;
 import te.app.evidence.databinding.ItemPackageBindingImpl;
@@ -206,37 +207,39 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_ITEMGOVERN = 58;
 
-  private static final int LAYOUT_ITEMHOMEREPORTER = 59;
+  private static final int LAYOUT_ITEMHOMEMAIN = 59;
 
-  private static final int LAYOUT_ITEMNOTE = 60;
+  private static final int LAYOUT_ITEMHOMEREPORTER = 60;
 
-  private static final int LAYOUT_ITEMPACKAGE = 61;
+  private static final int LAYOUT_ITEMNOTE = 61;
 
-  private static final int LAYOUT_ITEMPLACE = 62;
+  private static final int LAYOUT_ITEMPACKAGE = 62;
 
-  private static final int LAYOUT_ITEMREPLACEDPOINTS = 63;
+  private static final int LAYOUT_ITEMPLACE = 63;
 
-  private static final int LAYOUT_ITEMREPORT = 64;
+  private static final int LAYOUT_ITEMREPLACEDPOINTS = 64;
 
-  private static final int LAYOUT_ITEMSERVICE = 65;
+  private static final int LAYOUT_ITEMREPORT = 65;
 
-  private static final int LAYOUT_ITEMSESSION = 66;
+  private static final int LAYOUT_ITEMSERVICE = 66;
 
-  private static final int LAYOUT_ITEMSESSIONNOTE = 67;
+  private static final int LAYOUT_ITEMSESSION = 67;
 
-  private static final int LAYOUT_ITEMUSER = 68;
+  private static final int LAYOUT_ITEMSESSIONNOTE = 68;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 69;
+  private static final int LAYOUT_ITEMUSER = 69;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 70;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 70;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 71;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 71;
 
-  private static final int LAYOUT_OPTIONDIALOG = 72;
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 72;
 
-  private static final int LAYOUT_PACKAGERENEWDIALOG = 73;
+  private static final int LAYOUT_OPTIONDIALOG = 73;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(73);
+  private static final int LAYOUT_PACKAGERENEWDIALOG = 74;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(74);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -297,6 +300,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_client_tags, LAYOUT_ITEMCLIENTTAGS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_govern, LAYOUT_ITEMGOVERN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_main, LAYOUT_ITEMHOMEMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_reporter, LAYOUT_ITEMHOMEREPORTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_note, LAYOUT_ITEMNOTE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_package, LAYOUT_ITEMPACKAGE);
@@ -672,6 +676,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_govern is invalid. Received: " + tag);
       }
+      case  LAYOUT_ITEMHOMEMAIN: {
+        if ("layout/item_home_main_0".equals(tag)) {
+          return new ItemHomeMainBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_home_main is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMHOMEREPORTER: {
         if ("layout/item_home_reporter_0".equals(tag)) {
           return new ItemHomeReporterBindingImpl(component, view);
@@ -828,7 +838,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(60);
+    static final SparseArray<String> sKeys = new SparseArray<String>(62);
 
     static {
       sKeys.put(0, "_all");
@@ -854,48 +864,50 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(20, "governAdapter");
       sKeys.put(21, "governmentData");
       sKeys.put(22, "homeData");
-      sKeys.put(23, "homeReportersAdapter");
-      sKeys.put(24, "itemViewModel");
-      sKeys.put(25, "mainData");
-      sKeys.put(26, "menuModel");
-      sKeys.put(27, "menuViewModel");
-      sKeys.put(28, "message");
-      sKeys.put(29, "notes");
-      sKeys.put(30, "notesAdapter");
-      sKeys.put(31, "onBoardAdapter");
-      sKeys.put(32, "onBoardViewModels");
-      sKeys.put(33, "packagesAdapter");
-      sKeys.put(34, "passingObject");
-      sKeys.put(35, "placesAdapter");
-      sKeys.put(36, "placesData");
-      sKeys.put(37, "placesMain");
-      sKeys.put(38, "placesPaginate");
-      sKeys.put(39, "prevSessionsAdapter");
-      sKeys.put(40, "replacedPoints");
-      sKeys.put(41, "replacedPointsAdapter");
-      sKeys.put(42, "reportersData");
-      sKeys.put(43, "reportsAdapter");
-      sKeys.put(44, "reportsData");
-      sKeys.put(45, "reportsMain");
-      sKeys.put(46, "request");
-      sKeys.put(47, "searchReportRequest");
-      sKeys.put(48, "selectedBtn");
-      sKeys.put(49, "serviceData");
-      sKeys.put(50, "serviceMainData");
-      sKeys.put(51, "servicesAdapter");
-      sKeys.put(52, "sessionItem");
-      sKeys.put(53, "sessionsAdapter");
-      sKeys.put(54, "systemUserData");
-      sKeys.put(55, "type");
-      sKeys.put(56, "userPermissionsData");
-      sKeys.put(57, "usersAdapter");
-      sKeys.put(58, "usersMainData");
-      sKeys.put(59, "viewmodel");
+      sKeys.put(23, "homeMainAdapter");
+      sKeys.put(24, "homeReportersAdapter");
+      sKeys.put(25, "itemViewModel");
+      sKeys.put(26, "mainData");
+      sKeys.put(27, "mainObject");
+      sKeys.put(28, "menuModel");
+      sKeys.put(29, "menuViewModel");
+      sKeys.put(30, "message");
+      sKeys.put(31, "notes");
+      sKeys.put(32, "notesAdapter");
+      sKeys.put(33, "onBoardAdapter");
+      sKeys.put(34, "onBoardViewModels");
+      sKeys.put(35, "packagesAdapter");
+      sKeys.put(36, "passingObject");
+      sKeys.put(37, "placesAdapter");
+      sKeys.put(38, "placesData");
+      sKeys.put(39, "placesMain");
+      sKeys.put(40, "placesPaginate");
+      sKeys.put(41, "prevSessionsAdapter");
+      sKeys.put(42, "replacedPoints");
+      sKeys.put(43, "replacedPointsAdapter");
+      sKeys.put(44, "reportersData");
+      sKeys.put(45, "reportsAdapter");
+      sKeys.put(46, "reportsData");
+      sKeys.put(47, "reportsMain");
+      sKeys.put(48, "request");
+      sKeys.put(49, "searchReportRequest");
+      sKeys.put(50, "selectedBtn");
+      sKeys.put(51, "serviceData");
+      sKeys.put(52, "serviceMainData");
+      sKeys.put(53, "servicesAdapter");
+      sKeys.put(54, "sessionItem");
+      sKeys.put(55, "sessionsAdapter");
+      sKeys.put(56, "systemUserData");
+      sKeys.put(57, "type");
+      sKeys.put(58, "userPermissionsData");
+      sKeys.put(59, "usersAdapter");
+      sKeys.put(60, "usersMainData");
+      sKeys.put(61, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(73);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(74);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -956,6 +968,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_client_tags_0", te.app.evidence.R.layout.item_client_tags);
       sKeys.put("layout/item_clients_0", te.app.evidence.R.layout.item_clients);
       sKeys.put("layout/item_govern_0", te.app.evidence.R.layout.item_govern);
+      sKeys.put("layout/item_home_main_0", te.app.evidence.R.layout.item_home_main);
       sKeys.put("layout/item_home_reporter_0", te.app.evidence.R.layout.item_home_reporter);
       sKeys.put("layout/item_note_0", te.app.evidence.R.layout.item_note);
       sKeys.put("layout/item_package_0", te.app.evidence.R.layout.item_package);

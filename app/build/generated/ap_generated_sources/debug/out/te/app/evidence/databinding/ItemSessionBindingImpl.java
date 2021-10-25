@@ -25,13 +25,13 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback89;
+    private final android.view.View.OnClickListener mCallback84;
     @Nullable
-    private final android.view.View.OnClickListener mCallback87;
+    private final android.view.View.OnClickListener mCallback82;
     @Nullable
-    private final android.view.View.OnClickListener mCallback86;
+    private final android.view.View.OnClickListener mCallback83;
     @Nullable
-    private final android.view.View.OnClickListener mCallback88;
+    private final android.view.View.OnClickListener mCallback81;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -73,10 +73,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         this.viewValue.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback89 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback87 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback86 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback88 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback84 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback82 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback83 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback81 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -292,10 +292,10 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback87);
-            this.edit.setOnClickListener(mCallback88);
-            this.statusValue.setOnClickListener(mCallback86);
-            this.viewValue.setOnClickListener(mCallback89);
+            this.delete.setOnClickListener(mCallback82);
+            this.edit.setOnClickListener(mCallback83);
+            this.statusValue.setOnClickListener(mCallback81);
+            this.viewValue.setOnClickListener(mCallback84);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1
@@ -359,25 +359,6 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
                 }
                 break;
             }
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
-                }
-                break;
-            }
             case 3: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -394,6 +375,25 @@ public class ItemSessionBindingImpl extends ItemSessionBinding implements te.app
 
 
                     itemViewModel.buttonAction(te.app.evidence.utils.Constants.EDIT);
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.home.viewModels.SessionItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.buttonAction(te.app.evidence.utils.Constants.CHANGE_STATUS);
                 }
                 break;
             }

@@ -7,7 +7,9 @@ import androidx.lifecycle.MutableLiveData;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -18,10 +20,15 @@ import te.app.evidence.BR;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseViewModel;
 import te.app.evidence.model.base.Mutable;
+import te.app.evidence.pages.home.HomeFragment;
+import te.app.evidence.pages.home.adapters.HomeMainAdapter;
 import te.app.evidence.pages.home.adapters.HomeReportersAdapter;
 import te.app.evidence.pages.home.adapters.SessionsAdapter;
 import te.app.evidence.pages.home.models.HomeData;
+import te.app.evidence.pages.home.models.HomeMainObject;
 import te.app.evidence.pages.mohdrs.models.ReportersMainData;
+import te.app.evidence.pages.places.PlacesFragment;
+import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.sessions.models.SessionMainData;
 import te.app.evidence.repository.HomeRepository;
 import te.app.evidence.utils.Constants;
@@ -41,6 +48,7 @@ public class HomeViewModel extends BaseViewModel {
     ReportersMainData reportersMainData;
     public ObservableBoolean warningDate = new ObservableBoolean();
     public ObservableField<String> packageRemainDays = new ObservableField<>();
+    HomeMainAdapter homeMainAdapter;
 
     @Inject
     public HomeViewModel(HomeRepository homeRepository) {
@@ -145,6 +153,17 @@ public class HomeViewModel extends BaseViewModel {
         this.reportersMainData = reportersMainData;
     }
 
+    public void setupHomeMainAdapter() {
+        List<HomeMainObject> mainObjects = new ArrayList<>();
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.office), ResourceManager.getString(R.string.office_desc), R.drawable.logo, HomeFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.services), ResourceManager.getString(R.string.services_desc), R.drawable.ic_marketing, ServicesFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.location), ResourceManager.getString(R.string.locations_desc), R.drawable.ic_estate_location, PlacesFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.samples), ResourceManager.getString(R.string.samples_desc), R.drawable.ic_samples, PlacesFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.more), ResourceManager.getString(R.string.more_desc), R.drawable.ic_info, PlacesFragment.class.getName()));
+        getHomeMainAdapter().update(mainObjects);
+        notifyChange(BR.homeMainAdapter);
+    }
+
     @Bindable
     public SessionsAdapter getComingSessionsAdapter() {
         return this.comingSessionsAdapter == null ? this.comingSessionsAdapter = new SessionsAdapter() : this.comingSessionsAdapter;
@@ -158,6 +177,11 @@ public class HomeViewModel extends BaseViewModel {
     @Bindable
     public HomeReportersAdapter getHomeReportersAdapter() {
         return this.homeReportersAdapter == null ? this.homeReportersAdapter = new HomeReportersAdapter() : this.homeReportersAdapter;
+    }
+
+    @Bindable
+    public HomeMainAdapter getHomeMainAdapter() {
+        return this.homeMainAdapter == null ? this.homeMainAdapter = new HomeMainAdapter() : this.homeMainAdapter;
     }
 
     public void nextSessions() {

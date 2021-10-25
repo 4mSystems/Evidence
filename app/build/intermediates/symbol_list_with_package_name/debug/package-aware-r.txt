@@ -2057,6 +2057,7 @@ drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_estate_location
 drawable ic_home
+drawable ic_info
 drawable ic_info_outline_white_24dp
 drawable ic_invite_code
 drawable ic_keyboard_black_24dp
@@ -2083,6 +2084,7 @@ drawable ic_renew
 drawable ic_report_search
 drawable ic_reports
 drawable ic_resource_package
+drawable ic_samples
 drawable ic_search
 drawable ic_session_notes
 drawable ic_share_location
@@ -2285,9 +2287,7 @@ id cache_measures
 id call
 id cancel_action
 id cancel_button
-id card_locations
 id card_office
-id card_services
 id card_wallet_info
 id carryVelocity
 id cat_name
@@ -2403,9 +2403,7 @@ id expanded_menu
 id fade
 id fast_out_linear_in
 id fast_out_slow_in
-id fb_locations
 id fb_office
-id fb_services
 id file
 id fill
 id fill_horizontal
@@ -2458,10 +2456,8 @@ id horizontal
 id horizontal_only
 id ib_close
 id ic_business_report
-id ic_court_services
 id ic_image
 id ic_img
-id ic_locations
 id ic_main_img
 id ic_more
 id ic_office
@@ -2869,7 +2865,6 @@ id tv_home_bar_text
 id tv_invetationNum
 id tv_invetationNum_text
 id tv_khesm
-id tv_locations
 id tv_login_forget
 id tv_login_header_number
 id tv_login_title
@@ -2886,7 +2881,6 @@ id tv_please_turn_on
 id tv_point_warning1
 id tv_points
 id tv_points_amount
-id tv_service
 id tv_title
 id tv_upload
 id tv_user_login
@@ -3109,6 +3103,7 @@ layout item_client_tags
 layout item_clients
 layout item_drop_category
 layout item_govern
+layout item_home_main
 layout item_home_reporter
 layout item_note
 layout item_package
@@ -3434,6 +3429,8 @@ string mobile_data
 string month
 string monthly_file_name
 string monthly_reports
+string more
+string more_desc
 string msg_server_error
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
@@ -3530,6 +3527,8 @@ string report_warning
 string reporter_details
 string reporter_status_done
 string reporter_status_wait
+string samples
+string samples_desc
 string save
 string save_password
 string search

@@ -6,13 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.helper.widget.Flow;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
@@ -23,37 +20,10 @@ import te.app.evidence.pages.home.viewModels.HomeViewModel;
 
 public abstract class FragmentMainHomeBinding extends ViewDataBinding {
   @NonNull
-  public final CardView cardLocations;
-
-  @NonNull
-  public final CardView cardOffice;
-
-  @NonNull
-  public final CardView cardServices;
-
-  @NonNull
-  public final FloatingActionButton fbLocations;
-
-  @NonNull
-  public final FloatingActionButton fbOffice;
-
-  @NonNull
-  public final FloatingActionButton fbServices;
-
-  @NonNull
   public final Flow flow3;
 
   @NonNull
-  public final AppCompatImageView icCourtServices;
-
-  @NonNull
-  public final AppCompatImageView icLocations;
-
-  @NonNull
   public final CircleImageView icMainImg;
-
-  @NonNull
-  public final AppCompatImageView icOffice;
 
   @NonNull
   public final CircleImageView icUserImg;
@@ -63,15 +33,6 @@ public abstract class FragmentMainHomeBinding extends ViewDataBinding {
 
   @NonNull
   public final CustomTextViewMedium tPointsValue;
-
-  @NonNull
-  public final CustomTextViewMedium tvLocations;
-
-  @NonNull
-  public final CustomTextViewMedium tvOffice;
-
-  @NonNull
-  public final CustomTextViewMedium tvService;
 
   @NonNull
   public final CustomTextViewMedium tvUsername;
@@ -86,32 +47,15 @@ public abstract class FragmentMainHomeBinding extends ViewDataBinding {
   protected HomeViewModel mViewmodel;
 
   protected FragmentMainHomeBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      CardView cardLocations, CardView cardOffice, CardView cardServices,
-      FloatingActionButton fbLocations, FloatingActionButton fbOffice,
-      FloatingActionButton fbServices, Flow flow3, AppCompatImageView icCourtServices,
-      AppCompatImageView icLocations, CircleImageView icMainImg, AppCompatImageView icOffice,
-      CircleImageView icUserImg, CustomTextViewRegular tPoints, CustomTextViewMedium tPointsValue,
-      CustomTextViewMedium tvLocations, CustomTextViewMedium tvOffice,
-      CustomTextViewMedium tvService, CustomTextViewMedium tvUsername, View view,
-      CustomTextViewRegular welcome) {
+      Flow flow3, CircleImageView icMainImg, CircleImageView icUserImg,
+      CustomTextViewRegular tPoints, CustomTextViewMedium tPointsValue,
+      CustomTextViewMedium tvUsername, View view, CustomTextViewRegular welcome) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.cardLocations = cardLocations;
-    this.cardOffice = cardOffice;
-    this.cardServices = cardServices;
-    this.fbLocations = fbLocations;
-    this.fbOffice = fbOffice;
-    this.fbServices = fbServices;
     this.flow3 = flow3;
-    this.icCourtServices = icCourtServices;
-    this.icLocations = icLocations;
     this.icMainImg = icMainImg;
-    this.icOffice = icOffice;
     this.icUserImg = icUserImg;
     this.tPoints = tPoints;
     this.tPointsValue = tPointsValue;
-    this.tvLocations = tvLocations;
-    this.tvOffice = tvOffice;
-    this.tvService = tvService;
     this.tvUsername = tvUsername;
     this.view = view;
     this.welcome = welcome;

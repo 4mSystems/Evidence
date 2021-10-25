@@ -20,11 +20,11 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback59;
+    private final android.view.View.OnClickListener mCallback52;
     @Nullable
-    private final android.view.View.OnClickListener mCallback57;
+    private final android.view.View.OnClickListener mCallback54;
     @Nullable
-    private final android.view.View.OnClickListener mCallback58;
+    private final android.view.View.OnClickListener mCallback53;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -49,9 +49,9 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
         this.userName.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback59 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback57 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback58 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback52 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback54 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback53 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -207,34 +207,15 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icPlace.setOnClickListener(mCallback57);
-            this.icShare.setOnClickListener(mCallback59);
-            this.tvMap.setOnClickListener(mCallback58);
+            this.icPlace.setOnClickListener(mCallback52);
+            this.icShare.setOnClickListener(mCallback54);
+            this.tvMap.setOnClickListener(mCallback53);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 3: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.places.viewModels.ItemPlacesViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-
-
-                    itemViewModel.itemAction(te.app.evidence.utils.Constants.SHARE_BAR);
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -251,6 +232,25 @@ public class ItemPlaceBindingImpl extends ItemPlaceBinding implements te.app.evi
 
 
                     itemViewModel.itemAction(te.app.evidence.utils.Constants.LOCATIONS);
+                }
+                break;
+            }
+            case 3: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.places.viewModels.ItemPlacesViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+
+
+                    itemViewModel.itemAction(te.app.evidence.utils.Constants.SHARE_BAR);
                 }
                 break;
             }
