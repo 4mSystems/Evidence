@@ -4,23 +4,30 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.MutableLiveData;
 import androidx.recyclerview.widget.RecyclerView;
+
 import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import te.app.evidence.R;
 import te.app.evidence.databinding.ItemHomeMainBinding;
 import te.app.evidence.pages.home.HomeFragment;
 import te.app.evidence.pages.home.models.HomeMainObject;
 import te.app.evidence.pages.home.viewModels.ItemMainObjectViewModel;
 import te.app.evidence.utils.helper.MovementHelper;
+import te.app.evidence.utils.resources.ResourceManager;
 
 public class HomeMainAdapter extends RecyclerView.Adapter<HomeMainAdapter.ViewHolder> {
     List<HomeMainObject> mainObjectList;
     Context context;
+    public MutableLiveData<Object> liveData = new MutableLiveData<>();
 
     public HomeMainAdapter() {
         this.mainObjectList = new ArrayList<>();
@@ -43,6 +50,8 @@ public class HomeMainAdapter extends RecyclerView.Adapter<HomeMainAdapter.ViewHo
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) MovementHelper.unwrap(context), o -> {
             if (dataModel.getFragment().equals(HomeFragment.class.getName()))
                 MovementHelper.startActivityMain(context);
+            else if (dataModel.getFragment().equals(ResourceManager.getString(R.string.more)))
+                liveData.setValue(new Object());
             else
                 MovementHelper.startActivity(context, dataModel.getFragment(), dataModel.getText(), null);
         });

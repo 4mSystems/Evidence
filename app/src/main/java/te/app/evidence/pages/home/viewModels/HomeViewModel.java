@@ -159,7 +159,7 @@ public class HomeViewModel extends BaseViewModel {
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.services), ResourceManager.getString(R.string.services_desc), R.drawable.ic_marketing, ServicesFragment.class.getName()));
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.location), ResourceManager.getString(R.string.locations_desc), R.drawable.ic_estate_location, PlacesFragment.class.getName()));
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.samples), ResourceManager.getString(R.string.samples_desc), R.drawable.ic_samples, PlacesFragment.class.getName()));
-        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.more), ResourceManager.getString(R.string.more_desc), R.drawable.ic_info, PlacesFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.more), ResourceManager.getString(R.string.more_desc), R.drawable.ic_info,ResourceManager.getString(R.string.more)));
         getHomeMainAdapter().update(mainObjects);
         notifyChange(BR.homeMainAdapter);
     }

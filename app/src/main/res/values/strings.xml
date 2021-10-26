@@ -236,5 +236,8 @@
     <string name="samples_desc">وصف النماذج</string>
     <string name="more">اخرى</string>
     <string name="more_desc">عن التطبيق,الشكاوى والمقترحات, سياسة الخصوصية, شروط الاستخدام</string>
+    <string name="terms_settings">الشروط و الأحكام</string>
+    <string name="privacy_settings">سياسة الخصوصية و الإستخدام</string>
+    <string name="share">مشاركة التطبيق</string>
 
 </resources>

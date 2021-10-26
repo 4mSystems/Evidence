@@ -157,5 +157,7 @@ public class Constants {
     public static final String PRIVACY = "PRIVACY";
     public static final String TERMS = "TERMS";
     public static final int WEB_VIEW_REQUEST = 10000;
+    public static final String ABOUT = "ABOUT";
+    public static final String RATE = "RATE";
 }
 

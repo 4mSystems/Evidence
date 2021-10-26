@@ -20,9 +20,9 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback128;
+    private final android.view.View.OnClickListener mCallback135;
     @Nullable
-    private final android.view.View.OnClickListener mCallback127;
+    private final android.view.View.OnClickListener mCallback134;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -43,8 +43,8 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback128 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback127 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback135 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback134 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -147,8 +147,8 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback127);
-            this.edit.setOnClickListener(mCallback128);
+            this.delete.setOnClickListener(mCallback134);
+            this.edit.setOnClickListener(mCallback135);
         }
     }
     // Listener Stub Implementations

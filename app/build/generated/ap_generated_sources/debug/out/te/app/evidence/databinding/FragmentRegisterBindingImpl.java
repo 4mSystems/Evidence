@@ -45,17 +45,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     private final com.google.android.material.textfield.TextInputEditText mboundView9;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback113;
+    private final android.view.View.OnClickListener mCallback124;
     @Nullable
-    private final android.view.View.OnClickListener mCallback118;
+    private final android.view.View.OnClickListener mCallback125;
     @Nullable
-    private final android.view.View.OnClickListener mCallback116;
+    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback122;
     @Nullable
-    private final android.view.View.OnClickListener mCallback117;
+    private final android.view.View.OnClickListener mCallback123;
     @Nullable
-    private final android.view.View.OnClickListener mCallback114;
+    private final android.view.View.OnClickListener mCallback120;
     @Nullable
-    private final android.widget.CompoundButton.OnCheckedChangeListener mCallback115;
+    private final android.view.View.OnClickListener mCallback121;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -452,12 +452,12 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         this.progress.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback113 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback118 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
-        mCallback116 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
-        mCallback117 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
-        mCallback114 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback115 = new te.app.evidence.generated.callback.OnCheckedChangeListener(this, 3);
+        mCallback124 = new te.app.evidence.generated.callback.OnClickListener(this, 5);
+        mCallback125 = new te.app.evidence.generated.callback.OnClickListener(this, 6);
+        mCallback122 = new te.app.evidence.generated.callback.OnCheckedChangeListener(this, 3);
+        mCallback123 = new te.app.evidence.generated.callback.OnClickListener(this, 4);
+        mCallback120 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback121 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -1040,17 +1040,17 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
         if ((dirtyFlags & 0x800L) != 0) {
             // api target 1
 
-            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback115, (androidx.databinding.InverseBindingListener)null);
-            this.inputMember.setOnClickListener(mCallback114);
+            androidx.databinding.adapters.CompoundButtonBindingAdapter.setListeners(this.checkbox, mCallback122, (androidx.databinding.InverseBindingListener)null);
+            this.inputMember.setOnClickListener(mCallback121);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.inputMember, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, inputMemberandroidTextAttrChanged);
-            this.login.setOnClickListener(mCallback118);
-            this.mboundView1.setOnClickListener(mCallback113);
+            this.login.setOnClickListener(mCallback125);
+            this.mboundView1.setOnClickListener(mCallback120);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView11, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView11androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView15, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView15androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView17, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView17androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView18, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView18androidTextAttrChanged);
-            this.mboundView20.setOnClickListener(mCallback116);
-            this.mboundView21.setOnClickListener(mCallback117);
+            this.mboundView20.setOnClickListener(mCallback123);
+            this.mboundView21.setOnClickListener(mCallback124);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView3, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView3androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView5, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView5androidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.mboundView7, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, mboundView7androidTextAttrChanged);
@@ -1129,7 +1129,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
+            case 5: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1144,7 +1144,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
 
-                    viewmodel.imageSubmit(te.app.evidence.utils.Constants.IMAGE);
+                    viewmodel.imageSubmit(te.app.evidence.utils.Constants.PRIVACY);
                 }
                 break;
             }
@@ -1184,7 +1184,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
                 }
                 break;
             }
-            case 5: {
+            case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
                 boolean viewmodelJavaLangObjectNull = false;
@@ -1199,7 +1199,7 @@ public class FragmentRegisterBindingImpl extends FragmentRegisterBinding impleme
 
 
 
-                    viewmodel.imageSubmit(te.app.evidence.utils.Constants.PRIVACY);
+                    viewmodel.imageSubmit(te.app.evidence.utils.Constants.IMAGE);
                 }
                 break;
             }

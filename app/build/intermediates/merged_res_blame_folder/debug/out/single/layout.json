@@ -116,6 +116,10 @@
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/download_dialog.xml"
     },
     {
+        "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/settings_bottom_sheet.xml",
+        "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/settings_bottom_sheet.xml"
+    },
+    {
         "merged": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_add_case.xml",
         "source": "/home/elnagar/Android projects/Evidence/app/src/main/res/layout/fragment_add_case.xml"
     },

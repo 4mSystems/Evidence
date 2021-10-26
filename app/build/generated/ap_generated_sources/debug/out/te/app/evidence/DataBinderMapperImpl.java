@@ -89,6 +89,7 @@ import te.app.evidence.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.evidence.databinding.LayoutNavigationDrawerBindingImpl;
 import te.app.evidence.databinding.OptionDialogBindingImpl;
 import te.app.evidence.databinding.PackageRenewDialogBindingImpl;
+import te.app.evidence.databinding.SettingsBottomSheetBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
@@ -239,7 +240,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_PACKAGERENEWDIALOG = 74;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(74);
+  private static final int LAYOUT_SETTINGSBOTTOMSHEET = 75;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(75);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -316,6 +319,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_navigation_drawer, LAYOUT_LAYOUTNAVIGATIONDRAWER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.option_dialog, LAYOUT_OPTIONDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.package_renew_dialog, LAYOUT_PACKAGERENEWDIALOG);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.settings_bottom_sheet, LAYOUT_SETTINGSBOTTOMSHEET);
   }
 
   private final ViewDataBinding internalGetViewDataBinding0(DataBindingComponent component,
@@ -772,6 +776,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for package_renew_dialog is invalid. Received: " + tag);
       }
+      case  LAYOUT_SETTINGSBOTTOMSHEET: {
+        if ("layout/settings_bottom_sheet_0".equals(tag)) {
+          return new SettingsBottomSheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for settings_bottom_sheet is invalid. Received: " + tag);
+      }
     }
     return null;
   }
@@ -907,7 +917,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(74);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(75);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -984,6 +994,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_navigation_drawer_0", te.app.evidence.R.layout.layout_navigation_drawer);
       sKeys.put("layout/option_dialog_0", te.app.evidence.R.layout.option_dialog);
       sKeys.put("layout/package_renew_dialog_0", te.app.evidence.R.layout.package_renew_dialog);
+      sKeys.put("layout/settings_bottom_sheet_0", te.app.evidence.R.layout.settings_bottom_sheet);
     }
   }
 }

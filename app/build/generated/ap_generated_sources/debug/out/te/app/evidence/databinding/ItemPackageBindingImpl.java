@@ -24,7 +24,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements te.app
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView2;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback150;
+    private final android.view.View.OnClickListener mCallback157;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -51,7 +51,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements te.app
         this.tvPackagePoints.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback150 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback157 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -176,7 +176,7 @@ public class ItemPackageBindingImpl extends ItemPackageBinding implements te.app
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnSubscribe.setOnClickListener(mCallback150);
+            this.btnSubscribe.setOnClickListener(mCallback157);
         }
         if ((dirtyFlags & 0x3L) != 0) {
             // api target 1
