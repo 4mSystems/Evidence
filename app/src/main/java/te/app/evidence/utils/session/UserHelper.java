@@ -2,13 +2,15 @@ package te.app.evidence.utils.session;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.google.gson.Gson;
+
 import te.app.evidence.pages.auth.models.UserMainData;
 
 public class UserHelper {
-     static UserHelper mInstance;
-     Context mCtx;
+    static UserHelper mInstance;
+    Context mCtx;
     private static final String SHARED_PREF_NAME = "myshared";
 
     private UserHelper(Context context) {
@@ -69,7 +71,7 @@ public class UserHelper {
 
     public String getToken() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("token", null);
+        return sharedPreferences.getString("token", "");
     }
 
     public void logOut() {

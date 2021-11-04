@@ -6,12 +6,15 @@ import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.Window;
 import android.widget.RelativeLayout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.MutableLiveData;
 
 import java.util.Objects;
@@ -39,6 +42,7 @@ import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
 import te.app.evidence.utils.resources.ResourceManager;
 import te.app.evidence.utils.session.LanguagesHelper;
+import te.app.evidence.utils.session.UserHelper;
 
 
 @SuppressLint("ViewConstructor")
@@ -108,7 +112,28 @@ public class NavigationDrawerView extends RelativeLayout {
             }
             layoutNavigationDrawerBinding.dlMainNavigationMenu.closeDrawer(GravityCompat.START);
         });
+        layoutNavigationDrawerBinding.dlMainNavigationMenu.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
 
+            }
+
+            @Override
+            public void onDrawerOpened(@NonNull View drawerView) {
+                menuViewModel.userData = UserHelper.getInstance(context).getUserData();
+                menuViewModel.notifyChange();
+            }
+
+            @Override
+            public void onDrawerClosed(@NonNull View drawerView) {
+
+            }
+
+            @Override
+            public void onDrawerStateChanged(int newState) {
+
+            }
+        });
     }
 
     public void exitDialog(String text) {

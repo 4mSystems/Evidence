@@ -4,13 +4,13 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c6673cf69fbb1de8499d90a612cac3/jetified-Oops-No-Internet-v1.1.2/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c6673cf69fbb1de8499d90a612cac3/jetified-Oops-No-Internet-v1.1.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/18c6673cf69fbb1de8499d90a612cac3/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/res" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/a16412928e91db9ea50b57265c6151a6/transformed/jetified-Oops-No-Internet-v1.1.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ImaginativeShohag/Oops-No-Internet/v1.1.2/fca7f6a1b993ce47a140a48169ab696d6c3b1e1b/Oops-No-Internet-v1.1.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/com.github.ImaginativeShohag/Oops-No-Internet/v1.1.2/fca7f6a1b993ce47a140a48169ab696d6c3b1e1b/Oops-No-Internet-v1.1.2-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

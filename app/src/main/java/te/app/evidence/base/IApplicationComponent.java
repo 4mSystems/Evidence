@@ -36,6 +36,7 @@ import te.app.evidence.pages.clients.notes.AddNoteFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;
 import te.app.evidence.pages.points.PointsFragment;
 import te.app.evidence.pages.profile.ProfileFragment;
+import te.app.evidence.pages.publicFiles.PublicFilesFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
 import te.app.evidence.pages.services.AddServiceFragment;
@@ -145,6 +146,8 @@ public interface IApplicationComponent {
     void inject(AddServiceFragment addServiceFragment);
 
     void inject(MainHomeFragment mainHomeFragment);
+
+    void inject(PublicFilesFragment publicFilesFragment);
 
     @Component.Builder
     interface Builder {

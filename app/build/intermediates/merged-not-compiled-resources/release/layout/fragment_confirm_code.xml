@@ -96,7 +96,7 @@
                 android:itemBackground="@color/black"
                 android:padding="8dp"
                 android:tag="binding_2"                  
-                android:textColor="@color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:cursorColor="#8A98A3"

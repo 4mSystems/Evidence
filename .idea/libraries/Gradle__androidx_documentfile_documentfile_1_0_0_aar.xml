@@ -11,12 +11,13 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/44f0f7057ea9abc58b32c5f0b35be613/documentfile-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/25dc67a3a169b22ce3e2b006496e3147/transformed/documentfile-1.0.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/4b267d7f2967f86d5ee14ee839c09df8/transformed/documentfile-1.0.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/a1bed5cf96db96bd06a2feade98fe55653811dc8/documentfile-1.0.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/androidx.documentfile/documentfile/1.0.0/a1bed5cf96db96bd06a2feade98fe55653811dc8/documentfile-1.0.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

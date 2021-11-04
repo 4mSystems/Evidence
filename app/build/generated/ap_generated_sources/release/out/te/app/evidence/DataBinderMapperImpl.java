@@ -53,6 +53,7 @@ import te.app.evidence.databinding.FragmentPackagesBindingImpl;
 import te.app.evidence.databinding.FragmentPlacesBindingImpl;
 import te.app.evidence.databinding.FragmentPointsBindingImpl;
 import te.app.evidence.databinding.FragmentProfileBindingImpl;
+import te.app.evidence.databinding.FragmentPublicFilesBindingImpl;
 import te.app.evidence.databinding.FragmentRegisterBindingImpl;
 import te.app.evidence.databinding.FragmentReporterDetailsBindingImpl;
 import te.app.evidence.databinding.FragmentSearchClientsBindingImpl;
@@ -73,10 +74,12 @@ import te.app.evidence.databinding.ItemClientSearchBindingImpl;
 import te.app.evidence.databinding.ItemClientTagsBindingImpl;
 import te.app.evidence.databinding.ItemClientsBindingImpl;
 import te.app.evidence.databinding.ItemGovernBindingImpl;
+import te.app.evidence.databinding.ItemHomeMainBindingImpl;
 import te.app.evidence.databinding.ItemHomeReporterBindingImpl;
 import te.app.evidence.databinding.ItemNoteBindingImpl;
 import te.app.evidence.databinding.ItemPackageBindingImpl;
 import te.app.evidence.databinding.ItemPlaceBindingImpl;
+import te.app.evidence.databinding.ItemPublicFileBindingImpl;
 import te.app.evidence.databinding.ItemReplacedPointsBindingImpl;
 import te.app.evidence.databinding.ItemReportBindingImpl;
 import te.app.evidence.databinding.ItemServiceBindingImpl;
@@ -86,8 +89,10 @@ import te.app.evidence.databinding.ItemUserBindingImpl;
 import te.app.evidence.databinding.LayoutActionBarBackBindingImpl;
 import te.app.evidence.databinding.LayoutActionBarHomeBindingImpl;
 import te.app.evidence.databinding.LayoutNavigationDrawerBindingImpl;
+import te.app.evidence.databinding.LayoutTesBindingImpl;
 import te.app.evidence.databinding.OptionDialogBindingImpl;
 import te.app.evidence.databinding.PackageRenewDialogBindingImpl;
+import te.app.evidence.databinding.SettingsBottomSheetBindingImpl;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
   private static final int LAYOUT_ACTIVITYBASE = 1;
@@ -166,77 +171,87 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTPROFILE = 38;
 
-  private static final int LAYOUT_FRAGMENTREGISTER = 39;
+  private static final int LAYOUT_FRAGMENTPUBLICFILES = 39;
 
-  private static final int LAYOUT_FRAGMENTREPORTERDETAILS = 40;
+  private static final int LAYOUT_FRAGMENTREGISTER = 40;
 
-  private static final int LAYOUT_FRAGMENTSEARCHCLIENTS = 41;
+  private static final int LAYOUT_FRAGMENTREPORTERDETAILS = 41;
 
-  private static final int LAYOUT_FRAGMENTSERVICEDETAILS = 42;
+  private static final int LAYOUT_FRAGMENTSEARCHCLIENTS = 42;
 
-  private static final int LAYOUT_FRAGMENTSERVICES = 43;
+  private static final int LAYOUT_FRAGMENTSERVICEDETAILS = 43;
 
-  private static final int LAYOUT_FRAGMENTSESSIONNOTES = 44;
+  private static final int LAYOUT_FRAGMENTSERVICES = 44;
 
-  private static final int LAYOUT_FRAGMENTSESSIONS = 45;
+  private static final int LAYOUT_FRAGMENTSESSIONNOTES = 45;
 
-  private static final int LAYOUT_FRAGMENTSPLASH = 46;
+  private static final int LAYOUT_FRAGMENTSESSIONS = 46;
 
-  private static final int LAYOUT_FRAGMENTUSERPERMISSION = 47;
+  private static final int LAYOUT_FRAGMENTSPLASH = 47;
 
-  private static final int LAYOUT_FRAGMENTUSERS = 48;
+  private static final int LAYOUT_FRAGMENTUSERPERMISSION = 48;
 
-  private static final int LAYOUT_GOVERNDIALOG = 49;
+  private static final int LAYOUT_FRAGMENTUSERS = 49;
 
-  private static final int LAYOUT_ITEMALLCASE = 50;
+  private static final int LAYOUT_GOVERNDIALOG = 50;
 
-  private static final int LAYOUT_ITEMATTACHMENT = 51;
+  private static final int LAYOUT_ITEMALLCASE = 51;
 
-  private static final int LAYOUT_ITEMBAILIFFS = 52;
+  private static final int LAYOUT_ITEMATTACHMENT = 52;
 
-  private static final int LAYOUT_ITEMCASE = 53;
+  private static final int LAYOUT_ITEMBAILIFFS = 53;
 
-  private static final int LAYOUT_ITEMCATEGORY = 54;
+  private static final int LAYOUT_ITEMCASE = 54;
 
-  private static final int LAYOUT_ITEMCLIENTSEARCH = 55;
+  private static final int LAYOUT_ITEMCATEGORY = 55;
 
-  private static final int LAYOUT_ITEMCLIENTTAGS = 56;
+  private static final int LAYOUT_ITEMCLIENTSEARCH = 56;
 
-  private static final int LAYOUT_ITEMCLIENTS = 57;
+  private static final int LAYOUT_ITEMCLIENTTAGS = 57;
 
-  private static final int LAYOUT_ITEMGOVERN = 58;
+  private static final int LAYOUT_ITEMCLIENTS = 58;
 
-  private static final int LAYOUT_ITEMHOMEREPORTER = 59;
+  private static final int LAYOUT_ITEMGOVERN = 59;
 
-  private static final int LAYOUT_ITEMNOTE = 60;
+  private static final int LAYOUT_ITEMHOMEMAIN = 60;
 
-  private static final int LAYOUT_ITEMPACKAGE = 61;
+  private static final int LAYOUT_ITEMHOMEREPORTER = 61;
 
-  private static final int LAYOUT_ITEMPLACE = 62;
+  private static final int LAYOUT_ITEMNOTE = 62;
 
-  private static final int LAYOUT_ITEMREPLACEDPOINTS = 63;
+  private static final int LAYOUT_ITEMPACKAGE = 63;
 
-  private static final int LAYOUT_ITEMREPORT = 64;
+  private static final int LAYOUT_ITEMPLACE = 64;
 
-  private static final int LAYOUT_ITEMSERVICE = 65;
+  private static final int LAYOUT_ITEMPUBLICFILE = 65;
 
-  private static final int LAYOUT_ITEMSESSION = 66;
+  private static final int LAYOUT_ITEMREPLACEDPOINTS = 66;
 
-  private static final int LAYOUT_ITEMSESSIONNOTE = 67;
+  private static final int LAYOUT_ITEMREPORT = 67;
 
-  private static final int LAYOUT_ITEMUSER = 68;
+  private static final int LAYOUT_ITEMSERVICE = 68;
 
-  private static final int LAYOUT_LAYOUTACTIONBARBACK = 69;
+  private static final int LAYOUT_ITEMSESSION = 69;
 
-  private static final int LAYOUT_LAYOUTACTIONBARHOME = 70;
+  private static final int LAYOUT_ITEMSESSIONNOTE = 70;
 
-  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 71;
+  private static final int LAYOUT_ITEMUSER = 71;
 
-  private static final int LAYOUT_OPTIONDIALOG = 72;
+  private static final int LAYOUT_LAYOUTACTIONBARBACK = 72;
 
-  private static final int LAYOUT_PACKAGERENEWDIALOG = 73;
+  private static final int LAYOUT_LAYOUTACTIONBARHOME = 73;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(73);
+  private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER = 74;
+
+  private static final int LAYOUT_LAYOUTTES = 75;
+
+  private static final int LAYOUT_OPTIONDIALOG = 76;
+
+  private static final int LAYOUT_PACKAGERENEWDIALOG = 77;
+
+  private static final int LAYOUT_SETTINGSBOTTOMSHEET = 78;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(78);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.activity_base, LAYOUT_ACTIVITYBASE);
@@ -277,6 +292,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_places, LAYOUT_FRAGMENTPLACES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_points, LAYOUT_FRAGMENTPOINTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_public_files, LAYOUT_FRAGMENTPUBLICFILES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_register, LAYOUT_FRAGMENTREGISTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_reporter_details, LAYOUT_FRAGMENTREPORTERDETAILS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.fragment_search_clients, LAYOUT_FRAGMENTSEARCHCLIENTS);
@@ -297,10 +313,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_client_tags, LAYOUT_ITEMCLIENTTAGS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_clients, LAYOUT_ITEMCLIENTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_govern, LAYOUT_ITEMGOVERN);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_main, LAYOUT_ITEMHOMEMAIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_home_reporter, LAYOUT_ITEMHOMEREPORTER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_note, LAYOUT_ITEMNOTE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_package, LAYOUT_ITEMPACKAGE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_place, LAYOUT_ITEMPLACE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_public_file, LAYOUT_ITEMPUBLICFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_replaced_points, LAYOUT_ITEMREPLACEDPOINTS);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_report, LAYOUT_ITEMREPORT);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.item_service, LAYOUT_ITEMSERVICE);
@@ -310,8 +328,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_action_bar_back, LAYOUT_LAYOUTACTIONBARBACK);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_action_bar_home, LAYOUT_LAYOUTACTIONBARHOME);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_navigation_drawer, LAYOUT_LAYOUTNAVIGATIONDRAWER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.layout_tes, LAYOUT_LAYOUTTES);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.option_dialog, LAYOUT_OPTIONDIALOG);
     INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.package_renew_dialog, LAYOUT_PACKAGERENEWDIALOG);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(te.app.evidence.R.layout.settings_bottom_sheet, LAYOUT_SETTINGSBOTTOMSHEET);
   }
 
   private final ViewDataBinding internalGetViewDataBinding0(DataBindingComponent component,
@@ -545,6 +565,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for fragment_profile is invalid. Received: " + tag);
       }
+      case  LAYOUT_FRAGMENTPUBLICFILES: {
+        if ("layout/fragment_public_files_0".equals(tag)) {
+          return new FragmentPublicFilesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for fragment_public_files is invalid. Received: " + tag);
+      }
       case  LAYOUT_FRAGMENTREGISTER: {
         if ("layout/fragment_register_0".equals(tag)) {
           return new FragmentRegisterBindingImpl(component, view);
@@ -611,12 +637,6 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for govern_dialog is invalid. Received: " + tag);
       }
-      case  LAYOUT_ITEMALLCASE: {
-        if ("layout/item_all_case_0".equals(tag)) {
-          return new ItemAllCaseBindingImpl(component, view);
-        }
-        throw new IllegalArgumentException("The tag for item_all_case is invalid. Received: " + tag);
-      }
     }
     return null;
   }
@@ -624,6 +644,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   private final ViewDataBinding internalGetViewDataBinding1(DataBindingComponent component,
       View view, int internalId, Object tag) {
     switch(internalId) {
+      case  LAYOUT_ITEMALLCASE: {
+        if ("layout/item_all_case_0".equals(tag)) {
+          return new ItemAllCaseBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_all_case is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMATTACHMENT: {
         if ("layout/item_attachment_0".equals(tag)) {
           return new ItemAttachmentBindingImpl(component, view);
@@ -672,6 +698,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for item_govern is invalid. Received: " + tag);
       }
+      case  LAYOUT_ITEMHOMEMAIN: {
+        if ("layout/item_home_main_0".equals(tag)) {
+          return new ItemHomeMainBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_home_main is invalid. Received: " + tag);
+      }
       case  LAYOUT_ITEMHOMEREPORTER: {
         if ("layout/item_home_reporter_0".equals(tag)) {
           return new ItemHomeReporterBindingImpl(component, view);
@@ -695,6 +727,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new ItemPlaceBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for item_place is invalid. Received: " + tag);
+      }
+      case  LAYOUT_ITEMPUBLICFILE: {
+        if ("layout/item_public_file_0".equals(tag)) {
+          return new ItemPublicFileBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for item_public_file is invalid. Received: " + tag);
       }
       case  LAYOUT_ITEMREPLACEDPOINTS: {
         if ("layout/item_replaced_points_0".equals(tag)) {
@@ -750,6 +788,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         }
         throw new IllegalArgumentException("The tag for layout_navigation_drawer is invalid. Received: " + tag);
       }
+      case  LAYOUT_LAYOUTTES: {
+        if ("layout/layout_tes_0".equals(tag)) {
+          return new LayoutTesBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for layout_tes is invalid. Received: " + tag);
+      }
       case  LAYOUT_OPTIONDIALOG: {
         if ("layout/option_dialog_0".equals(tag)) {
           return new OptionDialogBindingImpl(component, view);
@@ -761,6 +805,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           return new PackageRenewDialogBindingImpl(component, view);
         }
         throw new IllegalArgumentException("The tag for package_renew_dialog is invalid. Received: " + tag);
+      }
+      case  LAYOUT_SETTINGSBOTTOMSHEET: {
+        if ("layout/settings_bottom_sheet_0".equals(tag)) {
+          return new SettingsBottomSheetBindingImpl(component, view);
+        }
+        throw new IllegalArgumentException("The tag for settings_bottom_sheet is invalid. Received: " + tag);
       }
     }
     return null;
@@ -828,7 +878,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerBrLookup {
-    static final SparseArray<String> sKeys = new SparseArray<String>(60);
+    static final SparseArray<String> sKeys = new SparseArray<String>(65);
 
     static {
       sKeys.put(0, "_all");
@@ -851,51 +901,56 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put(17, "clientsMainData");
       sKeys.put(18, "comingSessionsAdapter");
       sKeys.put(19, "contactUsRequest");
-      sKeys.put(20, "governAdapter");
-      sKeys.put(21, "governmentData");
-      sKeys.put(22, "homeData");
-      sKeys.put(23, "homeReportersAdapter");
-      sKeys.put(24, "itemViewModel");
-      sKeys.put(25, "mainData");
-      sKeys.put(26, "menuModel");
-      sKeys.put(27, "menuViewModel");
-      sKeys.put(28, "message");
-      sKeys.put(29, "notes");
-      sKeys.put(30, "notesAdapter");
-      sKeys.put(31, "onBoardAdapter");
-      sKeys.put(32, "onBoardViewModels");
-      sKeys.put(33, "packagesAdapter");
-      sKeys.put(34, "passingObject");
-      sKeys.put(35, "placesAdapter");
-      sKeys.put(36, "placesData");
-      sKeys.put(37, "placesMain");
-      sKeys.put(38, "placesPaginate");
-      sKeys.put(39, "prevSessionsAdapter");
-      sKeys.put(40, "replacedPoints");
-      sKeys.put(41, "replacedPointsAdapter");
-      sKeys.put(42, "reportersData");
-      sKeys.put(43, "reportsAdapter");
-      sKeys.put(44, "reportsData");
-      sKeys.put(45, "reportsMain");
-      sKeys.put(46, "request");
-      sKeys.put(47, "searchReportRequest");
-      sKeys.put(48, "selectedBtn");
-      sKeys.put(49, "serviceData");
-      sKeys.put(50, "serviceMainData");
-      sKeys.put(51, "servicesAdapter");
-      sKeys.put(52, "sessionItem");
-      sKeys.put(53, "sessionsAdapter");
-      sKeys.put(54, "systemUserData");
-      sKeys.put(55, "type");
-      sKeys.put(56, "userPermissionsData");
-      sKeys.put(57, "usersAdapter");
-      sKeys.put(58, "usersMainData");
-      sKeys.put(59, "viewmodel");
+      sKeys.put(20, "filesAdapter");
+      sKeys.put(21, "governAdapter");
+      sKeys.put(22, "governmentData");
+      sKeys.put(23, "homeData");
+      sKeys.put(24, "homeMainAdapter");
+      sKeys.put(25, "homeReportersAdapter");
+      sKeys.put(26, "itemViewModel");
+      sKeys.put(27, "mainData");
+      sKeys.put(28, "mainObject");
+      sKeys.put(29, "menuModel");
+      sKeys.put(30, "menuViewModel");
+      sKeys.put(31, "message");
+      sKeys.put(32, "notes");
+      sKeys.put(33, "notesAdapter");
+      sKeys.put(34, "onBoardAdapter");
+      sKeys.put(35, "onBoardViewModels");
+      sKeys.put(36, "packagesAdapter");
+      sKeys.put(37, "passingObject");
+      sKeys.put(38, "placesAdapter");
+      sKeys.put(39, "placesData");
+      sKeys.put(40, "placesMain");
+      sKeys.put(41, "placesPaginate");
+      sKeys.put(42, "prevSessionsAdapter");
+      sKeys.put(43, "publicFilesData");
+      sKeys.put(44, "publicFilesMain");
+      sKeys.put(45, "replacedPoints");
+      sKeys.put(46, "replacedPointsAdapter");
+      sKeys.put(47, "reportersData");
+      sKeys.put(48, "reportsAdapter");
+      sKeys.put(49, "reportsData");
+      sKeys.put(50, "reportsMain");
+      sKeys.put(51, "request");
+      sKeys.put(52, "searchReportRequest");
+      sKeys.put(53, "selectedBtn");
+      sKeys.put(54, "serviceData");
+      sKeys.put(55, "serviceMainData");
+      sKeys.put(56, "servicesAdapter");
+      sKeys.put(57, "sessionItem");
+      sKeys.put(58, "sessionsAdapter");
+      sKeys.put(59, "systemUserData");
+      sKeys.put(60, "type");
+      sKeys.put(61, "userPermissionsData");
+      sKeys.put(62, "usersAdapter");
+      sKeys.put(63, "usersMainData");
+      sKeys.put(64, "viewmodel");
     }
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(73);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(78);
 
     static {
       sKeys.put("layout/activity_base_0", te.app.evidence.R.layout.activity_base);
@@ -936,6 +991,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_places_0", te.app.evidence.R.layout.fragment_places);
       sKeys.put("layout/fragment_points_0", te.app.evidence.R.layout.fragment_points);
       sKeys.put("layout/fragment_profile_0", te.app.evidence.R.layout.fragment_profile);
+      sKeys.put("layout/fragment_public_files_0", te.app.evidence.R.layout.fragment_public_files);
       sKeys.put("layout/fragment_register_0", te.app.evidence.R.layout.fragment_register);
       sKeys.put("layout/fragment_reporter_details_0", te.app.evidence.R.layout.fragment_reporter_details);
       sKeys.put("layout/fragment_search_clients_0", te.app.evidence.R.layout.fragment_search_clients);
@@ -956,10 +1012,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/item_client_tags_0", te.app.evidence.R.layout.item_client_tags);
       sKeys.put("layout/item_clients_0", te.app.evidence.R.layout.item_clients);
       sKeys.put("layout/item_govern_0", te.app.evidence.R.layout.item_govern);
+      sKeys.put("layout/item_home_main_0", te.app.evidence.R.layout.item_home_main);
       sKeys.put("layout/item_home_reporter_0", te.app.evidence.R.layout.item_home_reporter);
       sKeys.put("layout/item_note_0", te.app.evidence.R.layout.item_note);
       sKeys.put("layout/item_package_0", te.app.evidence.R.layout.item_package);
       sKeys.put("layout/item_place_0", te.app.evidence.R.layout.item_place);
+      sKeys.put("layout/item_public_file_0", te.app.evidence.R.layout.item_public_file);
       sKeys.put("layout/item_replaced_points_0", te.app.evidence.R.layout.item_replaced_points);
       sKeys.put("layout/item_report_0", te.app.evidence.R.layout.item_report);
       sKeys.put("layout/item_service_0", te.app.evidence.R.layout.item_service);
@@ -969,8 +1027,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/layout_action_bar_back_0", te.app.evidence.R.layout.layout_action_bar_back);
       sKeys.put("layout/layout_action_bar_home_0", te.app.evidence.R.layout.layout_action_bar_home);
       sKeys.put("layout/layout_navigation_drawer_0", te.app.evidence.R.layout.layout_navigation_drawer);
+      sKeys.put("layout/layout_tes_0", te.app.evidence.R.layout.layout_tes);
       sKeys.put("layout/option_dialog_0", te.app.evidence.R.layout.option_dialog);
       sKeys.put("layout/package_renew_dialog_0", te.app.evidence.R.layout.package_renew_dialog);
+      sKeys.put("layout/settings_bottom_sheet_0", te.app.evidence.R.layout.settings_bottom_sheet);
     }
   }
 }

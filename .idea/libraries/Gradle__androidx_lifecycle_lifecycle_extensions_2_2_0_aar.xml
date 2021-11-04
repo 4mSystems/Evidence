@@ -9,13 +9,14 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bc0d1c4d477e1e58dc9283d2a13547e6/lifecycle-extensions-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/77290043613468def68e5e044f03f25c/lifecycle-extensions-2.2.0/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/ec4ae75c191d3d8d35f98fc14f25d346/transformed/lifecycle-extensions-2.2.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/transforms-3/63ecf7ceb33f9c86edc1e3531f674ea7/transformed/lifecycle-extensions-2.2.0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-extensions/2.2.0/32e7a190b796f6853c89f5d6b92b64a6fe8318d3/lifecycle-extensions-2.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/android-studio-2020.3.1.20-linux/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-extensions/2.2.0/32e7a190b796f6853c89f5d6b92b64a6fe8318d3/lifecycle-extensions-2.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

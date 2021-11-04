@@ -159,5 +159,6 @@ public class Constants {
     public static final int WEB_VIEW_REQUEST = 10000;
     public static final String ABOUT = "ABOUT";
     public static final String RATE = "RATE";
+    public static final String PUBLIC_FILES = "PUBLIC_FILES";
 }
 

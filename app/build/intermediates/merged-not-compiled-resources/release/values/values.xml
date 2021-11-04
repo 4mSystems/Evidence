@@ -502,6 +502,10 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <color name="browser_actions_bg_grey">#F5F5F5</color>
+    <color name="browser_actions_divider_color">#1E000000</color>
+    <color name="browser_actions_text_color">#DE000000</color>
+    <color name="browser_actions_title_color">#646464</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cardview_dark_background">#FF424242</color>
@@ -722,6 +726,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
+    <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
+    <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
@@ -1261,6 +1267,7 @@
     <string name="address_hint">ادخل العنوان بشكل صحيح</string>
     <string name="addressed_to">موجهة الى</string>
     <string name="admin">أدمن</string>
+    <string name="agree_to_terms">الموافقه على الشروط والاحكام</string>
     <string name="airplane_mode">Airplane mode</string>
     <string name="app_login_hint">يرجي ادخال البريد الالكتروني و كلمة المرور</string>
     <string name="app_name">توثيق</string>
@@ -1317,6 +1324,7 @@
     <string name="connection_Wifi">Wifi</string>
     <string name="connection_invaild_body">Check your Internet connection and try again</string>
     <string name="connection_invaild_msg">Poor Internet Connection</string>
+    <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="court">المحكمة</string>
     <string name="court_mohdr">المحكمة</string>
     <string name="customer_support">الدعم الفنى</string>
@@ -1361,9 +1369,13 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="fallback_menu_item_copy_link">Copy link</string>
+    <string name="fallback_menu_item_open_in_browser">Open in browser</string>
+    <string name="fallback_menu_item_share_link">Share link</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="fieldRequired">هذا الحقل مطلوب</string>
     <string name="file">الملف</string>
+    <string name="file_search_hint">اكتب ما يدور فى بالك</string>
     <string name="forget_body">برجاء إدخال البريد الإلكتروني لإستعادة كلمة المرور</string>
     <string name="forget_header">نسيت كلمة المرور؟</string>
     <string name="forget_remember">تذكرت كلمة المرور</string>
@@ -1378,12 +1390,14 @@
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="home_search_hint">ابحث</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
+    <string name="image_card_hint">من فضلك ادخل صورة الكارنية</string>
+    <string name="image_required">يرجى اختيار الصورة الشخصية</string>
     <string name="invalidEmail">بريد إلكتروني غير صالح ، Evidence@example.com</string>
     <string name="invalidPassword">كلمة المرور ضعيفة ، على الأقل 8 أحرف مع أرقام وأحرف</string>
     <string name="invalidPhone">Invalid phone</string>
     <string name="inventation_type">نوع الدعوى</string>
     <string name="invite">دعوة</string>
-    <string name="invite_code">كود الدعوة</string>
+    <string name="invite_code">كود الدعوة (اختيارى)</string>
     <string name="invite_friend">قم بالتسجيل عن طريق الكود الخاص لتربح نقاط مجانية</string>
     <string name="item_view_role_description">Tab</string>
     <string name="khesm">خصم</string>
@@ -1421,6 +1435,7 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="memberShipImage">يرجى اختيار صورة الكارنية</string>
     <string name="menuCases">الدعاوي</string>
     <string name="menuCat">التصنيفات</string>
     <string name="menuClients">العملاء</string>
@@ -1433,6 +1448,8 @@
     <string name="month">الشهر</string>
     <string name="monthly_file_name">تقرير شهر " "</string>
     <string name="monthly_reports">التقارير الشهرية</string>
+    <string name="more">اخرى</string>
+    <string name="more_desc">عن التطبيق,الشكاوى والمقترحات, سياسة الخصوصية, شروط الاستخدام</string>
     <string name="msg_server_error">حدث خطأ ما يرجى المحاوله فى وقت اخر</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string description="Content description for a close icon that lets the user remove content from the screen" name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
@@ -1512,6 +1529,8 @@
     <string name="points_btn">استبدال نقاطي</string>
     <string name="previousSessions">الجلسات الفائتة</string>
     <string name="print">طباعة</string>
+    <string name="privacy"><font fgcolor="#BC293E">| </font>Privacy Policy and Usage</string>
+    <string name="privacy_settings">سياسة الخصوصية و الإستخدام</string>
     <string name="profile_change_password">تغيير كلمة المرور</string>
     <string name="profile_edit">تعديل حسابى</string>
     <string name="project_id" translatable="false">evidence-45abd</string>
@@ -1528,6 +1547,8 @@
     <string name="reporter_details">تفاصيل المحضر</string>
     <string name="reporter_status_done">تم التنفيذ</string>
     <string name="reporter_status_wait">قيد الانتظار</string>
+    <string name="samples">النماذج</string>
+    <string name="samples_desc">وصف النماذج</string>
     <string name="save">حفظ</string>
     <string name="save_password">حفظ كلمة المرور</string>
     <string name="search">رؤية النتائج</string>
@@ -1549,6 +1570,7 @@
     <string name="session_search_hint">ابحث بتاريخ الجلسة</string>
     <string name="sessions">الجلسات</string>
     <string name="settings">Settings</string>
+    <string name="share">مشاركة التطبيق</string>
     <string name="slider_desc1">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت</string>
     <string name="slider_desc2">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت</string>
     <string name="slider_desc3">لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع النصوص بالتصاميم سواء كانت تصاميم مطبوعه … بروشور او فلاير على سبيل المثال … او نماذج مواقع انترنت</string>
@@ -1561,6 +1583,8 @@
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="subscribe">اشتراك</string>
     <string name="terms">الشروط و الأحكام</string>
+    <string name="terms_settings">الشروط و الأحكام</string>
+    <string name="terms_warning">يرجى الموافقه على الشروط والاحكام</string>
     <string name="toast_message">Toast message</string>
     <string name="tv_account_contact">الشكاوى والمقترحات</string>
     <string name="user">مستخدم</string>
@@ -1590,6 +1614,12 @@
     <item name="android:windowEnterAnimation">@anim/mtrl_bottom_sheet_slide_in</item>
     <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
   </style>
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+    </style>
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="android:windowDisablePreview">true</item>

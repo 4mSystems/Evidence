@@ -20,11 +20,11 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback146;
+    private final android.view.View.OnClickListener mCallback156;
     @Nullable
-    private final android.view.View.OnClickListener mCallback144;
+    private final android.view.View.OnClickListener mCallback154;
     @Nullable
-    private final android.view.View.OnClickListener mCallback145;
+    private final android.view.View.OnClickListener mCallback155;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -55,9 +55,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         this.tvKhesm.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback146 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback144 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback145 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback156 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback154 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback155 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -358,9 +358,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback146);
-            this.inputClients.setOnClickListener(mCallback144);
-            this.inputKhesm.setOnClickListener(mCallback145);
+            this.btnSave.setOnClickListener(mCallback156);
+            this.inputClients.setOnClickListener(mCallback154);
+            this.inputKhesm.setOnClickListener(mCallback155);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1

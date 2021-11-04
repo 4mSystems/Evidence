@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 android {
+    signingConfigs {
+        release {
+            storeFile file('/home/elnagar/Android projects/GrandKey (2)')
+            storePassword 'grand2017'
+            keyAlias 'grand'
+            keyPassword 'grand2017'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
@@ -22,10 +30,11 @@ android {
             minifyEnabled false
         }
         release {
-            debuggable false
+            debuggable true
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {

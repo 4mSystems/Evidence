@@ -19,12 +19,14 @@ import java.util.Map;
 import te.app.evidence.R;
 import te.app.evidence.activity.BaseActivity;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.session.UserHelper;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onNewToken(@NotNull String s) {
         super.onNewToken(s);
+        UserHelper.getInstance(MyApplication.getInstance()).addToken(s);
     }
 
     @Override

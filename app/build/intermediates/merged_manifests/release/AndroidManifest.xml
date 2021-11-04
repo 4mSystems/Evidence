@@ -28,6 +28,7 @@
         android:name="te.app.evidence.base.MyApplication"
         android:allowBackup="false"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
         android:extractNativeLibs="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"

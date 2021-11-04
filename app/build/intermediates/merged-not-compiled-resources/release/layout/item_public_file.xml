@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                       
+                                                  
+                                                                  
+
+    
+
+                 
+                                
+                                                                                     
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp6h"
+        app:cardCornerRadius="@dimen/dp6h"
+        app:cardElevation="4dp" android:tag="layout/item_public_file_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" tools:context="grand.app.moon.views.fragments.SplashFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:tag="binding_1"                             
+                android:textAlignment="viewStart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ic_download"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp10h"
+                android:src="@drawable/ic_download"
+                android:tag="binding_2"                        
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+         

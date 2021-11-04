@@ -20,9 +20,9 @@ public class FragmentPlacesBindingImpl extends FragmentPlacesBinding implements 
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback27;
+    private final android.view.View.OnClickListener mCallback29;
     @Nullable
-    private final android.view.View.OnClickListener mCallback26;
+    private final android.view.View.OnClickListener mCallback30;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -47,8 +47,8 @@ public class FragmentPlacesBindingImpl extends FragmentPlacesBinding implements 
         this.searchType.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback27 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
-        mCallback26 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback29 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback30 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
         invalidateAll();
     }
 
@@ -244,8 +244,8 @@ public class FragmentPlacesBindingImpl extends FragmentPlacesBinding implements 
         if ((dirtyFlags & 0x10L) != 0) {
             // api target 1
 
-            this.searchInput.setOnClickListener(mCallback26);
-            this.searchType.setOnClickListener(mCallback27);
+            this.searchInput.setOnClickListener(mCallback29);
+            this.searchType.setOnClickListener(mCallback30);
         }
         if ((dirtyFlags & 0x16L) != 0) {
             // api target 1
@@ -257,23 +257,6 @@ public class FragmentPlacesBindingImpl extends FragmentPlacesBinding implements 
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.places.viewModels.PlacesViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-                    viewmodel.showSearchType();
-                }
-                break;
-            }
             case 1: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -288,6 +271,23 @@ public class FragmentPlacesBindingImpl extends FragmentPlacesBinding implements 
 
 
                     viewmodel.showGovs();
+                }
+                break;
+            }
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.places.viewModels.PlacesViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+                    viewmodel.showSearchType();
                 }
                 break;
             }

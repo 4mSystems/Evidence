@@ -11,10 +11,19 @@
             type="te.app.evidence.pages.splash.SplashViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/splash">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="@dimen/dp50w"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/tes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </RelativeLayout>
 </layout>

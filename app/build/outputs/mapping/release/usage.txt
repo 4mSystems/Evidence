@@ -1,3 +1,23 @@
+android.support.customtabs.ICustomTabsCallback$Default
+android.support.customtabs.ICustomTabsCallback$Stub$Proxy
+android.support.customtabs.ICustomTabsCallback$Stub
+android.support.customtabs.ICustomTabsCallback
+android.support.customtabs.ICustomTabsService$Default
+android.support.customtabs.ICustomTabsService$Stub$Proxy
+android.support.customtabs.ICustomTabsService$Stub
+android.support.customtabs.ICustomTabsService
+android.support.customtabs.IPostMessageService$Default
+android.support.customtabs.IPostMessageService$Stub$Proxy
+android.support.customtabs.IPostMessageService$Stub
+android.support.customtabs.IPostMessageService
+android.support.customtabs.trusted.ITrustedWebActivityCallback$Default
+android.support.customtabs.trusted.ITrustedWebActivityCallback$Stub$Proxy
+android.support.customtabs.trusted.ITrustedWebActivityCallback$Stub
+android.support.customtabs.trusted.ITrustedWebActivityCallback
+android.support.customtabs.trusted.ITrustedWebActivityService$Default
+android.support.customtabs.trusted.ITrustedWebActivityService$Stub$Proxy
+android.support.customtabs.trusted.ITrustedWebActivityService$Stub
+android.support.customtabs.trusted.ITrustedWebActivityService
 android.support.v4.app.INotificationSideChannel$Default
 android.support.v4.app.INotificationSideChannel$Stub$Proxy
 android.support.v4.app.INotificationSideChannel$Stub
@@ -3154,6 +3174,209 @@ androidx.asynclayoutinflater.view.AsyncLayoutInflater$InflateRequest
 androidx.asynclayoutinflater.view.AsyncLayoutInflater$InflateThread
 androidx.asynclayoutinflater.view.AsyncLayoutInflater$OnInflateFinishedListener
 androidx.asynclayoutinflater.view.AsyncLayoutInflater
+androidx.browser.R$attr
+androidx.browser.R$color
+androidx.browser.R$dimen:
+    public static final int compat_button_inset_horizontal_material
+    public static final int compat_button_inset_vertical_material
+    public static final int compat_button_padding_horizontal_material
+    public static final int compat_button_padding_vertical_material
+    public static final int compat_control_corner_material
+    public static final int compat_notification_large_icon_max_height
+    public static final int compat_notification_large_icon_max_width
+    public static final int notification_action_icon_size
+    public static final int notification_action_text_size
+    public static final int notification_big_circle_margin
+    public static final int notification_content_margin_start
+    public static final int notification_large_icon_height
+    public static final int notification_large_icon_width
+    public static final int notification_main_column_padding_top
+    public static final int notification_media_narrow_margin
+    public static final int notification_right_icon_size
+    public static final int notification_right_side_padding_top
+    public static final int notification_small_icon_background_padding
+    public static final int notification_small_icon_size_as_large
+    public static final int notification_subtext_size
+    public static final int notification_top_pad
+    public static final int notification_top_pad_large_text
+    private void <init>()
+androidx.browser.R$drawable
+androidx.browser.R$id
+androidx.browser.R$integer
+androidx.browser.R$layout
+androidx.browser.R$string
+androidx.browser.R$style
+androidx.browser.R$styleable
+androidx.browser.R$xml
+androidx.browser.R
+androidx.browser.browseractions.BrowserActionItem
+androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$1
+androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$2
+androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter$ViewHolderItem
+androidx.browser.browseractions.BrowserActionsFallbackMenuAdapter
+androidx.browser.browseractions.BrowserActionsFallbackMenuDialog$1
+androidx.browser.browseractions.BrowserActionsFallbackMenuDialog
+androidx.browser.browseractions.BrowserActionsFallbackMenuUi$1
+androidx.browser.browseractions.BrowserActionsFallbackMenuUi$2
+androidx.browser.browseractions.BrowserActionsFallbackMenuUi$3
+androidx.browser.browseractions.BrowserActionsFallbackMenuUi$BrowserActionsFallMenuUiListener
+androidx.browser.browseractions.BrowserActionsFallbackMenuUi
+androidx.browser.browseractions.BrowserActionsIntent$BrowserActionsFallDialogListener
+androidx.browser.browseractions.BrowserActionsIntent$BrowserActionsItemId
+androidx.browser.browseractions.BrowserActionsIntent$BrowserActionsUrlType
+androidx.browser.browseractions.BrowserActionsIntent$Builder
+androidx.browser.browseractions.BrowserActionsIntent
+androidx.browser.browseractions.BrowserServiceFileProvider$1
+androidx.browser.browseractions.BrowserServiceFileProvider$FileCleanupTask
+androidx.browser.browseractions.BrowserServiceFileProvider$FileSaveTask
+androidx.browser.browseractions.BrowserServiceFileProvider
+androidx.browser.customtabs.CustomTabColorSchemeParams$Builder:
+    public androidx.browser.customtabs.CustomTabColorSchemeParams$Builder setNavigationBarColor(int)
+    public androidx.browser.customtabs.CustomTabColorSchemeParams$Builder setNavigationBarDividerColor(int)
+    public androidx.browser.customtabs.CustomTabColorSchemeParams$Builder setSecondaryToolbarColor(int)
+androidx.browser.customtabs.CustomTabColorSchemeParams:
+    static androidx.browser.customtabs.CustomTabColorSchemeParams fromBundle(android.os.Bundle)
+    androidx.browser.customtabs.CustomTabColorSchemeParams withDefaults(androidx.browser.customtabs.CustomTabColorSchemeParams)
+androidx.browser.customtabs.CustomTabsCallback
+androidx.browser.customtabs.CustomTabsClient$1
+androidx.browser.customtabs.CustomTabsClient$2$1
+androidx.browser.customtabs.CustomTabsClient$2$2
+androidx.browser.customtabs.CustomTabsClient$2$3
+androidx.browser.customtabs.CustomTabsClient$2$4
+androidx.browser.customtabs.CustomTabsClient$2$5
+androidx.browser.customtabs.CustomTabsClient$2
+androidx.browser.customtabs.CustomTabsClient
+androidx.browser.customtabs.CustomTabsIntent$Builder:
+    public void <init>(androidx.browser.customtabs.CustomTabsSession)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder addDefaultShareMenuItem()
+    public androidx.browser.customtabs.CustomTabsIntent$Builder addMenuItem(java.lang.String,android.app.PendingIntent)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder addToolbarItem(int,android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder enableUrlBarHiding()
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setActionButton(android.graphics.Bitmap,java.lang.String,android.app.PendingIntent,boolean)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setCloseButtonIcon(android.graphics.Bitmap)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setColorScheme(int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setColorSchemeParams(int,androidx.browser.customtabs.CustomTabColorSchemeParams)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setDefaultColorSchemeParams(androidx.browser.customtabs.CustomTabColorSchemeParams)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setDefaultShareMenuItemEnabled(boolean)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setExitAnimations(android.content.Context,int,int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setInstantAppsEnabled(boolean)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setNavigationBarColor(int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setNavigationBarDividerColor(int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setPendingSession(androidx.browser.customtabs.CustomTabsSession$PendingSession)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setSecondaryToolbarColor(int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setSecondaryToolbarViews(android.widget.RemoteViews,int[],android.app.PendingIntent)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setSession(androidx.browser.customtabs.CustomTabsSession)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setShareState(int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setShowTitle(boolean)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setStartAnimations(android.content.Context,int,int)
+    public androidx.browser.customtabs.CustomTabsIntent$Builder setUrlBarHidingEnabled(boolean)
+androidx.browser.customtabs.CustomTabsIntent$ColorScheme
+androidx.browser.customtabs.CustomTabsIntent$ShareState
+androidx.browser.customtabs.CustomTabsIntent:
+    public static final int COLOR_SCHEME_DARK
+    public static final int COLOR_SCHEME_LIGHT
+    private static final int COLOR_SCHEME_MAX
+    public static final int COLOR_SCHEME_SYSTEM
+    public static final java.lang.String EXTRA_ACTION_BUTTON_BUNDLE
+    public static final java.lang.String EXTRA_CLOSE_BUTTON_ICON
+    public static final java.lang.String EXTRA_COLOR_SCHEME
+    public static final java.lang.String EXTRA_COLOR_SCHEME_PARAMS
+    public static final java.lang.String EXTRA_DEFAULT_SHARE_MENU_ITEM
+    public static final java.lang.String EXTRA_ENABLE_INSTANT_APPS
+    public static final java.lang.String EXTRA_ENABLE_URLBAR_HIDING
+    public static final java.lang.String EXTRA_EXIT_ANIMATION_BUNDLE
+    public static final java.lang.String EXTRA_MENU_ITEMS
+    public static final java.lang.String EXTRA_NAVIGATION_BAR_COLOR
+    public static final java.lang.String EXTRA_NAVIGATION_BAR_DIVIDER_COLOR
+    public static final java.lang.String EXTRA_REMOTEVIEWS
+    public static final java.lang.String EXTRA_REMOTEVIEWS_CLICKED_ID
+    public static final java.lang.String EXTRA_REMOTEVIEWS_PENDINGINTENT
+    public static final java.lang.String EXTRA_REMOTEVIEWS_VIEW_IDS
+    public static final java.lang.String EXTRA_SECONDARY_TOOLBAR_COLOR
+    public static final java.lang.String EXTRA_SESSION
+    public static final java.lang.String EXTRA_SESSION_ID
+    public static final java.lang.String EXTRA_SHARE_STATE
+    public static final java.lang.String EXTRA_TINT_ACTION_BUTTON
+    public static final java.lang.String EXTRA_TITLE_VISIBILITY_STATE
+    public static final java.lang.String EXTRA_TOOLBAR_COLOR
+    public static final java.lang.String EXTRA_TOOLBAR_ITEMS
+    private static final java.lang.String EXTRA_USER_OPT_OUT_FROM_CUSTOM_TABS
+    public static final java.lang.String KEY_DESCRIPTION
+    public static final java.lang.String KEY_ICON
+    public static final java.lang.String KEY_ID
+    public static final java.lang.String KEY_MENU_ITEM_TITLE
+    public static final java.lang.String KEY_PENDING_INTENT
+    private static final int MAX_TOOLBAR_ITEMS
+    public static final int NO_TITLE
+    public static final int SHARE_STATE_DEFAULT
+    private static final int SHARE_STATE_MAX
+    public static final int SHARE_STATE_OFF
+    public static final int SHARE_STATE_ON
+    public static final int SHOW_PAGE_TITLE
+    public static final int TOOLBAR_ACTION_BUTTON_ID
+    public static androidx.browser.customtabs.CustomTabColorSchemeParams getColorSchemeParams(android.content.Intent,int)
+    public static int getMaxToolbarItems()
+    public static android.content.Intent setAlwaysUseBrowserUI(android.content.Intent)
+    public static boolean shouldAlwaysUseBrowserUI(android.content.Intent)
+androidx.browser.customtabs.CustomTabsService$1
+androidx.browser.customtabs.CustomTabsService$FilePurpose
+androidx.browser.customtabs.CustomTabsService$Relation
+androidx.browser.customtabs.CustomTabsService$Result
+androidx.browser.customtabs.CustomTabsService
+androidx.browser.customtabs.CustomTabsServiceConnection$1
+androidx.browser.customtabs.CustomTabsServiceConnection
+androidx.browser.customtabs.CustomTabsSession$MockSession
+androidx.browser.customtabs.CustomTabsSession$PendingSession
+androidx.browser.customtabs.CustomTabsSession
+androidx.browser.customtabs.CustomTabsSessionToken$1
+androidx.browser.customtabs.CustomTabsSessionToken$MockCallback
+androidx.browser.customtabs.CustomTabsSessionToken
+androidx.browser.customtabs.PostMessageBackend
+androidx.browser.customtabs.PostMessageService$1
+androidx.browser.customtabs.PostMessageService
+androidx.browser.customtabs.PostMessageServiceConnection
+androidx.browser.customtabs.TrustedWebUtils
+androidx.browser.trusted.ConnectionHolder$WrapperFactory
+androidx.browser.trusted.ConnectionHolder
+androidx.browser.trusted.FutureUtils
+androidx.browser.trusted.NotificationApiHelperForM
+androidx.browser.trusted.NotificationApiHelperForO
+androidx.browser.trusted.PackageIdentityUtils$Api28Implementation
+androidx.browser.trusted.PackageIdentityUtils$Pre28Implementation
+androidx.browser.trusted.PackageIdentityUtils$SignaturesCompat
+androidx.browser.trusted.PackageIdentityUtils
+androidx.browser.trusted.ScreenOrientation$LockType
+androidx.browser.trusted.ScreenOrientation
+androidx.browser.trusted.Token
+androidx.browser.trusted.TokenContents
+androidx.browser.trusted.TokenStore
+androidx.browser.trusted.TrustedWebActivityCallback
+androidx.browser.trusted.TrustedWebActivityCallbackRemote
+androidx.browser.trusted.TrustedWebActivityDisplayMode$DefaultMode
+androidx.browser.trusted.TrustedWebActivityDisplayMode$ImmersiveMode
+androidx.browser.trusted.TrustedWebActivityDisplayMode
+androidx.browser.trusted.TrustedWebActivityIntent
+androidx.browser.trusted.TrustedWebActivityIntentBuilder
+androidx.browser.trusted.TrustedWebActivityService$1
+androidx.browser.trusted.TrustedWebActivityService
+androidx.browser.trusted.TrustedWebActivityServiceConnection$1
+androidx.browser.trusted.TrustedWebActivityServiceConnection$ActiveNotificationsArgs
+androidx.browser.trusted.TrustedWebActivityServiceConnection$CancelNotificationArgs
+androidx.browser.trusted.TrustedWebActivityServiceConnection$NotificationsEnabledArgs
+androidx.browser.trusted.TrustedWebActivityServiceConnection$NotifyNotificationArgs
+androidx.browser.trusted.TrustedWebActivityServiceConnection$ResultArgs
+androidx.browser.trusted.TrustedWebActivityServiceConnection
+androidx.browser.trusted.TrustedWebActivityServiceConnectionPool$BindToServiceAsyncTask
+androidx.browser.trusted.TrustedWebActivityServiceConnectionPool
+androidx.browser.trusted.sharing.ShareData
+androidx.browser.trusted.sharing.ShareTarget$EncodingType
+androidx.browser.trusted.sharing.ShareTarget$FileFormField
+androidx.browser.trusted.sharing.ShareTarget$Params
+androidx.browser.trusted.sharing.ShareTarget$RequestMethod
+androidx.browser.trusted.sharing.ShareTarget
+androidx.browser.trusted.splashscreens.SplashScreenParamKey
+androidx.browser.trusted.splashscreens.SplashScreenVersion
 androidx.cardview.R$attr:
     public static final int cardBackgroundColor
     public static final int cardCornerRadius
@@ -3243,6 +3466,25 @@ androidx.collection.SparseArrayCompat:
     public java.lang.Object replace(int,java.lang.Object)
     public boolean replace(int,java.lang.Object,java.lang.Object)
     public void setValueAt(int,java.lang.Object)
+androidx.concurrent.futures.AbstractResolvableFuture$1
+androidx.concurrent.futures.AbstractResolvableFuture$AtomicHelper
+androidx.concurrent.futures.AbstractResolvableFuture$Cancellation
+androidx.concurrent.futures.AbstractResolvableFuture$Failure$1
+androidx.concurrent.futures.AbstractResolvableFuture$Failure
+androidx.concurrent.futures.AbstractResolvableFuture$Listener
+androidx.concurrent.futures.AbstractResolvableFuture$SafeAtomicHelper
+androidx.concurrent.futures.AbstractResolvableFuture$SetFuture
+androidx.concurrent.futures.AbstractResolvableFuture$SynchronizedHelper
+androidx.concurrent.futures.AbstractResolvableFuture$Waiter
+androidx.concurrent.futures.AbstractResolvableFuture
+androidx.concurrent.futures.CallbackToFutureAdapter$Completer
+androidx.concurrent.futures.CallbackToFutureAdapter$FutureGarbageCollectedException
+androidx.concurrent.futures.CallbackToFutureAdapter$Resolver
+androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture$1
+androidx.concurrent.futures.CallbackToFutureAdapter$SafeFuture
+androidx.concurrent.futures.CallbackToFutureAdapter
+androidx.concurrent.futures.DirectExecutor
+androidx.concurrent.futures.ResolvableFuture
 androidx.constraintlayout.core.ArrayLinkedVariables:
     private static final boolean DEBUG
     private static final boolean FULL_NEW_CHECK
@@ -6661,13 +6903,9 @@ androidx.core.app.AppOpsManagerCompat:
     public static int noteProxyOp(android.content.Context,java.lang.String,java.lang.String)
 androidx.core.app.BundleCompat$BundleCompatBaseImpl:
     private static final java.lang.String TAG
-    private static java.lang.reflect.Method sPutIBinderMethod
-    private static boolean sPutIBinderMethodFetched
     private void <init>()
-    public static void putBinder(android.os.Bundle,java.lang.String,android.os.IBinder)
 androidx.core.app.BundleCompat:
     private void <init>()
-    public static void putBinder(android.os.Bundle,java.lang.String,android.os.IBinder)
 androidx.core.app.ComponentActivity$ExtraData
 androidx.core.app.ComponentActivity:
     public androidx.core.app.ComponentActivity$ExtraData getExtraData(java.lang.Class)
@@ -7138,7 +7376,6 @@ androidx.core.content.ContextCompat:
     public static java.lang.String getSystemServiceName(android.content.Context,java.lang.Class)
     public static boolean isDeviceProtectedStorage(android.content.Context)
     public static boolean startActivities(android.content.Context,android.content.Intent[])
-    public static void startActivity(android.content.Context,android.content.Intent,android.os.Bundle)
     public static void startForegroundService(android.content.Context,android.content.Intent)
 androidx.core.content.ContextKt
 androidx.core.content.FileProvider$PathStrategy
@@ -7266,24 +7503,20 @@ androidx.core.graphics.ColorUtils:
     public static void LABToXYZ(double,double,double,double[])
     public static void RGBToHSL(int,int,int,float[])
     public static void RGBToLAB(int,int,int,double[])
-    public static void RGBToXYZ(int,int,int,double[])
     public static int XYZToColor(double,double,double)
     public static void XYZToLAB(double,double,double,double[])
     public static int blendARGB(int,int,float)
     public static void blendHSL(float[],float[],float,float[])
     public static void blendLAB(double[],double[],double,double[])
     public static double calculateContrast(int,int)
-    public static double calculateLuminance(int)
     public static int calculateMinimumAlpha(int,int,float)
     static float circularInterpolate(float,float,float)
     public static void colorToHSL(int,float[])
     public static void colorToLAB(int,double[])
-    public static void colorToXYZ(int,double[])
     public static android.graphics.Color compositeColors(android.graphics.Color,android.graphics.Color)
     private static float constrain(float,float,float)
     private static int constrain(int,int,int)
     public static double distanceEuclidean(double[],double[])
-    private static double[] getTempDouble3Array()
     private static double pivotXyzComponent(double)
 androidx.core.graphics.ImageDecoderKt$decodeBitmap$1
 androidx.core.graphics.ImageDecoderKt$decodeDrawable$1
@@ -13437,7 +13670,6 @@ com.bumptech.glide.RequestBuilder:
     public com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
     public com.bumptech.glide.RequestBuilder load(android.net.Uri)
     public com.bumptech.glide.RequestBuilder load(java.io.File)
-    public com.bumptech.glide.RequestBuilder load(java.lang.Integer)
     public com.bumptech.glide.RequestBuilder load(java.net.URL)
     public com.bumptech.glide.RequestBuilder load(byte[])
     public synthetic bridge java.lang.Object load(android.graphics.Bitmap)
@@ -13462,7 +13694,6 @@ com.bumptech.glide.RequestManager$ClearTarget
 com.bumptech.glide.RequestManager:
     public com.bumptech.glide.RequestManager addDefaultRequestListener(com.bumptech.glide.request.RequestListener)
     public synchronized com.bumptech.glide.RequestManager applyDefaultRequestOptions(com.bumptech.glide.request.RequestOptions)
-    public com.bumptech.glide.RequestBuilder asDrawable()
     public com.bumptech.glide.RequestBuilder asFile()
     public com.bumptech.glide.RequestBuilder asGif()
     public void clear(android.view.View)
@@ -13473,7 +13704,6 @@ com.bumptech.glide.RequestManager:
     public com.bumptech.glide.RequestBuilder load(android.graphics.drawable.Drawable)
     public com.bumptech.glide.RequestBuilder load(android.net.Uri)
     public com.bumptech.glide.RequestBuilder load(java.io.File)
-    public com.bumptech.glide.RequestBuilder load(java.lang.Integer)
     public com.bumptech.glide.RequestBuilder load(java.lang.Object)
     public com.bumptech.glide.RequestBuilder load(java.lang.String)
     public com.bumptech.glide.RequestBuilder load(java.net.URL)
@@ -14204,8 +14434,10 @@ com.bumptech.glide.request.transition.ViewPropertyTransition$Animator
 com.bumptech.glide.request.transition.ViewPropertyTransition
 com.bumptech.glide.request.transition.ViewTransition$ViewTransitionAnimationFactory
 com.bumptech.glide.request.transition.ViewTransition
-com.bumptech.glide.signature.AndroidResourceSignature
-com.bumptech.glide.signature.ApplicationVersionSignature
+com.bumptech.glide.signature.ApplicationVersionSignature:
+    private static final java.lang.String TAG
+    private void <init>()
+    static void reset()
 com.bumptech.glide.signature.MediaStoreSignature
 com.bumptech.glide.util.ByteBufferUtil$ByteBufferStream:
     private static final int UNSET
@@ -17774,6 +18006,10 @@ com.google.android.material.R$animator:
     public static final int mtrl_btn_unelevated_state_list_anim
     public static final int mtrl_card_state_list_anim
     public static final int mtrl_chip_state_list_anim
+    public static final int mtrl_extended_fab_change_size_collapse_motion_spec
+    public static final int mtrl_extended_fab_change_size_expand_motion_spec
+    public static final int mtrl_extended_fab_hide_motion_spec
+    public static final int mtrl_extended_fab_show_motion_spec
     public static final int mtrl_extended_fab_state_list_animator
     public static final int mtrl_fab_hide_motion_spec
     public static final int mtrl_fab_show_motion_spec
@@ -17867,7 +18103,6 @@ com.google.android.material.R$attr:
     public static final int borderlessButtonStyle
     public static final int bottomAppBarStyle
     public static final int bottomNavigationStyle
-    public static final int bottomSheetDialogTheme
     public static final int boxBackgroundColor
     public static final int boxBackgroundMode
     public static final int boxCollapsedPaddingTop
@@ -18056,7 +18291,6 @@ com.google.android.material.R$attr:
     public static final int editTextBackground
     public static final int editTextColor
     public static final int elevation
-    public static final int enableEdgeToEdge
     public static final int endIconCheckable
     public static final int endIconContentDescription
     public static final int endIconDrawable
@@ -18084,6 +18318,7 @@ com.google.android.material.R$attr:
     public static final int expandedTitleMarginTop
     public static final int expandedTitleTextAppearance
     public static final int extendMotionSpec
+    public static final int extendedFloatingActionButtonStyle
     public static final int extraMultilineHeightEnabled
     public static final int fabAlignmentMode
     public static final int fabAnimationMode
@@ -19432,7 +19667,6 @@ com.google.android.material.R$id:
     public static final int content
     public static final int contentPanel
     public static final int contiguous
-    public static final int coordinator
     public static final int cos
     public static final int counterclockwise
     public static final int custom
@@ -19444,7 +19678,6 @@ com.google.android.material.R$id:
     public static final int decor_content_parent
     public static final int default_activity_button
     public static final int deltaRelative
-    public static final int design_bottom_sheet
     public static final int design_menu_item_action_area
     public static final int design_navigation_view
     public static final int dialog_button
@@ -19640,7 +19873,6 @@ com.google.android.material.R$id:
     public static final int title_template
     public static final int top
     public static final int topPanel
-    public static final int touch_outside
     public static final int transition_current_scene
     public static final int transition_layout_save
     public static final int transition_position
@@ -19717,7 +19949,6 @@ com.google.android.material.R$layout:
     public static final int abc_tooltip
     public static final int custom_dialog
     public static final int design_bottom_navigation_item
-    public static final int design_bottom_sheet_dialog
     public static final int design_layout_tab_icon
     public static final int design_layout_tab_text
     public static final int design_menu_item_action_area
@@ -20331,7 +20562,6 @@ com.google.android.material.R$style:
     public static final int Theme_Design
     public static final int Theme_Design_BottomSheetDialog
     public static final int Theme_Design_Light
-    public static final int Theme_Design_Light_BottomSheetDialog
     public static final int Theme_Design_Light_NoActionBar
     public static final int Theme_Design_NoActionBar
     public static final int Theme_MaterialComponents
@@ -21225,7 +21455,12 @@ com.google.android.material.R$styleable:
     public static final int DrawerArrowToggle_gapBetweenBars
     public static final int DrawerArrowToggle_spinBars
     public static final int DrawerArrowToggle_thickness
+    public static final int ExtendedFloatingActionButton_collapsedSize
     public static final int ExtendedFloatingActionButton_elevation
+    public static final int ExtendedFloatingActionButton_extendMotionSpec
+    public static final int ExtendedFloatingActionButton_hideMotionSpec
+    public static final int ExtendedFloatingActionButton_showMotionSpec
+    public static final int ExtendedFloatingActionButton_shrinkMotionSpec
     public static final int FloatingActionButton_shapeAppearance
     public static final int FloatingActionButton_shapeAppearanceOverlay
     public static final int FontFamilyFont_android_font
@@ -21828,6 +22063,10 @@ com.google.android.material.animation.MatrixEvaluator:
     public synthetic bridge java.lang.Object evaluate(float,java.lang.Object,java.lang.Object)
 com.google.android.material.animation.MotionSpec:
     private static final java.lang.String TAG
+    private android.animation.PropertyValuesHolder[] clonePropertyValuesHolder(android.animation.PropertyValuesHolder[])
+    public android.animation.ObjectAnimator getAnimator(java.lang.String,java.lang.Object,android.util.Property)
+    public android.animation.PropertyValuesHolder[] getPropertyValues(java.lang.String)
+    public boolean hasPropertyValues(java.lang.String)
 com.google.android.material.appbar.AppBarLayout$BaseBehavior$BaseDragCallback:
     public void <init>()
 com.google.android.material.appbar.AppBarLayout$BaseBehavior:
@@ -22032,30 +22271,25 @@ com.google.android.material.bottomsheet.BottomSheetBehavior:
     public static final int STATE_HIDDEN
     public static final int STATE_SETTLING
     private static final java.lang.String TAG
-    public void addBottomSheetCallback(com.google.android.material.bottomsheet.BottomSheetBehavior$BottomSheetCallback)
     public void disableShapeAnimations()
-    public static com.google.android.material.bottomsheet.BottomSheetBehavior from(android.view.View)
     public float getHalfExpandedRatio()
-    com.google.android.material.shape.MaterialShapeDrawable getMaterialShapeDrawable()
     public int getMaxWidth()
     public int getPeekHeight()
     int getPeekHeightMin()
     public int getSaveFlags()
     public boolean getSkipCollapsed()
-    public int getState()
     public boolean isDraggable()
     public boolean isFitToContents()
     public boolean isHideable()
-    public void removeBottomSheetCallback(com.google.android.material.bottomsheet.BottomSheetBehavior$BottomSheetCallback)
     public void setBottomSheetCallback(com.google.android.material.bottomsheet.BottomSheetBehavior$BottomSheetCallback)
     public void setUpdateImportantForAccessibilityOnSiblings(boolean)
-com.google.android.material.bottomsheet.BottomSheetDialog$1
-com.google.android.material.bottomsheet.BottomSheetDialog$2
-com.google.android.material.bottomsheet.BottomSheetDialog$3
-com.google.android.material.bottomsheet.BottomSheetDialog$4
-com.google.android.material.bottomsheet.BottomSheetDialog$5
-com.google.android.material.bottomsheet.BottomSheetDialog$EdgeToEdgeCallback
-com.google.android.material.bottomsheet.BottomSheetDialog
+com.google.android.material.bottomsheet.BottomSheetDialog:
+    public void <init>(android.content.Context)
+    protected void <init>(android.content.Context,boolean,android.content.DialogInterface$OnCancelListener)
+    public boolean getDismissWithAnimation()
+    public boolean getEdgeToEdgeEnabled()
+    void removeDefaultCallback()
+    public void setDismissWithAnimation(boolean)
 com.google.android.material.bottomsheet.BottomSheetDialogFragment$1
 com.google.android.material.bottomsheet.BottomSheetDialogFragment$BottomSheetDismissCallback
 com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -22193,7 +22427,6 @@ com.google.android.material.color.MaterialColors:
     public static final float ALPHA_LOW
     public static final float ALPHA_MEDIUM
     private void <init>()
-    public static boolean isColorLight(int)
     public static int layer(android.view.View,int,int)
 com.google.android.material.datepicker.CalendarConstraints$Builder:
     private static final java.lang.String DEEP_COPY_VALIDATOR_KEY
@@ -22333,12 +22566,15 @@ com.google.android.material.expandable.ExpandableWidget:
     public abstract boolean setExpanded(boolean)
 com.google.android.material.expandable.ExpandableWidgetHelper:
     public boolean setExpanded(boolean)
-com.google.android.material.floatingactionbutton.BaseMotionStrategy:
-    public final void addAnimationListener(android.animation.Animator$AnimatorListener)
-    public final void removeAnimationListener(android.animation.Animator$AnimatorListener)
+com.google.android.material.floatingactionbutton.AnimatorTracker
+com.google.android.material.floatingactionbutton.BaseMotionStrategy$1
+com.google.android.material.floatingactionbutton.BaseMotionStrategy
 com.google.android.material.floatingactionbutton.BorderDrawable:
     private static final float DRAW_STROKE_WIDTH_MULTIPLE
     public com.google.android.material.shape.ShapeAppearanceModel getShapeAppearanceModel()
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$1
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$2
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$ChangeSizeStrategy
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$ExtendedFloatingActionButtonBehavior:
     private static final boolean AUTO_HIDE_DEFAULT
     private static final boolean AUTO_SHRINK_DEFAULT
@@ -22348,13 +22584,31 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$Ex
     public void setAutoShrinkEnabled(boolean)
     void setInternalAutoHideCallback(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
     void setInternalAutoShrinkCallback(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$HideStrategy
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback:
     public void <init>()
+    public void onExtended(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    public void onHidden(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    public void onShown(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    public void onShrunken(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$ShowStrategy
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$Size
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton:
     private static final int ANIM_STATE_HIDING
     private static final int ANIM_STATE_NONE
     private static final int ANIM_STATE_SHOWING
+    private final com.google.android.material.floatingactionbutton.AnimatorTracker changeVisibilityTracker
     public void <init>(android.content.Context)
+    public void <init>(android.content.Context,android.util.AttributeSet)
+    public void <init>(android.content.Context,android.util.AttributeSet,int)
+    static synthetic int access$000(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    static synthetic int access$100(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    static synthetic boolean access$1000(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    static synthetic boolean access$1100(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    static synthetic boolean access$700(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+    static synthetic boolean access$702(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton,boolean)
+    static synthetic boolean access$802(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton,boolean)
+    static synthetic int access$902(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton,int)
     public void addOnExtendAnimationListener(android.animation.Animator$AnimatorListener)
     public void addOnHideAnimationListener(android.animation.Animator$AnimatorListener)
     public void addOnShowAnimationListener(android.animation.Animator$AnimatorListener)
@@ -22364,6 +22618,7 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton:
     public void hide()
     public void hide(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
     public final boolean isExtended()
+    private boolean isOrWillBeHidden()
     public void removeOnExtendAnimationListener(android.animation.Animator$AnimatorListener)
     public void removeOnHideAnimationListener(android.animation.Animator$AnimatorListener)
     public void removeOnShowAnimationListener(android.animation.Animator$AnimatorListener)
@@ -22372,6 +22627,7 @@ com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton:
     public void show(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
     public void shrink()
     public void shrink(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback)
+    protected void silentlyUpdateTextColor(android.content.res.ColorStateList)
 com.google.android.material.floatingactionbutton.FloatingActionButton$BaseBehavior:
     private static final boolean AUTO_HIDE_DEFAULT
     public boolean isAutoHideEnabled()
@@ -22420,6 +22676,7 @@ com.google.android.material.floatingactionbutton.FloatingActionButtonImpl:
 com.google.android.material.floatingactionbutton.MotionStrategy:
     public abstract void addAnimationListener(android.animation.Animator$AnimatorListener)
     public abstract com.google.android.material.animation.MotionSpec getCurrentMotionSpec()
+    public abstract int getDefaultMotionSpecResource()
     public abstract void removeAnimationListener(android.animation.Animator$AnimatorListener)
 com.google.android.material.imageview.ShapeableImageView$OutlineProvider
 com.google.android.material.imageview.ShapeableImageView
@@ -23129,6 +23386,7 @@ com.google.android.material.transition.platform.TransitionUtils$CanvasOperation
 com.google.android.material.transition.platform.TransitionUtils$CornerSizeBinaryOperator
 com.google.android.material.transition.platform.TransitionUtils
 com.google.android.material.transition.platform.VisibilityAnimatorProvider
+com.google.common.util.concurrent.ListenableFuture
 com.google.firebase.BuildConfig
 com.google.firebase.DataCollectionDefaultChange:
     public void <init>(boolean)
@@ -36096,6 +36354,7 @@ te.app.evidence.DataBinderMapperImpl:
     private static final int LAYOUT_FRAGMENTPLACES
     private static final int LAYOUT_FRAGMENTPOINTS
     private static final int LAYOUT_FRAGMENTPROFILE
+    private static final int LAYOUT_FRAGMENTPUBLICFILES
     private static final int LAYOUT_FRAGMENTREGISTER
     private static final int LAYOUT_FRAGMENTREPORTERDETAILS
     private static final int LAYOUT_FRAGMENTSEARCHCLIENTS
@@ -36116,10 +36375,12 @@ te.app.evidence.DataBinderMapperImpl:
     private static final int LAYOUT_ITEMCLIENTSEARCH
     private static final int LAYOUT_ITEMCLIENTTAGS
     private static final int LAYOUT_ITEMGOVERN
+    private static final int LAYOUT_ITEMHOMEMAIN
     private static final int LAYOUT_ITEMHOMEREPORTER
     private static final int LAYOUT_ITEMNOTE
     private static final int LAYOUT_ITEMPACKAGE
     private static final int LAYOUT_ITEMPLACE
+    private static final int LAYOUT_ITEMPUBLICFILE
     private static final int LAYOUT_ITEMREPLACEDPOINTS
     private static final int LAYOUT_ITEMREPORT
     private static final int LAYOUT_ITEMSERVICE
@@ -36129,8 +36390,10 @@ te.app.evidence.DataBinderMapperImpl:
     private static final int LAYOUT_LAYOUTACTIONBARBACK
     private static final int LAYOUT_LAYOUTACTIONBARHOME
     private static final int LAYOUT_LAYOUTNAVIGATIONDRAWER
+    private static final int LAYOUT_LAYOUTTES
     private static final int LAYOUT_OPTIONDIALOG
     private static final int LAYOUT_PACKAGERENEWDIALOG
+    private static final int LAYOUT_SETTINGSBOTTOMSHEET
     public java.lang.String convertBrIdToString(int)
 te.app.evidence.DataBindingTriggerClass
 te.app.evidence.PassingObject:
@@ -38036,6 +38299,7 @@ te.app.evidence.base.ApplicationBinding:
 te.app.evidence.base.ApplicationComponent:
     public te.app.evidence.base.ApplicationBinding getApplicationBinding()
 te.app.evidence.base.BaseFragment:
+    private static final java.lang.String TAG
     public void toastMessage(java.lang.String,int,int)
 te.app.evidence.base.BaseViewModel:
     public android.graphics.drawable.Drawable getDrawable(int)
@@ -38458,6 +38722,16 @@ te.app.evidence.databinding.FragmentProfileBinding:
     public static te.app.evidence.databinding.FragmentProfileBinding inflate(android.view.LayoutInflater,java.lang.Object)
 te.app.evidence.databinding.FragmentProfileBindingImpl:
     public boolean setVariable(int,java.lang.Object)
+te.app.evidence.databinding.FragmentPublicFilesBinding:
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding bind(android.view.View)
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding bind(android.view.View,java.lang.Object)
+    public te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel getViewmodel()
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding inflate(android.view.LayoutInflater)
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean)
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
+    public static te.app.evidence.databinding.FragmentPublicFilesBinding inflate(android.view.LayoutInflater,java.lang.Object)
+te.app.evidence.databinding.FragmentPublicFilesBindingImpl:
+    public boolean setVariable(int,java.lang.Object)
 te.app.evidence.databinding.FragmentRegisterBinding:
     public static te.app.evidence.databinding.FragmentRegisterBinding bind(android.view.View)
     public static te.app.evidence.databinding.FragmentRegisterBinding bind(android.view.View,java.lang.Object)
@@ -38660,6 +38934,16 @@ te.app.evidence.databinding.ItemGovernBinding:
     public static te.app.evidence.databinding.ItemGovernBinding inflate(android.view.LayoutInflater,java.lang.Object)
 te.app.evidence.databinding.ItemGovernBindingImpl:
     public boolean setVariable(int,java.lang.Object)
+te.app.evidence.databinding.ItemHomeMainBinding:
+    public static te.app.evidence.databinding.ItemHomeMainBinding bind(android.view.View)
+    public static te.app.evidence.databinding.ItemHomeMainBinding bind(android.view.View,java.lang.Object)
+    public te.app.evidence.pages.home.viewModels.ItemMainObjectViewModel getItemViewModel()
+    public static te.app.evidence.databinding.ItemHomeMainBinding inflate(android.view.LayoutInflater)
+    public static te.app.evidence.databinding.ItemHomeMainBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean)
+    public static te.app.evidence.databinding.ItemHomeMainBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
+    public static te.app.evidence.databinding.ItemHomeMainBinding inflate(android.view.LayoutInflater,java.lang.Object)
+te.app.evidence.databinding.ItemHomeMainBindingImpl:
+    public boolean setVariable(int,java.lang.Object)
 te.app.evidence.databinding.ItemHomeReporterBinding:
     public static te.app.evidence.databinding.ItemHomeReporterBinding bind(android.view.View)
     public static te.app.evidence.databinding.ItemHomeReporterBinding bind(android.view.View,java.lang.Object)
@@ -38699,6 +38983,16 @@ te.app.evidence.databinding.ItemPlaceBinding:
     public static te.app.evidence.databinding.ItemPlaceBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
     public static te.app.evidence.databinding.ItemPlaceBinding inflate(android.view.LayoutInflater,java.lang.Object)
 te.app.evidence.databinding.ItemPlaceBindingImpl:
+    public boolean setVariable(int,java.lang.Object)
+te.app.evidence.databinding.ItemPublicFileBinding:
+    public static te.app.evidence.databinding.ItemPublicFileBinding bind(android.view.View)
+    public static te.app.evidence.databinding.ItemPublicFileBinding bind(android.view.View,java.lang.Object)
+    public te.app.evidence.pages.publicFiles.viewModels.ItemFilesViewModel getItemViewModel()
+    public static te.app.evidence.databinding.ItemPublicFileBinding inflate(android.view.LayoutInflater)
+    public static te.app.evidence.databinding.ItemPublicFileBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean)
+    public static te.app.evidence.databinding.ItemPublicFileBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
+    public static te.app.evidence.databinding.ItemPublicFileBinding inflate(android.view.LayoutInflater,java.lang.Object)
+te.app.evidence.databinding.ItemPublicFileBindingImpl:
     public boolean setVariable(int,java.lang.Object)
 te.app.evidence.databinding.ItemReplacedPointsBinding:
     public static te.app.evidence.databinding.ItemReplacedPointsBinding bind(android.view.View)
@@ -38788,6 +39082,15 @@ te.app.evidence.databinding.LayoutNavigationDrawerBinding:
     public static te.app.evidence.databinding.LayoutNavigationDrawerBinding inflate(android.view.LayoutInflater,java.lang.Object)
 te.app.evidence.databinding.LayoutNavigationDrawerBindingImpl:
     public boolean setVariable(int,java.lang.Object)
+te.app.evidence.databinding.LayoutTesBinding:
+    public static te.app.evidence.databinding.LayoutTesBinding bind(android.view.View)
+    public static te.app.evidence.databinding.LayoutTesBinding bind(android.view.View,java.lang.Object)
+    public static te.app.evidence.databinding.LayoutTesBinding inflate(android.view.LayoutInflater)
+    public static te.app.evidence.databinding.LayoutTesBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean)
+    public static te.app.evidence.databinding.LayoutTesBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
+    public static te.app.evidence.databinding.LayoutTesBinding inflate(android.view.LayoutInflater,java.lang.Object)
+te.app.evidence.databinding.LayoutTesBindingImpl:
+    public boolean setVariable(int,java.lang.Object)
 te.app.evidence.databinding.OptionDialogBinding:
     public static te.app.evidence.databinding.OptionDialogBinding bind(android.view.View)
     public static te.app.evidence.databinding.OptionDialogBinding bind(android.view.View,java.lang.Object)
@@ -38805,6 +39108,16 @@ te.app.evidence.databinding.PackageRenewDialogBinding:
     public static te.app.evidence.databinding.PackageRenewDialogBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
     public static te.app.evidence.databinding.PackageRenewDialogBinding inflate(android.view.LayoutInflater,java.lang.Object)
 te.app.evidence.databinding.PackageRenewDialogBindingImpl:
+    public boolean setVariable(int,java.lang.Object)
+te.app.evidence.databinding.SettingsBottomSheetBinding:
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding bind(android.view.View)
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding bind(android.view.View,java.lang.Object)
+    public te.app.evidence.pages.home.viewModels.HomeViewModel getViewmodel()
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding inflate(android.view.LayoutInflater)
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean)
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding inflate(android.view.LayoutInflater,android.view.ViewGroup,boolean,java.lang.Object)
+    public static te.app.evidence.databinding.SettingsBottomSheetBinding inflate(android.view.LayoutInflater,java.lang.Object)
+te.app.evidence.databinding.SettingsBottomSheetBindingImpl:
     public boolean setVariable(int,java.lang.Object)
 te.app.evidence.model.base.Mutable:
     public int position
@@ -38938,48 +39251,11 @@ te.app.evidence.pages.auth.models.ConfirmCodeRequest:
 te.app.evidence.pages.auth.models.LoginRequest:
     public java.lang.String getToken()
 te.app.evidence.pages.auth.models.Permission:
-    private java.lang.String addcases
-    private java.lang.String category
-    private java.lang.String clients
-    private java.lang.Object createdAt
-    private java.lang.String dailyReport
-    private int id
-    private java.lang.String mohdreen
-    private java.lang.String monthlyReport
-    private java.lang.String searchCase
-    private java.lang.String updatedAt
-    private java.lang.String userId
-    private java.lang.String users
-    public void <init>()
     public java.lang.Object getCreatedAt()
     public int getId()
     public java.lang.String getUpdatedAt()
     public java.lang.String getUserId()
-te.app.evidence.pages.auth.models.RegisterRequest:
-    public void <init>(java.lang.String)
 te.app.evidence.pages.auth.models.UserData:
-    private java.lang.String address
-    private java.lang.String apiToken
-    private java.lang.String catId
-    private java.lang.String createdAt
-    private java.lang.String email
-    private java.lang.Object emailVerifiedAt
-    private java.lang.String expiry_date
-    private java.lang.String expiry_package
-    private int id
-    private java.lang.String image
-    private java.lang.String my_points
-    private java.lang.String name
-    private java.lang.String packageId
-    private java.lang.String packageName
-    private java.lang.Object parentId
-    private java.lang.String phone
-    private java.lang.String status
-    private java.lang.String type
-    private java.lang.String updatedAt
-    private java.lang.String user_code
-    private java.lang.String warning_date
-    public void <init>()
     public java.lang.String getCreatedAt()
     public java.lang.String getExpiry_package()
     public java.lang.String getPackageId()
@@ -39054,12 +39330,6 @@ te.app.evidence.pages.cases.models.AddCaseRequest:
     public java.util.List getMokel_Name()
     public java.lang.String getTo_whome()
 te.app.evidence.pages.cases.models.caseDetails.CaseStatistics:
-    private java.lang.String attachmentsNumber
-    private java.lang.String clients
-    private java.lang.String khesm
-    private java.lang.String notesNumber
-    private java.lang.String sessionsNumber
-    public void <init>()
     public void setNotesNumber(java.lang.String)
 te.app.evidence.pages.cases.viewModels.AddCaseViewModel_Factory:
     private final javax.inject.Provider casesRepositoryProvider
@@ -39150,9 +39420,6 @@ te.app.evidence.pages.categories.adapters.CategoriesDropAdapter
 te.app.evidence.pages.categories.models.AddCategoryRequest:
     public java.lang.String getId()
 te.app.evidence.pages.categories.models.CategoriesData:
-    private java.lang.String createdAt
-    private java.lang.String parentId
-    private java.lang.String updatedAt
     public java.lang.String getCreatedAt()
     public java.lang.String getParentId()
     public java.lang.String getUpdatedAt()
@@ -39209,15 +39476,9 @@ te.app.evidence.pages.clients.models.AddClientRequest:
     public java.lang.String getCaseId()
     public java.lang.String getCat_id()
     public java.lang.String getClient_id()
-te.app.evidence.pages.clients.models.Category:
-    private int id
-    private java.lang.String name
-    public void <init>()
 te.app.evidence.pages.clients.models.Clients:
-    private java.lang.String parentId
     public java.lang.String getParentId()
 te.app.evidence.pages.clients.models.clientProfile.ClientProfileData:
-    private int id
     public int getId()
 te.app.evidence.pages.clients.notes.AddNoteFragment_MembersInjector:
     private final javax.inject.Provider viewModelProvider
@@ -39230,8 +39491,6 @@ te.app.evidence.pages.clients.notes.models.AddNoteRequest:
     public java.lang.String getNote_id()
     public java.lang.String getSessionId()
 te.app.evidence.pages.clients.notes.models.Notes:
-    private java.lang.String clientId
-    private java.lang.String userId
     public java.lang.String getClientId()
     public java.lang.String getUserId()
 te.app.evidence.pages.clients.notes.viewModels.AddNoteViewModel_Factory:
@@ -39302,18 +39561,6 @@ te.app.evidence.pages.home.MainHomeFragment_MembersInjector:
     public static dagger.MembersInjector create(javax.inject.Provider)
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.home.MainHomeFragment)
-te.app.evidence.pages.home.models.CountData:
-    private java.lang.String cases
-    private java.lang.String mohdreen
-    private java.lang.String sessions
-    private java.lang.String users
-    public void <init>()
-te.app.evidence.pages.home.models.UserPackage:
-    private java.lang.String expiryDate
-    private java.lang.String expiryPackage
-    private int packageId
-    private java.lang.String warningDate
-    public void <init>()
 te.app.evidence.pages.home.viewModels.HomeViewModel_Factory:
     private final javax.inject.Provider homeRepositoryProvider
     private final javax.inject.Provider homeRepositoryProvider2
@@ -39354,11 +39601,6 @@ te.app.evidence.pages.mohdrs.models.AddMohdrRequest:
     public java.lang.String getMokelName()
     public java.lang.String getMokelText()
 te.app.evidence.pages.mohdrs.models.details.ReportersDetailsData:
-    private java.lang.String catId
-    private te.app.evidence.pages.clients.models.Category category
-    private java.lang.String createdAt
-    private java.lang.String parentId
-    private java.lang.String updatedAt
     public java.lang.String getCatId()
     public te.app.evidence.pages.clients.models.Category getCategory()
     public java.lang.String getCreatedAt()
@@ -39424,7 +39666,6 @@ te.app.evidence.pages.places.PlacesFragment_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.places.PlacesFragment)
 te.app.evidence.pages.places.models.PlacesData:
-    private int id
     public int getId()
 te.app.evidence.pages.places.viewModels.PlacesViewModel_Factory:
     private final javax.inject.Provider repositoryProvider
@@ -39446,7 +39687,6 @@ te.app.evidence.pages.points.PointsFragment_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.points.PointsFragment)
 te.app.evidence.pages.points.models.ReplacedPoints:
-    private int id
     public int getId()
 te.app.evidence.pages.points.viewModels.PointsViewModel_Factory:
     private final javax.inject.Provider repositoryProvider
@@ -39484,6 +39724,30 @@ te.app.evidence.pages.profile.ProfileViewModel_MembersInjector:
     public static dagger.MembersInjector create(javax.inject.Provider)
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.profile.ProfileViewModel)
+te.app.evidence.pages.publicFiles.PublicFilesFragment_MembersInjector:
+    private final javax.inject.Provider viewModelProvider
+    public void <init>(javax.inject.Provider)
+    public static dagger.MembersInjector create(javax.inject.Provider)
+    public synthetic bridge void injectMembers(java.lang.Object)
+    public void injectMembers(te.app.evidence.pages.publicFiles.PublicFilesFragment)
+te.app.evidence.pages.publicFiles.models.PublicFilesData:
+    public java.lang.String getCreatedAt()
+    public int getId()
+    public java.lang.String getType()
+    public java.lang.String getUpdatedAt()
+te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel_Factory:
+    private final javax.inject.Provider repositoryProvider
+    private final javax.inject.Provider repositoryProvider2
+    public void <init>(javax.inject.Provider,javax.inject.Provider)
+    public static te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel_Factory create(javax.inject.Provider,javax.inject.Provider)
+    public synthetic bridge java.lang.Object get()
+    public te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel get()
+te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel_MembersInjector:
+    private final javax.inject.Provider repositoryProvider
+    public void <init>(javax.inject.Provider)
+    public static dagger.MembersInjector create(javax.inject.Provider)
+    public synthetic bridge void injectMembers(java.lang.Object)
+    public void injectMembers(te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel)
 te.app.evidence.pages.reports.DailyReportsFragment_MembersInjector:
     private final javax.inject.Provider viewModelProvider
     public void <init>(javax.inject.Provider)
@@ -39497,15 +39761,6 @@ te.app.evidence.pages.reports.MonthlyReportsFragment_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.reports.MonthlyReportsFragment)
 te.app.evidence.pages.reports.models.ReportsData:
-    private java.lang.String caseId
-    private java.lang.String createdAt
-    private int id
-    private java.lang.String month
-    private java.lang.String parentId
-    private java.lang.String sessionDate
-    private java.lang.String status
-    private java.lang.String updatedAt
-    private java.lang.String year
     public java.lang.String getCaseId()
     public java.lang.String getCreatedAt()
     public int getId()
@@ -39543,9 +39798,6 @@ te.app.evidence.pages.services.ServicesFragment_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.services.ServicesFragment)
 te.app.evidence.pages.services.models.ServiceData:
-    private java.lang.String createdAt
-    private java.lang.String updatedAt
-    private java.lang.String userId
     public java.lang.String getCreatedAt()
     public java.lang.String getUpdatedAt()
     public java.lang.String getUserId()
@@ -39586,11 +39838,6 @@ te.app.evidence.pages.sessions.models.AddSessionRequest:
     public java.lang.String getCaseId()
     public java.lang.String getSessionId()
 te.app.evidence.pages.sessions.models.SessionItem:
-    private java.lang.String caseId
-    private java.lang.String createdAt
-    private java.lang.String parentId
-    private java.lang.String updatedAt
-    private java.lang.String year
     public java.lang.String getCaseId()
     public java.lang.String getCreatedAt()
     public java.lang.String getParentId()
@@ -39648,17 +39895,13 @@ te.app.evidence.pages.settings.PackagesFragment_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.pages.settings.PackagesFragment)
 te.app.evidence.pages.settings.models.AboutData:
-    private java.lang.String desc
-    private java.lang.String title
     public java.lang.String getDesc()
     public java.lang.String getTitle()
 te.app.evidence.pages.settings.models.AboutResponse
 te.app.evidence.pages.settings.models.ContactUsRequest:
-    private int type
     public int getType()
     public void setType(int)
 te.app.evidence.pages.settings.models.Packages:
-    private java.lang.String duration
     public java.lang.String getDuration()
 te.app.evidence.pages.settings.models.RenewPackageRequest:
     public int getPackageId()
@@ -39728,7 +39971,6 @@ te.app.evidence.pages.users.models.AddUserRequest:
     public java.lang.String getCat_id()
     public java.lang.String getId()
 te.app.evidence.pages.users.models.SystemUserData:
-    private java.lang.String parentId
     public java.lang.String getParentId()
 te.app.evidence.pages.users.models.userPermissions.UserPermissionsData:
     public java.lang.String getUserId()
@@ -39858,6 +40100,7 @@ te.app.evidence.repository.SystemUsersRepository_MembersInjector:
     public synthetic bridge void injectMembers(java.lang.Object)
     public void injectMembers(te.app.evidence.repository.SystemUsersRepository)
 te.app.evidence.utils.Constants:
+    public static final java.lang.String ABOUT
     public static final java.lang.String ADD_ATTACH
     public static final java.lang.String ADD_CASE
     public static final java.lang.String ADD_CATEGORY
@@ -39920,6 +40163,7 @@ te.app.evidence.utils.Constants:
     public static final java.lang.String HOME
     public static final java.lang.String HOME_REPORTERS
     public static final java.lang.String IMAGE
+    public static final java.lang.String IMAGE_MEMBERSHIP
     public static final java.lang.String IMAGE_MIME_TYPE
     public static final java.lang.String INVITE
     public static final java.lang.String KHESM
@@ -39941,12 +40185,16 @@ te.app.evidence.utils.Constants:
     public static final java.lang.String PASSWORD
     public static final int PAYMENT_REQUIRED_CODE
     public static final java.lang.String PDF
+    public static final java.lang.String PHONE_VALID
     public static final java.lang.String PLACES_BY_GOVERN
     public static final java.lang.String POINTS
     public static final java.lang.String POLICE_STATION
     public static final int POST_REQUEST
     public static final java.lang.String PREV_SESSIONS
+    public static final java.lang.String PRIVACY
     public static final java.lang.String PROFILE
+    public static final java.lang.String PUBLIC_FILES
+    public static final java.lang.String RATE
     public static final java.lang.String REGISTER
     public static final java.lang.String REMOVE_DIALOG
     public static final java.lang.String REPORT
@@ -39975,6 +40223,7 @@ te.app.evidence.utils.Constants:
     public static final java.lang.String START_APP
     public static final java.lang.String SUBSCRIBE
     public static final java.lang.String SUPPORT
+    public static final java.lang.String TERMS
     public static final java.lang.String TYPE
     public static final java.lang.String UPDATE_PROFILE
     public static final java.lang.String UPDATE_USER_PERMISSIONS
@@ -39997,11 +40246,7 @@ te.app.evidence.utils.PopUp.PopUpMenuHelper:
 te.app.evidence.utils.URLS
 te.app.evidence.utils.helper.AppHelper:
     public void <init>()
-    public static java.lang.String getPlayStoreLink(android.content.Context)
-    public static void openBrowser(android.content.Context,java.lang.String)
     public static void openEmail(android.content.Context,java.lang.String)
-    public static void rateApp(android.content.Context)
-    public static void shareApp(android.app.Activity)
     public static void showDownloadDialog(java.lang.String,java.lang.String,android.content.Context)
 te.app.evidence.utils.helper.LauncherHelper:
     public void <init>()
@@ -40040,30 +40285,11 @@ te.app.evidence.utils.upload.FileOperations:
 te.app.evidence.utils.upload.FileUpload
 te.app.evidence.utils.validation.Validate:
     public void <init>()
-    public static int batteryLevel(android.content.Context)
-    public static java.lang.Boolean isAvLen(java.lang.String,int,int)
-    public static java.lang.Boolean isEmpty(java.lang.String)
-    public static java.lang.Boolean isEqual(java.lang.String,java.lang.String)
-    public static java.lang.Boolean isIPAddress(java.lang.CharSequence)
-    public static java.lang.Boolean isNetworkUrl(java.lang.String)
-    public static boolean isNumeric(java.lang.String)
-    public static java.lang.Boolean isPhone(java.lang.CharSequence)
-    public static boolean isPhoneValid(java.lang.String)
-    public static java.lang.Boolean isUrl(java.lang.String)
 android.support.v4.media.MediaBrowserCompat$CustomActionCallback
 android.support.v4.media.MediaBrowserCompat$CustomActionResultReceiver:
     private final java.lang.String mAction
     private final android.support.v4.media.MediaBrowserCompat$CustomActionCallback mCallback
     private final android.os.Bundle mExtras
-android.support.v4.media.MediaBrowserCompat$ItemCallback
-android.support.v4.media.MediaBrowserCompat$ItemReceiver:
-    private final android.support.v4.media.MediaBrowserCompat$ItemCallback mCallback
-    private final java.lang.String mMediaId
-android.support.v4.media.MediaBrowserCompat$SearchCallback
-android.support.v4.media.MediaBrowserCompat$SearchResultReceiver:
-    private final android.support.v4.media.MediaBrowserCompat$SearchCallback mCallback
-    private final android.os.Bundle mExtras
-    private final java.lang.String mQuery
 android.support.v4.media.MediaMetadataCompat:
     private static final java.lang.String[] PREFERRED_BITMAP_ORDER
     private static final java.lang.String[] PREFERRED_DESCRIPTION_ORDER
@@ -40217,9 +40443,6 @@ androidx.constraintlayout.core.motion.utils.CurveFit:
 androidx.constraintlayout.core.motion.utils.Easing$CubicEasing
 androidx.constraintlayout.core.motion.utils.Easing:
     public static androidx.constraintlayout.core.motion.utils.Easing getInterpolator(java.lang.String)
-androidx.constraintlayout.core.motion.utils.KeyCache:
-    public float getFloatValue(java.lang.Object,java.lang.String,int)
-    public void setFloatValue(java.lang.Object,java.lang.String,int,float)
 androidx.constraintlayout.core.motion.utils.KeyCycleOscillator$1
 androidx.constraintlayout.core.motion.utils.KeyCycleOscillator$CycleOscillator:
     private final int OFFST
@@ -40266,8 +40489,6 @@ androidx.constraintlayout.core.motion.utils.SplineSet:
 androidx.constraintlayout.core.motion.utils.StepCurve
 androidx.constraintlayout.core.motion.utils.TimeCycleSplineSet$Sort
 androidx.constraintlayout.core.motion.utils.TimeCycleSplineSet:
-    protected static float VAL_2PI
-    protected float calcWave(float)
     public void setPoint(int,float,float,int,float)
     protected void setStartTime(long)
     public void setType(java.lang.String)
@@ -40349,8 +40570,6 @@ androidx.constraintlayout.core.widgets.analyzer.WidgetGroup$MeasureResult:
     java.lang.ref.WeakReference widgetRef
 androidx.constraintlayout.core.widgets.analyzer.WidgetGroup:
     boolean authoritative
-androidx.constraintlayout.motion.utils.StopLogic:
-    public boolean isStopped()
 androidx.constraintlayout.motion.utils.ViewOscillator$AlphaSet
 androidx.constraintlayout.motion.utils.ViewOscillator$CustomSet
 androidx.constraintlayout.motion.utils.ViewOscillator$ElevationSet
@@ -40597,39 +40816,30 @@ androidx.constraintlayout.motion.widget.MotionScene$Transition:
     public int getEndConstraintSetId()
     public int getLayoutDuringTransition()
     public int getStartConstraintSetId()
-    public androidx.constraintlayout.motion.widget.TouchResponse getTouchResponse()
-    public boolean isEnabled()
     public boolean isTransitionFlag(int)
 androidx.constraintlayout.motion.widget.MotionScene:
-    androidx.constraintlayout.motion.widget.MotionScene$Transition mCurrentTransition
     androidx.constraintlayout.widget.StateSet mStateSet
     final androidx.constraintlayout.motion.widget.ViewTransitionController mViewTransitionController
     public void addOnClickListeners(androidx.constraintlayout.motion.widget.MotionLayout,int)
     boolean autoTransition(androidx.constraintlayout.motion.widget.MotionLayout,int)
-    androidx.constraintlayout.widget.ConstraintSet getConstraintSet(int)
     public int[] getConstraintSetIds()
     public java.util.ArrayList getDefinedTransitions()
-    public int getDuration()
     int getEndId()
     public android.view.animation.Interpolator getInterpolator()
     public void getKeyFrames(androidx.constraintlayout.motion.widget.MotionController)
-    boolean getMoveWhenScrollAtTop()
     float getProgressDirection(float,float)
     public float getStaggered()
     int getStartId()
     public androidx.constraintlayout.motion.widget.MotionScene$Transition getTransitionById(int)
-    void processScrollMove(float,float)
     void processScrollUp(float,float)
     void processTouchEvent(android.view.MotionEvent,int,androidx.constraintlayout.motion.widget.MotionLayout)
     void readFallback(androidx.constraintlayout.motion.widget.MotionLayout)
     public void setDuration(int)
-    public void setRtl(boolean)
-    void setTransition(int,int)
-    public void setTransition(androidx.constraintlayout.motion.widget.MotionScene$Transition)
     void setupTouch()
     boolean supportTouch()
     public varargs void viewTransition(int,android.view.View[])
-androidx.constraintlayout.motion.widget.TouchResponse
+androidx.constraintlayout.motion.widget.TouchResponse:
+    android.graphics.RectF getTouchRegion(android.view.ViewGroup,android.graphics.RectF)
 androidx.constraintlayout.motion.widget.ViewTransitionController
 androidx.constraintlayout.widget.ConstraintAttribute:
     public void applyCustom(android.view.View)
@@ -40743,40 +40953,13 @@ androidx.coordinatorlayout.R$styleable:
     public static final int[] GradientColorItem
 androidx.coordinatorlayout.widget.CoordinatorLayout$LayoutParams:
     java.lang.Object mBehaviorTag
-androidx.core.app.ActivityOptionsCompat:
-    public android.os.Bundle toBundle()
 androidx.core.app.ComponentActivity:
     private androidx.collection.SimpleArrayMap mExtraDataMap
-androidx.core.app.NotificationCompat$BubbleMetadata$Api29Impl
-androidx.core.app.NotificationCompat$BubbleMetadata$Api30Impl
-androidx.core.app.NotificationCompat$BubbleMetadata:
-    public boolean getAutoExpandBubble()
-    public android.app.PendingIntent getDeleteIntent()
-    public int getDesiredHeight()
-    public int getDesiredHeightResId()
-    public androidx.core.graphics.drawable.IconCompat getIcon()
-    public android.app.PendingIntent getIntent()
-    public java.lang.String getShortcutId()
-    public boolean isNotificationSuppressed()
 androidx.core.app.NotificationCompat$Builder:
     androidx.core.content.LocusIdCompat mLocusId
 androidx.core.app.NotificationCompatJellybean:
     private static final java.lang.Object sActionsLock
-androidx.core.app.RemoteInput:
-    public boolean getAllowFreeFormInput()
-    public java.util.Set getAllowedDataTypes()
-    public java.lang.CharSequence[] getChoices()
-    public int getEditChoicesBeforeSending()
-    public android.os.Bundle getExtras()
-    public java.lang.CharSequence getLabel()
-    public java.lang.String getResultKey()
-androidx.core.app.SharedElementCallback:
-    public abstract void onMapSharedElements(java.util.List,java.util.Map)
-    public abstract void onSharedElementEnd(java.util.List,java.util.List,java.util.List)
-    public abstract void onSharedElementStart(java.util.List,java.util.List,java.util.List)
 androidx.core.content.LocusIdCompat
-androidx.core.graphics.ColorUtils:
-    private static final java.lang.ThreadLocal TEMP_ARRAY
 androidx.core.graphics.TypefaceCompatBaseImpl$1:
     final synthetic androidx.core.graphics.TypefaceCompatBaseImpl this$0
 androidx.core.graphics.TypefaceCompatBaseImpl$2:
@@ -40847,17 +41030,11 @@ androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityAction
     public static final androidx.core.view.accessibility.AccessibilityNodeInfoCompat$AccessibilityActionCompat ACTION_SHOW_TOOLTIP
 androidx.core.view.accessibility.AccessibilityViewCommand$CommandArguments:
     android.os.Bundle mBundle
-androidx.databinding.ViewDataBinding$IncludedLayouts:
-    public final int[][] indexes
-    public final int[][] layoutIds
-    public final java.lang.String[][] layouts
 androidx.databinding.ViewDataBinding:
     private static final androidx.databinding.CreateWeakListener CREATE_LIST_LISTENER
     private static final androidx.databinding.CreateWeakListener CREATE_LIVE_DATA_LISTENER
     private static final androidx.databinding.CreateWeakListener CREATE_MAP_LISTENER
     private static final androidx.databinding.CallbackRegistry$NotifierCallback REBIND_NOTIFIER
-    private static int findIncludeIndex(java.lang.String,int,androidx.databinding.ViewDataBinding$IncludedLayouts,int)
-    private static int findLastMatching(android.view.ViewGroup,int)
 androidx.drawerlayout.widget.DrawerLayout$1:
     final synthetic androidx.drawerlayout.widget.DrawerLayout this$0
 androidx.drawerlayout.widget.DrawerLayout:
@@ -40933,28 +41110,11 @@ androidx.fragment.app.FragmentManager$7:
     final synthetic androidx.fragment.app.FragmentManager this$0
 androidx.fragment.app.FragmentManager$8:
     final synthetic androidx.fragment.app.FragmentManager this$0
-androidx.fragment.app.FragmentManager$FragmentLifecycleCallbacks:
-    public abstract void onFragmentActivityCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle)
-    public abstract void onFragmentAttached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.content.Context)
-    public abstract void onFragmentCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle)
-    public abstract void onFragmentDestroyed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentDetached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentPaused(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentPreAttached(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.content.Context)
-    public abstract void onFragmentPreCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle)
-    public abstract void onFragmentResumed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentSaveInstanceState(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.os.Bundle)
-    public abstract void onFragmentStarted(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentStopped(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
-    public abstract void onFragmentViewCreated(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment,android.view.View,android.os.Bundle)
-    public abstract void onFragmentViewDestroyed(androidx.fragment.app.FragmentManager,androidx.fragment.app.Fragment)
 androidx.fragment.app.FragmentStateManager$1:
     final synthetic androidx.fragment.app.FragmentStateManager this$0
 androidx.fragment.app.FragmentTransaction:
     private final java.lang.ClassLoader mClassLoader
     private final androidx.fragment.app.FragmentFactory mFragmentFactory
-androidx.fragment.app.FragmentTransition:
-    static java.lang.String findKeyForValue(androidx.collection.ArrayMap,java.lang.String)
 androidx.fragment.app.FragmentTransitionCompat21$1:
     final synthetic androidx.fragment.app.FragmentTransitionCompat21 this$0
 androidx.fragment.app.FragmentTransitionCompat21$2:
@@ -40980,28 +41140,24 @@ androidx.lifecycle.LiveData:
     public boolean hasActiveObservers()
 androidx.lifecycle.MethodCallsLogger:
     private java.util.Map mCalledMethods
-androidx.lifecycle.SavedStateHandle
 androidx.lifecycle.SavedStateHandleController:
-    private final androidx.lifecycle.SavedStateHandle mHandle
     private final java.lang.String mKey
 androidx.lifecycle.ViewModel:
     private volatile boolean mCleared
 androidx.loader.app.LoaderManagerImpl$LoaderInfo:
-    private androidx.loader.app.LoaderManagerImpl$LoaderObserver mObserver
     private androidx.loader.content.Loader mPriorLoader
     androidx.loader.content.Loader getLoader()
-androidx.loader.app.LoaderManagerImpl$LoaderObserver
+androidx.loader.app.LoaderManagerImpl$LoaderObserver:
+    public void dump(java.lang.String,java.io.PrintWriter)
+    boolean hasDeliveredData()
+    void reset()
 androidx.loader.app.LoaderManagerImpl$LoaderViewModel:
     private boolean mCreatingLoader
 androidx.loader.content.Loader$OnLoadCompleteListener
 androidx.loader.content.Loader:
     public void abandon()
-    public boolean cancelLoad()
     public java.lang.String dataToString(java.lang.Object)
-    public void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[])
     public void reset()
-    public final void startLoading()
-    public void stopLoading()
     public void unregisterListener(androidx.loader.content.Loader$OnLoadCompleteListener)
 androidx.media.AudioAttributesCompat:
     private static final int[] SDK_USAGES
@@ -41066,12 +41222,9 @@ androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat:
 androidx.vectordrawable.graphics.drawable.VectorDrawableCompat:
     private android.graphics.drawable.Drawable$ConstantState mCachedConstantStateDelegate
 androidx.viewpager2.adapter.FragmentStateAdapter$2:
-    final synthetic androidx.viewpager2.adapter.FragmentStateAdapter this$0
     final synthetic androidx.viewpager2.adapter.FragmentViewHolder val$holder
-androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer$3:
-    final synthetic androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer this$1
-androidx.viewpager2.adapter.FragmentStateAdapter$FragmentMaxLifecycleEnforcer
-androidx.viewpager2.adapter.FragmentStateAdapter
+androidx.viewpager2.adapter.FragmentStateAdapter:
+    abstract void placeFragmentInViewHolder(androidx.viewpager2.adapter.FragmentViewHolder)
 androidx.viewpager2.adapter.FragmentViewHolder
 com.airbnb.lottie.FontAssetDelegate:
     public android.graphics.Typeface fetchFont(java.lang.String)
@@ -41127,8 +41280,6 @@ com.airbnb.lottie.R$styleable:
     public static final int[] View
     public static final int[] ViewBackgroundHelper
     public static final int[] ViewStubCompat
-com.airbnb.lottie.TextDelegate:
-    public final java.lang.String getTextInternal(java.lang.String)
 com.airbnb.lottie.animation.content.MergePathsContent:
     private final java.lang.String name
 com.airbnb.lottie.animation.content.ShapeContent:
@@ -41441,7 +41592,6 @@ com.google.android.gms.internal.measurement.zzgs:
 com.google.android.gms.internal.measurement.zzgw:
     private static volatile boolean zza
 com.google.android.gms.internal.measurement.zzhu:
-    private static volatile boolean zzf
     private static final java.util.concurrent.atomic.AtomicReference zzg
     private static final com.google.android.gms.internal.measurement.zzhw zzh
 com.google.android.gms.internal.measurement.zzhv:
@@ -41451,8 +41601,6 @@ com.google.android.gms.internal.measurement.zziy:
     private static final com.google.android.gms.internal.measurement.zzix zzd
 com.google.android.gms.internal.measurement.zzja:
     private final byte[] zzb
-com.google.android.gms.internal.measurement.zzjc:
-    private static volatile int zzb
 com.google.android.gms.internal.measurement.zzjl:
     private static volatile boolean zzb
 com.google.android.gms.internal.measurement.zzjr:
@@ -41535,6 +41683,7 @@ com.google.android.gms.stats.WakeLock:
     private static volatile com.google.android.gms.stats.WakeLock$zza zzo
 com.google.android.material.R$style:
     public static final int Widget_MaterialComponents_BottomAppBar
+    public static final int Widget_MaterialComponents_ExtendedFloatingActionButton_Icon
 com.google.android.material.R$styleable:
     public static final int[] ActionBar
     public static final int[] ActionBarLayout
@@ -41566,6 +41715,7 @@ com.google.android.material.R$styleable:
     public static final int[] CoordinatorLayout_Layout
     public static final int[] CustomAttribute
     public static final int[] DrawerArrowToggle
+    public static final int[] ExtendedFloatingActionButton
     public static final int[] FontFamily
     public static final int[] FontFamilyFont
     public static final int[] GradientColor
@@ -41638,23 +41788,13 @@ com.google.android.material.bottomappbar.BottomAppBar:
     private static final int DEF_STYLE_RES
 com.google.android.material.bottomsheet.BottomSheetBehavior$1:
     final synthetic com.google.android.material.bottomsheet.BottomSheetBehavior this$0
+com.google.android.material.bottomsheet.BottomSheetDialog$4:
+    final synthetic com.google.android.material.bottomsheet.BottomSheetDialog this$0
 com.google.android.material.card.MaterialCardViewHelper$1:
     final synthetic com.google.android.material.card.MaterialCardViewHelper this$0
-com.google.android.material.circularreveal.CircularRevealFrameLayout:
-    private final com.google.android.material.circularreveal.CircularRevealHelper helper
 com.google.android.material.circularreveal.CircularRevealHelper:
-    public void buildCircularRevealCache()
-    public void destroyCircularRevealCache()
     public void draw(android.graphics.Canvas)
-    public android.graphics.drawable.Drawable getCircularRevealOverlayDrawable()
-    public int getCircularRevealScrimColor()
-    public com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo getRevealInfo()
     public boolean isOpaque()
-    public void setCircularRevealOverlayDrawable(android.graphics.drawable.Drawable)
-    public void setCircularRevealScrimColor(int)
-    public void setRevealInfo(com.google.android.material.circularreveal.CircularRevealWidget$RevealInfo)
-com.google.android.material.circularreveal.cardview.CircularRevealCardView:
-    private final com.google.android.material.circularreveal.CircularRevealHelper helper
 com.google.android.material.datepicker.MaterialCalendar$1:
     final synthetic com.google.android.material.datepicker.MaterialCalendar this$0
 com.google.android.material.datepicker.MaterialCalendarGridView$1:
@@ -41663,11 +41803,15 @@ com.google.android.material.datepicker.SmoothCalendarLayoutManager$1:
     final synthetic com.google.android.material.datepicker.SmoothCalendarLayoutManager this$0
 com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$3:
     final synthetic com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton this$0
-com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton$OnChangedCallback:
-    public abstract void onExtended(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
-    public abstract void onHidden(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
-    public abstract void onShown(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
-    public abstract void onShrunken(com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton)
+com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton:
+    private static final int DEF_STYLE_RES
+    static final android.util.Property HEIGHT
+    static final android.util.Property PADDING_END
+    static final android.util.Property PADDING_START
+    static final android.util.Property WIDTH
+    private int extendedPaddingEnd
+    private int extendedPaddingStart
+    protected android.content.res.ColorStateList originalTextCsl
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$4:
     final synthetic com.google.android.material.floatingactionbutton.FloatingActionButtonImpl this$0
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$DisabledElevationAnimation:
@@ -41808,8 +41952,6 @@ com.google.gson.internal.bind.TreeTypeAdapter$GsonContextImpl:
     final synthetic com.google.gson.internal.bind.TreeTypeAdapter this$0
 com.google.gson.internal.bind.TypeAdapters$26$1:
     final synthetic com.google.gson.internal.bind.TypeAdapters$26 this$0
-com.ramijemli.percentagechartview.PercentageChartView:
-    public void setProgress(float,boolean)
 com.ramijemli.percentagechartview.R$styleable:
     public static final int[] ActionBar
     public static final int[] ActionBarLayout
@@ -42534,17 +42676,12 @@ te.app.evidence.databinding.FragmentLoginBinding:
     public final androidx.appcompat.widget.AppCompatImageView loginBackground
     public final te.app.evidence.customViews.views.CustomTextViewMedium loginHeader
     public final androidx.appcompat.widget.AppCompatImageView logo
+    public final android.widget.LinearLayout termsContainer
     public final te.app.evidence.customViews.views.CustomTextViewRegular tvForgetTimer
 te.app.evidence.databinding.FragmentMainHomeBinding:
     public final androidx.constraintlayout.helper.widget.Flow flow3
-    public final androidx.appcompat.widget.AppCompatImageView icCourtServices
-    public final androidx.appcompat.widget.AppCompatImageView icLocations
     public final de.hdodenhof.circleimageview.CircleImageView icMainImg
-    public final androidx.appcompat.widget.AppCompatImageView icOffice
     public final te.app.evidence.customViews.views.CustomTextViewRegular tPoints
-    public final te.app.evidence.customViews.views.CustomTextViewMedium tvLocations
-    public final te.app.evidence.customViews.views.CustomTextViewMedium tvOffice
-    public final te.app.evidence.customViews.views.CustomTextViewMedium tvService
     public final android.view.View view
     public final te.app.evidence.customViews.views.CustomTextViewRegular welcome
 te.app.evidence.databinding.FragmentMonthlyReportsBinding:
@@ -42566,8 +42703,8 @@ te.app.evidence.databinding.FragmentPointsBinding:
 te.app.evidence.databinding.FragmentProfileBinding:
     public final com.google.android.material.textfield.TextInputLayout inputNewPassword
 te.app.evidence.databinding.FragmentRegisterBinding:
-    public final androidx.appcompat.widget.AppCompatImageView homeTitle
     public final com.google.android.material.textfield.TextInputLayout inputInviteCode
+    public final android.widget.LinearLayout termsContainer
 te.app.evidence.databinding.FragmentSplashBinding:
     protected te.app.evidence.pages.splash.SplashViewModel mViewmodel
 te.app.evidence.databinding.ItemAllCaseBinding:
@@ -42699,67 +42836,30 @@ te.app.evidence.databinding.OptionDialogBinding:
 te.app.evidence.databinding.PackageRenewDialogBinding:
     public final androidx.appcompat.widget.AppCompatImageView icImg
     public final te.app.evidence.customViews.views.CustomTextViewRegular tvTitle
+te.app.evidence.databinding.SettingsBottomSheetBinding:
+    public final android.view.View vAbout
+    public final android.view.View vBottom
+    public final android.view.View vContact
+    public final android.view.View vPrivacy
+    public final android.view.View vShare
+    public final android.view.View vSupport
+    public final android.view.View vTerms
 te.app.evidence.model.base.Mutable:
     public android.view.View v
-te.app.evidence.model.base.SearchRequest:
-    private java.lang.String caseId
-    private java.lang.String sessionId
 te.app.evidence.pages.attachments.adapters.AttachmentsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.attachments.adapters.AttachmentsAdapter this$0
-te.app.evidence.pages.attachments.models.AddAttachmentRequest:
-    private java.lang.String clientId
-te.app.evidence.pages.auth.models.ConfirmCodeRequest:
-    private java.lang.String phone
-te.app.evidence.pages.auth.models.LoginRequest:
-    private java.lang.String token
-te.app.evidence.pages.auth.models.Permission:
-    public java.lang.String getAddcases()
-    public java.lang.String getCategory()
-    public java.lang.String getClients()
-    public java.lang.String getDailyReport()
-    public java.lang.String getMohdreen()
-    public java.lang.String getMonthlyReport()
-    public java.lang.String getSearchCase()
-    public java.lang.String getUsers()
-te.app.evidence.pages.auth.models.UserData:
-    public java.lang.String getApiToken()
-    public java.lang.String getCatId()
-    public java.lang.String getEmail()
-    public java.lang.String getExpiry_date()
-    public int getId()
-    public java.lang.String getImage()
-    public java.lang.String getMy_points()
-    public java.lang.String getName()
-    public java.lang.String getPackageName()
-    public java.lang.String getPhone()
-    public java.lang.String getType()
-    public java.lang.String getUser_code()
 te.app.evidence.pages.cases.adapters.AllCasesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.cases.adapters.AllCasesAdapter this$0
 te.app.evidence.pages.cases.adapters.InputTagClientsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.cases.adapters.InputTagClientsAdapter this$0
 te.app.evidence.pages.cases.adapters.SearchClientsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.cases.adapters.SearchClientsAdapter this$0
-te.app.evidence.pages.cases.models.AddCaseRequest:
-    private java.lang.String caseId
-te.app.evidence.pages.cases.models.caseDetails.CaseStatistics:
-    public java.lang.String getAttachmentsNumber()
-    public java.lang.String getClients()
-    public java.lang.String getKhesm()
-    public java.lang.String getNotesNumber()
-    public java.lang.String getSessionsNumber()
-    public void setAttachmentsNumber(java.lang.String)
-    public void setClients(java.lang.String)
-    public void setKhesm(java.lang.String)
-    public void setSessionsNumber(java.lang.String)
 te.app.evidence.pages.cases.viewModels.CasesViewModel:
     private int selectedBtn
 te.app.evidence.pages.cases.viewModels.SearchClientsViewModel:
     te.app.evidence.pages.clients.models.ClientsMainData clientsResponse
 te.app.evidence.pages.categories.adapters.CategoriesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.categories.adapters.CategoriesAdapter this$0
-te.app.evidence.pages.categories.models.AddCategoryRequest:
-    private java.lang.String id
 te.app.evidence.pages.categories.viewModels.AddCategoriesViewModel:
     te.app.evidence.pages.categories.models.CategoriesData categoriesData
 te.app.evidence.pages.clients.adapters.ClientCasesAdapter$ViewHolder:
@@ -42768,47 +42868,23 @@ te.app.evidence.pages.clients.adapters.ClientCasesAdapter:
     public int lastSelected
 te.app.evidence.pages.clients.adapters.ClientsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.clients.adapters.ClientsAdapter this$0
-te.app.evidence.pages.clients.models.AddClientRequest:
-    private java.lang.String caseId
-    private java.lang.String client_id
-te.app.evidence.pages.clients.models.Category:
-    public int getId()
-    public java.lang.String getName()
 te.app.evidence.pages.clients.notes.NotesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.clients.notes.NotesAdapter this$0
-te.app.evidence.pages.clients.notes.models.AddNoteRequest:
-    private java.lang.String client_id
-    private java.lang.String note_id
-    private java.lang.String sessionId
 te.app.evidence.pages.clients.viewModels.AddClientViewModel:
     te.app.evidence.pages.clients.models.Clients clients
-    public void getCategories()
+te.app.evidence.pages.home.adapters.HomeMainAdapter$ViewHolder:
+    final synthetic te.app.evidence.pages.home.adapters.HomeMainAdapter this$0
 te.app.evidence.pages.home.adapters.HomeReportersAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.home.adapters.HomeReportersAdapter this$0
 te.app.evidence.pages.home.adapters.SessionsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.home.adapters.SessionsAdapter this$0
-te.app.evidence.pages.home.models.CountData:
-    public java.lang.String getCases()
-    public java.lang.String getMohdreen()
-    public java.lang.String getSessions()
-    public java.lang.String getUsers()
-te.app.evidence.pages.home.models.UserPackage:
-    public java.lang.String getExpiryDate()
-    public java.lang.String getExpiryPackage()
-    public int getPackageId()
-    public java.lang.String getWarningDate()
 te.app.evidence.pages.mohdrs.adapters.BailiffsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.mohdrs.adapters.BailiffsAdapter this$0
-te.app.evidence.pages.mohdrs.models.AddMohdrRequest:
-    public void setKhesmName(java.lang.String)
-    public void setMokelName(java.lang.String)
 te.app.evidence.pages.onBoard.OnBoardAdapter$SliderAdapterVH:
     android.view.View itemView
     final synthetic te.app.evidence.pages.onBoard.OnBoardAdapter this$0
 te.app.evidence.pages.onBoard.OnBoardAdapter:
     android.content.Context context
-te.app.evidence.pages.onBoard.models.OnBoard:
-    private int id
 te.app.evidence.pages.places.adapters.GovernAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.places.adapters.GovernAdapter this$0
 te.app.evidence.pages.places.adapters.GovernAdapter:
@@ -42817,6 +42893,8 @@ te.app.evidence.pages.places.adapters.PlacesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.places.adapters.PlacesAdapter this$0
 te.app.evidence.pages.points.adapters.ReplacedPointsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.points.adapters.ReplacedPointsAdapter this$0
+te.app.evidence.pages.publicFiles.adapters.PublicFilesAdapter$ViewHolder:
+    final synthetic te.app.evidence.pages.publicFiles.adapters.PublicFilesAdapter this$0
 te.app.evidence.pages.reports.adapters.ReportsAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.reports.adapters.ReportsAdapter this$0
 te.app.evidence.pages.reports.adapters.ReportsAdapter:
@@ -42829,52 +42907,26 @@ te.app.evidence.pages.services.viewModels.ServicesViewModel:
     te.app.evidence.pages.services.models.ServiceData serviceData
 te.app.evidence.pages.sessions.adapters.SessionNotesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.sessions.adapters.SessionNotesAdapter this$0
-te.app.evidence.pages.sessions.models.AddSessionRequest:
-    private java.lang.String caseId
-    private java.lang.String sessionId
 te.app.evidence.pages.sessions.viewModels.AddSessionViewModel:
     te.app.evidence.pages.sessions.models.SessionItem sessionItem
-te.app.evidence.pages.settings.PackagesFragment$$InternalSyntheticLambda$6$a02074ac4a1169c8f66d597e2ba142ddcf737ddf44213eb5ec34f9fdc8d71b6b$0
-te.app.evidence.pages.settings.PackagesFragment$$InternalSyntheticLambda$6$a02074ac4a1169c8f66d597e2ba142ddcf737ddf44213eb5ec34f9fdc8d71b6b$1
-te.app.evidence.pages.settings.PackagesFragment$$InternalSyntheticLambda$6$a02074ac4a1169c8f66d597e2ba142ddcf737ddf44213eb5ec34f9fdc8d71b6b$2
-te.app.evidence.pages.settings.PackagesFragment:
-    public static synthetic void $r8$lambda$6_Nl-T_19sTCoZH8-K_vBHB32E0(te.app.evidence.pages.settings.PackagesFragment,te.app.evidence.pages.settings.models.Packages,android.app.Dialog,android.view.View)
-    public static synthetic void $r8$lambda$9e7Z059djCxg8clCEz6zaF4Q7Hw(te.app.evidence.pages.settings.PackagesFragment,te.app.evidence.pages.settings.models.Packages,android.app.Dialog,android.view.View)
-    private synthetic void lambda$renewDialog$1(te.app.evidence.pages.settings.models.Packages,android.app.Dialog,android.view.View)
-    private synthetic void lambda$renewDialog$2(te.app.evidence.pages.settings.models.Packages,android.app.Dialog,android.view.View)
 te.app.evidence.pages.settings.adapters.PackagesAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.settings.adapters.PackagesAdapter this$0
-te.app.evidence.pages.settings.models.Packages:
-    private int id
-    public int getId()
-te.app.evidence.pages.settings.models.RenewPackageRequest
 te.app.evidence.pages.settings.viewModels.SettingsViewModel:
     te.app.evidence.pages.settings.models.AboutData aboutData
-    public void subscribePackage(int,int)
 te.app.evidence.pages.users.adapters.UsersAdapter$ViewHolder:
     final synthetic te.app.evidence.pages.users.adapters.UsersAdapter this$0
-te.app.evidence.pages.users.models.AddUserRequest:
-    private java.lang.String id
-    public boolean isValid()
-te.app.evidence.pages.users.models.userPermissions.UserPermissionsData:
-    private java.lang.String userId
 te.app.evidence.pages.users.viewModels.AddUserViewModel:
     te.app.evidence.pages.users.models.SystemUserData systemUserData
 te.app.evidence.repository.AttachmentsRepository:
     androidx.lifecycle.MutableLiveData liveData
 te.app.evidence.repository.AuthRepository:
     protected androidx.lifecycle.MutableLiveData liveData
-te.app.evidence.repository.BaseRepository:
-    public io.reactivex.disposables.Disposable getCategories()
 te.app.evidence.repository.CasesRepository:
     androidx.lifecycle.MutableLiveData liveData
-    public io.reactivex.disposables.Disposable createMohdr(te.app.evidence.pages.mohdrs.models.AddMohdrRequest)
 te.app.evidence.repository.CategoriesRepository:
     androidx.lifecycle.MutableLiveData liveData
 te.app.evidence.repository.ClientsRepository:
     androidx.lifecycle.MutableLiveData liveData
-    public io.reactivex.disposables.Disposable addNewClient(te.app.evidence.pages.clients.models.AddClientRequest)
-    public io.reactivex.disposables.Disposable editClient(te.app.evidence.pages.clients.models.AddClientRequest)
 te.app.evidence.repository.HomeRepository:
     androidx.lifecycle.MutableLiveData liveData
 te.app.evidence.repository.NotesRepository:
@@ -42883,14 +42935,7 @@ te.app.evidence.repository.ReportsRepository:
     androidx.lifecycle.MutableLiveData liveData
 te.app.evidence.repository.SettingsRepository:
     androidx.lifecycle.MutableLiveData liveData
-    public io.reactivex.disposables.Disposable subscribePackage(int,int)
 te.app.evidence.repository.SystemUsersRepository:
     androidx.lifecycle.MutableLiveData liveData
-    public io.reactivex.disposables.Disposable addNewUser(te.app.evidence.pages.users.models.AddUserRequest)
-te.app.evidence.utils.helper.LauncherHelper:
-    public static java.lang.String[] location
-    public static java.lang.String[] phonePermission
 te.app.evidence.utils.images.PhotoFullPopupWindow:
     private static te.app.evidence.utils.images.PhotoFullPopupWindow instance
-te.app.evidence.utils.session.UserHelper:
-    public void addJwt(java.lang.String)

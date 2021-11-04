@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">توثيق</string>
-    <string name="gallery">Gallery</string>
-    <string name="camera">Camera</string>
+    <string name="gallery">المعرض</string>
+    <string name="camera">الكاميرا</string>
     <string name="design_program">Design and programming</string>
     <string name="call_grand">Contact</string>
     <string name="whats">الواتس اب</string>
@@ -239,5 +239,6 @@
     <string name="terms_settings">الشروط و الأحكام</string>
     <string name="privacy_settings">سياسة الخصوصية و الإستخدام</string>
     <string name="share">مشاركة التطبيق</string>
+    <string name="file_search_hint">اكتب ما يدور فى بالك</string>
 
 </resources>

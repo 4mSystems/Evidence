@@ -147,6 +147,11 @@ import te.app.evidence.pages.profile.ProfileFragment_MembersInjector;
 import te.app.evidence.pages.profile.ProfileViewModel;
 import te.app.evidence.pages.profile.ProfileViewModel_Factory;
 import te.app.evidence.pages.profile.ProfileViewModel_MembersInjector;
+import te.app.evidence.pages.publicFiles.PublicFilesFragment;
+import te.app.evidence.pages.publicFiles.PublicFilesFragment_MembersInjector;
+import te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel;
+import te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel_Factory;
+import te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel_MembersInjector;
 import te.app.evidence.pages.reports.DailyReportsFragment;
 import te.app.evidence.pages.reports.DailyReportsFragment_MembersInjector;
 import te.app.evidence.pages.reports.MonthlyReportsFragment;
@@ -415,6 +420,10 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
     return injectServicesViewModel(ServicesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
   }
 
+  private PublicFilesViewModel publicFilesViewModel() {
+    return injectPublicFilesViewModel(PublicFilesViewModel_Factory.newInstance(settingsRepositoryProvider.get()));
+  }
+
   @SuppressWarnings("unchecked")
   private void initialize(final ConnectionModule connectionModuleParam,
       final LiveData liveDataParam) {
@@ -659,6 +668,11 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
   @Override
   public void inject(MainHomeFragment mainHomeFragment) {
     injectMainHomeFragment(mainHomeFragment);
+  }
+
+  @Override
+  public void inject(PublicFilesFragment publicFilesFragment) {
+    injectPublicFilesFragment(publicFilesFragment);
   }
 
   private MainActivity injectMainActivity(MainActivity instance) {
@@ -1057,6 +1071,16 @@ public final class DaggerIApplicationComponent implements IApplicationComponent 
 
   private MainHomeFragment injectMainHomeFragment(MainHomeFragment instance) {
     MainHomeFragment_MembersInjector.injectViewModel(instance, homeViewModel());
+    return instance;
+  }
+
+  private PublicFilesViewModel injectPublicFilesViewModel(PublicFilesViewModel instance) {
+    PublicFilesViewModel_MembersInjector.injectRepository(instance, settingsRepositoryProvider.get());
+    return instance;
+  }
+
+  private PublicFilesFragment injectPublicFilesFragment(PublicFilesFragment instance) {
+    PublicFilesFragment_MembersInjector.injectViewModel(instance, publicFilesViewModel());
     return instance;
   }
 

@@ -133,6 +133,50 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+#-keep gson annotations
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+
+-keepattributes Signature, InnerClasses, EnclosingMethod
+
+# Retrofit does reflection on method and parameter annotations.
+-keepattributes RuntimeVisibleAnnotations, RuntimeVisibleParameterAnnotations
+
+# Keep annotation default values (e.g., retrofit2.http.Field.encoded).
+-keepattributes AnnotationDefault
+
+# Retain service method parameters when optimizing.
+-keepclassmembers,allowshrinking,allowobfuscation interface * {
+    @retrofit2.http.* <methods>;
+}
+
+# Ignore annotation used for build tooling.
+-dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+
+# Ignore JSR 305 annotations for embedding nullability information.
+-dontwarn javax.annotation.**
+
+# Guarded by a NoClassDefFoundError try/catch and only used when on the classpath.
+-dontwarn kotlin.Unit
+
+# Top-level functions that can only be used by Kotlin.
+-dontwarn retrofit2.KotlinExtensions
+-dontwarn retrofit2.KotlinExtensions*
+
+# With R8 full mode, it sees no subtypes of Retrofit interfaces since they are created with a Proxy
+# and replaces all potential values with null. Explicitly keeping the interfaces prevents this.
+-if interface * { @retrofit2.http.* <methods>; }
+-keep,allowobfuscation interface <1>
+
+# Keep generic signature of Call, Response (R8 full mode strips signatures from non-kept items).
+-keep,allowobfuscation,allowshrinking interface retrofit2.Call
+-keep,allowobfuscation,allowshrinking class retrofit2.Response
+
+# With R8 full mode generic signatures are stripped for classes that are not
+# kept. Suspend functions are wrapped in continuations where the type argument
+# is used.
+-keep,allowobfuscation,allowshrinking class kotlin.coroutines.Continuation
 # End of content from /home/elnagar/Android projects/Evidence/app/proguard-rules.pro
 # The proguard configuration file for the following section is /home/elnagar/Android projects/Evidence/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
 -keep class androidx.core.app.CoreComponentFactory { <init>(); }
@@ -199,6 +243,8 @@
 
 -keep class androidx.appcompat.widget.ViewStubCompat { <init>(android.content.Context, android.util.AttributeSet); }
 
+-keep class androidx.browser.browseractions.BrowserActionsFallbackMenuView { <init>(android.content.Context, android.util.AttributeSet); }
+
 -keep class androidx.cardview.widget.CardView { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class androidx.constraintlayout.helper.widget.Flow { <init>(android.content.Context, android.util.AttributeSet); }
@@ -247,8 +293,6 @@
 
 -keep class com.google.android.material.datepicker.MaterialCalendarGridView { <init>(android.content.Context, android.util.AttributeSet); }
 
--keep class com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
-
 -keep class com.google.android.material.floatingactionbutton.FloatingActionButton { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class com.google.android.material.internal.BaselineLayout { <init>(android.content.Context, android.util.AttributeSet); }
@@ -293,6 +337,8 @@
 
 -keep class im.delight.android.webview.AdvancedWebView { <init>(android.content.Context, android.util.AttributeSet); }
 
+-keep class te.app.evidence.customViews.tesDialog.TesImageDialog { <init>(android.content.Context, android.util.AttributeSet); }
+
 -keep class te.app.evidence.customViews.views.CustomTextViewMedium { <init>(android.content.Context, android.util.AttributeSet); }
 
 -keep class te.app.evidence.customViews.views.CustomTextViewRegular { <init>(android.content.Context, android.util.AttributeSet); }
@@ -309,7 +355,7 @@
 
 
 # End of content from /home/elnagar/Android projects/Evidence/app/build/intermediates/aapt_proguard_file/release/aapt_rules.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/proguard.txt
 -dontwarn androidx.databinding.ViewDataBinding
 -dontwarn androidx.databinding.ViewDataBinding$LiveDataListener
 
@@ -317,8 +363,8 @@
 -keep public class * extends androidx.databinding.DataBinderMapper
 
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/e4498f02b4856d84ec1227841a364c48/transformed/databinding-runtime-7.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/proguard.txt
 # Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -366,8 +412,8 @@
 }
 
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/20481632158d3e6823a3f78f8a22dc4e/transformed/material-1.4.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/proguard.txt
 # Copyright (C) 2018 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -391,8 +437,8 @@
   <methods>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/111e22dbe3d8acb54cc8a756c402aa5d/transformed/rules/lib/META-INF/proguard/retrofit2.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3ee1862cced42bd0bc44f2880db8f242/transformed/appcompat-1.3.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/111e22dbe3d8acb54cc8a756c402aa5d/transformed/rules/lib/META-INF/proguard/retrofit2.pro
 # Retrofit does reflection on generic parameters. InnerClasses is required to use Signature and
 # EnclosingMethod is required to use InnerClasses.
 -keepattributes Signature, InnerClasses, EnclosingMethod
@@ -423,8 +469,8 @@
 -if interface * { @retrofit2.http.* <methods>; }
 -keep,allowobfuscation interface <1>
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/111e22dbe3d8acb54cc8a756c402aa5d/transformed/rules/lib/META-INF/proguard/retrofit2.pro
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/111e22dbe3d8acb54cc8a756c402aa5d/transformed/rules/lib/META-INF/proguard/retrofit2.pro
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/proguard.txt
 # Add project specific ProGuard rules here.
 # You can edit the include path and order by changing the proguardFiles
 # directive in build.gradle.
@@ -452,8 +498,8 @@
 -dontwarn com.android.org.conscrypt.OpenSSLSocketImpl
 -dontwarn org.apache.harmony.xnet.provider.jsse.OpenSSLSocketImpl
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f7da2de6c0234237846cc740be648db9/transformed/jetified-conscrypt-android-2.5.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/proguard.txt
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep class * extends com.bumptech.glide.module.AppGlideModule {
  <init>(...);
@@ -469,15 +515,15 @@
 # Uncomment for DexGuard only
 #-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3483ad7ea62e383cc49907b1f630cb2a/transformed/jetified-glide-4.12.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/proguard.txt
 # Analytics library is optional.
 # Access to this class is protected by try/catch(NoClassDefFoundError e)
 # b/35686744 Don't fail during proguard if the class is missing from the APK.
 -dontwarn com.google.android.gms.measurement.AppMeasurement*
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
@@ -485,8 +531,8 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/71394f2279308b3e2bba4ef45d2684ff/transformed/jetified-play-services-measurement-sdk-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/71394f2279308b3e2bba4ef45d2684ff/transformed/jetified-play-services-measurement-sdk-19.0.2/proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
@@ -494,8 +540,8 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/71394f2279308b3e2bba4ef45d2684ff/transformed/jetified-play-services-measurement-sdk-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/0988d926d041fedc1a81c910795fceac/transformed/jetified-play-services-measurement-impl-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/71394f2279308b3e2bba4ef45d2684ff/transformed/jetified-play-services-measurement-sdk-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0988d926d041fedc1a81c910795fceac/transformed/jetified-play-services-measurement-impl-19.0.2/proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
@@ -503,8 +549,8 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/0988d926d041fedc1a81c910795fceac/transformed/jetified-play-services-measurement-impl-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/0988d926d041fedc1a81c910795fceac/transformed/jetified-play-services-measurement-impl-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/proguard.txt
 # Can be removed once we pull in a dependency on firebase-common that includes
 # https://github.com/firebase/firebase-android-sdk/pull/1472/commits/856f1ca1151cdd88679bbc778892f23dfa34fc06#diff-a2ed34b5a38b4c6c686b09e54865eb48
 -dontwarn com.google.auto.value.AutoValue
@@ -517,14 +563,14 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/proguard.txt
 -dontwarn com.google.firebase.platforminfo.KotlinDetector
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/f05bd6dd02ba3edf6a62d27cf44cdd66/transformed/jetified-play-services-measurement-sdk-api-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f05bd6dd02ba3edf6a62d27cf44cdd66/transformed/jetified-play-services-measurement-sdk-api-19.0.2/proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
@@ -532,8 +578,8 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/f05bd6dd02ba3edf6a62d27cf44cdd66/transformed/jetified-play-services-measurement-sdk-api-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/987b84ba018af43988786146f1264afb/transformed/jetified-play-services-measurement-base-19.0.2/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f05bd6dd02ba3edf6a62d27cf44cdd66/transformed/jetified-play-services-measurement-sdk-api-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/987b84ba018af43988786146f1264afb/transformed/jetified-play-services-measurement-base-19.0.2/proguard.txt
 # We keep all fields for every generated proto file as the runtime uses
 # reflection over them that ProGuard cannot detect. Without this keep
 # rule, fields may be removed that would cause runtime failures.
@@ -541,8 +587,8 @@
   <fields>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/987b84ba018af43988786146f1264afb/transformed/jetified-play-services-measurement-base-19.0.2/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/987b84ba018af43988786146f1264afb/transformed/jetified-play-services-measurement-base-19.0.2/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/proguard.txt
 # Proguard flags for consumers of the Google Play services SDK
 # https://developers.google.com/android/guides/setup#add_google_play_services_to_your_project
 
@@ -601,8 +647,8 @@
 -dontwarn javax.annotation.**
 -dontwarn org.checkerframework.**
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/proguard.txt
 # Copyright (C) 2020 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -623,8 +669,8 @@
     public <init>();
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/fe1f519b2e37fa2d39bf8195a09592b9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/5bbbbfddecb682ccd678abd0d06605d1/transformed/fragment-1.3.6/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe1f519b2e37fa2d39bf8195a09592b9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/proguard.txt
 -keepclassmembers,allowobfuscation class * extends androidx.lifecycle.ViewModel {
     <init>(androidx.lifecycle.SavedStateHandle);
 }
@@ -633,8 +679,8 @@
     <init>(android.app.Application,androidx.lifecycle.SavedStateHandle);
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/fe1f519b2e37fa2d39bf8195a09592b9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/7a01b143b28a9a9b38b3d65a41c235a0/transformed/lifecycle-viewmodel-2.3.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fe1f519b2e37fa2d39bf8195a09592b9/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/7a01b143b28a9a9b38b3d65a41c235a0/transformed/lifecycle-viewmodel-2.3.1/proguard.txt
 -keepclassmembers,allowobfuscation class * extends androidx.lifecycle.ViewModel {
     <init>();
 }
@@ -643,8 +689,8 @@
     <init>(android.app.Application);
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/7a01b143b28a9a9b38b3d65a41c235a0/transformed/lifecycle-viewmodel-2.3.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/749a0d2240178eaa653d7edfe3da2207/transformed/recyclerview-1.2.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/7a01b143b28a9a9b38b3d65a41c235a0/transformed/lifecycle-viewmodel-2.3.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/749a0d2240178eaa653d7edfe3da2207/transformed/recyclerview-1.2.1/proguard.txt
 # Copyright (C) 2015 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -670,8 +716,8 @@
     public void suppressLayout(boolean);
     public boolean isLayoutSuppressed();
 }
-# End of content from /home/elnagar/.gradle/caches/transforms-3/749a0d2240178eaa653d7edfe3da2207/transformed/recyclerview-1.2.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/749a0d2240178eaa653d7edfe3da2207/transformed/recyclerview-1.2.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/proguard.txt
 ### OKHTTP
 
 # Platform calls Class.forName on types which do not exist on Android to determine platform.
@@ -685,8 +731,8 @@
 # JDK 7-only method which is @hide on Android. Animal sniffer annotation.
 -dontwarn okio.DeflaterSink
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/c9f24c50d501d216174de629b40a5e33/transformed/coordinatorlayout-1.1.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c9f24c50d501d216174de629b40a5e33/transformed/coordinatorlayout-1.1.0/proguard.txt
 # Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -710,8 +756,8 @@
 # Make sure we keep annotations for CoordinatorLayout's DefaultBehavior and ViewPager's DecorView
 -keepattributes *Annotation*
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/c9f24c50d501d216174de629b40a5e33/transformed/coordinatorlayout-1.1.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/c4edd8ff9e4bc6b0d27996e1c576c35a/transformed/transition-1.2.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c9f24c50d501d216174de629b40a5e33/transformed/coordinatorlayout-1.1.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c4edd8ff9e4bc6b0d27996e1c576c35a/transformed/transition-1.2.0/proguard.txt
 # Copyright (C) 2017 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -731,8 +777,8 @@
   androidx.transition.ChangeBounds$ViewBounds mViewBounds;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/c4edd8ff9e4bc6b0d27996e1c576c35a/transformed/transition-1.2.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/f5f7a1d03e47e040ae9e2a271cc5a482/transformed/vectordrawable-animated-1.1.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c4edd8ff9e4bc6b0d27996e1c576c35a/transformed/transition-1.2.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f5f7a1d03e47e040ae9e2a271cc5a482/transformed/vectordrawable-animated-1.1.0/proguard.txt
 # Copyright (C) 2016 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -753,8 +799,8 @@
    *** get*();
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/f5f7a1d03e47e040ae9e2a271cc5a482/transformed/vectordrawable-animated-1.1.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/20a4192828d7ed5266811775ac7ec943/transformed/media-1.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f5f7a1d03e47e040ae9e2a271cc5a482/transformed/vectordrawable-animated-1.1.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/20a4192828d7ed5266811775ac7ec943/transformed/media-1.0.0/proguard.txt
 # Copyright (C) 2017 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -778,8 +824,8 @@
 -keep class androidx.media.** implements android.os.Parcelable {
     public static final android.os.Parcelable$Creator *;
 }
-# End of content from /home/elnagar/.gradle/caches/transforms-3/20a4192828d7ed5266811775ac7ec943/transformed/media-1.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/20a4192828d7ed5266811775ac7ec943/transformed/media-1.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/proguard.txt
 # Never inline methods, but allow shrinking and obfuscation.
 -keepclassmembernames,allowobfuscation,allowshrinking class androidx.core.view.ViewCompat$Api* {
   <methods>;
@@ -791,19 +837,19 @@
   <methods>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/ceda8dd758a1ec94e31b90c3a654dd6c/transformed/versionedparcelable-1.1.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceda8dd758a1ec94e31b90c3a654dd6c/transformed/versionedparcelable-1.1.1/proguard.txt
 -keep class * implements androidx.versionedparcelable.VersionedParcelable
 -keep public class android.support.**Parcelizer { *; }
 -keep public class androidx.**Parcelizer { *; }
 -keep public class androidx.versionedparcelable.ParcelImpl
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/ceda8dd758a1ec94e31b90c3a654dd6c/transformed/versionedparcelable-1.1.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ceda8dd758a1ec94e31b90c3a654dd6c/transformed/versionedparcelable-1.1.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/proguard.txt
 # this rule is need to work properly when app is compiled with api 28, see b/142778206
 -keepclassmembers class * extends androidx.lifecycle.EmptyActivityLifecycleCallbacks { *; }
-# End of content from /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/1a5a7a9882e9f48e061155f2b0d52ca1/transformed/lifecycle-runtime-2.3.1/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/1a5a7a9882e9f48e061155f2b0d52ca1/transformed/lifecycle-runtime-2.3.1/proguard.txt
 -keepattributes *Annotation*
 
 -keepclassmembers enum androidx.lifecycle.Lifecycle$Event {
@@ -824,8 +870,8 @@
 # this rule is need to work properly when app is compiled with api 28, see b/142778206
 # Also this rule prevents registerIn from being inlined.
 -keepclassmembers class androidx.lifecycle.ReportFragment$LifecycleCallbacks { *; }
-# End of content from /home/elnagar/.gradle/caches/transforms-3/1a5a7a9882e9f48e061155f2b0d52ca1/transformed/lifecycle-runtime-2.3.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/d66d550817bb214b0a87885f76bce415/transformed/jetified-savedstate-1.1.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/1a5a7a9882e9f48e061155f2b0d52ca1/transformed/lifecycle-runtime-2.3.1/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d66d550817bb214b0a87885f76bce415/transformed/jetified-savedstate-1.1.0/proguard.txt
 # Copyright (C) 2019 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -844,40 +890,40 @@
     <init>();
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/d66d550817bb214b0a87885f76bce415/transformed/jetified-savedstate-1.1.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d66d550817bb214b0a87885f76bce415/transformed/jetified-savedstate-1.1.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/ec91dc9af933f6b7db44503be4079213/transformed/jetified-transport-api-3.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ec91dc9af933f6b7db44503be4079213/transformed/jetified-transport-api-3.0.0/proguard.txt
 -dontwarn com.google.auto.value.AutoValue
 -dontwarn com.google.auto.value.AutoValue$Builder
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/ec91dc9af933f6b7db44503be4079213/transformed/jetified-transport-api-3.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/ec91dc9af933f6b7db44503be4079213/transformed/jetified-transport-api-3.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/proguard.txt
 -dontwarn com.google.firebase.components.Component$Instantiation
 -dontwarn com.google.firebase.components.Component$ComponentType
 
 -keep class * implements com.google.firebase.components.ComponentRegistrar
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/b4f1d137e466523ea56fa2baad61b886/transformed/rules/lib/META-INF/com.android.tools/r8/dagger-android.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f9a4b49c60dc754e68cf9e0157dd0927/transformed/jetified-firebase-components-17.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b4f1d137e466523ea56fa2baad61b886/transformed/rules/lib/META-INF/com.android.tools/r8/dagger-android.pro
 -dontwarn com.google.errorprone.annotations.**
 -identifiernamestring class dagger.android.internal.AndroidInjectionKeys {
   java.lang.String of(java.lang.String);
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/b4f1d137e466523ea56fa2baad61b886/transformed/rules/lib/META-INF/com.android.tools/r8/dagger-android.pro
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/c9661ab9e64328f156137deeb07f30fc/transformed/jetified-firebase-encoders-json-18.0.0/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b4f1d137e466523ea56fa2baad61b886/transformed/rules/lib/META-INF/com.android.tools/r8/dagger-android.pro
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c9661ab9e64328f156137deeb07f30fc/transformed/jetified-firebase-encoders-json-18.0.0/proguard.txt
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/c9661ab9e64328f156137deeb07f30fc/transformed/jetified-firebase-encoders-json-18.0.0/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/2665124e84e5d85e9f18eca0b992be11/transformed/rules/lib/META-INF/proguard/androidx-annotations.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c9661ab9e64328f156137deeb07f30fc/transformed/jetified-firebase-encoders-json-18.0.0/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2665124e84e5d85e9f18eca0b992be11/transformed/rules/lib/META-INF/proguard/androidx-annotations.pro
 -keep,allowobfuscation @interface androidx.annotation.Keep
 -keep @androidx.annotation.Keep class * {*;}
 
@@ -897,8 +943,8 @@
   @androidx.annotation.DoNotInline <methods>;
 }
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/2665124e84e5d85e9f18eca0b992be11/transformed/rules/lib/META-INF/proguard/androidx-annotations.pro
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/237b614a5b1bbe63b79717d60e96d537/transformed/rules/lib/META-INF/proguard/okhttp3.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2665124e84e5d85e9f18eca0b992be11/transformed/rules/lib/META-INF/proguard/androidx-annotations.pro
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/237b614a5b1bbe63b79717d60e96d537/transformed/rules/lib/META-INF/proguard/okhttp3.pro
 # JSR 305 annotations are for embedding nullability information.
 -dontwarn javax.annotation.**
 
@@ -911,12 +957,12 @@
 # OkHttp platform used only on JVM and when Conscrypt dependency is available.
 -dontwarn okhttp3.internal.platform.ConscryptPlatform
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/237b614a5b1bbe63b79717d60e96d537/transformed/rules/lib/META-INF/proguard/okhttp3.pro
-# The proguard configuration file for the following section is /home/elnagar/.gradle/caches/transforms-3/53dedb3d77c408f62904d1134331945f/transformed/rules/lib/META-INF/proguard/okio.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/237b614a5b1bbe63b79717d60e96d537/transformed/rules/lib/META-INF/proguard/okhttp3.pro
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/53dedb3d77c408f62904d1134331945f/transformed/rules/lib/META-INF/proguard/okio.pro
 # Animal Sniffer compileOnly dependency to ensure APIs are compatible with older versions of Java.
 -dontwarn org.codehaus.mojo.animal_sniffer.*
 
-# End of content from /home/elnagar/.gradle/caches/transforms-3/53dedb3d77c408f62904d1134331945f/transformed/rules/lib/META-INF/proguard/okio.pro
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/53dedb3d77c408f62904d1134331945f/transformed/rules/lib/META-INF/proguard/okio.pro
 # The proguard configuration file for the following section is <unknown>
 -ignorewarnings
 # End of content from <unknown>

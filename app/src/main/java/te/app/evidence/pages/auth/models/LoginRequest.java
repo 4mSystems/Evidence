@@ -1,21 +1,18 @@
 package te.app.evidence.pages.auth.models;
 
 
+
 import androidx.databinding.ObservableField;
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.validation.Validate;
 
 public class LoginRequest {
     @SerializedName("email")
-    @Expose
     private String email;
     @SerializedName("password")
-    @Expose
     private String password;
     @SerializedName("device_token")
-    @Expose
     private String token;
     public transient ObservableField<String> emailError = new ObservableField<>();
     public transient ObservableField<String> passwordError = new ObservableField<>();

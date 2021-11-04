@@ -4,15 +4,18 @@ package te.app.evidence.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.Deprecated;
 import java.lang.Object;
 import te.app.evidence.R;
@@ -20,7 +23,7 @@ import te.app.evidence.pages.auth.register.RegisterViewModel;
 
 public abstract class FragmentRegisterBinding extends ViewDataBinding {
   @NonNull
-  public final AppCompatImageView homeTitle;
+  public final MaterialCheckBox checkbox;
 
   @NonNull
   public final TextInputLayout inputAddress;
@@ -29,7 +32,13 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   public final TextInputLayout inputCompanyName;
 
   @NonNull
+  public final TextInputLayout inputInfoCard;
+
+  @NonNull
   public final TextInputLayout inputInviteCode;
+
+  @NonNull
+  public final TextInputEditText inputMember;
 
   @NonNull
   public final TextInputLayout inputName;
@@ -52,20 +61,29 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
   @NonNull
   public final CircularProgressIndicator progress;
 
+  @NonNull
+  public final LinearLayout termsContainer;
+
+  @NonNull
+  public final CircleImageView userImg;
+
   @Bindable
   protected RegisterViewModel mViewmodel;
 
   protected FragmentRegisterBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      AppCompatImageView homeTitle, TextInputLayout inputAddress, TextInputLayout inputCompanyName,
-      TextInputLayout inputInviteCode, TextInputLayout inputName, TextInputLayout inputPassword,
+      MaterialCheckBox checkbox, TextInputLayout inputAddress, TextInputLayout inputCompanyName,
+      TextInputLayout inputInfoCard, TextInputLayout inputInviteCode, TextInputEditText inputMember,
+      TextInputLayout inputName, TextInputLayout inputPassword,
       TextInputLayout inputPasswordConfirm, TextInputLayout inputPhone,
-      TextInputLayout inputRegisterEmail, AppCompatButton login,
-      CircularProgressIndicator progress) {
+      TextInputLayout inputRegisterEmail, AppCompatButton login, CircularProgressIndicator progress,
+      LinearLayout termsContainer, CircleImageView userImg) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.homeTitle = homeTitle;
+    this.checkbox = checkbox;
     this.inputAddress = inputAddress;
     this.inputCompanyName = inputCompanyName;
+    this.inputInfoCard = inputInfoCard;
     this.inputInviteCode = inputInviteCode;
+    this.inputMember = inputMember;
     this.inputName = inputName;
     this.inputPassword = inputPassword;
     this.inputPasswordConfirm = inputPasswordConfirm;
@@ -73,6 +91,8 @@ public abstract class FragmentRegisterBinding extends ViewDataBinding {
     this.inputRegisterEmail = inputRegisterEmail;
     this.login = login;
     this.progress = progress;
+    this.termsContainer = termsContainer;
+    this.userImg = userImg;
   }
 
   public abstract void setViewmodel(@Nullable RegisterViewModel viewmodel);

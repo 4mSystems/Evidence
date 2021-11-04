@@ -1,18 +1,13 @@
 package te.app.evidence.pages.home;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
-
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-
 import javax.inject.Inject;
-
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
 import te.app.evidence.base.IApplicationComponent;

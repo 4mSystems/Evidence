@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="te.app.evidence.utils.Constants" />
+
+        <variable
+            name="viewmodel"
+            type="te.app.evidence.pages.publicFiles.viewModels.PublicFilesViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp14w"
+            android:layout_marginTop="@dimen/dp15h"
+            android:layout_marginEnd="@dimen/dp58w"
+            android:background="@drawable/corner_view_primary_gray"
+            android:hint="@string/file_search_hint"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/dp8h"
+            android:text="@={viewmodel.searchRequest.search}"
+            android:textAlignment="viewStart"
+            android:textColorHint="@color/medium_color"
+            app:helperTextTextColor="@color/black"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/search"
+            android:layout_width="@dimen/dp50w"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dp14w"
+            android:background="@drawable/corner_view_primary_dark"
+            android:onClick="@{()-> viewmodel.getPublicFiles(1,true)}"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@id/input_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/input_search"
+            app:tint="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_services"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp4h"
+            app:adapter="@{viewmodel.filesAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/progress"
+            app:layout_constraintTop_toBottomOf="@id/input_search"
+            app:orientation="@{`1`}"
+            app:span="@{`1`}"
+            tools:listitem="@layout/item_public_file" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            style="Widget.MaterialComponents.LinearProgressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp4h"
+            android:indeterminate="true"
+            android:visibility="@{viewmodel.searchProgressVisible?View.VISIBLE:View.GONE,default=gone}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:trackColor="@color/white"
+            app:trackThickness="@dimen/dp4h" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -40,14 +40,14 @@
 21    </queries>
 22
 23    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-23-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:5-68
-23-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:22-65
+23-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:5-68
+23-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:23:22-65
 24    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-24-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
-24-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
+24-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:5-82
+24-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:25:22-79
 25    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-25-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:26:5-110
-25-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:26:22-107
+25-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:26:5-110
+25-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:26:22-107
 26
 27    <application
 27-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:19:5-76:19
@@ -56,270 +56,271 @@
 29        android:allowBackup="false"
 29-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:21:9-36
 30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-30-->[androidx.core:core:1.5.0] /home/elnagar/.gradle/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
-31        android:extractNativeLibs="false"
-32        android:hardwareAccelerated="true"
-32-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:22:9-43
-33        android:icon="@mipmap/ic_launcher"
-33-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:23:9-43
-34        android:label="@string/app_name"
-34-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:24:9-41
-35        android:largeHeap="true"
-35-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:25:9-33
-36        android:launchMode="singleTask"
-36-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-40
-37        android:requestLegacyExternalStorage="true"
-37-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:27:9-52
-38        android:supportsRtl="true"
-38-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:28:9-35
-39        android:theme="@style/AppTheme"
-39-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:29:9-40
-40        android:usesCleartextTraffic="true" >
-40-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:30:9-44
-41        <meta-data
-41-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:34:9-36:69
-42            android:name="com.google.android.gms.version"
-42-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:35:13-58
-43            android:value="@integer/google_play_services_version" />
-43-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:36:13-66
-44        <meta-data
-44-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:37:9-39:54
-45            android:name="com.google.firebase.messaging.default_notification_icon"
-45-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:38:13-83
-46            android:resource="@mipmap/ic_launcher" />
-46-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:39:13-51
-47        <meta-data
-47-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:40:9-42:54
-48            android:name="com.google.firebase.messaging.default_notification_color"
-48-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:41:13-84
-49            android:resource="@color/colorPrimary" />
-49-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:42:13-51
-50        <meta-data
-50-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:43:9-45:50
-51            android:name="com.google.android.geo.API_KEY"
-51-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:44:13-58
-52            android:value="@string/google_map" />
-52-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:45:13-47
-53
-54        <activity
-54-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:47:9-50:70
-55            android:name="te.app.evidence.activity.MainActivity"
-55-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:13-65
-56            android:configChanges="orientation|keyboardHidden|screenSize"
-56-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:49:13-74
-57            android:windowSoftInputMode="stateHidden|adjustResize" />
-57-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:13-67
-58        <activity
-58-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:9-55:70
-59            android:name="te.app.evidence.activity.SupportActivity"
-59-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-53
-60            android:clearTaskOnLaunch="true"
-60-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:13-45
-61            android:configChanges="orientation|keyboardHidden|screenSize"
-61-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:13-74
-62            android:windowSoftInputMode="stateHidden|adjustResize" />
-62-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:13-67
-63        <activity
-63-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:9-66:20
-64            android:name="te.app.evidence.activity.BaseActivity"
-64-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:13-65
-65            android:configChanges="orientation|keyboardHidden|screenSize"
-65-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:13-74
-66            android:windowSoftInputMode="stateHidden|adjustResize" >
-66-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:13-67
-67            <intent-filter>
-67-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:60:13-65:29
-68                <action android:name="android.intent.action.MAIN" />
-68-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:61:17-69
-68-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:61:25-66
-69                <action android:name="android.intent.action.VIEW" />
-69-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:62:17-69
-69-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:62:25-66
-70
-71                <category android:name="android.intent.category.LAUNCHER" />
-71-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:64:17-77
-71-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:64:27-74
-72            </intent-filter>
-73        </activity>
-74
-75        <service
-75-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:68:9-75:19
-76            android:name="te.app.evidence.base.MyFirebaseMessagingService"
-76-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:69:13-75
-77            android:exported="true" >
-77-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:70:13-36
-78            <intent-filter>
-78-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:72:13-74:29
-79                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-79-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:17-78
-79-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:25-75
-80            </intent-filter>
-81        </service>
-82
-83        <meta-data
-83-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
-84            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-84-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
-85            android:value="GlideModule" />
-85-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/.gradle/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
-86
-87        <receiver
-87-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
-88            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-88-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
-89            android:exported="true"
-89-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
-90            android:permission="com.google.android.c2dm.permission.SEND" >
-90-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
-91            <intent-filter>
-91-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:32:13-34:29
-92                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-92-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:33:17-81
-92-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:33:25-78
-93            </intent-filter>
-94        </receiver>
-95        <!--
-96             FirebaseMessagingService performs security checks at runtime,
-97             but set to not exported to explicitly avoid allowing another app to call it.
-98        -->
-99        <service
-99-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
-100            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-100-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
-101            android:directBootAware="true"
-101-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
-102            android:exported="false" >
-102-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
-103            <intent-filter android:priority="-500" >
-103-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:72:13-74:29
-104                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-104-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:17-78
-104-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:25-75
-105            </intent-filter>
-106        </service>
-107        <service
-107-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
-108            android:name="com.google.firebase.components.ComponentDiscoveryService"
-108-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:50:13-84
-109            android:directBootAware="true"
-109-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
-110            android:exported="false" >
-110-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
-111            <meta-data
-111-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
-112                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
-112-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
-113                android:value="com.google.firebase.components.ComponentRegistrar" />
-113-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/.gradle/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
-114            <meta-data
-114-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
-115                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
-115-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
-116                android:value="com.google.firebase.components.ComponentRegistrar" />
-116-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/.gradle/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
-117            <meta-data
-117-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/.gradle/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:30:13-32:85
-118                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-118-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/.gradle/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:31:17-139
-119                android:value="com.google.firebase.components.ComponentRegistrar" />
-119-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/.gradle/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:32:17-82
-120            <meta-data
-120-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
-121                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-121-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
-122                android:value="com.google.firebase.components.ComponentRegistrar" />
-122-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/.gradle/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
-123        </service>
-124
-125        <receiver
-125-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:29:9-33:20
-126            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-126-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:30:13-85
-127            android:enabled="true"
-127-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:31:13-35
-128            android:exported="false" >
-128-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:32:13-37
-129        </receiver>
-130
-131        <service
-131-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:35:9-38:40
-132            android:name="com.google.android.gms.measurement.AppMeasurementService"
-132-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:36:13-84
-133            android:enabled="true"
-133-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:37:13-35
-134            android:exported="false" />
-134-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:38:13-37
-135        <service
-135-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:39:9-43:72
-136            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-136-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:40:13-87
-137            android:enabled="true"
-137-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:41:13-35
-138            android:exported="false"
-138-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:42:13-37
-139            android:permission="android.permission.BIND_JOB_SERVICE" />
-139-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/.gradle/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:43:13-69
-140
-141        <provider
-141-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
-142            android:name="com.google.firebase.provider.FirebaseInitProvider"
-142-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
-143            android:authorities="te.app.evidence.firebaseinitprovider"
-143-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
-144            android:directBootAware="true"
-144-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
-145            android:exported="false"
-145-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
-146            android:initOrder="100" />
-146-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/.gradle/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
-147        <provider
-147-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
-148            android:name="com.squareup.picasso.PicassoProvider"
-148-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
-149            android:authorities="te.app.evidence.com.squareup.picasso"
-149-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
-150            android:exported="false" />
-150-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/.gradle/caches/transforms-3/09594be14b47d3fb9c3f722bad1f6cc6/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
-151        <provider
-151-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-152            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-152-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-153            android:authorities="te.app.evidence.lifecycle-process"
-153-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-154            android:exported="false"
-154-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-155            android:multiprocess="true" />
-155-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/.gradle/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-156
-157        <service
-157-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
-158            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
-158-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
-159            android:exported="false" >
-159-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
-160            <meta-data
-160-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
-161                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
-161-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
-162                android:value="cct" />
-162-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/.gradle/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
-163        </service>
-164        <service
-164-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
-165            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
-165-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
-166            android:exported="false"
-166-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
-167            android:permission="android.permission.BIND_JOB_SERVICE" >
-167-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
-168        </service>
-169
-170        <receiver
-170-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
-171            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
-171-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
-172            android:exported="false" />
-172-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/.gradle/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
-173    </application>
-174
-175</manifest>
+30-->[androidx.core:core:1.5.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/AndroidManifest.xml:24:18-86
+31        android:debuggable="true"
+32        android:extractNativeLibs="false"
+33        android:hardwareAccelerated="true"
+33-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:22:9-43
+34        android:icon="@mipmap/ic_launcher"
+34-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:23:9-43
+35        android:label="@string/app_name"
+35-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:24:9-41
+36        android:largeHeap="true"
+36-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:25:9-33
+37        android:launchMode="singleTask"
+37-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:26:9-40
+38        android:requestLegacyExternalStorage="true"
+38-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:27:9-52
+39        android:supportsRtl="true"
+39-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:28:9-35
+40        android:theme="@style/AppTheme"
+40-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:29:9-40
+41        android:usesCleartextTraffic="true" >
+41-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:30:9-44
+42        <meta-data
+42-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:34:9-36:69
+43            android:name="com.google.android.gms.version"
+43-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:35:13-58
+44            android:value="@integer/google_play_services_version" />
+44-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:36:13-66
+45        <meta-data
+45-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:37:9-39:54
+46            android:name="com.google.firebase.messaging.default_notification_icon"
+46-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:38:13-83
+47            android:resource="@mipmap/ic_launcher" />
+47-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:39:13-51
+48        <meta-data
+48-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:40:9-42:54
+49            android:name="com.google.firebase.messaging.default_notification_color"
+49-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:41:13-84
+50            android:resource="@color/colorPrimary" />
+50-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:42:13-51
+51        <meta-data
+51-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:43:9-45:50
+52            android:name="com.google.android.geo.API_KEY"
+52-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:44:13-58
+53            android:value="@string/google_map" />
+53-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:45:13-47
+54
+55        <activity
+55-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:47:9-50:70
+56            android:name="te.app.evidence.activity.MainActivity"
+56-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:48:13-65
+57            android:configChanges="orientation|keyboardHidden|screenSize"
+57-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:49:13-74
+58            android:windowSoftInputMode="stateHidden|adjustResize" />
+58-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:50:13-67
+59        <activity
+59-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:51:9-55:70
+60            android:name="te.app.evidence.activity.SupportActivity"
+60-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:52:13-53
+61            android:clearTaskOnLaunch="true"
+61-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:53:13-45
+62            android:configChanges="orientation|keyboardHidden|screenSize"
+62-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:54:13-74
+63            android:windowSoftInputMode="stateHidden|adjustResize" />
+63-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:55:13-67
+64        <activity
+64-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:56:9-66:20
+65            android:name="te.app.evidence.activity.BaseActivity"
+65-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:57:13-65
+66            android:configChanges="orientation|keyboardHidden|screenSize"
+66-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:58:13-74
+67            android:windowSoftInputMode="stateHidden|adjustResize" >
+67-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:59:13-67
+68            <intent-filter>
+68-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:60:13-65:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:61:17-69
+69-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:61:25-66
+70                <action android:name="android.intent.action.VIEW" />
+70-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:62:17-69
+70-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:62:25-66
+71
+72                <category android:name="android.intent.category.LAUNCHER" />
+72-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:64:17-77
+72-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:64:27-74
+73            </intent-filter>
+74        </activity>
+75
+76        <service
+76-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:68:9-75:19
+77            android:name="te.app.evidence.base.MyFirebaseMessagingService"
+77-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:69:13-75
+78            android:exported="true" >
+78-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:70:13-36
+79            <intent-filter>
+79-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:72:13-74:29
+80                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+80-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:17-78
+80-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:25-75
+81            </intent-filter>
+82        </service>
+83
+84        <meta-data
+84-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:11:9-13:43
+85            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+85-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:12:13-84
+86            android:value="GlideModule" />
+86-->[com.github.bumptech.glide:okhttp3-integration:4.11.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b7cefb28df6fd5bbf4a302bcdd738301/transformed/jetified-okhttp3-integration-4.11.0/AndroidManifest.xml:13:13-40
+87
+88        <receiver
+88-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
+89            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+89-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
+90            android:exported="true"
+90-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
+91            android:permission="com.google.android.c2dm.permission.SEND" >
+91-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
+92            <intent-filter>
+92-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:32:13-34:29
+93                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+93-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:33:17-81
+93-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:33:25-78
+94            </intent-filter>
+95        </receiver>
+96        <!--
+97             FirebaseMessagingService performs security checks at runtime,
+98             but set to not exported to explicitly avoid allowing another app to call it.
+99        -->
+100        <service
+100-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
+101            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+101-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
+103            android:exported="false" >
+103-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
+104            <intent-filter android:priority="-500" >
+104-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:72:13-74:29
+105                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+105-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:17-78
+105-->/home/elnagar/Android projects/Evidence/app/src/main/AndroidManifest.xml:73:25-75
+106            </intent-filter>
+107        </service>
+108        <service
+108-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
+109            android:name="com.google.firebase.components.ComponentDiscoveryService"
+109-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:50:13-84
+110            android:directBootAware="true"
+110-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+111            android:exported="false" >
+111-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
+112            <meta-data
+112-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
+113                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+113-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-messaging:22.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+116                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+116-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-datatransport:18.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/f9ed605d435427cbca69df2869610ce5/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+118            <meta-data
+118-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:30:13-32:85
+119                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+119-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:31:17-139
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.android.gms:play-services-measurement-api:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/b26ab31163b19774f0681697886b0e30/transformed/jetified-play-services-measurement-api-19.0.2/AndroidManifest.xml:32:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+122                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+122-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-installations:17.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/2d2043457c7833b1db69044f4754b0ef/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+124        </service>
+125
+126        <receiver
+126-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:29:9-33:20
+127            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+127-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:30:13-85
+128            android:enabled="true"
+128-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:31:13-35
+129            android:exported="false" >
+129-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:32:13-37
+130        </receiver>
+131
+132        <service
+132-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:35:9-38:40
+133            android:name="com.google.android.gms.measurement.AppMeasurementService"
+133-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:36:13-84
+134            android:enabled="true"
+134-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:37:13-35
+135            android:exported="false" />
+135-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:38:13-37
+136        <service
+136-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:39:9-43:72
+137            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+137-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:40:13-87
+138            android:enabled="true"
+138-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:41:13-35
+139            android:exported="false"
+139-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:42:13-37
+140            android:permission="android.permission.BIND_JOB_SERVICE" />
+140-->[com.google.android.gms:play-services-measurement:19.0.2] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/decc1d1d253b446a48416f2b80124a29/transformed/jetified-play-services-measurement-19.0.2/AndroidManifest.xml:43:13-69
+141
+142        <provider
+142-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+143            android:name="com.google.firebase.provider.FirebaseInitProvider"
+143-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+144            android:authorities="te.app.evidence.firebaseinitprovider"
+144-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+145            android:directBootAware="true"
+145-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+146            android:exported="false"
+146-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+147            android:initOrder="100" />
+147-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+148        <provider
+148-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+149            android:name="com.squareup.picasso.PicassoProvider"
+149-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+150            android:authorities="te.app.evidence.com.squareup.picasso"
+150-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+151            android:exported="false" />
+151-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+152        <provider
+152-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+153            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+153-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+154            android:authorities="te.app.evidence.lifecycle-process"
+154-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+155            android:exported="false"
+155-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+156            android:multiprocess="true" />
+156-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+157
+158        <service
+158-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+159            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+159-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+160            android:exported="false" >
+160-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+161            <meta-data
+161-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+162                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+162-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+163                android:value="cct" />
+163-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/db43ef0246d59e0edc5f5a19efdeb2b6/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+164        </service>
+165        <service
+165-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+166            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+166-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+167            android:exported="false"
+167-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+168            android:permission="android.permission.BIND_JOB_SERVICE" >
+168-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+169        </service>
+170
+171        <receiver
+171-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+172            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+172-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+173            android:exported="false" />
+173-->[com.google.android.datatransport:transport-runtime:3.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/316b845eda7a6a54e77d2424907a7ccd/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+174    </application>
+175
+176</manifest>

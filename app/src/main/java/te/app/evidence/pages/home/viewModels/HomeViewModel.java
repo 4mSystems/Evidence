@@ -28,6 +28,7 @@ import te.app.evidence.pages.home.models.HomeData;
 import te.app.evidence.pages.home.models.HomeMainObject;
 import te.app.evidence.pages.mohdrs.models.ReportersMainData;
 import te.app.evidence.pages.places.PlacesFragment;
+import te.app.evidence.pages.publicFiles.PublicFilesFragment;
 import te.app.evidence.pages.services.ServicesFragment;
 import te.app.evidence.pages.sessions.models.SessionMainData;
 import te.app.evidence.repository.HomeRepository;
@@ -158,7 +159,7 @@ public class HomeViewModel extends BaseViewModel {
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.office), ResourceManager.getString(R.string.office_desc), R.drawable.logo, HomeFragment.class.getName()));
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.services), ResourceManager.getString(R.string.services_desc), R.drawable.ic_marketing, ServicesFragment.class.getName()));
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.location), ResourceManager.getString(R.string.locations_desc), R.drawable.ic_estate_location, PlacesFragment.class.getName()));
-        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.samples), ResourceManager.getString(R.string.samples_desc), R.drawable.ic_samples, PlacesFragment.class.getName()));
+        mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.samples), ResourceManager.getString(R.string.samples_desc), R.drawable.ic_samples, PublicFilesFragment.class.getName()));
         mainObjects.add(new HomeMainObject(ResourceManager.getString(R.string.more), ResourceManager.getString(R.string.more_desc), R.drawable.ic_info,ResourceManager.getString(R.string.more)));
         getHomeMainAdapter().update(mainObjects);
         notifyChange(BR.homeMainAdapter);

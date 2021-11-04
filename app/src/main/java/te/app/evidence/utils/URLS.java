@@ -103,4 +103,5 @@ public class URLS {
     public static final String POLICY_URL = "http://land.golden-info.com/privacy-webview.html";
     public static final String TERMS_URL = "http://land.golden-info.com/terms-webview.html";
     public static final String ABOUT_URL = "http://land.golden-info.com/about-us-webview.html";
+    public static final String GET_PUBLIC_FILES = "get-files?search=";
 }
