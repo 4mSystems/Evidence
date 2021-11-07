@@ -1393,6 +1393,7 @@ color normalColor
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color open_camera_bg
 color overlayBackground
 color primary_dark_material_dark
 color primary_dark_material_light
@@ -1420,6 +1421,7 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color transparent_background
 color warningColor
 color white
 color zxing_transparent
@@ -1625,6 +1627,7 @@ dimen dp90w
 dimen fastscroll_default_thickness
 dimen fastscroll_margin
 dimen fastscroll_minimum_range
+dimen grid_spacing
 dimen highlight_alpha_material_colored
 dimen highlight_alpha_material_dark
 dimen highlight_alpha_material_light
@@ -2041,12 +2044,14 @@ drawable ic_airplanemode_inactive_24dp
 drawable ic_arrow_down
 drawable ic_arrow_right
 drawable ic_attachments
+drawable ic_audio
 drawable ic_auth_password
 drawable ic_auth_phone
 drawable ic_back
 drawable ic_best_price
 drawable ic_business_report
 drawable ic_calendar
+drawable ic_camera
 drawable ic_card_membership
 drawable ic_cases
 drawable ic_categories
@@ -2060,6 +2065,7 @@ drawable ic_download
 drawable ic_email
 drawable ic_error_outline_white_24dp
 drawable ic_estate_location
+drawable ic_file
 drawable ic_home
 drawable ic_info
 drawable ic_info_outline_white_24dp
@@ -2090,6 +2096,7 @@ drawable ic_reports
 drawable ic_resource_package
 drawable ic_samples
 drawable ic_search
+drawable ic_selected
 drawable ic_session_notes
 drawable ic_share_location
 drawable ic_support_agent
@@ -2100,6 +2107,7 @@ drawable ic_user_delete
 drawable ic_user_edit
 drawable ic_user_permission
 drawable ic_users
+drawable ic_videocam
 drawable ic_view_more
 drawable ic_warning
 drawable ic_whatsapp
@@ -2151,6 +2159,7 @@ drawable test_custom_background
 drawable toast_frame
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable transparent_background
 font medium
 id ALT
 id BOTTOM_END
@@ -2244,6 +2253,7 @@ id anticipate
 id anticipate_overshoot
 id appCompatButton
 id appCompatButtonNext
+id app_bar
 id app_login_hint
 id app_login_title
 id app_name
@@ -2382,6 +2392,7 @@ id disablePostScroll
 id disableScroll
 id disjoint
 id dl_main_navigation_menu
+id done
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -2414,6 +2425,13 @@ id fast_out_linear_in
 id fast_out_slow_in
 id fb_office
 id file
+id file_duration
+id file_gallery
+id file_name
+id file_open_camera
+id file_open_video_camera
+id file_selected
+id file_thumbnail
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3076,6 +3094,8 @@ layout design_text_input_start_icon
 layout dialog_no_internet
 layout download_dialog
 layout exit_layout
+layout filegallery_item
+layout filepicker_gallery
 layout fragment_add_attachment
 layout fragment_add_bailiffs
 layout fragment_add_case
@@ -3235,6 +3255,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 layout toast_layout
 layout year_label_text_view
+menu filegallery_menu
 mipmap ic_launcher
 plurals mtrl_badge_content_description
 string API_KEY
@@ -3357,6 +3378,7 @@ string demo_warning
 string descion
 string description
 string design_program
+string done
 string donot_have_account
 string download
 string download_doc
@@ -3389,6 +3411,7 @@ string fcm_fallback_notification_channel_label
 string fieldRequired
 string file
 string file_search_hint
+string file_thumbnail
 string forget_body
 string forget_header
 string forget_remember
@@ -3515,6 +3538,7 @@ string office_desc
 string ok
 string old_password
 string online
+string open_camera
 string opponents
 string option_cancel
 string option_dialog_delete
@@ -3531,6 +3555,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string permission_not_given
 string phone
 string please_select_another_file
 string please_turn_off
@@ -3572,6 +3597,7 @@ string search_menu_title
 string search_mohdr_hint
 string select_file
 string select_image_from
+string selection_count
 string send
 string send_code
 string service_price
@@ -3622,6 +3648,8 @@ style Animation_MaterialComponents_BottomSheetDialog
 style AppBottomSheetDialogTheme
 style AppModalStyle
 style AppTheme
+style AppTheme_AppBarOverlay
+style AppTheme_NoActionBar
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -4502,6 +4530,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 styleable monthPickerDialog dialogActionButtonColor headerBgColor headerFontColorNormal headerFontColorSelected headerTitleColor monthBgColor monthBgSelectedColor monthFontColorDisabled monthFontColorNormal monthFontColorSelected
+xml com_jaiselrahman_filepicker_provider_paths
 xml image_share_filepaths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

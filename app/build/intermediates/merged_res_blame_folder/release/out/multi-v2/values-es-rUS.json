@@ -4,6 +4,23 @@
             "outputFile": "/home/elnagar/Android projects/Evidence/app/build/intermediates/incremental/mergeReleaseResources/merged.dir/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/df6c8dee88f7b5d4382943f4343f4f0c/transformed/jetified-firebase-messaging-23.0.0/res/values-es-rUS/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "211",
+                        "endColumns": "70",
+                        "endOffsets": "281"
+                    },
+                    "to": {
+                        "startLines": "44",
+                        "startColumns": "4",
+                        "startOffsets": "4193",
+                        "endColumns": "74",
+                        "endOffsets": "4263"
+                    }
+                },
+                {
                     "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/68bce1ad376ed5b9406899de4e9966ab/transformed/core-1.5.0/res/values-es-rUS/values-es-rUS.xml",
                     "from": {
                         "startLines": "2",
@@ -37,23 +54,6 @@
                         "endLines": "5,33,34,35,36,39,40,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92",
                         "endColumns": "12,85,101,127,80,64,94,69,62,92,71,62,73,63,56,117,57,61,56,79,133,88,80,110,80,79,89,66,65,75,81,87,72,76,69,76,88,73,93,101,71,80,103,52,66,92,88,61,63,62,110,96,101,97,82",
                         "endOffsets": "278,3080,3182,3310,3391,3770,3865,4333,4396,4489,4561,4624,4698,4762,4819,4937,4995,5057,5114,5194,5328,5417,5498,5609,5690,5770,5860,5927,5993,6069,6151,6239,6312,6389,6459,6536,6625,6699,6793,6895,6967,7048,7152,7205,7272,7365,7454,7516,7580,7643,7754,7851,7953,8051,8134"
-                    }
-                },
-                {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/res/values-es-rUS/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "211",
-                        "endColumns": "70",
-                        "endOffsets": "281"
-                    },
-                    "to": {
-                        "startLines": "44",
-                        "startColumns": "4",
-                        "startOffsets": "4193",
-                        "endColumns": "74",
-                        "endOffsets": "4263"
                     }
                 },
                 {

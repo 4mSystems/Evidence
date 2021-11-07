@@ -240,5 +240,6 @@
     <string name="privacy_settings">سياسة الخصوصية و الإستخدام</string>
     <string name="share">مشاركة التطبيق</string>
     <string name="file_search_hint">اكتب ما يدور فى بالك</string>
+    <string name="done">تم</string>
 
 </resources>

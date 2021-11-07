@@ -16,6 +16,7 @@ import te.app.evidence.base.MyApplication;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.R;
 import te.app.evidence.databinding.FragmentSplashBinding;
+import te.app.evidence.pages.attachments.AddAttachmentFragment;
 import te.app.evidence.pages.auth.login.LoginFragment;
 import te.app.evidence.pages.home.MainHomeFragment;
 import te.app.evidence.pages.onBoard.OnBoardFragment;

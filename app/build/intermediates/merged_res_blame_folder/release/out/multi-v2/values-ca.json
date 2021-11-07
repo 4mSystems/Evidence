@@ -21,23 +21,6 @@
                     }
                 },
                 {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/res/values-ca/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "70",
-                        "endOffsets": "277"
-                    },
-                    "to": {
-                        "startLines": "44",
-                        "startColumns": "4",
-                        "startOffsets": "4197",
-                        "endColumns": "74",
-                        "endOffsets": "4267"
-                    }
-                },
-                {
                     "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/res/values-ca/values.xml",
                     "from": {
                         "startLines": "4",
@@ -71,6 +54,23 @@
                         "endLines": "5,33,34,35,36,39,40,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92",
                         "endColumns": "12,87,100,127,83,64,96,79,64,94,71,61,75,62,56,120,57,60,56,79,136,86,83,108,77,78,88,66,65,77,80,87,77,76,73,78,89,91,91,100,73,81,100,49,65,91,86,61,63,62,122,102,103,105,85",
                         "endOffsets": "274,3087,3188,3316,3400,3772,3869,4347,4412,4507,4579,4641,4717,4780,4837,4958,5016,5077,5134,5214,5351,5438,5522,5631,5709,5788,5877,5944,6010,6088,6169,6257,6335,6412,6486,6565,6655,6747,6839,6940,7014,7096,7197,7247,7313,7405,7492,7554,7618,7681,7804,7907,8011,8117,8203"
+                    }
+                },
+                {
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/df6c8dee88f7b5d4382943f4343f4f0c/transformed/jetified-firebase-messaging-23.0.0/res/values-ca/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "70",
+                        "endOffsets": "277"
+                    },
+                    "to": {
+                        "startLines": "44",
+                        "startColumns": "4",
+                        "startOffsets": "4197",
+                        "endColumns": "74",
+                        "endOffsets": "4267"
                     }
                 },
                 {

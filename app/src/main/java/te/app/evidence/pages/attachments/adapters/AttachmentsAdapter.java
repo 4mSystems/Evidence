@@ -22,6 +22,7 @@ import te.app.evidence.databinding.ItemAttachmentBinding;
 import te.app.evidence.pages.attachments.models.Attachment;
 import te.app.evidence.pages.attachments.viewModels.AttachmentsItemViewModel;
 import te.app.evidence.utils.Constants;
+import te.app.evidence.utils.URLS;
 import te.app.evidence.utils.helper.AppHelper;
 
 public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.ViewHolder> {
@@ -49,13 +50,13 @@ public class AttachmentsAdapter extends RecyclerView.Adapter<AttachmentsAdapter.
 
     @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder,  int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Attachment attachment = attachmentList.get(position);
         AttachmentsItemViewModel itemMenuViewModel = new AttachmentsItemViewModel(attachment);
         itemMenuViewModel.getLiveData().observe((LifecycleOwner) context, o -> {
             lastSelected = position;
             if (o.equals(Constants.MENu))
-                AppHelper.download(attachment.getImgUrl(), attachment.getImgDescription().concat(".png"), context);
+                AppHelper.download(URLS.CASE_ATTACHMENTS_BASE_URL.concat(attachment.getImgUrl()), attachment.getImgDescription().concat(attachment.getImgUrl().substring(attachment.getImgUrl().lastIndexOf("."))), context);
             else
                 actionLiveData.setValue(o);
         });

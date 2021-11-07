@@ -28,7 +28,7 @@ public class BaseFragment extends Fragment {
     }
 
     protected void pickFile(int requestCode) {
-        FileOperations.pickVideo(requireActivity(), BaseFragment.this, requestCode);
+        FileOperations.pickDocuments(requireActivity(), BaseFragment.this, requestCode);
     }
 
 

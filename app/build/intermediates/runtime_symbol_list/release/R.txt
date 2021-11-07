@@ -1392,6 +1392,7 @@ int color normalColor 0x7f0500dc
 int color notification_action_color_filter 0x7f0500dd
 int color notification_icon_bg_color 0x7f0500de
 int color notification_material_background_media_default_color 0x7f0500df
+int color open_camera_bg 0x7f050106
 int color overlayBackground 0x7f0500e0
 int color primary_dark_material_dark 0x7f0500e1
 int color primary_dark_material_light 0x7f0500e2
@@ -1419,6 +1420,7 @@ int color test_mtrl_calendar_day 0x7f0500f7
 int color test_mtrl_calendar_day_selected 0x7f0500f8
 int color tooltip_background_dark 0x7f0500f9
 int color tooltip_background_light 0x7f0500fa
+int color transparent_background 0x7f050107
 int color warningColor 0x7f0500fb
 int color white 0x7f0500fc
 int color zxing_transparent 0x7f0500fd
@@ -1624,6 +1626,7 @@ int dimen dp90w 0x7f0600c6
 int dimen fastscroll_default_thickness 0x7f0600c7
 int dimen fastscroll_margin 0x7f0600c8
 int dimen fastscroll_minimum_range 0x7f0600c9
+int dimen grid_spacing 0x7f0601f4
 int dimen highlight_alpha_material_colored 0x7f0600ca
 int dimen highlight_alpha_material_dark 0x7f0600cb
 int dimen highlight_alpha_material_light 0x7f0600cc
@@ -2040,12 +2043,14 @@ int drawable ic_airplanemode_inactive_24dp 0x7f07007c
 int drawable ic_arrow_down 0x7f07007d
 int drawable ic_arrow_right 0x7f07007e
 int drawable ic_attachments 0x7f07007f
+int drawable ic_audio 0x7f0700fe
 int drawable ic_auth_password 0x7f070080
 int drawable ic_auth_phone 0x7f070081
 int drawable ic_back 0x7f070082
 int drawable ic_best_price 0x7f070083
 int drawable ic_business_report 0x7f070084
 int drawable ic_calendar 0x7f070085
+int drawable ic_camera 0x7f0700f2
 int drawable ic_card_membership 0x7f070086
 int drawable ic_cases 0x7f070087
 int drawable ic_categories 0x7f070088
@@ -2059,6 +2064,7 @@ int drawable ic_download 0x7f07008f
 int drawable ic_email 0x7f070090
 int drawable ic_error_outline_white_24dp 0x7f070091
 int drawable ic_estate_location 0x7f070092
+int drawable ic_file 0x7f0700ff
 int drawable ic_home 0x7f070093
 int drawable ic_info 0x7f070094
 int drawable ic_info_outline_white_24dp 0x7f070095
@@ -2089,6 +2095,7 @@ int drawable ic_reports 0x7f0700ad
 int drawable ic_resource_package 0x7f0700ae
 int drawable ic_samples 0x7f0700af
 int drawable ic_search 0x7f0700b0
+int drawable ic_selected 0x7f070100
 int drawable ic_session_notes 0x7f0700b1
 int drawable ic_share_location 0x7f0700b2
 int drawable ic_support_agent 0x7f0700b3
@@ -2099,6 +2106,7 @@ int drawable ic_user_delete 0x7f0700b7
 int drawable ic_user_edit 0x7f0700b8
 int drawable ic_user_permission 0x7f0700b9
 int drawable ic_users 0x7f0700ba
+int drawable ic_videocam 0x7f070101
 int drawable ic_view_more 0x7f0700bb
 int drawable ic_warning 0x7f0700bc
 int drawable ic_whatsapp 0x7f0700bd
@@ -2150,6 +2158,7 @@ int drawable test_custom_background 0x7f0700ea
 int drawable toast_frame 0x7f0700eb
 int drawable tooltip_frame_dark 0x7f0700ec
 int drawable tooltip_frame_light 0x7f0700ed
+int drawable transparent_background 0x7f070102
 int font medium 0x7f080000
 int id ALT 0x7f090000
 int id BOTTOM_END 0x7f090001
@@ -2243,6 +2252,7 @@ int id anticipate 0x7f090058
 int id anticipate_overshoot 0x7f090059
 int id appCompatButton 0x7f09005a
 int id appCompatButtonNext 0x7f09005b
+int id app_bar 0x7f090361
 int id app_login_hint 0x7f09005c
 int id app_login_title 0x7f09005d
 int id app_name 0x7f09005e
@@ -2381,6 +2391,7 @@ int id disablePostScroll 0x7f0900e2
 int id disableScroll 0x7f0900e3
 int id disjoint 0x7f0900e4
 int id dl_main_navigation_menu 0x7f0900e5
+int id done 0x7f090362
 int id dragAnticlockwise 0x7f0900e6
 int id dragClockwise 0x7f0900e7
 int id dragDown 0x7f0900e8
@@ -2413,6 +2424,13 @@ int id fast_out_linear_in 0x7f090102
 int id fast_out_slow_in 0x7f090103
 int id fb_office 0x7f090104
 int id file 0x7f090105
+int id file_duration 0x7f090363
+int id file_gallery 0x7f090364
+int id file_name 0x7f090365
+int id file_open_camera 0x7f090366
+int id file_open_video_camera 0x7f090367
+int id file_selected 0x7f090368
+int id file_thumbnail 0x7f090369
 int id fill 0x7f090106
 int id fill_horizontal 0x7f090107
 int id fill_vertical 0x7f090108
@@ -3075,6 +3093,8 @@ int layout design_text_input_start_icon 0x7f0c0030
 int layout dialog_no_internet 0x7f0c0031
 int layout download_dialog 0x7f0c0032
 int layout exit_layout 0x7f0c0033
+int layout filegallery_item 0x7f0c00de
+int layout filepicker_gallery 0x7f0c00df
 int layout fragment_add_attachment 0x7f0c0034
 int layout fragment_add_bailiffs 0x7f0c0035
 int layout fragment_add_case 0x7f0c0036
@@ -3234,6 +3254,7 @@ int layout text_view_with_theme_line_height 0x7f0c00cf
 int layout text_view_without_line_height 0x7f0c00d0
 int layout toast_layout 0x7f0c00d1
 int layout year_label_text_view 0x7f0c00d2
+int menu filegallery_menu 0x7f130005
 int mipmap ic_launcher 0x7f0d0000
 int plurals mtrl_badge_content_description 0x7f0e0000
 int string API_KEY 0x7f0f0000
@@ -3356,6 +3377,7 @@ int string demo_warning 0x7f0f0074
 int string descion 0x7f0f0075
 int string description 0x7f0f0076
 int string design_program 0x7f0f0077
+int string done 0x7f0f0186
 int string donot_have_account 0x7f0f0078
 int string download 0x7f0f0079
 int string download_doc 0x7f0f007a
@@ -3388,6 +3410,7 @@ int string fcm_fallback_notification_channel_label 0x7f0f0094
 int string fieldRequired 0x7f0f0095
 int string file 0x7f0f0096
 int string file_search_hint 0x7f0f0097
+int string file_thumbnail 0x7f0f0194
 int string forget_body 0x7f0f0098
 int string forget_header 0x7f0f0099
 int string forget_remember 0x7f0f009a
@@ -3514,6 +3537,7 @@ int string office_desc 0x7f0f0112
 int string ok 0x7f0f0113
 int string old_password 0x7f0f0114
 int string online 0x7f0f0115
+int string open_camera 0x7f0f0195
 int string opponents 0x7f0f0116
 int string option_cancel 0x7f0f0117
 int string option_dialog_delete 0x7f0f0118
@@ -3530,6 +3554,7 @@ int string path_password_eye 0x7f0f0122
 int string path_password_eye_mask_strike_through 0x7f0f0123
 int string path_password_eye_mask_visible 0x7f0f0124
 int string path_password_strike_through 0x7f0f0125
+int string permission_not_given 0x7f0f0196
 int string phone 0x7f0f0126
 int string please_select_another_file 0x7f0f0127
 int string please_turn_off 0x7f0f0128
@@ -3571,6 +3596,7 @@ int string search_menu_title 0x7f0f014b
 int string search_mohdr_hint 0x7f0f014c
 int string select_file 0x7f0f014d
 int string select_image_from 0x7f0f014e
+int string selection_count 0x7f0f0197
 int string send 0x7f0f014f
 int string send_code 0x7f0f0150
 int string service_price 0x7f0f0151
@@ -3621,6 +3647,8 @@ int style Animation_MaterialComponents_BottomSheetDialog 0x7f100007
 int style AppBottomSheetDialogTheme 0x7f100008
 int style AppModalStyle 0x7f100009
 int style AppTheme 0x7f10000a
+int style AppTheme_AppBarOverlay 0x7f1002e9
+int style AppTheme_NoActionBar 0x7f1002ea
 int style Base_AlertDialog_AppCompat 0x7f10000b
 int style Base_AlertDialog_AppCompat_Light 0x7f10000c
 int style Base_Animation_AppCompat_Dialog 0x7f10000d
@@ -6363,6 +6391,7 @@ int styleable monthPickerDialog_monthBgSelectedColor 6
 int styleable monthPickerDialog_monthFontColorDisabled 7
 int styleable monthPickerDialog_monthFontColorNormal 8
 int styleable monthPickerDialog_monthFontColorSelected 9
+int xml com_jaiselrahman_filepicker_provider_paths 0x7f120007
 int xml image_share_filepaths 0x7f120000
 int xml standalone_badge 0x7f120001
 int xml standalone_badge_gravity_bottom_end 0x7f120002

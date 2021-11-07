@@ -511,40 +511,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:trackColor="@color/white"
                 app:trackThickness="@dimen/dp4h" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="@dimen/dp100w"
-                android:layout_height="@dimen/dp100h"
-                android:visibility="@{viewmodel.comingSessionsAdapter.itemCount==0&amp;&amp;viewmodel.selectedBtn==0?View.VISIBLE:View.GONE,default=gone}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="empt.json"
-                app:lottie_loop="true" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="@dimen/dp100w"
-                android:layout_height="@dimen/dp100h"
-                android:visibility="@{viewmodel.prevSessionsAdapter.itemCount==0&amp;&amp;viewmodel.selectedBtn==1?View.VISIBLE:View.GONE,default=gone}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="empt.json"
-                app:lottie_loop="true" />
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="@dimen/dp100w"
-                android:layout_height="@dimen/dp100h"
-                android:visibility="@{viewmodel.homeReportersAdapter.itemCount==0&amp;&amp;viewmodel.selectedBtn==2?View.VISIBLE:View.GONE,default=gone}"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/progress_bar_home"
-                app:lottie_autoPlay="true"
-                app:lottie_fileName="empt.json"
-                app:lottie_loop="true" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>

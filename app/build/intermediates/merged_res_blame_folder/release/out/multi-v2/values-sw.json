@@ -57,23 +57,6 @@
                     }
                 },
                 {
-                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/fba32657bd39a10032470a843b010f68/transformed/jetified-firebase-messaging-22.0.0/res/values-sw/values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "207",
-                        "endColumns": "73",
-                        "endOffsets": "280"
-                    },
-                    "to": {
-                        "startLines": "44",
-                        "startColumns": "4",
-                        "startOffsets": "4144",
-                        "endColumns": "77",
-                        "endOffsets": "4217"
-                    }
-                },
-                {
                     "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/cf12e961429fa5f12a566a8cc223959a/transformed/jetified-play-services-basement-17.0.0/res/values-sw/values.xml",
                     "from": {
                         "startLines": "4",
@@ -105,6 +88,23 @@
                         "startOffsets": "8189",
                         "endColumns": "100",
                         "endOffsets": "8285"
+                    }
+                },
+                {
+                    "source": "/home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/df6c8dee88f7b5d4382943f4343f4f0c/transformed/jetified-firebase-messaging-23.0.0/res/values-sw/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "207",
+                        "endColumns": "73",
+                        "endOffsets": "280"
+                    },
+                    "to": {
+                        "startLines": "44",
+                        "startColumns": "4",
+                        "startOffsets": "4144",
+                        "endColumns": "77",
+                        "endOffsets": "4217"
                     }
                 }
             ]

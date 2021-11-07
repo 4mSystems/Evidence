@@ -96,8 +96,6 @@ public class NavigationDrawerView extends RelativeLayout {
                 MovementHelper.startActivity(context, DailyReportsFragment.class.getName(), ResourceManager.getString(R.string.daily_reports), "VIS");
             } else if (o.equals(Constants.MONTHLY_REPORTS)) {
                 MovementHelper.startActivity(context, MonthlyReportsFragment.class.getName(), ResourceManager.getString(R.string.monthly_reports), "VIS");
-            } else if (o.equals(Constants.CONTACT_US)) {
-                MovementHelper.startActivity(context, ContactUsFragment.class.getName(), ResourceManager.getString(R.string.tv_account_contact), null);
             } else if (o.equals(Constants.PACKAGES)) {
                 MovementHelper.startActivity(context, PackagesFragment.class.getName(), ResourceManager.getString(R.string.packes), null);
             } else if (o.equals(Constants.POINTS)) {

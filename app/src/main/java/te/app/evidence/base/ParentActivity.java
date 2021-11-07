@@ -244,6 +244,7 @@ public class ParentActivity extends AppCompatActivity implements
 
     private void launchActivityResult() {
         LauncherHelper.onActivityResult(this, (request, resultCode, result) -> {
+            Log.e("launchActivityResult", "launchActivityResult: "+result.getData() );
             try {
                 Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fl_home_container);
                 assert fragment != null;

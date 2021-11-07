@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+
+                                                         
+
+                 
+                            
+                                                                         
+           
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/sheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/settings_bottom_sheet_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp4h">
+
+            <View
+                android:id="@+id/v_bottom"
+                android:layout_width="@dimen/dp50w"
+                android:layout_height="@dimen/dp4w"
+                android:layout_marginTop="@dimen/dp8h"
+                android:background="@drawable/corner_view_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/about"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_1"                                         
+                android:text="@string/about"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_bottom" />
+
+            <View
+                android:id="@+id/v_about"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/about" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/terms"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_2"                                         
+                android:text="@string/terms_settings"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_about" />
+
+            <View
+                android:id="@+id/v_terms"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/terms" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/privacy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_3"                                           
+                android:text="@string/privacy_settings"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_terms" />
+
+            <View
+                android:id="@+id/v_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/privacy" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_4"                                           
+                android:text="@string/tv_account_contact"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_privacy" />
+
+            <View
+                android:id="@+id/v_contact"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/contact" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/support"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_5"                                           
+                android:text="@string/customer_support"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_contact" />
+
+            <View
+                android:id="@+id/v_support"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/support" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_6"                                             
+                android:text="@string/share"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_support" />
+
+            <View
+                android:id="@+id/v_share"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/dp10h"
+                android:background="@color/line_color"
+                app:layout_constraintTop_toBottomOf="@id/share" />
+
+            <te.app.evidence.customViews.views.CustomTextViewMedium
+                android:id="@+id/rate_app"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp15h"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:tag="binding_7"                                        
+                android:text="@string/rate"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colordark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/v_share" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+         

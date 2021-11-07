@@ -11,6 +11,10 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
 
 import com.google.gson.Gson;
+import com.jaiselrahman.filepicker.activity.FilePickerActivity;
+import com.jaiselrahman.filepicker.model.MediaFile;
+
+import java.util.ArrayList;
 
 import javax.inject.Inject;
 
@@ -26,7 +30,6 @@ import te.app.evidence.pages.attachments.models.AddAttachmentResponse;
 import te.app.evidence.pages.attachments.viewModels.AddAttachmentViewModel;
 import te.app.evidence.utils.Constants;
 import te.app.evidence.utils.helper.MovementHelper;
-import te.app.evidence.utils.upload.FileOperations;
 
 
 public class AddAttachmentFragment extends BaseFragment {
@@ -74,10 +77,12 @@ public class AddAttachmentFragment extends BaseFragment {
     public void launchActivityResult(int request, int resultCode, Intent data) {
         super.launchActivityResult(request, resultCode, data);
         if (request == Constants.RESULT_CODE) {
-            FileObject fileObject = FileOperations.getFileObject(getActivity(), data, Constants.ATTACHMENT_TYPE, Constants.FILE_TYPE_IMAGE);
+            ArrayList<MediaFile> files = data.getParcelableArrayListExtra(FilePickerActivity.MEDIA_FILES);
+            viewModel.getAttachmentRequest().setImage(files.get(0).getPath());
+            binding.file.setText(files.get(0).getName());
+            FileObject fileObject = new FileObject(Constants.ATTACHMENT_TYPE, files.get(0).getPath(), Constants.FILE_TYPE_IMAGE);
+            fileObject.setUri(data.getData());
             viewModel.getFileObjects().add(fileObject);
-            viewModel.getAttachmentRequest().setImage(fileObject.getFilePath());
-            binding.file.setText(fileObject.getFile().getName());
         }
     }
 }

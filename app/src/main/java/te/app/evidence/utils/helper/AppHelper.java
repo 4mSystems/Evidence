@@ -2,59 +2,36 @@ package te.app.evidence.utils.helper;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Environment;
-import android.provider.Browser;
-import android.se.omapi.Session;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ScrollView;
 import android.widget.Toast;
-
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
-
 import java.io.File;
-import java.net.PasswordAuthentication;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
-import java.util.Properties;
-
 import te.app.evidence.base.MyApplication;
 import te.app.evidence.R;
 import te.app.evidence.base.ParentActivity;
 import te.app.evidence.databinding.DownloadDialogBinding;
-import te.app.evidence.databinding.OptionDialogBinding;
 import te.app.evidence.utils.resources.ResourceManager;
-import te.app.evidence.utils.session.LanguagesHelper;
-
-/**
- * Created by osama on 03/01/2018.
- */
 
 public class AppHelper {
     public static String selectDate() {
@@ -69,7 +46,6 @@ public class AppHelper {
         String shareBody = getPlayStoreLink(activity);
         intent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
         intent.putExtra(Intent.EXTRA_TEXT, shareBody);
-//        activity.startActivity(Intent.createChooser(intent, activity.getString(R.string.share)));
         activity.startActivity(Intent.createChooser(intent, "share"));
     }
 
@@ -99,7 +75,6 @@ public class AppHelper {
         message += "\n\nhttps://play.google.com/store/apps/details?id=" + appPackageName;
         intent.putExtra(Intent.EXTRA_SUBJECT, title);
         intent.putExtra(Intent.EXTRA_TEXT, message);
-//        activity.startActivity(Intent.createChooser(intent, activity.getString(R.string.share)));
         activity.startActivity(Intent.createChooser(intent, "share"));
 
     }
@@ -127,7 +102,6 @@ public class AppHelper {
 
     public static void openEmail(Context context, String email) {
         String mailto = "mailto:" + email + "?" +
-//                "?cc=" + "sales@2grand.net" +
                 "&subject=" + context.getString(R.string.app_name) +
                 "&body=";
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
@@ -135,7 +109,6 @@ public class AppHelper {
         try {
             context.startActivity(emailIntent);
         } catch (ActivityNotFoundException e) {
-            //TODO: Handle case where no email app is available
             Toast.makeText(context, "No Server Mail Application Found", Toast.LENGTH_SHORT).show();
         }
     }
@@ -196,13 +169,14 @@ public class AppHelper {
                         break;
                     }
                     if (status == DownloadManager.STATUS_FAILED) {
-                        Log.i("FLAG", "Fail");
+                        Log.i("FLAG", "Fail"+status);
                         downloading = false;
                         break;
                     }
                 }
             }
         } catch (SecurityException e) {
+            e.printStackTrace();
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
             dm.enqueue(request);
         }

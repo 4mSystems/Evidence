@@ -61,7 +61,7 @@ public class DateEditText extends TextInputEditText {
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
         params.setMargins(8, 0, 8, 0);
-        Button button = datePickerDialog.getButton(DatePickerDialog.BUTTON_NEGATIVE);
+        Button button = datePickerDialog.getButton(DatePickerDialog.BUTTON_POSITIVE);
         button.setBackgroundColor(ResourceManager.getColor(R.color.colorPrimaryDark));
         button.setTextColor(ResourceManager.getColor(R.color.white));
         button.setLayoutParams(params);

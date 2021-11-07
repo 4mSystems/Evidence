@@ -22,7 +22,7 @@ public class Attachment {
     }
 
     public String getImgUrl() {
-        return URLS.CLIENT_ATTACHMENTS_BASE_URL.concat(imgUrl);
+        return imgUrl;
     }
 
     public String getFileType() {

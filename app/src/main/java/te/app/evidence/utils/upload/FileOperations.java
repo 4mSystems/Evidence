@@ -17,11 +17,15 @@ import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.util.Base64;
+import android.util.Log;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
+
+import com.jaiselrahman.filepicker.activity.FilePickerActivity;
+import com.jaiselrahman.filepicker.config.Configurations;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -61,11 +65,11 @@ public class FileOperations {
             }
             // DownloadsProvider
             else if (isDownloadsDocument(uri)) {
-
+                Log.e("getPath", "getPath: " + uri + " " + Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath() + " " + isDownloadsDocument(uri));
                 final String id = DocumentsContract.getDocumentId(uri);
                 final Uri contentUri = ContentUris.withAppendedId(
-                        Uri.parse("content://downloads/public_downloads"), Long.valueOf(id));
-
+                        Uri.parse(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getPath()), Long.valueOf(id));
+                Log.e("getPath", "getPath: " + contentUri);
                 return getDataColumn(context, contentUri, null, null);
             }
             // MediaProvider
@@ -132,6 +136,8 @@ public class FileOperations {
                 final int columnIndex = cursor.getColumnIndexOrThrow(column);
                 return cursor.getString(columnIndex);
             }
+        } catch (Exception e) {
+            e.printStackTrace();
         } finally {
             if (cursor != null)
                 cursor.close();
@@ -326,17 +332,30 @@ public class FileOperations {
     }
 
 
-    public static void pickVideo(final Context context, Fragment fragment, int requestCode) {
+    public static void pickDocuments(final Context context, Fragment fragment, int requestCode) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             String[] mimetypes = {
                     "image/*",
                     "text/*",
             };
-            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("*/*");
-            intent.putExtra(Intent.EXTRA_MIME_TYPES, mimetypes); //Important part here
-            LauncherHelper.execute(Intent.createChooser(intent, ResourceManager.getString(R.string.select_file)), requestCode, context);
+            Intent intent = new Intent(fragment.getActivity(), FilePickerActivity.class);
+            intent.putExtra(FilePickerActivity.CONFIGS, new Configurations.Builder()
+                    .setCheckPermission(true)
+                    .setShowImages(true)
+                    .setShowVideos(false)
+                    .setShowFiles(true)
+                    .enableImageCapture(true)
+                    .setShowFiles(true)
+                    .setSuffixes("pdf","csv","doc","docx","ppt", "pptx", "pps",
+                            "xls", "xlsx")
+                    .setMaxSelection(1)
+                    .setSkipZeroSizeFiles(true)
+                    .build());
+//            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+//            intent.addCategory(Intent.CATEGORY_OPENABLE);
+//            intent.setType("*/*");
+//            intent.putExtra(Intent.EXTRA_MIME_TYPES, mimetypes); //Important part here
+            LauncherHelper.execute(intent, requestCode, context);
 
         } else {
             ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 1007);

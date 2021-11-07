@@ -55,7 +55,7 @@ public class MainHomeFragment extends BaseFragment {
                 case Constants.TERMS:
                     MovementHelper.openCustomTabs(requireActivity(), URLS.TERMS_URL, getString(R.string.terms));
                     break;
-                case Constants.CONTACT_US:
+                case Constants.CONTACT:
                     MovementHelper.startActivity(requireActivity(), ContactUsFragment.class.getName(), ResourceManager.getString(R.string.tv_account_contact), null);
                     break;
                 case Constants.SUPPORT:

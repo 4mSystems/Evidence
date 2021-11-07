@@ -1,4 +1,4 @@
-#Thu Nov 04 19:30:20 EET 2021
+#Sun Nov 07 20:56:09 EET 2021
 base.0=/home/elnagar/Android projects/Evidence/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

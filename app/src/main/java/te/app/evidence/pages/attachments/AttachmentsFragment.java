@@ -27,6 +27,7 @@ import java.util.Objects;
 
 import javax.inject.Inject;
 
+import te.app.evidence.BR;
 import te.app.evidence.PassingObject;
 import te.app.evidence.R;
 import te.app.evidence.base.BaseFragment;
@@ -75,6 +76,7 @@ public class AttachmentsFragment extends BaseFragment {
                 toastMessage(((StatusMessage) mutable.object).mMessage);
                 viewModel.getAttachmentsAdapter().getAttachmentList().remove(viewModel.getAttachmentsAdapter().lastSelected);
                 viewModel.getAttachmentsAdapter().notifyDataSetChanged();
+                viewModel.notifyChange(BR.attachmentsAdapter);
             } else if (((Mutable) o).message.equals(Constants.ADD_ATTACH)) {
                 MovementHelper.startActivityForResultWithBundle(requireActivity(), new PassingObject(viewModel.getPassingObject().getId(), viewModel.getPassingObject().getObject()), getString(R.string.add_new_attach), AddAttachmentFragment.class.getName(), null);
             }
@@ -100,7 +102,6 @@ public class AttachmentsFragment extends BaseFragment {
         viewModel.getAttachmentsAdapter().actionLiveData.observe(requireActivity(), o -> {
             if (o.equals(Constants.DELETE))
                 showDeleteDialog();
-
         });
         baseActivity().backActionBarView.layoutActionBarBackBinding.imgActionBarCancel.setOnClickListener(v -> MovementHelper.finishWithResult(new PassingObject(viewModel.getAttachmentsAdapter().getAttachmentList().size()), requireActivity(), Constants.ATTACH_REQUEST));
 
@@ -151,6 +152,7 @@ public class AttachmentsFragment extends BaseFragment {
                     PassingObject passingObject = (PassingObject) bundle.getSerializable(Constants.BUNDLE);
                     viewModel.getAttachmentsAdapter().getAttachmentList().add(new Gson().fromJson(String.valueOf(passingObject.getObjectClass()), Attachment.class));
                     viewModel.getAttachmentsAdapter().notifyItemInserted(viewModel.getAttachmentsAdapter().getAttachmentList().size() - 1);
+                    viewModel.notifyChange(BR.attachmentsAdapter);
                 }
             }
         }

@@ -20,11 +20,12 @@ public class FileObject implements Serializable {
     Bitmap bitmap;
 
     public FileObject(String paramName, String filePath, int fileType) {
+
         this.paramName = paramName;
         this.filePath = filePath;
         this.fileType = fileType;
         this.file = new File(filePath);
-        compressImage();
+//        compressImage();
     }
 
     public FileObject() {
