@@ -39246,9 +39246,6 @@ te.app.evidence.R
 te.app.evidence.activity.BaseActivity:
     public androidx.lifecycle.MutableLiveData getRefreshingLiveData()
     public void stopRefresh(boolean)
-te.app.evidence.activity.MainActivity:
-    public androidx.lifecycle.MutableLiveData getRefreshingLiveData()
-    public void stopRefresh(boolean)
 te.app.evidence.activity.MainActivity_MembersInjector:
     private final javax.inject.Provider liveDataProvider
     public void <init>(javax.inject.Provider)

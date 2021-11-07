@@ -111,7 +111,7 @@ dependencies {
     //internet dialog
     implementation 'com.github.ImaginativeShohag:Oops-No-Internet:v1.1.2'
 
-    //expandables
+    //swiperefreshlayout
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 
     implementation 'androidx.palette:palette:1.0.0'

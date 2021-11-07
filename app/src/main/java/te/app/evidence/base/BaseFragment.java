@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import te.app.evidence.R;
 import te.app.evidence.activity.BaseActivity;
+import te.app.evidence.activity.MainActivity;
 import te.app.evidence.model.base.Mutable;
 import te.app.evidence.utils.upload.FileOperations;
 
@@ -39,6 +40,9 @@ public class BaseFragment extends Fragment {
 
     public BaseActivity baseActivity() {
         return ((BaseActivity) requireActivity());
+    }
+    public MainActivity mainActivity() {
+        return ((MainActivity) requireActivity());
     }
 
     public void toastMessage(String message, int icon, int color) {

@@ -143,11 +143,17 @@ public class HomeFragment extends BaseFragment {
                 }
             }
         });
+        mainActivity().getRefreshingLiveData().observe(requireActivity(), aBoolean -> {
+            mainActivity().stopRefresh(false);
+            viewModel.homeResponse();
+        });
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        mainActivity().enableRefresh(true);
         viewModel.getHomeRepository().setLiveData(viewModel.liveData);
         if (Constants.DATA_CHANGED) {
             Constants.DATA_CHANGED = false;
