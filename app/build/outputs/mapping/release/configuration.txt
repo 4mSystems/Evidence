@@ -721,7 +721,7 @@
     public boolean isLayoutSuppressed();
 }
 # End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/749a0d2240178eaa653d7edfe3da2207/transformed/recyclerview-1.2.1/proguard.txt
-# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/proguard.txt
+# The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/proguard.txt
 ### OKHTTP
 
 # Platform calls Class.forName on types which do not exist on Android to determine platform.
@@ -735,7 +735,7 @@
 # JDK 7-only method which is @hide on Android. Animal sniffer annotation.
 -dontwarn okio.DeflaterSink
 
-# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/proguard.txt
+# End of content from /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/proguard.txt
 # The proguard configuration file for the following section is /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/c9f24c50d501d216174de629b40a5e33/transformed/coordinatorlayout-1.1.0/proguard.txt
 # Copyright (C) 2016 The Android Open Source Project
 #

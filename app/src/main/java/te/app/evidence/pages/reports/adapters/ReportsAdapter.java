@@ -2,6 +2,7 @@ package te.app.evidence.pages.reports.adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.jetbrains.annotations.NotNull;
@@ -56,9 +58,9 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
         return new ViewHolder(itemView);
     }
 
-
+    @SuppressLint("RecyclerView")
     @Override
-    public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder,  final int position) {
         ReportsData client = reportsDataList.get(position);
         ReportItemViewModel itemMenuViewModel = new ReportItemViewModel(client);
         holder.setViewModel(itemMenuViewModel);
@@ -68,7 +70,6 @@ public class ReportsAdapter extends RecyclerView.Adapter<ReportsAdapter.ViewHold
     public void update(List<ReportsData> dataList) {
         this.reportsDataList.clear();
         reportsDataList.addAll(dataList);
-        notifyDataSetChanged();
     }
 
     public void loadMore(@NotNull List<ReportsData> dataList) {

@@ -141,6 +141,7 @@ public class AppHelper {
     }
 
     public static void download(String fromUrl, String toFilename, Context context) {
+        Log.e("download", "download: "+fromUrl );
         //Show download dialog
         boolean downloading = true;
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(fromUrl));

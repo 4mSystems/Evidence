@@ -15,7 +15,8 @@
         android:layout_margin="@dimen/dp4h"
         app:cardCornerRadius="@dimen/dp6h"
         app:cardElevation="4dp"
-        app:cardUseCompatPadding="true" android:tag="layout/item_report_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+        android:tag="layout/item_report_0"                  
+        app:cardUseCompatPadding="true"  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -258,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginEnd="@dimen/dp10w"
-                android:tag="binding_7"                                           
+                android:tag="binding_7"                                
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"

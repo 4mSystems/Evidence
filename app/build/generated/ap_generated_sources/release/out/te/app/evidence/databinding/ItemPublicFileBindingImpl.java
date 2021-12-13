@@ -22,7 +22,7 @@ public class ItemPublicFileBindingImpl extends ItemPublicFileBinding implements 
     private final te.app.evidence.customViews.views.CustomTextViewMedium mboundView1;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback158;
+    private final android.view.View.OnClickListener mCallback159;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -41,7 +41,7 @@ public class ItemPublicFileBindingImpl extends ItemPublicFileBinding implements 
         this.mboundView1.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback158 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
+        mCallback159 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -139,7 +139,7 @@ public class ItemPublicFileBindingImpl extends ItemPublicFileBinding implements 
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.icDownload.setOnClickListener(mCallback158);
+            this.icDownload.setOnClickListener(mCallback159);
         }
         if ((dirtyFlags & 0x7L) != 0) {
             // api target 1

@@ -85,7 +85,7 @@ public class DailyReportsFragment extends BaseFragment {
         baseActivity().backActionBarView.layoutActionBarBackBinding.print.setOnClickListener(v -> {
             if (viewModel.getReportsAdapter().getReportsDataList().size() > 0) {
                 AppHelper.download(URLS.BASE_URL.concat(URLS.DAILY_REPORTS_PDF) + viewModel.getSearchReportRequest().getSession_date()
-                                + "/" + viewModel.getSearchReportRequest().getCategory_id() + "api_token=" + LanguagesHelper.getJwt(),
+                                + "/" + viewModel.getSearchReportRequest().getCategory_id() + "?api_token=" + LanguagesHelper.getJwt(),
                         ResourceManager.getString(R.string.daily_file_name).concat(viewModel.getSearchReportRequest().getSession_date()) + ".pdf", requireActivity());
             } else
                 toastErrorMessage(ResourceManager.getString(R.string.empty_report));

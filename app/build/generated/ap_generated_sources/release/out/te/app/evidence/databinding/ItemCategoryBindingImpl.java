@@ -20,7 +20,7 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback135;
+    private final android.view.View.OnClickListener mCallback137;
     @Nullable
     private final android.view.View.OnClickListener mCallback136;
     // values
@@ -43,8 +43,8 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback135 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback136 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback137 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback136 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -147,31 +147,14 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
         if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
-            this.delete.setOnClickListener(mCallback135);
-            this.edit.setOnClickListener(mCallback136);
+            this.delete.setOnClickListener(mCallback136);
+            this.edit.setOnClickListener(mCallback137);
         }
     }
     // Listener Stub Implementations
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
-            case 1: {
-                // localize variables for thread safety
-                // itemViewModel
-                te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel itemViewModel = mItemViewModel;
-                // itemViewModel != null
-                boolean itemViewModelJavaLangObjectNull = false;
-
-
-
-                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
-                if (itemViewModelJavaLangObjectNull) {
-
-
-                    itemViewModel.toDelete();
-                }
-                break;
-            }
             case 2: {
                 // localize variables for thread safety
                 // itemViewModel
@@ -186,6 +169,23 @@ public class ItemCategoryBindingImpl extends ItemCategoryBinding implements te.a
 
 
                     itemViewModel.toEdit();
+                }
+                break;
+            }
+            case 1: {
+                // localize variables for thread safety
+                // itemViewModel
+                te.app.evidence.pages.categories.viewModels.CategoriesItemViewModel itemViewModel = mItemViewModel;
+                // itemViewModel != null
+                boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+                itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+                if (itemViewModelJavaLangObjectNull) {
+
+
+                    itemViewModel.toDelete();
                 }
                 break;
             }

@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp10h"
                 android:background="@color/colorPrimaryDark"
-                android:text="@string/ok"
+                android:text="@string/delete"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/white"
                 app:layout_constraintEnd_toStartOf="@+id/option_cancel"

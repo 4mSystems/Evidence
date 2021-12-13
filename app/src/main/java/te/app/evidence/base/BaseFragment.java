@@ -25,7 +25,7 @@ public class BaseFragment extends Fragment {
 
 
     protected void pickImageDialogSelect(int requestCode) {
-        FileOperations.pickImage(requireActivity(), BaseFragment.this, requestCode);
+        FileOperations.pickImage(requireActivity(), requestCode);
     }
 
     protected void pickFile(int requestCode) {

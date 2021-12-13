@@ -22,7 +22,7 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     @Nullable
     private final android.view.View.OnClickListener mCallback156;
     @Nullable
-    private final android.view.View.OnClickListener mCallback154;
+    private final android.view.View.OnClickListener mCallback157;
     @Nullable
     private final android.view.View.OnClickListener mCallback155;
     // values
@@ -55,9 +55,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         this.tvKhesm.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback156 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
-        mCallback154 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
-        mCallback155 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback156 = new te.app.evidence.generated.callback.OnClickListener(this, 2);
+        mCallback157 = new te.app.evidence.generated.callback.OnClickListener(this, 3);
+        mCallback155 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -358,9 +358,9 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
         if ((dirtyFlags & 0x20L) != 0) {
             // api target 1
 
-            this.btnSave.setOnClickListener(mCallback156);
-            this.inputClients.setOnClickListener(mCallback154);
-            this.inputKhesm.setOnClickListener(mCallback155);
+            this.btnSave.setOnClickListener(mCallback157);
+            this.inputClients.setOnClickListener(mCallback155);
+            this.inputKhesm.setOnClickListener(mCallback156);
         }
         if ((dirtyFlags & 0x2cL) != 0) {
             // api target 1
@@ -385,6 +385,25 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
     // callback impls
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         switch(sourceId) {
+            case 2: {
+                // localize variables for thread safety
+                // viewmodel != null
+                boolean viewmodelJavaLangObjectNull = false;
+                // viewmodel
+                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
+
+
+
+                viewmodelJavaLangObjectNull = (viewmodel) != (null);
+                if (viewmodelJavaLangObjectNull) {
+
+
+
+
+                    viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
+                }
+                break;
+            }
             case 3: {
                 // localize variables for thread safety
                 // viewmodel != null
@@ -418,25 +437,6 @@ public class FragmentAddClientToCaseBindingImpl extends FragmentAddClientToCaseB
 
 
                     viewmodel.toClients(te.app.evidence.utils.Constants.CLIENTS);
-                }
-                break;
-            }
-            case 2: {
-                // localize variables for thread safety
-                // viewmodel != null
-                boolean viewmodelJavaLangObjectNull = false;
-                // viewmodel
-                te.app.evidence.pages.cases.viewModels.AddClientToCaseViewModel viewmodel = mViewmodel;
-
-
-
-                viewmodelJavaLangObjectNull = (viewmodel) != (null);
-                if (viewmodelJavaLangObjectNull) {
-
-
-
-
-                    viewmodel.toClients(te.app.evidence.utils.Constants.KHESM);
                 }
                 break;
             }

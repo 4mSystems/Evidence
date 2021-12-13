@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class ItemReportBindingImpl extends ItemReportBinding  {
+public class ItemReportBindingImpl extends ItemReportBinding implements te.app.evidence.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -34,6 +34,8 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
     @NonNull
     private final androidx.cardview.widget.CardView mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback129;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -79,6 +81,7 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
         this.tvInvetationNum.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback129 = new te.app.evidence.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -156,9 +159,9 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
         java.lang.String itemViewModelReportsDataPrintnotesNotes = null;
         java.lang.String itemViewModelReportsDataCasesInvetationNum = null;
         te.app.evidence.pages.reports.models.ReportsData itemViewModelReportsData = null;
+        java.lang.String itemViewModelReportsDataSessionDate = null;
         te.app.evidence.pages.cases.models.cases.Cases itemViewModelReportsDataCases = null;
         te.app.evidence.pages.reports.viewModels.ReportItemViewModel itemViewModel = mItemViewModel;
-        java.lang.String itemViewModelReportsDataCasesFirstSessionDate = null;
         java.lang.String itemViewModelReportsDataCasesCircleNum = null;
         java.lang.String itemViewModelReportsDataCasesInventationType = null;
         java.lang.String itemViewModelReportsDataCasesCourt = null;
@@ -177,6 +180,8 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
 
 
                 if (itemViewModelReportsData != null) {
+                    // read itemViewModel.reportsData.sessionDate
+                    itemViewModelReportsDataSessionDate = itemViewModelReportsData.getSessionDate();
                     // read itemViewModel.reportsData.cases
                     itemViewModelReportsDataCases = itemViewModelReportsData.getCases();
                     // read itemViewModel.reportsData.printnotes
@@ -191,8 +196,6 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
                 if (itemViewModelReportsDataCases != null) {
                     // read itemViewModel.reportsData.cases.invetationNum
                     itemViewModelReportsDataCasesInvetationNum = itemViewModelReportsDataCases.getInvetationNum();
-                    // read itemViewModel.reportsData.cases.firstSessionDate
-                    itemViewModelReportsDataCasesFirstSessionDate = itemViewModelReportsDataCases.getFirstSessionDate();
                     // read itemViewModel.reportsData.cases.circleNum
                     itemViewModelReportsDataCasesCircleNum = itemViewModelReportsDataCases.getCircleNum();
                     // read itemViewModel.reportsData.cases.inventationType
@@ -214,13 +217,34 @@ public class ItemReportBindingImpl extends ItemReportBinding  {
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.opponentsValue, itemViewModelReportsDataKhesm);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperNumberValue, itemViewModelReportsDataCasesCourt);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.paperTypeValue, itemViewModelReportsDataCasesCircleNum);
-            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelReportsDataCasesFirstSessionDate);
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.sessionMonthValue, itemViewModelReportsDataSessionDate);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.statusValue, itemViewModelReportsDataPrintnotesNotes);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.tvInvetationNum, itemViewModelReportsDataCasesInvetationNum);
+        }
+        if ((dirtyFlags & 0x4L) != 0) {
+            // api target 1
+
+            this.mboundView0.setOnClickListener(mCallback129);
         }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // itemViewModel
+        te.app.evidence.pages.reports.viewModels.ReportItemViewModel itemViewModel = mItemViewModel;
+        // itemViewModel != null
+        boolean itemViewModelJavaLangObjectNull = false;
+
+
+
+        itemViewModelJavaLangObjectNull = (itemViewModel) != (null);
+        if (itemViewModelJavaLangObjectNull) {
+
+
+            itemViewModel.itemAction();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

@@ -15,6 +15,7 @@
         android:layout_margin="@dimen/dp4h"
         app:cardCornerRadius="@dimen/dp6h"
         app:cardElevation="4dp"
+        android:onClick="@{()-> itemViewModel.itemAction()}"
         app:cardUseCompatPadding="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -258,7 +259,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp10w"
                 android:layout_marginEnd="@dimen/dp10w"
-                android:text="@{itemViewModel.reportsData.cases.firstSessionDate}"
+                android:text="@{itemViewModel.reportsData.sessionDate}"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@color/header_data_table"

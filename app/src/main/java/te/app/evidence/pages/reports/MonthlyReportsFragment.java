@@ -83,7 +83,7 @@ public class MonthlyReportsFragment extends BaseFragment {
             if (viewModel.getReportsAdapter().getReportsDataList().size() > 0) {
                 AppHelper.download(URLS.BASE_URL.concat(URLS.MONTHLY_REPORTS_PDF) + viewModel.getSearchReportRequest().getMonth()
                                 + "/" + viewModel.getSearchReportRequest().getYear()
-                                + "/" + viewModel.getSearchReportRequest().getCategory_id() + "api_token=" + LanguagesHelper.getJwt(),
+                                + "/" + viewModel.getSearchReportRequest().getCategory_id() + "?api_token=" + LanguagesHelper.getJwt(),
                         ResourceManager.getString(R.string.monthly_file_name).concat(viewModel.getSearchReportRequest().getMonth())
                                 + ".pdf",requireActivity());
             } else

@@ -302,13 +302,13 @@
 163            android:initOrder="100" />
 163-->[com.google.firebase:firebase-common:20.0.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/3434c465fd4c5a7cef643cedf90e31fb/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
 164        <provider
-164-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
+164-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/AndroidManifest.xml:8:9-11:40
 165            android:name="com.squareup.picasso.PicassoProvider"
-165-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
+165-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/AndroidManifest.xml:9:13-64
 166            android:authorities="te.app.evidence.com.squareup.picasso"
-166-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
+166-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/AndroidManifest.xml:10:13-72
 167            android:exported="false" />
-167-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/4b18952a4e459b4c3e30a1b8ac03ac33/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
+167-->[com.squareup.picasso:picasso:2.71828] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/d82af87e9675961c71a72f9d7f694b94/transformed/jetified-picasso-2.71828/AndroidManifest.xml:11:13-37
 168        <provider
 168-->[androidx.lifecycle:lifecycle-process:2.2.0] /home/elnagar/android-studio-2020.3.1.20-linux/caches/transforms-3/9f0e2b1efa220021bb642ec860c992f0/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 169            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"

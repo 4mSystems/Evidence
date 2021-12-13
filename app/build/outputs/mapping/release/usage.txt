@@ -40731,7 +40731,6 @@ te.app.evidence.pages.reports.models.ReportsData:
     public int getId()
     public java.lang.String getMonth()
     public java.lang.String getParentId()
-    public java.lang.String getSessionDate()
     public java.lang.String getStatus()
     public java.lang.String getUpdatedAt()
     public java.lang.String getYear()
@@ -41242,11 +41241,8 @@ te.app.evidence.utils.session.UserHelper:
     private static final java.lang.String SHARED_PREF_NAME
 te.app.evidence.utils.upload.FileOperations:
     public void <init>()
-    public java.lang.String BitMapToString(android.graphics.Bitmap)
-    public static byte[] fileToBytes(java.lang.String)
     private java.lang.String fileToString(java.lang.String)
     public java.lang.String getFileAsString(android.content.Context,android.net.Uri)
-    public static java.lang.String getImageUri(android.content.Context,android.graphics.Bitmap)
 te.app.evidence.utils.upload.FileUpload
 te.app.evidence.utils.validation.Validate:
     public void <init>()
